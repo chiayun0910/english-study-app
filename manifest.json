@@ -1,0 +1,15 @@
+{
+  "name": "字卡島 Word Island - 英文自學 App",
+  "short_name": "字卡島",
+  "description": "康軒國中英語單字練習：字卡、測驗、配對、克漏字、拼字練習、間隔複習",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F0EA",
+  "theme_color": "#232C4D",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
