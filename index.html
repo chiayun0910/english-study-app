@@ -394,6 +394,20 @@ function SpeakerButton({
   }));
 }
 
+/* 答題後手動點擊才繼續，避免使用者來不及讀完解釋或正確答案就自動跳題 */
+function NextButton({
+  onClick,
+  label = "下一題"
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "next-action"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "primary-btn",
+    onClick: onClick
+  }, label, " →"));
+}
+
 /* 顯示單字的每個型態，並各自附上喇叭按鈕（例：feel 🔊 / felt 🔊） */
 function FormsSpeaker({
   word,
@@ -501,14 +515,23 @@ function EnglishStudyApp() {
       console.error("save error", e);
     }
   }, []);
-  const markStamp = (unitId, activityKey) => {
+  const markStamp = (unitId, activityKey, scoreInfo) => {
+    const prevEntry = (progress.stamps[unitId] || {})[activityKey];
+    const prevBest = prevEntry && typeof prevEntry === "object" ? prevEntry.bestScore : null;
+    const isBetter = scoreInfo && (!prevBest || prevBest.total === 0 || scoreInfo.correct / scoreInfo.total >= prevBest.correct / prevBest.total);
+    const entry = {
+      done: true,
+      lastScore: scoreInfo || (prevEntry && typeof prevEntry === "object" ? prevEntry.lastScore : null) || null,
+      lastAt: Date.now(),
+      bestScore: scoreInfo ? isBetter ? scoreInfo : prevBest : prevBest || null
+    };
     const next = {
       ...progress,
       stamps: {
         ...progress.stamps,
         [unitId]: {
           ...(progress.stamps[unitId] || {}),
-          [activityKey]: true
+          [activityKey]: entry
         }
       }
     };
@@ -930,6 +953,15 @@ function EnglishStudyApp() {
         }
         .primary-btn:active { transform: scale(0.96); }
         .empty-note { text-align: center; color: #6B6A5E; font-size: 13px; padding: 20px; }
+
+        /* 答題後手動「下一題」按鈕：取代自動倒數跳題，讓使用者自己決定何時看完解釋再繼續 */
+        .next-action { display: flex; justify-content: center; margin-top: 16px; }
+        .next-action .primary-btn { margin-top: 0; padding: 12px 32px; }
+
+        /* 單元測驗成績徽章（顯示在活動卡片上，例如「最佳 8/10」） */
+        .activity-card .best-score {
+          margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--unit-color, var(--ink));
+        }
       `), /*#__PURE__*/React.createElement("div", {
     className: "top-bar"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1051,8 +1083,8 @@ function EnglishStudyApp() {
       unitId: screen.unitId,
       lessonId: screen.lessonId
     }),
-    onFinish: () => {
-      markStamp(screen.unitId, screen.activityKey);
+    onFinish: scoreInfo => {
+      markStamp(screen.unitId, screen.activityKey, scoreInfo);
     },
     onWordResult: recordWordResult
   }));
@@ -1351,21 +1383,27 @@ function UnitScreen({
     }
   }, unit.zh, " · 選一個方式開始練習"), /*#__PURE__*/React.createElement("div", {
     className: "activity-grid"
-  }, ACTIVITIES.map(a => /*#__PURE__*/React.createElement("div", {
-    key: a.key,
-    className: "activity-card",
-    style: {
-      "--unit-color": unit.color
-    },
-    onClick: () => onOpenActivity(a.key)
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "label"
-  }, a.label), /*#__PURE__*/React.createElement("div", {
-    className: "desc"
-  }, a.zh), stampMap[a.key] && /*#__PURE__*/React.createElement(Check, {
-    size: 16,
-    className: "check"
-  })))));
+  }, ACTIVITIES.map(a => {
+    const entry = stampMap[a.key];
+    const best = entry && typeof entry === "object" ? entry.bestScore : null;
+    return /*#__PURE__*/React.createElement("div", {
+      key: a.key,
+      className: "activity-card",
+      style: {
+        "--unit-color": unit.color
+      },
+      onClick: () => onOpenActivity(a.key)
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "label"
+    }, a.label), /*#__PURE__*/React.createElement("div", {
+      className: "desc"
+    }, a.zh), best && /*#__PURE__*/React.createElement("div", {
+      className: "best-score"
+    }, "最佳 ", best.correct, "/", best.total), entry && /*#__PURE__*/React.createElement(Check, {
+      size: 16,
+      className: "check"
+    }));
+  })));
 }
 
 /* ------------------------------------------------------------------ */
@@ -1505,6 +1543,7 @@ function Quiz({
   });
   if (idx >= order.length) return null;
   const word = order[idx];
+  const isLast = idx + 1 >= order.length;
   const choose = opt => {
     if (selected) return;
     setSelected(opt.en);
@@ -1514,14 +1553,17 @@ function Quiz({
       speak(wordForms(word)[0]);
     }
     onWordResult(unit, word, correct);
-    setTimeout(() => {
-      if (idx + 1 >= order.length) {
-        onFinish();
-        setDone(true);
-      } else {
-        setIdx(i => i + 1);
-      }
-    }, 800);
+  };
+  const goNext = () => {
+    if (isLast) {
+      onFinish({
+        correct: score,
+        total: order.length
+      });
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+    }
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "quiz-word"
@@ -1554,7 +1596,12 @@ function Quiz({
       size: 16,
       color: "#E8604C"
     }));
-  })));
+  })), selected && /*#__PURE__*/React.createElement("div", {
+    className: `typing-feedback ${selected === word.en ? "correct" : "wrong"}`
+  }, selected === word.en ? "答對了！" : `答錯了，正確答案是：${word.zh}`), selected && /*#__PURE__*/React.createElement(NextButton, {
+    onClick: goNext,
+    label: isLast ? "查看結果" : "下一題"
+  }));
 }
 
 /* ------------------------------------------------------------------ */
@@ -1605,7 +1652,10 @@ function Matching({
       if (roundIndex + 1 < totalRounds) {
         setTimeout(() => setRoundIndex(r => r + 1), 500);
       } else {
-        onFinish();
+        onFinish({
+          correct: Math.max(0, game.allWords.length - wrongCount),
+          total: game.allWords.length
+        });
         setTimeout(() => setDone(true), 400);
       }
     }
@@ -1722,20 +1772,24 @@ function FillBlank({
   if (idx >= order.length) return null;
   const word = order[idx];
   const mode = modes[idx];
+  const isLast = idx + 1 >= order.length;
   const blankPos = word.blankPos || word.pos;
   const blanked = word.ex_blank || word.ex_en.replace(new RegExp(word.en, "i"), "____");
   const handleResult = correct => {
     setAnswered(true);
     if (correct) setScore(s => s + 1);
     onWordResult(unit, word, correct);
-    setTimeout(() => {
-      if (idx + 1 >= order.length) {
-        onFinish();
-        setDone(true);
-      } else {
-        setIdx(i => i + 1);
-      }
-    }, correct ? 900 : 3200);
+  };
+  const goNext = () => {
+    if (isLast) {
+      onFinish({
+        correct: score,
+        total: order.length
+      });
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+    }
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "sentence-box"
@@ -1780,7 +1834,10 @@ function FillBlank({
     word: word,
     onResult: handleResult,
     hidePrompt: true
-  })));
+  })), answered && /*#__PURE__*/React.createElement(NextButton, {
+    onClick: goNext,
+    label: isLast ? "查看結果" : "下一題"
+  }));
 }
 function FillBlankChoice({
   unit,
@@ -1799,7 +1856,8 @@ function FillBlankChoice({
     if (correct) speak(wordForms(word)[0]);
     onResult(correct);
   };
-  return /*#__PURE__*/React.createElement("div", {
+  const isCorrect = selected === word.en;
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "word-bank"
   }, options.map(opt => {
     let cls = "";
@@ -1812,7 +1870,9 @@ function FillBlankChoice({
       disabled: !!selected,
       onClick: () => choose(opt)
     }, opt.en);
-  }));
+  })), selected && /*#__PURE__*/React.createElement("div", {
+    className: `typing-feedback ${isCorrect ? "correct" : "wrong"}`
+  }, isCorrect ? "答對了！" : `答錯了，正確答案是：${word.en}`));
 }
 
 /* ------------------------------------------------------------------ */
@@ -1927,8 +1987,8 @@ function SpellingCard({
     onKeyDown: handleKeyDown
   }, input ? input : /*#__PURE__*/React.createElement("span", {
     className: "typing-placeholder"
-  }, "用下方鍵盤輸入")), /*#__PURE__*/React.createElement(OnScreenKeyboard, {
-    disabled: checked !== null,
+  }, "用下方鍵盤輸入")), checked === null && /*#__PURE__*/React.createElement(OnScreenKeyboard, {
+    disabled: false,
     onKey: appendChar,
     onSpace: () => appendChar(" "),
     onBackspace: backspace
@@ -1966,6 +2026,10 @@ function Typing({
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  useEffect(() => {
+    setAnswered(false);
+  }, [idx]);
   if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
     label: `答對 ${score} / ${order.length} 題`,
     onRestart: () => {
@@ -1976,17 +2040,22 @@ function Typing({
   });
   if (idx >= order.length) return null;
   const word = order[idx];
+  const isLast = idx + 1 >= order.length;
   const handleResult = correct => {
+    setAnswered(true);
     if (correct) setScore(s => s + 1);
     onWordResult(unit, word, correct);
-    setTimeout(() => {
-      if (idx + 1 >= order.length) {
-        onFinish();
-        setDone(true);
-      } else {
-        setIdx(i => i + 1);
-      }
-    }, correct ? 900 : 3200);
+  };
+  const goNext = () => {
+    if (isLast) {
+      onFinish({
+        correct: score,
+        total: order.length
+      });
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+    }
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     style: {
@@ -1999,6 +2068,9 @@ function Typing({
     key: idx,
     word: word,
     onResult: handleResult
+  }), answered && /*#__PURE__*/React.createElement(NextButton, {
+    onClick: goNext,
+    label: isLast ? "查看結果" : "下一題"
   }));
 }
 
@@ -2017,9 +2089,15 @@ function UnitMastery({
   const [wrongCounts, setWrongCounts] = useState({});
   const [round, setRound] = useState(0);
   const [done, setDone] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  const [lastCorrect, setLastCorrect] = useState(null);
   useEffect(() => {
     if (queue.length === 0 && !done) {
-      onFinish();
+      const missedCount = Object.keys(wrongCounts).length;
+      onFinish({
+        correct: unit.words.length - missedCount,
+        total: unit.words.length
+      });
       setDone(true);
     }
   }, [queue, done]);
@@ -2075,6 +2153,8 @@ function UnitMastery({
         })));
         setWrongCounts({});
         setRound(0);
+        setAnswered(false);
+        setLastCorrect(null);
         setDone(false);
       }
     }, /*#__PURE__*/React.createElement(RotateCcw, {
@@ -2089,6 +2169,8 @@ function UnitMastery({
   const current = queue[0];
   const remaining = queue.length;
   const handleResult = correct => {
+    setAnswered(true);
+    setLastCorrect(correct);
     const word = current.word;
     onWordResult(unit, word, correct);
     if (!correct) {
@@ -2097,19 +2179,22 @@ function UnitMastery({
         [word.en]: (prev[word.en] || 0) + 1
       }));
     }
-    setTimeout(() => {
-      setRound(r => r + 1);
-      setQueue(prevQueue => {
-        const rest = prevQueue.slice(1);
-        if (correct) return rest;
-        const insertAt = Math.min(rest.length, 3);
-        const requeued = {
-          word,
-          mode: Math.random() < 0.5 ? "choice" : "type"
-        };
-        return [...rest.slice(0, insertAt), requeued, ...rest.slice(insertAt)];
-      });
-    }, correct ? 900 : 3200);
+  };
+  const goNext = () => {
+    const word = current.word;
+    const correct = lastCorrect;
+    setAnswered(false);
+    setRound(r => r + 1);
+    setQueue(prevQueue => {
+      const rest = prevQueue.slice(1);
+      if (correct) return rest;
+      const insertAt = Math.min(rest.length, 3);
+      const requeued = {
+        word,
+        mode: Math.random() < 0.5 ? "choice" : "type"
+      };
+      return [...rest.slice(0, insertAt), requeued, ...rest.slice(insertAt)];
+    });
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     style: {
@@ -2126,6 +2211,8 @@ function UnitMastery({
     key: round,
     word: current.word,
     onResult: handleResult
+  }), answered && /*#__PURE__*/React.createElement(NextButton, {
+    onClick: goNext
   }));
 }
 
@@ -2179,7 +2266,9 @@ function ReviewChoice({
       size: 16,
       color: "#E8604C"
     }));
-  })));
+  })), selected && /*#__PURE__*/React.createElement("div", {
+    className: `typing-feedback ${selected === word.en ? "correct" : "wrong"}`
+  }, selected === word.en ? "答對了！" : `答錯了，正確答案是：${word.zh}`));
 }
 function ReviewTyping({
   word,
@@ -2218,6 +2307,10 @@ function ReviewSession({
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  useEffect(() => {
+    setAnswered(false);
+  }, [idx]);
   if (pool.length === 0) {
     return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       className: "back-row",
@@ -2243,16 +2336,18 @@ function ReviewSession({
     }));
   }
   const current = pool[idx];
+  const isLast = idx + 1 >= pool.length;
   const handleResult = correct => {
+    setAnswered(true);
     if (correct) setScore(s => s + 1);
     onWordResult(current.unit, current.word, correct);
-    setTimeout(() => {
-      if (idx + 1 >= pool.length) {
-        setDone(true);
-      } else {
-        setIdx(i => i + 1);
-      }
-    }, correct ? 800 : 3200);
+  };
+  const goNext = () => {
+    if (isLast) {
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+    }
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "back-row",
@@ -2274,6 +2369,9 @@ function ReviewSession({
     key: idx,
     word: current.word,
     onResult: handleResult
+  }), answered && /*#__PURE__*/React.createElement(NextButton, {
+    onClick: goNext,
+    label: isLast ? "查看結果" : "下一題"
   }));
 }
 
