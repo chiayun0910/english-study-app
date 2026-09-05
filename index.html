@@ -1735,7 +1735,7 @@ function FillBlank({
       } else {
         setIdx(i => i + 1);
       }
-    }, correct ? 900 : 1800);
+    }, correct ? 900 : 3200);
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "sentence-box"
@@ -1986,7 +1986,7 @@ function Typing({
       } else {
         setIdx(i => i + 1);
       }
-    }, correct ? 900 : 1800);
+    }, correct ? 900 : 3200);
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     style: {
@@ -2109,7 +2109,7 @@ function UnitMastery({
         };
         return [...rest.slice(0, insertAt), requeued, ...rest.slice(insertAt)];
       });
-    }, correct ? 900 : 1800);
+    }, correct ? 900 : 3200);
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     style: {
@@ -2252,7 +2252,7 @@ function ReviewSession({
       } else {
         setIdx(i => i + 1);
       }
-    }, correct ? 800 : 1600);
+    }, correct ? 800 : 3200);
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "back-row",
