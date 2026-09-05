@@ -843,23 +843,19 @@ function EnglishStudyApp() {
         .typing-placeholder { color: #B9B6A6; font-size: 14px; letter-spacing: 0; }
 
         /* 自建虛擬鍵盤：避免在手機上叫出系統輸入法與預測選字列 */
-        /* 26 個字母排成統一大小的方格，不刻意模仿實體鍵盤 QWERTY 的錯位排法，
-           這樣每一顆按鍵都一樣大，不會因為那一排字母比較多就被壓窄。 */
+        /* 照使用者習慣的實體鍵盤 QWERTY 排列（上排10/中排9/下排7），
+           兩側留白與鍵距盡量壓到最小，讓按鍵本身撐到最大。 */
         .osk {
-          margin: 16px -16px 0; padding: 0 6px; box-sizing: border-box;
-          display: flex; flex-direction: column; gap: 7px; align-items: stretch; width: calc(100% + 32px);
+          margin: 16px -16px 0; padding: 0 2px; box-sizing: border-box;
+          display: flex; flex-direction: column; gap: 6px; align-items: stretch; width: calc(100% + 32px);
         }
-        .osk-grid {
-          display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px;
-        }
-        .osk-row { display: flex; gap: 6px; justify-content: center; }
+        .osk-row { display: flex; gap: 3px; justify-content: center; }
         .osk-key {
           background: var(--card); border: 1.5px solid var(--line); border-radius: 10px;
+          flex: 1 1 0; min-width: 0; padding: 20px 0;
           font-size: 20px; font-weight: 700; color: var(--ink);
-          cursor: pointer; font-family: 'Noto Sans TC', sans-serif; padding: 0;
+          cursor: pointer; font-family: 'Noto Sans TC', sans-serif;
         }
-        .osk-grid .osk-key { width: 100%; aspect-ratio: 1 / 1; }
-        .osk-row.osk-bottom .osk-key { flex: 1 1 0; padding: 19px 0; }
         .osk-key:active { background: var(--paper); transform: scale(0.92); }
         .osk-key:disabled { opacity: 0.4; cursor: default; }
         .osk-bottom { margin-top: 2px; }
@@ -1675,18 +1671,19 @@ function OnScreenKeyboard({
   onSpace,
   disabled
 }) {
-  const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  const rows = [["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"], ["a", "s", "d", "f", "g", "h", "j", "k", "l"], ["z", "x", "c", "v", "b", "n", "m"]];
   return /*#__PURE__*/React.createElement("div", {
     className: "osk"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "osk-grid"
-  }, letters.map(k => /*#__PURE__*/React.createElement("button", {
+  }, rows.map((row, i) => /*#__PURE__*/React.createElement("div", {
+    className: "osk-row",
+    key: i
+  }, row.map(k => /*#__PURE__*/React.createElement("button", {
     key: k,
     type: "button",
     className: "osk-key",
     disabled: disabled,
     onClick: () => onKey(k)
-  }, k))), /*#__PURE__*/React.createElement("div", {
+  }, k)))), /*#__PURE__*/React.createElement("div", {
     className: "osk-row osk-bottom"
   }, /*#__PURE__*/React.createElement("button", {
     type: "button",
