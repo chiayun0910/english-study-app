@@ -4536,6 +4536,4203 @@
           ]
         }
       ]
+    },
+    {
+      "id": "junior-b1-khs",
+      "grade": "國中",
+      "book": 1,
+      "edition": "康軒版",
+      "lessons": [
+        {
+          "id": "kj-lesson1",
+          "title": "Unit 1",
+          "zh": "家人與校園生活",
+          "units": [
+            {
+              "id": "kj-b1-u1-1",
+              "title": "Part 1",
+              "zh": "家庭成員",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "family",
+                  "pos": "n.",
+                  "zh": "家人；家庭",
+                  "ex_en": "My family goes hiking every Sunday.",
+                  "ex_zh": "我的家人每個星期天都會去健行。",
+                  "ex_blank": "My ____ goes hiking every Sunday."
+                },
+                {
+                  "en": "husband",
+                  "pos": "n.",
+                  "zh": "丈夫",
+                  "ex_en": "Tina's husband is a kind man.",
+                  "ex_zh": "蒂娜的丈夫是個親切的人。",
+                  "ex_blank": "Tina's ____ is a kind man."
+                },
+                {
+                  "en": "wife",
+                  "pos": "n.",
+                  "zh": "妻子",
+                  "ex_en": "Mr. Chen always cooks dinner for his wife.",
+                  "ex_zh": "陳先生總是為他的妻子煮晚餐。",
+                  "ex_blank": "Mr. Chen always cooks dinner for his ____."
+                },
+                {
+                  "en": "uncle",
+                  "pos": "n.",
+                  "zh": "叔(伯)父；姑(姨)丈；舅舅",
+                  "ex_en": "My uncle has a farm in the mountains.",
+                  "ex_zh": "我叔叔在山上有一座農場。",
+                  "ex_blank": "My ____ has a farm in the mountains."
+                },
+                {
+                  "en": "aunt",
+                  "pos": "n.",
+                  "zh": "嬸嬸；伯母；姑(姨)媽；舅媽",
+                  "ex_en": "We visited my aunt during the summer vacation.",
+                  "ex_zh": "我們暑假時去拜訪了我阿姨。",
+                  "ex_blank": "We visited my ____ during the summer vacation."
+                },
+                {
+                  "en": "cousin",
+                  "pos": "n.",
+                  "zh": "堂(表)兄弟姐妹",
+                  "ex_en": "My cousin and I are in the same junior high school.",
+                  "ex_zh": "我表哥(姊)和我讀同一所國中。",
+                  "ex_blank": "My ____ and I are in the same junior high school."
+                },
+                {
+                  "en": "son",
+                  "pos": "n.",
+                  "zh": "兒子",
+                  "ex_en": "Their son plays the violin very well.",
+                  "ex_zh": "他們的兒子小提琴拉得很好。",
+                  "ex_blank": "Their ____ plays the violin very well."
+                },
+                {
+                  "en": "daughter",
+                  "pos": "n.",
+                  "zh": "女兒",
+                  "ex_en": "My daughter loves painting and dancing.",
+                  "ex_zh": "我女兒喜歡畫畫和跳舞。",
+                  "ex_blank": "My ____ loves painting and dancing."
+                },
+                {
+                  "en": "parent",
+                  "pos": "n.",
+                  "zh": "雙親之一",
+                  "ex_en": "Every parent wants the best for their child.",
+                  "ex_zh": "每位家長都希望給孩子最好的。",
+                  "ex_blank": "Every ____ wants the best for their child."
+                },
+                {
+                  "en": "child",
+                  "pos": "n.",
+                  "zh": "孩子",
+                  "ex_en": "The child is reading a storybook quietly.",
+                  "ex_zh": "這個孩子正安靜地看故事書。",
+                  "ex_blank": "The ____ is reading a storybook quietly.",
+                  "grammar": "child 的複數形是不規則變化的 children。"
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u1-2",
+              "title": "Part 2",
+              "zh": "校園人物",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "young",
+                  "pos": "adj.",
+                  "zh": "年輕的",
+                  "ex_en": "That young teacher is very popular.",
+                  "ex_zh": "那位年輕的老師很受歡迎。",
+                  "ex_blank": "That ____ teacher is very popular."
+                },
+                {
+                  "en": "man",
+                  "pos": "n.",
+                  "zh": "男人",
+                  "ex_en": "The man in the white shirt is my PE teacher.",
+                  "ex_zh": "穿白襯衫的那位男士是我的體育老師。",
+                  "ex_blank": "The ____ in the white shirt is my PE teacher.",
+                  "grammar": "man 的複數形是不規則變化的 men。"
+                },
+                {
+                  "en": "handsome",
+                  "pos": "adj.",
+                  "zh": "英俊的",
+                  "ex_en": "Her brother is tall and handsome.",
+                  "ex_zh": "她哥哥又高又帥。",
+                  "ex_blank": "Her brother is tall and ____."
+                },
+                {
+                  "en": "our",
+                  "pos": "det.",
+                  "zh": "我們的",
+                  "ex_en": "This is our classroom.",
+                  "ex_zh": "這是我們的教室。",
+                  "ex_blank": "This is ____ classroom."
+                },
+                {
+                  "en": "PE",
+                  "pos": "n.",
+                  "zh": "體育",
+                  "ex_en": "I enjoy playing basketball in PE class.",
+                  "ex_zh": "我很喜歡在體育課打籃球。",
+                  "ex_blank": "I enjoy playing basketball in ____ class."
+                },
+                {
+                  "en": "really",
+                  "pos": "adv.",
+                  "zh": "真地",
+                  "ex_en": "We really like our new science teacher.",
+                  "ex_zh": "我們真的很喜歡我們的新自然老師。",
+                  "ex_blank": "We ____ like our new science teacher."
+                },
+                {
+                  "en": "classroom",
+                  "pos": "n.",
+                  "zh": "教室",
+                  "ex_en": "Our classroom is big and bright.",
+                  "ex_zh": "我們的教室又大又明亮。",
+                  "ex_blank": "Our ____ is big and bright."
+                },
+                {
+                  "en": "same",
+                  "pos": "adj.",
+                  "zh": "一樣的",
+                  "ex_en": "My cousin and I are in the same class.",
+                  "ex_zh": "我表哥(姊)和我在同一班。",
+                  "ex_blank": "My cousin and I are in the ____ class."
+                },
+                {
+                  "en": "class",
+                  "pos": "n.",
+                  "zh": "班級；課程",
+                  "ex_en": "We have music class on Fridays.",
+                  "ex_zh": "我們星期五有音樂課。",
+                  "ex_blank": "We have music ____ on Fridays."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u1-3",
+              "title": "Part 3",
+              "zh": "初次見面",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "again",
+                  "pos": "adv.",
+                  "zh": "再一次",
+                  "ex_en": "Please say your name again.",
+                  "ex_zh": "請再說一次你的名字。",
+                  "ex_blank": "Please say your name ____."
+                },
+                {
+                  "en": "Nice to meet you.",
+                  "pos": "phr.",
+                  "zh": "很高興認識你。",
+                  "ex_en": "Nice to meet you, Leo!",
+                  "ex_zh": "很高興認識你，里歐！",
+                  "ex_blank": "____, Leo!"
+                },
+                {
+                  "en": "too",
+                  "pos": "adv.",
+                  "zh": "也；太",
+                  "ex_en": "I like cats, too.",
+                  "ex_zh": "我也喜歡貓。",
+                  "ex_blank": "I like cats, ____."
+                },
+                {
+                  "en": "news",
+                  "pos": "n.",
+                  "zh": "消息；新聞",
+                  "ex_en": "I have good news to share!",
+                  "ex_zh": "我有好消息要分享！",
+                  "ex_blank": "I have good ____ to share!"
+                },
+                {
+                  "en": "problem",
+                  "pos": "n.",
+                  "zh": "問題",
+                  "ex_en": "If you have a problem, talk to the teacher.",
+                  "ex_zh": "如果你有問題，去跟老師說。",
+                  "ex_blank": "If you have a ____, talk to the teacher."
+                },
+                {
+                  "en": "strict",
+                  "pos": "adj.",
+                  "zh": "嚴格的",
+                  "ex_en": "Our math teacher is strict but fair.",
+                  "ex_zh": "我們的數學老師很嚴格，但很公平。",
+                  "ex_blank": "Our math teacher is ____ but fair."
+                },
+                {
+                  "en": "junior high school",
+                  "pos": "n.",
+                  "zh": "國民中學",
+                  "ex_en": "He goes to a junior high school near the park.",
+                  "ex_zh": "他就讀公園附近的一所國中。",
+                  "ex_blank": "He goes to a ____ near the park."
+                },
+                {
+                  "en": "warm",
+                  "pos": "adj.",
+                  "zh": "溫暖的",
+                  "ex_en": "Grandma always gives us a warm hug.",
+                  "ex_zh": "奶奶總是給我們一個溫暖的擁抱。",
+                  "ex_blank": "Grandma always gives us a ____ hug."
+                },
+                {
+                  "en": "farmer",
+                  "pos": "n.",
+                  "zh": "農夫",
+                  "ex_en": "My uncle is a farmer and grows rice.",
+                  "ex_zh": "我叔叔是農夫，種植稻米。",
+                  "ex_blank": "My uncle is a ____ and grows rice."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u1-4",
+              "title": "Part 4",
+              "zh": "職業與外表",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "cook",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "廚師；煮",
+                  "ex_en": "My aunt is a great cook.",
+                  "ex_zh": "我阿姨是個很棒的廚師。",
+                  "ex_blank": "My aunt is a great ____.",
+                  "grammar": "cook 當名詞是「廚師」，當動詞是「煮」，如 Dad often cooks dinner for us。"
+                },
+                {
+                  "en": "nurse",
+                  "pos": "n.",
+                  "zh": "護理師；護士",
+                  "ex_en": "The nurse helped the little boy feel better.",
+                  "ex_zh": "這位護理師幫助小男孩感覺好一些。",
+                  "ex_blank": "The ____ helped the little boy feel better."
+                },
+                {
+                  "en": "beautiful",
+                  "pos": "adj.",
+                  "zh": "漂亮的；美麗的",
+                  "ex_en": "The sunset looks so beautiful today.",
+                  "ex_zh": "今天的夕陽看起來好美。",
+                  "ex_blank": "The sunset looks so ____ today."
+                },
+                {
+                  "en": "woman",
+                  "pos": "n.",
+                  "zh": "女人",
+                  "ex_en": "That woman is a famous doctor.",
+                  "ex_zh": "那位女士是位知名的醫生。",
+                  "ex_blank": "That ____ is a famous doctor.",
+                  "grammar": "woman 的複數形是不規則變化的 women。"
+                },
+                {
+                  "en": "doctor",
+                  "pos": "n.",
+                  "zh": "醫生",
+                  "ex_en": "My cousin wants to be a doctor.",
+                  "ex_zh": "我表哥(姊)想成為醫生。",
+                  "ex_blank": "My cousin wants to be a ____."
+                },
+                {
+                  "en": "senior high school",
+                  "pos": "n.",
+                  "zh": "高級中學",
+                  "ex_en": "My sister studies hard in senior high school.",
+                  "ex_zh": "我姐姐在高中很認真讀書。",
+                  "ex_blank": "My sister studies hard in ____."
+                },
+                {
+                  "en": "pet",
+                  "pos": "n.",
+                  "zh": "寵物",
+                  "ex_en": "We have two pets: a dog and a turtle.",
+                  "ex_zh": "我們有兩隻寵物：一隻狗和一隻烏龜。",
+                  "ex_blank": "We have two ____: a dog and a turtle."
+                },
+                {
+                  "en": "cute",
+                  "pos": "adj.",
+                  "zh": "可愛的",
+                  "ex_en": "Your puppy is really cute!",
+                  "ex_zh": "你的小狗真可愛！",
+                  "ex_blank": "Your puppy is really ____!"
+                },
+                {
+                  "en": "nice",
+                  "pos": "adj.",
+                  "zh": "好的；好心的",
+                  "ex_en": "The new student is very nice to everyone.",
+                  "ex_zh": "這位新同學對每個人都很好。",
+                  "ex_blank": "The new student is very ____ to everyone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-lesson2",
+          "title": "Unit 2",
+          "zh": "動物園裡的動物",
+          "units": [
+            {
+              "id": "kj-b1-u2-1",
+              "title": "Part 1",
+              "zh": "動物園動物",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "monkey",
+                  "pos": "n.",
+                  "zh": "猴子",
+                  "ex_en": "The monkey jumped from tree to tree.",
+                  "ex_zh": "這隻猴子在樹與樹之間跳來跳去。",
+                  "ex_blank": "The ____ jumped from tree to tree."
+                },
+                {
+                  "en": "fox",
+                  "pos": "n.",
+                  "zh": "狐狸",
+                  "ex_en": "A fox ran across the road quickly.",
+                  "ex_zh": "一隻狐狸很快地跑過馬路。",
+                  "ex_blank": "A ____ ran across the road quickly."
+                },
+                {
+                  "en": "sheep",
+                  "pos": "n.",
+                  "zh": "綿羊",
+                  "ex_en": "There are ten sheep in the field.",
+                  "ex_zh": "田裡有十隻綿羊。",
+                  "ex_blank": "There are ten ____ in the field.",
+                  "grammar": "sheep 的單複數同形，一隻是 sheep，十隻也是 sheep。"
+                },
+                {
+                  "en": "tiger",
+                  "pos": "n.",
+                  "zh": "老虎",
+                  "ex_en": "The tiger in the zoo looks very strong.",
+                  "ex_zh": "動物園裡的老虎看起來很強壯。",
+                  "ex_blank": "The ____ in the zoo looks very strong."
+                },
+                {
+                  "en": "zebra",
+                  "pos": "n.",
+                  "zh": "斑馬",
+                  "ex_en": "Zebras have black and white stripes.",
+                  "ex_zh": "斑馬有黑白相間的條紋。",
+                  "ex_blank": "____ have black and white stripes."
+                },
+                {
+                  "en": "lion",
+                  "pos": "n.",
+                  "zh": "獅子",
+                  "ex_en": "Leo wants to draw a lion for his art project.",
+                  "ex_zh": "里歐想為他的美術作業畫一隻獅子。",
+                  "ex_blank": "Leo wants to draw a ____ for his art project."
+                },
+                {
+                  "en": "mouse",
+                  "pos": "n.",
+                  "zh": "老鼠",
+                  "ex_en": "A mouse is hiding under the table.",
+                  "ex_zh": "一隻老鼠躲在桌子底下。",
+                  "ex_blank": "A ____ is hiding under the table.",
+                  "grammar": "mouse 的複數形是不規則變化的 mice。"
+                },
+                {
+                  "en": "bear",
+                  "pos": "n.",
+                  "zh": "熊",
+                  "ex_en": "The brown bear is eating honey.",
+                  "ex_zh": "這隻棕熊正在吃蜂蜜。",
+                  "ex_blank": "The brown ____ is eating honey."
+                },
+                {
+                  "en": "movie theater",
+                  "pos": "n.",
+                  "zh": "電影院",
+                  "ex_en": "We went to the movie theater last Friday.",
+                  "ex_zh": "我們上星期五去了電影院。",
+                  "ex_blank": "We went to the ____ last Friday."
+                },
+                {
+                  "en": "Chinese",
+                  "pos": "adj./n.",
+                  "blankPos": "n.",
+                  "zh": "中國的；中國人；中文",
+                  "ex_en": "She can speak both Chinese and English.",
+                  "ex_zh": "她中文和英文都會說。",
+                  "ex_blank": "She can speak both ____ and English.",
+                  "grammar": "Chinese 當形容詞是「中國的」，當名詞可以指「中國人」或「中文」這個語言。"
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u2-2",
+              "title": "Part 2",
+              "zh": "十二生肖動物",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "animal",
+                  "pos": "n.",
+                  "zh": "動物",
+                  "ex_en": "Elephants are my favorite animals.",
+                  "ex_zh": "大象是我最喜歡的動物。",
+                  "ex_blank": "Elephants are my favorite ____."
+                },
+                {
+                  "en": "sign",
+                  "pos": "n.",
+                  "zh": "符號",
+                  "ex_en": "That sign means \"no parking.\"",
+                  "ex_zh": "那個符號代表「禁止停車」。",
+                  "ex_blank": "That ____ means \"no parking.\""
+                },
+                {
+                  "en": "rat",
+                  "pos": "n.",
+                  "zh": "大老鼠",
+                  "ex_en": "A big rat ran across the kitchen.",
+                  "ex_zh": "一隻大老鼠跑過廚房。",
+                  "ex_blank": "A big ____ ran across the kitchen."
+                },
+                {
+                  "en": "ox",
+                  "pos": "n.",
+                  "zh": "(公)牛",
+                  "ex_en": "The ox helps the farmer pull heavy things.",
+                  "ex_zh": "這頭牛幫助農夫拉重物。",
+                  "ex_blank": "The ____ helps the farmer pull heavy things.",
+                  "grammar": "ox 的複數形是不規則變化的 oxen。"
+                },
+                {
+                  "en": "rabbit",
+                  "pos": "n.",
+                  "zh": "兔子",
+                  "ex_en": "This white rabbit is so cute and fluffy.",
+                  "ex_zh": "這隻白兔好可愛又蓬鬆。",
+                  "ex_blank": "This white ____ is so cute and fluffy."
+                },
+                {
+                  "en": "dragon",
+                  "pos": "n.",
+                  "zh": "龍",
+                  "ex_en": "People in China love the dragon as a symbol of power.",
+                  "ex_zh": "中國人喜歡把龍當作力量的象徵。",
+                  "ex_blank": "People in China love the ____ as a symbol of power."
+                },
+                {
+                  "en": "snake",
+                  "pos": "n.",
+                  "zh": "蛇",
+                  "ex_en": "The snake moved quietly in the grass.",
+                  "ex_zh": "這條蛇安靜地在草叢中移動。",
+                  "ex_blank": "The ____ moved quietly in the grass."
+                },
+                {
+                  "en": "horse",
+                  "pos": "n.",
+                  "zh": "馬",
+                  "ex_en": "She rides a horse every weekend.",
+                  "ex_zh": "她每個週末都會騎馬。",
+                  "ex_blank": "She rides a ____ every weekend."
+                },
+                {
+                  "en": "goat",
+                  "pos": "n.",
+                  "zh": "山羊",
+                  "ex_en": "The goat climbed to the top of the hill.",
+                  "ex_zh": "這隻山羊爬到了山丘頂端。",
+                  "ex_blank": "The ____ climbed to the top of the hill."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u2-3",
+              "title": "Part 3",
+              "zh": "動物特性",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "rooster",
+                  "pos": "n.",
+                  "zh": "公雞",
+                  "ex_en": "The rooster crows every morning.",
+                  "ex_zh": "公雞每天早上都會啼叫。",
+                  "ex_blank": "The ____ crows every morning."
+                },
+                {
+                  "en": "smart",
+                  "pos": "adj.",
+                  "zh": "聰明的",
+                  "ex_en": "Your dog is so smart; it can open doors!",
+                  "ex_zh": "你的狗好聰明，牠會開門！",
+                  "ex_blank": "Your dog is so ____; it can open doors!"
+                },
+                {
+                  "en": "energetic",
+                  "pos": "adj.",
+                  "zh": "充滿活力的",
+                  "ex_en": "Jenny is energetic and loves dancing.",
+                  "ex_zh": "珍妮充滿活力，而且喜歡跳舞。",
+                  "ex_blank": "Jenny is ____ and loves dancing."
+                },
+                {
+                  "en": "TRUE",
+                  "pos": "adj.",
+                  "zh": "真的；真實的",
+                  "ex_en": "Is this story true or just made up?",
+                  "ex_zh": "這個故事是真的還是編出來的？",
+                  "ex_blank": "Is this story ____ or just made up?"
+                },
+                {
+                  "en": "no wonder",
+                  "pos": "phr.",
+                  "zh": "難怪",
+                  "ex_en": "He practices every day; no wonder he plays so well!",
+                  "ex_zh": "他每天都練習，難怪他表現得這麼好！",
+                  "ex_blank": "He practices every day; ____ he plays so well!"
+                },
+                {
+                  "en": "people",
+                  "pos": "n.",
+                  "zh": "人們",
+                  "ex_en": "Many people visited the zoo during the holiday.",
+                  "ex_zh": "假期期間有很多人去參觀動物園。",
+                  "ex_blank": "Many ____ visited the zoo during the holiday.",
+                  "grammar": "people 是 person 的複數形，本身已經是複數概念，不加 s。"
+                },
+                {
+                  "en": "What about...?",
+                  "pos": "phr.",
+                  "zh": "……怎麼樣？",
+                  "ex_en": "What about going to the zoo this weekend?",
+                  "ex_zh": "這個週末去動物園怎麼樣？",
+                  "ex_blank": "____ going to the zoo this weekend?"
+                },
+                {
+                  "en": "people person",
+                  "pos": "n.",
+                  "zh": "人緣好的人",
+                  "ex_en": "Amy is a real people person; everyone likes her.",
+                  "ex_zh": "艾咪真的是個人緣很好的人，大家都喜歡她。",
+                  "ex_blank": "Amy is a real ____; everyone likes her."
+                },
+                {
+                  "en": "picture",
+                  "pos": "n.",
+                  "zh": "照片；圖畫",
+                  "ex_en": "I took a picture of the panda at the zoo.",
+                  "ex_zh": "我在動物園拍了一張貓熊的照片。",
+                  "ex_blank": "I took a ____ of the panda at the zoo."
+                },
+                {
+                  "en": "elephant",
+                  "pos": "n.",
+                  "zh": "大象",
+                  "ex_en": "Elephants can live for many years.",
+                  "ex_zh": "大象可以活很多年。",
+                  "ex_blank": "____ can live for many years."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u2-4",
+              "title": "Part 4",
+              "zh": "比較與描述",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "or",
+                  "pos": "conj.",
+                  "zh": "或者",
+                  "ex_en": "Do you want a tiger or a lion on your shirt?",
+                  "ex_zh": "你的襯衫想要老虎還是獅子的圖案？",
+                  "ex_blank": "Do you want a tiger ____ a lion on your shirt?"
+                },
+                {
+                  "en": "size",
+                  "pos": "n.",
+                  "zh": "尺寸",
+                  "ex_en": "What size is this T-shirt?",
+                  "ex_zh": "這件T恤是什麼尺寸？",
+                  "ex_blank": "What ____ is this T-shirt?"
+                },
+                {
+                  "en": "different",
+                  "pos": "adj.",
+                  "zh": "不同的",
+                  "ex_en": "These two animals look different but are both friendly.",
+                  "ex_zh": "這兩種動物看起來不同，但都很友善。",
+                  "ex_blank": "These two animals look ____ but are both friendly."
+                },
+                {
+                  "en": "very",
+                  "pos": "adv.",
+                  "zh": "很；非常",
+                  "ex_en": "The bear looks very sleepy today.",
+                  "ex_zh": "這隻熊今天看起來很想睡覺。",
+                  "ex_blank": "The bear looks ____ sleepy today."
+                },
+                {
+                  "en": "their",
+                  "pos": "det.",
+                  "zh": "牠們的；他們的",
+                  "ex_en": "The zebras are eating their lunch now.",
+                  "ex_zh": "斑馬們現在正在吃牠們的午餐。",
+                  "ex_blank": "The zebras are eating ____ lunch now."
+                },
+                {
+                  "en": "meter",
+                  "pos": "n.",
+                  "zh": "公尺",
+                  "ex_en": "That giraffe is over five meters tall.",
+                  "ex_zh": "那隻長頸鹿身高超過五公尺。",
+                  "ex_blank": "That giraffe is over five ____ tall."
+                },
+                {
+                  "en": "but",
+                  "pos": "conj.",
+                  "zh": "但是",
+                  "ex_en": "Elephants are big but very gentle.",
+                  "ex_zh": "大象體型很大，但是非常溫和。",
+                  "ex_blank": "Elephants are big ____ very gentle."
+                },
+                {
+                  "en": "only",
+                  "pos": "adv.",
+                  "zh": "僅僅；只",
+                  "ex_en": "This rabbit is only two months old.",
+                  "ex_zh": "這隻兔子只有兩個月大。",
+                  "ex_blank": "This rabbit is ____ two months old."
+                },
+                {
+                  "en": "lifespan",
+                  "pos": "n.",
+                  "zh": "壽命",
+                  "ex_en": "The lifespan of a mouse is about two years.",
+                  "ex_zh": "老鼠的壽命大約是兩年。",
+                  "ex_blank": "The ____ of a mouse is about two years."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-lesson3",
+          "title": "Unit 3",
+          "zh": "居家空間與生活用語",
+          "units": [
+            {
+              "id": "kj-b1-u3-1",
+              "title": "Part 1",
+              "zh": "居家空間與方位",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "living room",
+                  "pos": "n.",
+                  "zh": "客廳",
+                  "ex_en": "We watched a movie in the living room last night.",
+                  "ex_zh": "我們昨晚在客廳看電影。",
+                  "ex_blank": "We watched a movie in the ____ last night."
+                },
+                {
+                  "en": "bedroom",
+                  "pos": "n.",
+                  "zh": "臥室",
+                  "ex_en": "Jenny's bedroom is full of cute toys.",
+                  "ex_zh": "珍妮的臥室裡滿是可愛的玩具。",
+                  "ex_blank": "Jenny's ____ is full of cute toys."
+                },
+                {
+                  "en": "bathroom",
+                  "pos": "n.",
+                  "zh": "浴室",
+                  "ex_en": "Please clean the bathroom after your shower.",
+                  "ex_zh": "洗完澡後請把浴室清乾淨。",
+                  "ex_blank": "Please clean the ____ after your shower."
+                },
+                {
+                  "en": "dining room",
+                  "pos": "n.",
+                  "zh": "飯廳",
+                  "ex_en": "We have dinner together in the dining room every evening.",
+                  "ex_zh": "我們每天晚上都在飯廳一起吃晚餐。",
+                  "ex_blank": "We have dinner together in the ____ every evening."
+                },
+                {
+                  "en": "behind",
+                  "pos": "prep.",
+                  "zh": "在……後面",
+                  "ex_en": "The cat is hiding behind the sofa.",
+                  "ex_zh": "這隻貓躲在沙發後面。",
+                  "ex_blank": "The cat is hiding ____ the sofa."
+                },
+                {
+                  "en": "in front of",
+                  "pos": "prep.",
+                  "zh": "在……前面",
+                  "ex_en": "There's a big tree in front of the house.",
+                  "ex_zh": "房子前面有一棵大樹。",
+                  "ex_blank": "There's a big tree ____ the house."
+                },
+                {
+                  "en": "between",
+                  "pos": "prep.",
+                  "zh": "在……中間",
+                  "ex_en": "The school is between the park and the library.",
+                  "ex_zh": "學校在公園和圖書館中間。",
+                  "ex_blank": "The school is ____ the park and the library."
+                },
+                {
+                  "en": "next to",
+                  "pos": "prep.",
+                  "zh": "在……旁邊",
+                  "ex_en": "I sat next to Kevin in class today.",
+                  "ex_zh": "我今天上課坐在凱文旁邊。",
+                  "ex_blank": "I sat ____ Kevin in class today."
+                },
+                {
+                  "en": "near",
+                  "pos": "prep.",
+                  "zh": "在……附近",
+                  "ex_en": "There's a small shop near my home.",
+                  "ex_zh": "我家附近有一間小商店。",
+                  "ex_blank": "There's a small shop ____ my home."
+                },
+                {
+                  "en": "please",
+                  "pos": "int.",
+                  "zh": "請",
+                  "ex_en": "Please close the door quietly.",
+                  "ex_zh": "請安靜地把門關上。",
+                  "ex_blank": "____ close the door quietly."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u3-2",
+              "title": "Part 2",
+              "zh": "居家與科技",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "house",
+                  "pos": "n.",
+                  "zh": "房子",
+                  "ex_en": "Their house has a lovely garden.",
+                  "ex_zh": "他們的房子有一座漂亮的花園。",
+                  "ex_blank": "Their ____ has a lovely garden."
+                },
+                {
+                  "en": "quiet",
+                  "pos": "adj.",
+                  "zh": "安靜的",
+                  "ex_en": "This library is very quiet.",
+                  "ex_zh": "這間圖書館非常安靜。",
+                  "ex_blank": "This library is very ____."
+                },
+                {
+                  "en": "style",
+                  "pos": "n.",
+                  "zh": "風格；款式",
+                  "ex_en": "I like the simple style of this room.",
+                  "ex_zh": "我喜歡這個房間簡約的風格。",
+                  "ex_blank": "I like the simple ____ of this room."
+                },
+                {
+                  "en": "idea",
+                  "pos": "n.",
+                  "zh": "想法；點子",
+                  "ex_en": "That's a great idea for our school project!",
+                  "ex_zh": "那是我們學校作業的一個好點子！",
+                  "ex_blank": "That's a great ____ for our school project!"
+                },
+                {
+                  "en": "let's...",
+                  "pos": "phr.",
+                  "zh": "我們一起……吧",
+                  "ex_en": "Let's take a break and go for a walk.",
+                  "ex_zh": "我們一起休息一下去散步吧。",
+                  "ex_blank": "____ take a break and go for a walk."
+                },
+                {
+                  "en": "get",
+                  "pos": "v.",
+                  "zh": "獲得",
+                  "ex_en": "Did you get my message?",
+                  "ex_zh": "你收到我的訊息了嗎？",
+                  "ex_blank": "Did you ____ my message?"
+                },
+                {
+                  "en": "some",
+                  "pos": "adj./pron.",
+                  "zh": "一些的；一些",
+                  "ex_en": "I bought some snacks for the trip.",
+                  "ex_zh": "我為這趟旅行買了一些點心。",
+                  "ex_blank": "I bought ____ snacks for the trip."
+                },
+                {
+                  "en": "tool",
+                  "pos": "n.",
+                  "zh": "工具",
+                  "ex_en": "Dad keeps his tools in the garage.",
+                  "ex_zh": "爸爸把他的工具放在車庫裡。",
+                  "ex_blank": "Dad keeps his ____ in the garage."
+                },
+                {
+                  "en": "smartphone",
+                  "pos": "n.",
+                  "zh": "智慧型手機",
+                  "ex_en": "Most students have a smartphone these days.",
+                  "ex_zh": "現在大部分學生都有智慧型手機。",
+                  "ex_blank": "Most students have a ____ these days."
+                },
+                {
+                  "en": "I see.",
+                  "pos": "phr.",
+                  "zh": "我了解了。",
+                  "ex_en": "The bathroom is next to the kitchen. I see.",
+                  "ex_zh": "浴室在廚房旁邊。我了解了。",
+                  "ex_blank": "The bathroom is next to the kitchen. ____"
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u3-3",
+              "title": "Part 3",
+              "zh": "步驟與選擇",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "step",
+                  "pos": "n.",
+                  "zh": "步驟；一步",
+                  "ex_en": "Follow these steps to bake a cake.",
+                  "ex_zh": "照著這些步驟來烤蛋糕。",
+                  "ex_blank": "Follow these ____ to bake a cake."
+                },
+                {
+                  "en": "upload",
+                  "pos": "v.",
+                  "zh": "上傳",
+                  "ex_en": "I want to upload this photo to Instagram.",
+                  "ex_zh": "我想把這張照片上傳到Instagram。",
+                  "ex_blank": "I want to ____ this photo to Instagram."
+                },
+                {
+                  "en": "photo",
+                  "pos": "n.",
+                  "zh": "相片",
+                  "ex_en": "This is a photo of my dog.",
+                  "ex_zh": "這是我的狗的照片。",
+                  "ex_blank": "This is a ____ of my dog."
+                },
+                {
+                  "en": "choose",
+                  "pos": "v.",
+                  "zh": "選擇",
+                  "ex_en": "You can choose your favorite color.",
+                  "ex_zh": "你可以選擇你最喜歡的顏色。",
+                  "ex_blank": "You can ____ your favorite color."
+                },
+                {
+                  "en": "type",
+                  "pos": "n.",
+                  "zh": "種類",
+                  "ex_en": "I like every type of music.",
+                  "ex_zh": "我喜歡每一種類型的音樂。",
+                  "ex_blank": "I like every ____ of music."
+                },
+                {
+                  "en": "theme",
+                  "pos": "n.",
+                  "zh": "主題",
+                  "ex_en": "The theme of this party is space.",
+                  "ex_zh": "這場派對的主題是太空。",
+                  "ex_blank": "The ____ of this party is space."
+                },
+                {
+                  "en": "wait",
+                  "pos": "v.",
+                  "zh": "等待",
+                  "ex_en": "Please wait here for a few minutes.",
+                  "ex_zh": "請在這裡等幾分鐘。",
+                  "ex_blank": "Please ____ here for a few minutes."
+                },
+                {
+                  "en": "expensive",
+                  "pos": "adj.",
+                  "zh": "昂貴的",
+                  "ex_en": "That watch is beautiful but expensive.",
+                  "ex_zh": "那支手錶很漂亮，但是很貴。",
+                  "ex_blank": "That watch is beautiful but ____."
+                },
+                {
+                  "en": "with",
+                  "pos": "prep.",
+                  "zh": "對……來說；和",
+                  "ex_en": "I made cookies with my mom.",
+                  "ex_zh": "我和媽媽一起做了餅乾。",
+                  "ex_blank": "I made cookies ____ my mom."
+                },
+                {
+                  "en": "question",
+                  "pos": "n.",
+                  "zh": "問題",
+                  "ex_en": "Do you have any questions about the homework?",
+                  "ex_zh": "你對作業有任何問題嗎？",
+                  "ex_blank": "Do you have any ____ about the homework?"
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u3-4",
+              "title": "Part 4",
+              "zh": "居家感官描述",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "soft",
+                  "pos": "adj.",
+                  "zh": "柔軟的",
+                  "ex_en": "This blanket is warm and soft.",
+                  "ex_zh": "這條毛毯又溫暖又柔軟。",
+                  "ex_blank": "This blanket is warm and ____."
+                },
+                {
+                  "en": "hard",
+                  "pos": "adj.",
+                  "zh": "硬的",
+                  "ex_en": "The floor is too hard to sleep on.",
+                  "ex_zh": "地板太硬了，不能睡在上面。",
+                  "ex_blank": "The floor is too ____ to sleep on."
+                },
+                {
+                  "en": "in fact",
+                  "pos": "phr.",
+                  "zh": "事實上",
+                  "ex_en": "In fact, I've already seen that movie.",
+                  "ex_zh": "事實上，我已經看過那部電影了。",
+                  "ex_blank": "____, I've already seen that movie."
+                },
+                {
+                  "en": "around",
+                  "pos": "prep./adv.",
+                  "zh": "圍繞；到處",
+                  "ex_en": "We walked around the park this morning.",
+                  "ex_zh": "我們今天早上在公園裡到處走走。",
+                  "ex_blank": "We walked ____ the park this morning."
+                },
+                {
+                  "en": "world",
+                  "pos": "n.",
+                  "zh": "世界",
+                  "ex_en": "Learning English helps us understand the world better.",
+                  "ex_zh": "學習英文幫助我們更了解這個世界。",
+                  "ex_blank": "Learning English helps us understand the ____ better."
+                },
+                {
+                  "en": "kitchen",
+                  "pos": "n.",
+                  "zh": "廚房",
+                  "ex_en": "Dad is cooking in the kitchen.",
+                  "ex_zh": "爸爸正在廚房煮飯。",
+                  "ex_blank": "Dad is cooking in the ____."
+                },
+                {
+                  "en": "beside",
+                  "pos": "prep.",
+                  "zh": "在……旁邊",
+                  "ex_en": "I put your book beside your bed.",
+                  "ex_zh": "我把你的書放在你的床邊。",
+                  "ex_blank": "I put your book ____ your bed."
+                },
+                {
+                  "en": "ice",
+                  "pos": "n.",
+                  "zh": "冰",
+                  "ex_en": "Would you like some ice in your drink?",
+                  "ex_zh": "你的飲料要加冰塊嗎？",
+                  "ex_blank": "Would you like some ____ in your drink?"
+                },
+                {
+                  "en": "inside",
+                  "pos": "prep./adv.",
+                  "zh": "在……裡面；在室內",
+                  "ex_en": "It's warm inside the house.",
+                  "ex_zh": "房子裡面很溫暖。",
+                  "ex_blank": "It's warm ____ the house."
+                },
+                {
+                  "en": "blanket",
+                  "pos": "n.",
+                  "zh": "毛毯",
+                  "ex_en": "She gave the puppy a small blanket.",
+                  "ex_zh": "她給了小狗一條小毛毯。",
+                  "ex_blank": "She gave the puppy a small ____."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-lesson4",
+          "title": "Unit 4",
+          "zh": "交通安全與3C生活",
+          "units": [
+            {
+              "id": "kj-b1-u4-1",
+              "title": "Part 1",
+              "zh": "課堂常用語",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "listen",
+                  "pos": "v.",
+                  "zh": "聽",
+                  "ex_en": "Please listen to the teacher carefully.",
+                  "ex_zh": "請仔細聽老師說話。",
+                  "ex_blank": "Please ____ to the teacher carefully."
+                },
+                {
+                  "en": "voice",
+                  "pos": "n.",
+                  "zh": "聲音；歌喉",
+                  "ex_en": "Her singing voice is beautiful.",
+                  "ex_zh": "她的歌聲很美。",
+                  "ex_blank": "Her singing ____ is beautiful."
+                },
+                {
+                  "en": "stand up",
+                  "pos": "phr.",
+                  "zh": "站起來",
+                  "ex_en": "Everyone, please stand up.",
+                  "ex_zh": "各位，請站起來。",
+                  "ex_blank": "Everyone, please ____."
+                },
+                {
+                  "en": "sit down",
+                  "pos": "phr.",
+                  "zh": "坐下",
+                  "ex_en": "The teacher asked us to sit down and open our books.",
+                  "ex_zh": "老師要我們坐下並打開書本。",
+                  "ex_blank": "The teacher asked us to ____ and open our books."
+                },
+                {
+                  "en": "take a photo / took a photo",
+                  "pos": "phr.",
+                  "zh": "拍照",
+                  "ex_en": "Let's take a photo in front of the garden.",
+                  "ex_zh": "我們在花園前拍張照吧。",
+                  "ex_blank": "Let's ____ in front of the garden.",
+                  "grammar": "take a photo 的過去式是 took a photo（take 是不規則動詞）。"
+                },
+                {
+                  "en": "make / made",
+                  "pos": "v.",
+                  "zh": "製造",
+                  "ex_en": "I want to make a card for my mom.",
+                  "ex_zh": "我想幫媽媽做一張卡片。",
+                  "ex_blank": "I want to ____ a card for my mom.",
+                  "grammar": "make 的過去式與過去分詞都是 made。"
+                },
+                {
+                  "en": "any",
+                  "pos": "adj./pron.",
+                  "zh": "任何(的)",
+                  "ex_en": "Do you have any questions?",
+                  "ex_zh": "你有任何問題嗎？",
+                  "ex_blank": "Do you have ____ questions?"
+                },
+                {
+                  "en": "noise",
+                  "pos": "n.",
+                  "zh": "噪音",
+                  "ex_en": "Don't make too much noise in the library.",
+                  "ex_zh": "不要在圖書館製造太多噪音。",
+                  "ex_blank": "Don't make too much ____ in the library."
+                },
+                {
+                  "en": "can't",
+                  "pos": "aux.",
+                  "zh": "不能；不會；不可以",
+                  "ex_en": "I can't hear you; please speak louder.",
+                  "ex_zh": "我聽不到你說話，請講大聲一點。",
+                  "ex_blank": "I ____ hear you; please speak louder."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u4-2",
+              "title": "Part 2",
+              "zh": "作息與過馬路",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "talk",
+                  "pos": "v.",
+                  "zh": "講話",
+                  "ex_en": "We like to talk during lunch time.",
+                  "ex_zh": "我們喜歡在午餐時間聊天。",
+                  "ex_blank": "We like to ____ during lunch time."
+                },
+                {
+                  "en": "noisy",
+                  "pos": "adj.",
+                  "zh": "吵鬧的",
+                  "ex_en": "The classroom was too noisy to study.",
+                  "ex_zh": "教室太吵了，沒辦法讀書。",
+                  "ex_blank": "The classroom was too ____ to study."
+                },
+                {
+                  "en": "late",
+                  "pos": "adj.",
+                  "zh": "晚的；遲到的",
+                  "ex_en": "Kevin was late for school this morning.",
+                  "ex_zh": "凱文今天早上上學遲到了。",
+                  "ex_blank": "Kevin was ____ for school this morning."
+                },
+                {
+                  "en": "early",
+                  "pos": "adj.",
+                  "zh": "早的；初期的",
+                  "ex_en": "I like to get up early on weekends.",
+                  "ex_zh": "我喜歡週末早起。",
+                  "ex_blank": "I like to get up ____ on weekends."
+                },
+                {
+                  "en": "sidewalk",
+                  "pos": "n.",
+                  "zh": "人行道",
+                  "ex_en": "Walk on the sidewalk, not on the road.",
+                  "ex_zh": "要走在人行道上，不要走在馬路上。",
+                  "ex_blank": "Walk on the ____, not on the road."
+                },
+                {
+                  "en": "song",
+                  "pos": "n.",
+                  "zh": "歌曲",
+                  "ex_en": "That's my favorite song!",
+                  "ex_zh": "那是我最喜歡的歌！",
+                  "ex_blank": "That's my favorite ____!"
+                },
+                {
+                  "en": "check out",
+                  "pos": "phr.",
+                  "zh": "查看",
+                  "ex_en": "Let's check out this cool app.",
+                  "ex_zh": "我們來看看這個很酷的App吧。",
+                  "ex_blank": "Let's ____ this cool app."
+                },
+                {
+                  "en": "cross",
+                  "pos": "v.",
+                  "zh": "跨越",
+                  "ex_en": "Always look both ways before you cross the street.",
+                  "ex_zh": "過馬路前一定要看看兩邊。",
+                  "ex_blank": "Always look both ways before you ____ the street."
+                },
+                {
+                  "en": "road",
+                  "pos": "n.",
+                  "zh": "道路",
+                  "ex_en": "There are many cars on the road today.",
+                  "ex_zh": "今天路上有很多車。",
+                  "ex_blank": "There are many cars on the ____ today."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u4-3",
+              "title": "Part 3",
+              "zh": "交通安全提醒",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "watch out",
+                  "pos": "phr.",
+                  "zh": "小心；注意",
+                  "ex_en": "Watch out! There's a car coming.",
+                  "ex_zh": "小心！有車來了。",
+                  "ex_blank": "____! There's a car coming."
+                },
+                {
+                  "en": "real",
+                  "pos": "adj.",
+                  "zh": "真的；真實的",
+                  "ex_en": "This diamond looks real, but it's fake.",
+                  "ex_zh": "這顆鑽石看起來是真的，但其實是假的。",
+                  "ex_blank": "This diamond looks ____, but it's fake."
+                },
+                {
+                  "en": "all the time",
+                  "pos": "phr.",
+                  "zh": "一直",
+                  "ex_en": "He listens to music all the time.",
+                  "ex_zh": "他一直都在聽音樂。",
+                  "ex_blank": "He listens to music ____."
+                },
+                {
+                  "en": "Guess what?",
+                  "pos": "phr.",
+                  "zh": "你猜怎麼著？",
+                  "ex_en": "Guess what? I got a new phone!",
+                  "ex_zh": "你猜怎麼著？我拿到一支新手機了！",
+                  "ex_blank": "____ I got a new phone!"
+                },
+                {
+                  "en": "traffic lights",
+                  "pos": "n.",
+                  "zh": "紅綠燈",
+                  "ex_en": "Wait for the traffic lights to turn green.",
+                  "ex_zh": "等紅綠燈變綠燈。",
+                  "ex_blank": "Wait for the ____ to turn green."
+                },
+                {
+                  "en": "ground",
+                  "pos": "n.",
+                  "zh": "地面",
+                  "ex_en": "The kids are playing on the ground.",
+                  "ex_zh": "孩子們在地上玩耍。",
+                  "ex_blank": "The kids are playing on the ____."
+                },
+                {
+                  "en": "design",
+                  "pos": "n./v.",
+                  "zh": "設計",
+                  "ex_en": "Amy helped design the class poster.",
+                  "ex_zh": "艾咪幫忙設計班級海報。",
+                  "ex_blank": "Amy helped ____ the class poster."
+                },
+                {
+                  "en": "user",
+                  "pos": "n.",
+                  "zh": "使用者",
+                  "ex_en": "This app has over 1 million users.",
+                  "ex_zh": "這個App有超過一百萬名使用者。",
+                  "ex_blank": "This app has over 1 million ____."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u4-4",
+              "title": "Part 4",
+              "zh": "路上與美國",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "download",
+                  "pos": "v.",
+                  "zh": "下載",
+                  "ex_en": "You can download the file from the website.",
+                  "ex_zh": "你可以從這個網站下載檔案。",
+                  "ex_blank": "You can ____ the file from the website."
+                },
+                {
+                  "en": "warn",
+                  "pos": "v.",
+                  "zh": "警告",
+                  "ex_en": "The teacher warned us not to run in the hallway.",
+                  "ex_zh": "老師警告我們不要在走廊上奔跑。",
+                  "ex_blank": "The teacher ____ us not to run in the hallway."
+                },
+                {
+                  "en": "oncoming",
+                  "pos": "adj.",
+                  "zh": "迎面而來的",
+                  "ex_en": "Watch out for oncoming traffic.",
+                  "ex_zh": "小心迎面而來的車輛。",
+                  "ex_blank": "Watch out for ____ traffic."
+                },
+                {
+                  "en": "crosswalk",
+                  "pos": "n.",
+                  "zh": "斑馬線",
+                  "ex_en": "Always use the crosswalk when crossing the street.",
+                  "ex_zh": "過馬路時一定要走斑馬線。",
+                  "ex_blank": "Always use the ____ when crossing the street."
+                },
+                {
+                  "en": "also",
+                  "pos": "adv.",
+                  "zh": "而且；也",
+                  "ex_en": "Tina is good at math, and she also loves science.",
+                  "ex_zh": "蒂娜數學很好，而且她也喜歡自然科學。",
+                  "ex_blank": "Tina is good at math, and she ____ loves science."
+                },
+                {
+                  "en": "the USA",
+                  "pos": "n.",
+                  "zh": "美國",
+                  "ex_en": "My cousin lives in the USA and studies at a high school there.",
+                  "ex_zh": "我表哥(姊)住在美國，在那裡讀高中。",
+                  "ex_blank": "My cousin lives in ____ and studies at a high school there."
+                },
+                {
+                  "en": "special",
+                  "pos": "adj.",
+                  "zh": "特別的",
+                  "ex_en": "We made a special cake for Dad's birthday.",
+                  "ex_zh": "我們為爸爸的生日做了一個特別的蛋糕。",
+                  "ex_blank": "We made a ____ cake for Dad's birthday."
+                },
+                {
+                  "en": "lane",
+                  "pos": "n.",
+                  "zh": "小路；小巷",
+                  "ex_en": "There's a quiet lane behind my school.",
+                  "ex_zh": "我學校後面有一條安靜的小巷。",
+                  "ex_blank": "There's a quiet ____ behind my school."
+                },
+                {
+                  "en": "way",
+                  "pos": "n.",
+                  "zh": "方式；方法；路",
+                  "ex_en": "Walking is a good way to stay healthy.",
+                  "ex_zh": "走路是保持健康的好方法。",
+                  "ex_blank": "Walking is a good ____ to stay healthy."
+                },
+                {
+                  "en": "other",
+                  "pos": "adj.",
+                  "zh": "其他的",
+                  "ex_en": "Do you have any other questions?",
+                  "ex_zh": "你還有其他問題嗎？",
+                  "ex_blank": "Do you have any ____ questions?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-lesson5",
+          "title": "Unit 5",
+          "zh": "星期、時間與社團活動",
+          "units": [
+            {
+              "id": "kj-b1-u5-1",
+              "title": "Part 1",
+              "zh": "星期幾",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "week",
+                  "pos": "n.",
+                  "zh": "星期",
+                  "ex_en": "We have a math test every week.",
+                  "ex_zh": "我們每星期都有一次數學考試。",
+                  "ex_blank": "We have a math test every ____."
+                },
+                {
+                  "en": "Monday",
+                  "pos": "n.",
+                  "zh": "星期一",
+                  "ex_en": "Amy has piano class on Monday.",
+                  "ex_zh": "艾咪星期一有鋼琴課。",
+                  "ex_blank": "Amy has piano class on ____."
+                },
+                {
+                  "en": "Tuesday",
+                  "pos": "n.",
+                  "zh": "星期二",
+                  "ex_en": "I play basketball every Tuesday after school.",
+                  "ex_zh": "我每星期二放學後都會打籃球。",
+                  "ex_blank": "I play basketball every ____ after school."
+                },
+                {
+                  "en": "Wednesday",
+                  "pos": "n.",
+                  "zh": "星期三",
+                  "ex_en": "My mom goes to the market every Wednesday morning.",
+                  "ex_zh": "我媽媽每星期三早上都會去市場。",
+                  "ex_blank": "My mom goes to the market every ____ morning."
+                },
+                {
+                  "en": "basketball",
+                  "pos": "n.",
+                  "zh": "籃球",
+                  "ex_en": "Jack is good at playing basketball.",
+                  "ex_zh": "傑克很擅長打籃球。",
+                  "ex_blank": "Jack is good at playing ____."
+                },
+                {
+                  "en": "Thursday",
+                  "pos": "n.",
+                  "zh": "星期四",
+                  "ex_en": "We have our English club meeting on Thursday.",
+                  "ex_zh": "我們星期四有英文社的聚會。",
+                  "ex_blank": "We have our English club meeting on ____."
+                },
+                {
+                  "en": "Friday",
+                  "pos": "n.",
+                  "zh": "星期五",
+                  "ex_en": "Friday is my favorite day because the weekend is coming.",
+                  "ex_zh": "星期五是我最喜歡的一天，因為週末要到了。",
+                  "ex_blank": "____ is my favorite day because the weekend is coming."
+                },
+                {
+                  "en": "Saturday",
+                  "pos": "n.",
+                  "zh": "星期六",
+                  "ex_en": "Lily goes hiking with her family on Saturdays.",
+                  "ex_zh": "莉莉每個星期六都會跟家人一起去健行。",
+                  "ex_blank": "Lily goes hiking with her family on ____."
+                },
+                {
+                  "en": "birthday",
+                  "pos": "n.",
+                  "zh": "生日",
+                  "ex_en": "My dad's birthday is next month.",
+                  "ex_zh": "我爸爸的生日在下個月。",
+                  "ex_blank": "My dad's ____ is next month."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u5-2",
+              "title": "Part 2",
+              "zh": "週末與日常",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "party",
+                  "pos": "n.",
+                  "zh": "派對",
+                  "ex_en": "Tom is planning a birthday party for his sister.",
+                  "ex_zh": "湯姆正在為他妹妹籌劃生日派對。",
+                  "ex_blank": "Tom is planning a birthday ____ for his sister."
+                },
+                {
+                  "en": "Sunday",
+                  "pos": "n.",
+                  "zh": "星期日",
+                  "ex_en": "We often go to the park on Sunday afternoons.",
+                  "ex_zh": "我們常常在星期天下午去公園。",
+                  "ex_blank": "We often go to the park on ____ afternoons."
+                },
+                {
+                  "en": "day",
+                  "pos": "n.",
+                  "zh": "日",
+                  "ex_en": "It's a beautiful day today.",
+                  "ex_zh": "今天是美好的一天。",
+                  "ex_blank": "It's a beautiful ____ today."
+                },
+                {
+                  "en": "weekend",
+                  "pos": "n.",
+                  "zh": "週末",
+                  "ex_en": "What do you usually do on the weekend?",
+                  "ex_zh": "你週末通常都做什麼？",
+                  "ex_blank": "What do you usually do on the ____?"
+                },
+                {
+                  "en": "noon",
+                  "pos": "n.",
+                  "zh": "中午",
+                  "ex_en": "We'll meet at the library at noon.",
+                  "ex_zh": "我們中午在圖書館見。",
+                  "ex_blank": "We'll meet at the library at ____."
+                },
+                {
+                  "en": "wake up / woke up",
+                  "pos": "phr.",
+                  "zh": "醒來",
+                  "ex_en": "I usually wake up at 6:30 a.m.",
+                  "ex_zh": "我通常早上六點半醒來。",
+                  "ex_blank": "I usually ____ at 6:30 a.m.",
+                  "grammar": "wake up 的過去式是 woke up（wake 是不規則動詞）。"
+                },
+                {
+                  "en": "look for",
+                  "pos": "phr.",
+                  "zh": "尋找",
+                  "ex_en": "I'm looking for my notebook.",
+                  "ex_zh": "我正在找我的筆記本。",
+                  "ex_blank": "I'm ____ my notebook."
+                },
+                {
+                  "en": "Hurry up.",
+                  "pos": "phr.",
+                  "zh": "快一點。",
+                  "ex_en": "Hurry up or we'll miss the bus!",
+                  "ex_zh": "快一點，不然我們會錯過公車！",
+                  "ex_blank": "____ or we'll miss the bus!"
+                },
+                {
+                  "en": "by the way",
+                  "pos": "phr.",
+                  "zh": "順帶一提",
+                  "ex_en": "By the way, don't forget your homework.",
+                  "ex_zh": "順帶一提，別忘了你的作業。",
+                  "ex_blank": "____, don't forget your homework."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u5-3",
+              "title": "Part 3",
+              "zh": "社團與會議",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "join",
+                  "pos": "v.",
+                  "zh": "參加；加入",
+                  "ex_en": "I want to join the science club this year.",
+                  "ex_zh": "我今年想加入科學社。",
+                  "ex_blank": "I want to ____ the science club this year."
+                },
+                {
+                  "en": "group",
+                  "pos": "n.",
+                  "zh": "團體",
+                  "ex_en": "Our group won the class reading contest.",
+                  "ex_zh": "我們這組贏了班級閱讀比賽。",
+                  "ex_blank": "Our ____ won the class reading contest."
+                },
+                {
+                  "en": "chat",
+                  "pos": "n./v.",
+                  "zh": "談話",
+                  "ex_en": "We had a nice chat after dinner.",
+                  "ex_zh": "我們晚餐後聊得很愉快。",
+                  "ex_blank": "We had a nice ____ after dinner."
+                },
+                {
+                  "en": "tonight",
+                  "pos": "adv.",
+                  "zh": "今晚",
+                  "ex_en": "Are you free tonight for a movie?",
+                  "ex_zh": "你今晚有空看電影嗎？",
+                  "ex_blank": "Are you free ____ for a movie?"
+                },
+                {
+                  "en": "meeting",
+                  "pos": "n.",
+                  "zh": "會議",
+                  "ex_en": "There is a short meeting after class.",
+                  "ex_zh": "下課後有一場簡短的會議。",
+                  "ex_blank": "There is a short ____ after class."
+                },
+                {
+                  "en": "p.m.",
+                  "pos": "adv.",
+                  "zh": "下午；晚上",
+                  "ex_en": "The meeting starts at 7:00 p.m.",
+                  "ex_zh": "會議晚上七點開始。",
+                  "ex_blank": "The meeting starts at 7:00 ____."
+                },
+                {
+                  "en": "life",
+                  "pos": "n.",
+                  "zh": "生活",
+                  "ex_en": "I enjoy my life in junior high school.",
+                  "ex_zh": "我很享受我的國中生活。",
+                  "ex_blank": "I enjoy my ____ in junior high school."
+                },
+                {
+                  "en": "prepare",
+                  "pos": "v.",
+                  "zh": "準備",
+                  "ex_en": "I need to prepare for the math test tomorrow.",
+                  "ex_zh": "我需要準備明天的數學考試。",
+                  "ex_blank": "I need to ____ for the math test tomorrow."
+                },
+                {
+                  "en": "o'clock",
+                  "pos": "adv.",
+                  "zh": "……點鐘",
+                  "ex_en": "It's eight o'clock. Time for breakfast!",
+                  "ex_zh": "現在八點鐘，該吃早餐了！",
+                  "ex_blank": "It's eight ____. Time for breakfast!"
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u5-4",
+              "title": "Part 4",
+              "zh": "時間與天象",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "everyone (everybody)",
+                  "pos": "pron.",
+                  "zh": "每個人；各位",
+                  "ex_en": "Everyone is welcome to join the game.",
+                  "ex_zh": "歡迎每個人一起加入這個遊戲。",
+                  "ex_blank": "____ is welcome to join the game."
+                },
+                {
+                  "en": "a.m.",
+                  "pos": "adv.",
+                  "zh": "上午；凌晨",
+                  "ex_en": "I leave home at 7:30 a.m. every day.",
+                  "ex_zh": "我每天早上七點半離開家。",
+                  "ex_blank": "I leave home at 7:30 ____ every day."
+                },
+                {
+                  "en": "city",
+                  "pos": "n.",
+                  "zh": "城市",
+                  "ex_en": "I love the lights and sounds of the city at night.",
+                  "ex_zh": "我喜歡城市夜晚的燈光和聲音。",
+                  "ex_blank": "I love the lights and sounds of the ____ at night."
+                },
+                {
+                  "en": "say / said",
+                  "pos": "v.",
+                  "zh": "說",
+                  "ex_en": "My teacher always says, \"Be kind to others.\"",
+                  "ex_zh": "我的老師總是說：「要對別人友善。」",
+                  "ex_blank": "My teacher always ____, \"Be kind to others.\"",
+                  "grammar": "say 的過去式與過去分詞都是 said。"
+                },
+                {
+                  "en": "sun",
+                  "pos": "n.",
+                  "zh": "太陽",
+                  "ex_en": "The sun rises in the east.",
+                  "ex_zh": "太陽從東邊升起。",
+                  "ex_blank": "The ____ rises in the east."
+                },
+                {
+                  "en": "rise / rose",
+                  "pos": "v.",
+                  "zh": "上升",
+                  "ex_en": "The sun rises at 5:45 a.m. in summer.",
+                  "ex_zh": "夏天太陽在清晨五點四十五分升起。",
+                  "ex_blank": "The sun ____ at 5:45 a.m. in summer.",
+                  "grammar": "rise 的過去式是 rose，過去分詞是 risen。"
+                },
+                {
+                  "en": "shine / shone",
+                  "pos": "v.",
+                  "zh": "照耀；發光",
+                  "ex_en": "The stars shine brightly at night.",
+                  "ex_zh": "星星在夜晚閃耀著光芒。",
+                  "ex_blank": "The stars ____ brightly at night.",
+                  "grammar": "shine 的過去式與過去分詞是 shone（也可規則變化為 shined）。"
+                },
+                {
+                  "en": "dinner",
+                  "pos": "n.",
+                  "zh": "晚餐",
+                  "ex_en": "We had a big dinner for Grandma's birthday.",
+                  "ex_zh": "我們為奶奶的生日辦了一頓豐盛的晚餐。",
+                  "ex_blank": "We had a big ____ for Grandma's birthday."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-lesson6",
+          "title": "Unit 6",
+          "zh": "校園設施與生活感受",
+          "units": [
+            {
+              "id": "kj-b1-u6-1",
+              "title": "Part 1",
+              "zh": "校園設施",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "gate",
+                  "pos": "n.",
+                  "zh": "大門",
+                  "ex_en": "Andy is waiting for you at the school gate.",
+                  "ex_zh": "安迪在學校大門等你。",
+                  "ex_blank": "Andy is waiting for you at the school ____."
+                },
+                {
+                  "en": "sports field",
+                  "pos": "n.",
+                  "zh": "運動場；操場",
+                  "ex_en": "We have PE class on the sports field today.",
+                  "ex_zh": "我們今天在操場上體育課。",
+                  "ex_blank": "We have PE class on the ____ today."
+                },
+                {
+                  "en": "basketball court",
+                  "pos": "n.",
+                  "zh": "籃球場",
+                  "ex_en": "The basketball court is full of students playing.",
+                  "ex_zh": "籃球場上滿是正在打球的學生。",
+                  "ex_blank": "The ____ is full of students playing."
+                },
+                {
+                  "en": "restroom",
+                  "pos": "n.",
+                  "zh": "廁所",
+                  "ex_en": "May I go to the restroom, please?",
+                  "ex_zh": "我可以去一下廁所嗎？",
+                  "ex_blank": "May I go to the ____, please?"
+                },
+                {
+                  "en": "library",
+                  "pos": "n.",
+                  "zh": "圖書館",
+                  "ex_en": "I like to read comic books in the school library.",
+                  "ex_zh": "我喜歡在學校圖書館看漫畫書。",
+                  "ex_blank": "I like to read comic books in the school ____."
+                },
+                {
+                  "en": "playground",
+                  "pos": "n.",
+                  "zh": "遊樂場",
+                  "ex_en": "The kids are playing tag on the playground.",
+                  "ex_zh": "孩子們正在遊樂場玩鬼抓人。",
+                  "ex_blank": "The kids are playing tag on the ____."
+                },
+                {
+                  "en": "swing",
+                  "pos": "n.",
+                  "zh": "秋千",
+                  "ex_en": "Emma loves to swing high and feel the wind.",
+                  "ex_zh": "艾瑪喜歡盪很高的秋千，感受風吹過的感覺。",
+                  "ex_blank": "Emma loves to ____ high and feel the wind."
+                },
+                {
+                  "en": "slide",
+                  "pos": "n.",
+                  "zh": "滑梯",
+                  "ex_en": "My little brother went down the slide with a big smile.",
+                  "ex_zh": "我弟弟帶著大大的笑容溜下滑梯。",
+                  "ex_blank": "My little brother went down the ____ with a big smile."
+                },
+                {
+                  "en": "garden",
+                  "pos": "n.",
+                  "zh": "花園",
+                  "ex_en": "Grandpa grows flowers in the garden every weekend.",
+                  "ex_zh": "爺爺每個週末都會在花園裡種花。",
+                  "ex_blank": "Grandpa grows flowers in the ____ every weekend."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u6-2",
+              "title": "Part 2",
+              "zh": "遊樂設施與建築",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "seesaw",
+                  "pos": "n.",
+                  "zh": "蹺蹺板",
+                  "ex_en": "Lily and her cousin are playing on the seesaw.",
+                  "ex_zh": "莉莉和她的表(堂)兄弟姐妹正在玩蹺蹺板。",
+                  "ex_blank": "Lily and her cousin are playing on the ____."
+                },
+                {
+                  "en": "basket",
+                  "pos": "n.",
+                  "zh": "籃子",
+                  "ex_en": "She put some apples into the basket.",
+                  "ex_zh": "她把一些蘋果放進籃子裡。",
+                  "ex_blank": "She put some apples into the ____."
+                },
+                {
+                  "en": "rest",
+                  "pos": "n./v.",
+                  "zh": "休息",
+                  "ex_en": "Let's take a short rest under the tree.",
+                  "ex_zh": "我們在樹下稍微休息一下吧。",
+                  "ex_blank": "Let's take a short ____ under the tree."
+                },
+                {
+                  "en": "show ... around",
+                  "pos": "phr.",
+                  "zh": "帶……參觀",
+                  "ex_en": "I will show you around the school after lunch.",
+                  "ex_zh": "我午餐後會帶你參觀學校。",
+                  "ex_blank": "I will ____ the school after lunch."
+                },
+                {
+                  "en": "building",
+                  "pos": "n.",
+                  "zh": "建築物",
+                  "ex_en": "This building is for science and computer classes.",
+                  "ex_zh": "這棟建築物是用來上自然科學和電腦課的。",
+                  "ex_blank": "This ____ is for science and computer classes."
+                },
+                {
+                  "en": "gym",
+                  "pos": "n.",
+                  "zh": "體育館",
+                  "ex_en": "We often play dodgeball in the gym.",
+                  "ex_zh": "我們常常在體育館玩躲避球。",
+                  "ex_blank": "We often play dodgeball in the ____."
+                },
+                {
+                  "en": "work out",
+                  "pos": "phr.",
+                  "zh": "鍛鍊身體",
+                  "ex_en": "My brother works out at the gym every morning.",
+                  "ex_zh": "我哥哥每天早上都會去健身房鍛鍊身體。",
+                  "ex_blank": "My brother ____ at the gym every morning."
+                },
+                {
+                  "en": "after school",
+                  "pos": "phr.",
+                  "zh": "放學後",
+                  "ex_en": "I usually do my homework after school.",
+                  "ex_zh": "我通常放學後做作業。",
+                  "ex_blank": "I usually do my homework ____."
+                },
+                {
+                  "en": "large",
+                  "pos": "adj.",
+                  "zh": "大的；大量的",
+                  "ex_en": "There is a large tree in front of the building.",
+                  "ex_zh": "這棟建築物前面有一棵大樹。",
+                  "ex_blank": "There is a ____ tree in front of the building."
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u6-3",
+              "title": "Part 3",
+              "zh": "同學與物品",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "classmate",
+                  "pos": "n.",
+                  "zh": "同班同學",
+                  "ex_en": "My classmates are friendly and helpful.",
+                  "ex_zh": "我的同班同學既友善又樂於助人。",
+                  "ex_blank": "My ____ are friendly and helpful."
+                },
+                {
+                  "en": "put / put",
+                  "pos": "v.",
+                  "zh": "放置",
+                  "ex_en": "Please put your books on the shelf.",
+                  "ex_zh": "請把你的書放在架子上。",
+                  "ex_blank": "Please ____ your books on the shelf.",
+                  "grammar": "put 的現在式、過去式、過去分詞都是 put，形式不變。"
+                },
+                {
+                  "en": "shelf",
+                  "pos": "n.",
+                  "zh": "架子",
+                  "ex_en": "The shelf is full of colorful storybooks.",
+                  "ex_zh": "架子上滿是色彩繽紛的故事書。",
+                  "ex_blank": "The ____ is full of colorful storybooks."
+                },
+                {
+                  "en": "outside",
+                  "pos": "prep./adv.",
+                  "zh": "在……外面；在室外",
+                  "ex_en": "It's sunny outside; let's go for a walk.",
+                  "ex_zh": "外面天氣晴朗，我們去散步吧。",
+                  "ex_blank": "It's sunny ____; let's go for a walk."
+                },
+                {
+                  "en": "worry",
+                  "pos": "v.",
+                  "zh": "擔心",
+                  "ex_en": "Don't worry. Everything will be fine.",
+                  "ex_zh": "別擔心，一切都會沒事的。",
+                  "ex_blank": "Don't ____. Everything will be fine."
+                },
+                {
+                  "en": "wear / wore",
+                  "pos": "v.",
+                  "zh": "穿；戴",
+                  "ex_en": "She wears a red jacket to school every day.",
+                  "ex_zh": "她每天穿紅色的外套上學。",
+                  "ex_blank": "She ____ a red jacket to school every day.",
+                  "grammar": "wear 的過去式是 wore，過去分詞是 worn。"
+                },
+                {
+                  "en": "still",
+                  "pos": "adv.",
+                  "zh": "仍然",
+                  "ex_en": "It's already 8 a.m., and Ben is still in bed!",
+                  "ex_zh": "已經早上八點了，班還躺在床上！",
+                  "ex_blank": "It's already 8 a.m., and Ben is ____ in bed!"
+                },
+                {
+                  "en": "find / found",
+                  "pos": "v.",
+                  "zh": "找到；發現",
+                  "ex_en": "I can't find my pencil case.",
+                  "ex_zh": "我找不到我的鉛筆盒。",
+                  "ex_blank": "I can't ____ my pencil case.",
+                  "grammar": "find 的過去式與過去分詞都是 found。"
+                },
+                {
+                  "en": "feet",
+                  "pos": "n.",
+                  "zh": "腳",
+                  "ex_en": "My feet hurt after walking all day.",
+                  "ex_zh": "走了一整天路，我的腳好痛。",
+                  "ex_blank": "My ____ hurt after walking all day.",
+                  "grammar": "feet 是 foot 的不規則複數形。"
+                }
+              ]
+            },
+            {
+              "id": "kj-b1-u6-4",
+              "title": "Part 4",
+              "zh": "感受與想法",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "find one's feet",
+                  "pos": "phr.",
+                  "zh": "適應新環境",
+                  "ex_en": "It took me two weeks to find my feet in junior high school.",
+                  "ex_zh": "我花了兩個星期才適應國中生活。",
+                  "ex_blank": "It took me two weeks to ____ in junior high school."
+                },
+                {
+                  "en": "hungry",
+                  "pos": "adj.",
+                  "zh": "飢餓的",
+                  "ex_en": "Let's eat lunch; I'm so hungry!",
+                  "ex_zh": "我們吃午餐吧，我好餓！",
+                  "ex_blank": "Let's eat lunch; I'm so ____!"
+                },
+                {
+                  "en": "sandwich",
+                  "pos": "n.",
+                  "zh": "三明治",
+                  "ex_en": "Mom made me a chicken sandwich for lunch.",
+                  "ex_zh": "媽媽幫我做了一份雞肉三明治當午餐。",
+                  "ex_blank": "Mom made me a chicken ____ for lunch."
+                },
+                {
+                  "en": "meaning",
+                  "pos": "n.",
+                  "zh": "意思；意義",
+                  "ex_en": "What's the meaning of this word?",
+                  "ex_zh": "這個字的意思是什麼？",
+                  "ex_blank": "What's the ____ of this word?"
+                },
+                {
+                  "en": "think / thought",
+                  "pos": "v.",
+                  "zh": "想起；思考；認為",
+                  "ex_en": "I think this book is very interesting.",
+                  "ex_zh": "我認為這本書非常有趣。",
+                  "ex_blank": "I ____ this book is very interesting.",
+                  "grammar": "think 的過去式與過去分詞都是 thought。"
+                },
+                {
+                  "en": "a lot of",
+                  "pos": "phr.",
+                  "zh": "許多的",
+                  "ex_en": "We have a lot of homework today.",
+                  "ex_zh": "我們今天有很多作業。",
+                  "ex_blank": "We have ____ homework today.",
+                  "grammar": "a lot of 相當於 lots of，後面可接可數或不可數名詞。"
+                },
+                {
+                  "en": "thing",
+                  "pos": "n.",
+                  "zh": "事；物",
+                  "ex_en": "What's your favorite thing to do after school?",
+                  "ex_zh": "你放學後最喜歡做的事是什麼？",
+                  "ex_blank": "What's your favorite ____ to do after school?"
+                },
+                {
+                  "en": "however",
+                  "pos": "adv.",
+                  "zh": "然而",
+                  "ex_en": "I was tired. However, I finished my homework.",
+                  "ex_zh": "我很累，然而我還是完成了作業。",
+                  "ex_blank": "I was tired. ____, I finished my homework."
+                },
+                {
+                  "en": "friendly",
+                  "pos": "adj.",
+                  "zh": "友善的",
+                  "ex_en": "The new student is very friendly to everyone.",
+                  "ex_zh": "這位新同學對每個人都很友善。",
+                  "ex_blank": "The new student is very ____ to everyone."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "junior-b2-khs",
+      "grade": "國中",
+      "book": 2,
+      "edition": "康軒版",
+      "lessons": [
+        {
+          "id": "kj-b2-lesson1",
+          "title": "Unit 1",
+          "zh": "作息、運動與校園生活",
+          "units": [
+            {
+              "id": "kj-b2-u1-1",
+              "title": "Part 1",
+              "zh": "早晨作息",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "get up / got up",
+                  "pos": "phr.",
+                  "zh": "起床",
+                  "ex_en": "I usually get up at six thirty.",
+                  "ex_zh": "我通常六點半起床。",
+                  "ex_blank": "I usually ____ at six thirty.",
+                  "grammar": "get up 的過去式是 got up（get 是不規則動詞）。"
+                },
+                {
+                  "en": "teeth",
+                  "pos": "n.",
+                  "zh": "牙齒",
+                  "ex_en": "Brush your teeth before you go to bed.",
+                  "ex_zh": "睡覺前要刷牙。",
+                  "ex_blank": "Brush your ____ before you go to bed.",
+                  "grammar": "teeth 是 tooth 的不規則複數形。"
+                },
+                {
+                  "en": "face",
+                  "pos": "n.",
+                  "zh": "臉",
+                  "ex_en": "Wash your face with warm water.",
+                  "ex_zh": "用溫水洗臉。",
+                  "ex_blank": "Wash your ____ with warm water."
+                },
+                {
+                  "en": "exercise",
+                  "pos": "v./n.",
+                  "blankPos": "n.",
+                  "zh": "運動",
+                  "ex_en": "Swimming is a good exercise for your health.",
+                  "ex_zh": "游泳對健康是一項很好的運動。",
+                  "ex_blank": "Swimming is a good ____ for your health.",
+                  "grammar": "exercise 當名詞是「運動」這個活動，當動詞則是「做運動」，如 You should exercise every day。"
+                },
+                {
+                  "en": "breakfast",
+                  "pos": "n.",
+                  "zh": "早餐",
+                  "ex_en": "I eat a sandwich for breakfast every day.",
+                  "ex_zh": "我每天早餐都吃三明治。",
+                  "ex_blank": "I eat a sandwich for ____ every day."
+                },
+                {
+                  "en": "bath",
+                  "pos": "n.",
+                  "zh": "泡澡；洗澡",
+                  "ex_en": "I took a hot bath last night.",
+                  "ex_zh": "我昨晚泡了個熱水澡。",
+                  "ex_blank": "I took a hot ____ last night."
+                },
+                {
+                  "en": "homework",
+                  "pos": "n.",
+                  "zh": "家庭作業",
+                  "ex_en": "Finish your math homework before watching TV.",
+                  "ex_zh": "看電視前先把數學作業寫完。",
+                  "ex_blank": "Finish your math ____ before watching TV."
+                },
+                {
+                  "en": "baseball",
+                  "pos": "n.",
+                  "zh": "棒球",
+                  "ex_en": "Baseball is the most popular sport in Taiwan.",
+                  "ex_zh": "棒球是台灣最受歡迎的運動。",
+                  "ex_blank": "____ is the most popular sport in Taiwan."
+                },
+                {
+                  "en": "soccer",
+                  "pos": "n.",
+                  "zh": "足球",
+                  "ex_en": "The kids are playing soccer in the park.",
+                  "ex_zh": "孩子們正在公園裡踢足球。",
+                  "ex_blank": "The kids are playing ____ in the park."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u1-2",
+              "title": "Part 2",
+              "zh": "運動與成績",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "video game",
+                  "pos": "n.",
+                  "zh": "電玩遊戲",
+                  "ex_en": "He plays a video game on his computer.",
+                  "ex_zh": "他在電腦上玩電玩遊戲。",
+                  "ex_blank": "He plays a ____ on his computer."
+                },
+                {
+                  "en": "practice",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "練習",
+                  "ex_en": "You need to practice playing the piano more.",
+                  "ex_zh": "你需要多加練習彈鋼琴。",
+                  "ex_blank": "You need to ____ playing the piano more."
+                },
+                {
+                  "en": "every",
+                  "pos": "adj.",
+                  "zh": "每一",
+                  "ex_en": "I take the bus to school every morning.",
+                  "ex_zh": "我每天早上都搭公車上學。",
+                  "ex_blank": "I take the bus to school ____ morning."
+                },
+                {
+                  "en": "team",
+                  "pos": "n.",
+                  "zh": "隊伍",
+                  "ex_en": "Our school baseball team won the game.",
+                  "ex_zh": "我們學校的棒球隊贏得了比賽。",
+                  "ex_blank": "Our school baseball ____ won the game."
+                },
+                {
+                  "en": "know / knew",
+                  "pos": "v.",
+                  "zh": "知道",
+                  "ex_en": "Do you know the way to the station?",
+                  "ex_zh": "你知道去車站的路嗎？",
+                  "ex_blank": "Do you ____ the way to the station?",
+                  "grammar": "know 的過去式是 knew，過去分詞是 known。"
+                },
+                {
+                  "en": "player",
+                  "pos": "n.",
+                  "zh": "運動員；選手",
+                  "ex_en": "He is a famous basketball player in the USA.",
+                  "ex_zh": "他是美國一位知名的籃球選手。",
+                  "ex_blank": "He is a famous basketball ____ in the USA."
+                },
+                {
+                  "en": "grade",
+                  "pos": "n.",
+                  "zh": "成績",
+                  "ex_en": "She got a good grade on her English test.",
+                  "ex_zh": "她英文考試拿到很好的成績。",
+                  "ex_blank": "She got a good ____ on her English test."
+                },
+                {
+                  "en": "test",
+                  "pos": "n.",
+                  "zh": "考試",
+                  "ex_en": "The history test was very difficult.",
+                  "ex_zh": "這次歷史考試非常難。",
+                  "ex_blank": "The history ____ was very difficult."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u1-3",
+              "title": "Part 3",
+              "zh": "頻率與邀約",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "study",
+                  "pos": "n./v.",
+                  "blankPos": "v.",
+                  "zh": "學習；研讀",
+                  "ex_en": "I need to study for the exam tomorrow.",
+                  "ex_zh": "我明天要準備考試，需要讀書。",
+                  "ex_blank": "I need to ____ for the exam tomorrow."
+                },
+                {
+                  "en": "either",
+                  "pos": "adv.",
+                  "zh": "也(用於否定句)",
+                  "ex_en": "I don't like natto, and he doesn't either.",
+                  "ex_zh": "我不喜歡納豆，他也不喜歡。",
+                  "ex_blank": "I don't like natto, and he doesn't ____."
+                },
+                {
+                  "en": "must",
+                  "pos": "aux.",
+                  "zh": "一定；必須",
+                  "ex_en": "You must wear a helmet when riding a scooter.",
+                  "ex_zh": "騎機車時一定要戴安全帽。",
+                  "ex_blank": "You ____ wear a helmet when riding a scooter."
+                },
+                {
+                  "en": "enjoy",
+                  "pos": "v.",
+                  "zh": "享受",
+                  "ex_en": "I really enjoy listening to pop music.",
+                  "ex_zh": "我真的很喜歡聽流行音樂。",
+                  "ex_blank": "I really ____ listening to pop music."
+                },
+                {
+                  "en": "then",
+                  "pos": "adv.",
+                  "zh": "那麼；然後；當時",
+                  "ex_en": "Finish your dinner, and then you can have dessert.",
+                  "ex_zh": "把晚餐吃完，然後你就可以吃甜點了。",
+                  "ex_blank": "Finish your dinner, and ____ you can have dessert."
+                },
+                {
+                  "en": "ticket",
+                  "pos": "n.",
+                  "zh": "票；券",
+                  "ex_en": "I bought a train ticket to Kaohsiung.",
+                  "ex_zh": "我買了一張去高雄的火車票。",
+                  "ex_blank": "I bought a train ____ to Kaohsiung."
+                },
+                {
+                  "en": "together",
+                  "pos": "adv.",
+                  "zh": "一起",
+                  "ex_en": "Let's go to the movies together this weekend.",
+                  "ex_zh": "我們這個週末一起去看電影吧。",
+                  "ex_blank": "Let's go to the movies ____ this weekend."
+                },
+                {
+                  "en": "how much",
+                  "pos": "phr.",
+                  "zh": "多少錢",
+                  "ex_en": "How much is this bubble tea?",
+                  "ex_zh": "這杯珍珠奶茶多少錢？",
+                  "ex_blank": "____ is this bubble tea?"
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u1-4",
+              "title": "Part 4",
+              "zh": "球類運動與金額",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "hundred",
+                  "pos": "n.",
+                  "zh": "百",
+                  "ex_en": "This coat costs five hundred dollars.",
+                  "ex_zh": "這件外套要價五百元。",
+                  "ex_blank": "This coat costs five ____ dollars."
+                },
+                {
+                  "en": "dollar",
+                  "pos": "n.",
+                  "zh": "元",
+                  "ex_en": "I only have one dollar left in my pocket.",
+                  "ex_zh": "我口袋裡只剩一塊錢了。",
+                  "ex_blank": "I only have one ____ left in my pocket."
+                },
+                {
+                  "en": "badminton",
+                  "pos": "n.",
+                  "zh": "羽毛球",
+                  "ex_en": "Tai Tzu-ying is a great badminton player.",
+                  "ex_zh": "戴資穎是一位很棒的羽球選手。",
+                  "ex_blank": "Tai Tzu-ying is a great ____ player."
+                },
+                {
+                  "en": "tennis",
+                  "pos": "n.",
+                  "zh": "網球",
+                  "ex_en": "We played tennis at the sports center.",
+                  "ex_zh": "我們在運動中心打網球。",
+                  "ex_blank": "We played ____ at the sports center."
+                },
+                {
+                  "en": "ask",
+                  "pos": "v.",
+                  "zh": "問；要求",
+                  "ex_en": "May I ask you a question?",
+                  "ex_zh": "我可以問你一個問題嗎？",
+                  "ex_blank": "May I ____ you a question?"
+                },
+                {
+                  "en": "happen",
+                  "pos": "v.",
+                  "zh": "發生",
+                  "ex_en": "What will happen if it rains tomorrow?",
+                  "ex_zh": "如果明天下雨會發生什麼事？",
+                  "ex_blank": "What will ____ if it rains tomorrow?"
+                },
+                {
+                  "en": "fast",
+                  "pos": "adj.",
+                  "zh": "快速的",
+                  "ex_en": "The Taiwan High Speed Rail is very fast.",
+                  "ex_zh": "台灣高鐵非常快速。",
+                  "ex_blank": "The Taiwan High Speed Rail is very ____."
+                },
+                {
+                  "en": "move",
+                  "pos": "v.",
+                  "zh": "移動；搬家",
+                  "ex_en": "They plan to move to Tainan next year.",
+                  "ex_zh": "他們計畫明年搬去台南。",
+                  "ex_blank": "They plan to ____ to Tainan next year."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u1-5",
+              "title": "Part 5",
+              "zh": "輸贏與比賽",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "hit",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "擊；打；襲擊",
+                  "ex_en": "He hit the ball out of the park.",
+                  "ex_zh": "他把球打出場外。",
+                  "ex_blank": "He ____ the ball out of the park.",
+                  "grammar": "hit 的過去式與過去分詞都是 hit，形式不變。"
+                },
+                {
+                  "en": "fun",
+                  "pos": "n./adj.",
+                  "blankPos": "adj.",
+                  "zh": "樂趣；有趣的",
+                  "ex_en": "It is fun to shop at the night market.",
+                  "ex_zh": "逛夜市很好玩。",
+                  "ex_blank": "It is ____ to shop at the night market."
+                },
+                {
+                  "en": "win / won",
+                  "pos": "v.",
+                  "zh": "贏",
+                  "ex_en": "We hope to win the basketball game.",
+                  "ex_zh": "我們希望能贏得這場籃球賽。",
+                  "ex_blank": "We hope to ____ the basketball game.",
+                  "grammar": "win 的過去式與過去分詞都是 won。"
+                },
+                {
+                  "en": "lose / lost",
+                  "pos": "v.",
+                  "zh": "輸掉(比賽)；失去",
+                  "ex_en": "I hate to lose when I play games.",
+                  "ex_zh": "我玩遊戲時很討厭輸。",
+                  "ex_blank": "I hate to ____ when I play games.",
+                  "grammar": "lose 的過去式與過去分詞都是 lost。"
+                },
+                {
+                  "en": "side",
+                  "pos": "n.",
+                  "zh": "邊；面",
+                  "ex_en": "Which side of the road should I walk on?",
+                  "ex_zh": "我應該走馬路的哪一邊？",
+                  "ex_blank": "Which ____ of the road should I walk on?"
+                },
+                {
+                  "en": "touch",
+                  "pos": "n./v.",
+                  "blankPos": "v.",
+                  "zh": "接觸；觸碰",
+                  "ex_en": "Please do not touch the artwork.",
+                  "ex_zh": "請勿觸碰這件藝術品。",
+                  "ex_blank": "Please do not ____ the artwork."
+                },
+                {
+                  "en": "last",
+                  "pos": "adj.",
+                  "zh": "最後的；前一個的",
+                  "ex_en": "This is the last train tonight.",
+                  "ex_zh": "這是今晚最後一班火車。",
+                  "ex_blank": "This is the ____ train tonight."
+                },
+                {
+                  "en": "point",
+                  "pos": "n.",
+                  "zh": "得分；觀點",
+                  "ex_en": "That is a good point you made.",
+                  "ex_zh": "你提出的觀點很好。",
+                  "ex_blank": "That is a good ____ you made."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-b2-lesson2",
+          "title": "Unit 2",
+          "zh": "家事、頻率與生活雜項",
+          "units": [
+            {
+              "id": "kj-b2-u2-1",
+              "title": "Part 1",
+              "zh": "打掃與地點",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "housework",
+                  "pos": "n.",
+                  "zh": "家事",
+                  "ex_en": "My father helps with the housework on weekends.",
+                  "ex_zh": "我爸爸週末會幫忙做家事。",
+                  "ex_blank": "My father helps with the ____ on weekends."
+                },
+                {
+                  "en": "mop",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "拖(地)；拖把",
+                  "ex_en": "I need to mop the kitchen floor.",
+                  "ex_zh": "我需要拖廚房的地板。",
+                  "ex_blank": "I need to ____ the kitchen floor."
+                },
+                {
+                  "en": "floor",
+                  "pos": "n.",
+                  "zh": "地板；樓層",
+                  "ex_en": "The floor is wet, so be careful.",
+                  "ex_zh": "地板是濕的，要小心。",
+                  "ex_blank": "The ____ is wet, so be careful."
+                },
+                {
+                  "en": "clean",
+                  "pos": "v./adj.",
+                  "blankPos": "adj.",
+                  "zh": "打掃；乾淨的",
+                  "ex_en": "Please keep your classroom clean.",
+                  "ex_zh": "請保持教室的整潔。",
+                  "ex_blank": "Please keep your classroom ____.",
+                  "grammar": "clean 當動詞是「打掃」，當形容詞是「乾淨的」，如 clean the room。"
+                },
+                {
+                  "en": "trash",
+                  "pos": "n.",
+                  "zh": "垃圾",
+                  "ex_en": "Throw the trash into the bin.",
+                  "ex_zh": "把垃圾丟進垃圾桶。",
+                  "ex_blank": "Throw the ____ into the bin."
+                },
+                {
+                  "en": "do the dishes / did the dishes",
+                  "pos": "phr.",
+                  "zh": "洗碗盤",
+                  "ex_en": "It is my turn to do the dishes.",
+                  "ex_zh": "輪到我洗碗了。",
+                  "ex_blank": "It is my turn to ____.",
+                  "grammar": "do the dishes 的過去式是 did the dishes。"
+                },
+                {
+                  "en": "set",
+                  "pos": "v.",
+                  "zh": "布置；設定",
+                  "ex_en": "Please help me set the table for dinner.",
+                  "ex_zh": "請幫我擺好晚餐的餐桌。",
+                  "ex_blank": "Please help me ____ the table for dinner."
+                },
+                {
+                  "en": "street",
+                  "pos": "n.",
+                  "zh": "街道",
+                  "ex_en": "There are many shops on this street.",
+                  "ex_zh": "這條街上有很多商店。",
+                  "ex_blank": "There are many shops on this ____."
+                },
+                {
+                  "en": "market",
+                  "pos": "n.",
+                  "zh": "市場",
+                  "ex_en": "Mom goes to the traditional market every morning.",
+                  "ex_zh": "媽媽每天早上都去傳統市場。",
+                  "ex_blank": "Mom goes to the traditional ____ every morning."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u2-2",
+              "title": "Part 2",
+              "zh": "頻率副詞一",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "town",
+                  "pos": "n.",
+                  "zh": "城鎮",
+                  "ex_en": "Lukang is a very old town in Taiwan.",
+                  "ex_zh": "鹿港是台灣一個非常古老的城鎮。",
+                  "ex_blank": "Lukang is a very old ____ in Taiwan."
+                },
+                {
+                  "en": "anytime",
+                  "pos": "adv.",
+                  "zh": "任何時候",
+                  "ex_en": "You can call me anytime if you need help.",
+                  "ex_zh": "如果你需要幫忙，隨時都可以打給我。",
+                  "ex_blank": "You can call me ____ if you need help."
+                },
+                {
+                  "en": "seldom",
+                  "pos": "adv.",
+                  "zh": "很少",
+                  "ex_en": "It seldom snows in the mountains of Taiwan.",
+                  "ex_zh": "台灣的山區很少下雪。",
+                  "ex_blank": "It ____ snows in the mountains of Taiwan."
+                },
+                {
+                  "en": "always",
+                  "pos": "adv.",
+                  "zh": "總是",
+                  "ex_en": "He is always late for school.",
+                  "ex_zh": "他上學總是遲到。",
+                  "ex_blank": "He is ____ late for school."
+                },
+                {
+                  "en": "habit",
+                  "pos": "n.",
+                  "zh": "習慣",
+                  "ex_en": "Reading before bed is a good habit.",
+                  "ex_zh": "睡前閱讀是個好習慣。",
+                  "ex_blank": "Reading before bed is a good ____."
+                },
+                {
+                  "en": "never",
+                  "pos": "adv.",
+                  "zh": "從不",
+                  "ex_en": "I have never been to America.",
+                  "ex_zh": "我從來沒去過美國。",
+                  "ex_blank": "I have ____ been to America."
+                },
+                {
+                  "en": "break",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "打破；休息",
+                  "ex_en": "Be careful not to break the glass.",
+                  "ex_zh": "小心不要打破玻璃杯。",
+                  "ex_blank": "Be careful not to ____ the glass."
+                },
+                {
+                  "en": "often",
+                  "pos": "adv.",
+                  "zh": "時常",
+                  "ex_en": "How often do you visit your grandparents?",
+                  "ex_zh": "你多常去看你的祖父母？",
+                  "ex_blank": "How ____ do you visit your grandparents?"
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u2-3",
+              "title": "Part 3",
+              "zh": "頻率副詞二",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "sometimes",
+                  "pos": "adv.",
+                  "zh": "有時候",
+                  "ex_en": "I sometimes go to the movies alone.",
+                  "ex_zh": "我有時候會自己去看電影。",
+                  "ex_blank": "I ____ go to the movies alone."
+                },
+                {
+                  "en": "sure",
+                  "pos": "adj./adv.",
+                  "blankPos": "adj.",
+                  "zh": "確定的；當然",
+                  "ex_en": "Are you sure about the answer?",
+                  "ex_zh": "你確定這個答案嗎？",
+                  "ex_blank": "Are you ____ about the answer?"
+                },
+                {
+                  "en": "place",
+                  "pos": "n.",
+                  "zh": "地方",
+                  "ex_en": "Jiufen is a beautiful place to visit.",
+                  "ex_zh": "九份是個值得參觀的美麗地方。",
+                  "ex_blank": "Jiufen is a beautiful ____ to visit."
+                },
+                {
+                  "en": "usually",
+                  "pos": "adv.",
+                  "zh": "通常",
+                  "ex_en": "I usually take the MRT to work.",
+                  "ex_zh": "我通常搭捷運上班。",
+                  "ex_blank": "I ____ take the MRT to work."
+                },
+                {
+                  "en": "dirty",
+                  "pos": "adj.",
+                  "zh": "髒的",
+                  "ex_en": "Your hands are dirty; go wash them.",
+                  "ex_zh": "你的手很髒，去洗一下。",
+                  "ex_blank": "Your hands are ____; go wash them."
+                },
+                {
+                  "en": "month",
+                  "pos": "n.",
+                  "zh": "月",
+                  "ex_en": "February is the second month of the year.",
+                  "ex_zh": "二月是一年中的第二個月。",
+                  "ex_blank": "February is the second ____ of the year."
+                },
+                {
+                  "en": "believe",
+                  "pos": "v.",
+                  "zh": "相信",
+                  "ex_en": "I believe we can finish the work on time.",
+                  "ex_zh": "我相信我們能準時完成這項工作。",
+                  "ex_blank": "I ____ we can finish the work on time."
+                },
+                {
+                  "en": "once",
+                  "pos": "adv.",
+                  "zh": "一次",
+                  "ex_en": "I have been to Japan once.",
+                  "ex_zh": "我去過日本一次。",
+                  "ex_blank": "I have been to Japan ____."
+                },
+                {
+                  "en": "twice",
+                  "pos": "adv.",
+                  "zh": "兩次",
+                  "ex_en": "He brushes his teeth twice a day.",
+                  "ex_zh": "他一天刷兩次牙。",
+                  "ex_blank": "He brushes his teeth ____ a day."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u2-4",
+              "title": "Part 4",
+              "zh": "科技與可能性",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "terrible",
+                  "pos": "adj.",
+                  "zh": "可怕的；糟糕的",
+                  "ex_en": "The traffic jam was terrible this morning.",
+                  "ex_zh": "今天早上的塞車糟透了。",
+                  "ex_blank": "The traffic jam was ____ this morning."
+                },
+                {
+                  "en": "how often",
+                  "pos": "phr.",
+                  "zh": "多常",
+                  "ex_en": "How often does the bus come?",
+                  "ex_zh": "公車多常來一班？",
+                  "ex_blank": "____ does the bus come?"
+                },
+                {
+                  "en": "cellphone",
+                  "pos": "n.",
+                  "zh": "手機",
+                  "ex_en": "I use my cellphone to take photos.",
+                  "ex_zh": "我用手機拍照。",
+                  "ex_blank": "I use my ____ to take photos."
+                },
+                {
+                  "en": "following",
+                  "pos": "n.",
+                  "zh": "下列事物(或人員)",
+                  "ex_en": "Answer the following questions carefully.",
+                  "ex_zh": "請仔細回答下列問題。",
+                  "ex_blank": "Answer the ____ questions carefully."
+                },
+                {
+                  "en": "may / might",
+                  "pos": "aux.",
+                  "zh": "可能；也許",
+                  "ex_en": "It might rain later, so take an umbrella.",
+                  "ex_zh": "待會可能會下雨，帶把傘吧。",
+                  "ex_blank": "It ____ rain later, so take an umbrella.",
+                  "grammar": "may 和 might 都表示「可能」，might 的語氣通常比 may 更不確定。"
+                },
+                {
+                  "en": "change",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "改變",
+                  "ex_en": "I need to change my clothes.",
+                  "ex_zh": "我需要換衣服。",
+                  "ex_blank": "I need to ____ my clothes."
+                },
+                {
+                  "en": "more",
+                  "pos": "adj.",
+                  "zh": "更多的",
+                  "ex_en": "I want some more rice, please.",
+                  "ex_zh": "請再給我一些飯。",
+                  "ex_blank": "I want some ____ rice, please."
+                },
+                {
+                  "en": "germ",
+                  "pos": "n.",
+                  "zh": "細菌",
+                  "ex_en": "Wash your hands to kill every germ.",
+                  "ex_zh": "洗手可以殺死所有細菌。",
+                  "ex_blank": "Wash your hands to kill every ____."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u2-5",
+              "title": "Part 5",
+              "zh": "生活雜項",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "toilet seat",
+                  "pos": "n.",
+                  "zh": "馬桶座",
+                  "ex_en": "Please put the toilet seat down.",
+                  "ex_zh": "請把馬桶座放下來。",
+                  "ex_blank": "Please put the ____ down."
+                },
+                {
+                  "en": "answer",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "答案；回答",
+                  "ex_en": "Do you know the answer to this question?",
+                  "ex_zh": "你知道這個問題的答案嗎？",
+                  "ex_blank": "Do you know the ____ to this question?"
+                },
+                {
+                  "en": "for example",
+                  "pos": "phr.",
+                  "zh": "舉例來說",
+                  "ex_en": "Many fruits are sweet, for example, mangoes.",
+                  "ex_zh": "很多水果是甜的，舉例來說，芒果就是。",
+                  "ex_blank": "Many fruits are sweet, ____, mangoes."
+                },
+                {
+                  "en": "free",
+                  "pos": "adj.",
+                  "zh": "空閒的；免費的",
+                  "ex_en": "Are you free this Saturday afternoon?",
+                  "ex_zh": "你這個星期六下午有空嗎？",
+                  "ex_blank": "Are you ____ this Saturday afternoon?"
+                },
+                {
+                  "en": "finger",
+                  "pos": "n.",
+                  "zh": "手指",
+                  "ex_en": "He pointed at the map with his finger.",
+                  "ex_zh": "他用手指著地圖。",
+                  "ex_blank": "He pointed at the map with his ____."
+                },
+                {
+                  "en": "kill",
+                  "pos": "v.",
+                  "zh": "殺",
+                  "ex_en": "Smoking can kill you.",
+                  "ex_zh": "抽菸會要人命。",
+                  "ex_blank": "Smoking can ____ you."
+                },
+                {
+                  "en": "time",
+                  "pos": "n.",
+                  "zh": "次數",
+                  "ex_en": "I have been there three times.",
+                  "ex_zh": "我去過那裡三次。",
+                  "ex_blank": "I have been there three ____."
+                },
+                {
+                  "en": "work",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "工作",
+                  "ex_en": "He goes to work by bus.",
+                  "ex_zh": "他搭公車去上班。",
+                  "ex_blank": "He goes to ____ by bus."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-b2-lesson3",
+          "title": "Unit 3",
+          "zh": "月份、節日與序數",
+          "units": [
+            {
+              "id": "kj-b2-u3-1",
+              "title": "Part 1",
+              "zh": "月份一",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "January",
+                  "pos": "n.",
+                  "zh": "一月",
+                  "ex_en": "January is the first month of the year.",
+                  "ex_zh": "一月是一年中的第一個月。",
+                  "ex_blank": "____ is the first month of the year."
+                },
+                {
+                  "en": "February",
+                  "pos": "n.",
+                  "zh": "二月",
+                  "ex_en": "There are twenty-eight days in February.",
+                  "ex_zh": "二月有二十八天。",
+                  "ex_blank": "There are twenty-eight days in ____."
+                },
+                {
+                  "en": "March",
+                  "pos": "n.",
+                  "zh": "三月",
+                  "ex_en": "The weather gets warmer in March.",
+                  "ex_zh": "三月天氣會變暖和。",
+                  "ex_blank": "The weather gets warmer in ____."
+                },
+                {
+                  "en": "April",
+                  "pos": "n.",
+                  "zh": "四月",
+                  "ex_en": "We have a school trip in April.",
+                  "ex_zh": "我們四月有校外教學。",
+                  "ex_blank": "We have a school trip in ____."
+                },
+                {
+                  "en": "May",
+                  "pos": "n.",
+                  "zh": "五月",
+                  "ex_en": "Mother's Day is in May.",
+                  "ex_zh": "母親節在五月。",
+                  "ex_blank": "Mother's Day is in ____."
+                },
+                {
+                  "en": "June",
+                  "pos": "n.",
+                  "zh": "六月",
+                  "ex_en": "Dragon Boat Festival is often in June.",
+                  "ex_zh": "端午節通常在六月。",
+                  "ex_blank": "Dragon Boat Festival is often in ____."
+                },
+                {
+                  "en": "July",
+                  "pos": "n.",
+                  "zh": "七月",
+                  "ex_en": "It is very hot in July.",
+                  "ex_zh": "七月天氣非常炎熱。",
+                  "ex_blank": "It is very hot in ____."
+                },
+                {
+                  "en": "August",
+                  "pos": "n.",
+                  "zh": "八月",
+                  "ex_en": "Typhoon season usually starts in August.",
+                  "ex_zh": "颱風季通常從八月開始。",
+                  "ex_blank": "Typhoon season usually starts in ____."
+                },
+                {
+                  "en": "September",
+                  "pos": "n.",
+                  "zh": "九月",
+                  "ex_en": "School starts in September.",
+                  "ex_zh": "開學是在九月。",
+                  "ex_blank": "School starts in ____."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u3-2",
+              "title": "Part 2",
+              "zh": "月份與節日",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "October",
+                  "pos": "n.",
+                  "zh": "十月",
+                  "ex_en": "Halloween is in October.",
+                  "ex_zh": "萬聖節在十月。",
+                  "ex_blank": "Halloween is in ____."
+                },
+                {
+                  "en": "November",
+                  "pos": "n.",
+                  "zh": "十一月",
+                  "ex_en": "My birthday is in November.",
+                  "ex_zh": "我的生日在十一月。",
+                  "ex_blank": "My birthday is in ____."
+                },
+                {
+                  "en": "December",
+                  "pos": "n.",
+                  "zh": "十二月",
+                  "ex_en": "Christmas is in December.",
+                  "ex_zh": "聖誕節在十二月。",
+                  "ex_blank": "Christmas is in ____."
+                },
+                {
+                  "en": "Easter",
+                  "pos": "n.",
+                  "zh": "復活節",
+                  "ex_en": "We painted eggs for Easter.",
+                  "ex_zh": "我們為復活節彩繪雞蛋。",
+                  "ex_blank": "We painted eggs for ____."
+                },
+                {
+                  "en": "Halloween",
+                  "pos": "n.",
+                  "zh": "萬聖節前夕",
+                  "ex_en": "Kids wear costumes on Halloween.",
+                  "ex_zh": "孩子們在萬聖節會穿上裝扮服。",
+                  "ex_blank": "Kids wear costumes on ____."
+                },
+                {
+                  "en": "Thanksgiving",
+                  "pos": "n.",
+                  "zh": "感恩節",
+                  "ex_en": "Americans eat turkey on Thanksgiving.",
+                  "ex_zh": "美國人感恩節會吃火雞。",
+                  "ex_blank": "Americans eat turkey on ____."
+                },
+                {
+                  "en": "Christmas",
+                  "pos": "n.",
+                  "zh": "聖誕節",
+                  "ex_en": "We exchange gifts on Christmas.",
+                  "ex_zh": "我們聖誕節會互相交換禮物。",
+                  "ex_blank": "We exchange gifts on ____."
+                },
+                {
+                  "en": "holiday",
+                  "pos": "n.",
+                  "zh": "節日；假期",
+                  "ex_en": "New Year's Day is a national holiday.",
+                  "ex_zh": "元旦是國定假日。",
+                  "ex_blank": "New Year's Day is a national ____."
+                },
+                {
+                  "en": "race",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "賽跑；競賽",
+                  "ex_en": "He won the running race yesterday.",
+                  "ex_zh": "他昨天贏了賽跑。",
+                  "ex_blank": "He won the running ____ yesterday."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u3-3",
+              "title": "Part 3",
+              "zh": "序數與疑問詞",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "whose",
+                  "pos": "adj./pron.",
+                  "blankPos": "adj.",
+                  "zh": "誰的",
+                  "ex_en": "Whose pen is this on the desk?",
+                  "ex_zh": "桌上這支筆是誰的？",
+                  "ex_blank": "____ pen is this on the desk?"
+                },
+                {
+                  "en": "when",
+                  "pos": "adv.",
+                  "zh": "何時",
+                  "ex_en": "When is your birthday?",
+                  "ex_zh": "你的生日是什麼時候？",
+                  "ex_blank": "____ is your birthday?"
+                },
+                {
+                  "en": "second",
+                  "pos": "adj./n.",
+                  "blankPos": "adj.",
+                  "zh": "第二的；第二；秒",
+                  "ex_en": "This is my second time visiting Taipei Zoo.",
+                  "ex_zh": "這是我第二次來台北動物園。",
+                  "ex_blank": "This is my ____ time visiting Taipei Zoo."
+                },
+                {
+                  "en": "date",
+                  "pos": "n.",
+                  "zh": "日期；約會",
+                  "ex_en": "What is the date today?",
+                  "ex_zh": "今天是幾月幾號？",
+                  "ex_blank": "What is the ____ today?"
+                },
+                {
+                  "en": "third",
+                  "pos": "adj./n.",
+                  "zh": "第三(的)",
+                  "ex_en": "He finished in third place in the race.",
+                  "ex_zh": "他在比賽中獲得第三名。",
+                  "ex_blank": "He finished in ____ place in the race."
+                },
+                {
+                  "en": "away",
+                  "pos": "adv.",
+                  "zh": "離...之遠；離開",
+                  "ex_en": "The department store is far away from here.",
+                  "ex_zh": "百貨公司離這裡很遠。",
+                  "ex_blank": "The department store is far ____ from here."
+                },
+                {
+                  "en": "first",
+                  "pos": "adj./n./adv.",
+                  "blankPos": "adj.",
+                  "zh": "第一(的)；首先",
+                  "ex_en": "January is the first month of the year.",
+                  "ex_zh": "一月是一年中的第一個月。",
+                  "ex_blank": "January is the ____ month of the year."
+                },
+                {
+                  "en": "runner",
+                  "pos": "n.",
+                  "zh": "跑者",
+                  "ex_en": "The runner is very fast.",
+                  "ex_zh": "這位跑者速度非常快。",
+                  "ex_blank": "The ____ is very fast."
+                },
+                {
+                  "en": "over there",
+                  "pos": "phr.",
+                  "zh": "在那邊",
+                  "ex_en": "The bathroom is over there.",
+                  "ex_zh": "洗手間在那邊。",
+                  "ex_blank": "The bathroom is ____."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u3-4",
+              "title": "Part 4",
+              "zh": "情感與人際",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "take care of",
+                  "pos": "phr.",
+                  "zh": "照顧",
+                  "ex_en": "Please take care of my dog while I am away.",
+                  "ex_zh": "我不在的時候請幫忙照顧我的狗。",
+                  "ex_blank": "Please ____ my dog while I am away."
+                },
+                {
+                  "en": "play the role of...",
+                  "pos": "phr.",
+                  "zh": "扮演...的角色",
+                  "ex_en": "He will play the role of a doctor in the play.",
+                  "ex_zh": "他將在這齣戲中扮演醫生的角色。",
+                  "ex_blank": "He will ____ a doctor in the play."
+                },
+                {
+                  "en": "letter",
+                  "pos": "n.",
+                  "zh": "信件；字母",
+                  "ex_en": "I wrote a letter to my grandma.",
+                  "ex_zh": "我寫了一封信給我奶奶。",
+                  "ex_blank": "I wrote a ____ to my grandma."
+                },
+                {
+                  "en": "dear",
+                  "pos": "adj.",
+                  "zh": "親愛的",
+                  "ex_en": "She is a very dear friend of mine.",
+                  "ex_zh": "她是我非常親愛的朋友。",
+                  "ex_blank": "She is a very ____ friend of mine."
+                },
+                {
+                  "en": "busy",
+                  "pos": "adj.",
+                  "zh": "忙碌的",
+                  "ex_en": "The street is very busy on weekends.",
+                  "ex_zh": "這條街週末非常繁忙熱鬧。",
+                  "ex_blank": "The street is very ____ on weekends."
+                },
+                {
+                  "en": "miss",
+                  "pos": "v.",
+                  "zh": "想念",
+                  "ex_en": "I miss my family very much.",
+                  "ex_zh": "我非常想念我的家人。",
+                  "ex_blank": "I ____ my family very much."
+                },
+                {
+                  "en": "everything",
+                  "pos": "pron.",
+                  "zh": "一切事物",
+                  "ex_en": "Everything is ready for the party.",
+                  "ex_zh": "派對的一切都準備好了。",
+                  "ex_blank": "____ is ready for the party."
+                },
+                {
+                  "en": "love",
+                  "pos": "n./v.",
+                  "blankPos": "v.",
+                  "zh": "愛",
+                  "ex_en": "I love to eat stinky tofu.",
+                  "ex_zh": "我很愛吃臭豆腐。",
+                  "ex_blank": "I ____ to eat stinky tofu."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-b2-lesson4",
+          "title": "Unit 4",
+          "zh": "食物與烹飪",
+          "units": [
+            {
+              "id": "kj-b2-u4-1",
+              "title": "Part 1",
+              "zh": "餐具與食物",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "food",
+                  "pos": "n.",
+                  "zh": "食物",
+                  "ex_en": "Taiwanese food is famous all over the world.",
+                  "ex_zh": "台灣美食舉世聞名。",
+                  "ex_blank": "Taiwanese ____ is famous all over the world."
+                },
+                {
+                  "en": "bottle",
+                  "pos": "n.",
+                  "zh": "瓶子",
+                  "ex_en": "Pass me that bottle of water, please.",
+                  "ex_zh": "請把那瓶水遞給我。",
+                  "ex_blank": "Pass me that ____ of water, please."
+                },
+                {
+                  "en": "water",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "水；澆水",
+                  "ex_en": "Drink more water after you exercise.",
+                  "ex_zh": "運動後要多喝水。",
+                  "ex_blank": "Drink more ____ after you exercise."
+                },
+                {
+                  "en": "bowl",
+                  "pos": "n.",
+                  "zh": "碗",
+                  "ex_en": "I ate a big bowl of beef noodles.",
+                  "ex_zh": "我吃了一大碗牛肉麵。",
+                  "ex_blank": "I ate a big ____ of beef noodles."
+                },
+                {
+                  "en": "rice",
+                  "pos": "n.",
+                  "zh": "米；飯",
+                  "ex_en": "We eat rice for dinner almost every day.",
+                  "ex_zh": "我們幾乎每天晚餐都吃飯。",
+                  "ex_blank": "We eat ____ for dinner almost every day."
+                },
+                {
+                  "en": "plate",
+                  "pos": "n.",
+                  "zh": "盤子",
+                  "ex_en": "Put the cake on the plate.",
+                  "ex_zh": "把蛋糕放在盤子上。",
+                  "ex_blank": "Put the cake on the ____."
+                },
+                {
+                  "en": "noodle",
+                  "pos": "n.",
+                  "zh": "麵條",
+                  "ex_en": "Beef noodle soup is delicious.",
+                  "ex_zh": "牛肉麵湯很好喝。",
+                  "ex_blank": "Beef ____ soup is delicious."
+                },
+                {
+                  "en": "pie",
+                  "pos": "n.",
+                  "zh": "派",
+                  "ex_en": "My mom baked an apple pie for us.",
+                  "ex_zh": "我媽媽為我們烤了一個蘋果派。",
+                  "ex_blank": "My mom baked an apple ____ for us."
+                },
+                {
+                  "en": "piece",
+                  "pos": "n.",
+                  "zh": "塊；片；張",
+                  "ex_en": "Can I have a piece of cake?",
+                  "ex_zh": "我可以吃一塊蛋糕嗎？",
+                  "ex_blank": "Can I have a ____ of cake?"
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u4-2",
+              "title": "Part 2",
+              "zh": "調味料與量詞",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "glass",
+                  "pos": "n.",
+                  "zh": "玻璃杯；玻璃",
+                  "ex_en": "Be careful with that broken glass.",
+                  "ex_zh": "小心那個破掉的玻璃。",
+                  "ex_blank": "Be careful with that broken ____."
+                },
+                {
+                  "en": "gram",
+                  "pos": "n.",
+                  "zh": "公克(=g)",
+                  "ex_en": "Add one gram of salt to the soup.",
+                  "ex_zh": "在湯裡加一公克的鹽。",
+                  "ex_blank": "Add one ____ of salt to the soup."
+                },
+                {
+                  "en": "kilogram",
+                  "pos": "n.",
+                  "zh": "公斤(=kg)",
+                  "ex_en": "My bag weighs one kilogram.",
+                  "ex_zh": "我的包包重一公斤。",
+                  "ex_blank": "My bag weighs one ____."
+                },
+                {
+                  "en": "salt",
+                  "pos": "n.",
+                  "zh": "鹽",
+                  "ex_en": "Please pass me the salt.",
+                  "ex_zh": "請把鹽遞給我。",
+                  "ex_blank": "Please pass me the ____."
+                },
+                {
+                  "en": "sugar",
+                  "pos": "n.",
+                  "zh": "糖",
+                  "ex_en": "Do you take sugar in your tea?",
+                  "ex_zh": "你的茶要加糖嗎？",
+                  "ex_blank": "Do you take ____ in your tea?"
+                },
+                {
+                  "en": "a few",
+                  "pos": "phr.",
+                  "zh": "幾個；一些",
+                  "ex_en": "I have a few questions about the math homework.",
+                  "ex_zh": "我對數學作業有幾個問題。",
+                  "ex_blank": "I have ____ questions about the math homework."
+                },
+                {
+                  "en": "a little",
+                  "pos": "phr.",
+                  "zh": "少量的；一點",
+                  "ex_en": "I can speak a little English.",
+                  "ex_zh": "我會說一點點英文。",
+                  "ex_blank": "I can speak ____ English."
+                },
+                {
+                  "en": "can",
+                  "pos": "n.",
+                  "zh": "(鐵鋁)罐",
+                  "ex_en": "He opened a can of soda.",
+                  "ex_zh": "他打開了一罐汽水。",
+                  "ex_blank": "He opened a ____ of soda."
+                },
+                {
+                  "en": "pancake",
+                  "pos": "n.",
+                  "zh": "鬆餅",
+                  "ex_en": "I had a pancake for breakfast this morning.",
+                  "ex_zh": "我今天早餐吃了鬆餅。",
+                  "ex_blank": "I had a ____ for breakfast this morning."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u4-3",
+              "title": "Part 3",
+              "zh": "需求與詢問",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "help",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "幫助",
+                  "ex_en": "Can you help me with my homework?",
+                  "ex_zh": "你可以幫我做作業嗎？",
+                  "ex_blank": "Can you ____ me with my homework?"
+                },
+                {
+                  "en": "how many",
+                  "pos": "phr.",
+                  "zh": "多少(個)",
+                  "ex_en": "How many brothers do you have?",
+                  "ex_zh": "你有幾個兄弟？",
+                  "ex_blank": "____ brothers do you have?"
+                },
+                {
+                  "en": "give / gave",
+                  "pos": "v.",
+                  "zh": "給",
+                  "ex_en": "Please give me a hand.",
+                  "ex_zh": "請幫我一下。",
+                  "ex_blank": "Please ____ me a hand.",
+                  "grammar": "give 的過去式是 gave，過去分詞是 given。"
+                },
+                {
+                  "en": "need",
+                  "pos": "v.",
+                  "zh": "需要",
+                  "ex_en": "I need some water to drink.",
+                  "ex_zh": "我需要一些水喝。",
+                  "ex_blank": "I ____ some water to drink."
+                },
+                {
+                  "en": "flour",
+                  "pos": "n.",
+                  "zh": "麵粉",
+                  "ex_en": "We need flour to make bread.",
+                  "ex_zh": "我們需要麵粉來做麵包。",
+                  "ex_blank": "We need ____ to make bread."
+                },
+                {
+                  "en": "of course",
+                  "pos": "phr.",
+                  "zh": "當然",
+                  "ex_en": "Will you help me? Of course I will.",
+                  "ex_zh": "你會幫我嗎？我當然會。",
+                  "ex_blank": "Will you help me? ____ I will."
+                },
+                {
+                  "en": "which",
+                  "pos": "adj./pron.",
+                  "zh": "哪一個",
+                  "ex_en": "Which color do you like better?",
+                  "ex_zh": "你比較喜歡哪一個顏色？",
+                  "ex_blank": "____ color do you like better?"
+                },
+                {
+                  "en": "enough",
+                  "pos": "adj.",
+                  "zh": "足夠的",
+                  "ex_en": "I have enough money to buy the book.",
+                  "ex_zh": "我有足夠的錢買這本書。",
+                  "ex_blank": "I have ____ money to buy the book."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u4-4",
+              "title": "Part 4",
+              "zh": "口味與難度",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "yummy",
+                  "pos": "adj.",
+                  "zh": "美味的",
+                  "ex_en": "This chocolate cake is very yummy.",
+                  "ex_zh": "這個巧克力蛋糕非常好吃。",
+                  "ex_blank": "This chocolate cake is very ____."
+                },
+                {
+                  "en": "teach / taught",
+                  "pos": "v.",
+                  "zh": "教",
+                  "ex_en": "She loves to teach English to kids.",
+                  "ex_zh": "她喜歡教小朋友英文。",
+                  "ex_blank": "She loves to ____ English to kids.",
+                  "grammar": "teach 的過去式與過去分詞都是 taught。"
+                },
+                {
+                  "en": "easy",
+                  "pos": "adj.",
+                  "zh": "容易的",
+                  "ex_en": "The math test was very easy for me.",
+                  "ex_zh": "這次數學考試對我來說很簡單。",
+                  "ex_blank": "The math test was very ____ for me."
+                },
+                {
+                  "en": "how much",
+                  "pos": "phr.",
+                  "zh": "多少",
+                  "ex_en": "How much sugar do you need for the cake?",
+                  "ex_zh": "做這個蛋糕需要多少糖？",
+                  "ex_blank": "____ sugar do you need for the cake?"
+                },
+                {
+                  "en": "delicious",
+                  "pos": "adj.",
+                  "zh": "美味的",
+                  "ex_en": "The steak at this restaurant is delicious.",
+                  "ex_zh": "這家餐廳的牛排很美味。",
+                  "ex_blank": "The steak at this restaurant is ____."
+                },
+                {
+                  "en": "difficult",
+                  "pos": "adj.",
+                  "zh": "困難的",
+                  "ex_en": "It is difficult to learn a new language.",
+                  "ex_zh": "學習一種新語言是困難的。",
+                  "ex_blank": "It is ____ to learn a new language."
+                },
+                {
+                  "en": "add",
+                  "pos": "v.",
+                  "zh": "添加",
+                  "ex_en": "Add some sugar to the tea.",
+                  "ex_zh": "在茶裡加一些糖。",
+                  "ex_blank": "____ some sugar to the tea."
+                },
+                {
+                  "en": "mix",
+                  "pos": "v.",
+                  "zh": "混合",
+                  "ex_en": "Mix the eggs and flour in a bowl.",
+                  "ex_zh": "把蛋和麵粉在碗裡混合。",
+                  "ex_blank": "____ the eggs and flour in a bowl."
+                },
+                {
+                  "en": "heat",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "加熱；熱",
+                  "ex_en": "Heat the water in a pot first.",
+                  "ex_zh": "先把水放進鍋裡加熱。",
+                  "ex_blank": "____ the water in a pot first."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u4-5",
+              "title": "Part 5",
+              "zh": "烘焙用語",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "pan",
+                  "pos": "n.",
+                  "zh": "平底鍋",
+                  "ex_en": "Cook the egg in the pan.",
+                  "ex_zh": "在平底鍋裡煎蛋。",
+                  "ex_blank": "Cook the egg in the ____."
+                },
+                {
+                  "en": "butter",
+                  "pos": "n.",
+                  "zh": "奶油",
+                  "ex_en": "I like butter on my toast.",
+                  "ex_zh": "我喜歡在吐司上抹奶油。",
+                  "ex_blank": "I like ____ on my toast."
+                },
+                {
+                  "en": "round",
+                  "pos": "adj.",
+                  "zh": "圓形的",
+                  "ex_en": "The moon is round tonight.",
+                  "ex_zh": "今晚的月亮是圓的。",
+                  "ex_blank": "The moon is ____ tonight."
+                },
+                {
+                  "en": "batter",
+                  "pos": "n.",
+                  "zh": "糊狀物",
+                  "ex_en": "Mix the batter for the cake well.",
+                  "ex_zh": "把做蛋糕的麵糊攪拌均勻。",
+                  "ex_blank": "Mix the ____ for the cake well."
+                },
+                {
+                  "en": "until",
+                  "pos": "conj./prep.",
+                  "zh": "直到...為止",
+                  "ex_en": "Wait here until the bus comes.",
+                  "ex_zh": "在這裡等到公車來為止。",
+                  "ex_blank": "Wait here ____ the bus comes."
+                },
+                {
+                  "en": "brown",
+                  "pos": "adj./n.",
+                  "blankPos": "adj.",
+                  "zh": "棕色(的)",
+                  "ex_en": "She has long brown hair.",
+                  "ex_zh": "她有一頭棕色長髮。",
+                  "ex_blank": "She has long ____ hair."
+                },
+                {
+                  "en": "both",
+                  "pos": "adj./pron.",
+                  "zh": "兩者(...都)",
+                  "ex_en": "Both of them are students.",
+                  "ex_zh": "他們兩個都是學生。",
+                  "ex_blank": "____ of them are students."
+                },
+                {
+                  "en": "ready",
+                  "pos": "adj.",
+                  "zh": "準備好的",
+                  "ex_en": "Are you ready to go to school?",
+                  "ex_zh": "你準備好去上學了嗎？",
+                  "ex_blank": "Are you ____ to go to school?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-b2-lesson5",
+          "title": "Unit 5",
+          "zh": "過去經驗與生活片語",
+          "units": [
+            {
+              "id": "kj-b2-u5-1",
+              "title": "Part 1",
+              "zh": "過去的活動",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "science",
+                  "pos": "n.",
+                  "zh": "科學",
+                  "ex_en": "I like science class very much.",
+                  "ex_zh": "我非常喜歡自然科學課。",
+                  "ex_blank": "I like ____ class very much."
+                },
+                {
+                  "en": "camp",
+                  "pos": "n./v.",
+                  "blankPos": "v.",
+                  "zh": "營隊；露營",
+                  "ex_en": "We will camp in the mountains this weekend.",
+                  "ex_zh": "我們這個週末要去山上露營。",
+                  "ex_blank": "We will ____ in the mountains this weekend."
+                },
+                {
+                  "en": "visit",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "造訪；拜訪",
+                  "ex_en": "I will visit my grandma in Tainan.",
+                  "ex_zh": "我會去台南拜訪我奶奶。",
+                  "ex_blank": "I will ____ my grandma in Tainan."
+                },
+                {
+                  "en": "art",
+                  "pos": "n.",
+                  "zh": "藝術；美術",
+                  "ex_en": "She is good at art and drawing.",
+                  "ex_zh": "她擅長美術和繪畫。",
+                  "ex_blank": "She is good at ____ and drawing."
+                },
+                {
+                  "en": "museum",
+                  "pos": "n.",
+                  "zh": "博物館",
+                  "ex_en": "We visited the National Palace Museum last week.",
+                  "ex_zh": "我們上星期參觀了故宮博物院。",
+                  "ex_blank": "We visited the National Palace ____ last week."
+                },
+                {
+                  "en": "ago",
+                  "pos": "adv.",
+                  "zh": "...之前",
+                  "ex_en": "I met him two years ago.",
+                  "ex_zh": "我兩年前認識他的。",
+                  "ex_blank": "I met him two years ____."
+                },
+                {
+                  "en": "computer",
+                  "pos": "n.",
+                  "zh": "電腦",
+                  "ex_en": "I use a computer to do my homework.",
+                  "ex_zh": "我用電腦做作業。",
+                  "ex_blank": "I use a ____ to do my homework."
+                },
+                {
+                  "en": "before",
+                  "pos": "prep./adv.",
+                  "zh": "在...之前；以前",
+                  "ex_en": "Wash your hands before dinner.",
+                  "ex_zh": "晚餐前要洗手。",
+                  "ex_blank": "Wash your hands ____ dinner."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u5-2",
+              "title": "Part 2",
+              "zh": "時間與感受",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "yesterday",
+                  "pos": "adv.",
+                  "zh": "昨天",
+                  "ex_en": "It rained heavily yesterday in Taipei.",
+                  "ex_zh": "台北昨天下大雨。",
+                  "ex_blank": "It rained heavily ____ in Taipei."
+                },
+                {
+                  "en": "surf the Internet / surfed the Internet",
+                  "pos": "phr.",
+                  "zh": "上網",
+                  "ex_en": "I like to surf the Internet at night.",
+                  "ex_zh": "我喜歡晚上上網。",
+                  "ex_blank": "I like to ____ at night.",
+                  "grammar": "surf the Internet 的過去式是 surfed the Internet。"
+                },
+                {
+                  "en": "minute",
+                  "pos": "n.",
+                  "zh": "分鐘",
+                  "ex_en": "Wait a minute please.",
+                  "ex_zh": "請等一下。",
+                  "ex_blank": "Wait a ____ please."
+                },
+                {
+                  "en": "hour",
+                  "pos": "n.",
+                  "zh": "小時",
+                  "ex_en": "The class lasts for one hour.",
+                  "ex_zh": "這堂課持續一個小時。",
+                  "ex_blank": "The class lasts for one ____."
+                },
+                {
+                  "en": "story",
+                  "pos": "n.",
+                  "zh": "故事",
+                  "ex_en": "My dad told me a bedtime story.",
+                  "ex_zh": "我爸爸跟我說了一個床邊故事。",
+                  "ex_blank": "My dad told me a bedtime ____."
+                },
+                {
+                  "en": "lazy",
+                  "pos": "adj.",
+                  "zh": "懶惰的",
+                  "ex_en": "He is too lazy to walk to the shop.",
+                  "ex_zh": "他懶得走路去商店。",
+                  "ex_blank": "He is too ____ to walk to the shop."
+                },
+                {
+                  "en": "even",
+                  "pos": "adv.",
+                  "zh": "甚至",
+                  "ex_en": "Even a child knows that is wrong.",
+                  "ex_zh": "連小孩子都知道那是錯的。",
+                  "ex_blank": "____ a child knows that is wrong."
+                },
+                {
+                  "en": "should",
+                  "pos": "aux.",
+                  "zh": "應該",
+                  "ex_en": "You should study hard for the test.",
+                  "ex_zh": "你應該為了考試認真讀書。",
+                  "ex_blank": "You ____ study hard for the test."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u5-3",
+              "title": "Part 3",
+              "zh": "程度與時間副詞",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "wrong",
+                  "pos": "adj.",
+                  "zh": "錯誤的",
+                  "ex_en": "You have the wrong phone number.",
+                  "ex_zh": "你打錯電話號碼了。",
+                  "ex_blank": "You have the ____ phone number."
+                },
+                {
+                  "en": "so",
+                  "pos": "adv.",
+                  "zh": "很；那麼",
+                  "ex_en": "The soup is so hot that I can't drink it.",
+                  "ex_zh": "這湯太燙了，我沒辦法喝。",
+                  "ex_blank": "The soup is ____ hot that I can't drink it."
+                },
+                {
+                  "en": "just",
+                  "pos": "adv.",
+                  "zh": "就；恰好；剛剛",
+                  "ex_en": "I just finished my lunch.",
+                  "ex_zh": "我剛吃完午餐。",
+                  "ex_blank": "I ____ finished my lunch."
+                },
+                {
+                  "en": "later",
+                  "pos": "adv.",
+                  "zh": "稍後",
+                  "ex_en": "See you later.",
+                  "ex_zh": "待會見。",
+                  "ex_blank": "See you ____."
+                },
+                {
+                  "en": "save",
+                  "pos": "v.",
+                  "zh": "拯救；省下；儲存",
+                  "ex_en": "Save some money for the future.",
+                  "ex_zh": "為未來存一些錢。",
+                  "ex_blank": "____ some money for the future."
+                },
+                {
+                  "en": "share",
+                  "pos": "v.",
+                  "zh": "分享",
+                  "ex_en": "Share your toys with your friends.",
+                  "ex_zh": "把你的玩具跟朋友分享。",
+                  "ex_blank": "____ your toys with your friends."
+                },
+                {
+                  "en": "snack",
+                  "pos": "n.",
+                  "zh": "點心",
+                  "ex_en": "I want a snack before dinner.",
+                  "ex_zh": "我晚餐前想吃點心。",
+                  "ex_blank": "I want a ____ before dinner."
+                },
+                {
+                  "en": "climb",
+                  "pos": "v.",
+                  "zh": "攀爬",
+                  "ex_en": "Monkeys can climb trees very well.",
+                  "ex_zh": "猴子很擅長爬樹。",
+                  "ex_blank": "Monkeys can ____ trees very well."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u5-4",
+              "title": "Part 4",
+              "zh": "遊戲與智慧",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "kid",
+                  "pos": "v./n.",
+                  "blankPos": "n.",
+                  "zh": "開玩笑；小孩",
+                  "ex_en": "He is just a kid, so don't be mad.",
+                  "ex_zh": "他只是個小孩，別生氣了。",
+                  "ex_blank": "He is just a ____, so don't be mad."
+                },
+                {
+                  "en": "explain",
+                  "pos": "v.",
+                  "zh": "解釋",
+                  "ex_en": "Can you explain the rule to me?",
+                  "ex_zh": "你可以跟我解釋這個規則嗎？",
+                  "ex_blank": "Can you ____ the rule to me?"
+                },
+                {
+                  "en": "leftovers",
+                  "pos": "n.",
+                  "zh": "剩菜",
+                  "ex_en": "We ate leftovers for lunch today.",
+                  "ex_zh": "我們今天午餐吃剩菜。",
+                  "ex_blank": "We ate ____ for lunch today."
+                },
+                {
+                  "en": "hide-and-seek",
+                  "pos": "n.",
+                  "zh": "捉迷藏",
+                  "ex_en": "Kids like to play hide-and-seek in the park.",
+                  "ex_zh": "孩子們喜歡在公園玩捉迷藏。",
+                  "ex_blank": "Kids like to play ____ in the park."
+                },
+                {
+                  "en": "wise",
+                  "pos": "adj.",
+                  "zh": "有智慧的",
+                  "ex_en": "My grandfather is a wise man.",
+                  "ex_zh": "我爺爺是個有智慧的人。",
+                  "ex_blank": "My grandfather is a ____ man."
+                },
+                {
+                  "en": "hunt",
+                  "pos": "v.",
+                  "zh": "打獵",
+                  "ex_en": "The cat likes to hunt mice in the garden.",
+                  "ex_zh": "這隻貓喜歡在花園裡抓老鼠。",
+                  "ex_blank": "The cat likes to ____ mice in the garden."
+                },
+                {
+                  "en": "learn",
+                  "pos": "v.",
+                  "zh": "學習；得知",
+                  "ex_en": "We learn English at school every day.",
+                  "ex_zh": "我們每天在學校學英文。",
+                  "ex_blank": "We ____ English at school every day."
+                },
+                {
+                  "en": "in the end",
+                  "pos": "phr.",
+                  "zh": "最後",
+                  "ex_en": "He won the game in the end.",
+                  "ex_zh": "他最後贏得了比賽。",
+                  "ex_blank": "He won the game ____."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kj-b2-lesson6",
+          "title": "Unit 6",
+          "zh": "地形、不規則動詞與環保",
+          "units": [
+            {
+              "id": "kj-b2-u6-1",
+              "title": "Part 1",
+              "zh": "地形景觀",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "mountain",
+                  "pos": "n.",
+                  "zh": "山",
+                  "ex_en": "Yangmingshan is a beautiful mountain in Taipei.",
+                  "ex_zh": "陽明山是台北一座美麗的山。",
+                  "ex_blank": "Yangmingshan is a beautiful ____ in Taipei."
+                },
+                {
+                  "en": "lake",
+                  "pos": "n.",
+                  "zh": "湖",
+                  "ex_en": "Sun Moon Lake is a famous spot in Taiwan.",
+                  "ex_zh": "日月潭是台灣有名的景點。",
+                  "ex_blank": "Sun Moon ____ is a famous spot in Taiwan."
+                },
+                {
+                  "en": "island",
+                  "pos": "n.",
+                  "zh": "島",
+                  "ex_en": "Taiwan is a lovely island in Asia.",
+                  "ex_zh": "台灣是亞洲一座可愛的島嶼。",
+                  "ex_blank": "Taiwan is a lovely ____ in Asia."
+                },
+                {
+                  "en": "beach",
+                  "pos": "n.",
+                  "zh": "海灘",
+                  "ex_en": "We played volleyball on the beach last summer.",
+                  "ex_zh": "我們去年夏天在海灘上打排球。",
+                  "ex_blank": "We played volleyball on the ____ last summer."
+                },
+                {
+                  "en": "river",
+                  "pos": "n.",
+                  "zh": "河",
+                  "ex_en": "The Love River is in Kaohsiung.",
+                  "ex_zh": "愛河在高雄。",
+                  "ex_blank": "The Love ____ is in Kaohsiung."
+                },
+                {
+                  "en": "hill",
+                  "pos": "n.",
+                  "zh": "小山；丘陵",
+                  "ex_en": "The school stands on top of a small hill.",
+                  "ex_zh": "學校座落在一座小山丘上。",
+                  "ex_blank": "The school stands on top of a small ____."
+                },
+                {
+                  "en": "pond",
+                  "pos": "n.",
+                  "zh": "池塘",
+                  "ex_en": "There are many fish swimming in the pond.",
+                  "ex_zh": "池塘裡有很多魚在游泳。",
+                  "ex_blank": "There are many fish swimming in the ____."
+                },
+                {
+                  "en": "hike",
+                  "pos": "v.",
+                  "zh": "健行",
+                  "ex_en": "We plan to hike up the mountain this Saturday.",
+                  "ex_zh": "我們計畫這星期六去爬山健行。",
+                  "ex_blank": "We plan to ____ up the mountain this Saturday."
+                },
+                {
+                  "en": "swim / swam",
+                  "pos": "v.",
+                  "zh": "游泳",
+                  "ex_en": "I swam in the pool yesterday afternoon.",
+                  "ex_zh": "我昨天下午在游泳池游泳。",
+                  "ex_blank": "I ____ in the pool yesterday afternoon.",
+                  "grammar": "swim 的過去式是 swam，過去分詞是 swum。"
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u6-2",
+              "title": "Part 2",
+              "zh": "旅行與物品",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "airport",
+                  "pos": "n.",
+                  "zh": "機場",
+                  "ex_en": "We took a taxi to the Taoyuan Airport.",
+                  "ex_zh": "我們搭計程車去桃園機場。",
+                  "ex_blank": "We took a taxi to the Taoyuan ____."
+                },
+                {
+                  "en": "bright",
+                  "pos": "adj.",
+                  "zh": "明亮的；晴朗的",
+                  "ex_en": "The sun is very bright today.",
+                  "ex_zh": "今天陽光很明亮。",
+                  "ex_blank": "The sun is very ____ today."
+                },
+                {
+                  "en": "guy",
+                  "pos": "n.",
+                  "zh": "傢伙；人",
+                  "ex_en": "Who is that tall guy over there?",
+                  "ex_zh": "那邊那個高個子是誰？",
+                  "ex_blank": "Who is that tall ____ over there?"
+                },
+                {
+                  "en": "suitcase",
+                  "pos": "n.",
+                  "zh": "(旅行用的)手提箱",
+                  "ex_en": "My suitcase is too heavy to carry.",
+                  "ex_zh": "我的行李箱太重了，提不動。",
+                  "ex_blank": "My ____ is too heavy to carry."
+                },
+                {
+                  "en": "through",
+                  "pos": "prep.",
+                  "zh": "通過；穿過",
+                  "ex_en": "The train went through the tunnel.",
+                  "ex_zh": "火車穿過了隧道。",
+                  "ex_blank": "The train went ____ the tunnel."
+                },
+                {
+                  "en": "bring / brought",
+                  "pos": "v.",
+                  "zh": "帶來",
+                  "ex_en": "Please bring your umbrella tomorrow.",
+                  "ex_zh": "明天請帶你的雨傘。",
+                  "ex_blank": "Please ____ your umbrella tomorrow.",
+                  "grammar": "bring 的過去式與過去分詞都是 brought。"
+                },
+                {
+                  "en": "plastic",
+                  "pos": "adj./n.",
+                  "blankPos": "adj.",
+                  "zh": "塑膠的；塑膠",
+                  "ex_en": "We should use fewer plastic bags.",
+                  "ex_zh": "我們應該少用塑膠袋。",
+                  "ex_blank": "We should use fewer ____ bags."
+                },
+                {
+                  "en": "keep / kept",
+                  "pos": "v.",
+                  "zh": "保留；保持",
+                  "ex_en": "Please keep the classroom clean.",
+                  "ex_zh": "請保持教室的整潔。",
+                  "ex_blank": "Please ____ the classroom clean.",
+                  "grammar": "keep 的過去式與過去分詞都是 kept。"
+                },
+                {
+                  "en": "throw / threw...away",
+                  "pos": "phr.",
+                  "zh": "扔掉",
+                  "ex_en": "Don't throw your trash away on the street.",
+                  "ex_zh": "不要把垃圾丟在街上。",
+                  "ex_blank": "Don't ____ your trash on the street.",
+                  "grammar": "throw away 的過去式是 threw away（throw 是不規則動詞）。"
+                },
+                {
+                  "en": "start",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "開始",
+                  "ex_en": "The movie will start at seven o'clock.",
+                  "ex_zh": "電影將在七點開始。",
+                  "ex_blank": "The movie will ____ at seven o'clock."
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u6-3",
+              "title": "Part 3",
+              "zh": "學校與規範",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "begin / began",
+                  "pos": "v.",
+                  "zh": "開始",
+                  "ex_en": "School began at eight this morning.",
+                  "ex_zh": "今天早上八點開始上課。",
+                  "ex_blank": "School ____ at eight this morning.",
+                  "grammar": "begin 的過去式是 began，過去分詞是 begun。"
+                },
+                {
+                  "en": "elementary school",
+                  "pos": "n.",
+                  "zh": "小學",
+                  "ex_en": "I studied at a local elementary school.",
+                  "ex_zh": "我在當地的一所小學讀書。",
+                  "ex_blank": "I studied at a local ____."
+                },
+                {
+                  "en": "hate",
+                  "pos": "v.",
+                  "zh": "討厭；憎恨",
+                  "ex_en": "I hate cockroaches very much.",
+                  "ex_zh": "我非常討厭蟑螂。",
+                  "ex_blank": "I ____ cockroaches very much."
+                },
+                {
+                  "en": "amazing",
+                  "pos": "adj.",
+                  "zh": "令人驚喜的",
+                  "ex_en": "The view from Taipei 101 is amazing.",
+                  "ex_zh": "從台北101看出去的景色令人驚豔。",
+                  "ex_blank": "The view from Taipei 101 is ____."
+                },
+                {
+                  "en": "law",
+                  "pos": "n.",
+                  "zh": "法律",
+                  "ex_en": "You must follow the law when driving.",
+                  "ex_zh": "開車時必須遵守法律。",
+                  "ex_blank": "You must follow the ____ when driving."
+                },
+                {
+                  "en": "-free",
+                  "pos": "adj.",
+                  "zh": "(用於詞尾)無...的",
+                  "ex_en": "This drink is sugar-free.",
+                  "ex_zh": "這款飲料是無糖的。",
+                  "ex_blank": "This drink is sugar-____."
+                },
+                {
+                  "en": "kind",
+                  "pos": "n./adj.",
+                  "blankPos": "adj.",
+                  "zh": "種類；友善的",
+                  "ex_en": "He is a kind person who helps others.",
+                  "ex_zh": "他是個樂於助人的友善的人。",
+                  "ex_blank": "He is a ____ person who helps others."
+                },
+                {
+                  "en": "program",
+                  "pos": "n.",
+                  "zh": "計畫",
+                  "ex_en": "Our school has a new recycling program.",
+                  "ex_zh": "我們學校有一項新的資源回收計畫。",
+                  "ex_blank": "Our school has a new recycling ____."
+                },
+                {
+                  "en": "buy / bought",
+                  "pos": "v.",
+                  "zh": "買",
+                  "ex_en": "I bought a new pen at the bookstore.",
+                  "ex_zh": "我在書店買了一支新的筆。",
+                  "ex_blank": "I ____ a new pen at the bookstore.",
+                  "grammar": "buy 的過去式與過去分詞都是 bought。"
+                }
+              ]
+            },
+            {
+              "id": "kj-b2-u6-4",
+              "title": "Part 4",
+              "zh": "數量與統計",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "hospital",
+                  "pos": "n.",
+                  "zh": "醫院",
+                  "ex_en": "The doctor works at a big hospital.",
+                  "ex_zh": "這位醫生在一間大醫院工作。",
+                  "ex_blank": "The doctor works at a big ____."
+                },
+                {
+                  "en": "package",
+                  "pos": "n.",
+                  "zh": "包裝；包裹",
+                  "ex_en": "I received a package from my uncle today.",
+                  "ex_zh": "我今天收到叔叔寄來的包裹。",
+                  "ex_blank": "I received a ____ from my uncle today."
+                },
+                {
+                  "en": "poor",
+                  "pos": "adj.",
+                  "zh": "貧窮的；可憐的",
+                  "ex_en": "The poor dog looks hungry.",
+                  "ex_zh": "這隻可憐的狗看起來很餓。",
+                  "ex_blank": "The ____ dog looks hungry."
+                },
+                {
+                  "en": "stop",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "停止",
+                  "ex_en": "Please stop talking and listen to the teacher.",
+                  "ex_zh": "請停止說話，聽老師講課。",
+                  "ex_blank": "Please ____ talking and listen to the teacher."
+                },
+                {
+                  "en": "collect",
+                  "pos": "v.",
+                  "zh": "收集",
+                  "ex_en": "My brother likes to collect stamps.",
+                  "ex_zh": "我哥哥喜歡收集郵票。",
+                  "ex_blank": "My brother likes to ____ stamps."
+                },
+                {
+                  "en": "half",
+                  "pos": "n./adj.",
+                  "blankPos": "n.",
+                  "zh": "一半(的)；二分之一",
+                  "ex_en": "Cut the apple in half.",
+                  "ex_zh": "把蘋果切成一半。",
+                  "ex_blank": "Cut the apple in ____."
+                },
+                {
+                  "en": "million",
+                  "pos": "n.",
+                  "zh": "百萬",
+                  "ex_en": "Taipei has over two million people.",
+                  "ex_zh": "台北有超過兩百萬人口。",
+                  "ex_blank": "Taipei has over two ____ people."
+                },
+                {
+                  "en": "lead / led",
+                  "pos": "v.",
+                  "zh": "領導",
+                  "ex_en": "The teacher led the students to the museum.",
+                  "ex_zh": "老師帶領學生去博物館。",
+                  "ex_blank": "The teacher ____ the students to the museum.",
+                  "grammar": "lead 的過去式與過去分詞都是 led。"
+                },
+                {
+                  "en": "one of a kind",
+                  "pos": "phr.",
+                  "zh": "獨一無二",
+                  "ex_en": "This handmade bag is one of a kind.",
+                  "ex_zh": "這個手工包是獨一無二的。",
+                  "ex_blank": "This handmade bag is ____."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

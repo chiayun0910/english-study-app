@@ -630,7 +630,7 @@ function EnglishStudyApp() {
           min-height: 100%;
           max-width: 480px;
           margin: 0 auto;
-          padding: 16px 16px 40px;
+          padding: 12px 16px 20px;
           box-sizing: border-box;
         }
         .app-root * { box-sizing: border-box; }
@@ -641,7 +641,7 @@ function EnglishStudyApp() {
 
         .top-bar {
           display: flex; align-items: center; justify-content: space-between;
-          margin-bottom: 18px;
+          margin-bottom: 10px;
         }
         .brand {
           display: flex; align-items: baseline; gap: 8px;
@@ -710,7 +710,7 @@ function EnglishStudyApp() {
         /* Flashcards */
         .card-stage { display: flex; flex-direction: column; align-items: center; gap: 16px; }
         .flip-card {
-          width: 100%; max-width: 340px; height: 220px;
+          width: 100%; max-width: 340px; height: 172px;
           perspective: 1000px; cursor: pointer;
         }
         .flip-inner {
@@ -723,14 +723,13 @@ function EnglishStudyApp() {
           border-radius: 18px; background: var(--card);
           border: 2px solid var(--line);
           display: flex; flex-direction: column; align-items: center; justify-content: center;
-          padding: 20px; text-align: center; gap: 10px;
+          padding: 14px 18px; text-align: center; gap: 6px;
         }
         .flip-face.back { transform: rotateY(180deg); background: var(--unit-color); color: white; border: none; }
         .flip-face .en-word { font-family: 'Baloo 2', sans-serif; font-size: 24px; font-weight: 700; }
         .flip-face .pos { font-size: 12px; color: #6B6A5E; }
         .flip-face.back .pos { color: rgba(255,255,255,0.8); }
-        .flip-face .zh-word { font-size: 22px; font-weight: 700; }
-        .flip-face .ex { font-size: 13px; margin-top: 6px; line-height: 1.5; opacity: 0.95; }
+        .flip-face .zh-word { font-size: 20px; font-weight: 700; }
         .nav-row { display: flex; align-items: center; gap: 18px; }
         .nav-btn {
           background: var(--card); border: 1.5px solid var(--line);
@@ -765,10 +764,10 @@ function EnglishStudyApp() {
 
         /* Fill blank */
         .sentence-box {
-          background: var(--card); border-radius: 14px; padding: 20px 16px; text-align: center;
-          font-size: 17px; line-height: 1.7; margin-bottom: 18px;
+          background: var(--card); border-radius: 14px; padding: 14px 16px; text-align: center;
+          font-size: 17px; line-height: 1.6; margin-bottom: 12px;
         }
-        .sentence-zh { font-size: 14px; color: #6B6A5E; margin-top: 6px; line-height: 1.6; }
+        .sentence-zh { font-size: 14px; color: #6B6A5E; margin-top: 4px; line-height: 1.5; }
         .blank {
           display: inline-block; min-width: 70px; border-bottom: 2px solid var(--ink);
           font-weight: 700; color: var(--unit-color);
@@ -791,12 +790,22 @@ function EnglishStudyApp() {
 
         /* 多型態單字（例：feel / felt）各自附上發音按鈕 */
         .forms-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 8px; }
-        .form-item { display: inline-flex; align-items: center; gap: 4px; }
+        .form-item { display: inline-flex; align-items: center; gap: 10px; }
         .form-sep { opacity: 0.4; font-weight: 400; margin: 0 2px; }
         .flip-face.back .form-sep { opacity: 0.7; }
 
-        .ex-speaker-row { margin-top: 8px; display: flex; justify-content: center; }
-        .ex-speaker-row .speaker-btn { background: rgba(255,255,255,0.25); }
+        /* 字卡背面：例句跟喇叭放同一行，喇叭縮小尺寸，節省高度；
+           用白底 + 卡片主色的圖示，在任何一種單元色底下都能保持清楚對比。 */
+        .ex-en-row {
+          display: flex; align-items: center; justify-content: center; gap: 10px;
+          font-size: 13px; line-height: 1.4; opacity: 0.95;
+        }
+        .ex-en-row .speaker-btn {
+          background: #fff; color: var(--unit-color, var(--ink));
+          width: 28px; height: 28px; flex-shrink: 0;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+        }
+        .ex-zh-text { font-size: 13px; line-height: 1.4; opacity: 0.95; }
 
         .rate-row {
           display: flex; align-items: center; justify-content: center; gap: 6px;
@@ -846,14 +855,14 @@ function EnglishStudyApp() {
         /* 照使用者習慣的實體鍵盤 QWERTY 排列（上排10/中排9/下排7），
            兩側留白與鍵距盡量壓到最小，讓按鍵本身撐到最大。 */
         .osk {
-          margin: 16px -16px 0; padding: 0 2px; box-sizing: border-box;
-          display: flex; flex-direction: column; gap: 6px; align-items: stretch; width: calc(100% + 32px);
+          margin: 10px -16px 0; padding: 0 2px; box-sizing: border-box;
+          display: flex; flex-direction: column; gap: 5px; align-items: stretch; width: calc(100% + 32px);
         }
         .osk-row { display: flex; gap: 3px; justify-content: center; }
         .osk-key {
           background: var(--card); border: 1.5px solid var(--line); border-radius: 10px;
-          flex: 1 1 0; min-width: 0; padding: 20px 0;
-          font-size: 20px; font-weight: 700; color: var(--ink);
+          flex: 1 1 0; min-width: 0; padding: 13px 0;
+          font-size: 18px; font-weight: 700; color: var(--ink);
           cursor: pointer; font-family: 'Noto Sans TC', sans-serif;
         }
         .osk-key:active { background: var(--paper); transform: scale(0.92); }
@@ -861,7 +870,7 @@ function EnglishStudyApp() {
         .osk-bottom { margin-top: 2px; }
         .osk-space { flex: 3 1 0; max-width: 220px; }
         .osk-backspace { flex: 1.4 1 0; max-width: 72px; font-size: 22px; }
-        .typing-actions { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+        .typing-actions { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
         .hint-btn {
           background: var(--card); border: 1.5px solid var(--accent); color: var(--accent-ink);
           border-radius: 999px; padding: 10px 18px; font-weight: 700; cursor: pointer; font-size: 14px;
@@ -957,25 +966,39 @@ function EnglishStudyApp() {
     onClick: resetProgress
   }, "重置進度")), !loaded ? /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
-  }, "載入進度中…") : screen.view === "home" ? /*#__PURE__*/React.createElement(TextbookPicker, {
+  }, "載入進度中…") : screen.view === "home" ? /*#__PURE__*/React.createElement(EditionPicker, {
     textbooks: TEXTBOOKS,
     progress: progress,
-    onOpenTextbook: tb => setScreen({
-      view: "textbook",
-      textbookId: tb.id
+    onOpenEdition: edition => setScreen({
+      view: "edition",
+      edition
     }),
     onOpenReview: () => setScreen({
       view: "review"
+    })
+  }) : screen.view === "edition" ? /*#__PURE__*/React.createElement(TextbookPicker, {
+    textbooks: TEXTBOOKS.filter(tb => tb.edition === screen.edition),
+    edition: screen.edition,
+    progress: progress,
+    onBack: () => setScreen({
+      view: "home"
+    }),
+    onOpenTextbook: tb => setScreen({
+      view: "textbook",
+      edition: screen.edition,
+      textbookId: tb.id
     })
   }) : screen.view === "textbook" ? /*#__PURE__*/React.createElement(HomeScreen, {
     lessons: LESSONS.filter(l => l.textbookId === screen.textbookId),
     textbook: TEXTBOOKS.find(tb => tb.id === screen.textbookId),
     progress: progress,
     onBack: () => setScreen({
-      view: "home"
+      view: "edition",
+      edition: screen.edition
     }),
     onOpenLesson: l => setScreen({
       view: "lesson",
+      edition: screen.edition,
       textbookId: screen.textbookId,
       lessonId: l.id
     })
@@ -984,10 +1007,12 @@ function EnglishStudyApp() {
     progress: progress,
     onBack: () => setScreen({
       view: "textbook",
+      edition: screen.edition,
       textbookId: screen.textbookId
     }),
     onOpenUnit: u => setScreen({
       view: "unit",
+      edition: screen.edition,
       textbookId: screen.textbookId,
       unitId: u.id,
       lessonId: screen.lessonId
@@ -998,11 +1023,13 @@ function EnglishStudyApp() {
     progress: progress,
     onBack: () => setScreen({
       view: "lesson",
+      edition: screen.edition,
       textbookId: screen.textbookId,
       lessonId: screen.lessonId
     }),
     onOpenActivity: activityKey => setScreen({
       view: "activity",
+      edition: screen.edition,
       textbookId: screen.textbookId,
       unitId: screen.unitId,
       lessonId: screen.lessonId,
@@ -1019,6 +1046,7 @@ function EnglishStudyApp() {
     activityKey: screen.activityKey,
     onBack: () => setScreen({
       view: "unit",
+      edition: screen.edition,
       textbookId: screen.textbookId,
       unitId: screen.unitId,
       lessonId: screen.lessonId
@@ -1033,10 +1061,10 @@ function EnglishStudyApp() {
 /* ------------------------------------------------------------------ */
 /* TextbookPicker：最上層，選「國中／第n冊／版本」                        */
 /* ------------------------------------------------------------------ */
-function TextbookPicker({
+function EditionPicker({
   textbooks,
   progress,
-  onOpenTextbook,
+  onOpenEdition,
   onOpenReview
 }) {
   const [, setTick] = useState(0);
@@ -1048,6 +1076,7 @@ function TextbookPicker({
   const now = Date.now();
   const dueCount = mistakeList.filter(m => m.nextReview <= now).length;
   const totalMistakes = mistakeList.length;
+  const editions = [...new Set(textbooks.map(tb => tb.edition))];
   return /*#__PURE__*/React.createElement("div", {
     className: "unit-list"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1061,7 +1090,72 @@ function TextbookPicker({
     className: "due-badge"
   }, dueCount) : /*#__PURE__*/React.createElement(ChevronRight, {
     color: "rgba(255,255,255,0.6)"
-  })), textbooks.map(tb => {
+  })), editions.map(edition => {
+    const stampMap = progress.stamps || {};
+    const tbs = textbooks.filter(tb => tb.edition === edition);
+    let totalActs = 0,
+      earnedActs = 0,
+      totalWords = 0;
+    tbs.forEach(tb => tb.lessons.forEach(lesson => {
+      lesson.units.forEach(u => {
+        totalWords += u.words.length;
+        totalActs += ACTIVITIES.length;
+        const m = stampMap[u.id] || {};
+        earnedActs += ACTIVITIES.filter(a => m[a.key]).length;
+      });
+    }));
+    const accentColor = tbs[0]?.lessons[0]?.units[0]?.color || "#232C4D";
+    return /*#__PURE__*/React.createElement("div", {
+      key: edition,
+      className: "unit-card",
+      style: {
+        "--unit-color": accentColor
+      },
+      onClick: () => onOpenEdition(edition)
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "unit-card-title"
+    }, edition), /*#__PURE__*/React.createElement("div", {
+      className: "unit-card-sub"
+    }, tbs.length, " 個冊別 · ", totalWords, " 個單字"), /*#__PURE__*/React.createElement("div", {
+      className: "unit-card-sub",
+      style: {
+        marginTop: 4
+      }
+    }, "已完成 ", earnedActs, " / ", totalActs, " 項練習")), /*#__PURE__*/React.createElement(ChevronRight, {
+      color: "#B9B6A6"
+    }));
+  }));
+}
+
+/* ------------------------------------------------------------------ */
+/* TextbookPicker：選「第n冊」（某一版本內的冊別列表）                     */
+/* ------------------------------------------------------------------ */
+function TextbookPicker({
+  textbooks,
+  edition,
+  progress,
+  onBack,
+  onOpenTextbook
+}) {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "back-row",
+    onClick: onBack
+  }, /*#__PURE__*/React.createElement(ArrowLeft, {
+    size: 16
+  }), " 回版本選擇"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: 20,
+      marginBottom: 2
+    }
+  }, edition), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: 13,
+      color: "#6B6A5E",
+      marginBottom: 16
+    }
+  }, "選一冊開始練習"), /*#__PURE__*/React.createElement("div", {
+    className: "unit-list"
+  }, textbooks.map(tb => {
     const stampMap = progress.stamps || {};
     let totalActs = 0,
       earnedActs = 0,
@@ -1086,7 +1180,7 @@ function TextbookPicker({
       onClick: () => onOpenTextbook(tb)
     }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       className: "unit-card-title"
-    }, tb.grade, " 第", tb.book, "冊 · ", tb.edition), /*#__PURE__*/React.createElement("div", {
+    }, tb.grade, " 第", tb.book, "冊"), /*#__PURE__*/React.createElement("div", {
       className: "unit-card-sub"
     }, tb.lessons.length, " 個 Unit · ", totalWords, " 個單字"), /*#__PURE__*/React.createElement("div", {
       className: "unit-card-sub",
@@ -1096,7 +1190,7 @@ function TextbookPicker({
     }, "已完成 ", earnedActs, " / ", totalActs, " 項練習")), /*#__PURE__*/React.createElement(ChevronRight, {
       color: "#B9B6A6"
     }));
-  }));
+  })));
 }
 
 /* ------------------------------------------------------------------ */
@@ -1344,14 +1438,16 @@ function Flashcards({
   }, /*#__PURE__*/React.createElement("div", {
     className: "zh-word"
   }, word.zh), /*#__PURE__*/React.createElement("div", {
-    className: "ex"
-  }, word.ex_en, /*#__PURE__*/React.createElement("br", null), word.ex_zh), /*#__PURE__*/React.createElement("div", {
-    className: "ex-speaker-row",
+    className: "ex-en-row",
     onClick: e => e.stopPropagation()
-  }, /*#__PURE__*/React.createElement(SpeakerButton, {
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "ex-en-text"
+  }, word.ex_en), /*#__PURE__*/React.createElement(SpeakerButton, {
     text: word.ex_en,
-    size: 18
-  })), word.grammar && /*#__PURE__*/React.createElement("div", {
+    size: 16
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "ex-zh-text"
+  }, word.ex_zh), word.grammar && /*#__PURE__*/React.createElement("div", {
     className: "ex-grammar"
   }, "💡 ", word.grammar)))), /*#__PURE__*/React.createElement("div", {
     className: "progress-text"
@@ -1464,12 +1560,66 @@ function Quiz({
 /* ------------------------------------------------------------------ */
 /* 3. Matching 配對遊戲                                                  */
 /* ------------------------------------------------------------------ */
+/* 配對遊戲每回合最多 6 對；單元字數超過 6 個時，分成好幾回合輪流玩，
+   直到把整個單元的字都配對完才算過關（之前寫死只抓前 6 個字，
+   單元字數較多時就永遠玩不到剩下的字）。 */
+const MATCH_PAGE_SIZE = 6;
 function Matching({
   unit,
-  onFinish
+  onFinish,
+  onWordResult
 }) {
-  const pairCount = Math.min(6, unit.words.length);
-  const [words] = useState(() => shuffle(unit.words).slice(0, pairCount));
+  // allWords 跟 attempt 都放進同一個 state，重玩時整組換成新洗好的順序，
+  // attempt 遞增只是為了讓下面的 key 保證改變、強制拿到全新的元件與排列，
+  // 不會沿用上一輪殘留的畫面狀態，避免使用者靠背位置而不是真的認得單字。
+  const [game, setGame] = useState(() => ({
+    attempt: 0,
+    allWords: shuffle(unit.words)
+  }));
+  const totalRounds = Math.ceil(game.allWords.length / MATCH_PAGE_SIZE);
+  const [roundIndex, setRoundIndex] = useState(0);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [done, setDone] = useState(false);
+  if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
+    label: wrongCount === 0 ? "全部配對成功！" : `配對完成！答錯了 ${wrongCount} 次`,
+    onRestart: () => {
+      setGame(g => ({
+        attempt: g.attempt + 1,
+        allWords: shuffle(unit.words)
+      }));
+      setRoundIndex(0);
+      setWrongCount(0);
+      setDone(false);
+    },
+    note: "點按鈕可以再玩一次，英文卡片會重新洗牌"
+  });
+  const roundWords = game.allWords.slice(roundIndex * MATCH_PAGE_SIZE, roundIndex * MATCH_PAGE_SIZE + MATCH_PAGE_SIZE);
+  return /*#__PURE__*/React.createElement(MatchingRound, {
+    key: game.attempt + "-" + roundIndex,
+    unit: unit,
+    words: roundWords,
+    roundLabel: totalRounds > 1 ? `第 ${roundIndex + 1}/${totalRounds} 組 · ` : "",
+    onWordResult: onWordResult,
+    onWrong: () => setWrongCount(c => c + 1),
+    onRoundComplete: () => {
+      if (roundIndex + 1 < totalRounds) {
+        setTimeout(() => setRoundIndex(r => r + 1), 500);
+      } else {
+        onFinish();
+        setTimeout(() => setDone(true), 400);
+      }
+    }
+  });
+}
+function MatchingRound({
+  unit,
+  words,
+  roundLabel,
+  onWordResult,
+  onWrong,
+  onRoundComplete
+}) {
+  const pairCount = words.length;
   const [enTiles] = useState(() => shuffle(words.map(w => ({
     key: w.en,
     label: w.en
@@ -1482,7 +1632,6 @@ function Matching({
   const [selectedZh, setSelectedZh] = useState(null);
   const [matched, setMatched] = useState([]);
   const [wrongPair, setWrongPair] = useState(null);
-  const [done, setDone] = useState(false);
   useEffect(() => {
     if (selectedEn && selectedZh) {
       if (selectedEn === selectedZh) {
@@ -1491,12 +1640,21 @@ function Matching({
         setSelectedEn(null);
         setSelectedZh(null);
         const matchedWord = words.find(w => w.en === selectedEn);
-        if (matchedWord) speak(wordForms(matchedWord)[0]);
+        if (matchedWord) {
+          speak(wordForms(matchedWord)[0]);
+          onWordResult(unit, matchedWord, true);
+        }
         if (nextMatched.length === pairCount) {
-          onFinish();
-          setTimeout(() => setDone(true), 400);
+          onRoundComplete();
         }
       } else {
+        // 配對錯誤：這兩張卡片牽涉到的兩個單字都各記一次答錯，
+        // 才會真的被排進複習清單，並反映在最後的結果畫面上。
+        onWrong();
+        const enWord = words.find(w => w.en === selectedEn);
+        const zhWord = words.find(w => w.en === selectedZh);
+        if (enWord) onWordResult(unit, enWord, false);
+        if (zhWord && zhWord !== enWord) onWordResult(unit, zhWord, false);
         setWrongPair([selectedEn, selectedZh]);
         setTimeout(() => {
           setWrongPair(null);
@@ -1506,11 +1664,6 @@ function Matching({
       }
     }
   }, [selectedEn, selectedZh]);
-  if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
-    label: "全部配對成功！",
-    onRestart: () => window.location.reload(),
-    note: "重新整理即可再玩一次"
-  });
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: 13,
@@ -1518,7 +1671,7 @@ function Matching({
       marginBottom: 12,
       textAlign: "center"
     }
-  }, "點選英文與對應的中文意思（", matched.length, "/", pairCount, "）"), /*#__PURE__*/React.createElement("div", {
+  }, roundLabel, "點選英文與對應的中文意思（", matched.length, "/", pairCount, "）"), /*#__PURE__*/React.createElement("div", {
     className: "match-grid"
   }, enTiles.map(t => {
     const isMatched = matched.includes(t.key);
