@@ -23,7 +23,13 @@
                   "zh": "季節",
                   "ex_en": "My favorite season is autumn because of the cool weather.",
                   "ex_zh": "我最喜歡的季節是秋天，因為天氣涼爽。",
-                  "ex_blank": "My favorite ____ is autumn because of the cool weather."
+                  "ex_blank": "My favorite ____ is autumn because of the cool weather.",
+                  "ex2_en": "Which season do you like best, summer or winter?",
+                  "ex2_zh": "你最喜歡哪個季節，夏天還是冬天？",
+                  "ex3_en": "Mangoes are cheap because it is the mango season now.",
+                  "ex3_zh": "現在是芒果的產季，所以芒果很便宜。",
+                  "ex2_blank": "Which ____ do you like best, summer or winter?",
+                  "ex3_blank": "Mangoes are cheap because it is the mango ____ now."
                 },
                 {
                   "en": "weather",
@@ -31,7 +37,13 @@
                   "zh": "天氣",
                   "ex_en": "The weather in the mountains can change very quickly.",
                   "ex_zh": "山上的天氣變化非常快。",
-                  "ex_blank": "The ____ in the mountains can change very quickly."
+                  "ex_blank": "The ____ in the mountains can change very quickly.",
+                  "ex2_en": "We can't go hiking because of the bad weather.",
+                  "ex2_zh": "因為天氣不好，我們沒辦法去健行。",
+                  "ex3_en": "What's the weather like in Taipei today?",
+                  "ex3_zh": "今天台北的天氣如何？",
+                  "ex2_blank": "We can't go hiking because of the bad ____.",
+                  "ex3_blank": "What's the ____ like in Taipei today?"
                 },
                 {
                   "en": "rainy",
@@ -39,7 +51,14 @@
                   "zh": "下雨的",
                   "ex_en": "I love to read a book at home on a rainy day.",
                   "ex_zh": "我喜歡在下雨天待在家裡看書。",
-                  "ex_blank": "I love to read a book at home on a ____ day."
+                  "ex_blank": "I love to read a book at home on a ____ day.",
+                  "ex2_en": "Don't forget your umbrella; it's a rainy afternoon.",
+                  "ex2_zh": "別忘了帶傘，今天下午會下雨。",
+                  "ex3_en": "The rainy season here lasts from May to June.",
+                  "ex3_zh": "這裡的梅雨季從五月持續到六月。",
+                  "grammar": "sunny／cloudy／windy／rainy／snowy 都是「天氣名詞 + -y」變成的形容詞，用來形容天氣狀況。",
+                  "ex2_blank": "Don't forget your umbrella; it's a ____ afternoon.",
+                  "ex3_blank": "The ____ season here lasts from May to June."
                 },
                 {
                   "en": "wet",
@@ -47,7 +66,13 @@
                   "zh": "溼的",
                   "ex_en": "My shoes are still wet from the morning rain.",
                   "ex_zh": "我的鞋子因為早上的雨還是溼的。",
-                  "ex_blank": "My shoes are still ____ from the morning rain."
+                  "ex_blank": "My shoes are still ____ from the morning rain.",
+                  "ex2_en": "Don't sit on the wet grass, or you'll catch a cold.",
+                  "ex2_zh": "不要坐在濕的草地上，不然你會感冒。",
+                  "ex3_en": "The floor is wet, so please walk carefully.",
+                  "ex3_zh": "地板是濕的，請小心走路。",
+                  "ex2_blank": "Don't sit on the ____ grass, or you'll catch a cold.",
+                  "ex3_blank": "The floor is ____, so please walk carefully."
                 },
                 {
                   "en": "sunny",
@@ -55,7 +80,13 @@
                   "zh": "晴朗的",
                   "ex_en": "Let's have a picnic if it's a sunny weekend.",
                   "ex_zh": "如果週末天氣晴朗，我們就去野餐吧。",
-                  "ex_blank": "Let's have a picnic if it's a ____ weekend."
+                  "ex_blank": "Let's have a picnic if it's a ____ weekend.",
+                  "ex2_en": "It has been sunny all week, so the pool is crowded.",
+                  "ex2_zh": "這星期天天都是晴天，所以泳池很擁擠。",
+                  "ex3_en": "I need my sunglasses because it's so sunny outside.",
+                  "ex3_zh": "外面太陽好大，我需要戴太陽眼鏡。",
+                  "ex2_blank": "It has been ____ all week, so the pool is crowded.",
+                  "ex3_blank": "I need my sunglasses because it's so ____ outside."
                 },
                 {
                   "en": "cloudy",
@@ -63,7 +94,13 @@
                   "zh": "多雲的",
                   "ex_en": "It was cloudy this morning, but the sun came out later.",
                   "ex_zh": "今天早上多雲，但後來太陽出來了。",
-                  "ex_blank": "It was ____ this morning, but the sun came out later."
+                  "ex_blank": "It was ____ this morning, but the sun came out later.",
+                  "ex2_en": "The sky looks cloudy, so it might rain later.",
+                  "ex2_zh": "天空看起來多雲，等一下可能會下雨。",
+                  "ex3_en": "It's cloudy today, but the temperature is still warm.",
+                  "ex3_zh": "今天雖然多雲，但氣溫還是很暖和。",
+                  "ex2_blank": "The sky looks ____, so it might rain later.",
+                  "ex3_blank": "It's ____ today, but the temperature is still warm."
                 },
                 {
                   "en": "windy",
@@ -71,7 +108,13 @@
                   "zh": "風大的",
                   "ex_en": "It's a bit windy today, so hold on to your hat.",
                   "ex_zh": "今天風有點大，扶好你的帽子。",
-                  "ex_blank": "It's a bit ____ today, so hold on to your hat."
+                  "ex_blank": "It's a bit ____ today, so hold on to your hat.",
+                  "ex2_en": "It's too windy to fly a kite today.",
+                  "ex2_zh": "今天風太大了，不適合放風箏。",
+                  "ex3_en": "The beach is always windy in the afternoon.",
+                  "ex3_zh": "這片海灘下午總是風很大。",
+                  "ex2_blank": "It's too ____ to fly a kite today.",
+                  "ex3_blank": "The beach is always ____ in the afternoon."
                 },
                 {
                   "en": "snowy",
@@ -79,7 +122,13 @@
                   "zh": "下雪的",
                   "ex_en": "We had a very snowy winter this year.",
                   "ex_zh": "我們今年冬天下了很多雪。",
-                  "ex_blank": "We had a very ____ winter this year."
+                  "ex_blank": "We had a very ____ winter this year.",
+                  "ex2_en": "Kids love building snowmen on snowy days.",
+                  "ex2_zh": "小孩子喜歡在下雪天堆雪人。",
+                  "ex3_en": "Driving on a snowy road can be dangerous.",
+                  "ex3_zh": "在下雪的路上開車可能很危險。",
+                  "ex2_blank": "Kids love building snowmen on ____ days.",
+                  "ex3_blank": "Driving on a ____ road can be dangerous."
                 },
                 {
                   "en": "spring",
@@ -87,7 +136,14 @@
                   "zh": "春天",
                   "ex_en": "Flowers start to bloom everywhere in the spring.",
                   "ex_zh": "春天時到處的花都開始綻放。",
-                  "ex_blank": "Flowers start to bloom everywhere in the ____."
+                  "ex_blank": "Flowers start to bloom everywhere in the ____.",
+                  "ex2_en": "Many students visit the park during spring break.",
+                  "ex2_zh": "許多學生會在春假期間去公園玩。",
+                  "ex3_en": "The weather in spring changes quickly in this city.",
+                  "ex3_zh": "這座城市春天的天氣變化很快。",
+                  "ex2_blank": "Many students visit the park during ____ break.",
+                  "ex3_blank": "The weather in ____ changes quickly in this city.",
+                  "grammar": "spring break（春假）是「spring（春天）+ break（休息、假期）」組成的固定用法，break 在這裡表示「假期」，跟 winter break（寒假）、lunch break（午休）是同樣的用法。"
                 },
                 {
                   "en": "summer",
@@ -95,7 +151,13 @@
                   "zh": "夏天",
                   "ex_en": "We often go swimming in the lake during the summer.",
                   "ex_zh": "我們夏天常常去湖裡游泳。",
-                  "ex_blank": "We often go swimming in the lake during the ____."
+                  "ex_blank": "We often go swimming in the lake during the ____.",
+                  "ex2_en": "We are planning a family trip this summer.",
+                  "ex2_zh": "我們正在計畫今年夏天的家庭旅行。",
+                  "ex3_en": "Summer vacation is my favorite time of the year.",
+                  "ex3_zh": "暑假是我一年中最喜歡的時候。",
+                  "ex2_blank": "We are planning a family trip this ____.",
+                  "ex3_blank": "____ vacation is my favorite time of the year."
                 }
               ]
             },
@@ -111,7 +173,14 @@
                   "zh": "秋天",
                   "ex_en": "The leaves on the trees turn red and yellow in autumn.",
                   "ex_zh": "秋天時樹上的葉子會變成紅色和黃色。",
-                  "ex_blank": "The leaves on the trees turn red and yellow in ____."
+                  "ex_blank": "The leaves on the trees turn red and yellow in ____.",
+                  "ex2_en": "The weather starts to get cool in autumn.",
+                  "ex2_zh": "秋天天氣開始變涼。",
+                  "ex3_en": "We went apple picking last fall.",
+                  "ex3_zh": "去年秋天我們去採了蘋果。",
+                  "grammar": "autumn 是英式用法，fall 是美式用法，兩者意思相同，都指「秋天」。",
+                  "ex2_blank": "The weather starts to get cool in ____.",
+                  "ex3_blank": "We went apple picking last ____."
                 },
                 {
                   "en": "winter",
@@ -119,7 +188,13 @@
                   "zh": "冬天",
                   "ex_en": "Many animals sleep through the cold winter.",
                   "ex_zh": "許多動物會在寒冬中冬眠。",
-                  "ex_blank": "Many animals sleep through the cold ____."
+                  "ex_blank": "Many animals sleep through the cold ____.",
+                  "ex2_en": "Bears sleep for months during the winter.",
+                  "ex2_zh": "熊在冬天會睡上好幾個月。",
+                  "ex3_en": "I always wear a thick coat in winter.",
+                  "ex3_zh": "我冬天總是穿一件厚外套。",
+                  "ex2_blank": "Bears sleep for months during the ____.",
+                  "ex3_blank": "I always wear a thick coat in ____."
                 },
                 {
                   "en": "sky",
@@ -127,7 +202,13 @@
                   "zh": "天空",
                   "ex_en": "The sky was full of bright stars last night.",
                   "ex_zh": "昨晚天空布滿了明亮的星星。",
-                  "ex_blank": "The ____ was full of bright stars last night."
+                  "ex_blank": "The ____ was full of bright stars last night.",
+                  "ex2_en": "A rainbow appeared in the sky after the rain.",
+                  "ex2_zh": "雨後天空出現了一道彩虹。",
+                  "ex3_en": "The airplane disappeared into the cloudy sky.",
+                  "ex3_zh": "飛機消失在多雲的天空中。",
+                  "ex2_blank": "A rainbow appeared in the ____ after the rain.",
+                  "ex3_blank": "The airplane disappeared into the cloudy ____."
                 },
                 {
                   "en": "feel / felt",
@@ -136,7 +217,13 @@
                   "ex_en": "She felt a little nervous before her big speech.",
                   "ex_zh": "她在重要演講前感到有點緊張。",
                   "ex_blank": "She ____ a little nervous before her big speech.",
-                  "grammar": "feel 的過去式是 felt，feel + 形容詞 表示「感覺…」。"
+                  "grammar": "feel 的過去式是 felt，feel + 形容詞 表示「感覺…」。",
+                  "ex2_en": "I feel happy whenever I listen to this song.",
+                  "ex2_zh": "每次聽這首歌我都覺得很開心。",
+                  "ex3_en": "He felt sick after eating too much candy.",
+                  "ex3_zh": "他吃了太多糖果後覺得不舒服。",
+                  "ex2_blank": "I ____ happy whenever I listen to this song.",
+                  "ex3_blank": "He ____ sick after eating too much candy."
                 },
                 {
                   "en": "air",
@@ -144,7 +231,13 @@
                   "zh": "空氣",
                   "ex_en": "Let's open the window to get some fresh air.",
                   "ex_zh": "我們把窗戶打開，呼吸一些新鮮空氣吧。",
-                  "ex_blank": "Let's open the window to get some fresh ____."
+                  "ex_blank": "Let's open the window to get some fresh ____.",
+                  "ex2_en": "The air in the mountains is fresher than in the city.",
+                  "ex2_zh": "山上的空氣比城市裡的新鮮。",
+                  "ex3_en": "He threw the ball high into the air.",
+                  "ex3_zh": "他把球高高地拋向空中。",
+                  "ex2_blank": "The ____ in the mountains is fresher than in the city.",
+                  "ex3_blank": "He threw the ball high into the ____."
                 },
                 {
                   "en": "common",
@@ -152,7 +245,13 @@
                   "zh": "普遍的",
                   "ex_en": "It is common for students to feel tired on Monday mornings.",
                   "ex_zh": "學生在星期一早上感到疲累是很常見的。",
-                  "ex_blank": "It is ____ for students to feel tired on Monday mornings."
+                  "ex_blank": "It is ____ for students to feel tired on Monday mornings.",
+                  "ex2_en": "Rain is common in Taiwan during the summer.",
+                  "ex2_zh": "台灣夏天常常下雨。",
+                  "ex3_en": "Smith is a very common last name in English.",
+                  "ex3_zh": "Smith 在英文裡是非常常見的姓氏。",
+                  "ex2_blank": "Rain is ____ in Taiwan during the summer.",
+                  "ex3_blank": "Smith is a very ____ last name in English."
                 },
                 {
                   "en": "dark",
@@ -160,7 +259,13 @@
                   "zh": "黑暗的；深色的",
                   "ex_en": "He has dark brown hair and blue eyes.",
                   "ex_zh": "他有深棕色的頭髮和藍色的眼睛。",
-                  "ex_blank": "He has ____ brown hair and blue eyes."
+                  "ex_blank": "He has ____ brown hair and blue eyes.",
+                  "ex2_en": "It gets dark early in the winter.",
+                  "ex2_zh": "冬天天黑得早。",
+                  "ex3_en": "She was wearing a dark blue dress at the party.",
+                  "ex3_zh": "她在派對上穿了一件深藍色的洋裝。",
+                  "ex2_blank": "It gets ____ early in the winter.",
+                  "ex3_blank": "She was wearing a ____ blue dress at the party."
                 },
                 {
                   "en": "forget / forgot",
@@ -169,7 +274,13 @@
                   "ex_en": "Don't forget to lock the door when you leave.",
                   "ex_zh": "你離開時別忘了鎖門。",
                   "ex_blank": "Don't ____ to lock the door when you leave.",
-                  "grammar": "forget 的過去式是 forgot，forget to V 表示「忘記要做」，forget Ving 表示「忘記做過」。"
+                  "grammar": "forget 的過去式是 forgot，forget to V 表示「忘記要做」，forget Ving 表示「忘記做過」。",
+                  "ex2_en": "I'm sorry, I completely forgot about our plan.",
+                  "ex2_zh": "對不起，我完全忘了我們的計畫。",
+                  "ex3_en": "He forgot his password and couldn't log in.",
+                  "ex3_zh": "他忘記密碼了，沒辦法登入。",
+                  "ex2_blank": "I'm sorry, I completely ____ about our plan.",
+                  "ex3_blank": "He ____ his password and couldn't log in."
                 },
                 {
                   "en": "umbrella",
@@ -177,7 +288,13 @@
                   "zh": "雨傘",
                   "ex_en": "I think I left my umbrella on the bus.",
                   "ex_zh": "我想我把雨傘忘在公車上了。",
-                  "ex_blank": "I think I left my ____ on the bus."
+                  "ex_blank": "I think I left my ____ on the bus.",
+                  "ex2_en": "Can I borrow your umbrella? It's starting to rain.",
+                  "ex2_zh": "我可以借你的傘嗎？開始下雨了。",
+                  "ex3_en": "She always keeps a small umbrella in her bag.",
+                  "ex3_zh": "她的包包裡總是放著一把小雨傘。",
+                  "ex2_blank": "Can I borrow your ____? It's starting to rain.",
+                  "ex3_blank": "She always keeps a small ____ in her bag."
                 }
               ]
             },
@@ -193,7 +310,14 @@
                   "zh": "害怕的",
                   "ex_en": "My little brother is afraid of the dark.",
                   "ex_zh": "我弟弟怕黑。",
-                  "ex_blank": "My little brother is ____ of the dark."
+                  "ex_blank": "My little brother is ____ of the dark.",
+                  "ex2_en": "Don't be afraid; I'm right here with you.",
+                  "ex2_zh": "別害怕，我就在你身邊。",
+                  "ex3_en": "Many people are afraid of speaking in public.",
+                  "ex3_zh": "很多人害怕在眾人面前說話。",
+                  "grammar": "be afraid of + N/Ving 表示「害怕……」。",
+                  "ex2_blank": "Don't be ____; I'm right here with you.",
+                  "ex3_blank": "Many people are ____ of speaking in public."
                 },
                 {
                   "en": "heavy",
@@ -201,7 +325,13 @@
                   "zh": "大量的；重的",
                   "ex_en": "The box was too heavy for me to lift.",
                   "ex_zh": "這個箱子太重了，我搬不動。",
-                  "ex_blank": "The box was too ____ for me to lift."
+                  "ex_blank": "The box was too ____ for me to lift.",
+                  "ex2_en": "There was heavy traffic on the highway this morning.",
+                  "ex2_zh": "今天早上高速公路上塞車嚴重。",
+                  "ex3_en": "This backpack is too heavy for a small kid to carry.",
+                  "ex3_zh": "這個背包對小孩子來說太重了，背不動。",
+                  "ex2_blank": "There was ____ traffic on the highway this morning.",
+                  "ex3_blank": "This backpack is too ____ for a small kid to carry."
                 },
                 {
                   "en": "shower",
@@ -209,7 +339,13 @@
                   "zh": "陣雨；淋浴",
                   "ex_en": "I'll take a quick shower before we go out.",
                   "ex_zh": "我們出門前我會先快速淋個浴。",
-                  "ex_blank": "I'll take a quick ____ before we go out."
+                  "ex_blank": "I'll take a quick ____ before we go out.",
+                  "ex2_en": "There will be a shower in the afternoon, so bring an umbrella.",
+                  "ex2_zh": "下午會有一場陣雨，記得帶傘。",
+                  "ex3_en": "He always sings in the shower.",
+                  "ex3_zh": "他洗澡時總是會唱歌。",
+                  "ex2_blank": "There will be a ____ in the afternoon, so bring an umbrella.",
+                  "ex3_blank": "He always sings in the ____."
                 },
                 {
                   "en": "report",
@@ -219,7 +355,13 @@
                   "ex_en": "The teacher asked us to write a book report.",
                   "ex_zh": "老師要我們寫一篇讀書報告。",
                   "ex_blank": "The teacher asked us to write a book ____.",
-                  "grammar": "report 當名詞是「報告、報導」，當動詞是「報告、通報」，如 report to + 人。"
+                  "grammar": "report 當名詞是「報告、報導」，當動詞是「報告、通報」，如 report to + 人。",
+                  "ex2_en": "We watched the news report about the storm together.",
+                  "ex2_zh": "我們一起看了關於這場暴風雨的新聞報導。",
+                  "ex3_en": "You should report any accident to the police right away.",
+                  "ex3_zh": "任何意外事故你都應該立刻向警察報告。",
+                  "ex2_blank": "We watched the news ____ about the storm together.",
+                  "ex3_blank": "You should ____ any accident to the police right away."
                 },
                 {
                   "en": "sea level",
@@ -227,7 +369,13 @@
                   "zh": "海平面",
                   "ex_en": "This city is located 10 meters below sea level.",
                   "ex_zh": "這座城市位於海平面下10公尺。",
-                  "ex_blank": "This city is located 10 meters below ____."
+                  "ex_blank": "This city is located 10 meters below ____.",
+                  "ex2_en": "Some islands may disappear if the sea level keeps rising.",
+                  "ex2_zh": "如果海平面持續上升，有些島嶼可能會消失。",
+                  "ex3_en": "The mountain is over three thousand meters above sea level.",
+                  "ex3_zh": "這座山海拔超過三千公尺。",
+                  "ex2_blank": "Some islands may disappear if the ____ keeps rising.",
+                  "ex3_blank": "The mountain is over three thousand meters above ____."
                 },
                 {
                   "en": "danger",
@@ -235,7 +383,13 @@
                   "zh": "危險",
                   "ex_en": "Driving too fast puts everyone in danger.",
                   "ex_zh": "開車太快會讓大家陷入危險。",
-                  "ex_blank": "Driving too fast puts everyone in ____."
+                  "ex_blank": "Driving too fast puts everyone in ____.",
+                  "ex2_en": "The sign warns people of danger near the cliff.",
+                  "ex2_zh": "這個標誌警告人們懸崖附近有危險。",
+                  "ex3_en": "Wild animals are in danger because of the fires.",
+                  "ex3_zh": "野生動物因為這些火災而身陷危險。",
+                  "ex2_blank": "The sign warns people of ____ near the cliff.",
+                  "ex3_blank": "Wild animals are in ____ because of the fires."
                 },
                 {
                   "en": "fix",
@@ -243,7 +397,13 @@
                   "zh": "解決(問題)；修理",
                   "ex_en": "Can you help me fix my broken computer?",
                   "ex_zh": "你可以幫我修好壞掉的電腦嗎？",
-                  "ex_blank": "Can you help me ____ my broken computer?"
+                  "ex_blank": "Can you help me ____ my broken computer?",
+                  "ex2_en": "The mechanic fixed my bike in less than an hour.",
+                  "ex2_zh": "技師不到一小時就把我的腳踏車修好了。",
+                  "ex3_en": "We need to fix this problem before it gets worse.",
+                  "ex3_zh": "我們需要在這個問題變嚴重之前解決它。",
+                  "ex2_blank": "The mechanic ____ my bike in less than an hour.",
+                  "ex3_blank": "We need to ____ this problem before it gets worse."
                 },
                 {
                   "en": "build / built",
@@ -252,7 +412,13 @@
                   "ex_en": "They plan to build a new bridge over the river.",
                   "ex_zh": "他們計畫在河上建造一座新橋。",
                   "ex_blank": "They plan to ____ a new bridge over the river.",
-                  "grammar": "build 的過去式是 built。"
+                  "grammar": "build 的過去式是 built。",
+                  "ex2_en": "This temple was built more than two hundred years ago.",
+                  "ex2_zh": "這座廟建於兩百多年前。",
+                  "ex3_en": "Beavers are famous for building dams in rivers.",
+                  "ex3_zh": "海狸以在河流中築壩聞名。",
+                  "ex2_blank": "This temple was ____ more than two hundred years ago.",
+                  "ex3_blank": "Beavers are famous for ____ dams in rivers."
                 },
                 {
                   "en": "far",
@@ -262,7 +428,13 @@
                   "ex_en": "How far is the station from here?",
                   "ex_zh": "車站離這裡有多遠？",
                   "ex_blank": "How ____ is the station from here?",
-                  "grammar": "far 當副詞修飾動詞或距離，如 How far…?；當形容詞直接修飾名詞，如 a far country。"
+                  "grammar": "far 當副詞修飾動詞或距離，如 How far…?；當形容詞直接修飾名詞，如 a far country。",
+                  "ex2_en": "The school is not far from my house; I can walk there.",
+                  "ex2_zh": "學校離我家不遠，我可以走路去。",
+                  "ex3_en": "He moved to a far country to study art.",
+                  "ex3_zh": "他搬到一個遙遠的國家去學藝術。",
+                  "ex2_blank": "The school is not ____ from my house; I can walk there.",
+                  "ex3_blank": "He moved to a ____ country to study art."
                 }
               ]
             },
@@ -278,7 +450,13 @@
                   "zh": "漁夫",
                   "ex_en": "The old fisherman went out to sea early every morning.",
                   "ex_zh": "這位老漁夫每天一大早就出海。",
-                  "ex_blank": "The old ____ went out to sea early every morning."
+                  "ex_blank": "The old ____ went out to sea early every morning.",
+                  "ex2_en": "The fisherman caught three big fish this morning.",
+                  "ex2_zh": "這位漁夫今天早上捕到了三條大魚。",
+                  "ex3_en": "Being a fisherman can be a dangerous job in bad weather.",
+                  "ex3_zh": "天氣不好時，當漁夫可能是一份危險的工作。",
+                  "ex2_blank": "The ____ caught three big fish this morning.",
+                  "ex3_blank": "Being a ____ can be a dangerous job in bad weather."
                 },
                 {
                   "en": "become / became",
@@ -287,7 +465,13 @@
                   "ex_en": "The little caterpillar will soon become a beautiful butterfly.",
                   "ex_zh": "這隻小毛毛蟲很快就會變成美麗的蝴蝶。",
                   "ex_blank": "The little caterpillar will soon ____ a beautiful butterfly.",
-                  "grammar": "become 的過去式是 became，後面直接接名詞或形容詞，不加 to。"
+                  "grammar": "become 的過去式是 became，後面直接接名詞或形容詞，不加 to。",
+                  "ex2_en": "She wants to become a doctor when she grows up.",
+                  "ex2_zh": "她長大後想成為一名醫生。",
+                  "ex3_en": "The small town became a popular place for tourists.",
+                  "ex3_zh": "這個小鎮變成了熱門的觀光景點。",
+                  "ex2_blank": "She wants to ____ a doctor when she grows up.",
+                  "ex3_blank": "The small town ____ a popular place for tourists."
                 },
                 {
                   "en": "cry",
@@ -295,7 +479,13 @@
                   "zh": "哭泣",
                   "ex_en": "The sad movie made me want to cry.",
                   "ex_zh": "這部悲傷的電影讓我想哭。",
-                  "ex_blank": "The sad movie made me want to ____."
+                  "ex_blank": "The sad movie made me want to ____.",
+                  "ex2_en": "The baby started to cry when the music stopped.",
+                  "ex2_zh": "音樂一停，嬰兒就開始哭了。",
+                  "ex3_en": "Don't cry over a small mistake like this.",
+                  "ex3_zh": "不要為了這樣的小錯誤而哭。",
+                  "ex2_blank": "The baby started to ____ when the music stopped.",
+                  "ex3_blank": "Don't ____ over a small mistake like this."
                 },
                 {
                   "en": "live",
@@ -303,7 +493,13 @@
                   "zh": "生活；居住",
                   "ex_en": "Where do your grandparents live?",
                   "ex_zh": "你的祖父母住在哪裡？",
-                  "ex_blank": "Where do your grandparents ____?"
+                  "ex_blank": "Where do your grandparents ____?",
+                  "ex2_en": "Polar bears live in very cold places.",
+                  "ex2_zh": "北極熊生活在非常寒冷的地方。",
+                  "ex3_en": "I have lived in this city for ten years.",
+                  "ex3_zh": "我已經在這座城市住了十年。",
+                  "ex2_blank": "Polar bears ____ in very cold places.",
+                  "ex3_blank": "I have ____ in this city for ten years."
                 },
                 {
                   "en": "safe",
@@ -311,7 +507,13 @@
                   "zh": "安全的",
                   "ex_en": "Please keep your money in a safe place.",
                   "ex_zh": "請把你的錢放在安全的地方。",
-                  "ex_blank": "Please keep your money in a ____ place."
+                  "ex_blank": "Please keep your money in a ____ place.",
+                  "ex2_en": "Wear a helmet to keep your head safe.",
+                  "ex2_zh": "戴上安全帽以保護你的頭部安全。",
+                  "ex3_en": "We finally arrived home safe after the long trip.",
+                  "ex3_zh": "經過長途旅行，我們終於平安到家了。",
+                  "ex2_blank": "Wear a helmet to keep your head ____.",
+                  "ex3_blank": "We finally arrived home ____ after the long trip."
                 },
                 {
                   "en": "protect",
@@ -319,7 +521,13 @@
                   "zh": "保護",
                   "ex_en": "A good coat will protect you from the cold wind.",
                   "ex_zh": "一件好外套能保護你免受寒風侵襲。",
-                  "ex_blank": "A good coat will ____ you from the cold wind."
+                  "ex_blank": "A good coat will ____ you from the cold wind.",
+                  "ex2_en": "Parents always try to protect their children from danger.",
+                  "ex2_zh": "父母總是試著保護他們的孩子遠離危險。",
+                  "ex3_en": "Wearing sunscreen can protect your skin from the sun.",
+                  "ex3_zh": "擦防曬乳可以保護你的皮膚不受陽光傷害。",
+                  "ex2_blank": "Parents always try to ____ their children from danger.",
+                  "ex3_blank": "Wearing sunscreen can ____ your skin from the sun."
                 },
                 {
                   "en": "nature",
@@ -327,7 +535,13 @@
                   "zh": "大自然",
                   "ex_en": "We went for a long walk to enjoy nature.",
                   "ex_zh": "我們去散了很久的步，享受大自然。",
-                  "ex_blank": "We went for a long walk to enjoy ____."
+                  "ex_blank": "We went for a long walk to enjoy ____.",
+                  "ex2_en": "Camping is a great way to get close to nature.",
+                  "ex2_zh": "露營是親近大自然的好方法。",
+                  "ex3_en": "It's human nature to be curious about new things.",
+                  "ex3_zh": "對新事物感到好奇是人的天性。",
+                  "ex2_blank": "Camping is a great way to get close to ____.",
+                  "ex3_blank": "It's human ____ to be curious about new things."
                 },
                 {
                   "en": "above",
@@ -337,7 +551,13 @@
                   "ex_en": "The birds were flying high above in the sky.",
                   "ex_zh": "鳥兒在天空高高地飛翔。",
                   "ex_blank": "The birds were flying high ____ in the sky.",
-                  "grammar": "above 當副詞單獨使用表示「在上方」；當介系詞後面要接名詞，如 above the line。"
+                  "grammar": "above 當副詞單獨使用表示「在上方」；當介系詞後面要接名詞，如 above the line。",
+                  "ex2_en": "Please write your name above the line.",
+                  "ex2_zh": "請把你的名字寫在這條線上方。",
+                  "ex3_en": "The plane was flying above the clouds.",
+                  "ex3_zh": "飛機在雲層上方飛行。",
+                  "ex2_blank": "Please write your name ____ the line.",
+                  "ex3_blank": "The plane was flying ____ the clouds."
                 },
                 {
                   "en": "lead to / led to",
@@ -346,7 +566,13 @@
                   "ex_en": "The heavy rain led to serious floods in the city.",
                   "ex_zh": "豪雨導致這座城市發生嚴重水災。",
                   "ex_blank": "The heavy rain ____ serious floods in the city.",
-                  "grammar": "lead to 的過去式是 led to，後面接原因造成的結果，相當於 cause。"
+                  "grammar": "lead to 的過去式是 led to，後面接原因造成的結果，相當於 cause。",
+                  "ex2_en": "Not enough sleep can lead to health problems.",
+                  "ex2_zh": "睡眠不足可能導致健康問題。",
+                  "ex3_en": "His hard work led to great success in the end.",
+                  "ex3_zh": "他的努力最終帶來了巨大的成功。",
+                  "ex2_blank": "Not enough sleep can ____ health problems.",
+                  "ex3_blank": "His hard work ____ great success in the end."
                 }
               ]
             }
@@ -369,7 +595,13 @@
                   "zh": "頭",
                   "ex_en": "He nodded his head to show that he agreed.",
                   "ex_zh": "他點頭表示同意。",
-                  "ex_blank": "He nodded his ____ to show that he agreed."
+                  "ex_blank": "He nodded his ____ to show that he agreed.",
+                  "ex2_en": "Be careful; don't hit your head on the low door.",
+                  "ex2_zh": "小心，別讓你的頭撞到那扇低矮的門。",
+                  "ex3_en": "She turned her head to see who was calling her name.",
+                  "ex3_zh": "她轉頭看看是誰在叫她的名字。",
+                  "ex2_blank": "Be careful; don't hit your ____ on the low door.",
+                  "ex3_blank": "She turned her ____ to see who was calling her name."
                 },
                 {
                   "en": "hair",
@@ -377,7 +609,13 @@
                   "zh": "頭髮",
                   "ex_en": "My sister has long, black hair.",
                   "ex_zh": "我妹妹有一頭又長又黑的頭髮。",
-                  "ex_blank": "My sister has long, black ____."
+                  "ex_blank": "My sister has long, black ____.",
+                  "ex2_en": "He cut his hair short for the summer.",
+                  "ex2_zh": "他為了夏天把頭髮剪短了。",
+                  "ex3_en": "Her hair turned gray after so many years of hard work.",
+                  "ex3_zh": "經過多年辛勞，她的頭髮變白了。",
+                  "ex2_blank": "He cut his ____ short for the summer.",
+                  "ex3_blank": "Her ____ turned gray after so many years of hard work."
                 },
                 {
                   "en": "shoulder",
@@ -385,7 +623,13 @@
                   "zh": "肩膀",
                   "ex_en": "He carried the heavy bag over his shoulder.",
                   "ex_zh": "他把沉重的包包扛在肩上。",
-                  "ex_blank": "He carried the heavy bag over his ____."
+                  "ex_blank": "He carried the heavy bag over his ____.",
+                  "ex2_en": "The little girl fell asleep on her father's shoulder.",
+                  "ex2_zh": "小女孩在爸爸的肩膀上睡著了。",
+                  "ex3_en": "He patted his friend on the shoulder to say good luck.",
+                  "ex3_zh": "他拍拍朋友的肩膀,祝他好運。",
+                  "ex2_blank": "The little girl fell asleep on her father's ____.",
+                  "ex3_blank": "He patted his friend on the ____ to say good luck."
                 },
                 {
                   "en": "stomach",
@@ -393,7 +637,13 @@
                   "zh": "肚子；胃",
                   "ex_en": "I ate too much, and now my stomach hurts.",
                   "ex_zh": "我吃太多了，現在肚子好痛。",
-                  "ex_blank": "I ate too much, and now my ____ hurts."
+                  "ex_blank": "I ate too much, and now my ____ hurts.",
+                  "ex2_en": "Don't swim right after a meal; it's bad for your stomach.",
+                  "ex2_zh": "吃飽後不要馬上游泳，這對你的胃不好。",
+                  "ex3_en": "My stomach makes a loud noise when I'm hungry.",
+                  "ex3_zh": "我肚子餓的時候會發出很大的聲音。",
+                  "ex2_blank": "Don't swim right after a meal; it's bad for your ____.",
+                  "ex3_blank": "My ____ makes a loud noise when I'm hungry."
                 },
                 {
                   "en": "arm",
@@ -401,7 +651,13 @@
                   "zh": "手臂",
                   "ex_en": "She broke her arm when she fell off the bike.",
                   "ex_zh": "她騎腳踏車摔倒時摔斷了手臂。",
-                  "ex_blank": "She broke her ____ when she fell off the bike."
+                  "ex_blank": "She broke her ____ when she fell off the bike.",
+                  "ex2_en": "He held the box in his arms and walked upstairs.",
+                  "ex2_zh": "他把箱子抱在懷裡，走上樓去。",
+                  "ex3_en": "The doctor checked her arm carefully after the fall.",
+                  "ex3_zh": "醫生在她跌倒後仔細檢查了她的手臂。",
+                  "ex2_blank": "He held the box in his ____ and walked upstairs.",
+                  "ex3_blank": "The doctor checked her ____ carefully after the fall."
                 },
                 {
                   "en": "hand",
@@ -409,7 +665,13 @@
                   "zh": "手",
                   "ex_en": "Please raise your hand if you have a question.",
                   "ex_zh": "如果有問題請舉手。",
-                  "ex_blank": "Please raise your ____ if you have a question."
+                  "ex_blank": "Please raise your ____ if you have a question.",
+                  "ex2_en": "She held her little brother's hand while crossing the street.",
+                  "ex2_zh": "過馬路時她牽著弟弟的手。",
+                  "ex3_en": "Could you give me a hand with these bags?",
+                  "ex3_zh": "你可以幫我拿一下這些袋子嗎？",
+                  "ex2_blank": "She held her little brother's ____ while crossing the street.",
+                  "ex3_blank": "Could you give me a ____ with these bags?"
                 },
                 {
                   "en": "knee",
@@ -417,7 +679,13 @@
                   "zh": "膝蓋",
                   "ex_en": "He got a scrape on his knee from playing outside.",
                   "ex_zh": "他在外面玩耍時膝蓋擦傷了。",
-                  "ex_blank": "He got a scrape on his ____ from playing outside."
+                  "ex_blank": "He got a scrape on his ____ from playing outside.",
+                  "ex2_en": "She knelt down on one knee to tie her shoes.",
+                  "ex2_zh": "她單膝跪下綁鞋帶。",
+                  "ex3_en": "My knee still hurts a little from yesterday's game.",
+                  "ex3_zh": "我的膝蓋因為昨天的比賽還有點痛。",
+                  "ex2_blank": "She knelt down on one ____ to tie her shoes.",
+                  "ex3_blank": "My ____ still hurts a little from yesterday's game."
                 },
                 {
                   "en": "leg",
@@ -425,7 +693,13 @@
                   "zh": "腿",
                   "ex_en": "The table has one broken leg.",
                   "ex_zh": "這張桌子有一隻腳斷了。",
-                  "ex_blank": "The table has one broken ____."
+                  "ex_blank": "The table has one broken ____.",
+                  "ex2_en": "He broke his leg while skiing last winter.",
+                  "ex2_zh": "他去年冬天滑雪時摔斷了腿。",
+                  "ex3_en": "The dog has short legs but runs very fast.",
+                  "ex3_zh": "這隻狗腿很短，但跑得非常快。",
+                  "ex2_blank": "He broke his ____ while skiing last winter.",
+                  "ex3_blank": "The dog has short ____ but runs very fast."
                 },
                 {
                   "en": "toe",
@@ -433,7 +707,13 @@
                   "zh": "腳趾",
                   "ex_en": "I accidentally hit my toe on the table corner.",
                   "ex_zh": "我不小心把腳趾撞到桌角。",
-                  "ex_blank": "I accidentally hit my ____ on the table corner."
+                  "ex_blank": "I accidentally hit my ____ on the table corner.",
+                  "ex2_en": "She painted her toes bright red before the party.",
+                  "ex2_zh": "派對前她把腳趾甲塗成鮮紅色。",
+                  "ex3_en": "Watch your step, or you might stub your toe.",
+                  "ex3_zh": "走路小心一點，不然你可能會撞到腳趾。",
+                  "ex2_blank": "She painted her ____ bright red before the party.",
+                  "ex3_blank": "Watch your step, or you might stub your ____."
                 },
                 {
                   "en": "neck",
@@ -441,7 +721,13 @@
                   "zh": "脖子",
                   "ex_en": "She wore a beautiful scarf around her neck.",
                   "ex_zh": "她的脖子上圍了一條漂亮的圍巾。",
-                  "ex_blank": "She wore a beautiful scarf around her ____."
+                  "ex_blank": "She wore a beautiful scarf around her ____.",
+                  "ex2_en": "The giraffe has a very long neck.",
+                  "ex2_zh": "長頸鹿有一條非常長的脖子。",
+                  "ex3_en": "My neck hurts from looking at my phone all day.",
+                  "ex3_zh": "我因為整天看手機,脖子很痛。",
+                  "ex2_blank": "The giraffe has a very long ____.",
+                  "ex3_blank": "My ____ hurts from looking at my phone all day."
                 }
               ]
             },
@@ -458,7 +744,13 @@
                   "ex_en": "I think I caught a cold from my little sister.",
                   "ex_zh": "我想我是被我妹妹傳染感冒了。",
                   "ex_blank": "I think I ____ from my little sister.",
-                  "grammar": "catch a cold 的過去式是 caught a cold，表示「感冒了」這個動作。"
+                  "grammar": "catch a cold 的過去式是 caught a cold，表示「感冒了」這個動作。",
+                  "ex2_en": "You'll catch a cold if you go out without a coat.",
+                  "ex2_zh": "你不穿外套出門會感冒的。",
+                  "ex3_en": "Many students caught a cold during the rainy week.",
+                  "ex3_zh": "在那個多雨的星期裡，很多學生都感冒了。",
+                  "ex2_blank": "You'll ____ a cold if you go out without a coat.",
+                  "ex3_blank": "Many students ____ during the rainy week."
                 },
                 {
                   "en": "fever",
@@ -466,7 +758,13 @@
                   "zh": "發燒",
                   "ex_en": "The child has a high fever and needs to see a doctor.",
                   "ex_zh": "這孩子發高燒，需要看醫生。",
-                  "ex_blank": "The child has a high ____ and needs to see a doctor."
+                  "ex_blank": "The child has a high ____ and needs to see a doctor.",
+                  "ex2_en": "She stayed home from school because of her fever.",
+                  "ex2_zh": "她因為發燒而請假沒去上學。",
+                  "ex3_en": "The medicine helped bring his fever down quickly.",
+                  "ex3_zh": "這個藥很快就幫他把燒退了。",
+                  "ex2_blank": "She stayed home from school because of her ____.",
+                  "ex3_blank": "The medicine helped bring his ____ down quickly."
                 },
                 {
                   "en": "headache",
@@ -474,7 +772,13 @@
                   "zh": "頭痛",
                   "ex_en": "I often get a headache when I'm tired.",
                   "ex_zh": "我累的時候常常會頭痛。",
-                  "ex_blank": "I often get a ____ when I'm tired."
+                  "ex_blank": "I often get a ____ when I'm tired.",
+                  "ex2_en": "Loud music always gives me a headache.",
+                  "ex2_zh": "大聲的音樂總是讓我頭痛。",
+                  "ex3_en": "Take this pill if your headache doesn't go away.",
+                  "ex3_zh": "如果你的頭痛沒有消失，就吃這顆藥。",
+                  "ex2_blank": "Loud music always gives me a ____.",
+                  "ex3_blank": "Take this pill if your ____ doesn't go away."
                 },
                 {
                   "en": "sore throat",
@@ -482,7 +786,13 @@
                   "zh": "喉嚨痛",
                   "ex_en": "Drinking warm water can help a sore throat.",
                   "ex_zh": "喝溫水有助於舒緩喉嚨痛。",
-                  "ex_blank": "Drinking warm water can help a ____."
+                  "ex_blank": "Drinking warm water can help a ____.",
+                  "ex2_en": "I have a sore throat, so I can't sing today.",
+                  "ex2_zh": "我喉嚨痛，所以今天沒辦法唱歌。",
+                  "ex3_en": "Eating too much spicy food gave him a sore throat.",
+                  "ex3_zh": "吃太多辣的食物讓他喉嚨痛。",
+                  "ex2_blank": "I have a ____, so I can't sing today.",
+                  "ex3_blank": "Eating too much spicy food gave him a ____."
                 },
                 {
                   "en": "sick",
@@ -490,7 +800,13 @@
                   "zh": "生病的",
                   "ex_en": "My cat was sick yesterday, but she is better now.",
                   "ex_zh": "我的貓昨天生病了，但現在好多了。",
-                  "ex_blank": "My cat was ____ yesterday, but she is better now."
+                  "ex_blank": "My cat was ____ yesterday, but she is better now.",
+                  "ex2_en": "He looked really sick, so his mom took him to the hospital.",
+                  "ex2_zh": "他看起來病得很重，所以媽媽帶他去醫院。",
+                  "ex3_en": "I feel sick after eating too much chocolate.",
+                  "ex3_zh": "我吃了太多巧克力後感到不舒服。",
+                  "ex2_blank": "He looked really ____, so his mom took him to the hospital.",
+                  "ex3_blank": "I feel ____ after eating too much chocolate."
                 },
                 {
                   "en": "medicine",
@@ -498,7 +814,13 @@
                   "zh": "藥",
                   "ex_en": "Don't forget to take your medicine after the meal.",
                   "ex_zh": "別忘了飯後吃藥。",
-                  "ex_blank": "Don't forget to take your ____ after the meal."
+                  "ex_blank": "Don't forget to take your ____ after the meal.",
+                  "ex2_en": "This medicine tastes terrible, but it works well.",
+                  "ex2_zh": "這個藥味道很糟，但效果很好。",
+                  "ex3_en": "She studies medicine at a university in the U.S.",
+                  "ex3_zh": "她在美國一所大學攻讀醫學。",
+                  "ex2_blank": "This ____ tastes terrible, but it works well.",
+                  "ex3_blank": "She studies ____ at a university in the U.S."
                 },
                 {
                   "en": "treat",
@@ -506,7 +828,13 @@
                   "zh": "治療；對待",
                   "ex_en": "The doctor is trying to treat his illness.",
                   "ex_zh": "醫生正試著治療他的病。",
-                  "ex_blank": "The doctor is trying to ____ his illness."
+                  "ex_blank": "The doctor is trying to ____ his illness.",
+                  "ex2_en": "You should treat other people the way you want to be treated.",
+                  "ex2_zh": "你應該用你希望被對待的方式來對待別人。",
+                  "ex3_en": "This new medicine can treat many kinds of illness.",
+                  "ex3_zh": "這種新藥可以治療許多種疾病。",
+                  "ex2_blank": "You should treat other people the way you want to be ____.",
+                  "ex3_blank": "This new medicine can ____ many kinds of illness."
                 },
                 {
                   "en": "hurt",
@@ -516,7 +844,13 @@
                   "ex_en": "My arm is hurt and I can't write.",
                   "ex_zh": "我的手臂受傷了，沒辦法寫字。",
                   "ex_blank": "My arm is ____ and I can't write.",
-                  "grammar": "hurt 的現在式、過去式、過去分詞同形（hurt-hurt-hurt）；當形容詞常搭配 be 動詞，表示「受傷的」。"
+                  "grammar": "hurt 的現在式、過去式、過去分詞同形（hurt-hurt-hurt）；當形容詞常搭配 be 動詞，表示「受傷的」。",
+                  "ex2_en": "Does your back still hurt after the long trip?",
+                  "ex2_zh": "長途旅行之後你的背還會痛嗎？",
+                  "ex3_en": "His words hurt her feelings badly.",
+                  "ex3_zh": "他的話深深傷了她的感情。",
+                  "ex2_blank": "Does your back still ____ after the long trip?",
+                  "ex3_blank": "His words ____ her feelings badly."
                 },
                 {
                   "en": "stay",
@@ -526,7 +860,13 @@
                   "ex_en": "Can you stay for dinner tonight?",
                   "ex_zh": "你今晚可以留下來吃晚餐嗎？",
                   "ex_blank": "Can you ____ for dinner tonight?",
-                  "grammar": "stay 當動詞是「停留、留下」；當名詞表示「停留（的時間）」。"
+                  "grammar": "stay 當動詞是「停留、留下」；當名詞表示「停留（的時間）」。",
+                  "ex2_en": "We decided to stay at a small hotel near the beach.",
+                  "ex2_zh": "我們決定住在海邊的一間小旅館。",
+                  "ex3_en": "Please stay quiet during the movie.",
+                  "ex3_zh": "看電影時請保持安靜。",
+                  "ex2_blank": "We decided to ____ at a small hotel near the beach.",
+                  "ex3_blank": "Please ____ quiet during the movie."
                 },
                 {
                   "en": "mask",
@@ -534,7 +874,13 @@
                   "zh": "口罩；面具",
                   "ex_en": "You should wear a mask on the train.",
                   "ex_zh": "你在火車上應該戴口罩。",
-                  "ex_blank": "You should wear a ____ on the train."
+                  "ex_blank": "You should wear a ____ on the train.",
+                  "ex2_en": "The doctor wore a mask and gloves during the surgery.",
+                  "ex2_zh": "醫生在手術時戴著口罩和手套。",
+                  "ex3_en": "He wore a scary mask for the Halloween party.",
+                  "ex3_zh": "他為了萬聖節派對戴上一個嚇人的面具。",
+                  "ex2_blank": "The doctor wore a ____ and gloves during the surgery.",
+                  "ex3_blank": "He wore a scary ____ for the Halloween party."
                 },
                 {
                   "en": "call",
@@ -544,7 +890,13 @@
                   "ex_en": "I will call you back in five minutes.",
                   "ex_zh": "我五分鐘後會回電給你。",
                   "ex_blank": "I will ____ you back in five minutes.",
-                  "grammar": "call 當動詞是「打電話、呼喊」；當名詞表示「一通電話、呼喊聲」。"
+                  "grammar": "call 當動詞是「打電話、呼喊」；當名詞表示「一通電話、呼喊聲」。",
+                  "ex2_en": "She called her mom to tell her the good news.",
+                  "ex2_zh": "她打電話給媽媽,告訴她這個好消息。",
+                  "ex3_en": "I got a call from an unknown number this morning.",
+                  "ex3_zh": "我今天早上接到一通不明號碼的電話。",
+                  "ex2_blank": "She ____ her mom to tell her the good news.",
+                  "ex3_blank": "I got a ____ from an unknown number this morning."
                 }
               ]
             },
@@ -561,7 +913,13 @@
                   "ex_en": "He spoke to the manager about the problem.",
                   "ex_zh": "他向經理談了這個問題。",
                   "ex_blank": "He ____ to the manager about the problem.",
-                  "grammar": "speak 的過去式是 spoke，speak to/with + 人 表示「和某人說話」。"
+                  "grammar": "speak 的過去式是 spoke，speak to/with + 人 表示「和某人說話」。",
+                  "ex2_en": "Could you speak more slowly, please?",
+                  "ex2_zh": "可以請你說慢一點嗎？",
+                  "ex3_en": "She spoke English very well after living in Canada.",
+                  "ex3_zh": "住在加拿大之後，她的英文說得非常好。",
+                  "ex2_blank": "Could you ____ more slowly, please?",
+                  "ex3_blank": "She ____ English very well after living in Canada."
                 },
                 {
                   "en": "send / sent",
@@ -570,7 +928,13 @@
                   "ex_en": "Have you sent the email to Mr. Wang yet?",
                   "ex_zh": "你把電子郵件寄給王先生了嗎？",
                   "ex_blank": "Have you ____ the email to Mr. Wang yet?",
-                  "grammar": "send 的過去式是 sent，send + 物 + to + 人 表示「把…寄給…」。"
+                  "grammar": "send 的過去式是 sent，send + 物 + to + 人 表示「把…寄給…」。",
+                  "ex2_en": "Please send this package to my new address.",
+                  "ex2_zh": "請把這個包裹寄到我的新地址。",
+                  "ex3_en": "She sent me a photo of her new puppy.",
+                  "ex3_zh": "她傳了一張她新養小狗的照片給我。",
+                  "ex2_blank": "Please ____ this package to my new address.",
+                  "ex3_blank": "She ____ me a photo of her new puppy."
                 },
                 {
                   "en": "message",
@@ -578,7 +942,13 @@
                   "zh": "訊息",
                   "ex_en": "I'll leave a message for him on his desk.",
                   "ex_zh": "我會把訊息留在他的桌上。",
-                  "ex_blank": "I'll leave a ____ for him on his desk."
+                  "ex_blank": "I'll leave a ____ for him on his desk.",
+                  "ex2_en": "Did you get my message about the meeting time?",
+                  "ex2_zh": "你收到我關於開會時間的訊息了嗎？",
+                  "ex3_en": "The movie has an important message about friendship.",
+                  "ex3_zh": "這部電影傳達了一個關於友情的重要訊息。",
+                  "ex2_blank": "Did you get my ____ about the meeting time?",
+                  "ex3_blank": "The movie has an important ____ about friendship."
                 },
                 {
                   "en": "why",
@@ -586,7 +956,13 @@
                   "zh": "為什麼",
                   "ex_en": "Can you tell me why you were late?",
                   "ex_zh": "你可以告訴我你為什麼遲到嗎？",
-                  "ex_blank": "Can you tell me ____ you were late?"
+                  "ex_blank": "Can you tell me ____ you were late?",
+                  "ex2_en": "I don't know why he didn't come to school today.",
+                  "ex2_zh": "我不知道他今天為什麼沒來上學。",
+                  "ex3_en": "Why not try the new restaurant tonight?",
+                  "ex3_zh": "今晚何不試試那家新餐廳？",
+                  "ex2_blank": "I don't know ____ he didn't come to school today.",
+                  "ex3_blank": "____ not try the new restaurant tonight?"
                 },
                 {
                   "en": "because",
@@ -594,7 +970,13 @@
                   "zh": "因為",
                   "ex_en": "She was happy because she passed the exam.",
                   "ex_zh": "她因為通過考試而感到開心。",
-                  "ex_blank": "She was happy ____ she passed the exam."
+                  "ex_blank": "She was happy ____ she passed the exam.",
+                  "ex2_en": "We stayed home because it was raining heavily.",
+                  "ex2_zh": "我們待在家裡，因為外面下著大雨。",
+                  "ex3_en": "I like this song because the melody is so beautiful.",
+                  "ex3_zh": "我喜歡這首歌，因為旋律非常優美。",
+                  "ex2_blank": "We stayed home ____ it was raining heavily.",
+                  "ex3_blank": "I like this song ____ the melody is so beautiful."
                 },
                 {
                   "en": "so",
@@ -602,7 +984,13 @@
                   "zh": "所以",
                   "ex_en": "It started to rain, so we went inside.",
                   "ex_zh": "開始下雨了，所以我們就進去了。",
-                  "ex_blank": "It started to rain, ____ we went inside."
+                  "ex_blank": "It started to rain, ____ we went inside.",
+                  "ex2_en": "The test was easy, so I finished it quickly.",
+                  "ex2_zh": "考試很簡單，所以我很快就寫完了。",
+                  "ex3_en": "I was tired, so I went to bed early.",
+                  "ex3_zh": "我很累，所以早早就上床睡覺了。",
+                  "ex2_blank": "The test was easy, ____ I finished it quickly.",
+                  "ex3_blank": "I was tired, ____ I went to bed early."
                 },
                 {
                   "en": "as",
@@ -610,7 +998,13 @@
                   "zh": "如同",
                   "ex_en": "He works as a waiter in that restaurant.",
                   "ex_zh": "他在那間餐廳當服務生。",
-                  "ex_blank": "He works ____ a waiter in that restaurant."
+                  "ex_blank": "He works ____ a waiter in that restaurant.",
+                  "ex2_en": "As a student, you should finish your homework on time.",
+                  "ex2_zh": "身為學生，你應該準時完成作業。",
+                  "ex3_en": "She uses a towel as a blanket when she's cold.",
+                  "ex3_zh": "她冷的時候會把毛巾當作毯子用。",
+                  "ex2_blank": "____ a student, you should finish your homework on time.",
+                  "ex3_blank": "She uses a towel ____ a blanket when she's cold."
                 },
                 {
                   "en": "as for",
@@ -619,7 +1013,13 @@
                   "ex_en": "I'm ready to go. As for Tom, I'm not sure.",
                   "ex_zh": "我準備好要走了。至於湯姆，我還不確定。",
                   "ex_blank": "I'm ready to go. ____ Tom, I'm not sure.",
-                  "grammar": "as for + 名詞，用來轉換話題，表示「至於…」。"
+                  "grammar": "as for + 名詞，用來轉換話題，表示「至於…」。",
+                  "ex2_en": "As for the price, we can talk about it later.",
+                  "ex2_zh": "至於價錢，我們可以之後再談。",
+                  "ex3_en": "As for me, I'd rather stay home tonight.",
+                  "ex3_zh": "至於我，我今晚寧願待在家裡。",
+                  "ex2_blank": "____ the price, we can talk about it later.",
+                  "ex3_blank": "____ me, I'd rather stay home tonight."
                 },
                 {
                   "en": "country",
@@ -627,7 +1027,13 @@
                   "zh": "國家；鄉間",
                   "ex_en": "Japan is a beautiful country to visit in the spring.",
                   "ex_zh": "日本是春天很適合造訪的美麗國家。",
-                  "ex_blank": "Japan is a beautiful ____ to visit in the spring."
+                  "ex_blank": "Japan is a beautiful ____ to visit in the spring.",
+                  "ex2_en": "How many countries have you traveled to?",
+                  "ex2_zh": "你去過幾個國家旅行？",
+                  "ex3_en": "They live in the country, far from the noisy city.",
+                  "ex3_zh": "他們住在鄉間，遠離喧鬧的城市。",
+                  "ex2_blank": "How many ____ have you traveled to?",
+                  "ex3_blank": "They live in the ____, far from the noisy city."
                 },
                 {
                   "en": "serious",
@@ -635,7 +1041,13 @@
                   "zh": "嚴重的；認真的",
                   "ex_en": "Pollution is a serious problem in many big cities.",
                   "ex_zh": "污染在許多大城市是個嚴重的問題。",
-                  "ex_blank": "Pollution is a ____ problem in many big cities."
+                  "ex_blank": "Pollution is a ____ problem in many big cities.",
+                  "ex2_en": "He got into a serious car accident last week.",
+                  "ex2_zh": "他上星期發生了一場嚴重的車禍。",
+                  "ex3_en": "Please be serious when we talk about this important issue.",
+                  "ex3_zh": "討論這個重要議題時，請認真一點。",
+                  "ex2_blank": "He got into a ____ car accident last week.",
+                  "ex3_blank": "Please be ____ when we talk about this important issue."
                 },
                 {
                   "en": "health",
@@ -643,7 +1055,13 @@
                   "zh": "健康",
                   "ex_en": "Eating fruits and vegetables is good for your health.",
                   "ex_zh": "吃水果和蔬菜對健康有益。",
-                  "ex_blank": "Eating fruits and vegetables is good for your ____."
+                  "ex_blank": "Eating fruits and vegetables is good for your ____.",
+                  "ex2_en": "Doctors say that sleep is important for our health.",
+                  "ex2_zh": "醫生說睡眠對我們的健康很重要。",
+                  "ex3_en": "She works at the health center near our school.",
+                  "ex3_zh": "她在我們學校附近的衛生中心工作。",
+                  "ex2_blank": "Doctors say that sleep is important for our ____.",
+                  "ex3_blank": "She works at the ____ center near our school."
                 }
               ]
             },
@@ -659,7 +1077,13 @@
                   "zh": "冰淇淋",
                   "ex_en": "What's your favorite flavor of ice cream?",
                   "ex_zh": "你最喜歡的冰淇淋口味是什麼？",
-                  "ex_blank": "What's your favorite flavor of ____?"
+                  "ex_blank": "What's your favorite flavor of ____?",
+                  "ex2_en": "We ate ice cream together after dinner.",
+                  "ex2_zh": "我們晚餐後一起吃了冰淇淋。",
+                  "ex3_en": "The ice cream melted quickly in the hot sun.",
+                  "ex3_zh": "冰淇淋在炎熱的陽光下很快就融化了。",
+                  "ex2_blank": "We ate ____ together after dinner.",
+                  "ex3_blank": "The ____ melted quickly in the hot sun."
                 },
                 {
                   "en": "too bad",
@@ -668,7 +1092,13 @@
                   "ex_en": "It's too bad you can't come to the party.",
                   "ex_zh": "你不能來派對真是太可惜了。",
                   "ex_blank": "It's ____ you can't come to the party.",
-                  "grammar": "It's too bad (that) + 子句，用來表示同情或惋惜，口語上常省略 It's。"
+                  "grammar": "It's too bad (that) + 子句，用來表示同情或惋惜，口語上常省略 It's。",
+                  "ex2_en": "Too bad we missed the beginning of the movie.",
+                  "ex2_zh": "真可惜我們錯過了電影的開頭。",
+                  "ex3_en": "It's too bad the concert was canceled.",
+                  "ex3_zh": "演唱會被取消真是太糟了。",
+                  "ex2_blank": "____ we missed the beginning of the movie.",
+                  "ex3_blank": "It's ____ the concert was canceled."
                 },
                 {
                   "en": "coat",
@@ -676,7 +1106,13 @@
                   "zh": "大衣",
                   "ex_en": "You should wear a warm coat because it's cold outside.",
                   "ex_zh": "外面很冷，你應該穿件保暖的大衣。",
-                  "ex_blank": "You should wear a warm ____ because it's cold outside."
+                  "ex_blank": "You should wear a warm ____ because it's cold outside.",
+                  "ex2_en": "She hung her coat on the hook by the door.",
+                  "ex2_zh": "她把外套掛在門邊的掛鉤上。",
+                  "ex3_en": "This coat is thick enough to keep you warm in winter.",
+                  "ex3_zh": "這件外套夠厚，冬天可以保暖。",
+                  "ex2_blank": "She hung her ____ on the hook by the door.",
+                  "ex3_blank": "This ____ is thick enough to keep you warm in winter."
                 },
                 {
                   "en": "healthy",
@@ -684,7 +1120,13 @@
                   "zh": "健康的",
                   "ex_en": "A healthy diet includes lots of different foods.",
                   "ex_zh": "健康的飲食包含許多不同的食物。",
-                  "ex_blank": "A ____ diet includes lots of different foods."
+                  "ex_blank": "A ____ diet includes lots of different foods.",
+                  "ex2_en": "Regular exercise keeps your body healthy.",
+                  "ex2_zh": "規律運動能讓你的身體保持健康。",
+                  "ex3_en": "My grandmother is ninety years old and still very healthy.",
+                  "ex3_zh": "我奶奶九十歲了，身體依然非常健康。",
+                  "ex2_blank": "Regular exercise keeps your body ____.",
+                  "ex3_blank": "My grandmother is ninety years old and still very ____."
                 },
                 {
                   "en": "body",
@@ -692,7 +1134,13 @@
                   "zh": "身體",
                   "ex_en": "Exercise is important for a strong body.",
                   "ex_zh": "運動對強健的身體很重要。",
-                  "ex_blank": "Exercise is important for a strong ____."
+                  "ex_blank": "Exercise is important for a strong ____.",
+                  "ex2_en": "Drinking enough water is good for the body.",
+                  "ex2_zh": "喝足夠的水對身體有益。",
+                  "ex3_en": "The whole body of the car was covered in mud.",
+                  "ex3_zh": "整輛車的車身都沾滿了泥巴。",
+                  "ex2_blank": "Drinking enough water is good for the ____.",
+                  "ex3_blank": "The whole ____ of the car was covered in mud."
                 },
                 {
                   "en": "clothes",
@@ -700,7 +1148,13 @@
                   "zh": "衣服",
                   "ex_en": "I need to buy some new clothes for the new season.",
                   "ex_zh": "我需要為新的季節買一些新衣服。",
-                  "ex_blank": "I need to buy some new ____ for the new season."
+                  "ex_blank": "I need to buy some new ____ for the new season.",
+                  "ex2_en": "She hung the wet clothes outside to dry.",
+                  "ex2_zh": "她把濕衣服晾在外面曬乾。",
+                  "ex3_en": "These clothes are too small for me now.",
+                  "ex3_zh": "這些衣服現在對我來說太小了。",
+                  "ex2_blank": "She hung the wet ____ outside to dry.",
+                  "ex3_blank": "These ____ are too small for me now."
                 },
                 {
                   "en": "strong",
@@ -708,7 +1162,13 @@
                   "zh": "強壯的；堅固的",
                   "ex_en": "He is strong enough to lift that heavy box.",
                   "ex_zh": "他強壯到可以舉起那個重箱子。",
-                  "ex_blank": "He is ____ enough to lift that heavy box."
+                  "ex_blank": "He is ____ enough to lift that heavy box.",
+                  "ex2_en": "You need to be strong to carry all these boxes.",
+                  "ex2_zh": "你需要很強壯才能搬得動這些箱子。",
+                  "ex3_en": "There is a strong smell of coffee in this room.",
+                  "ex3_zh": "這個房間裡有一股濃烈的咖啡味。",
+                  "ex2_blank": "You need to be ____ to carry all these boxes.",
+                  "ex3_blank": "There is a ____ smell of coffee in this room."
                 },
                 {
                   "en": "maybe",
@@ -716,7 +1176,13 @@
                   "zh": "也許",
                   "ex_en": "Maybe we can go to the movies this weekend.",
                   "ex_zh": "也許我們這個週末可以去看電影。",
-                  "ex_blank": "____ we can go to the movies this weekend."
+                  "ex_blank": "____ we can go to the movies this weekend.",
+                  "ex2_en": "Maybe he forgot about our appointment.",
+                  "ex2_zh": "也許他忘了我們的約定。",
+                  "ex3_en": "Maybe it's better to ask your teacher for help.",
+                  "ex3_zh": "也許最好向你的老師求助。",
+                  "ex2_blank": "____ he forgot about our appointment.",
+                  "ex3_blank": "____ it's better to ask your teacher for help."
                 },
                 {
                   "en": "try",
@@ -726,7 +1192,13 @@
                   "ex_en": "You should try this cake; it's very delicious.",
                   "ex_zh": "你應該試試這個蛋糕，非常好吃。",
                   "ex_blank": "You should ____ this cake; it's very delicious.",
-                  "grammar": "try 當動詞是「嘗試」，後接 to V 或 Ving；當名詞表示「一次嘗試」。"
+                  "grammar": "try 當動詞是「嘗試」，後接 to V 或 Ving；當名詞表示「一次嘗試」。",
+                  "ex2_en": "Let's try a different way to solve this problem.",
+                  "ex2_zh": "我們試試用不同的方法解決這個問題吧。",
+                  "ex3_en": "I've never tried surfing before; it looks fun.",
+                  "ex3_zh": "我從來沒試過衝浪，看起來很好玩。",
+                  "ex2_blank": "Let's ____ a different way to solve this problem.",
+                  "ex3_blank": "I've never ____ surfing before; it looks fun."
                 },
                 {
                   "en": "put on",
@@ -735,7 +1207,13 @@
                   "ex_en": "Please put on your shoes before you go out.",
                   "ex_zh": "出門前請穿上你的鞋子。",
                   "ex_blank": "Please ____ your shoes before you go out.",
-                  "grammar": "put on 表示穿上的動作，wear 則表示穿著的狀態。"
+                  "grammar": "put on 表示穿上的動作，wear 則表示穿著的狀態。",
+                  "ex2_en": "She put on her coat and walked out into the cold.",
+                  "ex2_zh": "她穿上外套，走進寒冷的天氣裡。",
+                  "ex3_en": "He put on his glasses to read the small letters.",
+                  "ex3_zh": "他戴上眼鏡以閱讀小字。",
+                  "ex2_blank": "She ____ her coat and walked out into the cold.",
+                  "ex3_blank": "He ____ his glasses to read the small letters."
                 }
               ]
             }
@@ -758,7 +1236,13 @@
                   "zh": "雞；雞肉",
                   "ex_en": "My mom is cooking chicken soup for dinner.",
                   "ex_zh": "我媽媽正在煮雞湯當晚餐。",
-                  "ex_blank": "My mom is cooking ____ soup for dinner."
+                  "ex_blank": "My mom is cooking ____ soup for dinner.",
+                  "ex2_en": "The farmer keeps ten chickens behind his house.",
+                  "ex2_zh": "這位農夫在他家後面養了十隻雞。",
+                  "ex3_en": "We had fried chicken and rice for lunch.",
+                  "ex3_zh": "我們午餐吃了炸雞和飯。",
+                  "ex2_blank": "The farmer keeps ten ____ behind his house.",
+                  "ex3_blank": "We had fried ____ and rice for lunch."
                 },
                 {
                   "en": "ant",
@@ -766,7 +1250,13 @@
                   "zh": "螞蟻",
                   "ex_en": "A tiny ant is crawling on the table.",
                   "ex_zh": "一隻小螞蟻正在桌上爬。",
-                  "ex_blank": "A tiny ____ is crawling on the table."
+                  "ex_blank": "A tiny ____ is crawling on the table.",
+                  "ex2_en": "The ants carried the piece of bread back to their nest.",
+                  "ex2_zh": "螞蟻們把那片麵包搬回牠們的巢穴。",
+                  "ex3_en": "Don't leave food outside, or the ants will come.",
+                  "ex3_zh": "不要把食物放在外面，不然螞蟻會來。",
+                  "ex2_blank": "The ____ carried the piece of bread back to their nest.",
+                  "ex3_blank": "Don't leave food outside, or the ____ will come."
                 },
                 {
                   "en": "ugly",
@@ -774,7 +1264,13 @@
                   "zh": "醜陋的",
                   "ex_en": "The story is about an ugly duckling that becomes a swan.",
                   "ex_zh": "這個故事是在講一隻變成天鵝的醜小鴨。",
-                  "ex_blank": "The story is about an ____ duckling that becomes a swan."
+                  "ex_blank": "The story is about an ____ duckling that becomes a swan.",
+                  "ex2_en": "I don't think this bag is ugly at all.",
+                  "ex2_zh": "我一點都不覺得這個包包醜。",
+                  "ex3_en": "The building looked ugly next to the beautiful old temple.",
+                  "ex3_zh": "這棟建築物在美麗的老廟旁邊顯得很醜。",
+                  "ex2_blank": "I don't think this bag is ____ at all.",
+                  "ex3_blank": "The building looked ____ next to the beautiful old temple."
                 },
                 {
                   "en": "duck",
@@ -782,7 +1278,13 @@
                   "zh": "鴨子",
                   "ex_en": "A mother duck is swimming with her babies in the pond.",
                   "ex_zh": "一隻母鴨正帶著牠的寶寶們在池塘裡游泳。",
-                  "ex_blank": "A mother ____ is swimming with her babies in the pond."
+                  "ex_blank": "A mother ____ is swimming with her babies in the pond.",
+                  "ex2_en": "We fed bread to the ducks in the park.",
+                  "ex2_zh": "我們在公園裡餵鴨子吃麵包。",
+                  "ex3_en": "The little duck followed its mother across the road.",
+                  "ex3_zh": "小鴨跟著牠的媽媽穿過馬路。",
+                  "ex2_blank": "We fed bread to the ____ in the park.",
+                  "ex3_blank": "The little ____ followed its mother across the road."
                 },
                 {
                   "en": "goose",
@@ -790,7 +1292,14 @@
                   "zh": "鵝(複數 geese)",
                   "ex_en": "The farmer has a big white goose on his farm.",
                   "ex_zh": "這位農夫的農場裡有一隻很大的白鵝。",
-                  "ex_blank": "The farmer has a big white ____ on his farm."
+                  "ex_blank": "The farmer has a big white ____ on his farm.",
+                  "ex2_en": "A group of geese flew over the lake.",
+                  "ex2_zh": "一群鵝飛過了湖面。",
+                  "ex3_en": "The goose chased the boy away from the pond.",
+                  "ex3_zh": "那隻鵝把男孩從池塘邊趕走了。",
+                  "grammar": "goose 的複數形是不規則變化的 geese，而不是 gooses。",
+                  "ex3_blank": "The ____ chased the boy away from the pond.",
+                  "ex2_blank": "A group of ____ flew over the lake."
                 },
                 {
                   "en": "frog",
@@ -798,7 +1307,13 @@
                   "zh": "青蛙",
                   "ex_en": "You can hear the sound of a frog near the river at night.",
                   "ex_zh": "晚上你可以在河邊聽到青蛙的叫聲。",
-                  "ex_blank": "You can hear the sound of a ____ near the river at night."
+                  "ex_blank": "You can hear the sound of a ____ near the river at night.",
+                  "ex2_en": "The frog jumped from one leaf to another.",
+                  "ex2_zh": "青蛙從一片葉子跳到另一片葉子。",
+                  "ex3_en": "In the story, the princess kissed a frog.",
+                  "ex3_zh": "故事裡，公主親吻了一隻青蛙。",
+                  "ex2_blank": "The ____ jumped from one leaf to another.",
+                  "ex3_blank": "In the story, the princess kissed a ____."
                 },
                 {
                   "en": "cow",
@@ -806,7 +1321,13 @@
                   "zh": "母牛",
                   "ex_en": "The black and white cow is eating grass in the field.",
                   "ex_zh": "那隻黑白相間的母牛正在田裡吃草。",
-                  "ex_blank": "The black and white ____ is eating grass in the field."
+                  "ex_blank": "The black and white ____ is eating grass in the field.",
+                  "ex2_en": "This milk comes from cows on a local farm.",
+                  "ex2_zh": "這牛奶來自當地農場的母牛。",
+                  "ex3_en": "The cow gave birth to a healthy baby calf.",
+                  "ex3_zh": "這頭母牛生下了一隻健康的小牛。",
+                  "ex2_blank": "This milk comes from ____ on a local farm.",
+                  "ex3_blank": "The ____ gave birth to a healthy baby calf."
                 },
                 {
                   "en": "map",
@@ -814,7 +1335,13 @@
                   "zh": "地圖",
                   "ex_en": "Let's look at the map to find the shortest way.",
                   "ex_zh": "我們來看地圖找出最短的路。",
-                  "ex_blank": "Let's look at the ____ to find the shortest way."
+                  "ex_blank": "Let's look at the ____ to find the shortest way.",
+                  "ex2_en": "The treasure map showed a path through the forest.",
+                  "ex2_zh": "這張藏寶圖標示了一條穿過森林的路。",
+                  "ex3_en": "Can you show me on the map where we are now?",
+                  "ex3_zh": "你可以在地圖上指出我們現在的位置嗎？",
+                  "ex2_blank": "The treasure ____ showed a path through the forest.",
+                  "ex3_blank": "Can you show me on the ____ where we are now?"
                 },
                 {
                   "en": "beginning",
@@ -822,7 +1349,13 @@
                   "zh": "開頭",
                   "ex_en": "The beginning of the movie was a little slow.",
                   "ex_zh": "這部電影的開頭有點慢。",
-                  "ex_blank": "The ____ of the movie was a little slow."
+                  "ex_blank": "The ____ of the movie was a little slow.",
+                  "ex2_en": "I liked the beginning of the story better than the ending.",
+                  "ex2_zh": "我比較喜歡這個故事的開頭而不是結局。",
+                  "ex3_en": "From the beginning, everyone knew the plan was risky.",
+                  "ex3_zh": "從一開始，大家就知道這個計畫有風險。",
+                  "ex2_blank": "I liked the ____ of the story better than the ending.",
+                  "ex3_blank": "From the ____, everyone knew the plan was risky."
                 },
                 {
                   "en": "middle",
@@ -832,7 +1365,13 @@
                   "ex_en": "He was standing in the middle of the room.",
                   "ex_zh": "他站在房間的中間。",
                   "ex_blank": "He was standing in the ____ of the room.",
-                  "grammar": "middle 當名詞常用 in the middle of + N；當形容詞直接修飾名詞，如 the middle child。"
+                  "grammar": "middle 當名詞常用 in the middle of + N；當形容詞直接修飾名詞，如 the middle child。",
+                  "ex2_en": "The park is right in the middle of the city.",
+                  "ex2_zh": "這座公園就在市中心。",
+                  "ex3_en": "She sat in the middle seat between her two friends.",
+                  "ex3_zh": "她坐在兩個朋友中間的座位。",
+                  "ex2_blank": "The park is right in the ____ of the city.",
+                  "ex3_blank": "She sat in the ____ seat between her two friends."
                 }
               ]
             },
@@ -848,7 +1387,13 @@
                   "zh": "十五分鐘；四分之一",
                   "ex_en": "I only ate a quarter of the pizza.",
                   "ex_zh": "我只吃了四分之一的披薩。",
-                  "ex_blank": "I only ate a ____ of the pizza."
+                  "ex_blank": "I only ate a ____ of the pizza.",
+                  "ex2_en": "It's a quarter to nine, so we should leave now.",
+                  "ex2_zh": "現在是八點四十五分，我們該出發了。",
+                  "ex3_en": "A quarter of the students were absent today.",
+                  "ex3_zh": "今天有四分之一的學生缺席。",
+                  "ex2_blank": "It's a ____ to nine, so we should leave now.",
+                  "ex3_blank": "A ____ of the students were absent today."
                 },
                 {
                   "en": "along",
@@ -856,7 +1401,13 @@
                   "zh": "沿著",
                   "ex_en": "We walked along the beach and watched the sunset.",
                   "ex_zh": "我們沿著海灘散步，看著夕陽。",
-                  "ex_blank": "We walked ____ the beach and watched the sunset."
+                  "ex_blank": "We walked ____ the beach and watched the sunset.",
+                  "ex2_en": "There are many shops along this street.",
+                  "ex2_zh": "這條街沿路有很多商店。",
+                  "ex3_en": "Feel free to bring your friend along to the party.",
+                  "ex3_zh": "歡迎帶你的朋友一起來參加派對。",
+                  "ex2_blank": "There are many shops ____ this street.",
+                  "ex3_blank": "Feel free to bring your friend ____ to the party."
                 },
                 {
                   "en": "clear",
@@ -864,7 +1415,13 @@
                   "zh": "晴朗的；清楚的",
                   "ex_en": "The water in the lake is so clear you can see the fish.",
                   "ex_zh": "湖水非常清澈，可以看見裡面的魚。",
-                  "ex_blank": "The water in the lake is so ____ you can see the fish."
+                  "ex_blank": "The water in the lake is so ____ you can see the fish.",
+                  "ex2_en": "Please make sure your answer is clear and simple.",
+                  "ex2_zh": "請確保你的答案清楚又簡單。",
+                  "ex3_en": "It was a clear night, so we could see many stars.",
+                  "ex3_zh": "那是個晴朗的夜晚，所以我們能看到很多星星。",
+                  "ex2_blank": "Please make sure your answer is ____ and simple.",
+                  "ex3_blank": "It was a ____ night, so we could see many stars."
                 },
                 {
                   "en": "pass",
@@ -872,7 +1429,13 @@
                   "zh": "經過；通過",
                   "ex_en": "A car tried to pass us on the narrow road.",
                   "ex_zh": "一輛車試圖在窄路上超越我們。",
-                  "ex_blank": "A car tried to ____ us on the narrow road."
+                  "ex_blank": "A car tried to ____ us on the narrow road.",
+                  "ex2_en": "I hope I can pass the math test this time.",
+                  "ex2_zh": "我希望這次能通過數學考試。",
+                  "ex3_en": "Could you pass the salt, please?",
+                  "ex3_zh": "可以請你把鹽遞給我嗎？",
+                  "ex2_blank": "I hope I can ____ the math test this time.",
+                  "ex3_blank": "Could you ____ the salt, please?"
                 },
                 {
                   "en": "forest",
@@ -880,7 +1443,13 @@
                   "zh": "森林",
                   "ex_en": "It's easy to get lost in the dark forest.",
                   "ex_zh": "在黑暗的森林裡很容易迷路。",
-                  "ex_blank": "It's easy to get lost in the dark ____."
+                  "ex_blank": "It's easy to get lost in the dark ____.",
+                  "ex2_en": "Many kinds of birds live in this forest.",
+                  "ex2_zh": "許多種鳥類住在這座森林裡。",
+                  "ex3_en": "We went hiking through the forest last weekend.",
+                  "ex3_zh": "我們上週末去森林裡健行。",
+                  "ex2_blank": "Many kinds of birds live in this ____.",
+                  "ex3_blank": "We went hiking through the ____ last weekend."
                 },
                 {
                   "en": "dry",
@@ -890,7 +1459,13 @@
                   "ex_en": "Please help me dry the dishes after dinner.",
                   "ex_zh": "晚餐後請幫我把碗盤擦乾。",
                   "ex_blank": "Please help me ____ the dishes after dinner.",
-                  "grammar": "dry 當形容詞是「乾燥的」；當動詞是「把…弄乾、變乾」。"
+                  "grammar": "dry 當形容詞是「乾燥的」；當動詞是「把…弄乾、變乾」。",
+                  "ex2_en": "The towel is already dry, so you can use it.",
+                  "ex2_zh": "這條毛巾已經乾了，你可以用了。",
+                  "ex3_en": "It hasn't rained for weeks, and the ground is very dry.",
+                  "ex3_zh": "已經好幾星期沒下雨了，地面非常乾燥。",
+                  "ex2_blank": "The towel is already ____, so you can use it.",
+                  "ex3_blank": "It hasn't rained for weeks, and the ground is very ____."
                 },
                 {
                   "en": "something",
@@ -898,7 +1473,13 @@
                   "zh": "某物；某事",
                   "ex_en": "There is something strange in that box.",
                   "ex_zh": "那個箱子裡有些奇怪的東西。",
-                  "ex_blank": "There is ____ strange in that box."
+                  "ex_blank": "There is ____ strange in that box.",
+                  "ex2_en": "I want to tell you something important.",
+                  "ex2_zh": "我想告訴你一件重要的事。",
+                  "ex3_en": "Would you like something to drink?",
+                  "ex3_zh": "你想喝點什麼嗎？",
+                  "ex2_blank": "I want to tell you ____ important.",
+                  "ex3_blank": "Would you like ____ to drink?"
                 },
                 {
                   "en": "jar",
@@ -906,7 +1487,13 @@
                   "zh": "罐子",
                   "ex_en": "She keeps her cookies in a big glass jar.",
                   "ex_zh": "她把餅乾放在一個大玻璃罐裡。",
-                  "ex_blank": "She keeps her cookies in a big glass ____."
+                  "ex_blank": "She keeps her cookies in a big glass ____.",
+                  "ex2_en": "Could you pass me that jar of honey?",
+                  "ex2_zh": "可以把那罐蜂蜜遞給我嗎？",
+                  "ex3_en": "The jar was so tight that I couldn't open it.",
+                  "ex3_zh": "這個罐子太緊了，我打不開。",
+                  "ex2_blank": "Could you pass me that ____ of honey?",
+                  "ex3_blank": "The ____ was so tight that I couldn't open it."
                 },
                 {
                   "en": "beak",
@@ -914,7 +1501,13 @@
                   "zh": "鳥嘴",
                   "ex_en": "The parrot has a strong beak for cracking nuts.",
                   "ex_zh": "這隻鸚鵡有一個強壯的鳥嘴可以敲開堅果。",
-                  "ex_blank": "The parrot has a strong ____ for cracking nuts."
+                  "ex_blank": "The parrot has a strong ____ for cracking nuts.",
+                  "ex2_en": "The bird used its beak to pick up the worm.",
+                  "ex2_zh": "這隻鳥用牠的嘴啄起了那條蟲。",
+                  "ex3_en": "Different birds have different shapes of beaks.",
+                  "ex3_zh": "不同的鳥有不同形狀的嘴。",
+                  "ex2_blank": "The bird used its ____ to pick up the worm.",
+                  "ex3_blank": "Different birds have different shapes of ____."
                 },
                 {
                   "en": "reach",
@@ -922,7 +1515,13 @@
                   "zh": "達到；伸出手臂(拿)",
                   "ex_en": "I can't reach the book on the top shelf.",
                   "ex_zh": "我搆不到最上層架子上的書。",
-                  "ex_blank": "I can't ____ the book on the top shelf."
+                  "ex_blank": "I can't ____ the book on the top shelf.",
+                  "ex2_en": "We finally reached the top of the mountain at noon.",
+                  "ex2_zh": "我們終於在中午抵達了山頂。",
+                  "ex3_en": "You can reach me by phone anytime.",
+                  "ex3_zh": "你隨時都可以打電話聯絡我。",
+                  "ex2_blank": "We finally ____ the top of the mountain at noon.",
+                  "ex3_blank": "You can ____ me by phone anytime."
                 }
               ]
             },
@@ -940,7 +1539,13 @@
                   "ex_en": "He sat on a large rock by the river.",
                   "ex_zh": "他坐在河邊一顆大岩石上。",
                   "ex_blank": "He sat on a large ____ by the river.",
-                  "grammar": "rock 當名詞是「岩石」；當動詞是「搖動」。"
+                  "grammar": "rock 當名詞是「岩石」；當動詞是「搖動」。",
+                  "ex2_en": "The children love to rock in the old chair.",
+                  "ex2_zh": "孩子們喜歡坐在那張舊搖椅上搖來搖去。",
+                  "ex3_en": "Someone painted a smiley face on the rock.",
+                  "ex3_zh": "有人在那顆石頭上畫了一個笑臉。",
+                  "ex2_blank": "The children love to ____ in the old chair.",
+                  "ex3_blank": "Someone painted a smiley face on the ____."
                 },
                 {
                   "en": "fly / flew",
@@ -949,7 +1554,13 @@
                   "ex_en": "The birds flew south for the winter.",
                   "ex_zh": "鳥兒們飛往南方過冬。",
                   "ex_blank": "The birds ____ south for the winter.",
-                  "grammar": "fly 的過去式是 flew。"
+                  "grammar": "fly 的過去式是 flew。",
+                  "ex2_en": "We flew to Japan for our summer vacation.",
+                  "ex2_zh": "我們暑假搭飛機去了日本。",
+                  "ex3_en": "Butterflies fly from flower to flower.",
+                  "ex3_zh": "蝴蝶從一朵花飛到另一朵花。",
+                  "ex2_blank": "We ____ to Japan for our summer vacation.",
+                  "ex3_blank": "Butterflies ____ from flower to flower."
                 },
                 {
                   "en": "pick up",
@@ -958,7 +1569,13 @@
                   "ex_en": "Can you pick up that pen from the floor?",
                   "ex_zh": "你可以把地上那支筆撿起來嗎？",
                   "ex_blank": "Can you ____ that pen from the floor?",
-                  "grammar": "pick up 表示「撿起、拿起」，也可表示「接送某人」。"
+                  "grammar": "pick up 表示「撿起、拿起」，也可表示「接送某人」。",
+                  "ex2_en": "My mom will pick me up after school.",
+                  "ex2_zh": "我媽媽放學後會來接我。",
+                  "ex3_en": "He picked up the phone as soon as it rang.",
+                  "ex3_zh": "電話一響他就立刻接了起來。",
+                  "ex2_blank": "My mom will ____ after school.",
+                  "ex3_blank": "He ____ the phone as soon as it rang."
                 },
                 {
                   "en": "back",
@@ -968,7 +1585,13 @@
                   "ex_en": "She is going back to her hometown for the holidays.",
                   "ex_zh": "她要回家鄉過節了。",
                   "ex_blank": "She is going ____ to her hometown for the holidays.",
-                  "grammar": "back 當副詞是「回原處」，如 go back；當名詞或形容詞則表示「後面(的)」。"
+                  "grammar": "back 當副詞是「回原處」，如 go back；當名詞或形容詞則表示「後面(的)」。",
+                  "ex2_en": "Please put the book back on the shelf.",
+                  "ex2_zh": "請把書放回架子上。",
+                  "ex3_en": "I sat in the back of the classroom.",
+                  "ex3_zh": "我坐在教室的後面。",
+                  "ex2_blank": "Please put the book ____ on the shelf.",
+                  "ex3_blank": "I sat in the ____ of the classroom."
                 },
                 {
                   "en": "drop",
@@ -976,7 +1599,13 @@
                   "zh": "丟下；落下",
                   "ex_en": "Be careful not to drop the glass.",
                   "ex_zh": "小心別把玻璃杯摔了。",
-                  "ex_blank": "Be careful not to ____ the glass."
+                  "ex_blank": "Be careful not to ____ the glass.",
+                  "ex2_en": "Prices usually drop after the holiday season.",
+                  "ex2_zh": "節慶結束後物價通常會下降。",
+                  "ex3_en": "He dropped his phone and the screen broke.",
+                  "ex3_zh": "他的手機掉了，螢幕破了。",
+                  "ex2_blank": "Prices usually ____ after the holiday season.",
+                  "ex3_blank": "He ____ his phone and the screen broke."
                 },
                 {
                   "en": "into",
@@ -984,7 +1613,13 @@
                   "zh": "到……裡面；進入",
                   "ex_en": "He jumped into the swimming pool.",
                   "ex_zh": "他跳進了游泳池。",
-                  "ex_blank": "He jumped ____ the swimming pool."
+                  "ex_blank": "He jumped ____ the swimming pool.",
+                  "ex2_en": "She poured the juice into a big glass.",
+                  "ex2_zh": "她把果汁倒進一個大玻璃杯裡。",
+                  "ex3_en": "The caterpillar turned into a butterfly.",
+                  "ex3_zh": "毛毛蟲變成了一隻蝴蝶。",
+                  "ex2_blank": "She poured the juice ____ a big glass.",
+                  "ex3_blank": "The caterpillar turned ____ a butterfly."
                 },
                 {
                   "en": "Good job!",
@@ -993,7 +1628,13 @@
                   "ex_en": "You finished all your homework. Good job!",
                   "ex_zh": "你把作業都寫完了，做得好！",
                   "ex_blank": "You finished all your homework. ____",
-                  "grammar": "Good job! 用來稱讚別人做得好，是常用的口語鼓勵語。"
+                  "grammar": "Good job! 用來稱讚別人做得好，是常用的口語鼓勵語。",
+                  "ex2_en": "Good job on the presentation today!",
+                  "ex2_zh": "今天的簡報做得很好！",
+                  "ex3_en": "Good job, team! We won the game.",
+                  "ex3_zh": "做得好，隊員們！我們贏得了比賽。",
+                  "ex2_blank": "____ on the presentation today!",
+                  "ex3_blank": "____, team! We won the game."
                 },
                 {
                   "en": "be proud of",
@@ -1002,7 +1643,13 @@
                   "ex_en": "Your parents must be very proud of you.",
                   "ex_zh": "你的父母一定以你為榮。",
                   "ex_blank": "Your parents must be very ____ you.",
-                  "grammar": "be proud of + 人/事，表示「以…為榮」。"
+                  "grammar": "be proud of + 人/事，表示「以…為榮」。",
+                  "ex2_en": "I'm so proud of you for finishing the race.",
+                  "ex2_zh": "我真為你完成這場比賽感到驕傲。",
+                  "ex3_en": "She is proud of her small but cozy home.",
+                  "ex3_zh": "她以她那雖小但溫馨的家為榮。",
+                  "ex2_blank": "I'm so ____ you for finishing the race.",
+                  "ex3_blank": "She is ____ her small but cozy home."
                 },
                 {
                   "en": "back and forth",
@@ -1011,7 +1658,13 @@
                   "ex_en": "The lion walked back and forth in its cage.",
                   "ex_zh": "那隻獅子在籠子裡來回踱步。",
                   "ex_blank": "The lion walked ____ in its cage.",
-                  "grammar": "back and forth 表示「來回地」，常放在動詞後面修飾動作。"
+                  "grammar": "back and forth 表示「來回地」，常放在動詞後面修飾動作。",
+                  "ex2_en": "He kept moving back and forth in front of the door.",
+                  "ex2_zh": "他一直在門前來回走動。",
+                  "ex3_en": "The swing moved back and forth in the wind.",
+                  "ex3_zh": "鞦韆在風中來回搖擺。",
+                  "ex2_blank": "He kept moving ____ in front of the door.",
+                  "ex3_blank": "The swing moved ____ in the wind."
                 },
                 {
                   "en": "finally",
@@ -1019,7 +1672,13 @@
                   "zh": "最後",
                   "ex_en": "After a long wait, the bus finally arrived.",
                   "ex_zh": "經過一段長時間的等待，公車終於到了。",
-                  "ex_blank": "After a long wait, the bus ____ arrived."
+                  "ex_blank": "After a long wait, the bus ____ arrived.",
+                  "ex2_en": "I finally finished reading the whole book.",
+                  "ex2_zh": "我終於把整本書看完了。",
+                  "ex3_en": "After many tries, she finally passed the driving test.",
+                  "ex3_zh": "經過多次嘗試，她終於通過了駕照考試。",
+                  "ex2_blank": "I ____ finished reading the whole book.",
+                  "ex3_blank": "After many tries, she ____ passed the driving test."
                 }
               ]
             },
@@ -1037,7 +1696,13 @@
                   "ex_en": "We climbed to the top of the hill.",
                   "ex_zh": "我們爬到了山頂。",
                   "ex_blank": "We climbed to the ____ of the hill.",
-                  "grammar": "top 當名詞是「頂端」；當形容詞是「最好的、頂尖的」。"
+                  "grammar": "top 當名詞是「頂端」；當形容詞是「最好的、頂尖的」。",
+                  "ex2_en": "He is at the top of his class in math.",
+                  "ex2_zh": "他是班上數學成績最好的學生。",
+                  "ex3_en": "There is a small flag on the top of the tower.",
+                  "ex3_zh": "塔頂上有一面小旗子。",
+                  "ex2_blank": "He is at the ____ of his class in math.",
+                  "ex3_blank": "There is a small flag on the ____ of the tower."
                 },
                 {
                   "en": "past",
@@ -1047,7 +1712,13 @@
                   "ex_en": "The library is just past the police station.",
                   "ex_zh": "圖書館就在警察局過去一點的地方。",
                   "ex_blank": "The library is just ____ the police station.",
-                  "grammar": "past 當介系詞是「經過」，後面接地點；當名詞是「過去」。"
+                  "grammar": "past 當介系詞是「經過」，後面接地點；當名詞是「過去」。",
+                  "ex2_en": "Walk past the bakery, and the school is on your right.",
+                  "ex2_zh": "經過麵包店後，學校就在你的右手邊。",
+                  "ex3_en": "She often talks about the past when she was young.",
+                  "ex3_zh": "她常聊起她年輕時的過去。",
+                  "ex2_blank": "Walk ____ the bakery, and the school is on your right.",
+                  "ex3_blank": "She often talks about the ____ when she was young."
                 },
                 {
                   "en": "finish",
@@ -1055,7 +1726,13 @@
                   "zh": "完成；結束",
                   "ex_en": "What time do you finish work today?",
                   "ex_zh": "你今天幾點下班？",
-                  "ex_blank": "What time do you ____ work today?"
+                  "ex_blank": "What time do you ____ work today?",
+                  "ex2_en": "Please finish your vegetables before you eat dessert.",
+                  "ex2_zh": "吃甜點前請把蔬菜吃完。",
+                  "ex3_en": "He was the first to finish the race.",
+                  "ex3_zh": "他是第一個完成比賽的人。",
+                  "ex2_blank": "Please ____ your vegetables before you eat dessert.",
+                  "ex3_blank": "He was the first to ____ the race."
                 },
                 {
                   "en": "anything",
@@ -1063,7 +1740,13 @@
                   "zh": "任何事物",
                   "ex_en": "Do you need anything from the store?",
                   "ex_zh": "你需要從商店買什麼東西嗎？",
-                  "ex_blank": "Do you need ____ from the store?"
+                  "ex_blank": "Do you need ____ from the store?",
+                  "ex2_en": "I can't see anything in this dark room.",
+                  "ex2_zh": "我在這個黑暗的房間裡什麼都看不見。",
+                  "ex3_en": "You can ask me anything you want to know.",
+                  "ex3_zh": "你想知道什麼都可以問我。",
+                  "ex2_blank": "I can't see ____ in this dark room.",
+                  "ex3_blank": "You can ask me ____ you want to know."
                 },
                 {
                   "en": "shout",
@@ -1071,7 +1754,13 @@
                   "zh": "喊叫",
                   "ex_en": "There's no need to shout, I can hear you clearly.",
                   "ex_zh": "不需要大喊，我聽得很清楚。",
-                  "ex_blank": "There's no need to ____, I can hear you clearly."
+                  "ex_blank": "There's no need to ____, I can hear you clearly.",
+                  "ex2_en": "He had to shout to be heard over the music.",
+                  "ex2_zh": "他必須大喊才能在音樂聲中被聽見。",
+                  "ex3_en": "Don't shout at your little brother like that.",
+                  "ex3_zh": "不要那樣對你弟弟大吼大叫。",
+                  "ex2_blank": "He had to ____ to be heard over the music.",
+                  "ex3_blank": "Don't ____ at your little brother like that."
                 },
                 {
                   "en": "joy",
@@ -1079,7 +1768,13 @@
                   "zh": "喜悅",
                   "ex_en": "Her face was full of joy when she saw the gift.",
                   "ex_zh": "她看到禮物時臉上充滿喜悅。",
-                  "ex_blank": "Her face was full of ____ when she saw the gift."
+                  "ex_blank": "Her face was full of ____ when she saw the gift.",
+                  "ex2_en": "The children jumped for joy when school ended.",
+                  "ex2_zh": "放學時孩子們高興地跳了起來。",
+                  "ex3_en": "Watching the sunrise gave her a moment of pure joy.",
+                  "ex3_zh": "看日出讓她感受到一刻純粹的喜悅。",
+                  "ex2_blank": "The children jumped for ____ when school ended.",
+                  "ex3_blank": "Watching the sunrise gave her a moment of pure ____."
                 },
                 {
                   "en": "pool",
@@ -1087,7 +1782,13 @@
                   "zh": "水池；游泳池",
                   "ex_en": "The kids are playing in the swimming pool.",
                   "ex_zh": "孩子們正在游泳池裡玩耍。",
-                  "ex_blank": "The kids are playing in the swimming ____."
+                  "ex_blank": "The kids are playing in the swimming ____.",
+                  "ex2_en": "There's a small pool of water on the road after the rain.",
+                  "ex2_zh": "下雨後路上有一小灘水。",
+                  "ex3_en": "We spent the whole afternoon at the pool.",
+                  "ex3_zh": "我們整個下午都待在游泳池。",
+                  "ex2_blank": "There's a small ____ of water on the road after the rain.",
+                  "ex3_blank": "We spent the whole afternoon at the ____."
                 },
                 {
                   "en": "when",
@@ -1095,7 +1796,13 @@
                   "zh": "當……時",
                   "ex_en": "I was reading a book when the phone rang.",
                   "ex_zh": "電話響起時我正在看書。",
-                  "ex_blank": "I was reading a book ____ the phone rang."
+                  "ex_blank": "I was reading a book ____ the phone rang.",
+                  "ex2_en": "When did you move to this city?",
+                  "ex2_zh": "你是什麼時候搬到這座城市的？",
+                  "ex3_en": "Call me when you get home safely.",
+                  "ex3_zh": "你安全到家後打電話給我。",
+                  "ex2_blank": "____ did you move to this city?",
+                  "ex3_blank": "Call me ____ you get home safely."
                 },
                 {
                   "en": "close",
@@ -1103,7 +1810,13 @@
                   "zh": "接近地",
                   "ex_en": "Don't stand so close to the fire.",
                   "ex_zh": "別站得離火那麼近。",
-                  "ex_blank": "Don't stand so ____ to the fire."
+                  "ex_blank": "Don't stand so ____ to the fire.",
+                  "ex2_en": "Our house is close to the train station.",
+                  "ex2_zh": "我們家離火車站很近。",
+                  "ex3_en": "Please come a little closer so I can hear you.",
+                  "ex3_zh": "請靠近一點，這樣我才能聽見你說話。",
+                  "ex2_blank": "Our house is ____ to the train station.",
+                  "ex3_blank": "Please come a little ____ so I can hear you."
                 }
               ]
             }
@@ -1126,7 +1839,13 @@
                   "zh": "男服務生",
                   "ex_en": "The waiter took our order and brought us water.",
                   "ex_zh": "服務生幫我們點餐並端水過來。",
-                  "ex_blank": "The ____ took our order and brought us water."
+                  "ex_blank": "The ____ took our order and brought us water.",
+                  "ex2_en": "The waiter forgot to bring our forks.",
+                  "ex2_zh": "服務生忘了拿叉子給我們。",
+                  "ex3_en": "He worked as a waiter to pay for college.",
+                  "ex3_zh": "他當服務生打工賺取大學學費。",
+                  "ex2_blank": "The ____ forgot to bring our forks.",
+                  "ex3_blank": "He worked as a ____ to pay for college."
                 },
                 {
                   "en": "waitress",
@@ -1134,7 +1853,13 @@
                   "zh": "女服務生",
                   "ex_en": "The waitress recommended the special dish of the day.",
                   "ex_zh": "女服務生推薦了今日特餐。",
-                  "ex_blank": "The ____ recommended the special dish of the day."
+                  "ex_blank": "The ____ recommended the special dish of the day.",
+                  "ex2_en": "The new waitress was very friendly to every customer.",
+                  "ex2_zh": "這位新來的女服務生對每位顧客都很親切。",
+                  "ex3_en": "The waitress brought us the wrong order by mistake.",
+                  "ex3_zh": "女服務生不小心送錯了我們的餐點。",
+                  "ex2_blank": "The new ____ was very friendly to every customer.",
+                  "ex3_blank": "The ____ brought us the wrong order by mistake."
                 },
                 {
                   "en": "housewife",
@@ -1142,7 +1867,13 @@
                   "zh": "家庭主婦",
                   "ex_en": "My aunt is a housewife and a great cook.",
                   "ex_zh": "我阿姨是家庭主婦，也很會做菜。",
-                  "ex_blank": "My aunt is a ____ and a great cook."
+                  "ex_blank": "My aunt is a ____ and a great cook.",
+                  "ex2_en": "Being a housewife takes a lot of hard work.",
+                  "ex2_zh": "當家庭主婦需要付出很多辛勞。",
+                  "ex3_en": "She was a housewife before she started her own business.",
+                  "ex3_zh": "她創業之前是一位家庭主婦。",
+                  "ex2_blank": "Being a ____ takes a lot of hard work.",
+                  "ex3_blank": "She was a ____ before she started her own business."
                 },
                 {
                   "en": "mailman / mail carrier",
@@ -1150,7 +1881,13 @@
                   "zh": "郵差",
                   "ex_en": "The mailman usually comes around 10 a.m.",
                   "ex_zh": "郵差通常在早上十點左右來。",
-                  "ex_blank": "The ____ usually comes around 10 a.m."
+                  "ex_blank": "The ____ usually comes around 10 a.m.",
+                  "ex2_en": "Our mail carrier always says hello with a big smile.",
+                  "ex2_zh": "我們的郵差總是帶著燦爛的笑容和我們打招呼。",
+                  "ex3_en": "The mailman delivered a large package to our door.",
+                  "ex3_zh": "郵差送了一個大包裹到我們家門口。",
+                  "ex2_blank": "Our ____ always says hello with a big smile.",
+                  "ex3_blank": "The ____ delivered a large package to our door."
                 },
                 {
                   "en": "police officer",
@@ -1158,7 +1895,13 @@
                   "zh": "警察",
                   "ex_en": "A police officer is directing traffic on the busy street.",
                   "ex_zh": "一位警察正在繁忙的街上指揮交通。",
-                  "ex_blank": "A ____ is directing traffic on the busy street."
+                  "ex_blank": "A ____ is directing traffic on the busy street.",
+                  "ex2_en": "The police officer helped the lost child find her parents.",
+                  "ex2_zh": "這位警察幫助迷路的孩子找到了她的父母。",
+                  "ex3_en": "She dreams of becoming a police officer someday.",
+                  "ex3_zh": "她夢想有一天能成為一名警察。",
+                  "ex2_blank": "The ____ helped the lost child find her parents.",
+                  "ex3_blank": "She dreams of becoming a ____ someday."
                 },
                 {
                   "en": "secretary",
@@ -1166,7 +1909,13 @@
                   "zh": "祕書",
                   "ex_en": "The secretary is busy answering phone calls.",
                   "ex_zh": "秘書正忙著接電話。",
-                  "ex_blank": "The ____ is busy answering phone calls."
+                  "ex_blank": "The ____ is busy answering phone calls.",
+                  "ex2_en": "The secretary scheduled a meeting for Monday morning.",
+                  "ex2_zh": "祕書安排了星期一早上的會議。",
+                  "ex3_en": "As a secretary, she handles all the office paperwork.",
+                  "ex3_zh": "身為祕書，她負責處理所有的辦公室文件。",
+                  "ex2_blank": "The ____ scheduled a meeting for Monday morning.",
+                  "ex3_blank": "As a ____, she handles all the office paperwork."
                 },
                 {
                   "en": "factory worker",
@@ -1174,7 +1923,13 @@
                   "zh": "工廠工人",
                   "ex_en": "He has been a factory worker for over twenty years.",
                   "ex_zh": "他當工廠工人已經超過二十年了。",
-                  "ex_blank": "He has been a ____ for over twenty years."
+                  "ex_blank": "He has been a ____ for over twenty years.",
+                  "ex2_en": "The factory worker checked every product before packing it.",
+                  "ex2_zh": "這位工廠工人在包裝前檢查每一件產品。",
+                  "ex3_en": "Factory workers usually work in shifts.",
+                  "ex3_zh": "工廠工人通常輪班工作。",
+                  "ex2_blank": "The ____ checked every product before packing it.",
+                  "ex3_blank": "____ usually work in shifts."
                 },
                 {
                   "en": "actor",
@@ -1182,7 +1937,13 @@
                   "zh": "男演員",
                   "ex_en": "He is a famous actor in Hollywood.",
                   "ex_zh": "他是好萊塢知名的男演員。",
-                  "ex_blank": "He is a famous ____ in Hollywood."
+                  "ex_blank": "He is a famous ____ in Hollywood.",
+                  "ex2_en": "The young actor practiced his lines every night.",
+                  "ex2_zh": "這位年輕演員每晚都會練習台詞。",
+                  "ex3_en": "He became a famous actor after his first big movie.",
+                  "ex3_zh": "他因第一部大片而成為知名演員。",
+                  "ex2_blank": "The young ____ practiced his lines every night.",
+                  "ex3_blank": "He became a famous ____ after his first big movie."
                 },
                 {
                   "en": "actress",
@@ -1190,7 +1951,13 @@
                   "zh": "女演員",
                   "ex_en": "That young actress won an award for her new movie.",
                   "ex_zh": "那位年輕女演員以新片獲獎。",
-                  "ex_blank": "That young ____ won an award for her new movie."
+                  "ex_blank": "That young ____ won an award for her new movie.",
+                  "ex2_en": "The actress thanked her fans after the show.",
+                  "ex2_zh": "這位女演員在表演結束後感謝了她的粉絲。",
+                  "ex3_en": "She wants to be an actress like her favorite star.",
+                  "ex3_zh": "她想成為像她最喜歡的明星一樣的女演員。",
+                  "ex2_blank": "The ____ thanked her fans after the show.",
+                  "ex3_blank": "She wants to be an ____ like her favorite star."
                 },
                 {
                   "en": "reporter",
@@ -1198,7 +1965,13 @@
                   "zh": "記者",
                   "ex_en": "A reporter from the local newspaper interviewed the mayor.",
                   "ex_zh": "當地報社的一名記者採訪了市長。",
-                  "ex_blank": "A ____ from the local newspaper interviewed the mayor."
+                  "ex_blank": "A ____ from the local newspaper interviewed the mayor.",
+                  "ex2_en": "The reporter asked the players a few quick questions.",
+                  "ex2_zh": "這位記者問了選手們幾個簡短的問題。",
+                  "ex3_en": "A reporter took photos of the accident scene.",
+                  "ex3_zh": "一名記者拍下了事故現場的照片。",
+                  "ex2_blank": "The ____ asked the players a few quick questions.",
+                  "ex3_blank": "A ____ took photos of the accident scene."
                 }
               ]
             },
@@ -1214,7 +1987,13 @@
                   "zh": "歌手",
                   "ex_en": "She has a beautiful voice and wants to be a singer.",
                   "ex_zh": "她嗓音優美，想成為歌手。",
-                  "ex_blank": "She has a beautiful voice and wants to be a ____."
+                  "ex_blank": "She has a beautiful voice and wants to be a ____.",
+                  "ex2_en": "The singer thanked the crowd after the concert.",
+                  "ex2_zh": "這位歌手在演唱會後感謝了觀眾。",
+                  "ex3_en": "My sister practices singing every day; she wants to be a singer.",
+                  "ex3_zh": "我姐姐每天都練習唱歌，她想成為歌手。",
+                  "ex2_blank": "The ____ thanked the crowd after the concert.",
+                  "ex3_blank": "My sister practices singing every day; she wants to be a ____."
                 },
                 {
                   "en": "writer",
@@ -1222,7 +2001,13 @@
                   "zh": "作家；作者",
                   "ex_en": "My favorite writer just published a new book.",
                   "ex_zh": "我最喜歡的作家剛出了一本新書。",
-                  "ex_blank": "My favorite ____ just published a new book."
+                  "ex_blank": "My favorite ____ just published a new book.",
+                  "ex2_en": "The young writer worked on her novel every evening.",
+                  "ex2_zh": "這位年輕作家每天晚上都在寫她的小說。",
+                  "ex3_en": "This book was written by a well-known writer.",
+                  "ex3_zh": "這本書是由一位知名作家所寫。",
+                  "ex2_blank": "The young ____ worked on her novel every evening.",
+                  "ex3_blank": "This book was written by a well-known ____."
                 },
                 {
                   "en": "music",
@@ -1230,7 +2015,13 @@
                   "zh": "音樂",
                   "ex_en": "What kind of music do you like to listen to?",
                   "ex_zh": "你喜歡聽什麼樣的音樂？",
-                  "ex_blank": "What kind of ____ do you like to listen to?"
+                  "ex_blank": "What kind of ____ do you like to listen to?",
+                  "ex2_en": "She turned on some music while cleaning her room.",
+                  "ex2_zh": "她打掃房間時放了些音樂。",
+                  "ex3_en": "The music at the party was too loud for us to talk.",
+                  "ex3_zh": "派對上的音樂太大聲了，我們沒辦法聊天。",
+                  "ex2_blank": "She turned on some ____ while cleaning her room.",
+                  "ex3_blank": "The ____ at the party was too loud for us to talk."
                 },
                 {
                   "en": "guitar",
@@ -1238,7 +2029,13 @@
                   "zh": "吉他",
                   "ex_en": "He is learning to play the electric guitar.",
                   "ex_zh": "他正在學彈電吉他。",
-                  "ex_blank": "He is learning to play the electric ____."
+                  "ex_blank": "He is learning to play the electric ____.",
+                  "ex2_en": "He taught himself to play the guitar from videos online.",
+                  "ex2_zh": "他透過網路影片自學彈吉他。",
+                  "ex3_en": "She brought her guitar to the campfire.",
+                  "ex3_zh": "她把吉他帶去了營火會。",
+                  "ex2_blank": "He taught himself to play the ____ from videos online.",
+                  "ex3_blank": "She brought her ____ to the campfire."
                 },
                 {
                   "en": "drum",
@@ -1246,7 +2043,13 @@
                   "zh": "鼓",
                   "ex_en": "The beat of the drum made everyone want to dance.",
                   "ex_zh": "鼓的節奏讓大家都想跳舞。",
-                  "ex_blank": "The beat of the ____ made everyone want to dance."
+                  "ex_blank": "The beat of the ____ made everyone want to dance.",
+                  "ex2_en": "He plays the drum in a school band.",
+                  "ex2_zh": "他在學校樂隊裡打鼓。",
+                  "ex3_en": "The loud drum woke up the whole neighborhood.",
+                  "ex3_zh": "大聲的鼓聲吵醒了整個社區。",
+                  "ex2_blank": "He plays the ____ in a school band.",
+                  "ex3_blank": "The loud ____ woke up the whole neighborhood."
                 },
                 {
                   "en": "future",
@@ -1254,7 +2057,13 @@
                   "zh": "未來",
                   "ex_en": "What are your plans for the future?",
                   "ex_zh": "你對未來有什麼計畫？",
-                  "ex_blank": "What are your plans for the ____?"
+                  "ex_blank": "What are your plans for the ____?",
+                  "ex2_en": "No one really knows what the future holds.",
+                  "ex2_zh": "沒有人真正知道未來會怎麼樣。",
+                  "ex3_en": "She is saving money for her future.",
+                  "ex3_zh": "她正在為自己的未來存錢。",
+                  "ex2_blank": "No one really knows what the ____ holds.",
+                  "ex3_blank": "She is saving money for her ____."
                 },
                 {
                   "en": "interesting",
@@ -1262,7 +2071,13 @@
                   "zh": "有趣的",
                   "ex_en": "I read a very interesting article this morning.",
                   "ex_zh": "我今天早上讀了一篇很有趣的文章。",
-                  "ex_blank": "I read a very ____ article this morning."
+                  "ex_blank": "I read a very ____ article this morning.",
+                  "ex2_en": "History class became more interesting with the new teacher.",
+                  "ex2_zh": "換了新老師後，歷史課變得更有趣了。",
+                  "ex3_en": "It's interesting to learn how other cultures celebrate holidays.",
+                  "ex3_zh": "了解其他文化如何慶祝節日很有趣。",
+                  "ex2_blank": "History class became more ____ with the new teacher.",
+                  "ex3_blank": "It's ____ to learn how other cultures celebrate holidays."
                 },
                 {
                   "en": "camera",
@@ -1270,7 +2085,13 @@
                   "zh": "攝影機；相機",
                   "ex_en": "This new camera takes amazing pictures.",
                   "ex_zh": "這台新相機拍出來的照片很棒。",
-                  "ex_blank": "This new ____ takes amazing pictures."
+                  "ex_blank": "This new ____ takes amazing pictures.",
+                  "ex2_en": "Don't forget to bring your camera to the trip.",
+                  "ex2_zh": "別忘了帶你的相機去旅行。",
+                  "ex3_en": "There is a camera at the entrance of the store.",
+                  "ex3_zh": "店門口有一台攝影機。",
+                  "ex2_blank": "Don't forget to bring your ____ to the trip.",
+                  "ex3_blank": "There is a ____ at the entrance of the store."
                 },
                 {
                   "en": "important",
@@ -1278,7 +2099,13 @@
                   "zh": "重要的",
                   "ex_en": "It is important to get enough sleep every night.",
                   "ex_zh": "每晚睡眠充足很重要。",
-                  "ex_blank": "It is ____ to get enough sleep every night."
+                  "ex_blank": "It is ____ to get enough sleep every night.",
+                  "ex2_en": "This is an important decision, so think it over carefully.",
+                  "ex2_zh": "這是個重要的決定，請仔細考慮。",
+                  "ex3_en": "Family is the most important thing to me.",
+                  "ex3_zh": "家人對我來說是最重要的事。",
+                  "ex2_blank": "This is an ____ decision, so think it over carefully.",
+                  "ex3_blank": "Family is the most ____ thing to me."
                 },
                 {
                   "en": "popular",
@@ -1286,7 +2113,13 @@
                   "zh": "受歡迎的",
                   "ex_en": "This song is very popular among young people.",
                   "ex_zh": "這首歌在年輕人之間很受歡迎。",
-                  "ex_blank": "This song is very ____ among young people."
+                  "ex_blank": "This song is very ____ among young people.",
+                  "ex2_en": "He is one of the most popular students in our class.",
+                  "ex2_zh": "他是我們班上最受歡迎的學生之一。",
+                  "ex3_en": "That restaurant has become popular since it opened.",
+                  "ex3_zh": "那家餐廳自從開幕後就變得很受歡迎。",
+                  "ex2_blank": "He is one of the most ____ students in our class.",
+                  "ex3_blank": "That restaurant has become ____ since it opened."
                 }
               ]
             },
@@ -1302,7 +2135,13 @@
                   "zh": "天分；禮物",
                   "ex_en": "I need to buy a birthday gift for my friend.",
                   "ex_zh": "我需要買一份生日禮物給朋友。",
-                  "ex_blank": "I need to buy a birthday ____ for my friend."
+                  "ex_blank": "I need to buy a birthday ____ for my friend.",
+                  "ex2_en": "She has a gift for making people laugh.",
+                  "ex2_zh": "她有讓人發笑的天分。",
+                  "ex3_en": "Thank you so much for the wonderful gift.",
+                  "ex3_zh": "非常謝謝你送的這份美好的禮物。",
+                  "ex2_blank": "She has a ____ for making people laugh.",
+                  "ex3_blank": "Thank you so much for the wonderful ____."
                 },
                 {
                   "en": "tell / told",
@@ -1311,7 +2150,13 @@
                   "ex_en": "He told me a funny story about his dog.",
                   "ex_zh": "他告訴我一個關於他的狗的有趣故事。",
                   "ex_blank": "He ____ me a funny story about his dog.",
-                  "grammar": "tell 的過去式是 told，常接雙受詞：tell + 人 + 事。"
+                  "grammar": "tell 的過去式是 told，常接雙受詞：tell + 人 + 事。",
+                  "ex2_en": "Can you tell me the way to the station?",
+                  "ex2_zh": "你可以告訴我去車站的路嗎？",
+                  "ex3_en": "She told her friends about her exciting trip.",
+                  "ex3_zh": "她跟朋友們說了她精采的旅行。",
+                  "ex2_blank": "Can you ____ me the way to the station?",
+                  "ex3_blank": "She ____ her friends about her exciting trip."
                 },
                 {
                   "en": "funny",
@@ -1319,7 +2164,13 @@
                   "zh": "好笑的；滑稽的",
                   "ex_en": "My dad always tells funny jokes at dinner.",
                   "ex_zh": "我爸爸吃晚餐時總是講好笑的笑話。",
-                  "ex_blank": "My dad always tells ____ jokes at dinner."
+                  "ex_blank": "My dad always tells ____ jokes at dinner.",
+                  "ex2_en": "That was the funniest movie I've seen this year.",
+                  "ex2_zh": "那是我今年看過最好笑的電影。",
+                  "ex3_en": "It's funny how much he looks like his brother.",
+                  "ex3_zh": "他長得跟他哥哥好像，真有趣。",
+                  "ex3_blank": "It's ____ how much he looks like his brother.",
+                  "ex2_blank": "That was the ____ movie I've seen this year."
                 },
                 {
                   "en": "plan",
@@ -1329,7 +2180,13 @@
                   "ex_en": "We need to plan our trip carefully.",
                   "ex_zh": "我們需要仔細規劃這趟旅行。",
                   "ex_blank": "We need to ____ our trip carefully.",
-                  "grammar": "plan 可當動詞（計畫）或名詞（計畫、方案），要看句子結構判斷詞性。"
+                  "grammar": "plan 可當動詞（計畫）或名詞（計畫、方案），要看句子結構判斷詞性。",
+                  "ex2_en": "What do you plan to do after graduation?",
+                  "ex2_zh": "你畢業後計畫做什麼？",
+                  "ex3_en": "Our plan is to leave early to avoid the traffic.",
+                  "ex3_zh": "我們的計畫是提早出發以避開塞車。",
+                  "ex2_blank": "What do you ____ to do after graduation?",
+                  "ex3_blank": "Our ____ is to leave early to avoid the traffic."
                 },
                 {
                   "en": "star",
@@ -1337,7 +2194,13 @@
                   "zh": "明星；星星",
                   "ex_en": "She hopes to become a famous movie star one day.",
                   "ex_zh": "她希望有一天能成為知名電影明星。",
-                  "ex_blank": "She hopes to become a famous movie ____ one day."
+                  "ex_blank": "She hopes to become a famous movie ____ one day.",
+                  "ex2_en": "You can see many stars in the sky tonight.",
+                  "ex2_zh": "今晚天空可以看到很多星星。",
+                  "ex3_en": "The little girl drew a yellow star on her paper.",
+                  "ex3_zh": "小女孩在她的紙上畫了一顆黃色的星星。",
+                  "ex2_blank": "You can see many ____ in the sky tonight.",
+                  "ex3_blank": "The little girl drew a yellow ____ on her paper."
                 },
                 {
                   "en": "without",
@@ -1345,7 +2208,13 @@
                   "zh": "沒有",
                   "ex_en": "I can't drink coffee without sugar.",
                   "ex_zh": "我不能喝沒有加糖的咖啡。",
-                  "ex_blank": "I can't drink coffee ____ sugar."
+                  "ex_blank": "I can't drink coffee ____ sugar.",
+                  "ex2_en": "He left the room without saying a word.",
+                  "ex2_zh": "他一句話也沒說就離開了房間。",
+                  "ex3_en": "I can't imagine life without my phone.",
+                  "ex3_zh": "我無法想像沒有手機的生活。",
+                  "ex2_blank": "He left the room ____ saying a word.",
+                  "ex3_blank": "I can't imagine life ____ my phone."
                 },
                 {
                   "en": "dream",
@@ -1355,7 +2224,13 @@
                   "ex_en": "My dream is to travel around the world.",
                   "ex_zh": "我的夢想是環遊世界。",
                   "ex_blank": "My ____ is to travel around the world.",
-                  "grammar": "dream 當名詞是「夢想」，當動詞是「做夢」，如 dream about/of + Ving。"
+                  "grammar": "dream 當名詞是「夢想」，當動詞是「做夢」，如 dream about/of + Ving。",
+                  "ex2_en": "I had a strange dream about flying last night.",
+                  "ex2_zh": "我昨晚做了一個關於飛行的奇怪的夢。",
+                  "ex3_en": "Never give up on your dream.",
+                  "ex3_zh": "永遠不要放棄你的夢想。",
+                  "ex2_blank": "I had a strange ____ about flying last night.",
+                  "ex3_blank": "Never give up on your ____."
                 },
                 {
                   "en": "teenager",
@@ -1363,7 +2238,13 @@
                   "zh": "青少年",
                   "ex_en": "Being a teenager can be both exciting and difficult.",
                   "ex_zh": "當青少年既刺激又充滿挑戰。",
-                  "ex_blank": "Being a ____ can be both exciting and difficult."
+                  "ex_blank": "Being a ____ can be both exciting and difficult.",
+                  "ex2_en": "Most teenagers spend a lot of time with their phones.",
+                  "ex2_zh": "大多數青少年花很多時間在手機上。",
+                  "ex3_en": "As a teenager, she loved reading fantasy novels.",
+                  "ex3_zh": "身為青少年時，她很喜歡讀奇幻小說。",
+                  "ex2_blank": "Most ____ spend a lot of time with their phones.",
+                  "ex3_blank": "As a ____, she loved reading fantasy novels."
                 },
                 {
                   "en": "exciting",
@@ -1371,7 +2252,13 @@
                   "zh": "刺激的；令人興奮的",
                   "ex_en": "The final part of the game was very exciting.",
                   "ex_zh": "比賽的最後階段非常刺激。",
-                  "ex_blank": "The final part of the game was very ____."
+                  "ex_blank": "The final part of the game was very ____.",
+                  "ex2_en": "Riding a roller coaster for the first time was so exciting.",
+                  "ex2_zh": "第一次搭雲霄飛車真的好刺激。",
+                  "ex3_en": "We have some exciting news to share with you.",
+                  "ex3_zh": "我們有一些令人興奮的消息要跟你分享。",
+                  "ex2_blank": "Riding a roller coaster for the first time was so ____.",
+                  "ex3_blank": "We have some ____ news to share with you."
                 },
                 {
                   "en": "fight / fought",
@@ -1380,7 +2267,13 @@
                   "ex_en": "The two brothers always fight over small things.",
                   "ex_zh": "這對兄弟總是為了小事打架。",
                   "ex_blank": "The two brothers always ____ over small things.",
-                  "grammar": "fight 的過去式是 fought，fight over + 事情 表示「為了…而爭吵」。"
+                  "grammar": "fight 的過去式是 fought，fight over + 事情 表示「為了…而爭吵」。",
+                  "ex2_en": "The two countries fought a war many years ago.",
+                  "ex2_zh": "這兩個國家多年前打過一場戰爭。",
+                  "ex3_en": "Please don't fight with your sister anymore.",
+                  "ex3_zh": "請不要再跟你妹妹吵架了。",
+                  "ex2_blank": "The two countries ____ a war many years ago.",
+                  "ex3_blank": "Please don't ____ with your sister anymore."
                 }
               ]
             },
@@ -1397,7 +2290,13 @@
                   "ex_en": "The team members always help one another.",
                   "ex_zh": "隊員們總是互相幫忙。",
                   "ex_blank": "The team members always help ____.",
-                  "grammar": "one another 多用於三人以上互相；each other 多用於兩者之間，口語上常可互換。"
+                  "grammar": "one another 多用於三人以上互相；each other 多用於兩者之間，口語上常可互換。",
+                  "ex2_en": "Good friends should trust one another.",
+                  "ex2_zh": "好朋友應該互相信任。",
+                  "ex3_en": "The students looked at one another, confused by the question.",
+                  "ex3_zh": "學生們對這個問題感到困惑，互相對看。",
+                  "ex2_blank": "Good friends should trust ____.",
+                  "ex3_blank": "The students looked at ____, confused by the question."
                 },
                 {
                   "en": "money",
@@ -1405,7 +2304,13 @@
                   "zh": "錢",
                   "ex_en": "He is saving money to buy a new car.",
                   "ex_zh": "他正在存錢買新車。",
-                  "ex_blank": "He is saving ____ to buy a new car."
+                  "ex_blank": "He is saving ____ to buy a new car.",
+                  "ex2_en": "I don't have enough money to buy that jacket.",
+                  "ex2_zh": "我沒有足夠的錢買那件外套。",
+                  "ex3_en": "They raised a lot of money for the school library.",
+                  "ex3_zh": "他們為學校圖書館募到了很多錢。",
+                  "ex2_blank": "I don't have enough ____ to buy that jacket.",
+                  "ex3_blank": "They raised a lot of ____ for the school library."
                 },
                 {
                   "en": "famous",
@@ -1414,7 +2319,13 @@
                   "ex_en": "Paris is famous for the Eiffel Tower.",
                   "ex_zh": "巴黎以艾菲爾鐵塔聞名。",
                   "ex_blank": "Paris is ____ for the Eiffel Tower.",
-                  "grammar": "be famous for + 原因，表示「以…聞名」。"
+                  "grammar": "be famous for + 原因，表示「以…聞名」。",
+                  "ex2_en": "This restaurant is famous for its spicy noodles.",
+                  "ex2_zh": "這家餐廳以辣麵聞名。",
+                  "ex3_en": "He became famous overnight after the video went viral.",
+                  "ex3_zh": "那支影片爆紅後，他一夕之間就出名了。",
+                  "ex2_blank": "This restaurant is ____ for its spicy noodles.",
+                  "ex3_blank": "He became ____ overnight after the video went viral."
                 },
                 {
                   "en": "train",
@@ -1424,7 +2335,13 @@
                   "ex_en": "She is trying to train her new puppy.",
                   "ex_zh": "她正試著訓練她的新小狗。",
                   "ex_blank": "She is trying to ____ her new puppy.",
-                  "grammar": "train 當動詞是「訓練」，當名詞是「火車」，要看上下文判斷詞性。"
+                  "grammar": "train 當動詞是「訓練」，當名詞是「火車」，要看上下文判斷詞性。",
+                  "ex2_en": "She trains for two hours every day before the competition.",
+                  "ex2_zh": "比賽前她每天訓練兩個小時。",
+                  "ex3_en": "We took the train to visit our grandparents.",
+                  "ex3_zh": "我們搭火車去拜訪祖父母。",
+                  "ex2_blank": "She ____ for two hours every day before the competition.",
+                  "ex3_blank": "We took the ____ to visit our grandparents."
                 },
                 {
                   "en": "sadly",
@@ -1432,7 +2349,13 @@
                   "zh": "令人遺憾地",
                   "ex_en": "Sadly, we have to cancel our picnic because of the rain.",
                   "ex_zh": "很遺憾，我們因為下雨必須取消野餐。",
-                  "ex_blank": "____, we have to cancel our picnic because of the rain."
+                  "ex_blank": "____, we have to cancel our picnic because of the rain.",
+                  "ex2_en": "Sadly, the old bookstore closed down last month.",
+                  "ex2_zh": "很遺憾，那家老書店上個月關門了。",
+                  "ex3_en": "She smiled sadly and said goodbye.",
+                  "ex3_zh": "她帶著哀傷的笑容說了再見。",
+                  "ex2_blank": "____, the old bookstore closed down last month.",
+                  "ex3_blank": "She smiled ____ and said goodbye."
                 },
                 {
                   "en": "team up with",
@@ -1441,7 +2364,13 @@
                   "ex_en": "The company decided to team up with a famous designer.",
                   "ex_zh": "這間公司決定和一位知名設計師合作。",
                   "ex_blank": "The company decided to ____ a famous designer.",
-                  "grammar": "team up with + 對象，表示「和…合作、組隊」。"
+                  "grammar": "team up with + 對象，表示「和…合作、組隊」。",
+                  "ex2_en": "Let's team up with the class next door for the game.",
+                  "ex2_zh": "我們跟隔壁班組隊參加這場比賽吧。",
+                  "ex3_en": "Two singers teamed up with each other for the new song.",
+                  "ex3_zh": "兩位歌手合作推出了這首新歌。",
+                  "ex2_blank": "Let's ____ the class next door for the game.",
+                  "ex3_blank": "Two singers ____ each other for the new song."
                 },
                 {
                   "en": "have to",
@@ -1450,7 +2379,13 @@
                   "ex_en": "I have to finish this report by Friday.",
                   "ex_zh": "我必須在星期五前完成這份報告。",
                   "ex_blank": "I ____ finish this report by Friday.",
-                  "grammar": "have to 是準助動詞，表示「必須」，第三人稱單數用 has to，過去式用 had to。"
+                  "grammar": "have to 是準助動詞，表示「必須」，第三人稱單數用 has to，過去式用 had to。",
+                  "ex2_en": "You have to wear a helmet when you ride a bike.",
+                  "ex2_zh": "騎腳踏車時你必須戴安全帽。",
+                  "ex3_en": "She had to leave early because of the storm.",
+                  "ex3_zh": "她因為暴風雨必須提早離開。",
+                  "ex2_blank": "You ____ wear a helmet when you ride a bike.",
+                  "ex3_blank": "She ____ leave early because of the storm."
                 },
                 {
                   "en": "stay up",
@@ -1459,7 +2394,13 @@
                   "ex_en": "I often stay up late to study for exams.",
                   "ex_zh": "我常常熬夜念書準備考試。",
                   "ex_blank": "I often ____ late to study for exams.",
-                  "grammar": "stay up 表示「熬夜」，後面常接 late 加強語氣。"
+                  "grammar": "stay up 表示「熬夜」，後面常接 late 加強語氣。",
+                  "ex2_en": "Don't stay up too late; you have school tomorrow.",
+                  "ex2_zh": "別熬夜太晚，你明天還要上學。",
+                  "ex3_en": "We stayed up all night talking and laughing.",
+                  "ex3_zh": "我們熬夜整晚聊天說笑。",
+                  "ex2_blank": "Don't ____ too late; you have school tomorrow.",
+                  "ex3_blank": "We ____ all night talking and laughing."
                 }
               ]
             }
@@ -1482,7 +2423,13 @@
                   "zh": "寺廟",
                   "ex_en": "We visited an ancient temple on our trip.",
                   "ex_zh": "我們在旅途中參觀了一座古老的寺廟。",
-                  "ex_blank": "We visited an ancient ____ on our trip."
+                  "ex_blank": "We visited an ancient ____ on our trip.",
+                  "ex2_en": "Many tourists visit this temple every year.",
+                  "ex2_zh": "每年都有許多遊客來參觀這座寺廟。",
+                  "ex3_en": "People burn incense when they pray at the temple.",
+                  "ex3_zh": "人們在寺廟裡祈禱時會燒香。",
+                  "ex2_blank": "Many tourists visit this ____ every year.",
+                  "ex3_blank": "People burn incense when they pray at the ____."
                 },
                 {
                   "en": "supermarket",
@@ -1490,7 +2437,13 @@
                   "zh": "超級市場",
                   "ex_en": "I need to go to the supermarket to buy some milk.",
                   "ex_zh": "我需要去超市買一些牛奶。",
-                  "ex_blank": "I need to go to the ____ to buy some milk."
+                  "ex_blank": "I need to go to the ____ to buy some milk.",
+                  "ex2_en": "This supermarket is open twenty-four hours a day.",
+                  "ex2_zh": "這間超市一天二十四小時都營業。",
+                  "ex3_en": "I ran into my teacher at the supermarket yesterday.",
+                  "ex3_zh": "我昨天在超市巧遇我的老師。",
+                  "ex2_blank": "This ____ is open twenty-four hours a day.",
+                  "ex3_blank": "I ran into my teacher at the ____ yesterday."
                 },
                 {
                   "en": "restaurant",
@@ -1498,7 +2451,13 @@
                   "zh": "餐廳",
                   "ex_en": "Let's try that new Italian restaurant tonight.",
                   "ex_zh": "我們今晚去試試那間新的義大利餐廳吧。",
-                  "ex_blank": "Let's try that new Italian ____ tonight."
+                  "ex_blank": "Let's try that new Italian ____ tonight.",
+                  "ex2_en": "We booked a table at the restaurant for eight o'clock.",
+                  "ex2_zh": "我們在那間餐廳訂了八點的位子。",
+                  "ex3_en": "The restaurant was full, so we had to wait.",
+                  "ex3_zh": "那間餐廳客滿了，所以我們必須等候。",
+                  "ex2_blank": "We booked a table at the ____ for eight o'clock.",
+                  "ex3_blank": "The ____ was full, so we had to wait."
                 },
                 {
                   "en": "bank",
@@ -1506,7 +2465,13 @@
                   "zh": "銀行",
                   "ex_en": "I need to go to the bank to deposit some money.",
                   "ex_zh": "我需要去銀行存一些錢。",
-                  "ex_blank": "I need to go to the ____ to deposit some money."
+                  "ex_blank": "I need to go to the ____ to deposit some money.",
+                  "ex2_en": "The bank closes at three thirty on weekdays.",
+                  "ex2_zh": "銀行平日三點半就關門了。",
+                  "ex3_en": "He works at a bank in the city center.",
+                  "ex3_zh": "他在市中心的一間銀行工作。",
+                  "ex2_blank": "The ____ closes at three thirty on weekdays.",
+                  "ex3_blank": "He works at a ____ in the city center."
                 },
                 {
                   "en": "church",
@@ -1514,7 +2479,13 @@
                   "zh": "教堂",
                   "ex_en": "The old church on the hill is a famous landmark.",
                   "ex_zh": "山丘上那座古老的教堂是知名地標。",
-                  "ex_blank": "The old ____ on the hill is a famous landmark."
+                  "ex_blank": "The old ____ on the hill is a famous landmark.",
+                  "ex2_en": "They got married in a small church by the sea.",
+                  "ex2_zh": "他們在海邊一座小教堂結婚。",
+                  "ex3_en": "We can hear the church bells from our house.",
+                  "ex3_zh": "我們在家裡就能聽到教堂的鐘聲。",
+                  "ex2_blank": "They got married in a small ____ by the sea.",
+                  "ex3_blank": "We can hear the ____ bells from our house."
                 },
                 {
                   "en": "bakery",
@@ -1522,7 +2493,13 @@
                   "zh": "麵包店",
                   "ex_en": "The smell from the bakery is wonderful.",
                   "ex_zh": "麵包店飄來的香味很棒。",
-                  "ex_blank": "The smell from the ____ is wonderful."
+                  "ex_blank": "The smell from the ____ is wonderful.",
+                  "ex2_en": "This bakery sells fresh bread every morning.",
+                  "ex2_zh": "這家麵包店每天早上都賣新鮮麵包。",
+                  "ex3_en": "We stopped by the bakery to buy a birthday cake.",
+                  "ex3_zh": "我們順道去麵包店買了個生日蛋糕。",
+                  "ex2_blank": "This ____ sells fresh bread every morning.",
+                  "ex3_blank": "We stopped by the ____ to buy a birthday cake."
                 },
                 {
                   "en": "bridge",
@@ -1530,7 +2507,13 @@
                   "zh": "橋",
                   "ex_en": "The Golden Gate Bridge is a famous landmark in San Francisco.",
                   "ex_zh": "金門大橋是舊金山知名的地標。",
-                  "ex_blank": "The Golden Gate ____ is a famous landmark in San Francisco."
+                  "ex_blank": "The Golden Gate ____ is a famous landmark in San Francisco.",
+                  "ex2_en": "The old bridge was replaced with a new one last year.",
+                  "ex2_zh": "那座舊橋去年被一座新橋取代了。",
+                  "ex3_en": "You can see the whole city from the bridge.",
+                  "ex3_zh": "從這座橋上可以看到整座城市。",
+                  "ex2_blank": "The old ____ was replaced with a new one last year.",
+                  "ex3_blank": "You can see the whole city from the ____."
                 },
                 {
                   "en": "hotel",
@@ -1538,7 +2521,13 @@
                   "zh": "飯店",
                   "ex_en": "We stayed at a nice hotel near the beach.",
                   "ex_zh": "我們住在海灘附近一間不錯的飯店。",
-                  "ex_blank": "We stayed at a nice ____ near the beach."
+                  "ex_blank": "We stayed at a nice ____ near the beach.",
+                  "ex2_en": "Our hotel room had a beautiful view of the sea.",
+                  "ex2_zh": "我們的飯店房間有美麗的海景。",
+                  "ex3_en": "The hotel offers free breakfast for all guests.",
+                  "ex3_zh": "這間飯店為所有房客提供免費早餐。",
+                  "ex2_blank": "Our ____ room had a beautiful view of the sea.",
+                  "ex3_blank": "The ____ offers free breakfast for all guests."
                 },
                 {
                   "en": "department store",
@@ -1546,7 +2535,13 @@
                   "zh": "百貨公司",
                   "ex_en": "You can buy almost everything at a department store.",
                   "ex_zh": "你幾乎可以在百貨公司買到所有東西。",
-                  "ex_blank": "You can buy almost everything at a ____."
+                  "ex_blank": "You can buy almost everything at a ____.",
+                  "ex2_en": "The department store is having a big sale this weekend.",
+                  "ex2_zh": "這間百貨公司這個週末有大特賣。",
+                  "ex3_en": "We met at the entrance of the department store.",
+                  "ex3_zh": "我們約在百貨公司的入口見面。",
+                  "ex2_blank": "The ____ is having a big sale this weekend.",
+                  "ex3_blank": "We met at the entrance of the ____."
                 },
                 {
                   "en": "metro station",
@@ -1554,7 +2549,13 @@
                   "zh": "捷運站",
                   "ex_en": "Which exit should I take at this metro station?",
                   "ex_zh": "這個捷運站我應該走哪個出口？",
-                  "ex_blank": "Which exit should I take at this ____?"
+                  "ex_blank": "Which exit should I take at this ____?",
+                  "ex2_en": "The metro station was crowded during rush hour.",
+                  "ex2_zh": "尖峰時段捷運站非常擁擠。",
+                  "ex3_en": "There's a bakery right next to the metro station.",
+                  "ex3_zh": "捷運站旁邊就有一間麵包店。",
+                  "ex2_blank": "The ____ was crowded during rush hour.",
+                  "ex3_blank": "There's a bakery right next to the ____."
                 },
                 {
                   "en": "bookstore",
@@ -1562,7 +2563,13 @@
                   "zh": "書店",
                   "ex_en": "I can spend hours just looking around in a bookstore.",
                   "ex_zh": "我可以在書店逛好幾個小時。",
-                  "ex_blank": "I can spend hours just looking around in a ____."
+                  "ex_blank": "I can spend hours just looking around in a ____.",
+                  "ex2_en": "The bookstore near school sells cheap used books.",
+                  "ex2_zh": "學校附近那家書店賣便宜的二手書。",
+                  "ex3_en": "I found an interesting comic book at the bookstore.",
+                  "ex3_zh": "我在書店發現了一本有趣的漫畫。",
+                  "ex2_blank": "The ____ near school sells cheap used books.",
+                  "ex3_blank": "I found an interesting comic book at the ____."
                 }
               ]
             },
@@ -1578,7 +2585,13 @@
                   "zh": "郵局",
                   "ex_en": "Can you mail this letter at the post office for me?",
                   "ex_zh": "你可以幫我在郵局寄這封信嗎？",
-                  "ex_blank": "Can you mail this letter at the ____ for me?"
+                  "ex_blank": "Can you mail this letter at the ____ for me?",
+                  "ex2_en": "The post office is closed on Sundays.",
+                  "ex2_zh": "郵局星期天不營業。",
+                  "ex3_en": "I need to go to the post office to buy stamps.",
+                  "ex3_zh": "我需要去郵局買郵票。",
+                  "ex2_blank": "The ____ is closed on Sundays.",
+                  "ex3_blank": "I need to go to the ____ to buy stamps."
                 },
                 {
                   "en": "flower shop",
@@ -1586,7 +2599,13 @@
                   "zh": "花店",
                   "ex_en": "I bought these beautiful roses from that flower shop.",
                   "ex_zh": "我從那間花店買了這些漂亮的玫瑰。",
-                  "ex_blank": "I bought these beautiful roses from that ____."
+                  "ex_blank": "I bought these beautiful roses from that ____.",
+                  "ex2_en": "There's a flower shop on the corner of this street.",
+                  "ex2_zh": "這條街的轉角有一間花店。",
+                  "ex3_en": "She works part-time at a flower shop on weekends.",
+                  "ex3_zh": "她週末在一間花店打工。",
+                  "ex2_blank": "There's a ____ on the corner of this street.",
+                  "ex3_blank": "She works part-time at a ____ on weekends."
                 },
                 {
                   "en": "trip",
@@ -1594,7 +2613,13 @@
                   "zh": "旅行",
                   "ex_en": "Our family is planning a road trip this summer.",
                   "ex_zh": "我們家今年夏天正在計畫一趟公路旅行。",
-                  "ex_blank": "Our family is planning a road ____ this summer."
+                  "ex_blank": "Our family is planning a road ____ this summer.",
+                  "ex2_en": "How was your trip to Japan last month?",
+                  "ex2_zh": "你上個月去日本的旅行怎麼樣？",
+                  "ex3_en": "We took lots of photos during our trip to the beach.",
+                  "ex3_zh": "我們在海灘之旅時拍了很多照片。",
+                  "ex2_blank": "How was your ____ to Japan last month?",
+                  "ex3_blank": "We took lots of photos during our ____ to the beach."
                 },
                 {
                   "en": "during",
@@ -1603,7 +2628,13 @@
                   "ex_en": "Please be quiet during the movie.",
                   "ex_zh": "電影播放期間請保持安靜。",
                   "ex_blank": "Please be quiet ____ the movie.",
-                  "grammar": "during 後面接名詞，表示「在…期間」；若要接子句則改用 while。"
+                  "grammar": "during 後面接名詞，表示「在…期間」；若要接子句則改用 while。",
+                  "ex2_en": "I fell asleep during the boring meeting.",
+                  "ex2_zh": "我在那場無聊的會議中睡著了。",
+                  "ex3_en": "Many shops close early during the holidays.",
+                  "ex3_zh": "許多商店在假期期間會提早關門。",
+                  "ex2_blank": "I fell asleep ____ the boring meeting.",
+                  "ex3_blank": "Many shops close early ____ the holidays."
                 },
                 {
                   "en": "vacation",
@@ -1611,7 +2642,13 @@
                   "zh": "假期",
                   "ex_en": "Where are you going for your winter vacation?",
                   "ex_zh": "你寒假要去哪裡？",
-                  "ex_blank": "Where are you going for your winter ____?"
+                  "ex_blank": "Where are you going for your winter ____?",
+                  "ex2_en": "We spent our vacation at the beach with our cousins.",
+                  "ex2_zh": "我們和表親一起在海灘度過假期。",
+                  "ex3_en": "She is on vacation this week, so she's not in the office.",
+                  "ex3_zh": "她這星期在休假，所以不在辦公室。",
+                  "ex2_blank": "We spent our ____ at the beach with our cousins.",
+                  "ex3_blank": "She is on ____ this week, so she's not in the office."
                 },
                 {
                   "en": "will / would",
@@ -1620,7 +2657,13 @@
                   "ex_en": "I will be there at 7 o'clock sharp.",
                   "ex_zh": "我七點整會到那裡。",
                   "ex_blank": "I ____ be there at 7 o'clock sharp.",
-                  "grammar": "will 是未來式助動詞，would 是其過去式，也常用於委婉語氣，如 Would you…?"
+                  "grammar": "will 是未來式助動詞，would 是其過去式，也常用於委婉語氣，如 Would you…?",
+                  "ex2_en": "It will probably rain tomorrow afternoon.",
+                  "ex2_zh": "明天下午可能會下雨。",
+                  "ex3_en": "Would you like some more tea?",
+                  "ex3_zh": "你想再喝一點茶嗎？",
+                  "ex2_blank": "It ____ probably rain tomorrow afternoon.",
+                  "ex3_blank": "____ you like some more tea?"
                 },
                 {
                   "en": "own",
@@ -1630,7 +2673,13 @@
                   "ex_en": "My uncle used to own a small restaurant.",
                   "ex_zh": "我叔叔以前擁有一間小餐廳。",
                   "ex_blank": "My uncle used to ____ a small restaurant.",
-                  "grammar": "own 當動詞是「擁有」；當形容詞用 my/your/his own 等所有格加強「自己的」語氣。"
+                  "grammar": "own 當動詞是「擁有」；當形容詞用 my/your/his own 等所有格加強「自己的」語氣。",
+                  "ex2_en": "She wants to have her own bedroom someday.",
+                  "ex2_zh": "她希望有一天能有自己的房間。",
+                  "ex3_en": "He built his own website to sell his art.",
+                  "ex3_zh": "他建立了自己的網站來賣他的藝術作品。",
+                  "ex2_blank": "She wants to have her ____ bedroom someday.",
+                  "ex3_blank": "He built his ____ website to sell his art."
                 },
                 {
                   "en": "local",
@@ -1638,7 +2687,13 @@
                   "zh": "當地的",
                   "ex_en": "We tried some local food at the night market.",
                   "ex_zh": "我們在夜市嚐了一些當地美食。",
-                  "ex_blank": "We tried some ____ food at the night market."
+                  "ex_blank": "We tried some ____ food at the night market.",
+                  "ex2_en": "The local newspaper reported on the school festival.",
+                  "ex2_zh": "當地報紙報導了這場學校園遊會。",
+                  "ex3_en": "We support local farmers by buying their vegetables.",
+                  "ex3_zh": "我們透過購買在地農夫的蔬菜來支持他們。",
+                  "ex2_blank": "The ____ newspaper reported on the school festival.",
+                  "ex3_blank": "We support ____ farmers by buying their vegetables."
                 },
                 {
                   "en": "tour",
@@ -1646,7 +2701,13 @@
                   "zh": "旅遊行程",
                   "ex_en": "We joined a guided tour of the city.",
                   "ex_zh": "我們參加了這座城市的導覽行程。",
-                  "ex_blank": "We joined a guided ____ of the city."
+                  "ex_blank": "We joined a guided ____ of the city.",
+                  "ex2_en": "The tour includes a visit to three famous temples.",
+                  "ex2_zh": "這趟行程包含參觀三座知名寺廟。",
+                  "ex3_en": "Our teacher gave us a tour of the science museum.",
+                  "ex3_zh": "老師帶我們導覽了科學博物館。",
+                  "ex2_blank": "The ____ includes a visit to three famous temples.",
+                  "ex3_blank": "Our teacher gave us a ____ of the science museum."
                 },
                 {
                   "en": "spend / spent",
@@ -1655,7 +2716,13 @@
                   "ex_en": "How much time do you spend on homework every day?",
                   "ex_zh": "你每天花多少時間寫作業？",
                   "ex_blank": "How much time do you ____ on homework every day?",
-                  "grammar": "spend 的過去式是 spent，常用句型 spend + 時間/金錢 + on N 或 + Ving。"
+                  "grammar": "spend 的過去式是 spent，常用句型 spend + 時間/金錢 + on N 或 + Ving。",
+                  "ex2_en": "We spent the whole weekend cleaning the house.",
+                  "ex2_zh": "我們整個週末都在打掃房子。",
+                  "ex3_en": "She spent all her money on the new phone.",
+                  "ex3_zh": "她把所有的錢都花在那支新手機上。",
+                  "ex2_blank": "We ____ the whole weekend cleaning the house.",
+                  "ex3_blank": "She ____ all her money on the new phone."
                 }
               ]
             },
@@ -1671,7 +2738,13 @@
                   "zh": "千",
                   "ex_en": "The concert tickets cost over a thousand dollars.",
                   "ex_zh": "演唱會門票要價超過一千元。",
-                  "ex_blank": "The concert tickets cost over a ____ dollars."
+                  "ex_blank": "The concert tickets cost over a ____ dollars.",
+                  "ex2_en": "More than a thousand people joined the charity run.",
+                  "ex2_zh": "超過一千人參加了這場慈善路跑。",
+                  "ex3_en": "The old vase is worth thousands of dollars.",
+                  "ex3_zh": "這個古董花瓶價值好幾千元。",
+                  "ex2_blank": "More than a ____ people joined the charity run.",
+                  "ex3_blank": "The old vase is worth ____ of dollars."
                 },
                 {
                   "en": "each",
@@ -1681,7 +2754,13 @@
                   "ex_en": "Please give each person one of these papers.",
                   "ex_zh": "請給每個人一張這種紙。",
                   "ex_blank": "Please give ____ person one of these papers.",
-                  "grammar": "each 當形容詞後面接單數名詞（each person）；當代名詞可單獨使用（each of them）。"
+                  "grammar": "each 當形容詞後面接單數名詞（each person）；當代名詞可單獨使用（each of them）。",
+                  "ex2_en": "Each student needs to bring their own lunch.",
+                  "ex2_zh": "每位學生都需要自己帶午餐。",
+                  "ex3_en": "Each of the boxes contains ten pencils.",
+                  "ex3_zh": "每個箱子裡都裝了十支鉛筆。",
+                  "ex2_blank": "____ student needs to bring their own lunch.",
+                  "ex3_blank": "____ of the boxes contains ten pencils."
                 },
                 {
                   "en": "pay / paid",
@@ -1690,7 +2769,13 @@
                   "ex_en": "Did you remember to pay the electricity bill?",
                   "ex_zh": "你有記得繳電費嗎？",
                   "ex_blank": "Did you remember to ____ the electricity bill?",
-                  "grammar": "pay 的過去式是 paid，pay for + 東西 表示「付錢買…」。"
+                  "grammar": "pay 的過去式是 paid，pay for + 東西 表示「付錢買…」。",
+                  "ex2_en": "I paid for dinner with my credit card.",
+                  "ex2_zh": "我用信用卡付了晚餐的錢。",
+                  "ex3_en": "How much did you pay for that jacket?",
+                  "ex3_zh": "你那件外套花了多少錢買的？",
+                  "ex2_blank": "I ____ for dinner with my credit card.",
+                  "ex3_blank": "How much did you ____ for that jacket?"
                 },
                 {
                   "en": "tomorrow",
@@ -1699,7 +2784,13 @@
                   "zh": "明天",
                   "ex_en": "Tomorrow is the first day of the new year.",
                   "ex_zh": "明天是新年的第一天。",
-                  "ex_blank": "____ is the first day of the new year."
+                  "ex_blank": "____ is the first day of the new year.",
+                  "ex2_en": "Let's finish this project tomorrow morning.",
+                  "ex2_zh": "我們明天早上再完成這個專案吧。",
+                  "ex3_en": "I have a big test tomorrow, so I need to study tonight.",
+                  "ex3_zh": "我明天有一場重要考試，所以今晚要念書。",
+                  "ex2_blank": "Let's finish this project ____ morning.",
+                  "ex3_blank": "I have a big test ____, so I need to study tonight."
                 },
                 {
                   "en": "almost",
@@ -1707,7 +2798,13 @@
                   "zh": "幾乎",
                   "ex_en": "I'm almost finished with my work.",
                   "ex_zh": "我的工作幾乎完成了。",
-                  "ex_blank": "I'm ____ finished with my work."
+                  "ex_blank": "I'm ____ finished with my work.",
+                  "ex2_en": "We almost missed the last train home.",
+                  "ex2_zh": "我們差點錯過回家的最後一班火車。",
+                  "ex3_en": "It's almost time for dinner.",
+                  "ex3_zh": "差不多快到吃晚餐的時間了。",
+                  "ex2_blank": "We ____ missed the last train home.",
+                  "ex3_blank": "It's ____ time for dinner."
                 },
                 {
                   "en": "decide",
@@ -1715,7 +2812,13 @@
                   "zh": "決定",
                   "ex_en": "Have you decided where to go for dinner?",
                   "ex_zh": "你決定好要去哪裡吃晚餐了嗎？",
-                  "ex_blank": "Have you ____ where to go for dinner?"
+                  "ex_blank": "Have you ____ where to go for dinner?",
+                  "ex2_en": "It's your choice; you can decide for yourself.",
+                  "ex2_zh": "這是你的選擇，你可以自己決定。",
+                  "ex3_en": "We decided to walk instead of taking the bus.",
+                  "ex3_zh": "我們決定用走的，而不是搭公車。",
+                  "ex2_blank": "It's your choice; you can ____ for yourself.",
+                  "ex3_blank": "We ____ to walk instead of taking the bus."
                 },
                 {
                   "en": "cost / cost",
@@ -1724,7 +2827,13 @@
                   "ex_en": "How much did your new phone cost?",
                   "ex_zh": "你的新手機花了多少錢？",
                   "ex_blank": "How much did your new phone ____?",
-                  "grammar": "cost 現在式與過去式同形（cost-cost-cost），主詞通常是物品或事情。"
+                  "grammar": "cost 現在式與過去式同形（cost-cost-cost），主詞通常是物品或事情。",
+                  "ex2_en": "The repair will cost about two thousand dollars.",
+                  "ex2_zh": "這項維修大約要花費兩千元。",
+                  "ex3_en": "The tickets don't cost much during the weekday.",
+                  "ex3_zh": "平日的票價不會太貴。",
+                  "ex2_blank": "The repair will ____ about two thousand dollars.",
+                  "ex3_blank": "The tickets don't ____ much during the weekday."
                 },
                 {
                   "en": "fan",
@@ -1732,7 +2841,13 @@
                   "zh": "……迷；電扇",
                   "ex_en": "It's hot in here; could you please turn on the fan?",
                   "ex_zh": "這裡好熱，可以請你打開電扇嗎？",
-                  "ex_blank": "It's hot in here; could you please turn on the ____?"
+                  "ex_blank": "It's hot in here; could you please turn on the ____?",
+                  "ex2_en": "He is a huge fan of that basketball team.",
+                  "ex2_zh": "他是那支籃球隊的超級粉絲。",
+                  "ex3_en": "The electric fan helped cool the room down.",
+                  "ex3_zh": "電風扇幫忙讓房間變涼快了。",
+                  "ex2_blank": "He is a huge ____ of that basketball team.",
+                  "ex3_blank": "The electric ____ helped cool the room down."
                 },
                 {
                   "en": "leave for",
@@ -1741,7 +2856,13 @@
                   "ex_en": "What time do we need to leave for the airport?",
                   "ex_zh": "我們幾點需要出發前往機場？",
                   "ex_blank": "What time do we need to ____ the airport?",
-                  "grammar": "leave for + 地方 表示「前往、動身去…」，注意與 leave + 地方（離開某地）意思不同。"
+                  "grammar": "leave for + 地方 表示「前往、動身去…」，注意與 leave + 地方（離開某地）意思不同。",
+                  "ex2_en": "We will leave for the train station at six.",
+                  "ex2_zh": "我們六點會出發前往火車站。",
+                  "ex3_en": "She left for London last night.",
+                  "ex3_zh": "她昨晚動身前往倫敦了。",
+                  "ex2_blank": "We will ____ the train station at six.",
+                  "ex3_blank": "She ____ London last night."
                 },
                 {
                   "en": "vendor",
@@ -1749,7 +2870,13 @@
                   "zh": "攤販",
                   "ex_en": "The street vendor sells delicious hot dogs.",
                   "ex_zh": "那個街頭攤販賣的熱狗很好吃。",
-                  "ex_blank": "The street ____ sells delicious hot dogs."
+                  "ex_blank": "The street ____ sells delicious hot dogs.",
+                  "ex2_en": "A vendor was selling fresh fruit near the school gate.",
+                  "ex2_zh": "一位攤販在校門口附近賣新鮮水果。",
+                  "ex3_en": "The night market has hundreds of small vendors.",
+                  "ex3_zh": "這座夜市有數百個小攤販。",
+                  "ex2_blank": "A ____ was selling fresh fruit near the school gate.",
+                  "ex3_blank": "The night market has hundreds of small ____."
                 }
               ]
             },
@@ -1765,7 +2892,13 @@
                   "zh": "迅速的",
                   "ex_en": "We had a quick lunch before going back to work.",
                   "ex_zh": "我們在回去工作前快速吃了午餐。",
-                  "ex_blank": "We had a ____ lunch before going back to work."
+                  "ex_blank": "We had a ____ lunch before going back to work.",
+                  "ex2_en": "Let's take a quick look at the map before we go.",
+                  "ex2_zh": "我們出發前先快速看一下地圖吧。",
+                  "ex3_en": "She gave a quick answer without thinking much.",
+                  "ex3_zh": "她沒想太多就快速回答了。",
+                  "ex2_blank": "Let's take a ____ look at the map before we go.",
+                  "ex3_blank": "She gave a ____ answer without thinking much."
                 },
                 {
                   "en": "stall",
@@ -1773,7 +2906,13 @@
                   "zh": "攤位",
                   "ex_en": "My favorite food stall is the one that sells noodles.",
                   "ex_zh": "我最喜歡的美食攤位是賣麵的那家。",
-                  "ex_blank": "My favorite food ____ is the one that sells noodles."
+                  "ex_blank": "My favorite food ____ is the one that sells noodles.",
+                  "ex2_en": "The fruit stall was closed when we got there.",
+                  "ex2_zh": "我們到的時候水果攤已經關了。",
+                  "ex3_en": "He set up his own stall at the weekend market.",
+                  "ex3_zh": "他在週末市集擺了自己的攤位。",
+                  "ex2_blank": "The fruit ____ was closed when we got there.",
+                  "ex3_blank": "He set up his own ____ at the weekend market."
                 },
                 {
                   "en": "careful",
@@ -1781,7 +2920,13 @@
                   "zh": "小心的",
                   "ex_en": "You need to be careful when you cross the street.",
                   "ex_zh": "過馬路時你需要小心。",
-                  "ex_blank": "You need to be ____ when you cross the street."
+                  "ex_blank": "You need to be ____ when you cross the street.",
+                  "ex2_en": "Be careful with that hot pan.",
+                  "ex2_zh": "小心那個燙的平底鍋。",
+                  "ex3_en": "She is always careful about spending money.",
+                  "ex3_zh": "她花錢一向都很謹慎。",
+                  "ex2_blank": "Be ____ with that hot pan.",
+                  "ex3_blank": "She is always ____ about spending money."
                 },
                 {
                   "en": "boat",
@@ -1789,7 +2934,13 @@
                   "zh": "小船",
                   "ex_en": "We rented a small boat to go fishing on the lake.",
                   "ex_zh": "我們租了一艘小船到湖上釣魚。",
-                  "ex_blank": "We rented a small ____ to go fishing on the lake."
+                  "ex_blank": "We rented a small ____ to go fishing on the lake.",
+                  "ex2_en": "The boat sailed slowly across the calm lake.",
+                  "ex2_zh": "小船緩緩地駛過平靜的湖面。",
+                  "ex3_en": "We waved at the people on the boat.",
+                  "ex3_zh": "我們向船上的人揮手。",
+                  "ex2_blank": "The ____ sailed slowly across the calm lake.",
+                  "ex3_blank": "We waved at the people on the ____."
                 },
                 {
                   "en": "sell / sold",
@@ -1798,7 +2949,13 @@
                   "ex_en": "That shop used to sell old books and magazines.",
                   "ex_zh": "那間店以前賣舊書和雜誌。",
                   "ex_blank": "That shop used to ____ old books and magazines.",
-                  "grammar": "sell 的過去式是 sold，sell 的主詞是賣家；buy 才是買家。"
+                  "grammar": "sell 的過去式是 sold，sell 的主詞是賣家；buy 才是買家。",
+                  "ex2_en": "The store sold out of tickets within an hour.",
+                  "ex2_zh": "這間店的票一小時內就賣光了。",
+                  "ex3_en": "They sell handmade jewelry at that small stall.",
+                  "ex3_zh": "他們在那個小攤位賣手工飾品。",
+                  "ex2_blank": "The store ____ out of tickets within an hour.",
+                  "ex3_blank": "They ____ handmade jewelry at that small stall."
                 },
                 {
                   "en": "low",
@@ -1806,7 +2963,13 @@
                   "zh": "低的；矮的",
                   "ex_en": "He spoke in a low voice so no one could hear.",
                   "ex_zh": "他用很低的聲音說話，沒人聽得到。",
-                  "ex_blank": "He spoke in a ____ voice so no one could hear."
+                  "ex_blank": "He spoke in a ____ voice so no one could hear.",
+                  "ex2_en": "The bridge is too low for big trucks to pass.",
+                  "ex2_zh": "這座橋太低了，大卡車無法通過。",
+                  "ex3_en": "Prices at this shop are lower than at the mall.",
+                  "ex3_zh": "這家店的價格比在購物中心低。",
+                  "ex2_blank": "The bridge is too ____ for big trucks to pass.",
+                  "ex3_blank": "Prices at this shop are ____ than at the mall."
                 },
                 {
                   "en": "price",
@@ -1814,7 +2977,13 @@
                   "zh": "價格；代價",
                   "ex_en": "The price of gas has gone up again.",
                   "ex_zh": "油價又上漲了。",
-                  "ex_blank": "The ____ of gas has gone up again."
+                  "ex_blank": "The ____ of gas has gone up again.",
+                  "ex2_en": "We compared the prices before buying the laptop.",
+                  "ex2_zh": "我們買筆電前先比較了價格。",
+                  "ex3_en": "The price includes tax and delivery.",
+                  "ex3_zh": "這個價格已包含稅金和運費。",
+                  "ex2_blank": "We compared the ____ before buying the laptop.",
+                  "ex3_blank": "The ____ includes tax and delivery."
                 },
                 {
                   "en": "remember",
@@ -1822,7 +2991,13 @@
                   "zh": "記得",
                   "ex_en": "I can't remember where I put my keys.",
                   "ex_zh": "我不記得我把鑰匙放在哪裡了。",
-                  "ex_blank": "I can't ____ where I put my keys."
+                  "ex_blank": "I can't ____ where I put my keys.",
+                  "ex2_en": "Please remember to lock the door when you leave.",
+                  "ex2_zh": "離開時請記得鎖門。",
+                  "ex3_en": "I still remember the first day we met.",
+                  "ex3_zh": "我還記得我們第一次見面的那天。",
+                  "ex2_blank": "Please ____ to lock the door when you leave.",
+                  "ex3_blank": "I still ____ the first day we met."
                 },
                 {
                   "en": "cash",
@@ -1830,7 +3005,13 @@
                   "zh": "現金",
                   "ex_en": "Do you prefer to pay by cash or credit card?",
                   "ex_zh": "你比較喜歡付現金還是刷卡？",
-                  "ex_blank": "Do you prefer to pay by ____ or credit card?"
+                  "ex_blank": "Do you prefer to pay by ____ or credit card?",
+                  "ex2_en": "I don't have enough cash; can I use my card?",
+                  "ex2_zh": "我沒有足夠的現金，可以刷卡嗎？",
+                  "ex3_en": "The vendor only accepts cash, not credit cards.",
+                  "ex3_zh": "那位攤販只收現金，不收信用卡。",
+                  "ex2_blank": "I don't have enough ____; can I use my card?",
+                  "ex3_blank": "The vendor only accepts ____, not credit cards."
                 },
                 {
                   "en": "wonderful",
@@ -1838,7 +3019,13 @@
                   "zh": "美好的",
                   "ex_en": "We had a wonderful time at the party last night.",
                   "ex_zh": "我們昨晚在派對上度過了美好的時光。",
-                  "ex_blank": "We had a ____ time at the party last night."
+                  "ex_blank": "We had a ____ time at the party last night.",
+                  "ex2_en": "What a wonderful surprise to see you here!",
+                  "ex2_zh": "在這裡見到你真是個美好的驚喜！",
+                  "ex3_en": "The trip to the mountains was truly wonderful.",
+                  "ex3_zh": "這趟山區旅行真的很美好。",
+                  "ex2_blank": "What a ____ surprise to see you here!",
+                  "ex3_blank": "The trip to the mountains was truly ____."
                 }
               ]
             }
@@ -1861,7 +3048,13 @@
                   "zh": "飛機",
                   "ex_en": "The airplane is preparing for takeoff.",
                   "ex_zh": "飛機正準備起飛。",
-                  "ex_blank": "The ____ is preparing for takeoff."
+                  "ex_blank": "The ____ is preparing for takeoff.",
+                  "ex2_en": "We booked our plane tickets two months in advance.",
+                  "ex2_zh": "我們提前兩個月訂了機票。",
+                  "ex3_en": "The airplane landed safely despite the storm.",
+                  "ex3_zh": "儘管有暴風雨，飛機還是安全降落了。",
+                  "ex2_blank": "We booked our ____ tickets two months in advance.",
+                  "ex3_blank": "The ____ landed safely despite the storm."
                 },
                 {
                   "en": "bicycle / bike",
@@ -1869,7 +3062,13 @@
                   "zh": "腳踏車",
                   "ex_en": "Riding a bicycle is a great form of exercise.",
                   "ex_zh": "騎腳踏車是很好的運動方式。",
-                  "ex_blank": "Riding a ____ is a great form of exercise."
+                  "ex_blank": "Riding a ____ is a great form of exercise.",
+                  "ex2_en": "She rides her bike to school every day.",
+                  "ex2_zh": "她每天騎腳踏車上學。",
+                  "ex3_en": "My bicycle has a flat tire, so I need to fix it.",
+                  "ex3_zh": "我的腳踏車輪胎沒氣了，我需要修理它。",
+                  "ex2_blank": "She rides her ____ to school every day.",
+                  "ex3_blank": "My ____ has a flat tire, so I need to fix it."
                 },
                 {
                   "en": "truck",
@@ -1877,7 +3076,13 @@
                   "zh": "卡車",
                   "ex_en": "A big red truck was parked in front of our house.",
                   "ex_zh": "一輛紅色大卡車停在我們家門前。",
-                  "ex_blank": "A big red ____ was parked in front of our house."
+                  "ex_blank": "A big red ____ was parked in front of our house.",
+                  "ex2_en": "The truck driver delivered boxes to every house on the street.",
+                  "ex2_zh": "卡車司機把箱子送到這條街上的每一戶人家。",
+                  "ex3_en": "A garbage truck comes by our neighborhood every evening.",
+                  "ex3_zh": "垃圾車每天傍晚都會經過我們的社區。",
+                  "ex2_blank": "The ____ driver delivered boxes to every house on the street.",
+                  "ex3_blank": "A garbage ____ comes by our neighborhood every evening."
                 },
                 {
                   "en": "scooter",
@@ -1885,7 +3090,13 @@
                   "zh": "輕型機車",
                   "ex_en": "It's more convenient to ride a scooter in the city.",
                   "ex_zh": "在城市裡騎輕型機車比較方便。",
-                  "ex_blank": "It's more convenient to ride a ____ in the city."
+                  "ex_blank": "It's more convenient to ride a ____ in the city.",
+                  "ex2_en": "He rides his scooter to work to save money on gas.",
+                  "ex2_zh": "他騎機車上班以省油錢。",
+                  "ex3_en": "You need a license to ride a scooter in Taiwan.",
+                  "ex3_zh": "在台灣騎機車需要駕照。",
+                  "ex2_blank": "He rides his ____ to work to save money on gas.",
+                  "ex3_blank": "You need a license to ride a ____ in Taiwan."
                 },
                 {
                   "en": "motorcycle",
@@ -1893,7 +3104,13 @@
                   "zh": "重型機車",
                   "ex_en": "He loves the speed and sound of his new motorcycle.",
                   "ex_zh": "他喜歡他新重機的速度感和聲音。",
-                  "ex_blank": "He loves the speed and sound of his new ____."
+                  "ex_blank": "He loves the speed and sound of his new ____.",
+                  "ex2_en": "He always wears a helmet when riding his motorcycle.",
+                  "ex2_zh": "他騎重機時總是戴安全帽。",
+                  "ex3_en": "The motorcycle made a loud noise as it passed by.",
+                  "ex3_zh": "那輛重機經過時發出很大的聲音。",
+                  "ex2_blank": "He always wears a helmet when riding his ____.",
+                  "ex3_blank": "The ____ made a loud noise as it passed by."
                 },
                 {
                   "en": "taxi",
@@ -1901,7 +3118,13 @@
                   "zh": "計程車",
                   "ex_en": "It's raining; let's just call a taxi.",
                   "ex_zh": "下雨了，我們就叫計程車吧。",
-                  "ex_blank": "It's raining; let's just call a ____."
+                  "ex_blank": "It's raining; let's just call a ____.",
+                  "ex2_en": "We took a taxi to the airport because we were late.",
+                  "ex2_zh": "我們因為遲到而搭計程車去機場。",
+                  "ex3_en": "The taxi driver knew a shortcut to the hotel.",
+                  "ex3_zh": "計程車司機知道一條到飯店的捷徑。",
+                  "ex2_blank": "We took a ____ to the airport because we were late.",
+                  "ex3_blank": "The ____ driver knew a shortcut to the hotel."
                 },
                 {
                   "en": "ship",
@@ -1909,7 +3132,13 @@
                   "zh": "船；艦",
                   "ex_en": "The large ship is carrying goods from other countries.",
                   "ex_zh": "這艘大船正載運著來自其他國家的貨物。",
-                  "ex_blank": "The large ____ is carrying goods from other countries."
+                  "ex_blank": "The large ____ is carrying goods from other countries.",
+                  "ex2_en": "They traveled to Europe on a big ship.",
+                  "ex2_zh": "他們搭一艘大船去了歐洲。",
+                  "ex3_en": "The ship arrived at the port early in the morning.",
+                  "ex3_zh": "這艘船一大早就抵達了港口。",
+                  "ex2_blank": "They traveled to Europe on a big ____.",
+                  "ex3_blank": "The ____ arrived at the port early in the morning."
                 },
                 {
                   "en": "north",
@@ -1919,7 +3148,13 @@
                   "ex_en": "The wind is coming from the north today.",
                   "ex_zh": "今天風是從北方吹來的。",
                   "ex_blank": "The wind is coming from the ____ today.",
-                  "grammar": "north 可當名詞（北方）、形容詞（北方的）或副詞（朝北），依句中位置判斷詞性。"
+                  "grammar": "north 可當名詞（北方）、形容詞（北方的）或副詞（朝北），依句中位置判斷詞性。",
+                  "ex2_en": "We drove north for two hours to reach the mountains.",
+                  "ex2_zh": "我們往北開了兩個小時的車才到達山區。",
+                  "ex3_en": "Canada is to the north of the United States.",
+                  "ex3_zh": "加拿大位於美國的北方。",
+                  "ex2_blank": "We drove ____ for two hours to reach the mountains.",
+                  "ex3_blank": "Canada is to the ____ of the United States."
                 },
                 {
                   "en": "west",
@@ -1928,7 +3163,13 @@
                   "zh": "西方(的)；朝西",
                   "ex_en": "The sun sets in the west.",
                   "ex_zh": "太陽從西方落下。",
-                  "ex_blank": "The sun sets in the ____."
+                  "ex_blank": "The sun sets in the ____.",
+                  "ex2_en": "The hotel faces west, so we can see beautiful sunsets.",
+                  "ex2_zh": "這間飯店朝西，所以我們可以看到美麗的夕陽。",
+                  "ex3_en": "Drive west for about ten minutes to reach the beach.",
+                  "ex3_zh": "往西開約十分鐘就能到海灘。",
+                  "ex2_blank": "The hotel faces ____, so we can see beautiful sunsets.",
+                  "ex3_blank": "Drive ____ for about ten minutes to reach the beach."
                 }
               ]
             },
@@ -1946,7 +3187,13 @@
                   "ex_en": "The birds are flying south for the winter.",
                   "ex_zh": "鳥兒正飛往南方過冬。",
                   "ex_blank": "The birds are flying ____ for the winter.",
-                  "grammar": "south/north/east/west 當副詞時直接放在動詞後面，不需加介系詞，如 fly south。"
+                  "grammar": "south/north/east/west 當副詞時直接放在動詞後面，不需加介系詞，如 fly south。",
+                  "ex2_en": "Taiwan is south of Japan.",
+                  "ex2_zh": "台灣位於日本的南方。",
+                  "ex3_en": "We are moving to a city in the south next year.",
+                  "ex3_zh": "我們明年要搬到南部的一座城市。",
+                  "ex2_blank": "Taiwan is ____ of Japan.",
+                  "ex3_blank": "We are moving to a city in the ____ next year."
                 },
                 {
                   "en": "east",
@@ -1955,7 +3202,13 @@
                   "zh": "東方(的)；朝東",
                   "ex_en": "The sun rises in the east.",
                   "ex_zh": "太陽從東方升起。",
-                  "ex_blank": "The sun rises in the ____."
+                  "ex_blank": "The sun rises in the ____.",
+                  "ex2_en": "Our new apartment is on the east side of the city.",
+                  "ex2_zh": "我們的新公寓在城市的東邊。",
+                  "ex3_en": "They traveled east to visit the coastal towns.",
+                  "ex3_zh": "他們往東旅行去參觀沿海城鎮。",
+                  "ex2_blank": "Our new apartment is on the ____ side of the city.",
+                  "ex3_blank": "They traveled ____ to visit the coastal towns."
                 },
                 {
                   "en": "drive / drove",
@@ -1964,7 +3217,13 @@
                   "ex_en": "My father drove us to the airport.",
                   "ex_zh": "我爸爸開車載我們去機場。",
                   "ex_blank": "My father ____ us to the airport.",
-                  "grammar": "drive 的過去式是 drove，drive + 人 + to + 地方 表示「開車載某人去…」。"
+                  "grammar": "drive 的過去式是 drove，drive + 人 + to + 地方 表示「開車載某人去…」。",
+                  "ex2_en": "Can you drive me to the train station tomorrow?",
+                  "ex2_zh": "你明天可以開車載我去火車站嗎？",
+                  "ex3_en": "She drove all the way to the countryside alone.",
+                  "ex3_zh": "她獨自一人開車到鄉下去了。",
+                  "ex2_blank": "Can you ____ me to the train station tomorrow?",
+                  "ex3_blank": "She ____ all the way to the countryside alone."
                 },
                 {
                   "en": "ride / rode",
@@ -1974,7 +3233,13 @@
                   "ex_en": "We rode our bikes all the way to the park.",
                   "ex_zh": "我們一路騎腳踏車到公園。",
                   "ex_blank": "We ____ our bikes all the way to the park.",
-                  "grammar": "ride 當動詞的過去式是 rode；當名詞表示「搭乘、乘坐一趟」，如 go for a ride。"
+                  "grammar": "ride 當動詞的過去式是 rode；當名詞表示「搭乘、乘坐一趟」，如 go for a ride。",
+                  "ex2_en": "He rode his horse across the wide field.",
+                  "ex2_zh": "他騎著馬穿過那片廣闊的田野。",
+                  "ex3_en": "Would you like to go for a ride with us?",
+                  "ex3_zh": "你想跟我們一起出去兜風嗎？",
+                  "ex2_blank": "He ____ his horse across the wide field.",
+                  "ex3_blank": "Would you like to go for a ____ with us?"
                 },
                 {
                   "en": "row",
@@ -1982,7 +3247,13 @@
                   "zh": "划(船)",
                   "ex_en": "We need to row the boat together to make it move.",
                   "ex_zh": "我們需要一起划船才能讓船前進。",
-                  "ex_blank": "We need to ____ the boat together to make it move."
+                  "ex_blank": "We need to ____ the boat together to make it move.",
+                  "ex2_en": "They rowed the boat across the quiet lake.",
+                  "ex2_zh": "他們划船穿過那片安靜的湖。",
+                  "ex3_en": "It's hard to row against strong wind.",
+                  "ex3_zh": "逆著強風划船很困難。",
+                  "ex2_blank": "They ____ the boat across the quiet lake.",
+                  "ex3_blank": "It's hard to ____ against strong wind."
                 },
                 {
                   "en": "Excuse me.",
@@ -1990,7 +3261,13 @@
                   "zh": "不好意思。",
                   "ex_en": "Excuse me, do you know where the post office is?",
                   "ex_zh": "不好意思，請問你知道郵局在哪裡嗎？",
-                  "ex_blank": "____, do you know where the post office is?"
+                  "ex_blank": "____, do you know where the post office is?",
+                  "ex2_en": "Excuse me, could you tell me the time?",
+                  "ex2_zh": "不好意思，可以請你告訴我現在幾點嗎？",
+                  "ex3_en": "Excuse me, is this seat taken?",
+                  "ex3_zh": "不好意思，這個座位有人坐嗎？",
+                  "ex2_blank": "____, could you tell me the time?",
+                  "ex3_blank": "____, is this seat taken?"
                 },
                 {
                   "en": "sir",
@@ -1998,7 +3275,13 @@
                   "zh": "先生",
                   "ex_en": "Can I see your ticket, sir?",
                   "ex_zh": "先生，我可以看一下你的票嗎？",
-                  "ex_blank": "Can I see your ticket, ____?"
+                  "ex_blank": "Can I see your ticket, ____?",
+                  "ex2_en": "Good morning, sir. How can I help you?",
+                  "ex2_zh": "早安，先生。我能為您做什麼？",
+                  "ex3_en": "Sir, you dropped your wallet.",
+                  "ex3_zh": "先生，你的錢包掉了。",
+                  "ex2_blank": "Good morning, ____. How can I help you?",
+                  "ex3_blank": "____, you dropped your wallet."
                 },
                 {
                   "en": "turn left",
@@ -2007,7 +3290,13 @@
                   "ex_en": "Go straight for two blocks, and then turn left.",
                   "ex_zh": "直走兩個街區，然後左轉。",
                   "ex_blank": "Go straight for two blocks, and then ____.",
-                  "grammar": "turn left / turn right 表示「左轉／右轉」，是問路常用的指令句。"
+                  "grammar": "turn left / turn right 表示「左轉／右轉」，是問路常用的指令句。",
+                  "ex2_en": "Turn left at the next traffic light.",
+                  "ex2_zh": "在下一個紅綠燈左轉。",
+                  "ex3_en": "You should turn left, not right, to reach the museum.",
+                  "ex3_zh": "你應該左轉，不是右轉，才能到博物館。",
+                  "ex2_blank": "____ at the next traffic light.",
+                  "ex3_blank": "You should ____, not right, to reach the museum."
                 },
                 {
                   "en": "corner",
@@ -2015,7 +3304,13 @@
                   "zh": "轉角",
                   "ex_en": "There is a coffee shop on that corner.",
                   "ex_zh": "那個轉角有一間咖啡店。",
-                  "ex_blank": "There is a coffee shop on that ____."
+                  "ex_blank": "There is a coffee shop on that ____.",
+                  "ex2_en": "I'll meet you at the corner of Main Street.",
+                  "ex2_zh": "我會在主街的轉角跟你碰面。",
+                  "ex3_en": "She put the lamp in the corner of the room.",
+                  "ex3_zh": "她把燈放在房間的角落。",
+                  "ex2_blank": "I'll meet you at the ____ of Main Street.",
+                  "ex3_blank": "She put the lamp in the ____ of the room."
                 }
               ]
             },
@@ -2032,7 +3327,13 @@
                   "zh": "直地；直的",
                   "ex_en": "You need to walk straight for about five minutes.",
                   "ex_zh": "你需要直走大約五分鐘。",
-                  "ex_blank": "You need to walk ____ for about five minutes."
+                  "ex_blank": "You need to walk ____ for about five minutes.",
+                  "ex2_en": "Just go straight, and you'll see the store on your left.",
+                  "ex2_zh": "直走就會看到商店在你的左手邊。",
+                  "ex3_en": "Please stand up straight for the photo.",
+                  "ex3_zh": "拍照時請站直。",
+                  "ex2_blank": "Just go ____, and you'll see the store on your left.",
+                  "ex3_blank": "Please stand up ____ for the photo."
                 },
                 {
                   "en": "block",
@@ -2040,7 +3341,13 @@
                   "zh": "街區",
                   "ex_en": "My office is just one block away from here.",
                   "ex_zh": "我的辦公室離這裡只有一個街區遠。",
-                  "ex_blank": "My office is just one ____ away from here."
+                  "ex_blank": "My office is just one ____ away from here.",
+                  "ex2_en": "The library is two blocks away from the school.",
+                  "ex2_zh": "圖書館離學校兩個街區。",
+                  "ex3_en": "We walked around the block to get some fresh air.",
+                  "ex3_zh": "我們繞著街區走走以呼吸新鮮空氣。",
+                  "ex2_blank": "The library is two ____ away from the school.",
+                  "ex3_blank": "We walked around the ____ to get some fresh air."
                 },
                 {
                   "en": "across from",
@@ -2049,7 +3356,13 @@
                   "ex_en": "The library is right across from the park.",
                   "ex_zh": "圖書館就在公園的正對面。",
                   "ex_blank": "The library is right ____ the park.",
-                  "grammar": "across from + 地點，表示「在…的對面」，常用於問路與描述位置。"
+                  "grammar": "across from + 地點，表示「在…的對面」，常用於問路與描述位置。",
+                  "ex2_en": "There's a new coffee shop across from my office.",
+                  "ex2_zh": "我的辦公室對面新開了一間咖啡店。",
+                  "ex3_en": "She sat across from me during dinner.",
+                  "ex3_zh": "晚餐時她坐在我的對面。",
+                  "ex2_blank": "There's a new coffee shop ____ my office.",
+                  "ex3_blank": "She sat ____ me during dinner."
                 },
                 {
                   "en": "bottom",
@@ -2058,7 +3371,13 @@
                   "zh": "底部(的)",
                   "ex_en": "His name was at the bottom of the list.",
                   "ex_zh": "他的名字在名單的最底部。",
-                  "ex_blank": "His name was at the ____ of the list."
+                  "ex_blank": "His name was at the ____ of the list.",
+                  "ex2_en": "The keys are at the bottom of my bag.",
+                  "ex2_zh": "鑰匙在我包包的最底層。",
+                  "ex3_en": "There is a small note at the bottom of the page.",
+                  "ex3_zh": "這頁的最下方有一個小註記。",
+                  "ex2_blank": "The keys are at the ____ of my bag.",
+                  "ex3_blank": "There is a small note at the ____ of the page."
                 },
                 {
                   "en": "rule",
@@ -2066,7 +3385,13 @@
                   "zh": "規定",
                   "ex_en": "You must follow the classroom rule.",
                   "ex_zh": "你必須遵守班規。",
-                  "ex_blank": "You must follow the classroom ____."
+                  "ex_blank": "You must follow the classroom ____.",
+                  "ex2_en": "It's against the rules to run in the hallway.",
+                  "ex2_zh": "在走廊上奔跑是違反規定的。",
+                  "ex3_en": "Every game has its own set of rules.",
+                  "ex3_zh": "每種遊戲都有自己的一套規則。",
+                  "ex2_blank": "It's against the ____ to run in the hallway.",
+                  "ex3_blank": "Every game has its own set of ____."
                 },
                 {
                   "en": "broken",
@@ -2074,7 +3399,13 @@
                   "zh": "破損的",
                   "ex_en": "My favorite cup is broken.",
                   "ex_zh": "我最喜歡的杯子破了。",
-                  "ex_blank": "My favorite cup is ____."
+                  "ex_blank": "My favorite cup is ____.",
+                  "ex2_en": "The window was broken during the storm.",
+                  "ex2_zh": "窗戶在暴風雨中破了。",
+                  "ex3_en": "This umbrella is broken; it won't open properly.",
+                  "ex3_zh": "這把傘壞了，沒辦法正常打開。",
+                  "ex2_blank": "The window was ____ during the storm.",
+                  "ex3_blank": "This umbrella is ____; it won't open properly."
                 },
                 {
                   "en": "shake / shook hands",
@@ -2083,7 +3414,13 @@
                   "ex_en": "The two leaders shook hands after the meeting.",
                   "ex_zh": "兩位領導人在會後握手。",
                   "ex_blank": "The two leaders ____ after the meeting.",
-                  "grammar": "shake hands（握手）的過去式是 shook hands，shake hands with + 人 表示「和某人握手」。"
+                  "grammar": "shake hands（握手）的過去式是 shook hands，shake hands with + 人 表示「和某人握手」。",
+                  "ex2_en": "It's polite to shake hands when you meet someone new.",
+                  "ex2_zh": "認識新朋友時握手是有禮貌的表現。",
+                  "ex3_en": "The players shook hands before the match started.",
+                  "ex3_zh": "選手們在比賽開始前互相握手。",
+                  "ex2_blank": "It's polite to ____ hands when you meet someone new.",
+                  "ex3_blank": "The players ____ before the match started."
                 },
                 {
                   "en": "favorite",
@@ -2091,7 +3428,13 @@
                   "zh": "最喜愛的",
                   "ex_en": "What is your favorite movie of all time?",
                   "ex_zh": "你有史以來最喜歡的電影是什麼？",
-                  "ex_blank": "What is your ____ movie of all time?"
+                  "ex_blank": "What is your ____ movie of all time?",
+                  "ex2_en": "Pizza is my favorite food in the whole world.",
+                  "ex2_zh": "披薩是我全世界最喜歡的食物。",
+                  "ex3_en": "Who is your favorite singer right now?",
+                  "ex3_zh": "你現在最喜歡的歌手是誰？",
+                  "ex2_blank": "Pizza is my ____ food in the whole world.",
+                  "ex3_blank": "Who is your ____ singer right now?"
                 },
                 {
                   "en": "pocket",
@@ -2099,7 +3442,13 @@
                   "zh": "口袋",
                   "ex_en": "He put his hands in his pocket to keep them warm.",
                   "ex_zh": "他把手放進口袋裡保暖。",
-                  "ex_blank": "He put his hands in his ____ to keep them warm."
+                  "ex_blank": "He put his hands in his ____ to keep them warm.",
+                  "ex2_en": "She keeps her phone in her back pocket.",
+                  "ex2_zh": "她把手機放在後面的口袋裡。",
+                  "ex3_en": "I found some coins in my old jacket pocket.",
+                  "ex3_zh": "我在舊外套的口袋裡發現一些硬幣。",
+                  "ex2_blank": "She keeps her phone in her back ____.",
+                  "ex3_blank": "I found some coins in my old jacket ____."
                 }
               ]
             },
@@ -2115,7 +3464,13 @@
                   "zh": "怪獸",
                   "ex_en": "The scary monster in the movie was actually very friendly.",
                   "ex_zh": "電影裡那隻可怕的怪獸其實非常友善。",
-                  "ex_blank": "The scary ____ in the movie was actually very friendly."
+                  "ex_blank": "The scary ____ in the movie was actually very friendly.",
+                  "ex2_en": "My little brother is afraid of monsters under his bed.",
+                  "ex2_zh": "我弟弟害怕床底下的怪獸。",
+                  "ex3_en": "The kids dressed up as monsters for Halloween.",
+                  "ex3_zh": "孩子們為了萬聖節打扮成怪獸。",
+                  "ex2_blank": "My little brother is afraid of ____ under his bed.",
+                  "ex3_blank": "The kids dressed up as ____ for Halloween."
                 },
                 {
                   "en": "clerk",
@@ -2123,7 +3478,13 @@
                   "zh": "店員",
                   "ex_en": "The hotel clerk gave us our room key.",
                   "ex_zh": "飯店店員給了我們房間鑰匙。",
-                  "ex_blank": "The hotel ____ gave us our room key."
+                  "ex_blank": "The hotel ____ gave us our room key.",
+                  "ex2_en": "The store clerk helped me find the right size.",
+                  "ex2_zh": "店員幫我找到了合適的尺寸。",
+                  "ex3_en": "A friendly clerk showed us around the shop.",
+                  "ex3_zh": "一位親切的店員帶我們逛了整間店。",
+                  "ex2_blank": "The store ____ helped me find the right size.",
+                  "ex3_blank": "A friendly ____ showed us around the shop."
                 },
                 {
                   "en": "convenient",
@@ -2131,7 +3492,13 @@
                   "zh": "方便的",
                   "ex_en": "Living near a metro station is very convenient.",
                   "ex_zh": "住在捷運站附近非常方便。",
-                  "ex_blank": "Living near a metro station is very ____."
+                  "ex_blank": "Living near a metro station is very ____.",
+                  "ex2_en": "Online shopping is more convenient than going to the store.",
+                  "ex2_zh": "網路購物比去實體店面更方便。",
+                  "ex3_en": "Is it convenient for you to meet tomorrow?",
+                  "ex3_zh": "你明天方便碰面嗎？",
+                  "ex2_blank": "Online shopping is more ____ than going to the store.",
+                  "ex3_blank": "Is it ____ for you to meet tomorrow?"
                 },
                 {
                   "en": "mistake",
@@ -2139,7 +3506,13 @@
                   "zh": "錯誤",
                   "ex_en": "It's okay to make a mistake as long as you learn from it.",
                   "ex_zh": "只要能從中學習，犯錯也沒關係。",
-                  "ex_blank": "It's okay to make a ____ as long as you learn from it."
+                  "ex_blank": "It's okay to make a ____ as long as you learn from it.",
+                  "ex2_en": "I made a mistake on the last question.",
+                  "ex2_zh": "我最後一題犯了一個錯誤。",
+                  "ex3_en": "Everyone makes mistakes sometimes; don't be too hard on yourself.",
+                  "ex3_zh": "每個人偶爾都會犯錯，別對自己太嚴苛。",
+                  "ex2_blank": "I made a ____ on the last question.",
+                  "ex3_blank": "Everyone makes ____ sometimes; don't be too hard on yourself."
                 },
                 {
                   "en": "parking space",
@@ -2147,7 +3520,13 @@
                   "zh": "停車位",
                   "ex_en": "It is difficult to find a parking space in this area.",
                   "ex_zh": "在這一區很難找到停車位。",
-                  "ex_blank": "It is difficult to find a ____ in this area."
+                  "ex_blank": "It is difficult to find a ____ in this area.",
+                  "ex2_en": "We finally found a parking space near the entrance.",
+                  "ex2_zh": "我們終於在入口附近找到了停車位。",
+                  "ex3_en": "The mall has plenty of parking spaces on weekdays.",
+                  "ex3_zh": "這間購物中心平日有很多停車位。",
+                  "ex2_blank": "We finally found a ____ near the entrance.",
+                  "ex3_blank": "The mall has plenty of ____ on weekdays."
                 },
                 {
                   "en": "visitor",
@@ -2155,7 +3534,13 @@
                   "zh": "訪客",
                   "ex_en": "The museum has thousands of visitors every day.",
                   "ex_zh": "這間博物館每天都有成千上萬的訪客。",
-                  "ex_blank": "The museum has thousands of ____ every day."
+                  "ex_blank": "The museum has thousands of ____ every day.",
+                  "ex2_en": "Visitors must sign in at the front desk.",
+                  "ex2_zh": "訪客必須在櫃檯登記。",
+                  "ex3_en": "We had a surprise visitor at our door last night.",
+                  "ex3_zh": "我們昨晚家門口來了一位不速之客。",
+                  "ex2_blank": "____ must sign in at the front desk.",
+                  "ex3_blank": "We had a surprise ____ at our door last night."
                 },
                 {
                   "en": "cheap",
@@ -2163,7 +3548,13 @@
                   "zh": "便宜的",
                   "ex_en": "I bought a very cheap T-shirt at the market.",
                   "ex_zh": "我在市場買了一件很便宜的T恤。",
-                  "ex_blank": "I bought a very ____ T-shirt at the market."
+                  "ex_blank": "I bought a very ____ T-shirt at the market.",
+                  "ex2_en": "The food at this stall is cheap and delicious.",
+                  "ex2_zh": "這個攤位的食物又便宜又好吃。",
+                  "ex3_en": "It's cheap to travel by train in this country.",
+                  "ex3_zh": "在這個國家搭火車旅行很便宜。",
+                  "ex2_blank": "The food at this stall is ____ and delicious.",
+                  "ex3_blank": "It's ____ to travel by train in this country."
                 },
                 {
                   "en": "beef",
@@ -2171,7 +3562,13 @@
                   "zh": "牛肉",
                   "ex_en": "Would you like some beef noodles for lunch?",
                   "ex_zh": "你午餐想吃牛肉麵嗎？",
-                  "ex_blank": "Would you like some ____ noodles for lunch?"
+                  "ex_blank": "Would you like some ____ noodles for lunch?",
+                  "ex2_en": "She doesn't eat beef, so she ordered chicken instead.",
+                  "ex2_zh": "她不吃牛肉，所以改點了雞肉。",
+                  "ex3_en": "This restaurant is famous for its beef soup.",
+                  "ex3_zh": "這間餐廳以牛肉湯聞名。",
+                  "ex2_blank": "She doesn't eat ____, so she ordered chicken instead.",
+                  "ex3_blank": "This restaurant is famous for its ____ soup."
                 }
               ]
             }
