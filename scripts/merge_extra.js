@@ -1,6 +1,9 @@
 // 合併「額外例句 + 文法解釋」補充內容進 data/lessons.json
 // 用法：node scripts/merge_extra.js <textbookId> <patchFile.json>
-// patchFile 格式：[{ lessonId, units: [{ unitId, words: [{ en, ex2_en, ex2_zh, ex3_en, ex3_zh, grammar? }] }] }]
+// patchFile 格式：[{ lessonId, units: [{ unitId, words: [{ en, ex2_en, ex2_zh, ex3_en, ex3_zh, grammar?, ex_grammar?, ex2_grammar?, ex3_grammar? }] }] }]
+// grammar：單字本身的通則說明（不規則動詞、多詞性等），不論抽到哪組例句都會顯示。
+// ex_grammar / ex2_grammar / ex3_grammar：只針對「該組例句」裡出現的搭配用法做說明
+// （例如某句用到 spring break，就把說明寫在 ex2_grammar，只有抽到那句時才會出現）。
 const fs = require('fs');
 const path = require('path');
 
@@ -48,6 +51,9 @@ for (const pLesson of patch) {
       if (pWord.ex3_zh) word.ex3_zh = pWord.ex3_zh;
       if (pWord.ex3_blank) word.ex3_blank = pWord.ex3_blank;
       if (pWord.grammar) word.grammar = pWord.grammar;
+      if (pWord.ex_grammar) word.ex_grammar = pWord.ex_grammar;
+      if (pWord.ex2_grammar) word.ex2_grammar = pWord.ex2_grammar;
+      if (pWord.ex3_grammar) word.ex3_grammar = pWord.ex3_grammar;
       updated++;
     }
   }
