@@ -2543,6 +2543,1997 @@
               ]
             }
           ]
+        },
+        {
+          "id": "hl-lesson2",
+          "title": "Unit 2",
+          "zh": "社團、學科與生活用語",
+          "units": [
+            {
+              "id": "hl-u2-1",
+              "title": "Part 1",
+              "zh": "社團與學科",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "club",
+                  "pos": "n.",
+                  "zh": "社團",
+                  "ex_en": "Eric joined the chess club at school.",
+                  "ex_zh": "艾瑞克在學校加入了西洋棋社。",
+                  "ex_blank": "Eric joined the chess ____ at school."
+                },
+                {
+                  "en": "make up one's mind / made up one's mind",
+                  "pos": "phr.",
+                  "zh": "下定決心",
+                  "ex_en": "Lisa made up her mind to learn guitar.",
+                  "ex_zh": "麗莎下定決心要學吉他。",
+                  "ex_blank": "Lisa ____ to learn guitar.",
+                  "grammar": "make up one's mind 的過去式是 made up one's mind，中間的 one's 要換成所有格代名詞（如 my/her/his）。"
+                },
+                {
+                  "en": "interesting",
+                  "pos": "adj.",
+                  "zh": "有趣的",
+                  "ex_en": "This book is very interesting.",
+                  "ex_zh": "這本書非常有趣。",
+                  "ex_blank": "This book is very ____."
+                },
+                {
+                  "en": "science",
+                  "pos": "n.",
+                  "zh": "科學",
+                  "ex_en": "I have a science test tomorrow.",
+                  "ex_zh": "我明天有一場科學考試。",
+                  "ex_blank": "I have a ____ test tomorrow."
+                },
+                {
+                  "en": "subject",
+                  "pos": "n.",
+                  "zh": "學科；主題",
+                  "ex_en": "Math is my favorite subject.",
+                  "ex_zh": "數學是我最喜歡的學科。",
+                  "ex_blank": "Math is my favorite ____.",
+                  "grammar": "subject 可以指學校裡的「學科」，也可以指談話或文章的「主題」。"
+                },
+                {
+                  "en": "hear / heard",
+                  "pos": "v.",
+                  "zh": "聽見",
+                  "ex_en": "Did you hear the music last night?",
+                  "ex_zh": "你昨晚有聽到那個音樂嗎？",
+                  "ex_blank": "Did you ____ the music last night?",
+                  "grammar": "hear 的過去式與過去分詞都是 heard，強調「聽到聲音」這個結果，跟強調動作的 listen to 不同。"
+                },
+                {
+                  "en": "same",
+                  "pos": "adj.",
+                  "zh": "相同的",
+                  "ex_en": "We are in the same class.",
+                  "ex_zh": "我們在同一班。",
+                  "ex_blank": "We are in the ____ class."
+                },
+                {
+                  "en": "call",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "打電話；呼叫",
+                  "ex_en": "I'll call you after dinner.",
+                  "ex_zh": "我晚餐後會打電話給你。",
+                  "ex_blank": "I'll ____ you after dinner.",
+                  "grammar": "call 當動詞是「打電話」，當名詞則是「一通電話、呼叫」，如 miss a call。"
+                },
+                {
+                  "en": "tell / told",
+                  "pos": "v.",
+                  "zh": "告訴",
+                  "ex_en": "Please tell me the story again.",
+                  "ex_zh": "請再告訴我一次那個故事。",
+                  "ex_blank": "Please ____ me the story again.",
+                  "grammar": "tell 的過去式與過去分詞都是 told；tell + 人 + 事 表示「告訴某人某事」。"
+                }
+              ]
+            },
+            {
+              "id": "hl-u2-2",
+              "title": "Part 2",
+              "zh": "常用短語",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "pull one's leg",
+                  "pos": "phr.",
+                  "zh": "開玩笑",
+                  "ex_en": "Are you pulling my leg?",
+                  "ex_zh": "你在跟我開玩笑嗎？",
+                  "ex_blank": "Are you ____?",
+                  "grammar": "字面是「拉某人的腿」，實際意思是「開某人玩笑」，one's 要換成所有格。"
+                },
+                {
+                  "en": "poor",
+                  "pos": "adj.",
+                  "zh": "不佳的；貧窮的",
+                  "ex_en": "My grade in English is poor.",
+                  "ex_zh": "我的英文成績不太好。",
+                  "ex_blank": "My grade in English is ____.",
+                  "grammar": "poor 可以表示（表現、品質）「不佳的」，也可以表示「貧窮的」，要依上下文判斷。"
+                },
+                {
+                  "en": "end",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "結尾；結束",
+                  "ex_en": "The movie has a happy end.",
+                  "ex_zh": "這部電影有個快樂的結局。",
+                  "ex_blank": "The movie has a happy ____.",
+                  "grammar": "end 當名詞是「結尾」，當動詞是「結束」，如 The class ends at 4:00。"
+                },
+                {
+                  "en": "whose",
+                  "pos": "adj./pron.",
+                  "blankPos": "adj.",
+                  "zh": "誰的",
+                  "ex_en": "Whose bag is this on the chair?",
+                  "ex_zh": "椅子上這個包包是誰的？",
+                  "ex_blank": "____ bag is this on the chair?",
+                  "grammar": "whose 當形容詞後面接名詞，如 whose bag；也可單獨當代名詞使用，如 I don't know whose that is."
+                },
+                {
+                  "en": "camera",
+                  "pos": "n.",
+                  "zh": "相機",
+                  "ex_en": "My sister got a new camera for her birthday.",
+                  "ex_zh": "我姐姐生日收到了一台新相機。",
+                  "ex_blank": "My sister got a new ____ for her birthday."
+                },
+                {
+                  "en": "mine",
+                  "pos": "pron.",
+                  "zh": "我的",
+                  "ex_en": "That pencil is mine.",
+                  "ex_zh": "那支鉛筆是我的。",
+                  "ex_blank": "That pencil is ____.",
+                  "grammar": "mine 表示「我的東西」，本身已包含 my + 名詞的意思，後面不能再接名詞。"
+                },
+                {
+                  "en": "What's up?",
+                  "pos": "phr.",
+                  "zh": "怎麼了？",
+                  "ex_en": "Hi, Ben! What's up?",
+                  "ex_zh": "嗨，班！最近怎麼樣？",
+                  "ex_blank": "Hi, Ben! ____"
+                },
+                {
+                  "en": "when",
+                  "pos": "conj.",
+                  "zh": "當…",
+                  "ex_en": "I was sleeping when the phone rang.",
+                  "ex_zh": "電話響起時我正在睡覺。",
+                  "ex_blank": "I was sleeping ____ the phone rang."
+                },
+                {
+                  "en": "back",
+                  "pos": "adv.",
+                  "zh": "返回",
+                  "ex_en": "I'll be back in five minutes.",
+                  "ex_zh": "我五分鐘後就回來。",
+                  "ex_blank": "I'll be ____ in five minutes."
+                }
+              ]
+            },
+            {
+              "id": "hl-u2-3",
+              "title": "Part 3",
+              "zh": "校園生活",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "sign up / signed up",
+                  "pos": "phr.",
+                  "zh": "報名參加",
+                  "ex_en": "We signed up for the English camp.",
+                  "ex_zh": "我們報名參加了英文營隊。",
+                  "ex_blank": "We ____ for the English camp.",
+                  "grammar": "sign up for + 活動 表示「報名參加某活動」。"
+                },
+                {
+                  "en": "wrong",
+                  "pos": "adj.",
+                  "zh": "錯誤的",
+                  "ex_en": "Something is wrong with my bike.",
+                  "ex_zh": "我的腳踏車有點問題。",
+                  "ex_blank": "Something is ____ with my bike."
+                },
+                {
+                  "en": "hold on",
+                  "pos": "phr.",
+                  "zh": "稍候",
+                  "ex_en": "Hold on, please. I'll check it for you.",
+                  "ex_zh": "請稍等，我幫你確認一下。",
+                  "ex_blank": "____, please. I'll check it for you."
+                },
+                {
+                  "en": "math",
+                  "pos": "n.",
+                  "zh": "數學",
+                  "ex_en": "He studies math every evening.",
+                  "ex_zh": "他每天晚上都會讀數學。",
+                  "ex_blank": "He studies ____ every evening."
+                },
+                {
+                  "en": "soccer",
+                  "pos": "n.",
+                  "zh": "足球",
+                  "ex_en": "We play soccer after school.",
+                  "ex_zh": "我們放學後會踢足球。",
+                  "ex_blank": "We play ____ after school."
+                },
+                {
+                  "en": "Chinese",
+                  "pos": "adj./n.",
+                  "blankPos": "n.",
+                  "zh": "中國的；中文",
+                  "ex_en": "She speaks Chinese very well.",
+                  "ex_zh": "她中文說得很好。",
+                  "ex_blank": "She speaks ____ very well.",
+                  "grammar": "Chinese 當形容詞是「中國的」，當名詞可以指「中國人」或「中文」這個語言。"
+                },
+                {
+                  "en": "history",
+                  "pos": "n.",
+                  "zh": "歷史",
+                  "ex_en": "History is full of amazing stories.",
+                  "ex_zh": "歷史充滿了精彩的故事。",
+                  "ex_blank": "____ is full of amazing stories."
+                },
+                {
+                  "en": "violin",
+                  "pos": "n.",
+                  "zh": "小提琴",
+                  "ex_en": "My brother plays the violin in the school band.",
+                  "ex_zh": "我哥哥在學校樂團裡拉小提琴。",
+                  "ex_blank": "My brother plays the ____ in the school band."
+                },
+                {
+                  "en": "robot",
+                  "pos": "n.",
+                  "zh": "機器人",
+                  "ex_en": "This robot can help with housework.",
+                  "ex_zh": "這個機器人可以幫忙做家事。",
+                  "ex_blank": "This ____ can help with housework."
+                }
+              ]
+            },
+            {
+              "id": "hl-u2-4",
+              "title": "Part 4",
+              "zh": "職業與課程",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "health",
+                  "pos": "n.",
+                  "zh": "健康",
+                  "ex_en": "Exercise is good for your health.",
+                  "ex_zh": "運動有益健康。",
+                  "ex_blank": "Exercise is good for your ____."
+                },
+                {
+                  "en": "PE",
+                  "pos": "n.",
+                  "zh": "體育",
+                  "ex_en": "We have PE on Mondays and Thursdays.",
+                  "ex_zh": "我們星期一和星期四有體育課。",
+                  "ex_blank": "We have ____ on Mondays and Thursdays."
+                },
+                {
+                  "en": "look for",
+                  "pos": "phr.",
+                  "zh": "尋找",
+                  "ex_en": "I'm looking for my notebook.",
+                  "ex_zh": "我正在找我的筆記本。",
+                  "ex_blank": "I'm ____ my notebook."
+                },
+                {
+                  "en": "Ms.",
+                  "pos": "n.",
+                  "zh": "女士",
+                  "ex_en": "Ms. Chen is our English teacher.",
+                  "ex_zh": "陳老師是我們的英文老師。",
+                  "ex_blank": "____ Chen is our English teacher."
+                },
+                {
+                  "en": "engineer",
+                  "pos": "n.",
+                  "zh": "工程師",
+                  "ex_en": "My uncle is an engineer at a tech company.",
+                  "ex_zh": "我叔叔是一家科技公司的工程師。",
+                  "ex_blank": "My uncle is an ____ at a tech company."
+                },
+                {
+                  "en": "lesson",
+                  "pos": "n.",
+                  "zh": "課；課程",
+                  "ex_en": "Today's English lesson is about animals.",
+                  "ex_zh": "今天的英文課是關於動物的。",
+                  "ex_blank": "Today's English ____ is about animals."
+                },
+                {
+                  "en": "difficult",
+                  "pos": "adj.",
+                  "zh": "困難的",
+                  "ex_en": "This math problem is very difficult.",
+                  "ex_zh": "這道數學題非常困難。",
+                  "ex_blank": "This math problem is very ____."
+                },
+                {
+                  "en": "teach / taught",
+                  "pos": "v.",
+                  "zh": "教導",
+                  "ex_en": "Mr. Lee teaches English at our school.",
+                  "ex_zh": "李老師在我們學校教英文。",
+                  "ex_blank": "Mr. Lee ____ English at our school.",
+                  "grammar": "teach 的過去式與過去分詞都是 taught；teach + 人 + 科目 表示「教某人某科目」。"
+                },
+                {
+                  "en": "own",
+                  "pos": "adj./v.",
+                  "blankPos": "v.",
+                  "zh": "自己的；擁有",
+                  "ex_en": "They own a bakery near the park.",
+                  "ex_zh": "他們在公園附近開了一家（自己的）麵包店。",
+                  "ex_blank": "They ____ a bakery near the park.",
+                  "grammar": "own 當形容詞用 my/your/his own 等所有格加強「自己的」語氣；當動詞則是「擁有」。"
+                }
+              ]
+            },
+            {
+              "id": "hl-u2-5",
+              "title": "Part 5",
+              "zh": "節慶與選擇",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "finish",
+                  "pos": "v.",
+                  "zh": "完成；結束",
+                  "ex_en": "I finished my homework before dinner.",
+                  "ex_zh": "我在晚餐前完成了作業。",
+                  "ex_blank": "I ____ my homework before dinner."
+                },
+                {
+                  "en": "festival",
+                  "pos": "n.",
+                  "zh": "節慶",
+                  "ex_en": "The Lantern Festival is fun and colorful.",
+                  "ex_zh": "元宵節既有趣又五彩繽紛。",
+                  "ex_blank": "The Lantern ____ is fun and colorful."
+                },
+                {
+                  "en": "start",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "開始",
+                  "ex_en": "We start school at 8 a.m.",
+                  "ex_zh": "我們早上八點開始上課。",
+                  "ex_blank": "We ____ school at 8 a.m.",
+                  "grammar": "start 當動詞是「開始」，當名詞也是「開始」，如 a quick start。"
+                },
+                {
+                  "en": "choice",
+                  "pos": "n.",
+                  "zh": "選擇",
+                  "ex_en": "You have a choice between pizza and noodles.",
+                  "ex_zh": "你可以在披薩和麵之間做選擇。",
+                  "ex_blank": "You have a ____ between pizza and noodles."
+                },
+                {
+                  "en": "not... at all",
+                  "pos": "phr.",
+                  "zh": "一點也不…",
+                  "ex_en": "Do you mind? Not at all.",
+                  "ex_zh": "你介意嗎？一點也不會。",
+                  "ex_blank": "Do you mind? ____."
+                },
+                {
+                  "en": "free",
+                  "pos": "adj.",
+                  "zh": "免費的",
+                  "ex_en": "This show is free for all students.",
+                  "ex_zh": "這場表演對所有學生都是免費的。",
+                  "ex_blank": "This show is ____ for all students."
+                },
+                {
+                  "en": "show",
+                  "pos": "n.",
+                  "zh": "表演；節目",
+                  "ex_en": "We watched a great show last night.",
+                  "ex_zh": "我們昨晚看了一場很棒的表演。",
+                  "ex_blank": "We watched a great ____ last night."
+                },
+                {
+                  "en": "miss out",
+                  "pos": "phr.",
+                  "zh": "錯過機會",
+                  "ex_en": "Don't miss out on the school trip!",
+                  "ex_zh": "不要錯過這次校外教學的機會！",
+                  "ex_blank": "Don't ____ on the school trip!",
+                  "grammar": "miss out on + 事物 表示「錯過（機會、樂趣等）」。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hl-lesson3",
+          "title": "Unit 3",
+          "zh": "家事、時間與情緒",
+          "units": [
+            {
+              "id": "hl-u3-1",
+              "title": "Part 1",
+              "zh": "時間與提醒",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "someone",
+                  "pos": "pron.",
+                  "zh": "某人",
+                  "ex_en": "Someone left a bag on the bench.",
+                  "ex_zh": "有人把一個包包留在長椅上。",
+                  "ex_blank": "____ left a bag on the bench."
+                },
+                {
+                  "en": "break / broke",
+                  "pos": "v.",
+                  "zh": "打破；損壞",
+                  "ex_en": "Be careful not to break the glass.",
+                  "ex_zh": "小心不要打破玻璃杯。",
+                  "ex_blank": "Be careful not to ____ the glass.",
+                  "grammar": "break 的過去式是 broke，過去分詞是 broken。"
+                },
+                {
+                  "en": "do the dishes / did the dishes",
+                  "pos": "phr.",
+                  "zh": "洗碗盤",
+                  "ex_en": "I always do the dishes after dinner.",
+                  "ex_zh": "我晚餐後總是會洗碗。",
+                  "ex_blank": "I always ____ after dinner.",
+                  "grammar": "do the dishes 的過去式是 did the dishes（do 是不規則動詞）。"
+                },
+                {
+                  "en": "half",
+                  "pos": "n.",
+                  "zh": "一半；二分之一",
+                  "ex_en": "I ate half of the cake.",
+                  "ex_zh": "我吃了一半的蛋糕。",
+                  "ex_blank": "I ate ____ of the cake."
+                },
+                {
+                  "en": "past",
+                  "pos": "prep./adv./adj./n.",
+                  "blankPos": "prep.",
+                  "zh": "經過；過去地；過去的；過去",
+                  "ex_en": "We walked past the library.",
+                  "ex_zh": "我們走過了圖書館。",
+                  "ex_blank": "We walked ____ the library.",
+                  "grammar": "past 當介系詞表示「經過」某地點；當副詞表示「過去地」；當形容詞表示「過去的」；當名詞則指「過去」這段時間。"
+                },
+                {
+                  "en": "leave / left",
+                  "pos": "v.",
+                  "zh": "離開",
+                  "ex_en": "I leave for school at 7 a.m. every day.",
+                  "ex_zh": "我每天早上七點出發去上學。",
+                  "ex_blank": "I ____ for school at 7 a.m. every day.",
+                  "grammar": "leave 的過去式與過去分詞都是 left；leave for + 地點 表示「動身前往某地」。"
+                },
+                {
+                  "en": "quarter",
+                  "pos": "n.",
+                  "zh": "十五分鐘；四分之一",
+                  "ex_en": "It's a quarter to three now.",
+                  "ex_zh": "現在是三點差十五分。",
+                  "ex_blank": "It's a ____ to three now."
+                },
+                {
+                  "en": "remember",
+                  "pos": "v.",
+                  "zh": "記得",
+                  "ex_en": "Remember to bring your homework!",
+                  "ex_zh": "記得帶你的作業！",
+                  "ex_blank": "____ to bring your homework!"
+                },
+                {
+                  "en": "take it easy",
+                  "pos": "phr.",
+                  "zh": "放輕鬆",
+                  "ex_en": "Take it easy! Everything will be fine.",
+                  "ex_zh": "放輕鬆！一切都會沒事的。",
+                  "ex_blank": "____! Everything will be fine."
+                },
+                {
+                  "en": "cool down",
+                  "pos": "phr.",
+                  "zh": "冷靜一下",
+                  "ex_en": "He needs to cool down before talking again.",
+                  "ex_zh": "他需要先冷靜一下才能繼續談。",
+                  "ex_blank": "He needs to ____ before talking again."
+                }
+              ]
+            },
+            {
+              "id": "hl-u3-2",
+              "title": "Part 2",
+              "zh": "打掃家事",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "close",
+                  "pos": "adj.",
+                  "zh": "靠近的",
+                  "ex_en": "My best friend lives close to me.",
+                  "ex_zh": "我最好的朋友住得離我很近。",
+                  "ex_blank": "My best friend lives ____ to me."
+                },
+                {
+                  "en": "feed / fed",
+                  "pos": "v.",
+                  "zh": "餵養",
+                  "ex_en": "I feed my dog every morning.",
+                  "ex_zh": "我每天早上餵我的狗。",
+                  "ex_blank": "I ____ my dog every morning.",
+                  "grammar": "feed 的過去式與過去分詞都是 fed。"
+                },
+                {
+                  "en": "pet",
+                  "pos": "n.",
+                  "zh": "寵物",
+                  "ex_en": "Her pet rabbit is very cute.",
+                  "ex_zh": "她養的寵物兔非常可愛。",
+                  "ex_blank": "Her ____ rabbit is very cute."
+                },
+                {
+                  "en": "sweep / swept",
+                  "pos": "v.",
+                  "zh": "掃",
+                  "ex_en": "I sweep the floor every weekend.",
+                  "ex_zh": "我每個週末都會掃地。",
+                  "ex_blank": "I ____ the floor every weekend.",
+                  "grammar": "sweep 的過去式與過去分詞都是 swept。"
+                },
+                {
+                  "en": "floor",
+                  "pos": "n.",
+                  "zh": "地板；樓層",
+                  "ex_en": "The second floor is the library.",
+                  "ex_zh": "二樓是圖書館。",
+                  "ex_blank": "The second ____ is the library."
+                },
+                {
+                  "en": "fix",
+                  "pos": "v.",
+                  "zh": "修理；解決",
+                  "ex_en": "Dad helped me fix my bike.",
+                  "ex_zh": "爸爸幫我修好了腳踏車。",
+                  "ex_blank": "Dad helped me ____ my bike."
+                },
+                {
+                  "en": "drawer",
+                  "pos": "n.",
+                  "zh": "抽屜",
+                  "ex_en": "I keep my pens in this drawer.",
+                  "ex_zh": "我把筆放在這個抽屜裡。",
+                  "ex_blank": "I keep my pens in this ____."
+                },
+                {
+                  "en": "mop",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "拖地；拖把",
+                  "ex_en": "My sister mops the floor every evening.",
+                  "ex_zh": "我姐姐每天晚上都會拖地。",
+                  "ex_blank": "My sister ____ the floor every evening.",
+                  "grammar": "mop 當動詞是「拖地」，當名詞則是「拖把」這個工具。"
+                },
+                {
+                  "en": "stairs",
+                  "pos": "n.",
+                  "zh": "樓梯",
+                  "ex_en": "Be careful when you walk down the stairs.",
+                  "ex_zh": "走樓梯下樓時要小心。",
+                  "ex_blank": "Be careful when you walk down the ____."
+                },
+                {
+                  "en": "wipe",
+                  "pos": "v.",
+                  "zh": "擦拭",
+                  "ex_en": "Please wipe the table after lunch.",
+                  "ex_zh": "請在午餐後把桌子擦乾淨。",
+                  "ex_blank": "Please ____ the table after lunch."
+                }
+              ]
+            },
+            {
+              "id": "hl-u3-3",
+              "title": "Part 3",
+              "zh": "居家與夢想",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "window",
+                  "pos": "n.",
+                  "zh": "窗戶",
+                  "ex_en": "He opened the window to get some fresh air.",
+                  "ex_zh": "他打開窗戶讓新鮮空氣進來。",
+                  "ex_blank": "He opened the ____ to get some fresh air."
+                },
+                {
+                  "en": "dry",
+                  "pos": "v./adj.",
+                  "blankPos": "v.",
+                  "zh": "使乾燥；乾的",
+                  "ex_en": "Let's dry the clothes outside.",
+                  "ex_zh": "我們把衣服拿去外面曬乾吧。",
+                  "ex_blank": "Let's ____ the clothes outside.",
+                  "grammar": "dry 當動詞是「使乾燥」，當形容詞是「乾的」。"
+                },
+                {
+                  "en": "hang / hung",
+                  "pos": "v.",
+                  "zh": "吊；掛",
+                  "ex_en": "I hang my jacket behind the door.",
+                  "ex_zh": "我把外套掛在門後。",
+                  "ex_blank": "I ____ my jacket behind the door.",
+                  "grammar": "hang（掛）的過去式與過去分詞是 hung；「hang（處以絞刑）」的過去式則是規則變化 hanged，兩者意思不同。"
+                },
+                {
+                  "en": "clothes",
+                  "pos": "n.",
+                  "zh": "衣服",
+                  "ex_en": "She bought new clothes for the trip.",
+                  "ex_zh": "她為了這趟旅行買了新衣服。",
+                  "ex_blank": "She bought new ____ for the trip."
+                },
+                {
+                  "en": "move",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "搬遷；移動",
+                  "ex_en": "We will move to a new house next week.",
+                  "ex_zh": "我們下星期要搬到新家。",
+                  "ex_blank": "We will ____ to a new house next week.",
+                  "grammar": "move 當動詞是「搬遷、移動」，當名詞則指「搬遷」這件事，如 The move took us all day."
+                },
+                {
+                  "en": "city",
+                  "pos": "n.",
+                  "zh": "城市",
+                  "ex_en": "Taipei is a big city in Taiwan.",
+                  "ex_zh": "台北是台灣的一座大城市。",
+                  "ex_blank": "Taipei is a big ____ in Taiwan."
+                },
+                {
+                  "en": "dream",
+                  "pos": "n./v./adj.",
+                  "blankPos": "n.",
+                  "zh": "夢；夢想；做夢；夢想的",
+                  "ex_en": "My dream is to become a teacher.",
+                  "ex_zh": "我的夢想是成為一名老師。",
+                  "ex_blank": "My ____ is to become a teacher.",
+                  "grammar": "dream 當名詞是「夢、夢想」，當動詞是「做夢、夢想」（dream of/about + Ving），當形容詞則表示「夢想中的」，如 dream job。"
+                },
+                {
+                  "en": "almost",
+                  "pos": "adv.",
+                  "zh": "幾乎",
+                  "ex_en": "I almost forgot my backpack.",
+                  "ex_zh": "我差點忘了我的背包。",
+                  "ex_blank": "I ____ forgot my backpack."
+                },
+                {
+                  "en": "fall asleep / fell asleep",
+                  "pos": "phr.",
+                  "zh": "睡著",
+                  "ex_en": "I fell asleep while watching TV.",
+                  "ex_zh": "我看電視看到睡著了。",
+                  "ex_blank": "I ____ while watching TV.",
+                  "grammar": "fall asleep 的過去式是 fell asleep（fall 是不規則動詞）。"
+                },
+                {
+                  "en": "scared",
+                  "pos": "adj.",
+                  "zh": "害怕的",
+                  "ex_en": "Tom is scared of the dark.",
+                  "ex_zh": "湯姆害怕黑暗。",
+                  "ex_blank": "Tom is ____ of the dark."
+                }
+              ]
+            },
+            {
+              "id": "hl-u3-4",
+              "title": "Part 4",
+              "zh": "問題與轉折",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "problem",
+                  "pos": "n.",
+                  "zh": "問題",
+                  "ex_en": "We need to find a way to solve the problem.",
+                  "ex_zh": "我們需要找出解決這個問題的方法。",
+                  "ex_blank": "We need to find a way to solve the ____."
+                },
+                {
+                  "en": "tip",
+                  "pos": "n.",
+                  "zh": "訣竅",
+                  "ex_en": "Here's a good tip for learning English.",
+                  "ex_zh": "這裡有個學英文的好訣竅。",
+                  "ex_blank": "Here's a good ____ for learning English."
+                },
+                {
+                  "en": "however",
+                  "pos": "adv.",
+                  "zh": "然而",
+                  "ex_en": "It was cold. However, we still went swimming.",
+                  "ex_zh": "天氣很冷，然而我們還是去游泳了。",
+                  "ex_blank": "It was cold. ____, we still went swimming."
+                },
+                {
+                  "en": "nothing",
+                  "pos": "pron.",
+                  "zh": "沒什麼",
+                  "ex_en": "I have nothing in my bag.",
+                  "ex_zh": "我的包包裡什麼都沒有。",
+                  "ex_blank": "I have ____ in my bag."
+                },
+                {
+                  "en": "catch / caught",
+                  "pos": "v.",
+                  "zh": "捉；接",
+                  "ex_en": "Let's play catch in the park.",
+                  "ex_zh": "我們去公園玩接球吧。",
+                  "ex_blank": "Let's play ____ in the park.",
+                  "grammar": "catch 的過去式與過去分詞都是 caught。"
+                },
+                {
+                  "en": "through",
+                  "pos": "prep.",
+                  "zh": "穿越；從頭到尾",
+                  "ex_en": "We walked through the forest.",
+                  "ex_zh": "我們穿過了森林。",
+                  "ex_blank": "We walked ____ the forest."
+                },
+                {
+                  "en": "finally",
+                  "pos": "adv.",
+                  "zh": "終於；最後",
+                  "ex_en": "We finally got to the top of the mountain.",
+                  "ex_zh": "我們終於到達山頂了。",
+                  "ex_blank": "We ____ got to the top of the mountain."
+                },
+                {
+                  "en": "save",
+                  "pos": "v.",
+                  "zh": "拯救",
+                  "ex_en": "The firefighter saved the cat from the tree.",
+                  "ex_zh": "消防員把貓從樹上救了下來。",
+                  "ex_blank": "The firefighter ____ the cat from the tree."
+                },
+                {
+                  "en": "terrible",
+                  "pos": "adj.",
+                  "zh": "糟糕的；可怕的",
+                  "ex_en": "The weather was terrible yesterday.",
+                  "ex_zh": "昨天的天氣糟透了。",
+                  "ex_blank": "The weather was ____ yesterday."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hl-lesson4",
+          "title": "Unit 4",
+          "zh": "夢想、職業與人際",
+          "units": [
+            {
+              "id": "hl-u4-1",
+              "title": "Part 1",
+              "zh": "希望與計畫",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "hope",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "希望",
+                  "ex_en": "I hope you can come to my party.",
+                  "ex_zh": "我希望你能來我的派對。",
+                  "ex_blank": "I ____ you can come to my party.",
+                  "grammar": "hope 當動詞後面可接 that 子句或 to V，表示「希望」；當名詞則是「希望」這件事本身。"
+                },
+                {
+                  "en": "future",
+                  "pos": "n./adj.",
+                  "blankPos": "n.",
+                  "zh": "未來",
+                  "ex_en": "What do you want to be in the future?",
+                  "ex_zh": "你未來想成為什麼？",
+                  "ex_blank": "What do you want to be in the ____?",
+                  "grammar": "future 當名詞是「未來」，常用 in the future；當形容詞則修飾名詞，如 future plans。"
+                },
+                {
+                  "en": "plan",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "規劃；計畫",
+                  "ex_en": "Let's plan a trip for this weekend.",
+                  "ex_zh": "我們來規劃這個週末的旅行吧。",
+                  "ex_blank": "Let's ____ a trip for this weekend.",
+                  "grammar": "plan 當動詞是「規劃」，當名詞是「計畫」，如 Do you have any plans?"
+                },
+                {
+                  "en": "lawyer",
+                  "pos": "n.",
+                  "zh": "律師",
+                  "ex_en": "His father is a lawyer.",
+                  "ex_zh": "他的爸爸是一名律師。",
+                  "ex_blank": "His father is a ____."
+                },
+                {
+                  "en": "job",
+                  "pos": "n.",
+                  "zh": "工作",
+                  "ex_en": "My brother found a new job.",
+                  "ex_zh": "我哥哥找到了一份新工作。",
+                  "ex_blank": "My brother found a new ____."
+                },
+                {
+                  "en": "get butterflies in one's stomach",
+                  "pos": "phr.",
+                  "zh": "感到緊張",
+                  "ex_en": "I get butterflies in my stomach when I speak in public.",
+                  "ex_zh": "我在公開演講時會感到緊張。",
+                  "ex_blank": "I ____ when I speak in public.",
+                  "grammar": "字面是「胃裡有蝴蝶在飛」，實際用來形容既緊張又興奮忐忑的感覺，one's 要換成所有格。"
+                },
+                {
+                  "en": "worry",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "擔心",
+                  "ex_en": "Don't worry, everything will be fine.",
+                  "ex_zh": "別擔心，一切都會沒事的。",
+                  "ex_blank": "Don't ____, everything will be fine.",
+                  "grammar": "worry 當動詞是「擔心」，常用 worry about + 事物；當名詞則是「擔心的事」。"
+                },
+                {
+                  "en": "keep / kept",
+                  "pos": "v.",
+                  "zh": "持續；保持",
+                  "ex_en": "Please keep the room clean.",
+                  "ex_zh": "請保持房間整潔。",
+                  "ex_blank": "Please ____ the room clean.",
+                  "grammar": "keep 的過去式與過去分詞都是 kept；keep + O + 形容詞 表示「使…保持某狀態」。"
+                },
+                {
+                  "en": "idea",
+                  "pos": "n.",
+                  "zh": "主意；想法",
+                  "ex_en": "That's a good idea.",
+                  "ex_zh": "那是個好主意。",
+                  "ex_blank": "That's a good ____."
+                }
+              ]
+            },
+            {
+              "id": "hl-u4-2",
+              "title": "Part 2",
+              "zh": "職業面面觀",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "right",
+                  "pos": "n.",
+                  "zh": "權利",
+                  "ex_en": "Everyone has the right to learn.",
+                  "ex_zh": "每個人都有學習的權利。",
+                  "ex_blank": "Everyone has the ____ to learn."
+                },
+                {
+                  "en": "put on",
+                  "pos": "phr.",
+                  "zh": "穿上",
+                  "ex_en": "Please put on your coat.",
+                  "ex_zh": "請穿上你的外套。",
+                  "ex_blank": "Please ____ your coat.",
+                  "grammar": "put on（穿上）強調穿上的動作，wear 則強調穿著的狀態；put on 的過去式維持 put on 不變。"
+                },
+                {
+                  "en": "reporter",
+                  "pos": "n.",
+                  "zh": "記者",
+                  "ex_en": "The reporter is asking some questions.",
+                  "ex_zh": "這位記者正在問一些問題。",
+                  "ex_blank": "The ____ is asking some questions."
+                },
+                {
+                  "en": "interview",
+                  "pos": "v./n.",
+                  "blankPos": "n.",
+                  "zh": "採訪；面試",
+                  "ex_en": "I have a job interview tomorrow.",
+                  "ex_zh": "我明天有一場工作面試。",
+                  "ex_blank": "I have a job ____ tomorrow.",
+                  "grammar": "interview 當動詞是「採訪」，當名詞則是「面試、訪談」。"
+                },
+                {
+                  "en": "mail carrier",
+                  "pos": "n.",
+                  "zh": "郵差",
+                  "ex_en": "The mail carrier brings us letters every day.",
+                  "ex_zh": "郵差每天都會幫我們送信。",
+                  "ex_blank": "The ____ brings us letters every day."
+                },
+                {
+                  "en": "dentist",
+                  "pos": "n.",
+                  "zh": "牙醫",
+                  "ex_en": "I need to see the dentist.",
+                  "ex_zh": "我需要去看牙醫。",
+                  "ex_blank": "I need to see the ____."
+                },
+                {
+                  "en": "factory",
+                  "pos": "n.",
+                  "zh": "工廠",
+                  "ex_en": "My dad works in a shoe factory.",
+                  "ex_zh": "我爸爸在一家鞋廠工作。",
+                  "ex_blank": "My dad works in a shoe ____."
+                },
+                {
+                  "en": "fisherman",
+                  "pos": "n.",
+                  "zh": "漁夫",
+                  "ex_en": "The fisherman goes to the sea early.",
+                  "ex_zh": "這位漁夫很早就出海了。",
+                  "ex_blank": "The ____ goes to the sea early."
+                },
+                {
+                  "en": "secretary",
+                  "pos": "n.",
+                  "zh": "祕書",
+                  "ex_en": "The secretary is typing a letter.",
+                  "ex_zh": "這位祕書正在打一封信。",
+                  "ex_blank": "The ____ is typing a letter."
+                }
+              ]
+            },
+            {
+              "id": "hl-u4-3",
+              "title": "Part 3",
+              "zh": "行業與能力",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "boss",
+                  "pos": "n.",
+                  "zh": "老闆",
+                  "ex_en": "My boss is a kind person.",
+                  "ex_zh": "我的老闆是個親切的人。",
+                  "ex_blank": "My ____ is a kind person."
+                },
+                {
+                  "en": "salesman",
+                  "pos": "n.",
+                  "zh": "銷售員；業務員",
+                  "ex_en": "The salesman showed me a new phone.",
+                  "ex_zh": "這位銷售員向我介紹了一支新手機。",
+                  "ex_blank": "The ____ showed me a new phone."
+                },
+                {
+                  "en": "farmer",
+                  "pos": "n.",
+                  "zh": "農夫",
+                  "ex_en": "The farmer grows rice on his farm.",
+                  "ex_zh": "這位農夫在他的農場種稻米。",
+                  "ex_blank": "The ____ grows rice on his farm."
+                },
+                {
+                  "en": "grow / grew",
+                  "pos": "v.",
+                  "zh": "種植；成長",
+                  "ex_en": "I want to grow flowers in my garden.",
+                  "ex_zh": "我想在我的花園裡種花。",
+                  "ex_blank": "I want to ____ flowers in my garden.",
+                  "grammar": "grow 的過去式是 grew，過去分詞是 grown。"
+                },
+                {
+                  "en": "soldier",
+                  "pos": "n.",
+                  "zh": "士兵",
+                  "ex_en": "The soldier looks brave.",
+                  "ex_zh": "這位士兵看起來很勇敢。",
+                  "ex_blank": "The ____ looks brave."
+                },
+                {
+                  "en": "country",
+                  "pos": "n.",
+                  "zh": "國家",
+                  "ex_en": "Japan is a beautiful country.",
+                  "ex_zh": "日本是一個美麗的國家。",
+                  "ex_blank": "Japan is a beautiful ____."
+                },
+                {
+                  "en": "truck driver",
+                  "pos": "n.",
+                  "zh": "卡車司機",
+                  "ex_en": "The truck driver works long hours.",
+                  "ex_zh": "卡車司機的工時很長。",
+                  "ex_blank": "The ____ works long hours."
+                },
+                {
+                  "en": "drive / drove",
+                  "pos": "v.",
+                  "zh": "開（車）",
+                  "ex_en": "My mom can drive a car.",
+                  "ex_zh": "我媽媽會開車。",
+                  "ex_blank": "My mom can ____ a car.",
+                  "grammar": "drive 的過去式是 drove，過去分詞是 driven。"
+                },
+                {
+                  "en": "successful",
+                  "pos": "adj.",
+                  "zh": "成功的",
+                  "ex_en": "He is a successful writer.",
+                  "ex_zh": "他是一位成功的作家。",
+                  "ex_blank": "He is a ____ writer."
+                },
+                {
+                  "en": "find / found",
+                  "pos": "v.",
+                  "zh": "找到；發現",
+                  "ex_en": "I can't find my keys.",
+                  "ex_zh": "我找不到我的鑰匙。",
+                  "ex_blank": "I can't ____ my keys.",
+                  "grammar": "find 的過去式與過去分詞都是 found。"
+                }
+              ]
+            },
+            {
+              "id": "hl-u4-4",
+              "title": "Part 4",
+              "zh": "決定與夢想",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "grade",
+                  "pos": "n.",
+                  "zh": "年級",
+                  "ex_en": "My brother is in the fifth grade.",
+                  "ex_zh": "我弟弟讀五年級。",
+                  "ex_blank": "My brother is in the fifth ____."
+                },
+                {
+                  "en": "decide",
+                  "pos": "v.",
+                  "zh": "決定",
+                  "ex_en": "I can't decide what to eat.",
+                  "ex_zh": "我無法決定要吃什麼。",
+                  "ex_blank": "I can't ____ what to eat."
+                },
+                {
+                  "en": "become / became",
+                  "pos": "v.",
+                  "zh": "成為",
+                  "ex_en": "I want to become a doctor.",
+                  "ex_zh": "我想成為一名醫生。",
+                  "ex_blank": "I want to ____ a doctor.",
+                  "grammar": "become 的過去式是 became；become 後面直接接名詞或形容詞，不加 to。"
+                },
+                {
+                  "en": "relative",
+                  "pos": "n.",
+                  "zh": "親戚",
+                  "ex_en": "I will visit my relatives during the holiday.",
+                  "ex_zh": "我假期時會去拜訪我的親戚。",
+                  "ex_blank": "I will visit my ____ during the holiday."
+                },
+                {
+                  "en": "believe",
+                  "pos": "v.",
+                  "zh": "相信",
+                  "ex_en": "I believe what you said.",
+                  "ex_zh": "我相信你說的話。",
+                  "ex_blank": "I ____ what you said."
+                },
+                {
+                  "en": "act",
+                  "pos": "v.",
+                  "zh": "表演",
+                  "ex_en": "She can act very well.",
+                  "ex_zh": "她演戲演得很好。",
+                  "ex_blank": "She can ____ very well."
+                },
+                {
+                  "en": "all over",
+                  "pos": "phr.",
+                  "zh": "遍及",
+                  "ex_en": "There are flowers all over the park.",
+                  "ex_zh": "公園裡到處都是花。",
+                  "ex_blank": "There are flowers ____ the park."
+                },
+                {
+                  "en": "make fun of",
+                  "pos": "phr.",
+                  "zh": "取笑",
+                  "ex_en": "You should not make fun of others.",
+                  "ex_zh": "你不應該取笑別人。",
+                  "ex_blank": "You should not ____ others."
+                },
+                {
+                  "en": "give up / gave up",
+                  "pos": "phr.",
+                  "zh": "放棄",
+                  "ex_en": "Don't give up on your dreams.",
+                  "ex_zh": "不要放棄你的夢想。",
+                  "ex_blank": "Don't ____ on your dreams.",
+                  "grammar": "give up 的過去式是 gave up（give 是不規則動詞）；give up on + 事物 表示「對…放棄」。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hl-lesson5",
+          "title": "Unit 5",
+          "zh": "問路與交通",
+          "units": [
+            {
+              "id": "hl-u5-1",
+              "title": "Part 1",
+              "zh": "問路開場",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "metro",
+                  "pos": "n.",
+                  "zh": "捷運",
+                  "ex_en": "We can take the metro to the zoo.",
+                  "ex_zh": "我們可以搭捷運去動物園。",
+                  "ex_blank": "We can take the ____ to the zoo."
+                },
+                {
+                  "en": "lost",
+                  "pos": "adj.",
+                  "zh": "迷路的",
+                  "ex_en": "I am lost. Can you help me?",
+                  "ex_zh": "我迷路了，你可以幫我嗎？",
+                  "ex_blank": "I am ____. Can you help me?"
+                },
+                {
+                  "en": "map",
+                  "pos": "n.",
+                  "zh": "地圖",
+                  "ex_en": "Let's look at the map.",
+                  "ex_zh": "我們來看一下地圖吧。",
+                  "ex_blank": "Let's look at the ____."
+                },
+                {
+                  "en": "ask",
+                  "pos": "v.",
+                  "zh": "請求；詢問",
+                  "ex_en": "You can ask the teacher for help.",
+                  "ex_zh": "你可以向老師求助。",
+                  "ex_blank": "You can ____ the teacher for help."
+                },
+                {
+                  "en": "Excuse me.",
+                  "pos": "phr.",
+                  "zh": "（對不起）請問…",
+                  "ex_en": "Excuse me, where is the restroom?",
+                  "ex_zh": "請問一下，洗手間在哪裡？",
+                  "ex_blank": "____, where is the restroom?"
+                },
+                {
+                  "en": "straight",
+                  "pos": "adv./adj.",
+                  "blankPos": "adv.",
+                  "zh": "直地；直的",
+                  "ex_en": "Go straight and you will see the school.",
+                  "ex_zh": "直走你就會看到學校。",
+                  "ex_blank": "Go ____ and you will see the school.",
+                  "grammar": "straight 當副詞是「直直地（走）」，當形容詞是「直的」，如 a straight line。"
+                },
+                {
+                  "en": "turn left / turned left",
+                  "pos": "phr.",
+                  "zh": "向左轉",
+                  "ex_en": "Please turn left at the next corner.",
+                  "ex_zh": "請在下一個轉角左轉。",
+                  "ex_blank": "Please ____ at the next corner.",
+                  "grammar": "turn left（向左轉）的相反是 turn right（向右轉）。"
+                },
+                {
+                  "en": "along",
+                  "pos": "prep.",
+                  "zh": "沿著",
+                  "ex_en": "We walked along the river.",
+                  "ex_zh": "我們沿著河邊走。",
+                  "ex_blank": "We walked ____ the river."
+                },
+                {
+                  "en": "block",
+                  "pos": "n.",
+                  "zh": "街區",
+                  "ex_en": "My school is two blocks away.",
+                  "ex_zh": "我的學校距離兩個街區遠。",
+                  "ex_blank": "My school is two ____ away."
+                }
+              ]
+            },
+            {
+              "id": "hl-u5-2",
+              "title": "Part 2",
+              "zh": "地點與方式",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "corner",
+                  "pos": "n.",
+                  "zh": "轉角；角落",
+                  "ex_en": "The shop is on the corner.",
+                  "ex_zh": "這家店在轉角處。",
+                  "ex_blank": "The shop is on the ____."
+                },
+                {
+                  "en": "across from",
+                  "pos": "phr.",
+                  "zh": "在…的對面",
+                  "ex_en": "The park is across from my house.",
+                  "ex_zh": "公園就在我家對面。",
+                  "ex_blank": "The park is ____ my house."
+                },
+                {
+                  "en": "supermarket",
+                  "pos": "n.",
+                  "zh": "超市",
+                  "ex_en": "Mom goes to the supermarket every weekend.",
+                  "ex_zh": "媽媽每個週末都會去超市。",
+                  "ex_blank": "Mom goes to the ____ every weekend."
+                },
+                {
+                  "en": "ground",
+                  "pos": "n.",
+                  "zh": "地面",
+                  "ex_en": "Don't sit on the ground.",
+                  "ex_zh": "不要坐在地上。",
+                  "ex_blank": "Don't sit on the ____."
+                },
+                {
+                  "en": "sir",
+                  "pos": "n.",
+                  "zh": "先生",
+                  "ex_en": "Good morning, sir.",
+                  "ex_zh": "先生，早安。",
+                  "ex_blank": "Good morning, ____."
+                },
+                {
+                  "en": "on foot",
+                  "pos": "phr.",
+                  "zh": "步行",
+                  "ex_en": "I go to school on foot.",
+                  "ex_zh": "我走路去上學。",
+                  "ex_blank": "I go to school ____."
+                },
+                {
+                  "en": "take / took",
+                  "pos": "v.",
+                  "zh": "搭乘（交通工具）",
+                  "ex_en": "Let's take a bus to the park.",
+                  "ex_zh": "我們搭公車去公園吧。",
+                  "ex_blank": "Let's ____ a bus to the park.",
+                  "grammar": "take 的過去式是 took；take + 交通工具 表示「搭乘」。"
+                },
+                {
+                  "en": "by",
+                  "pos": "prep.",
+                  "zh": "搭乘；藉由…方式",
+                  "ex_en": "I go to Taipei by train.",
+                  "ex_zh": "我搭火車去台北。",
+                  "ex_blank": "I go to Taipei ____ train."
+                },
+                {
+                  "en": "get off / got off",
+                  "pos": "phr.",
+                  "zh": "下（車、飛機等）",
+                  "ex_en": "We need to get off the bus here.",
+                  "ex_zh": "我們要在這裡下公車。",
+                  "ex_blank": "We need to ____ the bus here.",
+                  "grammar": "get off 的過去式是 got off（get 是不規則動詞），相反詞是 get on（上車）。"
+                }
+              ]
+            },
+            {
+              "id": "hl-u5-3",
+              "title": "Part 3",
+              "zh": "交通工具",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "get / got",
+                  "pos": "v.",
+                  "zh": "到達",
+                  "ex_en": "How can I get to the library?",
+                  "ex_zh": "我要怎麼到圖書館？",
+                  "ex_blank": "How can I ____ to the library?",
+                  "grammar": "get 的過去式是 got；get to + 地點 表示「到達某地」。"
+                },
+                {
+                  "en": "right",
+                  "pos": "n./adj./adv.",
+                  "blankPos": "n.",
+                  "zh": "右邊；右邊的；向右邊",
+                  "ex_en": "The bank is on your right.",
+                  "ex_zh": "銀行在你的右手邊。",
+                  "ex_blank": "The bank is on your ____.",
+                  "grammar": "right 當名詞是「右邊」，當形容詞是「右邊的」，當副詞是「向右邊」，如 turn right。"
+                },
+                {
+                  "en": "ship",
+                  "pos": "n.",
+                  "zh": "輪船",
+                  "ex_en": "We saw a big ship in the sea.",
+                  "ex_zh": "我們在海上看到一艘大船。",
+                  "ex_blank": "We saw a big ____ in the sea."
+                },
+                {
+                  "en": "taxi",
+                  "pos": "n.",
+                  "zh": "計程車",
+                  "ex_en": "Let's take a taxi.",
+                  "ex_zh": "我們搭計程車吧。",
+                  "ex_blank": "Let's take a ____."
+                },
+                {
+                  "en": "bike",
+                  "pos": "n.",
+                  "zh": "單車",
+                  "ex_en": "I ride my bike to school.",
+                  "ex_zh": "我騎單車去上學。",
+                  "ex_blank": "I ride my ____ to school."
+                },
+                {
+                  "en": "motorcycle",
+                  "pos": "n.",
+                  "zh": "機車；摩托車",
+                  "ex_en": "My dad has a new motorcycle.",
+                  "ex_zh": "我爸爸有一台新機車。",
+                  "ex_blank": "My dad has a new ____."
+                },
+                {
+                  "en": "scooter",
+                  "pos": "n.",
+                  "zh": "機車",
+                  "ex_en": "My mom rides a scooter to work.",
+                  "ex_zh": "我媽媽騎機車去上班。",
+                  "ex_blank": "My mom rides a ____ to work."
+                },
+                {
+                  "en": "bank",
+                  "pos": "n.",
+                  "zh": "銀行；河岸",
+                  "ex_en": "There is a bank near my school.",
+                  "ex_zh": "我學校附近有一家銀行。",
+                  "ex_blank": "There is a ____ near my school."
+                },
+                {
+                  "en": "fire station",
+                  "pos": "n.",
+                  "zh": "消防局",
+                  "ex_en": "The fire station is next to the police station.",
+                  "ex_zh": "消防局在警察局旁邊。",
+                  "ex_blank": "The ____ is next to the police station."
+                }
+              ]
+            },
+            {
+              "id": "hl-u5-4",
+              "title": "Part 4",
+              "zh": "公共場所",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "toy",
+                  "pos": "n.",
+                  "zh": "玩具",
+                  "ex_en": "He has many toys in his room.",
+                  "ex_zh": "他房間裡有很多玩具。",
+                  "ex_blank": "He has many ____ in his room."
+                },
+                {
+                  "en": "post office",
+                  "pos": "n.",
+                  "zh": "郵局",
+                  "ex_en": "I need to go to the post office.",
+                  "ex_zh": "我需要去郵局。",
+                  "ex_blank": "I need to go to the ____."
+                },
+                {
+                  "en": "hospital",
+                  "pos": "n.",
+                  "zh": "醫院",
+                  "ex_en": "My aunt is a nurse in that hospital.",
+                  "ex_zh": "我阿姨是那家醫院的護理師。",
+                  "ex_blank": "My aunt is a nurse in that ____."
+                },
+                {
+                  "en": "pool",
+                  "pos": "n.",
+                  "zh": "水池",
+                  "ex_en": "Let's go swimming in the pool.",
+                  "ex_zh": "我們去泳池游泳吧。",
+                  "ex_blank": "Let's go swimming in the ____."
+                },
+                {
+                  "en": "go jogging / went jogging",
+                  "pos": "phr.",
+                  "zh": "慢跑",
+                  "ex_en": "I go jogging every morning.",
+                  "ex_zh": "我每天早上都會去慢跑。",
+                  "ex_blank": "I ____ every morning.",
+                  "grammar": "go jogging 的過去式是 went jogging（go 是不規則動詞）。"
+                },
+                {
+                  "en": "go sailing / went sailing",
+                  "pos": "phr.",
+                  "zh": "玩帆船；航行",
+                  "ex_en": "They will go sailing this weekend.",
+                  "ex_zh": "他們這個週末要去玩帆船。",
+                  "ex_blank": "They will ____ this weekend."
+                },
+                {
+                  "en": "go surfing / went surfing",
+                  "pos": "phr.",
+                  "zh": "衝浪",
+                  "ex_en": "My brother likes to go surfing.",
+                  "ex_zh": "我哥哥喜歡去衝浪。",
+                  "ex_blank": "My brother likes to ____."
+                },
+                {
+                  "en": "fly / flew",
+                  "pos": "v.",
+                  "zh": "飛行；駕駛",
+                  "ex_en": "Birds can fly high in the sky.",
+                  "ex_zh": "鳥可以在天空中高高飛翔。",
+                  "ex_blank": "Birds can ____ high in the sky.",
+                  "grammar": "fly 的過去式是 flew，過去分詞是 flown。"
+                },
+                {
+                  "en": "bus stop",
+                  "pos": "n.",
+                  "zh": "公車站",
+                  "ex_en": "The bus stop is in front of the school.",
+                  "ex_zh": "公車站在學校前面。",
+                  "ex_blank": "The ____ is in front of the school."
+                }
+              ]
+            },
+            {
+              "id": "hl-u5-5",
+              "title": "Part 5",
+              "zh": "休閒活動",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "go biking / went biking",
+                  "pos": "phr.",
+                  "zh": "騎單車",
+                  "ex_en": "We like to go biking in the park.",
+                  "ex_zh": "我們喜歡在公園裡騎單車。",
+                  "ex_blank": "We like to ____ in the park."
+                },
+                {
+                  "en": "go shopping / went shopping",
+                  "pos": "phr.",
+                  "zh": "購物",
+                  "ex_en": "My mom and I will go shopping tomorrow.",
+                  "ex_zh": "我媽媽和我明天要去購物。",
+                  "ex_blank": "My mom and I will ____ tomorrow."
+                },
+                {
+                  "en": "hit",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "碰撞；打擊",
+                  "ex_en": "Don't hit your brother.",
+                  "ex_zh": "不要打你弟弟。",
+                  "ex_blank": "Don't ____ your brother.",
+                  "grammar": "hit 的過去式與過去分詞跟原形一樣都是 hit，當名詞則指「碰撞、打擊」這個動作。"
+                },
+                {
+                  "en": "sound",
+                  "pos": "n.",
+                  "zh": "聲音",
+                  "ex_en": "I heard a strange sound.",
+                  "ex_zh": "我聽到一個奇怪的聲音。",
+                  "ex_blank": "I heard a strange ____."
+                },
+                {
+                  "en": "bell",
+                  "pos": "n.",
+                  "zh": "鐘；鈴",
+                  "ex_en": "The school bell is ringing.",
+                  "ex_zh": "學校的鐘聲響了。",
+                  "ex_blank": "The school ____ is ringing."
+                },
+                {
+                  "en": "experience",
+                  "pos": "n./v.",
+                  "blankPos": "n.",
+                  "zh": "經歷；經驗；體驗",
+                  "ex_en": "It was a good experience.",
+                  "ex_zh": "那是一次很棒的經歷。",
+                  "ex_blank": "It was a good ____.",
+                  "grammar": "experience 當名詞是「經歷、經驗」，當動詞是「經歷、體驗」，如 experience different cultures。"
+                },
+                {
+                  "en": "wonderful",
+                  "pos": "adj.",
+                  "zh": "美好的",
+                  "ex_en": "We had a wonderful time at the party.",
+                  "ex_zh": "我們在派對上度過了美好的時光。",
+                  "ex_blank": "We had a ____ time at the party."
+                },
+                {
+                  "en": "play",
+                  "pos": "n.",
+                  "zh": "戲劇",
+                  "ex_en": "We are going to see a play tonight.",
+                  "ex_zh": "我們今晚要去看一齣戲劇。",
+                  "ex_blank": "We are going to see a ____ tonight."
+                },
+                {
+                  "en": "around",
+                  "pos": "adv.",
+                  "zh": "大約",
+                  "ex_en": "It's around ten o'clock.",
+                  "ex_zh": "現在大約十點。",
+                  "ex_blank": "It's ____ ten o'clock."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hl-lesson6",
+          "title": "Unit 6",
+          "zh": "購物與金錢",
+          "units": [
+            {
+              "id": "hl-u6-1",
+              "title": "Part 1",
+              "zh": "價格與花費",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "will",
+                  "pos": "aux.",
+                  "zh": "將",
+                  "ex_en": "I will do my homework later.",
+                  "ex_zh": "我等一下會做作業。",
+                  "ex_blank": "I ____ do my homework later."
+                },
+                {
+                  "en": "ugly",
+                  "pos": "adj.",
+                  "zh": "醜的",
+                  "ex_en": "I don't like that ugly dog.",
+                  "ex_zh": "我不喜歡那隻醜狗。",
+                  "ex_blank": "I don't like that ____ dog."
+                },
+                {
+                  "en": "sweater",
+                  "pos": "n.",
+                  "zh": "毛衣",
+                  "ex_en": "This sweater is very warm.",
+                  "ex_zh": "這件毛衣很保暖。",
+                  "ex_blank": "This ____ is very warm."
+                },
+                {
+                  "en": "tonight",
+                  "pos": "adv./n.",
+                  "blankPos": "adv.",
+                  "zh": "今晚",
+                  "ex_en": "Are you busy tonight?",
+                  "ex_zh": "你今晚忙嗎？",
+                  "ex_blank": "Are you busy ____?",
+                  "grammar": "tonight 當副詞直接放在句尾修飾動詞，當名詞則可以當主詞，如 Tonight is my birthday."
+                },
+                {
+                  "en": "funny",
+                  "pos": "adj.",
+                  "zh": "滑稽的",
+                  "ex_en": "He told a funny story.",
+                  "ex_zh": "他說了一個滑稽的故事。",
+                  "ex_blank": "He told a ____ story."
+                },
+                {
+                  "en": "cost",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "價錢為；花費",
+                  "ex_en": "How much does this book cost?",
+                  "ex_zh": "這本書多少錢？",
+                  "ex_blank": "How much does this book ____?",
+                  "grammar": "cost 的現在式、過去式、過去分詞都是 cost；當名詞則指「價錢、花費」。"
+                },
+                {
+                  "en": "price",
+                  "pos": "n.",
+                  "zh": "價格",
+                  "ex_en": "What is the price of this T-shirt?",
+                  "ex_zh": "這件T恤的價格是多少？",
+                  "ex_blank": "What is the ____ of this T-shirt?"
+                },
+                {
+                  "en": "spend / spent",
+                  "pos": "v.",
+                  "zh": "花費（時間、金錢）",
+                  "ex_en": "I spend two hours on my homework every day.",
+                  "ex_zh": "我每天花兩個小時寫作業。",
+                  "ex_blank": "I ____ two hours on my homework every day.",
+                  "grammar": "spend 的過去式與過去分詞都是 spent；spend + 時間/金錢 + on N 或 Ving 表示「花費在…上」。"
+                },
+                {
+                  "en": "expensive",
+                  "pos": "adj.",
+                  "zh": "昂貴的",
+                  "ex_en": "This watch is too expensive for me.",
+                  "ex_zh": "這支手錶對我來說太貴了。",
+                  "ex_blank": "This watch is too ____ for me."
+                }
+              ]
+            },
+            {
+              "id": "hl-u6-2",
+              "title": "Part 2",
+              "zh": "數字與金額",
+              "color": "#3B6E8F",
+              "words": [
+                {
+                  "en": "on sale",
+                  "pos": "phr.",
+                  "zh": "特價中",
+                  "ex_en": "The shoes are on sale this week.",
+                  "ex_zh": "這雙鞋這星期特價中。",
+                  "ex_blank": "The shoes are ____ this week."
+                },
+                {
+                  "en": "pair",
+                  "pos": "n.",
+                  "zh": "（一）雙；（一）對",
+                  "ex_en": "I need a new pair of shoes.",
+                  "ex_zh": "我需要一雙新鞋。",
+                  "ex_blank": "I need a new ____ of shoes."
+                },
+                {
+                  "en": "total",
+                  "pos": "n./adj.",
+                  "blankPos": "n.",
+                  "zh": "總計；總計的",
+                  "ex_en": "The total is 500 dollars.",
+                  "ex_zh": "總計是500元。",
+                  "ex_blank": "The ____ is 500 dollars.",
+                  "grammar": "total 當名詞是「總計」，當形容詞則修飾名詞，如 the total number。"
+                },
+                {
+                  "en": "pay / paid",
+                  "pos": "v./n.",
+                  "blankPos": "v.",
+                  "zh": "付費；工資",
+                  "ex_en": "I will pay for the dinner.",
+                  "ex_zh": "我會付這頓晚餐的錢。",
+                  "ex_blank": "I will ____ for the dinner.",
+                  "grammar": "pay 的過去式與過去分詞都是 paid；pay for + 東西 表示「付…的錢」，當名詞則指「工資」。"
+                },
+                {
+                  "en": "thousand",
+                  "pos": "n.",
+                  "zh": "千",
+                  "ex_en": "There are one thousand students in my school.",
+                  "ex_zh": "我的學校有一千名學生。",
+                  "ex_blank": "There are one ____ students in my school."
+                },
+                {
+                  "en": "tomorrow",
+                  "pos": "adv./n.",
+                  "blankPos": "n.",
+                  "zh": "明天",
+                  "ex_en": "Tomorrow is a new day.",
+                  "ex_zh": "明天是新的一天。",
+                  "ex_blank": "____ is a new day.",
+                  "grammar": "tomorrow 當名詞可以當句子的主詞，當副詞則直接修飾動詞，如 I will see you tomorrow."
+                },
+                {
+                  "en": "high",
+                  "pos": "adj.",
+                  "zh": "高的",
+                  "ex_en": "That building is very high.",
+                  "ex_zh": "那棟建築物非常高。",
+                  "ex_blank": "That building is very ____."
+                },
+                {
+                  "en": "save",
+                  "pos": "v.",
+                  "zh": "節省",
+                  "ex_en": "We should save water.",
+                  "ex_zh": "我們應該節約用水。",
+                  "ex_blank": "We should ____ water."
+                },
+                {
+                  "en": "would like",
+                  "pos": "phr.",
+                  "zh": "想要",
+                  "ex_en": "I would like a cup of tea.",
+                  "ex_zh": "我想要一杯茶。",
+                  "ex_blank": "I ____ a cup of tea.",
+                  "grammar": "would like 比 want 更委婉客氣，would like + 名詞 或 would like to + V。"
+                }
+              ]
+            },
+            {
+              "id": "hl-u6-3",
+              "title": "Part 3",
+              "zh": "衣物配件一",
+              "color": "#4CAF7D",
+              "words": [
+                {
+                  "en": "change",
+                  "pos": "n.",
+                  "zh": "找零",
+                  "ex_en": "Here is your change.",
+                  "ex_zh": "這是找你的零錢。",
+                  "ex_blank": "Here is your ____."
+                },
+                {
+                  "en": "take / took",
+                  "pos": "v.",
+                  "zh": "花費（時間）",
+                  "ex_en": "It will take one hour to finish.",
+                  "ex_zh": "完成這件事要花一個小時。",
+                  "ex_blank": "It will ____ one hour to finish.",
+                  "grammar": "這裡的 take 表示「（事情）花費時間」，常用句型 It takes + 時間 + to V。"
+                },
+                {
+                  "en": "dress",
+                  "pos": "v./n.",
+                  "blankPos": "n.",
+                  "zh": "打扮；洋裝",
+                  "ex_en": "She is wearing a beautiful dress.",
+                  "ex_zh": "她穿著一件漂亮的洋裝。",
+                  "ex_blank": "She is wearing a beautiful ____.",
+                  "grammar": "dress 當名詞是「洋裝」，當動詞是「打扮」，如 dress up for parties。"
+                },
+                {
+                  "en": "cap",
+                  "pos": "n.",
+                  "zh": "（前有遮簷的）帽子",
+                  "ex_en": "He is wearing a red cap.",
+                  "ex_zh": "他戴著一頂紅色的帽子。",
+                  "ex_blank": "He is wearing a red ____."
+                },
+                {
+                  "en": "shirt",
+                  "pos": "n.",
+                  "zh": "襯衫",
+                  "ex_en": "My dad bought a new shirt.",
+                  "ex_zh": "我爸爸買了一件新襯衫。",
+                  "ex_blank": "My dad bought a new ____."
+                },
+                {
+                  "en": "belt",
+                  "pos": "n.",
+                  "zh": "腰帶",
+                  "ex_en": "I need a belt for my pants.",
+                  "ex_zh": "我的褲子需要一條腰帶。",
+                  "ex_blank": "I need a ____ for my pants."
+                },
+                {
+                  "en": "jeans",
+                  "pos": "n.",
+                  "zh": "牛仔褲",
+                  "ex_en": "I like to wear jeans.",
+                  "ex_zh": "我喜歡穿牛仔褲。",
+                  "ex_blank": "I like to wear ____."
+                },
+                {
+                  "en": "sock",
+                  "pos": "n.",
+                  "zh": "襪子",
+                  "ex_en": "Where is my other sock?",
+                  "ex_zh": "我另一隻襪子在哪裡？",
+                  "ex_blank": "Where is my other ____?"
+                },
+                {
+                  "en": "tie",
+                  "pos": "n.",
+                  "zh": "領帶",
+                  "ex_en": "My dad wears a tie to work.",
+                  "ex_zh": "我爸爸上班時會打領帶。",
+                  "ex_blank": "My dad wears a ____ to work."
+                }
+              ]
+            },
+            {
+              "id": "hl-u6-4",
+              "title": "Part 4",
+              "zh": "衣物配件二",
+              "color": "#B07CC6",
+              "words": [
+                {
+                  "en": "pants",
+                  "pos": "n.",
+                  "zh": "長褲",
+                  "ex_en": "These pants are too long for me.",
+                  "ex_zh": "這件長褲對我來說太長了。",
+                  "ex_blank": "These ____ are too long for me."
+                },
+                {
+                  "en": "shoe",
+                  "pos": "n.",
+                  "zh": "鞋",
+                  "ex_en": "This is a new shoe.",
+                  "ex_zh": "這是一隻新鞋。",
+                  "ex_blank": "This is a new ____."
+                },
+                {
+                  "en": "T-shirt",
+                  "pos": "n.",
+                  "zh": "Ｔ恤",
+                  "ex_en": "I have a blue T-shirt.",
+                  "ex_zh": "我有一件藍色的T恤。",
+                  "ex_blank": "I have a blue ____."
+                },
+                {
+                  "en": "shorts",
+                  "pos": "n.",
+                  "zh": "短褲",
+                  "ex_en": "I wear shorts in summer.",
+                  "ex_zh": "我夏天會穿短褲。",
+                  "ex_blank": "I wear ____ in summer."
+                },
+                {
+                  "en": "hat",
+                  "pos": "n.",
+                  "zh": "帽子",
+                  "ex_en": "She is wearing a big hat.",
+                  "ex_zh": "她戴著一頂大帽子。",
+                  "ex_blank": "She is wearing a big ____."
+                },
+                {
+                  "en": "coat",
+                  "pos": "n.",
+                  "zh": "外套",
+                  "ex_en": "It's cold, please wear a coat.",
+                  "ex_zh": "天氣很冷，請穿上外套。",
+                  "ex_blank": "It's cold, please wear a ____."
+                },
+                {
+                  "en": "skirt",
+                  "pos": "n.",
+                  "zh": "裙子",
+                  "ex_en": "She has a beautiful skirt.",
+                  "ex_zh": "她有一件漂亮的裙子。",
+                  "ex_blank": "She has a beautiful ____."
+                },
+                {
+                  "en": "glasses",
+                  "pos": "n.",
+                  "zh": "眼鏡",
+                  "ex_en": "My mom wears glasses when she reads.",
+                  "ex_zh": "我媽媽看書時會戴眼鏡。",
+                  "ex_blank": "My mom wears ____ when she reads."
+                },
+                {
+                  "en": "ring",
+                  "pos": "n.",
+                  "zh": "戒指；環（狀物）",
+                  "ex_en": "She has a ring on her finger.",
+                  "ex_zh": "她的手指上戴著一枚戒指。",
+                  "ex_blank": "She has a ____ on her finger."
+                }
+              ]
+            },
+            {
+              "id": "hl-u6-5",
+              "title": "Part 5",
+              "zh": "程度與意外",
+              "color": "#E8604C",
+              "words": [
+                {
+                  "en": "take off / took off",
+                  "pos": "phr.",
+                  "zh": "脫下",
+                  "ex_en": "Please take off your shoes here.",
+                  "ex_zh": "請在這裡脫鞋。",
+                  "ex_blank": "Please ____ your shoes here.",
+                  "grammar": "take off 的過去式是 took off；take off 也可以表示飛機「起飛」。"
+                },
+                {
+                  "en": "fast",
+                  "pos": "adj./adv.",
+                  "blankPos": "adj.",
+                  "zh": "快的；快地",
+                  "ex_en": "He is a fast runner.",
+                  "ex_zh": "他是個跑得很快的人。",
+                  "ex_blank": "He is a ____ runner.",
+                  "grammar": "fast 當形容詞是「快的」，當副詞也是「快地」，形式相同不加 -ly，如 Don't talk so fast."
+                },
+                {
+                  "en": "low",
+                  "pos": "adj.",
+                  "zh": "低的",
+                  "ex_en": "The table is too low for me.",
+                  "ex_zh": "這張桌子對我來說太矮了。",
+                  "ex_blank": "The table is too ____ for me."
+                },
+                {
+                  "en": "cheap",
+                  "pos": "adj.",
+                  "zh": "便宜的",
+                  "ex_en": "This pen is very cheap.",
+                  "ex_zh": "這支筆很便宜。",
+                  "ex_blank": "This pen is very ____."
+                },
+                {
+                  "en": "what's more",
+                  "pos": "phr.",
+                  "zh": "而且",
+                  "ex_en": "The book is interesting, and what's more, it's cheap.",
+                  "ex_zh": "這本書很有趣，而且還很便宜。",
+                  "ex_blank": "The book is interesting, and ____, it's cheap."
+                },
+                {
+                  "en": "most",
+                  "pos": "adj.",
+                  "zh": "大部分的",
+                  "ex_en": "Most students in my class like English.",
+                  "ex_zh": "我班上大部分的學生都喜歡英文。",
+                  "ex_blank": "____ students in my class like English."
+                },
+                {
+                  "en": "hurt",
+                  "pos": "v.",
+                  "zh": "傷害",
+                  "ex_en": "I hurt my arm when I fell down.",
+                  "ex_zh": "我跌倒時傷到了手臂。",
+                  "ex_blank": "I ____ my arm when I fell down.",
+                  "grammar": "hurt 的現在式、過去式、過去分詞都是 hurt，形式不變。"
+                },
+                {
+                  "en": "come off / came off",
+                  "pos": "phr.",
+                  "zh": "從…脫落",
+                  "ex_en": "The button came off my shirt.",
+                  "ex_zh": "鈕扣從我的襯衫上脫落了。",
+                  "ex_blank": "The button ____ my shirt.",
+                  "grammar": "come off 的過去式是 came off（come 是不規則動詞）。"
+                },
+                {
+                  "en": "second",
+                  "pos": "n.",
+                  "zh": "秒",
+                  "ex_en": "Please wait a second.",
+                  "ex_zh": "請稍等一秒。",
+                  "ex_blank": "Please wait a ____."
+                }
+              ]
+            }
+          ]
         }
       ]
     }
