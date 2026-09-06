@@ -22,9 +22,46 @@
 
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<!-- Firebase：用「compat」版本的 SDK，寫法跟其他 CDN script 標籤一致，不需要 npm/建置工具 -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-functions-compat.js"></script>
 <style>
   html, body { margin: 0; padding: 0; background: #F2F0EA; width: 100%; overflow-x: hidden; }
   #root { min-height: 100vh; width: 100%; }
+
+  /* 登入畫面（AppGate / LoginScreen），跟主 App 各畫面共用同一套色調 */
+  .auth-loading {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    color: #6B6A5E; font-size: 14px; font-family: 'Noto Sans TC', sans-serif;
+  }
+  .login-screen {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 24px; box-sizing: border-box; font-family: 'Noto Sans TC', sans-serif;
+  }
+  .login-card {
+    width: 100%; max-width: 340px; background: #FFFDF8; border: 1.5px solid #E4E0D4;
+    border-radius: 20px; padding: 28px 24px; box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(35,44,77,0.08); text-align: center;
+  }
+  .login-card h1 { font-size: 20px; margin: 0 0 6px; color: #232C4D; }
+  .login-sub { font-size: 13px; color: #6B6A5E; margin: 0 0 20px; }
+  .login-form { display: flex; flex-direction: column; gap: 10px; }
+  .login-input {
+    width: 100%; box-sizing: border-box; padding: 12px 14px; font-size: 15px;
+    border: 1.5px solid #E4E0D4; border-radius: 12px; font-family: 'Noto Sans TC', sans-serif;
+    background: #fff; color: #232C4D;
+  }
+  .login-input:focus { outline: none; border-color: #232C4D; }
+  .login-error { color: #C0392B; font-size: 12.5px; margin: 12px 0 0; }
+  .login-submit {
+    margin-top: 18px; width: 100%; padding: 12px; font-size: 15px; font-weight: 700;
+    color: #fff; background: #232C4D; border: none; border-radius: 999px; cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  .login-submit:disabled { opacity: 0.6; cursor: default; }
+  .login-submit:not(:disabled):active { transform: scale(0.97); }
 </style>
 </head>
 <body>
@@ -256,6 +293,73 @@ window.storage = {
 };
 
 /* ------------------------------------------------------------------ */
+/* Firebase：多人帳號登入 + 雲端進度儲存（Firestore）                     */
+/* 帳號由家長在 Firebase Console 手動建立，App 內沒有註冊功能              */
+/* ------------------------------------------------------------------ */
+const firebaseConfig = {
+  apiKey: "AIzaSyDKgwbUni-Pl6gUPOg7cEuI4kShmHMzRgc",
+  authDomain: "english-study-app-9490f.firebaseapp.com",
+  projectId: "english-study-app-9490f",
+  storageBucket: "english-study-app-9490f.firebasestorage.app",
+  messagingSenderId: "333752155349",
+  appId: "1:333752155349:web:9cb78529f0c334eb31365c"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+// Cloud Function（跟讀語音辨識）部署在 asia-east1，呼叫時要指定同一個地區
+const functionsClient = firebase.app().functions("asia-east1");
+const checkPronunciationFn = functionsClient.httpsCallable("checkPronunciation");
+const translateWordFn = functionsClient.httpsCallable("translateWord");
+const lookupWordFn = functionsClient.httpsCallable("lookupWord");
+
+// 把錄音的 Blob 轉成純文字 base64，才能塞進 Cloud Function 的 JSON 參數裡
+function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const result = reader.result || "";
+      const base64 = String(result).split(",")[1] || "";
+      resolve(base64);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+// 使用者只需輸入單純的帳號名稱（不含 @），這裡轉換成 Firebase Auth
+// 要求的 email 格式，讓「使用者名稱登入」跟「Firebase 只認 email」兩邊都能滿足
+const AUTH_EMAIL_DOMAIN = "word-island.app";
+function usernameToEmail(username) {
+  return `${username.trim().toLowerCase()}@${AUTH_EMAIL_DOMAIN}`;
+}
+function emailToUsername(email) {
+  return (email || "").split("@")[0];
+}
+
+const EMPTY_PROGRESS = () => ({
+  stamps: {},
+  wordStats: {},
+  mistakes: {},
+  reviewLog: {},
+  dailyStamps: {},
+  dailyMistakes: {},
+  learnedWords: {},
+  onboarded: false,
+  customWords: [],
+  dailyResetDate: todayStr()
+});
+
+async function loadProgressFromCloud(uid) {
+  const snap = await db.collection("progress").doc(uid).get();
+  if (!snap.exists) return null;
+  return snap.data();
+}
+async function saveProgressToCloud(uid, data) {
+  await db.collection("progress").doc(uid).set(data);
+}
+
+/* ------------------------------------------------------------------ */
 /* 內容資料：康軒八年級 3 課（U1~U3），依「第 n 課」分組，每課再分 4 個小節 */
 /* 同形詞（如 report/far/above、middle n./adj.）合併為一筆單字            */
 /* ------------------------------------------------------------------ */
@@ -344,7 +448,12 @@ function pickExample(word) {
   return variants[Math.floor(Math.random() * variants.length)];
 }
 let ALL_WORDS = []; // 同上，資料載入完成後才會填入內容
-function findWord(unitId, en) {
+function findWord(unitId, en, progress) {
+  // 自訂生字不是放在 UNITS（課本資料）裡，是即時從 progress.customWords 組出來的，
+  // 查單字時要多這一個分支，不然自訂生字答錯後永遠不會出現在複習清單裡
+  if (unitId === CUSTOM_UNIT_ID) {
+    return (progress && progress.customWords || []).find(w => w.en === en) || null;
+  }
   const unit = UNITS.find(u => u.id === unitId);
   return unit ? unit.words.find(w => w.en === en) : null;
 }
@@ -426,13 +535,15 @@ function shuffle(arr) {
 /* ------------------------------------------------------------------ */
 function SpeakerButton({
   text,
-  size = 20
+  size = 20,
+  onPlay
 }) {
   return /*#__PURE__*/React.createElement("button", {
     className: "speaker-btn",
     onClick: e => {
       e.stopPropagation();
       speak(text);
+      if (onPlay) onPlay(text);
     },
     "aria-label": `Play pronunciation of ${text}`,
     type: "button"
@@ -459,9 +570,13 @@ function NextButton({
 function FormsSpeaker({
   word,
   size = 18,
-  wordClassName = ""
+  wordClassName = "",
+  onPlay,
+  showIpa = false
 }) {
   const forms = wordForms(word);
+  // 音標依 " / " 拆開，跟 forms 一一對應（例如 "feel / felt" ↔ "fil / fɛlt"）
+  const ipaForms = showIpa && word.ipa ? word.ipa.split(" / ").map(s => s.trim()) : [];
   return /*#__PURE__*/React.createElement("span", {
     className: "forms-row"
   }, forms.map((f, i) => /*#__PURE__*/React.createElement("span", {
@@ -469,9 +584,12 @@ function FormsSpeaker({
     key: f
   }, /*#__PURE__*/React.createElement("span", {
     className: wordClassName
-  }, f), /*#__PURE__*/React.createElement(SpeakerButton, {
+  }, f), ipaForms[i] && /*#__PURE__*/React.createElement("span", {
+    className: "ipa-text"
+  }, "[", ipaForms[i], "]"), /*#__PURE__*/React.createElement(SpeakerButton, {
     text: f,
-    size: size
+    size: size,
+    onPlay: onPlay
   }), i < forms.length - 1 && /*#__PURE__*/React.createElement("span", {
     className: "form-sep"
   }, "/"))));
@@ -551,9 +669,79 @@ function MistakeWordPanel({
 }
 
 /* ------------------------------------------------------------------ */
+/* 使用導覽：第一次登入自動跳出，之後可以從「使用說明」按鈕重新打開      */
+/* ------------------------------------------------------------------ */
+const ONBOARDING_STEPS = [{
+  emoji: "🏝️",
+  title: "歡迎來到字卡島！",
+  body: "這是幫你學英文的自學工具。首頁選一本書/課本／主題 → 選一課 → 選一個小節，就可以開始練習了。"
+}, {
+  emoji: "🎯",
+  title: "5 種練習方式",
+  body: "字卡瀏覽、選擇題、配對、克漏字、拼字，每個小節都能任選練習。答對會累積印章 ⭐，也會記錄最佳成績。"
+}, {
+  emoji: "🔊",
+  title: "字卡瀏覽怎樣才算學會？",
+  body: "點喇叭聽發音、翻面看例句、跟著念出單字和例句（會用麥克風錄音辨識發音），全部做完卡片才會顯示「已學習」。"
+}, {
+  emoji: "⭐",
+  title: "答錯的字會自動排進複習",
+  body: "首頁「複習錯題」會列出最近答錯的單字，連續答對幾次才會畢業。右上角星星顯示今天答錯的字數，點下去可以看清單。"
+}, {
+  emoji: "👤",
+  title: "你的帳號、你的進度",
+  body: "用自己的帳號登入，進度會分開存在雲端，換手機/電腦登入一樣看得到。首頁下方也可以手動備份或還原進度。"
+}];
+function OnboardingModal({
+  onClose
+}) {
+  const [step, setStep] = useState(0);
+  const total = ONBOARDING_STEPS.length;
+  const current = ONBOARDING_STEPS[step];
+  const isLast = step === total - 1;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "onboarding-overlay",
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "onboarding-card",
+    onClick: e => e.stopPropagation()
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "onboarding-skip",
+    onClick: onClose
+  }, "略過"), /*#__PURE__*/React.createElement("div", {
+    className: "onboarding-emoji"
+  }, current.emoji), /*#__PURE__*/React.createElement("h2", {
+    className: "onboarding-title"
+  }, current.title), /*#__PURE__*/React.createElement("p", {
+    className: "onboarding-body"
+  }, current.body), /*#__PURE__*/React.createElement("div", {
+    className: "onboarding-dots"
+  }, ONBOARDING_STEPS.map((_, i) => /*#__PURE__*/React.createElement("span", {
+    key: i,
+    className: `onboarding-dot ${i === step ? "active" : ""}`
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "onboarding-actions"
+  }, step > 0 && /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "onboarding-btn onboarding-btn-secondary",
+    onClick: () => setStep(s => Math.max(0, s - 1))
+  }, "上一步"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "onboarding-btn",
+    onClick: () => {
+      if (isLast) onClose();else setStep(s => s + 1);
+    }
+  }, isLast ? "開始使用！" : "下一步"))));
+}
+
+/* ------------------------------------------------------------------ */
 /* 主 App                                                              */
 /* ------------------------------------------------------------------ */
-function EnglishStudyApp() {
+function EnglishStudyApp({
+  user,
+  onLogout
+}) {
   const [screen, setScreen] = useState({
     view: "home"
   });
@@ -564,10 +752,30 @@ function EnglishStudyApp() {
     reviewLog: {},
     dailyStamps: {},
     dailyMistakes: {},
+    learnedWords: {},
+    onboarded: false,
+    customWords: [],
     dailyResetDate: todayStr()
   });
   const [showMistakePanel, setShowMistakePanel] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  useEffect(() => {
+    // 進度載入完成後，如果這個帳號從沒看過使用導覽，自動跳出來一次；
+    // 只依賴 loaded，避免之後 progress 有任何變動就一直重新跳出來
+    if (loaded && !progress.onboarded) {
+      setShowOnboarding(true);
+    }
+  }, [loaded]);
+  const dismissOnboarding = () => {
+    setShowOnboarding(false);
+    if (!progress.onboarded) {
+      saveProgress({
+        ...ensureDailyReset(progress),
+        onboarded: true
+      });
+    }
+  };
   useEffect(() => {
     // 保活機制：部分瀏覽器（尤其 Chrome 系）閒置一段時間後會把語音合成暫停，
     // 定期 pause/resume 可避免下次點喇叭時發不出聲音。
@@ -587,9 +795,8 @@ function EnglishStudyApp() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await window.storage.get(STORAGE_KEY, false);
-        if (res && res.value) {
-          const parsed = JSON.parse(res.value);
+        const parsed = await loadProgressFromCloud(user.uid);
+        if (parsed) {
           const merged = {
             stamps: {},
             wordStats: {},
@@ -597,6 +804,9 @@ function EnglishStudyApp() {
             reviewLog: {},
             dailyStamps: {},
             dailyMistakes: {},
+            learnedWords: {},
+            onboarded: false,
+            customWords: [],
             dailyResetDate: "",
             ...parsed
           };
@@ -605,27 +815,28 @@ function EnglishStudyApp() {
           if (reset !== merged) {
             // 換日了，把重置後的狀態立刻存回去，避免只停留在記憶體裡
             try {
-              await window.storage.set(STORAGE_KEY, JSON.stringify(reset), false);
+              await saveProgressToCloud(user.uid, reset);
             } catch (e) {
               // ignore
             }
           }
         }
       } catch (e) {
-        // key not found yet, ignore
+        // 讀取失敗（例如尚未有任何進度文件），忽略即可
+        console.error("load progress error", e);
       } finally {
         setLoaded(true);
       }
     })();
-  }, []);
+  }, [user.uid]);
   const saveProgress = useCallback(async next => {
     setProgress(next);
     try {
-      await window.storage.set(STORAGE_KEY, JSON.stringify(next), false);
+      await saveProgressToCloud(user.uid, next);
     } catch (e) {
       console.error("save error", e);
     }
-  }, []);
+  }, [user.uid]);
   const markStamp = (unitId, activityKey, scoreInfo) => {
     // 換日了先做每日重置，避免深夜跨到凌晨後 dailyStamps 沒清到
     const base = ensureDailyReset(progress);
@@ -739,6 +950,52 @@ function EnglishStudyApp() {
       dailyMistakes
     });
   };
+  // 字卡「已學習」：喇叭、翻面看例句/文法、跟讀通過三項都完成才會呼叫，永久紀錄、不受每日重置影響
+  const markWordLearned = (unit, word) => {
+    const base = ensureDailyReset(progress);
+    const key = `${unit.id}::${word.en}`;
+    if (base.learnedWords && base.learnedWords[key]) return; // 已經記錄過，不用重覆寫入
+    saveProgress({
+      ...base,
+      learnedWords: {
+        ...(base.learnedWords || {}),
+        [key]: true
+      }
+    });
+  };
+  // 自訂生字：使用者自己輸入想背的單字，存進雲端進度，之後可以用跟課本單字
+  // 完全一樣的 5 種練習方式複習（原理是把這些字包成一個「虛擬 unit」餵給既有元件）
+  const addCustomWord = wordData => {
+    const base = ensureDailyReset(progress);
+    const entry = {
+      id: `cw-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+      ...wordData
+    };
+    saveProgress({
+      ...base,
+      customWords: [...(base.customWords || []), entry]
+    });
+  };
+  const deleteCustomWord = id => {
+    const base = ensureDailyReset(progress);
+    const target = (base.customWords || []).find(w => w.id === id);
+    const next = {
+      ...base,
+      customWords: (base.customWords || []).filter(w => w.id !== id)
+    };
+    // 使用者刪除生字通常代表「已經背熟了、不用再追蹤」，順便把跟這個字有關的
+    // 錯題/複習/已學習紀錄一起清掉，避免刪掉之後清單裡還殘留看不到的舊資料
+    if (target) {
+      const key = `${CUSTOM_UNIT_ID}::${target.en}`;
+      ["mistakes", "dailyMistakes", "wordStats", "reviewLog", "learnedWords"].forEach(field => {
+        if (next[field] && next[field][key] !== undefined) {
+          next[field] = { ...next[field] };
+          delete next[field][key];
+        }
+      });
+    }
+    saveProgress(next);
+  };
   // 右上角星星：改成呈現「今天」答錯的單字狀況，每天午夜重置，點下去可以看到是哪幾個字
   const todayMistakeList = Object.entries(progress.dailyMistakes || {}).map(([key, m]) => ({
     key,
@@ -778,6 +1035,9 @@ function EnglishStudyApp() {
           reviewLog: {},
           dailyStamps: {},
           dailyMistakes: {},
+          learnedWords: {},
+          onboarded: false,
+          customWords: [],
           dailyResetDate: "",
           ...parsed
         });
@@ -798,6 +1058,11 @@ function EnglishStudyApp() {
         reviewLog: {},
         dailyStamps: {},
         dailyMistakes: {},
+        learnedWords: {},
+        // 使用導覽只跟「有沒有看過」有關，自訂生字是使用者自己輸入的內容，
+        // 這兩者都跟「學習進度」無關，重置進度不應該連這些也清掉
+        onboarded: progress.onboarded || false,
+        customWords: progress.customWords || [],
         dailyResetDate: todayStr()
       });
     }
@@ -889,8 +1154,9 @@ function EnglishStudyApp() {
 
         .backup-row {
           display: flex; align-items: center; justify-content: center; gap: 8px;
-          margin-bottom: 14px; font-size: 12px;
+          margin-bottom: 14px; font-size: 12px; flex-wrap: wrap;
         }
+        .current-user { font-size: 12px; color: #6B6A5E; font-weight: 600; }
         .text-link {
           background: none; border: none; color: #6B6A5E; text-decoration: underline;
           font-size: 12px; cursor: pointer; padding: 0; font-family: 'Noto Sans TC', sans-serif;
@@ -1016,6 +1282,7 @@ function EnglishStudyApp() {
         .form-item { display: inline-flex; align-items: center; gap: 10px; }
         .form-sep { opacity: 0.4; font-weight: 400; margin: 0 2px; }
         .flip-face.back .form-sep { opacity: 0.7; }
+        .ipa-text { font-size: 13px; color: #6B6A5E; font-weight: 400; font-family: 'Noto Sans TC', sans-serif; }
 
         /* 字卡背面：例句跟喇叭放同一行，喇叭縮小尺寸，節省高度；
            用白底 + 卡片主色的圖示，在任何一種單元色底下都能保持清楚對比。 */
@@ -1056,6 +1323,58 @@ function EnglishStudyApp() {
           border-radius: 999px; min-width: 26px; height: 26px; padding: 0 8px;
           display: flex; align-items: center; justify-content: center;
         }
+        .custom-words-card { background: #6B4FA0; margin-top: 8px; }
+
+        /* 自訂生字：新增表單、清單 */
+        .custom-word-toggle-btn {
+          display: block; width: 100%; margin-bottom: 12px; background: transparent;
+          border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 14px;
+          font-size: 13px; font-weight: 600; color: #6B6A5E; cursor: pointer;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        .custom-word-toggle-btn:active { transform: scale(0.98); }
+        .custom-word-form {
+          display: flex; flex-direction: column; gap: 8px; background: var(--card);
+          border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin-bottom: 16px;
+        }
+        .custom-word-row { display: flex; gap: 8px; }
+        .custom-word-input {
+          flex: 1; width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 14px;
+          border: 1.5px solid var(--line); border-radius: 10px; font-family: 'Noto Sans TC', sans-serif;
+          background: #fff; color: var(--ink);
+        }
+        .custom-word-input:focus { outline: none; border-color: var(--ink); }
+        .custom-word-input-pos { flex: 0 0 40%; }
+        .custom-word-lookup-btn {
+          flex-shrink: 0; background: var(--ink); color: white; border: none; border-radius: 10px;
+          padding: 0 14px; font-size: 13px; font-weight: 700; cursor: pointer;
+          font-family: 'Noto Sans TC', sans-serif; white-space: nowrap;
+        }
+        .custom-word-lookup-btn:disabled { opacity: 0.5; cursor: default; }
+        .custom-word-lookup-btn:not(:disabled):active { transform: scale(0.96); }
+        .custom-word-error { color: var(--red); font-size: 12.5px; margin: 0; }
+        .custom-word-lookup-msg { font-size: 12px; margin: -2px 0 0; color: #6B6A5E; }
+        .custom-word-lookup-error { color: var(--red); }
+        .custom-word-lookup-ok { color: #2E7D32; }
+        .custom-word-sense-hints {
+          font-size: 12px; color: #6B6A5E; margin: -2px 0 0; line-height: 1.6;
+          background: var(--paper); border-radius: 8px; padding: 6px 10px;
+        }
+        .custom-word-form .primary-btn { align-self: center; margin-top: 4px; }
+        .custom-words-practice-btn { display: block; width: 100%; margin-bottom: 16px; }
+        .custom-word-list { display: flex; flex-direction: column; gap: 8px; }
+        .custom-word-item {
+          display: flex; align-items: center; justify-content: space-between; gap: 10px;
+          background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px;
+        }
+        .custom-word-item-en { font-weight: 700; font-size: 14px; }
+        .custom-word-item-pos { font-weight: 400; font-size: 12px; color: #6B6A5E; }
+        .custom-word-item-ex { font-size: 12px; color: #6B6A5E; margin-top: 2px; }
+        .custom-word-delete {
+          flex-shrink: 0; background: none; border: none; color: var(--red); cursor: pointer;
+          padding: 6px; border-radius: 999px; display: flex; align-items: center; justify-content: center;
+        }
+        .custom-word-delete:active { transform: scale(0.9); }
 
         /* 拼字練習 */
         .typing-form { display: flex; flex-direction: column; align-items: center; }
@@ -1154,6 +1473,65 @@ function EnglishStudyApp() {
           background: #FFF7E4; border-radius: 8px; padding: 8px 10px;
         }
 
+        /* 字卡「已學習」徽章 + 跟讀錄音按鈕 */
+        .learned-badge {
+          display: flex; align-items: center; gap: 4px; color: #2E7D32; font-size: 12.5px;
+          font-weight: 700; background: #E8F5E9; border-radius: 999px; padding: 4px 12px;
+        }
+        .todo-hint {
+          font-size: 12px; color: var(--accent-ink); background: #FFF7E4; border-radius: 999px;
+          padding: 4px 14px; text-align: center; max-width: 320px;
+        }
+
+        /* 例句裡可以點的單字，跟旁邊的靜態文字用底線區分出來 */
+        .clickable-word {
+          cursor: pointer; border-bottom: 1.5px dashed currentColor; padding-bottom: 1px;
+        }
+        .clickable-word:active { opacity: 0.6; }
+
+        /* 點單字後跳出的小視窗：補中文意思、加進自訂生字 */
+        .word-popup-overlay {
+          position: fixed; inset: 0; background: rgba(35,44,77,0.55);
+          display: flex; align-items: center; justify-content: center;
+          padding: 20px; box-sizing: border-box; z-index: 60;
+        }
+        .word-popup-card {
+          position: relative; width: 100%; max-width: 320px; background: var(--card);
+          border-radius: 18px; padding: 24px 20px 20px; box-sizing: border-box;
+          box-shadow: 0 12px 32px rgba(35,44,77,0.25); display: flex; flex-direction: column; gap: 10px;
+        }
+        .word-popup-close {
+          position: absolute; top: 10px; right: 10px; background: none; border: none;
+          color: #6B6A5E; cursor: pointer; padding: 4px;
+        }
+        .word-popup-title { font-size: 16px; margin: 0 0 2px; padding-right: 20px; }
+        .word-popup-context { font-size: 12.5px; color: #6B6A5E; margin: 0 0 4px; line-height: 1.5; }
+        .word-popup-translating { font-size: 13px; color: #6B6A5E; text-align: center; padding: 8px 0; margin: 0; }
+        .word-popup-translate-error { font-size: 12px; color: var(--red); margin: 0; }
+        .word-popup-msg { font-size: 14px; text-align: center; padding: 10px 0; }
+        .word-popup-card form { display: flex; flex-direction: column; gap: 10px; }
+        .word-popup-card .primary-btn { align-self: center; }
+        .pronounce-row {
+          display: flex; flex-direction: column; align-items: center; gap: 4px;
+        }
+        .pronounce-btn {
+          background: var(--accent); border: none; border-radius: 999px; color: var(--accent-ink);
+          font-weight: 700; font-size: 13px; padding: 8px 18px; cursor: pointer;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        .pronounce-btn:disabled { opacity: 0.7; cursor: default; }
+        .pronounce-btn:not(:disabled):active { transform: scale(0.96); }
+        .pronounce-done {
+          display: flex; align-items: center; gap: 4px; color: #2E7D32; font-size: 12.5px;
+          font-weight: 700;
+        }
+        .pronounce-msg { font-size: 12px; color: #6B6A5E; max-width: 280px; text-align: center; }
+        .pronounce-error { color: var(--red); }
+        /* 例句旁邊用的小尺寸跟讀按鈕，跟喇叭排在同一行 */
+        .pronounce-row.compact { flex-direction: row; gap: 4px; }
+        .pronounce-btn-compact { padding: 3px 10px; font-size: 11px; }
+        .pronounce-row.compact.pronounce-done { color: #2E7D32; }
+
         .result-banner {
           text-align: center; padding: 28px 16px; background: var(--card); border-radius: 16px;
           display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -1199,7 +1577,40 @@ function EnglishStudyApp() {
           font-size: 10px; font-weight: 700; color: var(--green); white-space: nowrap;
           margin-top: 2px;
         }
-      `), /*#__PURE__*/React.createElement("div", {
+
+        /* 首次使用導覽（OnboardingModal） */
+        .onboarding-overlay {
+          position: fixed; inset: 0; background: rgba(35,44,77,0.55);
+          display: flex; align-items: center; justify-content: center;
+          padding: 20px; box-sizing: border-box; z-index: 50;
+        }
+        .onboarding-card {
+          position: relative; width: 100%; max-width: 340px; background: var(--card);
+          border-radius: 20px; padding: 34px 24px 22px; box-sizing: border-box;
+          text-align: center; box-shadow: 0 12px 32px rgba(35,44,77,0.25);
+        }
+        .onboarding-skip {
+          position: absolute; top: 14px; right: 16px; background: none; border: none;
+          color: #6B6A5E; font-size: 12px; cursor: pointer; text-decoration: underline;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        .onboarding-emoji { font-size: 40px; margin-bottom: 6px; }
+        .onboarding-title { font-size: 18px; margin: 0 0 10px; }
+        .onboarding-body { font-size: 13.5px; line-height: 1.7; color: #4A4839; margin: 0 0 20px; }
+        .onboarding-dots { display: flex; justify-content: center; gap: 6px; margin-bottom: 20px; }
+        .onboarding-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--line); transition: width 0.15s; }
+        .onboarding-dot.active { background: var(--accent-ink); width: 18px; }
+        .onboarding-actions { display: flex; gap: 10px; justify-content: center; }
+        .onboarding-btn {
+          background: var(--ink); color: white; border: none; border-radius: 999px;
+          padding: 10px 22px; font-weight: 700; font-size: 14px; cursor: pointer;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        .onboarding-btn:active { transform: scale(0.96); }
+        .onboarding-btn-secondary { background: var(--paper); color: var(--ink); }
+      `), showOnboarding && /*#__PURE__*/React.createElement(OnboardingModal, {
+    onClose: dismissOnboarding
+  }), /*#__PURE__*/React.createElement("div", {
     className: "top-bar"
   }, /*#__PURE__*/React.createElement("div", {
     className: "brand"
@@ -1215,7 +1626,11 @@ function EnglishStudyApp() {
     onClose: () => setShowMistakePanel(false)
   }), loaded && screen.view === "home" && /*#__PURE__*/React.createElement("div", {
     className: "backup-row"
-  }, /*#__PURE__*/React.createElement("button", {
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "current-user"
+  }, "👤 ", user.username), /*#__PURE__*/React.createElement("span", {
+    className: "dot-sep"
+  }, "·"), /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "text-link",
     onClick: exportProgress
@@ -1239,7 +1654,19 @@ function EnglishStudyApp() {
     type: "button",
     className: "text-link text-link-danger",
     onClick: resetProgress
-  }, "重置進度")), !loaded ? /*#__PURE__*/React.createElement("div", {
+  }, "重置進度"), /*#__PURE__*/React.createElement("span", {
+    className: "dot-sep"
+  }, "·"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "text-link",
+    onClick: () => setShowOnboarding(true)
+  }, "使用說明"), /*#__PURE__*/React.createElement("span", {
+    className: "dot-sep"
+  }, "·"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "text-link",
+    onClick: onLogout
+  }, "登出")), !loaded ? /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
   }, "載入進度中…") : screen.view === "home" ? /*#__PURE__*/React.createElement(EditionPicker, {
     textbooks: TEXTBOOKS,
@@ -1250,6 +1677,20 @@ function EnglishStudyApp() {
     }),
     onOpenReview: () => setScreen({
       view: "review"
+    }),
+    onOpenCustomWords: () => setScreen({
+      view: "customWords"
+    })
+  }) : screen.view === "customWords" ? /*#__PURE__*/React.createElement(CustomWordsScreen, {
+    progress: progress,
+    onBack: () => setScreen({
+      view: "home"
+    }),
+    onAdd: addCustomWord,
+    onDelete: deleteCustomWord,
+    onStartPractice: () => setScreen({
+      view: "unit",
+      unitId: CUSTOM_UNIT_ID
     })
   }) : screen.view === "edition" ? /*#__PURE__*/React.createElement(TextbookPicker, {
     textbooks: TEXTBOOKS.filter(tb => tb.edition === screen.edition),
@@ -1293,16 +1734,22 @@ function EnglishStudyApp() {
       lessonId: screen.lessonId
     })
   }) : screen.view === "unit" ? /*#__PURE__*/React.createElement(UnitScreen, {
-    unit: UNITS.find(u => u.id === screen.unitId),
-    lesson: LESSONS.find(l => l.id === screen.lessonId),
+    unit: screen.unitId === CUSTOM_UNIT_ID ? buildCustomUnit(progress) : UNITS.find(u => u.id === screen.unitId),
+    lesson: screen.unitId === CUSTOM_UNIT_ID ? null : LESSONS.find(l => l.id === screen.lessonId),
     progress: progress,
-    onBack: () => setScreen({
+    onBack: () => setScreen(screen.unitId === CUSTOM_UNIT_ID ? {
+      view: "customWords"
+    } : {
       view: "lesson",
       edition: screen.edition,
       textbookId: screen.textbookId,
       lessonId: screen.lessonId
     }),
-    onOpenActivity: activityKey => setScreen({
+    onOpenActivity: activityKey => setScreen(screen.unitId === CUSTOM_UNIT_ID ? {
+      view: "activity",
+      unitId: CUSTOM_UNIT_ID,
+      activityKey
+    } : {
       view: "activity",
       edition: screen.edition,
       textbookId: screen.textbookId,
@@ -1312,14 +1759,19 @@ function EnglishStudyApp() {
     })
   }) : screen.view === "review" ? /*#__PURE__*/React.createElement(ReviewSession, {
     mistakes: progress.mistakes || {},
+    progress: progress,
     onBack: () => setScreen({
       view: "home"
     }),
     onWordResult: recordWordResult
   }) : /*#__PURE__*/React.createElement(ActivityScreen, {
-    unit: UNITS.find(u => u.id === screen.unitId),
+    unit: screen.unitId === CUSTOM_UNIT_ID ? buildCustomUnit(progress) : UNITS.find(u => u.id === screen.unitId),
     activityKey: screen.activityKey,
-    onBack: () => setScreen({
+    progress: progress,
+    onBack: () => setScreen(screen.unitId === CUSTOM_UNIT_ID ? {
+      view: "unit",
+      unitId: CUSTOM_UNIT_ID
+    } : {
       view: "unit",
       edition: screen.edition,
       textbookId: screen.textbookId,
@@ -1329,7 +1781,9 @@ function EnglishStudyApp() {
     onFinish: scoreInfo => {
       markStamp(screen.unitId, screen.activityKey, scoreInfo);
     },
-    onWordResult: recordWordResult
+    onWordResult: recordWordResult,
+    onWordLearned: markWordLearned,
+    onAddCustomWord: addCustomWord
   }));
 }
 
@@ -1340,7 +1794,8 @@ function EditionPicker({
   textbooks,
   progress,
   onOpenEdition,
-  onOpenReview
+  onOpenReview,
+  onOpenCustomWords
 }) {
   const [, setTick] = useState(0);
   useEffect(() => {
@@ -1364,6 +1819,15 @@ function EditionPicker({
   }, dueCount > 0 ? `${dueCount} 個單字到期，該複習囉` : totalMistakes > 0 ? `目前沒有到期的複習，共 ${totalMistakes} 個字在複習清單` : "還沒有需要複習的單字")), dueCount > 0 ? /*#__PURE__*/React.createElement("span", {
     className: "due-badge"
   }, dueCount) : /*#__PURE__*/React.createElement(ChevronRight, {
+    color: "rgba(255,255,255,0.6)"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "review-card custom-words-card",
+    onClick: onOpenCustomWords
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "review-title"
+  }, "📝 自訂生字"), /*#__PURE__*/React.createElement("div", {
+    className: "review-sub"
+  }, (progress.customWords || []).length > 0 ? `共 ${(progress.customWords || []).length} 個自己新增的生字` : "新增自己想背的生字，也能用 5 種方式複習")), /*#__PURE__*/React.createElement(ChevronRight, {
     color: "rgba(255,255,255,0.6)"
   })), editions.map(edition => {
     const stampMap = progress.stamps || {};
@@ -1400,6 +1864,207 @@ function EditionPicker({
       color: "#B9B6A6"
     }));
   }));
+}
+
+/* ------------------------------------------------------------------ */
+/* 自訂生字：使用者自己輸入想背的單字，新增後可以用跟課本單字一樣的        */
+/* 5 種方式複習（外面把這些字包成一個虛擬 unit 餵給既有的練習元件）        */
+/* ------------------------------------------------------------------ */
+const CUSTOM_UNIT_ID = "custom-words";
+function buildCustomUnit(progress) {
+  return {
+    id: CUSTOM_UNIT_ID,
+    title: "自訂生字",
+    zh: "我自己新增的生字",
+    color: "#6B4FA0",
+    words: progress.customWords || []
+  };
+}
+function CustomWordsScreen({
+  progress,
+  onBack,
+  onAdd,
+  onDelete,
+  onStartPractice
+}) {
+  const [form, setForm] = useState({
+    en: "",
+    pos: "",
+    zh: "",
+    ex_en: "",
+    ex_zh: "",
+    ipa: ""
+  });
+  const [error, setError] = useState("");
+  const [showForm, setShowForm] = useState(false);
+  // 查字典自動帶出詞性/例句/音標，中文意思跟例句翻譯還是靠 Cloud Translation
+  const [lookupStatus, setLookupStatus] = useState("idle"); // idle | loading | found | notfound | error
+  const [senseHints, setSenseHints] = useState([]); // 一字多義時，同詞性的幾條字義中文參考
+  const words = progress.customWords || [];
+  const setField = (key, value) => setForm(f => ({
+    ...f,
+    [key]: value
+  }));
+  const handleEnBlur = () => {
+    const en = form.en.trim();
+    if (!en) return;
+    setLookupStatus("loading");
+    setSenseHints([]);
+    lookupWordFn({
+      text: en
+    }).then(res => {
+      const data = res.data || {};
+      if (!data.found) {
+        setLookupStatus("notfound");
+        return;
+      }
+      setForm(f => ({
+        ...f,
+        pos: data.pos || f.pos,
+        zh: data.zh || f.zh,
+        ex_en: data.ex_en || f.ex_en,
+        ex_zh: data.ex_zh || f.ex_zh,
+        ipa: data.ipa || f.ipa
+      }));
+      setSenseHints(Array.isArray(data.senses) ? data.senses : []);
+      setLookupStatus("found");
+    }).catch(err => {
+      console.error("lookupWord call error", err);
+      setLookupStatus("error");
+    });
+  };
+  const handleSubmit = e => {
+    e.preventDefault();
+    const en = form.en.trim();
+    const zh = form.zh.trim();
+    const ex_en = form.ex_en.trim();
+    const ex_zh = form.ex_zh.trim();
+    if (!en || !zh || !ex_en || !ex_zh) {
+      setError("英文單字、中文意思、例句（英/中）都要填喔");
+      return;
+    }
+    if (words.some(w => w.en.toLowerCase() === en.toLowerCase())) {
+      setError("這個單字已經加過了");
+      return;
+    }
+    onAdd({
+      en,
+      pos: form.pos.trim(),
+      zh,
+      ex_en,
+      ex_zh,
+      ipa: form.ipa.trim()
+    });
+    setForm({
+      en: "",
+      pos: "",
+      zh: "",
+      ex_en: "",
+      ex_zh: "",
+      ipa: ""
+    });
+    setLookupStatus("idle");
+    setError("");
+  };
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "back-row",
+    onClick: onBack
+  }, /*#__PURE__*/React.createElement(ArrowLeft, {
+    size: 16
+  }), " 回首頁"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: 20,
+      marginBottom: 2
+    }
+  }, "📝 自訂生字"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: 13,
+      color: "#6B6A5E",
+      marginBottom: 16
+    }
+  }, "新增自己想背的單字，之後可以用跟課本單字一樣的方式複習；也可以直接去字卡瀏覽點例句裡不會的字快速加入"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "custom-word-toggle-btn",
+    onClick: () => setShowForm(s => !s)
+  }, showForm ? "收起手動新增 ▲" : "＋ 手動新增生字 ▼"), showForm && /*#__PURE__*/React.createElement("form", {
+    className: "custom-word-form",
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "custom-word-row"
+  }, /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "英文單字或片語（必填）",
+    value: form.en,
+    onChange: e => {
+      setField("en", e.target.value);
+      if (lookupStatus !== "idle") setLookupStatus("idle");
+    },
+    onBlur: handleEnBlur
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "custom-word-lookup-btn",
+    disabled: lookupStatus === "loading" || !form.en.trim(),
+    onClick: handleEnBlur
+  }, lookupStatus === "loading" ? "查詢中…" : "🔍 查詢")), /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "詞性（選填，例如 n.）",
+    value: form.pos,
+    onChange: e => setField("pos", e.target.value)
+  }), lookupStatus === "loading" && /*#__PURE__*/React.createElement("p", {
+    className: "custom-word-lookup-msg"
+  }, "查詢中…"), lookupStatus === "notfound" && /*#__PURE__*/React.createElement("p", {
+    className: "custom-word-lookup-msg custom-word-lookup-error"
+  }, "查無此字，麻煩自己輸入其他欄位"), lookupStatus === "error" && /*#__PURE__*/React.createElement("p", {
+    className: "custom-word-lookup-msg custom-word-lookup-error"
+  }, "查詢失敗，麻煩自己輸入其他欄位"), lookupStatus === "found" && /*#__PURE__*/React.createElement("p", {
+    className: "custom-word-lookup-msg custom-word-lookup-ok"
+  }, "✅ 已自動帶入，可以再自行修改"), /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "中文意思（必填）",
+    value: form.zh,
+    onChange: e => setField("zh", e.target.value)
+  }), senseHints.length > 0 && /*#__PURE__*/React.createElement("p", {
+    className: "custom-word-sense-hints"
+  }, "這個字有好幾種意思，參考看看哪個最符合例句：", senseHints.map((s, i) => `${i + 1}. ${s}`).join("　")), /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "例句（英文，必填）",
+    value: form.ex_en,
+    onChange: e => setField("ex_en", e.target.value)
+  }), /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "例句翻譯（中文，必填）",
+    value: form.ex_zh,
+    onChange: e => setField("ex_zh", e.target.value)
+  }), error && /*#__PURE__*/React.createElement("p", {
+    className: "custom-word-error"
+  }, error), /*#__PURE__*/React.createElement("button", {
+    type: "submit",
+    className: "primary-btn"
+  }, "＋ 新增生字")), words.length > 0 && /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "primary-btn custom-words-practice-btn",
+    onClick: onStartPractice
+  }, "開始複習（共 ", words.length, " 個字）"), /*#__PURE__*/React.createElement("div", {
+    className: "custom-word-list"
+  }, words.length === 0 ? /*#__PURE__*/React.createElement("p", {
+    className: "empty-note"
+  }, "還沒有新增任何生字") : words.map(w => /*#__PURE__*/React.createElement("div", {
+    key: w.id,
+    className: "custom-word-item"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "custom-word-item-en"
+  }, w.en, " ", w.pos && /*#__PURE__*/React.createElement("span", {
+    className: "custom-word-item-pos"
+  }, w.pos), " ", w.zh), /*#__PURE__*/React.createElement("div", {
+    className: "custom-word-item-ex"
+  }, w.ex_en)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "custom-word-delete",
+    "aria-label": `刪除 ${w.en}`,
+    onClick: () => onDelete(w.id)
+  }, /*#__PURE__*/React.createElement(X, {
+    size: 14
+  }))))));
 }
 
 /* ------------------------------------------------------------------ */
@@ -1663,15 +2328,21 @@ function UnitScreen({
 function ActivityScreen({
   unit,
   activityKey,
+  progress,
   onBack,
   onFinish,
-  onWordResult
+  onWordResult,
+  onWordLearned,
+  onAddCustomWord
 }) {
   const commonProps = {
     unit,
     onBack,
     onFinish,
-    onWordResult
+    onWordResult,
+    progress,
+    onWordLearned,
+    onAddCustomWord
   };
   return /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1686,20 +2357,322 @@ function ActivityScreen({
 }
 
 /* ------------------------------------------------------------------ */
+/* 跟讀錄音元件：錄下使用者念的聲音，送到 Cloud Function 做語音辨識，   */
+/* 比對是否跟目標單字/例句相符。iPhone Safari 也支援錄音，靠後端       */
+/* ffmpeg 統一轉檔，所以不受「iOS 不支援瀏覽器語音辨識」這個限制影響。  */
+/* mode: "word" 驗證單一個字（可多型態），"sentence" 驗證整句例句       */
+/* （比對比較寬鬆，只要大部分單字有念到就算過）。                       */
+/* compact：例句旁邊用的小按鈕樣式，跟卡片正面那顆大按鈕分開設計。       */
+/* ------------------------------------------------------------------ */
+function PronunciationRecorder({
+  mode = "word",
+  targetWords,
+  targetSentence,
+  passed,
+  onPassed,
+  compact = false
+}) {
+  const [state, setState] = useState("idle"); // idle | recording | checking | retry | error
+  const [message, setMessage] = useState("");
+  const streamRef = useRef(null);
+  const recorderRef = useRef(null);
+  const timerRef = useRef(null);
+  useEffect(() => () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach(t => t.stop());
+    }
+  }, []);
+  const wordCount = mode === "sentence" ? (targetSentence || "").split(/\s+/).filter(Boolean).length : 1;
+  // 單字固定錄 2.5 秒；例句依字數拉長錄音時間（每字約 0.45 秒），上限 10 秒
+  // 既然錄音中可以隨時手動點一下結束，上限就抓寬鬆一點，避免不熟悉、念得比較慢
+  // 的使用者話還沒講完就被自動截斷、錄不到後半句
+  const maxDurationMs = mode === "sentence" ? Math.min(25000, 5000 + wordCount * 900) : 5000;
+  const stopRecording = () => {
+    if (recorderRef.current && recorderRef.current.state === "recording") {
+      recorderRef.current.stop();
+    }
+  };
+  const startRecording = async e => {
+    e.stopPropagation();
+    setMessage("");
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || typeof MediaRecorder === "undefined") {
+      setState("error");
+      setMessage("這個瀏覽器不支援錄音功能");
+      return;
+    }
+    let stream;
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: true
+      });
+    } catch (err) {
+      setState("error");
+      setMessage("無法取得麥克風權限，請確認瀏覽器/系統設定有允許使用麥克風");
+      return;
+    }
+    streamRef.current = stream;
+    const chunks = [];
+    let recorder;
+    try {
+      recorder = new MediaRecorder(stream);
+    } catch (err) {
+      stream.getTracks().forEach(t => t.stop());
+      setState("error");
+      setMessage("這個瀏覽器不支援錄音功能");
+      return;
+    }
+    recorderRef.current = recorder;
+    recorder.ondataavailable = ev => {
+      if (ev.data && ev.data.size > 0) chunks.push(ev.data);
+    };
+    recorder.onstop = async () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+      stream.getTracks().forEach(t => t.stop());
+      streamRef.current = null;
+      recorderRef.current = null;
+      if (!chunks.length) {
+        setState("error");
+        setMessage("沒有錄到聲音，請再試一次");
+        return;
+      }
+      setState("checking");
+      try {
+        const blob = new Blob(chunks, {
+          type: recorder.mimeType || "audio/webm"
+        });
+        const audioBase64 = await blobToBase64(blob);
+        const payload = mode === "sentence" ? {
+          audioBase64,
+          expectedSentence: targetSentence
+        } : {
+          audioBase64,
+          expectedWords: targetWords
+        };
+        const res = await checkPronunciationFn(payload);
+        const data = res.data || {};
+        if (data.match) {
+          setState("passed");
+          setMessage("");
+          onPassed();
+        } else {
+          setState("retry");
+          setMessage(data.transcripts && data.transcripts[0] ? `辨識結果：「${data.transcripts[0]}」，再試一次` : "沒聽清楚，再試一次");
+        }
+      } catch (err) {
+        console.error("checkPronunciation call error", err);
+        setState("error");
+        setMessage("辨識失敗，請確認網路連線後再試一次");
+      }
+    };
+    recorder.start();
+    setState("recording");
+    timerRef.current = setTimeout(() => {
+      if (recorder.state === "recording") recorder.stop();
+    }, maxDurationMs);
+  };
+  const handleClick = e => {
+    if (state === "recording") {
+      e.stopPropagation();
+      stopRecording();
+    } else {
+      startRecording(e);
+    }
+  };
+  if (passed) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: `pronounce-row pronounce-done ${compact ? "compact" : ""}`,
+      onClick: e => e.stopPropagation()
+    }, /*#__PURE__*/React.createElement(Check, {
+      size: compact ? 12 : 14
+    }), compact ? null : " 已跟讀完成");
+  }
+  const idleLabel = compact ? "🎤 跟讀" : mode === "sentence" ? "🎤 跟讀這句話" : "🎤 跟讀（只念這個單字）";
+  const label = state === "recording" ? "念完了？點此結束 🛑" : state === "checking" ? "辨識中…" : idleLabel;
+  return /*#__PURE__*/React.createElement("div", {
+    className: `pronounce-row ${compact ? "compact" : ""}`,
+    onClick: e => e.stopPropagation()
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: `pronounce-btn ${compact ? "pronounce-btn-compact" : ""}`,
+    disabled: state === "checking",
+    onClick: handleClick
+  }, label), message && /*#__PURE__*/React.createElement("span", {
+    className: `pronounce-msg ${state === "error" ? "pronounce-error" : ""}`
+  }, message));
+}
+
+/* ------------------------------------------------------------------ */
+/* 例句裡的每個單字都可以點——看到不會的字，點一下就能加進自訂生字，       */
+/* 不用自己重新打一次例句，直接沿用當下這句的例句／翻譯當作補充內容。      */
+/* ------------------------------------------------------------------ */
+function ClickableSentence({
+  text,
+  onWordClick,
+  className
+}) {
+  const tokens = (text || "").split(/(\s+)/);
+  return /*#__PURE__*/React.createElement("span", {
+    className: className
+  }, tokens.map((tok, i) => {
+    if (!tok || /^\s+$/.test(tok)) return tok;
+    const clean = tok.replace(/[^A-Za-z']/g, "");
+    if (!clean) return tok;
+    return /*#__PURE__*/React.createElement("span", {
+      key: i,
+      className: "clickable-word",
+      onClick: e => {
+        e.stopPropagation();
+        onWordClick(clean);
+      }
+    }, tok);
+  }));
+}
+
+/* 點了句子裡的字之後跳出的小視窗：帶著使用者點的那個字＋整句例句，只需要
+   再補一個中文意思就能加進自訂生字（跟「自訂生字」頁面共用同一份資料）。 */
+function AddWordPopup({
+  word,
+  sentenceEn,
+  sentenceZh,
+  alreadyAdded,
+  onClose,
+  onSave
+}) {
+  const [zh, setZh] = useState("");
+  const [pos, setPos] = useState("");
+  const [saved, setSaved] = useState(false);
+  const [translating, setTranslating] = useState(!alreadyAdded);
+  const [translateError, setTranslateError] = useState(false);
+  useEffect(() => {
+    if (alreadyAdded) return;
+    let cancelled = false;
+    setTranslating(true);
+    setTranslateError(false);
+    translateWordFn({
+      text: word,
+      sentence: sentenceEn
+    }).then(res => {
+      if (cancelled) return;
+      const data = res.data || {};
+      setZh((data.translation || "").trim());
+      if (data.pos) setPos(data.pos);
+    }).catch(err => {
+      console.error("translateWord call error", err);
+      if (!cancelled) setTranslateError(true);
+    }).finally(() => {
+      if (!cancelled) setTranslating(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [word, sentenceEn, alreadyAdded]);
+  const handleSave = e => {
+    e.preventDefault();
+    if (!zh.trim()) return;
+    onSave({
+      en: word,
+      pos: pos.trim(),
+      zh: zh.trim(),
+      ex_en: sentenceEn,
+      ex_zh: sentenceZh
+    });
+    setSaved(true);
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "word-popup-overlay",
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "word-popup-card",
+    onClick: e => e.stopPropagation()
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "word-popup-close",
+    "aria-label": "關閉",
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement(X, {
+    size: 16
+  })), alreadyAdded ? /*#__PURE__*/React.createElement("p", {
+    className: "word-popup-msg"
+  }, "「", word, "」已經在你的自訂生字清單裡了") : saved ? /*#__PURE__*/React.createElement("p", {
+    className: "word-popup-msg"
+  }, "✅ 已加入自訂生字：「", word, "」") : /*#__PURE__*/React.createElement("form", {
+    onSubmit: handleSave
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "word-popup-title"
+  }, "幫「", word, "」加上中文意思"), /*#__PURE__*/React.createElement("p", {
+    className: "word-popup-context"
+  }, sentenceEn), translating ? /*#__PURE__*/React.createElement("p", {
+    className: "word-popup-translating"
+  }, "翻譯中…") : /*#__PURE__*/React.createElement(React.Fragment, null, translateError && /*#__PURE__*/React.createElement("p", {
+    className: "word-popup-translate-error"
+  }, "自動翻譯失敗，麻煩自己輸入意思"), /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "中文意思（必填，可自行修改）",
+    autoFocus: true,
+    value: zh,
+    onChange: e => setZh(e.target.value)
+  })), /*#__PURE__*/React.createElement("input", {
+    className: "custom-word-input",
+    placeholder: "詞性（選填，例如 n.）",
+    value: pos,
+    onChange: e => setPos(e.target.value)
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "submit",
+    className: "primary-btn",
+    disabled: translating
+  }, "＋ 加入自訂生字"))));
+}
+
+/* ------------------------------------------------------------------ */
 /* 1. Flashcards                                                       */
 /* ------------------------------------------------------------------ */
 function Flashcards({
   unit,
-  onFinish
+  progress,
+  onFinish,
+  onWordLearned,
+  onAddCustomWord
 }) {
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [done, setDone] = useState(false);
   const [showMore, setShowMore] = useState(false);
-  useEffect(() => {
-    setShowMore(false);
-  }, [idx]);
+  // 點例句裡不會的字，跳出小視窗補中文意思、加進自訂生字
+  const [wordPopup, setWordPopup] = useState(null); // { word, sentenceEn, sentenceZh }
+  const openWordPopup = (clickedWord, sentenceEn, sentenceZh) => setWordPopup({
+    word: clickedWord,
+    sentenceEn,
+    sentenceZh
+  });
+  const wordPopupAlreadyAdded = wordPopup && (progress.customWords || []).some(w => w.en.toLowerCase() === wordPopup.word.toLowerCase());
+  // 「已學習」的完整條件：單字喇叭＋跟讀、翻面看過、主例句喇叭＋跟讀、
+  // 有補充例句/文法的話還要打開看過，補充例句也要各自喇叭＋跟讀過一次。
+  // 用「每個單字自己一份」的紀錄（用 wordKey 當 key），不小心點上一個/下一個
+  // 再回來時，已經做過的步驟不會被清掉，只要留在這次字卡瀏覽的過程中就記得住。
+  const [cardProgress, setCardProgress] = useState({});
   const word = unit.words[idx];
+  const wordKey = `${unit.id}::${word.en}`;
+  const cur = cardProgress[wordKey] || {
+    playedAudio: false,
+    viewedBack: false,
+    viewedMore: false,
+    wordPronounced: false,
+    mainExPlayed: false,
+    mainExPronounced: false,
+    extraStates: {}
+  };
+  const patchCard = patch => setCardProgress(s => ({
+    ...s,
+    [wordKey]: { ...cur, ...patch }
+  }));
+  const markExtraPlayed = i => patchCard({
+    extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), played: true } }
+  });
+  const markExtraPronounced = i => patchCard({
+    extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: true } }
+  });
+  const alreadyLearned = !!(progress && progress.learnedWords && progress.learnedWords[wordKey]);
   const extraExamples = [{
     en: word.ex2_en,
     zh: word.ex2_zh,
@@ -1710,6 +2683,45 @@ function Flashcards({
     grammar: word.ex3_grammar
   }].filter(e => e.en);
   const hasMore = extraExamples.length > 0 || !!word.grammar || !!word.ex_grammar;
+  const allExtrasDone = extraExamples.every((ex, i) => cur.extraStates[i] && cur.extraStates[i].played && cur.extraStates[i].pronounced);
+  const justCompleted = cur.playedAudio && cur.wordPronounced && cur.viewedBack && cur.mainExPlayed && cur.mainExPronounced && (hasMore ? cur.viewedMore : true) && allExtrasDone;
+  const learned = alreadyLearned || justCompleted;
+  // 不小心點上一個/下一個再回來時，用這份清單提示還差哪些步驟才算「已學習」
+  const checklist = [{
+    done: cur.playedAudio,
+    label: "點單字喇叭"
+  }, {
+    done: cur.wordPronounced,
+    label: "跟讀單字"
+  }, {
+    done: cur.viewedBack,
+    label: "翻面看例句"
+  }, {
+    done: cur.mainExPlayed,
+    label: "點例句喇叭"
+  }, {
+    done: cur.mainExPronounced,
+    label: "跟讀例句"
+  }];
+  if (hasMore) {
+    checklist.push({
+      done: cur.viewedMore,
+      label: "打開「更多例句／文法說明」"
+    });
+    extraExamples.forEach((ex, i) => {
+      const st = cur.extraStates[i] || {};
+      checklist.push({
+        done: !!(st.played && st.pronounced),
+        label: `補充例句 ${i + 1} 的喇叭＋跟讀`
+      });
+    });
+  }
+  const todoLabels = checklist.filter(c => !c.done).map(c => c.label);
+  useEffect(() => {
+    if (justCompleted && !alreadyLearned && onWordLearned) {
+      onWordLearned(unit, word);
+    }
+  }, [justCompleted, alreadyLearned, wordKey]);
   if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
     label: "字卡看完了！",
     onRestart: () => {
@@ -1722,7 +2734,10 @@ function Flashcards({
     className: "card-stage"
   }, /*#__PURE__*/React.createElement("div", {
     className: `flip-card ${flipped ? "flipped" : ""}`,
-    onClick: () => setFlipped(f => !f)
+    onClick: () => {
+      if (!flipped) patchCard({ viewedBack: true });
+      setFlipped(f => !f);
+    }
   }, /*#__PURE__*/React.createElement("div", {
     className: "flip-inner"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1730,7 +2745,9 @@ function Flashcards({
   }, /*#__PURE__*/React.createElement(FormsSpeaker, {
     word: word,
     size: 18,
-    wordClassName: "en-word"
+    wordClassName: "en-word",
+    onPlay: () => patchCard({ playedAudio: true }),
+    showIpa: true
   }), /*#__PURE__*/React.createElement("div", {
     className: "pos"
   }, word.pos)), /*#__PURE__*/React.createElement("div", {
@@ -1743,17 +2760,39 @@ function Flashcards({
   }, word.zh), /*#__PURE__*/React.createElement("div", {
     className: "ex-en-row",
     onClick: e => e.stopPropagation()
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "ex-en-text"
-  }, word.ex_en), /*#__PURE__*/React.createElement(SpeakerButton, {
+  }, /*#__PURE__*/React.createElement(ClickableSentence, {
     text: word.ex_en,
-    size: 16
+    className: "ex-en-text",
+    onWordClick: w => openWordPopup(w, word.ex_en, word.ex_zh)
+  }), /*#__PURE__*/React.createElement(SpeakerButton, {
+    text: word.ex_en,
+    size: 16,
+    onPlay: () => patchCard({ mainExPlayed: true })
   })), /*#__PURE__*/React.createElement("div", {
     className: "ex-zh-text"
-  }, word.ex_zh)))), hasMore && /*#__PURE__*/React.createElement("button", {
+  }, word.ex_zh)))), learned ? /*#__PURE__*/React.createElement("div", {
+    className: "learned-badge"
+  }, /*#__PURE__*/React.createElement(Check, {
+    size: 14
+  }), " 這張字卡已學習") : todoLabels.length > 0 && /*#__PURE__*/React.createElement("div", {
+    className: "todo-hint"
+  }, "還差：", todoLabels.join("、")), /*#__PURE__*/React.createElement(PronunciationRecorder, {
+    mode: "word",
+    targetWords: wordForms(word),
+    passed: cur.wordPronounced || alreadyLearned,
+    onPassed: () => patchCard({ wordPronounced: true })
+  }), cur.viewedBack && /*#__PURE__*/React.createElement(PronunciationRecorder, {
+    mode: "sentence",
+    targetSentence: word.ex_en,
+    passed: cur.mainExPronounced || alreadyLearned,
+    onPassed: () => patchCard({ mainExPronounced: true })
+  }), hasMore && /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "more-toggle",
-    onClick: () => setShowMore(s => !s)
+    onClick: () => {
+      if (!showMore) patchCard({ viewedMore: true });
+      setShowMore(s => !s);
+    }
   }, showMore ? "收起補充內容 ▲" : "更多例句／文法說明 ▼"), showMore && /*#__PURE__*/React.createElement("div", {
     className: "more-panel"
   }, extraExamples.map((ex, i) => /*#__PURE__*/React.createElement("div", {
@@ -1761,9 +2800,19 @@ function Flashcards({
     className: "more-example"
   }, /*#__PURE__*/React.createElement("div", {
     className: "more-en"
-  }, /*#__PURE__*/React.createElement("span", null, ex.en), /*#__PURE__*/React.createElement(SpeakerButton, {
+  }, /*#__PURE__*/React.createElement(ClickableSentence, {
     text: ex.en,
-    size: 15
+    onWordClick: w => openWordPopup(w, ex.en, ex.zh)
+  }), /*#__PURE__*/React.createElement(SpeakerButton, {
+    text: ex.en,
+    size: 15,
+    onPlay: () => markExtraPlayed(i)
+  }), /*#__PURE__*/React.createElement(PronunciationRecorder, {
+    mode: "sentence",
+    targetSentence: ex.en,
+    passed: (cur.extraStates[i] && cur.extraStates[i].pronounced) || alreadyLearned,
+    onPassed: () => markExtraPronounced(i),
+    compact: true
   })), /*#__PURE__*/React.createElement("div", {
     className: "more-zh"
   }, ex.zh), ex.grammar && /*#__PURE__*/React.createElement("div", {
@@ -1774,7 +2823,7 @@ function Flashcards({
     className: "ex-grammar more-grammar"
   }, "💡 ", word.grammar)), /*#__PURE__*/React.createElement("div", {
     className: "progress-text"
-  }, idx + 1, " / ", unit.words.length, " · 點卡片可翻面"), /*#__PURE__*/React.createElement("div", {
+  }, idx + 1, " / ", unit.words.length, " · 喇叭＋翻面＋單字跟讀＋例句跟讀都完成才算學習"), /*#__PURE__*/React.createElement("div", {
     className: "nav-row"
   }, /*#__PURE__*/React.createElement("button", {
     className: "nav-btn",
@@ -1794,7 +2843,14 @@ function Flashcards({
         setFlipped(false);
       }
     }
-  }, idx + 1 >= unit.words.length ? "完成" : "下一個")), /*#__PURE__*/React.createElement(RateControl, null));
+  }, idx + 1 >= unit.words.length ? "完成" : "下一個")), /*#__PURE__*/React.createElement(RateControl, null), wordPopup && /*#__PURE__*/React.createElement(AddWordPopup, {
+    word: wordPopup.word,
+    sentenceEn: wordPopup.sentenceEn,
+    sentenceZh: wordPopup.sentenceZh,
+    alreadyAdded: wordPopupAlreadyAdded,
+    onClose: () => setWordPopup(null),
+    onSave: wordData => onAddCustomWord && onAddCustomWord(wordData)
+  }));
 }
 
 /* ------------------------------------------------------------------ */
@@ -2577,14 +3633,15 @@ function ReviewTyping({
 }
 function ReviewSession({
   mistakes,
+  progress,
   onBack,
   onWordResult
 }) {
   const [pool] = useState(() => {
     const now = Date.now();
     const due = Object.values(mistakes).filter(m => m.nextReview <= now).map(m => {
-      const word = findWord(m.unitId, m.en);
-      const unit = UNITS.find(u => u.id === m.unitId);
+      const word = findWord(m.unitId, m.en, progress);
+      const unit = m.unitId === CUSTOM_UNIT_ID ? buildCustomUnit(progress) : UNITS.find(u => u.id === m.unitId);
       return word && unit ? {
         unit,
         word,
@@ -2711,6 +3768,117 @@ function ResultBanner({
     }
   }), "再練一次"));
 }
+/* ------------------------------------------------------------------ */
+/* 登入畫面：只有帳號＋密碼欄位，沒有註冊功能（帳號由管理者在 Firebase   */
+/* 後台手動建立）                                                       */
+/* ------------------------------------------------------------------ */
+function LoginScreen() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const handleSubmit = async e => {
+    e.preventDefault();
+    if (!username.trim() || !password) {
+      setError("請輸入帳號與密碼");
+      return;
+    }
+    setSubmitting(true);
+    setError("");
+    try {
+      await auth.signInWithEmailAndPassword(usernameToEmail(username), password);
+      // 成功後 AppGate 的 onAuthStateChanged 會自動切換畫面
+    } catch (err) {
+      const code = err && err.code;
+      if (code === "auth/invalid-credential" || code === "auth/wrong-password" || code === "auth/user-not-found") {
+        setError("帳號或密碼錯誤，請再確認一次");
+      } else if (code === "auth/too-many-requests") {
+        setError("嘗試次數過多，請稍後再試");
+      } else if (code === "auth/network-request-failed") {
+        setError("網路連線失敗，請檢查網路後再試");
+      } else {
+        setError("登入失敗，請稍後再試");
+        console.error("login error", err);
+      }
+    } finally {
+      setSubmitting(false);
+    }
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "login-screen"
+  }, /*#__PURE__*/React.createElement("form", {
+    className: "login-card",
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/React.createElement("h1", null, "🏝️ 字卡島 Word Island"), /*#__PURE__*/React.createElement("p", {
+    className: "login-sub"
+  }, "請輸入帳號密碼登入"), /*#__PURE__*/React.createElement("div", {
+    className: "login-form"
+  }, /*#__PURE__*/React.createElement("input", {
+    className: "login-input",
+    type: "text",
+    autoCapitalize: "none",
+    autoCorrect: "off",
+    spellCheck: false,
+    placeholder: "帳號",
+    value: username,
+    onChange: e => setUsername(e.target.value),
+    disabled: submitting
+  }), /*#__PURE__*/React.createElement("input", {
+    className: "login-input",
+    type: "password",
+    placeholder: "密碼",
+    value: password,
+    onChange: e => setPassword(e.target.value),
+    disabled: submitting
+  })), error && /*#__PURE__*/React.createElement("p", {
+    className: "login-error"
+  }, error), /*#__PURE__*/React.createElement("button", {
+    type: "submit",
+    className: "login-submit",
+    disabled: submitting
+  }, submitting ? "登入中…" : "登入")));
+}
+
+/* ------------------------------------------------------------------ */
+/* AppGate：監聽登入狀態，未登入顯示 LoginScreen，登入後才渲染主 App     */
+/* ------------------------------------------------------------------ */
+function AppGate() {
+  const [authState, setAuthState] = useState({
+    checking: true,
+    user: null
+  });
+  useEffect(() => {
+    const unsub = auth.onAuthStateChanged(fbUser => {
+      if (fbUser) {
+        setAuthState({
+          checking: false,
+          user: {
+            uid: fbUser.uid,
+            username: emailToUsername(fbUser.email)
+          }
+        });
+      } else {
+        setAuthState({
+          checking: false,
+          user: null
+        });
+      }
+    });
+    return () => unsub();
+  }, []);
+  if (authState.checking) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "auth-loading"
+    }, "載入中…");
+  }
+  if (!authState.user) {
+    return /*#__PURE__*/React.createElement(LoginScreen, null);
+  }
+  return /*#__PURE__*/React.createElement(EnglishStudyApp, {
+    user: authState.user,
+    onLogout: () => auth.signOut()
+  });
+}
 const rootEl = document.getElementById('root');
 
 /* 題庫內容改成從 data/lessons.json 非同步載入，跟程式碼分開放，
@@ -2736,7 +3904,7 @@ fetch('data/lessons.json')
       unitId: u.id
     })));
     const root = ReactDOM.createRoot(rootEl);
-    root.render(React.createElement(EnglishStudyApp));
+    root.render(React.createElement(AppGate));
   })
   .catch(err => {
     console.error('載入題庫失敗', err);
