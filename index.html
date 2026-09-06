@@ -289,8 +289,30 @@ const ACTIVITIES = [{
 }];
 const STORAGE_KEY = "progress-v1";
 
-/* 萊特納複習間隔（分鐘）：答錯 → 10分鐘後；答對一次 → 1天後；再對 → 3天；再對 → 7天後畢業 */
-const LEITNER_MINUTES = [10, 60 * 24, 60 * 24 * 3, 60 * 24 * 7];
+/* 萊特納複習間隔（分鐘）：答錯 → 10分鐘後；答對一次 → 1天後；再對兩次（共答對3次）就從錯題本畢業 */
+const LEITNER_MINUTES = [10, 60 * 24, 60 * 24 * 3];
+
+/* 取得本機時區的今天日期字串（YYYY-MM-DD），用來判斷是否該做每日重置 */
+function todayStr() {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+/* 每日重置：只清空「今日練習」用的 dailyStamps/dailyMistakes，累計成就(stamps)、
+   錯題複習(mistakes)、複習紀錄(reviewLog) 完全不受影響 */
+function ensureDailyReset(prog) {
+  const today = todayStr();
+  if (prog.dailyResetDate === today) return prog;
+  return {
+    ...prog,
+    dailyStamps: {},
+    dailyMistakes: {},
+    dailyResetDate: today
+  };
+}
 
 /* 把 "autumn / fall"、"feel / felt" 這種多型態單字拆成陣列，每個型態都能各自發音 */
 function wordForms(word) {
@@ -483,6 +505,51 @@ function RateControl() {
   }, r.label)));
 }
 
+/* 點右上角星星彈出的「今天答錯的單字」清單，每天午夜跟著 dailyMistakes 一起重置 */
+function MistakeWordRow({
+  word
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "mistake-word-row"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", {
+    className: "mistake-word-en"
+  }, word.en), word.pos && /*#__PURE__*/React.createElement("span", {
+    className: "mistake-word-pos"
+  }, word.pos), /*#__PURE__*/React.createElement("span", {
+    className: "mistake-word-zh"
+  }, word.zh)), /*#__PURE__*/React.createElement(SpeakerButton, {
+    text: wordForms({
+      en: word.en
+    })[0],
+    size: 16
+  }));
+}
+function MistakeWordPanel({
+  words,
+  onClose
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "modal-overlay",
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "modal-card",
+    onClick: e => e.stopPropagation()
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "modal-header"
+  }, /*#__PURE__*/React.createElement("h3", null, "今天答錯的單字"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "modal-close",
+    onClick: onClose
+  }, "✕")), words.length === 0 ? /*#__PURE__*/React.createElement("p", {
+    className: "empty-note"
+  }, "今天還沒有答錯的單字，繼續保持！") : /*#__PURE__*/React.createElement("div", {
+    className: "mistake-word-list"
+  }, words.map(m => /*#__PURE__*/React.createElement(MistakeWordRow, {
+    key: m.key,
+    word: m
+  })))));
+}
+
 /* ------------------------------------------------------------------ */
 /* 主 App                                                              */
 /* ------------------------------------------------------------------ */
@@ -493,8 +560,13 @@ function EnglishStudyApp() {
   const [progress, setProgress] = useState({
     stamps: {},
     wordStats: {},
-    mistakes: {}
+    mistakes: {},
+    reviewLog: {},
+    dailyStamps: {},
+    dailyMistakes: {},
+    dailyResetDate: todayStr()
   });
+  const [showMistakePanel, setShowMistakePanel] = useState(false);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     // 保活機制：部分瀏覽器（尤其 Chrome 系）閒置一段時間後會把語音合成暫停，
@@ -518,12 +590,26 @@ function EnglishStudyApp() {
         const res = await window.storage.get(STORAGE_KEY, false);
         if (res && res.value) {
           const parsed = JSON.parse(res.value);
-          setProgress({
+          const merged = {
             stamps: {},
             wordStats: {},
             mistakes: {},
+            reviewLog: {},
+            dailyStamps: {},
+            dailyMistakes: {},
+            dailyResetDate: "",
             ...parsed
-          });
+          };
+          const reset = ensureDailyReset(merged);
+          setProgress(reset);
+          if (reset !== merged) {
+            // 換日了，把重置後的狀態立刻存回去，避免只停留在記憶體裡
+            try {
+              await window.storage.set(STORAGE_KEY, JSON.stringify(reset), false);
+            } catch (e) {
+              // ignore
+            }
+          }
         }
       } catch (e) {
         // key not found yet, ignore
@@ -541,42 +627,70 @@ function EnglishStudyApp() {
     }
   }, []);
   const markStamp = (unitId, activityKey, scoreInfo) => {
-    const prevEntry = (progress.stamps[unitId] || {})[activityKey];
+    // 換日了先做每日重置，避免深夜跨到凌晨後 dailyStamps 沒清到
+    const base = ensureDailyReset(progress);
+    // 累計成就：星星總數、各版本「已完成 X/Y」、最佳成績都是永久紀錄，不會被每日重置影響
+    const prevEntry = (base.stamps[unitId] || {})[activityKey];
     const prevBest = prevEntry && typeof prevEntry === "object" ? prevEntry.bestScore : null;
     const isBetter = scoreInfo && (!prevBest || prevBest.total === 0 || scoreInfo.correct / scoreInfo.total >= prevBest.correct / prevBest.total);
+    const completedCount = (prevEntry && typeof prevEntry === "object" && prevEntry.completedCount || 0) + 1;
     const entry = {
       done: true,
       lastScore: scoreInfo || (prevEntry && typeof prevEntry === "object" ? prevEntry.lastScore : null) || null,
       lastAt: Date.now(),
-      bestScore: scoreInfo ? isBetter ? scoreInfo : prevBest : prevBest || null
+      bestScore: scoreInfo ? isBetter ? scoreInfo : prevBest : prevBest || null,
+      completedCount
+    };
+    // 當日練習：只記錄「今天」做過什麼，每天午夜（ensureDailyReset）會清空
+    const dailyEntry = {
+      done: true,
+      lastScore: scoreInfo || null,
+      lastAt: Date.now()
     };
     const next = {
-      ...progress,
+      ...base,
       stamps: {
-        ...progress.stamps,
+        ...base.stamps,
         [unitId]: {
-          ...(progress.stamps[unitId] || {}),
+          ...(base.stamps[unitId] || {}),
           [activityKey]: entry
+        }
+      },
+      dailyStamps: {
+        ...base.dailyStamps,
+        [unitId]: {
+          ...(base.dailyStamps[unitId] || {}),
+          [activityKey]: dailyEntry
         }
       }
     };
     saveProgress(next);
   };
   const recordWordResult = (unit, word, correct) => {
+    const base = ensureDailyReset(progress);
     const key = `${unit.id}::${word.en}`;
-    const prevStat = progress.wordStats[key] || {
+    const now = Date.now();
+    const prevStat = base.wordStats[key] || {
       correct: 0,
       total: 0
     };
     const wordStats = {
-      ...progress.wordStats,
+      ...base.wordStats,
       [key]: {
         correct: prevStat.correct + (correct ? 1 : 0),
         total: prevStat.total + 1
       }
     };
     const mistakes = {
-      ...progress.mistakes
+      ...base.mistakes
+    };
+    // 複習紀錄（何時複習、答對或答錯）：只會不斷累加，即使錯題後來畢業被刪除也不會消失
+    const reviewLog = {
+      ...base.reviewLog
+    };
+    // 今日答錯的單字（每天午夜重置）：讓使用者點右上角星星時能看到今天不熟悉的是哪幾個字
+    const dailyMistakes = {
+      ...base.dailyMistakes
     };
     if (!correct) {
       // 答錯：放進複習佇列，10 分鐘後才會再次出現
@@ -584,30 +698,52 @@ function EnglishStudyApp() {
         unitId: unit.id,
         en: word.en,
         box: 0,
-        nextReview: Date.now() + LEITNER_MINUTES[0] * 60000,
-        lastWrong: Date.now()
+        nextReview: now + LEITNER_MINUTES[0] * 60000,
+        lastWrong: now
+      };
+      reviewLog[key] = [...(reviewLog[key] || []), {
+        at: now,
+        correct: false
+      }];
+      dailyMistakes[key] = {
+        en: word.en,
+        zh: word.zh,
+        pos: word.pos,
+        unitId: unit.id,
+        at: now
       };
     } else if (mistakes[key]) {
-      // 這個字之前答錯過，這次答對了：延後下次複習的時間，答對到頂就從錯題本畢業
+      // 這個字之前答錯過，這次答對了：延後下次複習的時間，連續答對三次就從錯題本畢業
+      // （畢業只刪除 mistakes 裡的待複習項目，reviewLog 的歷史紀錄會保留）
       const cur = mistakes[key];
       const nextBox = cur.box + 1;
+      reviewLog[key] = [...(reviewLog[key] || []), {
+        at: now,
+        correct: true
+      }];
       if (nextBox >= LEITNER_MINUTES.length) {
         delete mistakes[key];
       } else {
         mistakes[key] = {
           ...cur,
           box: nextBox,
-          nextReview: Date.now() + LEITNER_MINUTES[nextBox] * 60000
+          nextReview: now + LEITNER_MINUTES[nextBox] * 60000
         };
       }
     }
     saveProgress({
-      ...progress,
+      ...base,
       wordStats,
-      mistakes
+      mistakes,
+      reviewLog,
+      dailyMistakes
     });
   };
-  const totalStamps = Object.values(progress.stamps).reduce((sum, u) => sum + Object.values(u).filter(Boolean).length, 0);
+  // 右上角星星：改成呈現「今天」答錯的單字狀況，每天午夜重置，點下去可以看到是哪幾個字
+  const todayMistakeList = Object.entries(progress.dailyMistakes || {}).map(([key, m]) => ({
+    key,
+    ...m
+  })).sort((a, b) => b.at - a.at);
   const importInputRef = useRef(null);
   const exportProgress = () => {
     try {
@@ -635,12 +771,16 @@ function EnglishStudyApp() {
     reader.onload = () => {
       try {
         const parsed = JSON.parse(reader.result);
-        const next = {
+        const next = ensureDailyReset({
           stamps: {},
           wordStats: {},
           mistakes: {},
+          reviewLog: {},
+          dailyStamps: {},
+          dailyMistakes: {},
+          dailyResetDate: "",
           ...parsed
-        };
+        });
         saveProgress(next);
       } catch (err) {
         console.error("import error", err);
@@ -654,7 +794,11 @@ function EnglishStudyApp() {
       saveProgress({
         stamps: {},
         wordStats: {},
-        mistakes: {}
+        mistakes: {},
+        reviewLog: {},
+        dailyStamps: {},
+        dailyMistakes: {},
+        dailyResetDate: todayStr()
       });
     }
   };
@@ -700,8 +844,39 @@ function EnglishStudyApp() {
           display: flex; align-items: center; gap: 5px;
           background: var(--card); border: 1.5px solid var(--line);
           border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600;
+          cursor: pointer; font-family: inherit; color: var(--ink);
         }
+        .stamp-badge:active { transform: scale(0.96); }
         .stamp-badge svg { color: var(--accent); fill: var(--accent); }
+        .stamp-badge.has-mistakes svg { color: var(--red); fill: var(--red); }
+        .stamp-badge.has-mistakes { color: var(--red); border-color: var(--red); }
+
+        /* 今日錯題彈窗 */
+        .modal-overlay {
+          position: fixed; inset: 0; background: rgba(35,44,77,0.5);
+          display: flex; align-items: center; justify-content: center;
+          padding: 20px; z-index: 999;
+        }
+        .modal-card {
+          background: var(--paper); border-radius: 18px; padding: 20px;
+          width: 100%; max-width: 380px; max-height: 80vh; overflow-y: auto;
+        }
+        .modal-header {
+          display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+        }
+        .modal-header h3 { font-size: 17px; }
+        .modal-close {
+          background: var(--card); border: 1.5px solid var(--line); border-radius: 999px;
+          width: 28px; height: 28px; font-size: 14px; cursor: pointer; color: #6B6A5E;
+        }
+        .mistake-word-list { display: flex; flex-direction: column; gap: 8px; }
+        .mistake-word-row {
+          display: flex; align-items: center; justify-content: space-between; gap: 8px;
+          background: var(--card); border-radius: 12px; padding: 10px 14px;
+        }
+        .mistake-word-en { font-weight: 700; font-size: 15px; margin-right: 6px; }
+        .mistake-word-pos { font-size: 11px; color: #6B6A5E; font-style: italic; margin-right: 8px; }
+        .mistake-word-zh { font-size: 13px; color: #6B6A5E; }
 
         .back-row {
           display: inline-flex; align-items: center; gap: 6px; margin-bottom: 16px;
@@ -1006,19 +1181,39 @@ function EnglishStudyApp() {
         .next-action { display: flex; justify-content: center; margin-top: 16px; }
         .next-action .primary-btn { margin-top: 0; padding: 12px 32px; }
 
-        /* 單元測驗成績徽章（顯示在活動卡片上，例如「最佳 8/10」） */
+        /* 單元測驗成績徽章（顯示在活動卡片上，例如「最佳 8/10」）：累計紀錄，不會每日重置 */
         .activity-card .best-score {
           margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--unit-color, var(--ink));
+        }
+        /* 累計練習次數：跟最佳成績一樣是永久紀錄 */
+        .activity-card .practice-count {
+          margin-top: 2px; font-size: 11px; color: #6B6A5E;
+        }
+        /* 標題列：把「今日已完成」放在標題右邊，不會往下墊高卡片 */
+        .activity-card .card-top-row {
+          display: flex; align-items: flex-start; justify-content: space-between; gap: 6px;
+        }
+        /* 「今日已完成」小標籤：每天午夜重置，用來呈現當天的練習進度 */
+        .activity-card .today-badge {
+          flex-shrink: 0; display: inline-flex; align-items: center; gap: 2px;
+          font-size: 10px; font-weight: 700; color: var(--green); white-space: nowrap;
+          margin-top: 2px;
         }
       `), /*#__PURE__*/React.createElement("div", {
     className: "top-bar"
   }, /*#__PURE__*/React.createElement("div", {
     className: "brand"
-  }, /*#__PURE__*/React.createElement("h1", null, "字卡島"), /*#__PURE__*/React.createElement("span", null, "Word Island")), /*#__PURE__*/React.createElement("div", {
-    className: "stamp-badge"
+  }, /*#__PURE__*/React.createElement("h1", null, "字卡島"), /*#__PURE__*/React.createElement("span", null, "Word Island")), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: `stamp-badge ${todayMistakeList.length > 0 ? "has-mistakes" : ""}`,
+    onClick: () => setShowMistakePanel(true),
+    "aria-label": "查看今天答錯的單字"
   }, /*#__PURE__*/React.createElement(Star, {
     size: 15
-  }), totalStamps)), loaded && screen.view === "home" && /*#__PURE__*/React.createElement("div", {
+  }), todayMistakeList.length)), showMistakePanel && /*#__PURE__*/React.createElement(MistakeWordPanel, {
+    words: todayMistakeList,
+    onClose: () => setShowMistakePanel(false)
+  }), loaded && screen.view === "home" && /*#__PURE__*/React.createElement("div", {
     className: "backup-row"
   }, /*#__PURE__*/React.createElement("button", {
     type: "button",
@@ -1409,6 +1604,7 @@ function UnitScreen({
   onOpenActivity
 }) {
   const stampMap = progress.stamps[unit.id] || {};
+  const dailyMap = (progress.dailyStamps || {})[unit.id] || {};
   return /*#__PURE__*/React.createElement("div", {
     style: {
       "--unit-color": unit.color
@@ -1434,6 +1630,8 @@ function UnitScreen({
   }, ACTIVITIES.map(a => {
     const entry = stampMap[a.key];
     const best = entry && typeof entry === "object" ? entry.bestScore : null;
+    const completedCount = entry && typeof entry === "object" ? entry.completedCount : null;
+    const doneToday = !!dailyMap[a.key];
     return /*#__PURE__*/React.createElement("div", {
       key: a.key,
       className: "activity-card",
@@ -1442,15 +1640,20 @@ function UnitScreen({
       },
       onClick: () => onOpenActivity(a.key)
     }, /*#__PURE__*/React.createElement("div", {
+      className: "card-top-row"
+    }, /*#__PURE__*/React.createElement("div", {
       className: "label"
-    }, a.label), /*#__PURE__*/React.createElement("div", {
+    }, a.label), doneToday && /*#__PURE__*/React.createElement("div", {
+      className: "today-badge"
+    }, /*#__PURE__*/React.createElement(Check, {
+      size: 12
+    }), "今日已完成")), /*#__PURE__*/React.createElement("div", {
       className: "desc"
     }, a.zh), best && /*#__PURE__*/React.createElement("div", {
       className: "best-score"
-    }, "最佳 ", best.correct, "/", best.total), entry && /*#__PURE__*/React.createElement(Check, {
-      size: 16,
-      className: "check"
-    }));
+    }, "最佳 ", best.correct, "/", best.total), !!completedCount && /*#__PURE__*/React.createElement("div", {
+      className: "practice-count"
+    }, "累計練習 ", completedCount, " 次"));
   })));
 }
 
