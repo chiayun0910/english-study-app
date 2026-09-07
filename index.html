@@ -1768,6 +1768,7 @@ function EnglishStudyApp({
     unit: screen.unitId === CUSTOM_UNIT_ID ? buildCustomUnit(progress) : UNITS.find(u => u.id === screen.unitId),
     activityKey: screen.activityKey,
     progress: progress,
+    userId: user.uid,
     onBack: () => setScreen(screen.unitId === CUSTOM_UNIT_ID ? {
       view: "unit",
       unitId: CUSTOM_UNIT_ID
@@ -2329,6 +2330,7 @@ function ActivityScreen({
   unit,
   activityKey,
   progress,
+  userId,
   onBack,
   onFinish,
   onWordResult,
@@ -2341,6 +2343,7 @@ function ActivityScreen({
     onFinish,
     onWordResult,
     progress,
+    userId,
     onWordLearned,
     onAddCustomWord
   };
@@ -2627,9 +2630,29 @@ function AddWordPopup({
 /* ------------------------------------------------------------------ */
 /* 1. Flashcards                                                       */
 /* ------------------------------------------------------------------ */
+// 字卡瀏覽「這張卡做過什麼」的暫存進度，存進手機/瀏覽器的 localStorage。
+// iPhone Safari 切到背景一陣子後常常會把整個網頁重新整理，單純放在 React
+// state 裡會被清空，改存 localStorage 才能撐過這種「被系統重新整理」的情況。
+const CARD_PROGRESS_STORAGE_PREFIX = "wordisland-cardprogress-";
+function loadCardProgressCache(userId) {
+  try {
+    const raw = localStorage.getItem(CARD_PROGRESS_STORAGE_PREFIX + userId);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+function saveCardProgressCache(userId, data) {
+  try {
+    localStorage.setItem(CARD_PROGRESS_STORAGE_PREFIX + userId, JSON.stringify(data));
+  } catch (e) {
+    // 無痕模式等情況可能會擋掉 localStorage，忽略即可，不影響其他功能
+  }
+}
 function Flashcards({
   unit,
   progress,
+  userId,
   onFinish,
   onWordLearned,
   onAddCustomWord
@@ -2649,8 +2672,11 @@ function Flashcards({
   // 「已學習」的完整條件：單字喇叭＋跟讀、翻面看過、主例句喇叭＋跟讀、
   // 有補充例句/文法的話還要打開看過，補充例句也要各自喇叭＋跟讀過一次。
   // 用「每個單字自己一份」的紀錄（用 wordKey 當 key），不小心點上一個/下一個
-  // 再回來時，已經做過的步驟不會被清掉，只要留在這次字卡瀏覽的過程中就記得住。
-  const [cardProgress, setCardProgress] = useState({});
+  // 再回來、或整個網頁被重新整理，已經做過的步驟都不會被清掉。
+  const [cardProgress, setCardProgress] = useState(() => loadCardProgressCache(userId));
+  useEffect(() => {
+    saveCardProgressCache(userId, cardProgress);
+  }, [cardProgress, userId]);
   const word = unit.words[idx];
   const wordKey = `${unit.id}::${word.en}`;
   const cur = cardProgress[wordKey] || {

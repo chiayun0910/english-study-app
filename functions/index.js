@@ -131,6 +131,11 @@ exports.checkPronunciation = onCall(
     const inputPath = path.join(os.tmpdir(), `${id}-in`);
     const outputPath = path.join(os.tmpdir(), `${id}-out.wav`);
 
+    // 把目標單字/句子當作「提示詞」餵給語音辨識，讓它比對到相近發音時比較會
+    // 往這幾個詞猜，改善像 it's / this / these / windy 這種 [i] / [ɪ] 短母音
+    // 很容易聽錯的情況（辨識引擎本來就不知道使用者「應該」是要唸哪個字）。
+    const hintPhrases = mode === "sentence" ? [expectedSentence] : targetList.filter(t => typeof t === "string" && t.trim());
+
     try {
       fs.writeFileSync(inputPath, Buffer.from(audioBase64, "base64"));
       await transcodeToWav(inputPath, outputPath);
@@ -142,7 +147,9 @@ exports.checkPronunciation = onCall(
           encoding: "LINEAR16",
           sampleRateHertz: 16000,
           languageCode: "en-US",
-          maxAlternatives: 3
+          maxAlternatives: 3,
+          model: "latest_short",
+          speechContexts: hintPhrases.length ? [{ phrases: hintPhrases, boost: 15 }] : undefined
         }
       });
 
