@@ -345,6 +345,7 @@ const EMPTY_PROGRESS = () => ({
   dailyStamps: {},
   dailyMistakes: {},
   learnedWords: {},
+  dailyLearnedWords: {},
   onboarded: false,
   customWords: [],
   dailyResetDate: todayStr()
@@ -414,8 +415,19 @@ function ensureDailyReset(prog) {
     ...prog,
     dailyStamps: {},
     dailyMistakes: {},
+    // 字卡「已學習」也是每天重置：dailyLearnedWords 清空後，字卡又能重新練習，
+    // 但 learnedWords（累計完成次數）是永久紀錄，不會被這裡動到
+    dailyLearnedWords: {},
     dailyResetDate: today
   };
+}
+
+// learnedWords 早期版本存的是布林值 true（永久標記），後來改成累計完成次數的數字；
+// 這裡相容兩種格式，統一轉換成數字方便顯示「已完成學習 n 次」
+function getLearnedCount(learnedWords, key) {
+  const v = learnedWords && learnedWords[key];
+  if (typeof v === "number") return v;
+  return v ? 1 : 0;
 }
 
 /* 把 "autumn / fall"、"feel / felt" 這種多型態單字拆成陣列，每個型態都能各自發音 */
@@ -682,7 +694,7 @@ const ONBOARDING_STEPS = [{
 }, {
   emoji: "🔊",
   title: "字卡瀏覽怎樣才算學會？",
-  body: "點喇叭聽發音、翻面看例句、跟著念出單字和例句（會用麥克風錄音辨識發音），全部做完卡片才會顯示「已學習」。"
+  body: "點喇叭聽發音、翻面看例句、跟著念出單字和例句（會用麥克風錄音辨識發音），全部做完卡片才會顯示「已完成學習」。這個狀態每天都會重置，隔天可以再練一次，累計完成次數會一直保留。"
 }, {
   emoji: "⭐",
   title: "答錯的字會自動排進複習",
@@ -753,6 +765,7 @@ function EnglishStudyApp({
     dailyStamps: {},
     dailyMistakes: {},
     learnedWords: {},
+    dailyLearnedWords: {},
     onboarded: false,
     customWords: [],
     dailyResetDate: todayStr()
@@ -805,6 +818,7 @@ function EnglishStudyApp({
             dailyStamps: {},
             dailyMistakes: {},
             learnedWords: {},
+            dailyLearnedWords: {},
             onboarded: false,
             customWords: [],
             dailyResetDate: "",
@@ -950,17 +964,38 @@ function EnglishStudyApp({
       dailyMistakes
     });
   };
-  // 字卡「已學習」：喇叭、翻面看例句/文法、跟讀通過三項都完成才會呼叫，永久紀錄、不受每日重置影響
+  // 字卡「已學習」：喇叭、翻面看例句/文法、跟讀通過三項都完成才會呼叫。
+  // dailyLearnedWords 是「今天完成過了」的標記，每天午夜會重置，重置後字卡
+  // 又能重新練習；learnedWords 是「累計完成過幾次」的數字，永久紀錄、不會被
+  // 每日重置清掉，用來顯示「已完成學習 n 次」。
   const markWordLearned = (unit, word) => {
     const base = ensureDailyReset(progress);
     const key = `${unit.id}::${word.en}`;
-    if (base.learnedWords && base.learnedWords[key]) return; // 已經記錄過，不用重覆寫入
+    if (base.dailyLearnedWords && base.dailyLearnedWords[key]) return; // 今天已經記錄過，不用重覆寫入
+    const prevCount = getLearnedCount(base.learnedWords, key);
     saveProgress({
       ...base,
       learnedWords: {
         ...(base.learnedWords || {}),
+        [key]: prevCount + 1
+      },
+      dailyLearnedWords: {
+        ...(base.dailyLearnedWords || {}),
         [key]: true
       }
+    });
+  };
+  // 使用者想在同一天重測一次已完成的字卡（例如剛好想再多練習一次），
+  // 把「今天完成」的標記清掉即可，不影響永久的累計完成次數
+  const resetWordToday = (unit, word) => {
+    const base = ensureDailyReset(progress);
+    const key = `${unit.id}::${word.en}`;
+    if (!base.dailyLearnedWords || !base.dailyLearnedWords[key]) return;
+    const nextDaily = { ...base.dailyLearnedWords };
+    delete nextDaily[key];
+    saveProgress({
+      ...base,
+      dailyLearnedWords: nextDaily
     });
   };
   // 自訂生字：使用者自己輸入想背的單字，存進雲端進度，之後可以用跟課本單字
@@ -987,7 +1022,7 @@ function EnglishStudyApp({
     // 錯題/複習/已學習紀錄一起清掉，避免刪掉之後清單裡還殘留看不到的舊資料
     if (target) {
       const key = `${CUSTOM_UNIT_ID}::${target.en}`;
-      ["mistakes", "dailyMistakes", "wordStats", "reviewLog", "learnedWords"].forEach(field => {
+      ["mistakes", "dailyMistakes", "wordStats", "reviewLog", "learnedWords", "dailyLearnedWords"].forEach(field => {
         if (next[field] && next[field][key] !== undefined) {
           next[field] = { ...next[field] };
           delete next[field][key];
@@ -1036,6 +1071,7 @@ function EnglishStudyApp({
           dailyStamps: {},
           dailyMistakes: {},
           learnedWords: {},
+          dailyLearnedWords: {},
           onboarded: false,
           customWords: [],
           dailyResetDate: "",
@@ -1059,6 +1095,7 @@ function EnglishStudyApp({
         dailyStamps: {},
         dailyMistakes: {},
         learnedWords: {},
+        dailyLearnedWords: {},
         // 使用導覽只跟「有沒有看過」有關，自訂生字是使用者自己輸入的內容，
         // 這兩者都跟「學習進度」無關，重置進度不應該連這些也清掉
         onboarded: progress.onboarded || false,
@@ -1474,10 +1511,17 @@ function EnglishStudyApp({
         }
 
         /* 字卡「已學習」徽章 + 跟讀錄音按鈕 */
+        .learned-badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
         .learned-badge {
           display: flex; align-items: center; gap: 4px; color: #2E7D32; font-size: 12.5px;
           font-weight: 700; background: #E8F5E9; border-radius: 999px; padding: 4px 12px;
         }
+        .retry-today-btn {
+          background: none; border: 1.5px solid var(--line); border-radius: 999px;
+          color: #6B6A5E; font-size: 11.5px; font-weight: 600; padding: 4px 10px; cursor: pointer;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        .retry-today-btn:active { transform: scale(0.96); }
         .todo-hint {
           font-size: 12px; color: var(--accent-ink); background: #FFF7E4; border-radius: 999px;
           padding: 4px 14px; text-align: center; max-width: 320px;
@@ -1504,7 +1548,11 @@ function EnglishStudyApp({
           position: absolute; top: 10px; right: 10px; background: none; border: none;
           color: #6B6A5E; cursor: pointer; padding: 4px;
         }
-        .word-popup-title { font-size: 16px; margin: 0 0 2px; padding-right: 20px; }
+        .word-popup-title-row {
+          display: flex; align-items: center; gap: 6px; padding-right: 20px; margin: 0 0 2px;
+        }
+        .word-popup-title { font-size: 16px; margin: 0; }
+        .word-popup-title-row .speaker-btn { flex-shrink: 0; }
         .word-popup-context { font-size: 12.5px; color: #6B6A5E; margin: 0 0 4px; line-height: 1.5; }
         .word-popup-translating { font-size: 13px; color: #6B6A5E; text-align: center; padding: 8px 0; margin: 0; }
         .word-popup-translate-error { font-size: 12px; color: var(--red); margin: 0; }
@@ -1531,6 +1579,11 @@ function EnglishStudyApp({
         .pronounce-row.compact { flex-direction: row; gap: 4px; }
         .pronounce-btn-compact { padding: 3px 10px; font-size: 11px; }
         .pronounce-row.compact.pronounce-done { color: #2E7D32; }
+        .pronounce-retry-btn {
+          background: none; border: none; cursor: pointer; font-size: 13px;
+          padding: 0 2px; line-height: 1; opacity: 0.7;
+        }
+        .pronounce-retry-btn:active { transform: scale(0.85); }
 
         .result-banner {
           text-align: center; padding: 28px 16px; background: var(--card); border-radius: 16px;
@@ -1784,6 +1837,7 @@ function EnglishStudyApp({
     },
     onWordResult: recordWordResult,
     onWordLearned: markWordLearned,
+    onResetWordToday: resetWordToday,
     onAddCustomWord: addCustomWord
   }));
 }
@@ -2335,6 +2389,7 @@ function ActivityScreen({
   onFinish,
   onWordResult,
   onWordLearned,
+  onResetWordToday,
   onAddCustomWord
 }) {
   const commonProps = {
@@ -2345,6 +2400,7 @@ function ActivityScreen({
     progress,
     userId,
     onWordLearned,
+    onResetWordToday,
     onAddCustomWord
   };
   return /*#__PURE__*/React.createElement("div", {
@@ -2373,6 +2429,7 @@ function PronunciationRecorder({
   targetSentence,
   passed,
   onPassed,
+  onRetry,
   compact = false
 }) {
   const [state, setState] = useState("idle"); // idle | recording | checking | retry | error
@@ -2488,7 +2545,15 @@ function PronunciationRecorder({
       onClick: e => e.stopPropagation()
     }, /*#__PURE__*/React.createElement(Check, {
       size: compact ? 12 : 14
-    }), compact ? null : " 已跟讀完成");
+    }), compact ? null : " 已跟讀完成", onRetry && /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "pronounce-retry-btn",
+      "aria-label": "重新測一次跟讀",
+      onClick: e => {
+        e.stopPropagation();
+        onRetry();
+      }
+    }, "🔄"));
   }
   const idleLabel = compact ? "🎤 跟讀" : mode === "sentence" ? "🎤 跟讀這句話" : "🎤 跟讀（只念這個單字）";
   const label = state === "recording" ? "念完了？點此結束 🛑" : state === "checking" ? "辨識中…" : idleLabel;
@@ -2601,9 +2666,14 @@ function AddWordPopup({
     className: "word-popup-msg"
   }, "✅ 已加入自訂生字：「", word, "」") : /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSave
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "word-popup-title-row"
   }, /*#__PURE__*/React.createElement("h3", {
     className: "word-popup-title"
-  }, "幫「", word, "」加上中文意思"), /*#__PURE__*/React.createElement("p", {
+  }, "幫「", word, "」加上中文意思"), /*#__PURE__*/React.createElement(SpeakerButton, {
+    text: word,
+    size: 18
+  })), /*#__PURE__*/React.createElement("p", {
     className: "word-popup-context"
   }, sentenceEn), translating ? /*#__PURE__*/React.createElement("p", {
     className: "word-popup-translating"
@@ -2633,10 +2703,27 @@ function AddWordPopup({
 // 字卡瀏覽「這張卡做過什麼」的暫存進度，存進手機/瀏覽器的 localStorage。
 // iPhone Safari 切到背景一陣子後常常會把整個網頁重新整理，單純放在 React
 // state 裡會被清空，改存 localStorage 才能撐過這種「被系統重新整理」的情況。
+// key 帶上「今天的日期」，這樣隔天午夜過後這份快取自然就用不到、視同重置，
+// 跟 dailyLearnedWords 每天重置的邏輯一致，不用另外寫清除的程式碼
 const CARD_PROGRESS_STORAGE_PREFIX = "wordisland-cardprogress-";
+function cardProgressStorageKey(userId) {
+  return `${CARD_PROGRESS_STORAGE_PREFIX}${userId}-${todayStr()}`;
+}
 function loadCardProgressCache(userId) {
   try {
-    const raw = localStorage.getItem(CARD_PROGRESS_STORAGE_PREFIX + userId);
+    const todayKey = cardProgressStorageKey(userId);
+    // 順便清掉這個帳號之前幾天留下的舊快取，避免 localStorage 一直累積用不到的資料
+    const prefix = `${CARD_PROGRESS_STORAGE_PREFIX}${userId}-`;
+    Object.keys(localStorage).forEach(k => {
+      if (k.startsWith(prefix) && k !== todayKey) {
+        try {
+          localStorage.removeItem(k);
+        } catch (e) {
+          /* ignore */
+        }
+      }
+    });
+    const raw = localStorage.getItem(todayKey);
     return raw ? JSON.parse(raw) : {};
   } catch (e) {
     return {};
@@ -2644,7 +2731,7 @@ function loadCardProgressCache(userId) {
 }
 function saveCardProgressCache(userId, data) {
   try {
-    localStorage.setItem(CARD_PROGRESS_STORAGE_PREFIX + userId, JSON.stringify(data));
+    localStorage.setItem(cardProgressStorageKey(userId), JSON.stringify(data));
   } catch (e) {
     // 無痕模式等情況可能會擋掉 localStorage，忽略即可，不影響其他功能
   }
@@ -2655,6 +2742,7 @@ function Flashcards({
   userId,
   onFinish,
   onWordLearned,
+  onResetWordToday,
   onAddCustomWord
 }) {
   const [idx, setIdx] = useState(0);
@@ -2698,7 +2786,32 @@ function Flashcards({
   const markExtraPronounced = i => patchCard({
     extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: true } }
   });
-  const alreadyLearned = !!(progress && progress.learnedWords && progress.learnedWords[wordKey]);
+  const resetExtraPronounced = i => patchCard({
+    extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: false } }
+  });
+  // alreadyLearnedToday：今天已經完成過了（每天午夜重置，重置後字卡可以重新練習）
+  // learnedCount：累計完成學習的次數，永久紀錄，用來顯示「已完成學習 n 次」
+  const alreadyLearnedToday = !!(progress && progress.dailyLearnedWords && progress.dailyLearnedWords[wordKey]);
+  const learnedCount = getLearnedCount(progress && progress.learnedWords, wordKey);
+  // 已經完成的字卡，想在同一天再重測一次（不用等明天）：把本機暫存的步驟
+  // 跟雲端「今天完成」的標記都清掉，卡片就會回到還沒開始的狀態
+  const retryToday = () => {
+    setCardProgress(s => {
+      const next = { ...s };
+      delete next[wordKey];
+      return next;
+    });
+    if (onResetWordToday) onResetWordToday(unit, word);
+  };
+  // 單一個跟讀項目想重測：如果整張卡今天已經算完成了，就整張一起重置（反正
+  // 都要重測了），不然只清掉那一項的本機記錄就好，不影響其他已完成的項目
+  const retrySubItem = resetPatch => {
+    if (alreadyLearnedToday) {
+      retryToday();
+    } else {
+      patchCard(resetPatch);
+    }
+  };
   const extraExamples = [{
     en: word.ex2_en,
     zh: word.ex2_zh,
@@ -2711,7 +2824,10 @@ function Flashcards({
   const hasMore = extraExamples.length > 0 || !!word.grammar || !!word.ex_grammar;
   const allExtrasDone = extraExamples.every((ex, i) => cur.extraStates[i] && cur.extraStates[i].played && cur.extraStates[i].pronounced);
   const justCompleted = cur.playedAudio && cur.wordPronounced && cur.viewedBack && cur.mainExPlayed && cur.mainExPronounced && (hasMore ? cur.viewedMore : true) && allExtrasDone;
-  const learned = alreadyLearned || justCompleted;
+  const learned = alreadyLearnedToday || justCompleted;
+  // justCompleted 剛發生時 progress.learnedWords 還沒更新回來，畫面上先顯示 +1，
+  // 避免顯示的次數看起來像「這次沒被算到」
+  const displayedLearnedCount = learnedCount + (justCompleted && !alreadyLearnedToday ? 1 : 0);
   // 不小心點上一個/下一個再回來時，用這份清單提示還差哪些步驟才算「已學習」
   const checklist = [{
     done: cur.playedAudio,
@@ -2744,10 +2860,10 @@ function Flashcards({
   }
   const todoLabels = checklist.filter(c => !c.done).map(c => c.label);
   useEffect(() => {
-    if (justCompleted && !alreadyLearned && onWordLearned) {
+    if (justCompleted && !alreadyLearnedToday && onWordLearned) {
       onWordLearned(unit, word);
     }
-  }, [justCompleted, alreadyLearned, wordKey]);
+  }, [justCompleted, alreadyLearnedToday, wordKey]);
   if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
     label: "字卡看完了！",
     onRestart: () => {
@@ -2797,21 +2913,29 @@ function Flashcards({
   })), /*#__PURE__*/React.createElement("div", {
     className: "ex-zh-text"
   }, word.ex_zh)))), learned ? /*#__PURE__*/React.createElement("div", {
+    className: "learned-badge-row"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "learned-badge"
   }, /*#__PURE__*/React.createElement(Check, {
     size: 14
-  }), " 這張字卡已學習") : todoLabels.length > 0 && /*#__PURE__*/React.createElement("div", {
+  }), ` 已完成學習 ${displayedLearnedCount} 次`), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "retry-today-btn",
+    onClick: retryToday
+  }, "🔄 重新測一次")) : todoLabels.length > 0 && /*#__PURE__*/React.createElement("div", {
     className: "todo-hint"
   }, "還差：", todoLabels.join("、")), /*#__PURE__*/React.createElement(PronunciationRecorder, {
     mode: "word",
     targetWords: wordForms(word),
-    passed: cur.wordPronounced || alreadyLearned,
-    onPassed: () => patchCard({ wordPronounced: true })
+    passed: cur.wordPronounced || alreadyLearnedToday,
+    onPassed: () => patchCard({ wordPronounced: true }),
+    onRetry: () => retrySubItem({ wordPronounced: false })
   }), cur.viewedBack && /*#__PURE__*/React.createElement(PronunciationRecorder, {
     mode: "sentence",
     targetSentence: word.ex_en,
-    passed: cur.mainExPronounced || alreadyLearned,
-    onPassed: () => patchCard({ mainExPronounced: true })
+    passed: cur.mainExPronounced || alreadyLearnedToday,
+    onPassed: () => patchCard({ mainExPronounced: true }),
+    onRetry: () => retrySubItem({ mainExPronounced: false })
   }), hasMore && /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "more-toggle",
@@ -2836,8 +2960,11 @@ function Flashcards({
   }), /*#__PURE__*/React.createElement(PronunciationRecorder, {
     mode: "sentence",
     targetSentence: ex.en,
-    passed: (cur.extraStates[i] && cur.extraStates[i].pronounced) || alreadyLearned,
+    passed: (cur.extraStates[i] && cur.extraStates[i].pronounced) || alreadyLearnedToday,
     onPassed: () => markExtraPronounced(i),
+    onRetry: () => {
+      if (alreadyLearnedToday) retryToday();else resetExtraPronounced(i);
+    },
     compact: true
   })), /*#__PURE__*/React.createElement("div", {
     className: "more-zh"

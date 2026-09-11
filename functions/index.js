@@ -131,10 +131,12 @@ exports.checkPronunciation = onCall(
     const inputPath = path.join(os.tmpdir(), `${id}-in`);
     const outputPath = path.join(os.tmpdir(), `${id}-out.wav`);
 
-    // 把目標單字/句子當作「提示詞」餵給語音辨識，讓它比對到相近發音時比較會
-    // 往這幾個詞猜，改善像 it's / this / these / windy 這種 [i] / [ɪ] 短母音
-    // 很容易聽錯的情況（辨識引擎本來就不知道使用者「應該」是要唸哪個字）。
-    const hintPhrases = mode === "sentence" ? [expectedSentence] : targetList.filter(t => typeof t === "string" && t.trim());
+    // 提示詞（speech hints）只在「單字模式」用，而且權重調低：目的是在使用者
+    // 發音本身沒問題、只是 it's/this/these 這類 [i]/[ɪ] 短母音容易聽錯時，
+    // 稍微往正確方向拉一點。權重太高（之前設 15）會變成「幾乎照抄提示詞」，
+    // 導致漏念、重複念、亂念整句都還是被判定通過，等於失去驗證的意義——
+    // 所以句子模式完全不給提示詞，才能真的驗證使用者有沒有把整句話念出來。
+    const hintPhrases = mode === "word" ? targetList.filter(t => typeof t === "string" && t.trim()) : [];
 
     try {
       fs.writeFileSync(inputPath, Buffer.from(audioBase64, "base64"));
@@ -149,7 +151,7 @@ exports.checkPronunciation = onCall(
           languageCode: "en-US",
           maxAlternatives: 3,
           model: "latest_short",
-          speechContexts: hintPhrases.length ? [{ phrases: hintPhrases, boost: 15 }] : undefined
+          speechContexts: hintPhrases.length ? [{ phrases: hintPhrases, boost: 6 }] : undefined
         }
       });
 
