@@ -153,16 +153,23 @@ exports.checkPronunciation = onCall(
     const inputPath = path.join(os.tmpdir(), `${id}-in`);
     const outputPath = path.join(os.tmpdir(), `${id}-out.wav`);
 
-    // 提示詞（speech hints）權重都調低：目的是在使用者發音本身沒問題、只是容易被
-    // 聽錯（it's/this/these 這類短母音、或 autumn/weather 這類不常見詞彙）時，
-    // 稍微往正確方向拉一點。權重太高（之前設 15，且用整句當提示詞）會變成
-    // 「幾乎照抄提示詞」，導致漏念、重複念、亂念整句都還是被判定通過——
-    // 所以句子模式只給「句子裡的實質單字」當提示詞（不是整句話），且比對邏輯
-    // 仍然要求辨識結果真的涵蓋足夠比例的原句，才能兼顧「聽對詞彙」跟「驗證有念」。
+    // 提示詞（speech hints）：目的是在使用者發音本身沒問題、只是容易被聽錯
+    // （it's/this/these 這類短母音、或 autumn/weather 這類不常見詞彙常被聽成
+    // Alton/whether 之類音近但無關的字）時，把辨識結果往正確方向拉一點。
+    // 這裡的關鍵是「boost 加在誰身上」：之前踩過的坑是把「整句話」當成一個
+    // 高權重片語丟進去（boost 15），那樣等於直接告訴辨識引擎「答案就是這句」，
+    // 導致漏念、重複念、亂念整句都被誤判通過。單一單字的提示詞則完全不同：
+    // 它只影響「這個字有沒有被聽對」，不會讓引擎憑空生出使用者根本沒念的
+    // 其他字，所以句子模式的單字提示詞可以放心用更高的權重（15），
+    // 幫忙聽對 autumn 這類詞，同時比對邏輯仍要求涵蓋足夠比例的原句
+    // （漏念/重複念/亂念一樣會被抓出來）。
+    const WORD_MODE_BOOST = 6;
+    const SENTENCE_HINT_BOOST = 15;
     const hintPhrases =
       mode === "word"
         ? targetList.filter(t => typeof t === "string" && t.trim())
         : sentenceHintWords(expectedSentence);
+    const hintBoost = mode === "word" ? WORD_MODE_BOOST : SENTENCE_HINT_BOOST;
 
     try {
       fs.writeFileSync(inputPath, Buffer.from(audioBase64, "base64"));
@@ -177,7 +184,7 @@ exports.checkPronunciation = onCall(
           languageCode: "en-US",
           maxAlternatives: 3,
           model: "latest_short",
-          speechContexts: hintPhrases.length ? [{ phrases: hintPhrases, boost: 6 }] : undefined
+          speechContexts: hintPhrases.length ? [{ phrases: hintPhrases, boost: hintBoost }] : undefined
         }
       });
 
