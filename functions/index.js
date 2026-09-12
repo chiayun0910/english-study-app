@@ -385,27 +385,40 @@ exports.lookupWord = onCall(
     }
     const query = text.trim();
 
-    async function fetchMwEntry(refPath, key) {
+    // 回傳「全部」查到的字義物件（不是只回傳第一個），因為像 received 這種
+    // 查詢字，MW 常常同時回傳好幾個條目（例如 received 本身當形容詞的用法、
+    // 還有 receive 這個動詞原形），第一個條目不一定有附音標，但後面的條目
+    // 可能有，所以查音標時要把每個條目都看過一輪
+    async function fetchMwEntries(refPath, key) {
       try {
         const res = await fetch(`https://www.dictionaryapi.com/api/v3/references/${refPath}/json/${encodeURIComponent(query)}?key=${key}`);
-        if (!res.ok) return null;
+        if (!res.ok) return [];
         const data = await res.json();
         // 字典查不到確切的字時，MW 回傳的是「拼字建議」字串陣列，不是真正的字義物件；
-        // 只有陣列第一項是物件（有 meta 欄位）才代表真的查到了
-        return Array.isArray(data) && data.length && typeof data[0] === "object" && data[0].meta ? data[0] : null;
+        // 只有陣列項目是物件（有 meta 欄位）才代表真的查到了
+        return Array.isArray(data) ? data.filter(d => d && typeof d === "object" && d.meta) : [];
       } catch (err) {
         console.error(`lookupWord Merriam-Webster fetch error (${refPath})`, err);
-        return null;
+        return [];
       }
     }
+    // 音標可能放在 hwi.prs（一般發音），也可能放在 hwi.altprs（例如 received
+    // 這種由動詞變化來的詞條，本身沒有 prs，只在 altprs 附了音標）
+    function entryIpa(e) {
+      const prs = (e.hwi && e.hwi.prs && e.hwi.prs[0]) || (e.hwi && e.hwi.altprs && e.hwi.altprs[0]);
+      return prs && prs.ipa ? prs.ipa : "";
+    }
 
-    let entry = await fetchMwEntry("learners", MW_LEARNERS_KEY);
+    const learnersEntries = await fetchMwEntries("learners", MW_LEARNERS_KEY);
+    let entry = learnersEntries[0] || null;
     let ipa = "";
-    if (entry) {
-      const prs = entry.hwi && entry.hwi.prs && entry.hwi.prs[0];
-      if (prs && prs.ipa) ipa = prs.ipa;
-    } else {
-      entry = await fetchMwEntry("collegiate", MERRIAM_WEBSTER_KEY);
+    for (const e of learnersEntries) {
+      ipa = entryIpa(e);
+      if (ipa) break;
+    }
+    if (!entry) {
+      const collegiateEntries = await fetchMwEntries("collegiate", MERRIAM_WEBSTER_KEY);
+      entry = collegiateEntries[0] || null;
     }
 
     if (!entry) {
