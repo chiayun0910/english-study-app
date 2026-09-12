@@ -75,6 +75,28 @@ function sentenceSimilarity(target, transcript) {
 // 只看整體比例的話，念到句子一半（例如 9 個字念了 6 個）就可能超過門檻，
 // 誤判成「整句都念完了」。所以除了比例要夠高，還要求辨識結果裡有出現句尾
 // 的最後一個字，兩個條件都符合才代表使用者真的把整句念到最後。
+// 句子模式的提示詞：只挑句子裡「有實質意義的單字」（跳過 the/a/in 這類虛詞），
+// 用意是幫辨識引擎正確聽出 autumn、weather 這類容易被聽成別的字（Alton、whether…）
+// 的詞彙，而不是像之前那樣把「整句話」當成一個高權重片語丟進去——那樣做的後果
+// 是辨識引擎幾乎不管實際念了什麼，都直接輸出預期句子，等於失去驗證意義。
+// 這裡每個提示詞都只是單一單字、權重也低，只在發音本身接近時稍微往正確方向拉，
+// 不會讓漏念/重複念/亂念被誤判成正確。
+const SENTENCE_HINT_STOPWORDS = new Set([
+  "a", "an", "the", "to", "in", "on", "at", "of", "for", "and", "or", "but",
+  "is", "are", "was", "were", "be", "been", "being", "it", "its", "this",
+  "that", "these", "those", "i", "you", "he", "she", "we", "they", "my",
+  "your", "his", "her", "our", "their", "get", "gets", "got", "with", "as"
+]);
+function sentenceHintWords(sentence) {
+  return Array.from(
+    new Set(
+      transcriptWords(sentence).filter(
+        w => w.length >= 4 && !SENTENCE_HINT_STOPWORDS.has(w)
+      )
+    )
+  );
+}
+
 const SENTENCE_MATCH_THRESHOLD = 0.8;
 function sentenceFullyRead(target, transcript) {
   const targetWords = transcriptWords(target);
@@ -131,12 +153,16 @@ exports.checkPronunciation = onCall(
     const inputPath = path.join(os.tmpdir(), `${id}-in`);
     const outputPath = path.join(os.tmpdir(), `${id}-out.wav`);
 
-    // 提示詞（speech hints）只在「單字模式」用，而且權重調低：目的是在使用者
-    // 發音本身沒問題、只是 it's/this/these 這類 [i]/[ɪ] 短母音容易聽錯時，
-    // 稍微往正確方向拉一點。權重太高（之前設 15）會變成「幾乎照抄提示詞」，
-    // 導致漏念、重複念、亂念整句都還是被判定通過，等於失去驗證的意義——
-    // 所以句子模式完全不給提示詞，才能真的驗證使用者有沒有把整句話念出來。
-    const hintPhrases = mode === "word" ? targetList.filter(t => typeof t === "string" && t.trim()) : [];
+    // 提示詞（speech hints）權重都調低：目的是在使用者發音本身沒問題、只是容易被
+    // 聽錯（it's/this/these 這類短母音、或 autumn/weather 這類不常見詞彙）時，
+    // 稍微往正確方向拉一點。權重太高（之前設 15，且用整句當提示詞）會變成
+    // 「幾乎照抄提示詞」，導致漏念、重複念、亂念整句都還是被判定通過——
+    // 所以句子模式只給「句子裡的實質單字」當提示詞（不是整句話），且比對邏輯
+    // 仍然要求辨識結果真的涵蓋足夠比例的原句，才能兼顧「聽對詞彙」跟「驗證有念」。
+    const hintPhrases =
+      mode === "word"
+        ? targetList.filter(t => typeof t === "string" && t.trim())
+        : sentenceHintWords(expectedSentence);
 
     try {
       fs.writeFileSync(inputPath, Buffer.from(audioBase64, "base64"));
