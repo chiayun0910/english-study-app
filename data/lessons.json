@@ -21450,6 +21450,404 @@
               ]
             }
           ]
+        },
+        {
+          "id": "toeic-day5",
+          "title": "DAY 5",
+          "zh": "業務協調",
+          "units": [
+            {
+              "id": "toeic-day5-u1",
+              "title": "Unit 01",
+              "zh": "業務協調",
+              "color": "#C77B3E",
+              "words": [
+                {
+                  "en": "accordingly",
+                  "pos": "adv.",
+                  "zh": "依此；順應地",
+                  "ex_en": "The exhibition will open each day at 10 a.m. and will close at 5 p.m. Please plan your visit accordingly.",
+                  "ex_zh": "本展覽每天早上十點開放、下午五點關閉，請依此規畫您的造訪時間。",
+                  "ex_blank": "The exhibition will open each day at 10 a.m. and will close at 5 p.m. Please plan your visit ____.",
+                  "ipa": "əˈkɔrdɪŋli"
+                },
+                {
+                  "en": "accountable",
+                  "pos": "adj.",
+                  "zh": "應負責的",
+                  "ex_en": "All workers will be held accountable for any inaccurate information in their reports.",
+                  "ex_zh": "全體員工要為報告中任何不正確的資訊負責。",
+                  "ex_blank": "All workers will be held ____ for any inaccurate information in their reports.",
+                  "grammar": "字彙放大鏡：be accountable for 對……負責 (= be responsible for)。",
+                  "ipa": "əˈkaʊntəbəl"
+                },
+                {
+                  "en": "acquaint",
+                  "pos": "v.",
+                  "zh": "使熟悉",
+                  "ex_en": "The purpose of this manual is to acquaint new employees with customary office procedures and employment rules.",
+                  "ex_zh": "這本手冊目的在讓新進員工熟悉一般辦公流程與工作規定。",
+                  "ex_blank": "The purpose of this manual is to ____ new employees with customary office procedures and employment rules.",
+                  "grammar": "衍生字：acquaintance n. 點頭之交。",
+                  "ipa": "əkˈweɪnt"
+                },
+                {
+                  "en": "adviser",
+                  "pos": "n.",
+                  "zh": "顧問（或 advisor）",
+                  "ex_en": "We'll arrange a series of meetings between you and one of our expert advisers.",
+                  "ex_zh": "我們將為您安排一連串的會議，和我們其中一位專家顧問會面。",
+                  "ex_blank": "We'll arrange a series of meetings between you and one of our expert ____.",
+                  "grammar": "衍生字：advise v. 建議；advice n. 建議。",
+                  "ipa": "ædˈvaɪzər"
+                },
+                {
+                  "en": "at the latest",
+                  "pos": "phr.",
+                  "zh": "最遲；最晚",
+                  "ex_en": "We'll need to receive the information by November 14 at the latest.",
+                  "ex_zh": "我們最遲要在十一月十四日收到資料。",
+                  "ex_blank": "We'll need to receive the information by November 14 ____.",
+                  "grammar": "字彙放大鏡：at the earliest 最快；最早；at most 最多；at least 最少；at (the) best 頂多。",
+                  "ipa": "æt ðə ˈleɪtəst"
+                },
+                {
+                  "en": "client",
+                  "pos": "n.",
+                  "zh": "客戶；顧客",
+                  "ex_en": "I have some clients coming in from out of town next week, and I'd like to take them to someplace nice.",
+                  "ex_zh": "下周有些外地來的客戶，我想帶他們去高檔一點的地方。",
+                  "ex_blank": "I have some ____ coming in from out of town next week, and I'd like to take them to someplace nice.",
+                  "ipa": "klaɪənt"
+                },
+                {
+                  "en": "count on",
+                  "pos": "phr.",
+                  "zh": "信賴；仰賴",
+                  "ex_en": "We're counting on each supervisor to take responsibility for his shop area.",
+                  "ex_zh": "我們信賴每位監督主任會對自己的店面負責。",
+                  "ex_blank": "We're ____ each supervisor to take responsibility for his shop area.",
+                  "grammar": "字彙放大鏡：相似詞：depend on, rely on。",
+                  "ipa": "kaʊnt ɔn"
+                },
+                {
+                  "en": "directory",
+                  "pos": "n.",
+                  "zh": "目錄；指南",
+                  "ex_en": "We really need to update the telephone directory.",
+                  "ex_zh": "我們真的需要更新電話目錄。",
+                  "ex_blank": "We really need to update the telephone ____.",
+                  "ipa": "dɪˈrɛktəri"
+                },
+                {
+                  "en": "dispose",
+                  "pos": "v.",
+                  "zh": "處理；處置",
+                  "ex_en": "Although the new computers are arriving next week, no plans have been made to dispose of the old ones.",
+                  "ex_zh": "雖然新電腦下禮拜就會送到，但如何處理舊電腦仍無計畫。",
+                  "ex_blank": "Although the new computers are arriving next week, no plans have been made to ____ of the old ones.",
+                  "grammar": "衍生字：disposal n. 處理。",
+                  "ipa": "dɪˈspoʊz"
+                },
+                {
+                  "en": "district",
+                  "pos": "n.",
+                  "zh": "地區；區域",
+                  "ex_en": "Are you meeting with the district supervisor today?",
+                  "ex_zh": "你今天要跟地區主管開會嗎？",
+                  "ex_blank": "Are you meeting with the ____ supervisor today?",
+                  "ipa": "ˈdɪstrɪkt"
+                },
+                {
+                  "en": "divide",
+                  "pos": "v.",
+                  "zh": "分配；劃分",
+                  "ex_en": "Dividing the work among the four teams is a very efficient approach.",
+                  "ex_zh": "把工作分派給四組團隊是個很有效率的做法。",
+                  "ex_blank": "____ the work among the four teams is a very efficient approach.",
+                  "ipa": "dɪˈvaɪd"
+                },
+                {
+                  "en": "essential",
+                  "pos": "adj.",
+                  "zh": "重要的；基本的",
+                  "ex_en": "Currently, the most essential task is to finish designing the new corporate logo.",
+                  "ex_zh": "目前最要緊的工作就是完成公司新商標的設計。",
+                  "ex_blank": "Currently, the most ____ task is to finish designing the new corporate logo.",
+                  "ipa": "ɛˈsɛnʃəl"
+                },
+                {
+                  "en": "explain",
+                  "pos": "v.",
+                  "zh": "說明；解釋",
+                  "ex_en": "This brochure explains how to fill out the application forms.",
+                  "ex_zh": "這本冊子說明了如何填寫申請表格。",
+                  "ex_blank": "This brochure ____ how to fill out the application forms.",
+                  "grammar": "衍生字：explanation n. 解釋。",
+                  "ipa": "ɪkˈspleɪn"
+                },
+                {
+                  "en": "extension",
+                  "pos": "n.",
+                  "zh": "電話分機",
+                  "ex_en": "Please contact me at extension 553 at your earliest convenience.",
+                  "ex_zh": "方便的話，請儘快撥分機553與我聯絡。",
+                  "ex_blank": "Please contact me at ____ 553 at your earliest convenience.",
+                  "ipa": "ɪkˈstɛnʃən"
+                },
+                {
+                  "en": "frequently",
+                  "pos": "adv.",
+                  "zh": "經常；頻繁地",
+                  "ex_en": "Our customized billing service will keep track of the number you call frequently.",
+                  "ex_zh": "我們的客製化計費服務會記錄您經常撥打的號碼。",
+                  "ex_blank": "Our customized billing service will keep track of the number you call ____.",
+                  "grammar": "衍生字：frequent adj. 經常的。",
+                  "ipa": "ˈfrikwɛntli"
+                },
+                {
+                  "en": "general",
+                  "pos": "adj.",
+                  "zh": "一般的；普遍的",
+                  "ex_en": "I am knowledgeable about general business issues in both the domestic and international arenas.",
+                  "ex_zh": "我對於國內外一般商業議題有廣泛的認識。",
+                  "ex_blank": "I am knowledgeable about ____ business issues in both the domestic and international arenas.",
+                  "grammar": "衍生字：generally adv. 普遍地。",
+                  "ipa": "ˈʤɛnərəl"
+                },
+                {
+                  "en": "helpful",
+                  "pos": "adj.",
+                  "zh": "有幫助的；有用的",
+                  "ex_en": "I hope you find this information helpful.",
+                  "ex_zh": "希望您覺得這個資訊有幫助。",
+                  "ex_blank": "I hope you find this information ____.",
+                  "grammar": "衍生字：help v. 幫助。",
+                  "ipa": "ˈhɛlpfəl"
+                },
+                {
+                  "en": "informative",
+                  "pos": "adj.",
+                  "zh": "資訊豐富的",
+                  "ex_en": "I hope that you've found this workshop informative and useful.",
+                  "ex_zh": "希望您覺得這個工作坊內容充實又實用。",
+                  "ex_blank": "I hope that you've found this workshop ____ and useful.",
+                  "grammar": "衍生字：information n. 資訊。",
+                  "ipa": "ˌɪnˈfɔrmətɪv"
+                },
+                {
+                  "en": "in regard to",
+                  "pos": "phr.",
+                  "zh": "關於",
+                  "ex_en": "I am writing in regard to Cheryl Wittenauer's article on Desparte Systems in the November 30 issue of your magazine.",
+                  "ex_zh": "我來信是關於貴雜誌於十一月三十日該期刊登雪瑞．惠坦歌討論狀斯帕系統的文章。",
+                  "ex_blank": "I am writing ____ Cheryl Wittenauer's article on Desparte Systems in the November 30 issue of your magazine.",
+                  "ipa": "ɪn rɪˈgɑrd tɪ"
+                },
+                {
+                  "en": "manage",
+                  "pos": "v.",
+                  "zh": "管理；經營",
+                  "ex_en": "Mr. Weinstein manages the Black Diamond Web site.",
+                  "ex_zh": "溫斯坦先生負責管理黑鑽石的網站。",
+                  "ex_blank": "Mr. Weinstein ____ the Black Diamond Web site.",
+                  "grammar": "字彙放大鏡：相似詞：run, supervise, direct。衍生字：management n. 管理；經營。",
+                  "ipa": "ˈmænɪʤ"
+                },
+                {
+                  "en": "manual",
+                  "pos": "n.",
+                  "zh": "手冊；指南",
+                  "ex_en": "Our contact information is printed on the back cover of the manual so that you may easily refer to it.",
+                  "ex_zh": "我們的聯絡資訊就印在手冊封底，方便您查詢。",
+                  "ex_blank": "Our contact information is printed on the back cover of the ____ so that you may easily refer to it.",
+                  "ipa": "ˈmænjuəl"
+                },
+                {
+                  "en": "method",
+                  "pos": "n.",
+                  "zh": "方式；方法",
+                  "ex_en": "Because the teams in Beijing and Lisbon must work together closely, e-mail is the preferred method of communication.",
+                  "ex_zh": "由於北京與里斯本的團隊必須密切合作，所以電子郵件是首選的溝通管道。",
+                  "ex_blank": "Because the teams in Beijing and Lisbon must work together closely, e-mail is the preferred ____ of communication.",
+                  "ipa": "ˈmɛθəd"
+                },
+                {
+                  "en": "notify",
+                  "pos": "v.",
+                  "zh": "通知",
+                  "ex_en": "Due to the renovations in the lobby, please do not use the north entrance until you are notified otherwise.",
+                  "ex_zh": "由於大廳整修中，除非另行通知，否則請勿使用北側入口。",
+                  "ex_blank": "Due to the renovations in the lobby, please do not use the north entrance until you are ____ otherwise.",
+                  "grammar": "衍生字：notification n. 通知（書）。",
+                  "ipa": "ˈnoʊtəˌfaɪ"
+                },
+                {
+                  "en": "periodically",
+                  "pos": "adv.",
+                  "zh": "定期地；週期性地",
+                  "ex_en": "Please make sure you check the board periodically for any further changes and updates.",
+                  "ex_zh": "請您務必定期查看公告欄，以獲得進一步的變動與更新資訊。",
+                  "ex_blank": "Please make sure you check the board ____ for any further changes and updates.",
+                  "grammar": "衍生字：period n. 時期；週期；periodical n. 期刊。",
+                  "ipa": "ˌpiriˈɑdɪkəli"
+                },
+                {
+                  "en": "pertinent",
+                  "pos": "adj.",
+                  "zh": "恰當的；相關的",
+                  "ex_en": "One responsibility of the staff assistant is to make sure that only pertinent information is sent to the director.",
+                  "ex_zh": "行政助理的職責之一是確保寄給主管最相關的資訊。",
+                  "ex_blank": "One responsibility of the staff assistant is to make sure that only ____ information is sent to the director.",
+                  "ipa": "ˈpərtɪnɪnt"
+                },
+                {
+                  "en": "pretty",
+                  "pos": "adv.",
+                  "zh": "相當",
+                  "ex_en": "Aren't you pretty busy working on your research?",
+                  "ex_zh": "您不是相當忙於研究嗎？",
+                  "ex_blank": "Aren't you ____ busy working on your research?",
+                  "grammar": "字彙放大鏡：相似詞：quite, fairly。",
+                  "ipa": "ˈprɪti"
+                },
+                {
+                  "en": "provisionally",
+                  "pos": "adv.",
+                  "zh": "暫定地",
+                  "ex_en": "Submissions will not be returned, and only authors of accepted or provisionally accepted submissions will be contacted.",
+                  "ex_zh": "來稿恕不退件，唯經採用或暫時採用的作者會收到聯絡訊息。",
+                  "ex_blank": "Submissions will not be returned, and only authors of accepted or ____ accepted submissions will be contacted.",
+                  "grammar": "衍生字：provisional adj. 暫定的。",
+                  "ipa": "prəˈvɪʒənəli"
+                },
+                {
+                  "en": "regularly",
+                  "pos": "adv.",
+                  "zh": "定期地；有規律地",
+                  "ex_en": "She suggested that this would be the best way to contact you, as you are checking e-mail regularly.",
+                  "ex_zh": "她建議這會是最好的聯絡方式，因為您會定期查看電子信箱。",
+                  "ex_blank": "She suggested that this would be the best way to contact you, as you are checking e-mail ____.",
+                  "grammar": "衍生字：regular adj. 規律的。",
+                  "ipa": "ˈrɛgjələrli"
+                },
+                {
+                  "en": "reliable",
+                  "pos": "adj.",
+                  "zh": "可靠的",
+                  "ex_en": "How do you know if the person does reliable work?",
+                  "ex_zh": "你要怎麼知道一個人工作可不可靠？",
+                  "ex_blank": "How do you know if the person does ____ work?",
+                  "grammar": "衍生字：rely v. 依靠；依賴。",
+                  "ipa": "rɪˈlaɪəbəl"
+                },
+                {
+                  "en": "representative",
+                  "pos": "n.",
+                  "zh": "代表",
+                  "ex_en": "He is a representative of Lakewood Fitness Center.",
+                  "ex_zh": "他是萊克伍德健身中心的代表。",
+                  "ex_blank": "He is a ____ of Lakewood Fitness Center.",
+                  "grammar": "衍生字：represent v. 代表；表示。字彙放大鏡：a sales representative 業務代表；a customer service representative 客服代表。",
+                  "ipa": "ˌrɛprɪˈzɛnətɪv"
+                },
+                {
+                  "en": "resolve",
+                  "pos": "v.",
+                  "zh": "解決",
+                  "ex_en": "I hope this matter can be resolved quickly.",
+                  "ex_zh": "我希望這件事情能快點解決。",
+                  "ex_blank": "I hope this matter can be ____ quickly.",
+                  "ipa": "riˈzɑlv"
+                },
+                {
+                  "en": "respect",
+                  "pos": "n.",
+                  "zh": "尊敬；尊重",
+                  "ex_en": "Ms. Gupta has earned the respect not only of her colleagues in the law firm but also of the clients she represents.",
+                  "ex_zh": "古普塔女士不僅受到律師事務所同事的尊敬，也備受客戶的推崇。",
+                  "ex_blank": "Ms. Gupta has earned the ____ not only of her colleagues in the law firm but also of the clients she represents.",
+                  "grammar": "衍生字：respectful adj. 表示敬意的；respectable adj. 值得尊敬的。",
+                  "ipa": "rɪˈspɛkt"
+                },
+                {
+                  "en": "rest",
+                  "pos": "n.",
+                  "zh": "其餘的人；剩餘事物",
+                  "ex_en": "Why don't we show our design to the rest of the staff?",
+                  "ex_zh": "我們何不將設計圖展示給其他同仁看？",
+                  "ex_blank": "Why don't we show our design to the ____ of the staff?",
+                  "ipa": "rɛst"
+                },
+                {
+                  "en": "solidify",
+                  "pos": "v.",
+                  "zh": "使確定；固化",
+                  "ex_en": "Laura Jenkins will soon solidify the dates for the Wild Music exhibit we will host next year.",
+                  "ex_zh": "蘿拉．珍金斯將儘速敲定我們明年主辦狂野音樂展的日期。",
+                  "ex_blank": "Laura Jenkins will soon ____ the dates for the Wild Music exhibit we will host next year.",
+                  "ipa": "səˈlɪdəˌfaɪ"
+                },
+                {
+                  "en": "specific",
+                  "pos": "adj.",
+                  "zh": "特定的；明確的",
+                  "ex_en": "After lunch, your supervisors will show you to your specific workstations.",
+                  "ex_zh": "午餐之後，各位的主管會帶你們到各自的工作崗位上。",
+                  "ex_blank": "After lunch, your supervisors will show you to your ____ workstations.",
+                  "grammar": "衍生字：specify v. 明確指出；specifically adv. 特定地。",
+                  "ipa": "spɪˈsɪfɪk"
+                },
+                {
+                  "en": "strategy",
+                  "pos": "n.",
+                  "zh": "策略",
+                  "ex_en": "The project has been successful because of its marketing strategies.",
+                  "ex_zh": "這個專案的成功要歸因於行銷策略。",
+                  "ex_blank": "The project has been successful because of its marketing ____.",
+                  "ipa": "ˈstrætəʤi"
+                },
+                {
+                  "en": "superb",
+                  "pos": "adj.",
+                  "zh": "高超的；極好的",
+                  "ex_en": "Thank you very much for your consideration and for a superb presentation.",
+                  "ex_zh": "非常感謝您的仔細評估和出色簡報。",
+                  "ex_blank": "Thank you very much for your consideration and for a ____ presentation.",
+                  "ipa": "sʊˈpərb"
+                },
+                {
+                  "en": "suppose",
+                  "pos": "v.",
+                  "zh": "假定；以為",
+                  "ex_en": "The ticket was supposed to be here last week.",
+                  "ex_zh": "上禮拜就應該要收到票了。",
+                  "ex_blank": "The ticket was ____ to be here last week.",
+                  "grammar": "字彙放大鏡：be supposed to + V. 應該要……。",
+                  "ipa": "səˈpoʊz"
+                },
+                {
+                  "en": "surpass",
+                  "pos": "v.",
+                  "zh": "超越；優於",
+                  "ex_en": "Ms. Lopez's sales figures surpassed those of everyone else in the group.",
+                  "ex_zh": "羅培茲女士的銷售數字超越團隊中的每個人。",
+                  "ex_blank": "Ms. Lopez's sales figures ____ those of everyone else in the group.",
+                  "ipa": "sərˈpæs"
+                },
+                {
+                  "en": "usual",
+                  "pos": "adj.",
+                  "zh": "平常的；通常的",
+                  "ex_en": "This isn't my usual job at the hotel, so I'm afraid you're going to have to show me what to do.",
+                  "ex_zh": "這不是我平常在旅館執行的工作，您恐怕得教我該怎麼做。",
+                  "ex_blank": "This isn't my ____ job at the hotel, so I'm afraid you're going to have to show me what to do.",
+                  "grammar": "字彙放大鏡：as usual 跟平常一樣；老樣子。",
+                  "ipa": "ˈjuʒəwəl"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
