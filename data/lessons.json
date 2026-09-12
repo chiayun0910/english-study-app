@@ -20825,6 +20825,82 @@
                   "ipa": "hænd"
                 },
                 {
+                  "en": "imperative",
+                  "pos": "adj.",
+                  "zh": "重要的；必要的",
+                  "ex_en": "It is imperative that computer passwords be kept confidential.",
+                  "ex_zh": "電腦密碼務必要機密保管。",
+                  "ex_blank": "It is ____ that computer passwords be kept confidential.",
+                  "grammar": "字彙放大鏡：相似詞：important, necessary, essential。祈使語氣的句型：It is imperative that + N + (should) + 原型動詞。",
+                  "ipa": "ˌɪmˈpɛrətɪv"
+                },
+                {
+                  "en": "implement",
+                  "pos": "v.",
+                  "zh": "執行；實施",
+                  "ex_en": "A new system that uses the latest data-analysis methods was implemented this week.",
+                  "ex_zh": "使用最新資料分析法的新系統本週已啟用。",
+                  "ex_blank": "A new system that uses the latest data-analysis methods was ____ this week.",
+                  "grammar": "衍生字：implementation n. 履行；實施。",
+                  "ipa": "ˈɪmpləmənt"
+                },
+                {
+                  "en": "insufficient",
+                  "pos": "adj.",
+                  "zh": "不足的",
+                  "ex_en": "The number of technicians available to assist customers is now insufficient.",
+                  "ex_zh": "現在能協助顧客的工程技師人數不足。",
+                  "ex_blank": "The number of technicians available to assist customers is now ____.",
+                  "ipa": "ˌɪnsəˈfɪʃənt"
+                },
+                {
+                  "en": "letterhead",
+                  "pos": "n.",
+                  "zh": "（印在信箋上的）信頭",
+                  "ex_en": "You've seen the new company letterhead, haven't you?",
+                  "ex_zh": "你已經看過公司的新信箋，對吧？",
+                  "ex_blank": "You've seen the new company ____, haven't you?",
+                  "ipa": "ˈlɛtərˌhɛd"
+                },
+                {
+                  "en": "mastermind",
+                  "pos": "n.",
+                  "zh": "策畫者；主謀者",
+                  "ex_en": "Robert Kim is the mastermind behind the company's successful marketing strategy.",
+                  "ex_zh": "羅伯特．金是公司成功行銷策略背後的策畫者。",
+                  "ex_blank": "Robert Kim is the ____ behind the company's successful marketing strategy.",
+                  "ipa": "ˈmæstərˌmaɪnd"
+                },
+                {
+                  "en": "mistake",
+                  "pos": "n.",
+                  "zh": "錯誤",
+                  "ex_en": "Yes, the last page has five mistakes.",
+                  "ex_zh": "是的，最後一頁有五個錯誤。",
+                  "ex_blank": "Yes, the last page has five ____.",
+                  "grammar": "字彙放大鏡：make a mistake 犯錯。",
+                  "ipa": "mɪˈsteɪk"
+                },
+                {
+                  "en": "operation",
+                  "pos": "n.",
+                  "zh": "運作；運轉",
+                  "ex_en": "Mr. Kim manages the daily operations of the lab as well as supervises the 15 scientists who work there.",
+                  "ex_zh": "金先生管理實驗室的日常運作，並監督在當地工作的十五名科學家。",
+                  "ex_blank": "Mr. Kim manages the daily ____ of the lab as well as supervises the 15 scientists who work there.",
+                  "grammar": "衍生字：operate v. 操作；運行。",
+                  "ipa": "ˌɑpərˈeɪʃən"
+                },
+                {
+                  "en": "overview",
+                  "pos": "n.",
+                  "zh": "概要",
+                  "ex_en": "The initial two-day class will give you an overview of marketing basics.",
+                  "ex_zh": "兩天的入門課程將簡介行銷的基本觀念。",
+                  "ex_blank": "The initial two-day class will give you an ____ of marketing basics.",
+                  "ipa": "ˈoʊvərvˌju"
+                },
+                {
                   "en": "paperwork",
                   "pos": "n.",
                   "zh": "文書工作",
