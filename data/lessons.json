@@ -20657,6 +20657,723 @@
               ]
             }
           ]
+        },
+        {
+          "id": "toeic-day3",
+          "title": "DAY 3",
+          "zh": "文書作業",
+          "units": [
+            {
+              "id": "toeic-day3-u1",
+              "title": "Unit 01",
+              "zh": "文書作業",
+              "color": "#3E9B7C",
+              "words": [
+                {
+                  "en": "achievement",
+                  "pos": "n.",
+                  "zh": "成就；達成",
+                  "ex_en": "To celebrate our achievement and to show you our appreciation, we will be having a company picnic on Saturday.",
+                  "ex_zh": "為了慶祝我們的成就並表達感謝之意，將在禮拜六舉行公司野餐。",
+                  "ex_blank": "To celebrate our ____ and to show you our appreciation, we will be having a company picnic on Saturday.",
+                  "grammar": "衍生字：achieve v. 達成。",
+                  "ipa": "əˈʧivmənt"
+                },
+                {
+                  "en": "attachment",
+                  "pos": "n.",
+                  "zh": "附件；附加物",
+                  "ex_en": "I will hand-deliver a paper copy of the report directly to your office rather than sending it as an e-mail attachment.",
+                  "ex_zh": "我會親手將紙本報告直接送到您的辦公室，而非透過電子郵件附件寄送。",
+                  "ex_blank": "I will hand-deliver a paper copy of the report directly to your office rather than sending it as an e-mail ____.",
+                  "grammar": "衍生字：attach v. 附上。",
+                  "ipa": "əˈtæʧmənt"
+                },
+                {
+                  "en": "collaborate",
+                  "pos": "v.",
+                  "zh": "合作",
+                  "ex_en": "I met Rebecca on her very first project, when we collaborated on the soundtrack for the movie A Year in Denmark.",
+                  "ex_zh": "我跟芮貝卡是在合作她的首部作品《丹麥的一年》電影原聲帶時認識的。",
+                  "ex_blank": "I met Rebecca on her very first project, when we ____ on the soundtrack for the movie A Year in Denmark.",
+                  "grammar": "字彙放大鏡：collaborate on (+事) 合作（某事）；collaborate with (+人) 與（某人）合作。衍生字：collaboration n. 合作。",
+                  "ipa": "kəˈlæbərˌeɪt"
+                },
+                {
+                  "en": "contribute",
+                  "pos": "v.",
+                  "zh": "貢獻；助長",
+                  "ex_en": "I'm afraid the part-time secretary wouldn't contribute much to our team.",
+                  "ex_zh": "我擔心兼職秘書無法對我們團隊做出太多貢獻。",
+                  "ex_blank": "I'm afraid the part-time secretary wouldn't ____ much to our team.",
+                  "ipa": "kənˈtrɪbjut"
+                },
+                {
+                  "en": "contribution",
+                  "pos": "n.",
+                  "zh": "貢獻；付出",
+                  "ex_en": "Speaking on behalf of the president, Alan Lee thanked the employees for their contributions to the fund-raising project.",
+                  "ex_zh": "李亞倫代表總裁發言，感謝員工們對募款計畫的貢獻。",
+                  "ex_blank": "Speaking on behalf of the president, Alan Lee thanked the employees for their ____ to the fund-raising project.",
+                  "ipa": "ˌkɑntrəˈbjuʃən"
+                },
+                {
+                  "en": "deadline",
+                  "pos": "n.",
+                  "zh": "截止；截稿期限",
+                  "ex_en": "Because of the deadline, we'll probably have to work a lot of overtime to finish up the work by January 1.",
+                  "ex_zh": "因為期限的關係，我們可能要在一月一日前大量加班來完成工作。",
+                  "ex_blank": "Because of the ____, we'll probably have to work a lot of overtime to finish up the work by January 1.",
+                  "grammar": "字彙放大鏡：meet the deadline 趕在期限前完成；extend the deadline 延後截止期限。",
+                  "ipa": "ˈdɛˌdlaɪn"
+                },
+                {
+                  "en": "diverse",
+                  "pos": "adj.",
+                  "zh": "多樣的；各種的",
+                  "ex_en": "Because of my diverse experience, I have developed strong skills in financial consulting.",
+                  "ex_zh": "由於我豐富多元的經驗，所以培養出財務諮詢方面的長才。",
+                  "ex_blank": "Because of my ____ experience, I have developed strong skills in financial consulting.",
+                  "ipa": "dɪˈvərs"
+                },
+                {
+                  "en": "document",
+                  "pos": "n./v.",
+                  "zh": "文件；記錄",
+                  "ex_en": "I found the documents that were missing from the folder.",
+                  "ex_zh": "我找到資料夾中遺失的文件了。",
+                  "ex_blank": "I found the ____ that were missing from the folder.",
+                  "grammar": "衍生字：documentary adj. 紀錄的；n. 紀錄片。",
+                  "ipa": "ˈdɑkjəmɛnt"
+                },
+                {
+                  "en": "documentation",
+                  "pos": "n.",
+                  "zh": "（總稱）文件；記錄",
+                  "ex_en": "Once the initial application form has been received in our office, you don't need to provide any further documentation.",
+                  "ex_zh": "只要辦公室收到最初的申請表，您就無需再提供任何文件。",
+                  "ex_blank": "Once the initial application form has been received in our office, you don't need to provide any further ____.",
+                  "ipa": "ˌdɑkjəmɛnˈteɪʃən"
+                },
+                {
+                  "en": "draft",
+                  "pos": "n.",
+                  "zh": "草稿",
+                  "ex_en": "It's only the first draft and I'm going to make revisions.",
+                  "ex_zh": "這只是初稿，我還會再校訂。",
+                  "ex_blank": "It's only the first ____ and I'm going to make revisions.",
+                  "ipa": "dræft"
+                },
+                {
+                  "en": "duplication",
+                  "pos": "n.",
+                  "zh": "複製；副本",
+                  "ex_en": "We have 400 records centers worldwide where we offer storage, duplication, and shredding of documents.",
+                  "ex_zh": "我們在全球擁有四百個文件中心，提供保管、複製及銷毀服務。",
+                  "ex_blank": "We have 400 records centers worldwide where we offer storage, ____, and shredding of documents.",
+                  "grammar": "衍生字：duplicate v. 複製。",
+                  "ipa": "ˌdjupləˈkeɪʃən"
+                },
+                {
+                  "en": "encourage",
+                  "pos": "v.",
+                  "zh": "鼓勵",
+                  "ex_en": "We strongly encourage you to submit any ideas you have for new products.",
+                  "ex_zh": "我們很鼓勵大家提出對新產品的想法。",
+                  "ex_blank": "We strongly ____ you to submit any ideas you have for new products.",
+                  "grammar": "衍生字：encouragement n. 鼓勵；encouraging adj. 令人鼓舞的。",
+                  "ipa": "ɪnˈkərəʤ"
+                },
+                {
+                  "en": "exceptional",
+                  "pos": "adj.",
+                  "zh": "特別的；例外的",
+                  "ex_en": "Because of her exceptional performance last quarter, Ms. Jackson received a huge bonus.",
+                  "ex_zh": "由於上一季的傑出表現，傑克森女士獲得優渥獎金。",
+                  "ex_blank": "Because of her ____ performance last quarter, Ms. Jackson received a huge bonus.",
+                  "grammar": "衍生字：exception n. 例外。",
+                  "ipa": "ɪkˈsɛpʃənəl"
+                },
+                {
+                  "en": "extend",
+                  "pos": "v.",
+                  "zh": "延長；給予",
+                  "ex_en": "Ms. Arendt has extended the due date for our sales report.",
+                  "ex_zh": "愛倫特女士將業務報告的繳交日期延後了。",
+                  "ex_blank": "Ms. Arendt has ____ the due date for our sales report.",
+                  "grammar": "衍生字：extension n. 延長；電話分機。",
+                  "ipa": "ɪkˈstɛnd"
+                },
+                {
+                  "en": "finalize",
+                  "pos": "v.",
+                  "zh": "定稿；定局",
+                  "ex_en": "Given our deadline, we will need to finalize the edited version next week.",
+                  "ex_zh": "根據截稿期限，我們要在下週完成修訂版本。",
+                  "ex_blank": "Given our deadline, we will need to ____ the edited version next week.",
+                  "grammar": "衍生字：final adj. 最後的；最終的。",
+                  "ipa": "ˈfaɪnəˌlaɪz"
+                },
+                {
+                  "en": "hand",
+                  "pos": "v.",
+                  "zh": "交給",
+                  "ex_en": "The man is handing the woman a camera.",
+                  "ex_zh": "男士正將相機遞給女士。",
+                  "ex_blank": "The man is ____ the woman a camera.",
+                  "grammar": "字彙放大鏡：hand in 繳交 (= submit, turn in)；hand out 發放；hand over 移交。衍生字：handy adj. 便利的；手邊的。",
+                  "ipa": "hænd"
+                },
+                {
+                  "en": "paperwork",
+                  "pos": "n.",
+                  "zh": "文書工作",
+                  "ex_en": "I'll arrange for you to fill out the paperwork with one of our account representatives.",
+                  "ex_zh": "我會安排一位帳戶專員協助您填寫文件。",
+                  "ex_blank": "I'll arrange for you to fill out the ____ with one of our account representatives.",
+                  "ipa": "ˈpeɪpərˌwərk"
+                },
+                {
+                  "en": "progress",
+                  "pos": "n.",
+                  "zh": "進展；進步",
+                  "ex_en": "Because you've become so familiar with the project, I'd like you to supervise the progress in the technical area.",
+                  "ex_zh": "由於你已熟悉專案，我想請你監督技術方面的工作進展。",
+                  "ex_blank": "Because you've become so familiar with the project, I'd like you to supervise the ____ in the technical area.",
+                  "grammar": "字彙放大鏡：in progress 進行中；make progress in 在……有進步。",
+                  "ipa": "ˈprɑˌgrɛs"
+                },
+                {
+                  "en": "proposal",
+                  "pos": "n.",
+                  "zh": "提案；建議",
+                  "ex_en": "The board of directors asked for the budget proposal for next year.",
+                  "ex_zh": "董事會詢問明年的預算提案。",
+                  "ex_blank": "The board of directors asked for the budget ____ for next year.",
+                  "grammar": "衍生字：propose v. 提案；建議。",
+                  "ipa": "prəˈpoʊzəl"
+                },
+                {
+                  "en": "renewal",
+                  "pos": "n.",
+                  "zh": "續約；更新",
+                  "ex_en": "Current cardholders should apply for renewal by March 31.",
+                  "ex_zh": "目前的持卡人應於三月三十一日前申請續卡。",
+                  "ex_blank": "Current cardholders should apply for ____ by March 31.",
+                  "grammar": "衍生字：renew v. 續約；更新。",
+                  "ipa": "rɪˈnuəl"
+                },
+                {
+                  "en": "reproduce",
+                  "pos": "v.",
+                  "zh": "複製",
+                  "ex_en": "Would it be possible to obtain a copy of your speech and reproduce 20 copies for our internal use only?",
+                  "ex_zh": "是否能取得您的講稿，讓我複製二十份僅作內部參考用？",
+                  "ex_blank": "Would it be possible to obtain a copy of your speech and ____ 20 copies for our internal use only?",
+                  "grammar": "字彙放大鏡：相似詞：copy, duplicate。",
+                  "ipa": "ˌriprəˈdus"
+                },
+                {
+                  "en": "respond",
+                  "pos": "v.",
+                  "zh": "回覆",
+                  "ex_en": "I'm sorry I didn't respond to your e-mail earlier.",
+                  "ex_zh": "我很抱歉沒能及早回覆您的電子郵件。",
+                  "ex_blank": "I'm sorry I didn't ____ to your e-mail earlier.",
+                  "grammar": "衍生字：response n. 回應；respondent n. 應答者。",
+                  "ipa": "rɪˈspɑnd"
+                },
+                {
+                  "en": "revise",
+                  "pos": "v.",
+                  "zh": "修訂；修改",
+                  "ex_en": "Where should I send the revised version of the contract?",
+                  "ex_zh": "我應該將合約的修訂版寄到哪裡呢？",
+                  "ex_blank": "Where should I send the ____ version of the contract?",
+                  "ipa": "rɪˈvaɪz"
+                },
+                {
+                  "en": "revision",
+                  "pos": "n.",
+                  "zh": "修訂（本）；修改",
+                  "ex_en": "I had Jade in accounting check the figures on Monday, so I can send the revision over to you this afternoon.",
+                  "ex_zh": "我昨天請會計部的潔德確認過數字，所以才能在今天下午寄給您這份修訂版本。",
+                  "ex_blank": "I had Jade in accounting check the figures on Monday, so I can send the ____ over to you this afternoon.",
+                  "ipa": "riˈvɪʒən"
+                },
+                {
+                  "en": "rush",
+                  "pos": "v.",
+                  "zh": "匆忙行事；猛衝",
+                  "ex_en": "This sales report was rushed and many errors were made.",
+                  "ex_zh": "這份業務報告匆促趕工，裡面有不少錯誤。",
+                  "ex_blank": "This sales report was ____ and many errors were made.",
+                  "ipa": "rəʃ"
+                },
+                {
+                  "en": "sign",
+                  "pos": "v.",
+                  "zh": "簽名；簽署",
+                  "ex_en": "Could you please sign the form and return it to me along with a revised construction schedule?",
+                  "ex_zh": "能請您簽署表格，並跟修訂過的施工時程表一同交回嗎？",
+                  "ex_blank": "Could you please ____ the form and return it to me along with a revised construction schedule?",
+                  "grammar": "衍生字：signature n. 簽名。",
+                  "ipa": "saɪn"
+                },
+                {
+                  "en": "submit",
+                  "pos": "v.",
+                  "zh": "提交；提出",
+                  "ex_en": "When can you submit the report to Mr. Chang?",
+                  "ex_zh": "你何時能將報告提交給張先生？",
+                  "ex_blank": "When can you ____ the report to Mr. Chang?",
+                  "grammar": "字彙放大鏡：相似詞：send in, hand in, give。",
+                  "ipa": "səbˈmɪt"
+                },
+                {
+                  "en": "subsequent to",
+                  "pos": "phr.",
+                  "zh": "隨後；接著",
+                  "ex_en": "Subsequent to approval of the budget, the marketing team started to create a new advertisement.",
+                  "ex_zh": "獲得預算許可後，行銷團隊著手製作新廣告。",
+                  "ex_blank": "____ approval of the budget, the marketing team started to create a new advertisement.",
+                  "ipa": "ˈsəbsəkwənt tɪ"
+                },
+                {
+                  "en": "summarize",
+                  "pos": "v.",
+                  "zh": "概述；摘要",
+                  "ex_en": "This report summarizes the results obtained during the initial survey.",
+                  "ex_zh": "這份報告概述了首波調查所獲得的結果。",
+                  "ex_blank": "This report ____ the results obtained during the initial survey.",
+                  "ipa": "ˈsəmərˌaɪz"
+                },
+                {
+                  "en": "summary",
+                  "pos": "n.",
+                  "zh": "摘要",
+                  "ex_en": "As you can see from your summary sheet, we received 14 responses.",
+                  "ex_zh": "如同您從摘要頁上看到的，我們收到了十四則回應。",
+                  "ex_blank": "As you can see from your ____ sheet, we received 14 responses.",
+                  "grammar": "字彙放大鏡：make a summary of 為……做摘要；in summary 簡言之。",
+                  "ipa": "ˈsəməri"
+                },
+                {
+                  "en": "template",
+                  "pos": "n.",
+                  "zh": "樣稿；範本",
+                  "ex_en": "The print advertising templates for the Vectra small-appliance line have been completed.",
+                  "ex_zh": "維克翠小家電系列的文宣樣稿已經完成了。",
+                  "ex_blank": "The print advertising ____ for the Vectra small-appliance line have been completed.",
+                  "ipa": "ˈtɛmplət"
+                },
+                {
+                  "en": "tight",
+                  "pos": "adj.",
+                  "zh": "緊湊的；緊的",
+                  "ex_en": "The schedule is rather tight.",
+                  "ex_zh": "這個行程相當緊湊。",
+                  "ex_blank": "The schedule is rather ____.",
+                  "grammar": "衍生字：tighten v. 變緊。",
+                  "ipa": "taɪt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "toeic-day4",
+          "title": "DAY 4",
+          "zh": "商務會議",
+          "units": [
+            {
+              "id": "toeic-day4-u1",
+              "title": "Unit 01",
+              "zh": "商務會議",
+              "color": "#8B5FBF",
+              "words": [
+                {
+                  "en": "address",
+                  "pos": "v.",
+                  "zh": "處理；演說",
+                  "ex_en": "Could you please ask Mr. Griffin if he sees any problems that we'll need to address right away?",
+                  "ex_zh": "能請你幫我請教格里芬先生，是否發現任何我們得立即處理的問題？",
+                  "ex_blank": "Could you please ask Mr. Griffin if he sees any problems that we'll need to ____ right away?",
+                  "ipa": "ˈæˌdrɛs"
+                },
+                {
+                  "en": "agenda",
+                  "pos": "n.",
+                  "zh": "議程",
+                  "ex_en": "Jess Bronsky is putting together the agenda for the meeting and will notify you soon of the time and place.",
+                  "ex_zh": "傑斯．布朗斯基正在彙整會議議程，很快就會通知大家時間與地點。",
+                  "ex_blank": "Jess Bronsky is putting together the ____ for the meeting and will notify you soon of the time and place.",
+                  "ipa": "əˈʤɛndə"
+                },
+                {
+                  "en": "announce",
+                  "pos": "v.",
+                  "zh": "宣布；公告",
+                  "ex_en": "They announced a contract with Yoon Corporation to develop a new software program.",
+                  "ex_zh": "他們宣告與永恩企業簽署合約，以發展新軟體系統。",
+                  "ex_blank": "They ____ a contract with Yoon Corporation to develop a new software program.",
+                  "grammar": "衍生字：announcement n. 公告。",
+                  "ipa": "əˈnaʊns"
+                },
+                {
+                  "en": "arrangement",
+                  "pos": "n.",
+                  "zh": "準備；安排",
+                  "ex_en": "We've made arrangements to use the parking area at the sports field behind the factory.",
+                  "ex_zh": "我們安排好要利用工廠後面體育場的停車區。",
+                  "ex_blank": "We've made ____ to use the parking area at the sports field behind the factory.",
+                  "grammar": "衍生字：arrange v. 準備；安排。",
+                  "ipa": "ərˈeɪnʤmənt"
+                },
+                {
+                  "en": "attend",
+                  "pos": "v.",
+                  "zh": "出席；參加",
+                  "ex_en": "I still won't be able to attend, so don't change your plans for me.",
+                  "ex_zh": "我還是無法出席，所以別為了我更改計畫。",
+                  "ex_blank": "I still won't be able to ____, so don't change your plans for me.",
+                  "grammar": "衍生字：attendance n. 出席；attendee n. 出席者。字彙放大鏡：相似詞：participate in, go to, be present at。Will you attend the meeting? = Will you participate in the meeting? 你會出席會議嗎？",
+                  "ipa": "əˈtɛnd"
+                },
+                {
+                  "en": "attentive",
+                  "pos": "adj.",
+                  "zh": "注意的；留意的",
+                  "ex_en": "While they were being trained, the new employees remained fully attentive.",
+                  "ex_zh": "新進員工在接受訓練時保持全神貫注。",
+                  "ex_blank": "While they were being trained, the new employees remained fully ____.",
+                  "grammar": "衍生字：attention n. 注意。字彙放大鏡：May I have your attention, please? 大家請注意。",
+                  "ipa": "əˈtɛntɪv"
+                },
+                {
+                  "en": "audience",
+                  "pos": "n.",
+                  "zh": "觀眾；聽眾",
+                  "ex_en": "Audience members will order cooking products.",
+                  "ex_zh": "觀眾們會訂購烹飪用具。",
+                  "ex_blank": "____ members will order cooking products.",
+                  "ipa": "ˈɔdiəns"
+                },
+                {
+                  "en": "brainstorm",
+                  "pos": "v.",
+                  "zh": "腦力激盪",
+                  "ex_en": "The staff brainstormed about additional ideas for experiments that visitors could participate in.",
+                  "ex_zh": "員工們腦力激盪出更多實驗設計，好讓參觀者能參與互動。",
+                  "ex_blank": "The staff ____ about additional ideas for experiments that visitors could participate in.",
+                  "ipa": "ˈbreɪnˌstɔrm"
+                },
+                {
+                  "en": "break",
+                  "pos": "n.",
+                  "zh": "休息；停頓",
+                  "ex_en": "They will be able to take a longer lunch break.",
+                  "ex_zh": "他們可以有較長的午休時間。",
+                  "ex_blank": "They will be able to take a longer lunch ____.",
+                  "grammar": "字彙放大鏡：take a break 休息一下；without a break 不眠不休地；不斷地。",
+                  "ipa": "breɪk"
+                },
+                {
+                  "en": "circulate",
+                  "pos": "v.",
+                  "zh": "發放；流通",
+                  "ex_en": "It is usually most effective to circulate a meeting agenda to the attendees in advance.",
+                  "ex_zh": "預先將議程發給與會者通常是最有效率的。",
+                  "ex_blank": "It is usually most effective to ____ a meeting agenda to the attendees in advance.",
+                  "grammar": "衍生字：circulation n. 發行；流通。",
+                  "ipa": "ˈsərkjəˌleɪt"
+                },
+                {
+                  "en": "come up with",
+                  "pos": "phr.",
+                  "zh": "想出",
+                  "ex_en": "Employees meet regularly to come up with new product ideas.",
+                  "ex_zh": "員工定期開會以發想新產品的點子。",
+                  "ex_blank": "Employees meet regularly to ____ new product ideas.",
+                  "ipa": "kəm əp wɪθ"
+                },
+                {
+                  "en": "comment",
+                  "pos": "v./n.",
+                  "zh": "評論；批評；意見",
+                  "ex_en": "Hasn't George commented on our proposal yet?",
+                  "ex_zh": "喬治對我們的提案作出評論了沒？",
+                  "ex_blank": "Hasn't George ____ on our proposal yet?",
+                  "ipa": "ˈkɑmɛnt"
+                },
+                {
+                  "en": "consensus",
+                  "pos": "n.",
+                  "zh": "共識",
+                  "ex_en": "After days of discussion on the matter, the directors were able to reach a consensus.",
+                  "ex_zh": "在討論多日之後，董事們對這件事終能達成共識。",
+                  "ex_blank": "After days of discussion on the matter, the directors were able to reach a ____.",
+                  "ipa": "kənˈsɛnsəs"
+                },
+                {
+                  "en": "executive",
+                  "pos": "n.",
+                  "zh": "行政主管；行政部門",
+                  "ex_en": "Star Company executives say the search for the next president is underway.",
+                  "ex_zh": "星辰公司主管宣布正在尋覓下一任總裁人選。",
+                  "ex_blank": "Star Company ____ say the search for the next president is underway.",
+                  "grammar": "字彙放大鏡：常見的主管職稱：CEO 執行長 (=Chief Executive Officer)；president 總裁；vice president 副總裁；general director 總經理；senior manager 資深經理。",
+                  "ipa": "ɪgˈzɛkjətɪv"
+                },
+                {
+                  "en": "highlight",
+                  "pos": "v.",
+                  "zh": "強調；凸顯",
+                  "ex_en": "The guest speaker highlighted some ideas for successfully introducing change in the workplace.",
+                  "ex_zh": "客座講者特別強調幾個成功推動企業改造的觀念。",
+                  "ex_blank": "The guest speaker ____ some ideas for successfully introducing change in the workplace.",
+                  "grammar": "字彙放大鏡：相似詞：emphasize, stress。",
+                  "ipa": "ˈhaɪˌlaɪt"
+                },
+                {
+                  "en": "inform",
+                  "pos": "v.",
+                  "zh": "告知；通知",
+                  "ex_en": "The purpose of the meeting on October 20 is to inform new employees of their job benefits.",
+                  "ex_zh": "十月二十日的會議目的是告知新進員工相關的工作福利。",
+                  "ex_blank": "The purpose of the meeting on October 20 is to ____ new employees of their job benefits.",
+                  "grammar": "衍生字：information n. 資訊。",
+                  "ipa": "ˌɪnˈfɔrm"
+                },
+                {
+                  "en": "instructor",
+                  "pos": "n.",
+                  "zh": "講師；指導者",
+                  "ex_en": "Ms. McGregor is a good instructor.",
+                  "ex_zh": "麥奎格小姐是位優秀的講師。",
+                  "ex_blank": "Ms. McGregor is a good ____.",
+                  "grammar": "衍生字：instruct v. 指示；指導；instruction n. 指示；指導。",
+                  "ipa": "ˌɪnˈstrəktər"
+                },
+                {
+                  "en": "intensive",
+                  "pos": "adj.",
+                  "zh": "密集的",
+                  "ex_en": "Insurance specialists at this company receive two months of intensive training before they begin working with clients.",
+                  "ex_zh": "本公司的保險專員在服務客戶前，要接受為期兩個月的密集訓練。",
+                  "ex_blank": "Insurance specialists at this company receive two months of ____ training before they begin working with clients.",
+                  "grammar": "衍生字：intensively adv. 密集地。",
+                  "ipa": "ˌɪnˈtɛnsɪv"
+                },
+                {
+                  "en": "lead",
+                  "pos": "v.",
+                  "zh": "領導；主導",
+                  "ex_en": "Who's been selected to lead the design team?",
+                  "ex_zh": "誰被推選出來主導這個設計團隊？",
+                  "ex_blank": "Who's been selected to ____ the design team?",
+                  "ipa": "lɛd"
+                },
+                {
+                  "en": "material",
+                  "pos": "n.",
+                  "zh": "材料；原料",
+                  "ex_en": "Participants in the Mumbai Business Seminars must pay a small fee to cover the cost of materials and supplies.",
+                  "ex_zh": "孟買商研會的學員須付一小筆費用來支應材料用品的支出。",
+                  "ex_blank": "Participants in the Mumbai Business Seminars must pay a small fee to cover the cost of ____ and supplies.",
+                  "ipa": "məˈtɪriəl"
+                },
+                {
+                  "en": "matter",
+                  "pos": "n.",
+                  "zh": "問題；事件",
+                  "ex_en": "Please let me know your thoughts on this matter.",
+                  "ex_zh": "請讓我知道你對於這件事的看法。",
+                  "ex_blank": "Please let me know your thoughts on this ____.",
+                  "ipa": "ˈmætər"
+                },
+                {
+                  "en": "minutes",
+                  "pos": "n.",
+                  "zh": "會議記錄",
+                  "ex_en": "MINUTES OF JUNE 15 MEETING OF BOARD OF DIRECTORS",
+                  "ex_zh": "六月十五日董事會會議紀錄（會議記錄之標題）",
+                  "ex_blank": "____ OF JUNE 15 MEETING OF BOARD OF DIRECTORS",
+                  "ipa": "ˈmɪnəts"
+                },
+                {
+                  "en": "negotiate",
+                  "pos": "v.",
+                  "zh": "協商；談判",
+                  "ex_en": "Due to her experience negotiating contracts in Singapore, Joan Corbett has been selected to lead the project.",
+                  "ex_zh": "由於她在新加坡協商合約的經驗，瓊．柯貝特獲選為專案主持人。",
+                  "ex_blank": "Due to her experience ____ contracts in Singapore, Joan Corbett has been selected to lead the project.",
+                  "grammar": "衍生字：negotiation n. 協商；談判。",
+                  "ipa": "nɪˈgoʊʃiˌeɪt"
+                },
+                {
+                  "en": "ongoing",
+                  "pos": "adj.",
+                  "zh": "進行中的",
+                  "ex_en": "The main purpose of the meeting is to settle an ongoing debate among the service representatives.",
+                  "ex_zh": "這場會議的主要目的是要解決客服人員目前的爭端。",
+                  "ex_blank": "The main purpose of the meeting is to settle an ____ debate among the service representatives.",
+                  "ipa": "ˈɔnˌgoʊɪŋ"
+                },
+                {
+                  "en": "organize",
+                  "pos": "v.",
+                  "zh": "組織",
+                  "ex_en": "Entrepreneurs spend a lot of time organizing and managing the administrative aspects of the company.",
+                  "ex_zh": "創業家會花許多時間在公司經營層面的規畫與管理。",
+                  "ex_blank": "Entrepreneurs spend a lot of time ____ and managing the administrative aspects of the company.",
+                  "grammar": "衍生字：organization n. 組織；機構；organizer n. 組織者。",
+                  "ipa": "ˈɔrgəˌnaɪz"
+                },
+                {
+                  "en": "pass out",
+                  "pos": "phr.",
+                  "zh": "發放",
+                  "ex_en": "Now, before you leave, I'm going to pass out a participant survey.",
+                  "ex_zh": "現在趁大家還沒離開前，我要發一份參加者問卷。",
+                  "ex_blank": "Now, before you leave, I'm going to ____ a participant survey.",
+                  "grammar": "字彙放大鏡：相似詞：hand out, give out, distribute。",
+                  "ipa": "pæs aʊt"
+                },
+                {
+                  "en": "policy",
+                  "pos": "n.",
+                  "zh": "政策",
+                  "ex_en": "Karen Maitland from the personnel office will answer any questions you may have about company policies.",
+                  "ex_zh": "人事部的凱倫．梅特蘭會回答各位對公司政策的任何問題。",
+                  "ex_blank": "Karen Maitland from the personnel office will answer any questions you may have about company ____.",
+                  "ipa": "ˈpɑləsi"
+                },
+                {
+                  "en": "postpone",
+                  "pos": "v.",
+                  "zh": "延後；延期",
+                  "ex_en": "The committee meeting has been postponed until 3 o'clock.",
+                  "ex_zh": "委員會議延後到三點鐘。",
+                  "ex_blank": "The committee meeting has been ____ until 3 o'clock.",
+                  "grammar": "字彙放大鏡：相似詞：put off, delay, reschedule。",
+                  "ipa": "poʊstˈpoʊn"
+                },
+                {
+                  "en": "presentation",
+                  "pos": "n.",
+                  "zh": "簡報；呈現",
+                  "ex_en": "What did you think of Ms. Iwata's presentation?",
+                  "ex_zh": "你覺得岩田女士的簡報怎麼樣？",
+                  "ex_blank": "What did you think of Ms. Iwata's ____?",
+                  "grammar": "衍生字：present v. 報告；呈現。",
+                  "ipa": "ˌprɛzənˈteɪʃən"
+                },
+                {
+                  "en": "recess",
+                  "pos": "n.",
+                  "zh": "休會；休息",
+                  "ex_en": "We finally had a chance to introduce each other while the meeting was in recess.",
+                  "ex_zh": "我們終於在會議休息時間有機會介紹彼此認識。",
+                  "ex_blank": "We finally had a chance to introduce each other while the meeting was in ____.",
+                  "ipa": "ˈrisɛs"
+                },
+                {
+                  "en": "reschedule",
+                  "pos": "v.",
+                  "zh": "重新排程",
+                  "ex_en": "Sure, I'll reschedule it right away.",
+                  "ex_zh": "我當然會馬上重新安排時程。",
+                  "ex_blank": "Sure, I'll ____ it right away.",
+                  "ipa": "riˈskɛʤul"
+                },
+                {
+                  "en": "schedule",
+                  "pos": "v./n.",
+                  "zh": "安排時程；時程表；行事曆",
+                  "ex_en": "Should I schedule the meeting for earlier in the day or later?",
+                  "ex_zh": "我應該把會議安排在當天稍早還是稍晚的時段？",
+                  "ex_blank": "Should I ____ the meeting for earlier in the day or later?",
+                  "grammar": "字彙放大鏡：be scheduled to do something 預定要做……。",
+                  "ipa": "ˈskɛʤʊl"
+                },
+                {
+                  "en": "session",
+                  "pos": "n.",
+                  "zh": "（授課或活動的）期間",
+                  "ex_en": "There has been a room change for one of this afternoon's management training sessions.",
+                  "ex_zh": "下午有一堂管理訓練課程換教室了。",
+                  "ex_blank": "There has been a room change for one of this afternoon's management training ____.",
+                  "ipa": "ˈsɛʃən"
+                },
+                {
+                  "en": "share",
+                  "pos": "v.",
+                  "zh": "分享",
+                  "ex_en": "Dr. Johnson is offering a workshop during which she will share some ideas on effective time management.",
+                  "ex_zh": "強森博士正舉行工作坊，分享關於有效時間管理的想法。",
+                  "ex_blank": "Dr. Johnson is offering a workshop during which she will ____ some ideas on effective time management.",
+                  "ipa": "ʃɛr"
+                },
+                {
+                  "en": "short notice",
+                  "pos": "phr.",
+                  "zh": "臨時通知",
+                  "ex_en": "Thank you all for coming to this meeting on such short notice.",
+                  "ex_zh": "感謝各位在這麼臨時通知之下前來這場會議。",
+                  "ex_blank": "Thank you all for coming to this meeting on such ____.",
+                  "ipa": "ʃɔrt ˈnoʊtɪs"
+                },
+                {
+                  "en": "state",
+                  "pos": "v.",
+                  "zh": "說明；聲明",
+                  "ex_en": "Company policy states that everyone who uses a company vehicle must have a valid motor pool checkout card.",
+                  "ex_zh": "公司規定，凡使用公司車輛者須持有期效內的車廠登記卡。",
+                  "ex_blank": "Company policy ____ that everyone who uses a company vehicle must have a valid motor pool checkout card.",
+                  "ipa": "steɪt"
+                },
+                {
+                  "en": "take notes",
+                  "pos": "phr.",
+                  "zh": "記錄；作筆記",
+                  "ex_en": "Can you take notes at tomorrow's meeting?",
+                  "ex_zh": "你能在明天的會議上作紀錄嗎？",
+                  "ex_blank": "Can you ____ at tomorrow's meeting?",
+                  "ipa": "teɪk noʊts"
+                },
+                {
+                  "en": "train",
+                  "pos": "v.",
+                  "zh": "訓練",
+                  "ex_en": "We offer the training you need to advance in your career.",
+                  "ex_zh": "我們提供在職場上晉升所需的相關訓練。",
+                  "ex_blank": "We offer the ____ you need to advance in your career.",
+                  "grammar": "（training 為動名詞「訓練」）",
+                  "ipa": "treɪn"
+                },
+                {
+                  "en": "unanimously",
+                  "pos": "adv.",
+                  "zh": "無異議地；一致地",
+                  "ex_en": "Yesterday, the officers voted unanimously to offer large bonuses to high-performing employees.",
+                  "ex_zh": "主管們昨天投票，無異議通過發放優厚獎金給傑出員工。",
+                  "ex_blank": "Yesterday, the officers voted ____ to offer large bonuses to high-performing employees.",
+                  "grammar": "衍生字：unanimous adj. 無異議的。",
+                  "ipa": "juˈnænəməsli"
+                },
+                {
+                  "en": "vote",
+                  "pos": "v.",
+                  "zh": "投票",
+                  "ex_en": "The directors voted to extend evening hours at local libraries to make them more accessible to patrons.",
+                  "ex_zh": "主任們投票決議延長圖書館晚間時段，以便民眾多加利用。",
+                  "ex_blank": "The directors ____ to extend evening hours at local libraries to make them more accessible to patrons.",
+                  "ipa": "voʊt"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
