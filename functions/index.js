@@ -88,16 +88,26 @@ const SENTENCE_HINT_STOPWORDS = new Set([
   "your", "his", "her", "our", "their", "get", "gets", "got", "with", "as"
 ]);
 function sentenceHintWords(sentence) {
-  return Array.from(
-    new Set(
-      transcriptWords(sentence).filter(
-        w => w.length >= 4 && !SENTENCE_HINT_STOPWORDS.has(w)
-      )
-    )
-  );
+  const tokens = transcriptWords(sentence);
+  const hints = tokens.filter(w => w.length >= 4 && !SENTENCE_HINT_STOPWORDS.has(w));
+  // you'll、it's、don't 這類縮寫音很短、容易被聽成不相關的字（you'll → your/
+  // Gracie/EUR……），單獨給縮寫本身當提示詞常常不夠力，所以額外把「縮寫＋
+  // 前一個字」「縮寫＋後一個字」也當成片語提示詞，多一點前後文線索
+  tokens.forEach((w, i) => {
+    if (!w.includes("'")) return;
+    if (i > 0) hints.push(`${tokens[i - 1]} ${w}`);
+    if (i < tokens.length - 1) hints.push(`${w} ${tokens[i + 1]}`);
+  });
+  return Array.from(new Set(hints));
 }
 
-const SENTENCE_MATCH_THRESHOLD = 0.8;
+// 從實際使用記錄觀察到：句子越長，Google 語音辨識隨機把「某一小段」聽錯的
+// 機率就越高（例如 11 個字的句子，這次聽錯前段、下次聽錯後段，從沒有一次
+// 整句都聽對），但使用者其實每次都真的把整句話念出來了。原本 0.8 的門檻對
+// 長句來說太嚴格，會一直誤判「真的有念」為失敗。調整為 0.7，較長的句子
+// 可以容許辨識引擎聽錯 1-3 個字（依句子長度而定），同時仍保留「句尾最後
+// 一個字必須出現」的檢查，防止念到一半就結束的情況矇混過關。
+const SENTENCE_MATCH_THRESHOLD = 0.7;
 function sentenceFullyRead(target, transcript) {
   const targetWords = transcriptWords(target);
   if (!targetWords.length) return false;
