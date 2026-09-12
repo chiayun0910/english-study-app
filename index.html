@@ -2830,11 +2830,22 @@ function Flashcards({
     extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), played: true } }
   });
   const markExtraPronounced = i => patchCard({
-    extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: true } }
+    extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: true, retrying: false } }
   });
   const resetExtraPronounced = i => patchCard({
     extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: false } }
   });
+  // 補充例句想在「整張卡已完成」的狀態下，只重測這一項：跟 retrySubItem 同樣
+  // 道理，額外標記 retrying，讓這一項先不要被 alreadyLearnedToday 蓋成已通過
+  const retryExtra = i => {
+    if (alreadyLearnedToday) {
+      patchCard({
+        extraStates: { ...cur.extraStates, [i]: { ...(cur.extraStates[i] || {}), pronounced: false, retrying: true } }
+      });
+    } else {
+      resetExtraPronounced(i);
+    }
+  };
   // alreadyLearnedToday：今天已經完成過了（每天午夜重置，重置後字卡可以重新練習）
   // learnedCount：累計完成學習的次數，永久紀錄，用來顯示「已完成學習 n 次」
   const alreadyLearnedToday = !!(progress && progress.dailyLearnedWords && progress.dailyLearnedWords[wordKey]);
@@ -2849,11 +2860,14 @@ function Flashcards({
     });
     if (onResetWordToday) onResetWordToday(unit, word);
   };
-  // 單一個跟讀項目想重測：如果整張卡今天已經算完成了，就整張一起重置（反正
-  // 都要重測了），不然只清掉那一項的本機記錄就好，不影響其他已完成的項目
-  const retrySubItem = resetPatch => {
+  // 單一個跟讀項目想重測：只清掉那一項的本機記錄，不影響其他已完成的項目、
+  // 也不影響「今天已完成學習」的狀態（累計次數、已完成徽章都維持不變）。
+  // 如果整張卡今天已經算完成了，其他項目的通過畫面其實是靠 alreadyLearnedToday
+  // 這個總開關撐著的，所以這裡額外標記 retrying=true，讓「這一項」先不要被
+  // 總開關蓋成已通過，等使用者重新跟讀通過後才恢復
+  const retrySubItem = (resetPatch, retryFlag) => {
     if (alreadyLearnedToday) {
-      retryToday();
+      patchCard({ ...resetPatch, [retryFlag]: true });
     } else {
       patchCard(resetPatch);
     }
@@ -2973,15 +2987,15 @@ function Flashcards({
   }, "還差：", todoLabels.join("、")), /*#__PURE__*/React.createElement(PronunciationRecorder, {
     mode: "word",
     targetWords: wordForms(word),
-    passed: cur.wordPronounced || alreadyLearnedToday,
-    onPassed: () => patchCard({ wordPronounced: true }),
-    onRetry: () => retrySubItem({ wordPronounced: false })
+    passed: cur.wordRetrying ? false : cur.wordPronounced || alreadyLearnedToday,
+    onPassed: () => patchCard({ wordPronounced: true, wordRetrying: false }),
+    onRetry: () => retrySubItem({ wordPronounced: false }, "wordRetrying")
   }), cur.viewedBack && /*#__PURE__*/React.createElement(PronunciationRecorder, {
     mode: "sentence",
     targetSentence: word.ex_en,
-    passed: cur.mainExPronounced || alreadyLearnedToday,
-    onPassed: () => patchCard({ mainExPronounced: true }),
-    onRetry: () => retrySubItem({ mainExPronounced: false })
+    passed: cur.mainExRetrying ? false : cur.mainExPronounced || alreadyLearnedToday,
+    onPassed: () => patchCard({ mainExPronounced: true, mainExRetrying: false }),
+    onRetry: () => retrySubItem({ mainExPronounced: false }, "mainExRetrying")
   }), hasMore && /*#__PURE__*/React.createElement("button", {
     type: "button",
     className: "more-toggle",
@@ -3006,11 +3020,9 @@ function Flashcards({
   }), /*#__PURE__*/React.createElement(PronunciationRecorder, {
     mode: "sentence",
     targetSentence: ex.en,
-    passed: (cur.extraStates[i] && cur.extraStates[i].pronounced) || alreadyLearnedToday,
+    passed: (cur.extraStates[i] && cur.extraStates[i].retrying) ? false : (cur.extraStates[i] && cur.extraStates[i].pronounced) || alreadyLearnedToday,
     onPassed: () => markExtraPronounced(i),
-    onRetry: () => {
-      if (alreadyLearnedToday) retryToday();else resetExtraPronounced(i);
-    },
+    onRetry: () => retryExtra(i),
     compact: true
   })), /*#__PURE__*/React.createElement("div", {
     className: "more-zh"
