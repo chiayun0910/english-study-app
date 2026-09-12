@@ -22608,6 +22608,957 @@
               ]
             }
           ]
+        },
+        {
+          "id": "toeic-day6",
+          "title": "DAY 6",
+          "zh": "人才招募",
+          "units": [
+            {
+              "id": "toeic-day6-u1",
+              "title": "Unit 01",
+              "zh": "人才招募",
+              "color": "#2E8B8B",
+              "words": [
+                {
+                  "en": "addition",
+                  "pos": "n.",
+                  "zh": "增加物；附加物",
+                  "ex_en": "I believe Frank would be an excellent addition to your library staff.",
+                  "ex_zh": "相信法蘭克會是你圖書館工作團隊的得力新成員。",
+                  "ex_blank": "I believe Frank would be an excellent ____ to your library staff.",
+                  "grammar": "衍生字：add v. 添加；additional adj. 額外的。",
+                  "ipa": "əˈdɪʃən"
+                },
+                {
+                  "en": "applicant",
+                  "pos": "n.",
+                  "zh": "申請者",
+                  "ex_en": "Applicants should possess knowledge of current trends in technology.",
+                  "ex_zh": "應徵者應該對當今科技潮流有所認識。",
+                  "ex_blank": "____ should possess knowledge of current trends in technology.",
+                  "grammar": "衍生字：apply v. 申請；application n. 申請。",
+                  "ipa": "ˈæplɪkənt"
+                },
+                {
+                  "en": "assistant",
+                  "pos": "n.",
+                  "zh": "助理；助手",
+                  "ex_en": "We need to advertise for another assistant.",
+                  "ex_zh": "我們需要刊登廣告徵求另一名助理。",
+                  "ex_blank": "We need to advertise for another ____.",
+                  "grammar": "衍生字：assist v. 協助；assistance n. 協助。",
+                  "ipa": "əˈsɪstənt"
+                },
+                {
+                  "en": "associate",
+                  "pos": "n.",
+                  "zh": "同事；合夥人",
+                  "ex_en": "As an associate in the legal department, it will be Mr. Ishibashi's responsibility to review all corporate contracts.",
+                  "ex_zh": "身為法務部門同仁，檢閱公司所有合約是石橋先生的責任。",
+                  "ex_blank": "As an ____ in the legal department, it will be Mr. Ishibashi's responsibility to review all corporate contracts.",
+                  "ipa": "əˈsoʊʃiˌeɪt"
+                },
+                {
+                  "en": "bachelor's degree",
+                  "pos": "n.",
+                  "zh": "學士學位",
+                  "ex_en": "Dr. Brown has a bachelor's degree in chemistry and a Ph.D. in analytical chemistry from Porter University.",
+                  "ex_zh": "布朗博士擁有波特大學的化學學士及分析化學的博士學位。",
+                  "ex_blank": "Dr. Brown has a ____ in chemistry and a Ph.D. in analytical chemistry from Porter University.",
+                  "grammar": "字彙放大鏡：master's degree 碩士學位；Ph.D. degree 博士學位 (= doctorate)（Ph.D. 為 Doctor of Philosophy 的縮寫）。",
+                  "ipa": "ˈbæʧələrz dɪˈgri"
+                },
+                {
+                  "en": "candidate",
+                  "pos": "n.",
+                  "zh": "求職應徵者；候選人",
+                  "ex_en": "Of all the candidates applying for the job, Mr. Wang appears to be the most promising.",
+                  "ex_zh": "在申請這份工作的應徵者中，王先生看來最有機會出線。",
+                  "ex_blank": "Of all the ____ applying for the job, Mr. Wang appears to be the most promising.",
+                  "ipa": "ˈkænədɪt"
+                },
+                {
+                  "en": "clerical",
+                  "pos": "adj.",
+                  "zh": "事務的；文書的",
+                  "ex_en": "The assistant will be expected to carry out a range of tasks from simple clerical duties to complex assignments.",
+                  "ex_zh": "期望這名助理從簡單行政事務到複雜的交辦事項都能夠執行。",
+                  "ex_blank": "The assistant will be expected to carry out a range of tasks from simple ____ duties to complex assignments.",
+                  "grammar": "衍生字：clerk n. 職員；店員。",
+                  "ipa": "ˈklɛrɪkəl"
+                },
+                {
+                  "en": "compensation",
+                  "pos": "n.",
+                  "zh": "報酬；補償",
+                  "ex_en": "The company handbook covers the topics of compensation, bonuses, and overtime.",
+                  "ex_zh": "員工手冊涵蓋了薪資、獎金以及加班等項目。",
+                  "ex_blank": "The company handbook covers the topics of ____, bonuses, and overtime.",
+                  "grammar": "衍生字：compensate v. 賠償；補償。",
+                  "ipa": "ˌkɑmpənˈseɪʃən"
+                },
+                {
+                  "en": "confidential",
+                  "pos": "adj.",
+                  "zh": "機密的",
+                  "ex_en": "Job seekers should avoid discussing confidential information that was acquired while working for former employers.",
+                  "ex_zh": "求職者應避免全面洩漏先前工作期間所悉的機密資訊。",
+                  "ex_blank": "Job seekers should avoid discussing ____ information that was acquired while working for former employers.",
+                  "grammar": "字彙放大鏡：相似詞：classified, secret, private。",
+                  "ipa": "ˌkɑnfəˈdɛnʃəl"
+                },
+                {
+                  "en": "consideration",
+                  "pos": "n.",
+                  "zh": "考慮；思考",
+                  "ex_en": "I believe that my background and experience make me an attractive candidate for your consideration.",
+                  "ex_zh": "相信以我的背景與經驗，會是個值得您考慮的好人選。",
+                  "ex_blank": "I believe that my background and experience make me an attractive candidate for your ____.",
+                  "grammar": "字彙放大鏡：take...into consideration 將…列入考慮；under consideration 考慮中。衍生字：consider v. 考慮。",
+                  "ipa": "kənˌsɪdərˈeɪʃən"
+                },
+                {
+                  "en": "consistently",
+                  "pos": "adv.",
+                  "zh": "持續地；一致地",
+                  "ex_en": "Winthrop Strategies is seeking to employ a motivated individual who consistently meets deadlines.",
+                  "ex_zh": "溫索普策略顧問公司正在尋找一個有熱忱又能長期配合截稿的人。",
+                  "ex_blank": "Winthrop Strategies is seeking to employ a motivated individual who ____ meets deadlines.",
+                  "grammar": "衍生字：consistent adj. 一致的；consistency n. 一致性。",
+                  "ipa": "kənˈsɪstəntli"
+                },
+                {
+                  "en": "electronically",
+                  "pos": "adv.",
+                  "zh": "用電子方式地",
+                  "ex_en": "Applications can also be filed electronically by sending an e-mail to raja@sajob.com.pk.",
+                  "ex_zh": "另外可將申請郵件寄至raja@sajob.com.pk，由電子系統建檔。",
+                  "ex_blank": "Applications can also be filed ____ by sending an e-mail to raja@sajob.com.pk.",
+                  "grammar": "衍生字：electronic adj. 電子的。",
+                  "ipa": "ˌɪˌlɛkˈtrɑnɪkəˌli"
+                },
+                {
+                  "en": "employment",
+                  "pos": "n.",
+                  "zh": "工作；雇用",
+                  "ex_en": "You will start your employment with Intelicom as an administrative assistant on October 30.",
+                  "ex_zh": "你將於十月三十日起擔任英特利科公司的行政助理一職。",
+                  "ex_blank": "You will start your ____ with Intelicom as an administrative assistant on October 30.",
+                  "grammar": "衍生字：employ v. 雇用；employer n. 雇主；employee n. 員工。",
+                  "ipa": "ɪmˈplɔɪmənt"
+                },
+                {
+                  "en": "ethic",
+                  "pos": "n.",
+                  "zh": "道德；倫理",
+                  "ex_en": "She speaks very highly of your expertise and finds your work ethic to be outstanding.",
+                  "ex_zh": "她對你的專業能力評價很高，職業道德也備受推崇。",
+                  "ex_blank": "She speaks very highly of your expertise and finds your work ____ to be outstanding.",
+                  "grammar": "字彙放大鏡：work ethic(s) 職業道德；the code of ethics 道德準則；工作守則。",
+                  "ipa": "ˈɛθɪk"
+                },
+                {
+                  "en": "evident",
+                  "pos": "adj.",
+                  "zh": "明顯的",
+                  "ex_en": "This video makes it evident that your client committed the crime.",
+                  "ex_zh": "影片中明顯可看出您的客戶有涉案。",
+                  "ex_blank": "This video makes it ____ that your client committed the crime.",
+                  "grammar": "衍生字：evidence n. 證據。",
+                  "ipa": "ˈɛvədənt"
+                },
+                {
+                  "en": "familiarity",
+                  "pos": "n.",
+                  "zh": "熟悉；精通",
+                  "ex_en": "Familiarity with publishing will be very helpful.",
+                  "ex_zh": "熟悉出版工作會很有幫助。",
+                  "ex_blank": "____ with publishing will be very helpful.",
+                  "grammar": "衍生字：familiar adj. 熟悉的。",
+                  "ipa": "fəˌmɪˈljɛrəti"
+                },
+                {
+                  "en": "fill",
+                  "pos": "v.",
+                  "zh": "遞補；填補",
+                  "ex_en": "When did they fill the assistant manager position?",
+                  "ex_zh": "副理的職缺是何時遞補的？",
+                  "ex_blank": "When did they ____ the assistant manager position?",
+                  "ipa": "fɪl"
+                },
+                {
+                  "en": "fit",
+                  "pos": "v.",
+                  "zh": "符合；適合",
+                  "ex_en": "I believe my skills and abilities fit the description of the person you are seeking.",
+                  "ex_zh": "相信我的技術與能力符合您的徵才內容。",
+                  "ex_blank": "I believe my skills and abilities ____ the description of the person you are seeking.",
+                  "ipa": "fɪt"
+                },
+                {
+                  "en": "ideal",
+                  "pos": "adj.",
+                  "zh": "理想的",
+                  "ex_en": "Judging by our discussion, I feel strongly that this company would be an ideal place for me to work.",
+                  "ex_zh": "從我們的討論來判斷，我深深覺得這間公司是個理想的工作地點。",
+                  "ex_blank": "Judging by our discussion, I feel strongly that this company would be an ____ place for me to work.",
+                  "grammar": "字彙放大鏡：be ideal for 對…很理想。",
+                  "ipa": "aɪˈdil"
+                },
+                {
+                  "en": "interview",
+                  "pos": "v./n.",
+                  "zh": "面試；探訪",
+                  "ex_en": "Let's discuss the last person we interviewed before we see the next candidate.",
+                  "ex_zh": "在見下一個人選之前，讓我們先討論前一位面試者吧。",
+                  "ex_blank": "Let's discuss the last person we ____ before we see the next candidate.",
+                  "ipa": "ˈɪntərvˌju"
+                },
+                {
+                  "en": "invite",
+                  "pos": "v.",
+                  "zh": "邀請",
+                  "ex_en": "After all résumés have been reviewed, selected candidates will be invited for interviews.",
+                  "ex_zh": "在審閱所有履歷後，會邀請入選者前來面談。",
+                  "ex_blank": "After all résumés have been reviewed, selected candidates will be ____ for interviews.",
+                  "grammar": "衍生字：invitation n. 邀請函。",
+                  "ipa": "ˌɪnˈvaɪt"
+                },
+                {
+                  "en": "opportunity",
+                  "pos": "n.",
+                  "zh": "機會",
+                  "ex_en": "I would welcome the opportunity to discuss how my skills could benefit your organization.",
+                  "ex_zh": "我很歡迎有機會討論我的技能如何對貴組織有所助益。",
+                  "ex_blank": "I would welcome the ____ to discuss how my skills could benefit your organization.",
+                  "ipa": "ˌɑpərˈtunəti"
+                },
+                {
+                  "en": "permanent",
+                  "pos": "adj.",
+                  "zh": "固定的；永久的",
+                  "ex_en": "While most job seekers are looking for a permanent job, a temporary position may serve as a bridge to full-time employment.",
+                  "ex_zh": "雖然多數求職者尋找的是一份長期工作，但約聘職缺有可能是通往全職工作的橋樑。",
+                  "ex_blank": "While most job seekers are looking for a ____ job, a temporary position may serve as a bridge to full-time employment.",
+                  "ipa": "ˈpərmɑˌnɛnt"
+                },
+                {
+                  "en": "position",
+                  "pos": "n.",
+                  "zh": "職位；位置",
+                  "ex_en": "Although we have decided not to offer you a position at this time, we will keep your résumé on file.",
+                  "ex_zh": "雖然我們決議目前無法錄用您，但您的履歷會被歸檔留存。",
+                  "ex_blank": "Although we have decided not to offer you a ____ at this time, we will keep your résumé on file.",
+                  "ipa": "pəˈzɪʃən"
+                },
+                {
+                  "en": "post",
+                  "pos": "v.",
+                  "zh": "張貼；公佈",
+                  "ex_en": "I am interested in applying for the managing consultant position you have posted on your Web site.",
+                  "ex_zh": "我有興趣應徵您在網站上所公佈的管理顧問職位。",
+                  "ex_blank": "I am interested in applying for the managing consultant position you have ____ on your Web site.",
+                  "ipa": "poʊst"
+                },
+                {
+                  "en": "prefer",
+                  "pos": "v.",
+                  "zh": "偏好",
+                  "ex_en": "Students in business journalism are preferred.",
+                  "ex_zh": "會優先考慮就讀商業新聞學的學生。",
+                  "ex_blank": "Students in business journalism are ____.",
+                  "grammar": "字彙放大鏡：prefer A to B 喜歡A勝過B；prefer V-ing to V-ing 喜歡做…勝過做…。衍生字：preference n. 偏好。",
+                  "ipa": "prɪˈfər"
+                },
+                {
+                  "en": "previously",
+                  "pos": "adv.",
+                  "zh": "先前地",
+                  "ex_en": "In his résumé, he states that he was previously employed at Mainframe Resolutions for a total of two years.",
+                  "ex_zh": "他在履歷中提到先前受雇於主機軟體方案公司共兩年時間。",
+                  "ex_blank": "In his résumé, he states that he was ____ employed at Mainframe Resolutions for a total of two years.",
+                  "grammar": "衍生字：previous adj. 先前的。",
+                  "ipa": "ˈpriviəsli"
+                },
+                {
+                  "en": "proficiency",
+                  "pos": "n.",
+                  "zh": "熟練；精通",
+                  "ex_en": "The position requires excellent communication skills as well as proficiency in the use of general office software.",
+                  "ex_zh": "此職位要求優秀的溝通技巧，以及能夠熟練操作一般辦公室軟體。",
+                  "ex_blank": "The position requires excellent communication skills as well as ____ in the use of general office software.",
+                  "grammar": "衍生字：proficient adj. 熟練的；精通的。",
+                  "ipa": "prəˈfɪʃənsi"
+                },
+                {
+                  "en": "prospective",
+                  "pos": "adj.",
+                  "zh": "可能的；預期的",
+                  "ex_en": "We will be happy to meet with prospective applicants at the Westborough Job Fair.",
+                  "ex_zh": "我們很樂意在威斯博羅的就業博覽會中與有意願的求職者面對面接觸。",
+                  "ex_blank": "We will be happy to meet with ____ applicants at the Westborough Job Fair.",
+                  "grammar": "字彙放大鏡：相似詞：potential, future。",
+                  "ipa": "prəˈspɛktɪv"
+                },
+                {
+                  "en": "qualify",
+                  "pos": "v.",
+                  "zh": "有資格；使勝任",
+                  "ex_en": "I believe I am very qualified for this position.",
+                  "ex_zh": "我相信我足以勝任這個職位。",
+                  "ex_blank": "I believe I am very ____ for this position.",
+                  "grammar": "衍生字：qualification n. 資格。",
+                  "ipa": "kˈwɑləˌfaɪ"
+                },
+                {
+                  "en": "recommendation",
+                  "pos": "n.",
+                  "zh": "推薦（信）",
+                  "ex_en": "Please feel free to call upon me for a recommendation if you require one for future employment.",
+                  "ex_zh": "如果你未來的工作需要推薦函，跟不吝與我聯絡。",
+                  "ex_blank": "Please feel free to call upon me for a ____ if you require one for future employment.",
+                  "grammar": "衍生字：recommend v. 推薦。",
+                  "ipa": "ˌrɛkəmənˈdeɪʃən"
+                },
+                {
+                  "en": "recruit",
+                  "pos": "n./v.",
+                  "zh": "雇員；招募",
+                  "ex_en": "Do you know who's in charge of training the new recruits?",
+                  "ex_zh": "你知道是誰負責訓練新進員工嗎？",
+                  "ex_blank": "Do you know who's in charge of training the new ____?",
+                  "ipa": "rɪˈkrut"
+                },
+                {
+                  "en": "reference",
+                  "pos": "n.",
+                  "zh": "介紹信；提及",
+                  "ex_en": "I will be happy to supply references and to submit a portfolio of my designs.",
+                  "ex_zh": "我很樂意提供介紹信及設計作品集。",
+                  "ex_blank": "I will be happy to supply ____ and to submit a portfolio of my designs.",
+                  "grammar": "衍生字：refer v. 提到；引用 (to)。",
+                  "ipa": "ˈrɛfərəns"
+                },
+                {
+                  "en": "related",
+                  "pos": "adj.",
+                  "zh": "相關的",
+                  "ex_en": "A university degree in journalism or a related field and at least two years of newspaper editing experience are required.",
+                  "ex_zh": "新聞系或相關領域的大學文憑以及至少兩年報紙編輯經驗是必要條件。",
+                  "ex_blank": "A university degree in journalism or a ____ field and at least two years of newspaper editing experience are required.",
+                  "grammar": "衍生字：relate v. 與…有關。",
+                  "ipa": "rɪˈleɪtɪd"
+                },
+                {
+                  "en": "renew",
+                  "pos": "v.",
+                  "zh": "續約；更新",
+                  "ex_en": "The minimum term of your contract with us will be for a period of two years, with the option to renew.",
+                  "ex_zh": "您與我們簽約的期限至少為兩年，並且保有優先續約之權。",
+                  "ex_blank": "The minimum term of your contract with us will be for a period of two years, with the option to ____.",
+                  "grammar": "衍生字：renewal n. 續約；更新。",
+                  "ipa": "rɪˈnu"
+                },
+                {
+                  "en": "required",
+                  "pos": "adj.",
+                  "zh": "必須的；必修的",
+                  "ex_en": "Prior experience working in a museum is preferred but not required.",
+                  "ex_zh": "之前有博物館的工作經驗會優先考慮，但非必要條件。",
+                  "ex_blank": "Prior experience working in a museum is preferred but not ____.",
+                  "grammar": "衍生字：require v. 需要；requirement n. 必要條件。",
+                  "ipa": "rikˈwaɪərd"
+                },
+                {
+                  "en": "responsibility",
+                  "pos": "n.",
+                  "zh": "職責；責任",
+                  "ex_en": "Your responsibilities will include maintenance and upgrades to the company's computer network.",
+                  "ex_zh": "你的職責包括維護並升級公司的電腦網路系統。",
+                  "ex_blank": "Your ____ will include maintenance and upgrades to the company's computer network.",
+                  "grammar": "字彙放大鏡：相似詞：duty, job, task。",
+                  "ipa": "riˌspɑnsəˈbɪləti"
+                },
+                {
+                  "en": "seek",
+                  "pos": "v.",
+                  "zh": "尋找",
+                  "ex_en": "Tanner Publications is currently seeking a copy editor with previous experience and excellent communication skills.",
+                  "ex_zh": "天納出版社正在尋找有經驗且具有良好溝通技巧的文案編輯。",
+                  "ex_blank": "Tanner Publications is currently ____ a copy editor with previous experience and excellent communication skills.",
+                  "grammar": "字彙放大鏡：相似詞：look for, search for。",
+                  "ipa": "sik"
+                },
+                {
+                  "en": "suited",
+                  "pos": "adj.",
+                  "zh": "適合的",
+                  "ex_en": "Ms. Brown is best suited for the posting because she speaks fluent Mandarin and has lived in Beijing.",
+                  "ex_zh": "布朗女士能說流利的中文且曾住過北京，最適任這個職位。",
+                  "ex_blank": "Ms. Brown is best ____ for the posting because she speaks fluent Mandarin and has lived in Beijing.",
+                  "ipa": "ˈsutɪd"
+                },
+                {
+                  "en": "workforce",
+                  "pos": "n.",
+                  "zh": "勞動人口；員工",
+                  "ex_en": "The tourism and food service industries employ over 25 percent of the workforce of this city.",
+                  "ex_zh": "旅遊與餐飲業雇用了此城市四分之一以上的勞動人口。",
+                  "ex_blank": "The tourism and food service industries employ over 25 percent of the ____ of this city.",
+                  "ipa": "ˈwərkˌfɔrs"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "toeic-day7",
+          "title": "DAY 7",
+          "zh": "人事與組織",
+          "units": [
+            {
+              "id": "toeic-day7-u1",
+              "title": "Unit 01",
+              "zh": "人事與組織",
+              "color": "#B0562E",
+              "words": [
+                {
+                  "en": "advance",
+                  "pos": "v./n.",
+                  "zh": "晉升；升遷；進步",
+                  "ex_en": "We offer paid training, great benefits, and opportunities to advance.",
+                  "ex_zh": "我們提供在職進修、優渥福利，以及升遷機會。",
+                  "ex_blank": "We offer paid training, great benefits, and opportunities to ____.",
+                  "ipa": "ədˈvæns"
+                },
+                {
+                  "en": "appoint",
+                  "pos": "v.",
+                  "zh": "指派；委任",
+                  "ex_en": "Who has been appointed to chair the hiring committee?",
+                  "ex_zh": "誰被指派擔任聘僱委員會的主席？",
+                  "ex_blank": "Who has been ____ to chair the hiring committee?",
+                  "grammar": "字彙放大鏡：accept an appointment 接受任命；decline an appointment 拒絕委派；take up an appointment 就職 (= take office)。衍生字：appointment n. 任命；約會。",
+                  "ipa": "əˈpɔɪnt"
+                },
+                {
+                  "en": "appraisal",
+                  "pos": "n.",
+                  "zh": "評價",
+                  "ex_en": "I am writing to request your appraisal of Mr. Willis's skills and qualifications.",
+                  "ex_zh": "我來信是想請問您對威利斯先生個人能力與資格的評價。",
+                  "ex_blank": "I am writing to request your ____ of Mr. Willis's skills and qualifications.",
+                  "grammar": "字彙放大鏡：相似詞：assessment, evaluation, review。衍生字：appraise v. 評價。",
+                  "ipa": "əˈpreɪzəl"
+                },
+                {
+                  "en": "assignment",
+                  "pos": "n.",
+                  "zh": "（指派的）工作；作業",
+                  "ex_en": "John always finishes his assignments on time.",
+                  "ex_zh": "約翰總能準時完成指派工作。",
+                  "ex_blank": "John always finishes his ____ on time.",
+                  "grammar": "衍生字：assign v. 指派；分配。",
+                  "ipa": "əˈsaɪnmənt"
+                },
+                {
+                  "en": "assume",
+                  "pos": "v.",
+                  "zh": "承擔；接任",
+                  "ex_en": "As you have probably heard, I will be assuming responsibility for leading Randolph Chemical, effective Monday morning.",
+                  "ex_zh": "如你們聽說的，我將承擔起領導天化學公司的領導責任，禮拜一早上生效。",
+                  "ex_blank": "As you have probably heard, I will be ____ responsibility for leading Randolph Chemical, effective Monday morning.",
+                  "grammar": "字彙放大鏡：相似詞：take on, accept, undertake。",
+                  "ipa": "əˈsum"
+                },
+                {
+                  "en": "authorize",
+                  "pos": "v.",
+                  "zh": "授權；許可",
+                  "ex_en": "The committee has authorized you to recruit five more people who have the appropriate training.",
+                  "ex_zh": "委員會已授權你再招募五名受過適當訓練的人手。",
+                  "ex_blank": "The committee has ____ you to recruit five more people who have the appropriate training.",
+                  "grammar": "衍生字：authority n. 官方。字彙放大鏡：authorize (人) to V. 授權某人去做…。",
+                  "ipa": "ˈɔθərˌaɪz"
+                },
+                {
+                  "en": "caliber",
+                  "pos": "n.",
+                  "zh": "才幹；水準",
+                  "ex_en": "We are delighted to have found someone of Michelle's caliber to lead our organization.",
+                  "ex_zh": "我們很榮幸找到像蜜雪兒這樣有才幹的人來領導這個組織。",
+                  "ex_blank": "We are delighted to have found someone of Michelle's ____ to lead our organization.",
+                  "ipa": "ˈkæləbər"
+                },
+                {
+                  "en": "commensurate",
+                  "pos": "adj.",
+                  "zh": "（大小、程度）對應的",
+                  "ex_en": "The salary offer will be commensurate with the candidate's experience and education.",
+                  "ex_zh": "薪資條件會符合應徵者的經驗與教育程度。",
+                  "ex_blank": "The salary offer will be ____ with the candidate's experience and education.",
+                  "ipa": "kəˈmɛnsərɪt"
+                },
+                {
+                  "en": "completion",
+                  "pos": "n.",
+                  "zh": "完成",
+                  "ex_en": "After successful completion of the training course, John worked as a systems programmer for four years.",
+                  "ex_zh": "在順利完成訓練課程後，約翰擔任了四年的系統工程師。",
+                  "ex_blank": "After successful ____ of the training course, John worked as a systems programmer for four years.",
+                  "grammar": "衍生字：complete v. 完成。",
+                  "ipa": "kəmˈpliʃən"
+                },
+                {
+                  "en": "dependable",
+                  "pos": "adj.",
+                  "zh": "可靠的",
+                  "ex_en": "In the opinion of his superiors, Terrence was a dependable team player.",
+                  "ex_zh": "從主管的觀點來看，泰倫斯是個可靠的團隊成員。",
+                  "ex_blank": "In the opinion of his superiors, Terrence was a ____ team player.",
+                  "grammar": "字彙放大鏡：相似詞：reliable。",
+                  "ipa": "dɪˈpɛndəbəl"
+                },
+                {
+                  "en": "diligent",
+                  "pos": "adj.",
+                  "zh": "勤奮的",
+                  "ex_en": "Jean is a diligent worker.",
+                  "ex_zh": "琴恩是個勤奮的員工。",
+                  "ex_blank": "Jean is a ____ worker.",
+                  "grammar": "字彙放大鏡：相似詞：hardworking。",
+                  "ipa": "ˈdɪlɪʤənt"
+                },
+                {
+                  "en": "duty",
+                  "pos": "n.",
+                  "zh": "職責；義務",
+                  "ex_en": "One of Mr. Oh's primary duties is the management of the corporate food service.",
+                  "ex_zh": "吳先生主要的職責之一，就是管理公司的餐飲服務。",
+                  "ex_blank": "One of Mr. Oh's primary ____ is the management of the corporate food service.",
+                  "ipa": "ˈduti"
+                },
+                {
+                  "en": "effective",
+                  "pos": "adj.",
+                  "zh": "生效的；有效的",
+                  "ex_en": "John Bloom, our President and CEO, has announced his retirement, effective October 1.",
+                  "ex_zh": "我們的總裁兼執行長約翰．布魯宣布退休，十月一日起生效。",
+                  "ex_blank": "John Bloom, our President and CEO, has announced his retirement, ____ October 1.",
+                  "ipa": "ˈifɛktɪv"
+                },
+                {
+                  "en": "eligible",
+                  "pos": "adj.",
+                  "zh": "適用的；合格的",
+                  "ex_en": "As an employee, you will be eligible for salary increases based upon your performance and length of service.",
+                  "ex_zh": "身為員工，你將依工作表現與年資增長而享有調薪。",
+                  "ex_blank": "As an employee, you will be ____ for salary increases based upon your performance and length of service.",
+                  "grammar": "字彙放大鏡：be eligible for 有…的資格；適用於…；相似詞：be qualified for。",
+                  "ipa": "ˈɛlɪʤəbəl"
+                },
+                {
+                  "en": "expertise",
+                  "pos": "n.",
+                  "zh": "專精；專長",
+                  "ex_en": "She has expertise in arranging business meetings and presentations.",
+                  "ex_zh": "她擅長安排商務會議與簡報。",
+                  "ex_blank": "She has ____ in arranging business meetings and presentations.",
+                  "ipa": "ˌɛkspərˈtiz"
+                },
+                {
+                  "en": "extensive",
+                  "pos": "adj.",
+                  "zh": "廣泛的",
+                  "ex_en": "Ms. Juti has extensive business experience.",
+                  "ex_zh": "朱蒂女士有廣泛的商務經驗。",
+                  "ex_blank": "Ms. Juti has ____ business experience.",
+                  "ipa": "ɪkˈstɛnsɪv"
+                },
+                {
+                  "en": "field",
+                  "pos": "n.",
+                  "zh": "領域",
+                  "ex_en": "He is highly regarded in his field.",
+                  "ex_zh": "他在專業領域備受尊崇。",
+                  "ex_blank": "He is highly regarded in his ____.",
+                  "ipa": "fild"
+                },
+                {
+                  "en": "fire",
+                  "pos": "v.",
+                  "zh": "解雇",
+                  "ex_en": "He was fired from his previous position.",
+                  "ex_zh": "他被解雇因而離開之前的職位。",
+                  "ex_blank": "He was ____ from his previous position.",
+                  "ipa": "faɪər"
+                },
+                {
+                  "en": "hire",
+                  "pos": "v.",
+                  "zh": "雇用；聘用",
+                  "ex_en": "Jorge was hired as an assistant manager five months ago, and he is now in line for a promotion.",
+                  "ex_zh": "荷黑五個月前受聘為副理，而他現在正等著升職。",
+                  "ex_blank": "Jorge was ____ as an assistant manager five months ago, and he is now in line for a promotion.",
+                  "ipa": "haɪər"
+                },
+                {
+                  "en": "independently",
+                  "pos": "adv.",
+                  "zh": "獨立地",
+                  "ex_en": "Mr. Kline is an experienced researcher who is able to handle high-level research projects independently.",
+                  "ex_zh": "克萊先生是經驗豐富的研究員，能獨立執行高級研究案。",
+                  "ex_blank": "Mr. Kline is an experienced researcher who is able to handle high-level research projects ____.",
+                  "grammar": "衍生字：independent adj. 獨立的；independence n. 獨立。",
+                  "ipa": "ˌɪndɪˈpɛndəntli"
+                },
+                {
+                  "en": "inexperienced",
+                  "pos": "adj.",
+                  "zh": "經驗不足的；不熟練的",
+                  "ex_en": "Mr. Davidson started here as an inexperienced university graduate.",
+                  "ex_zh": "戴維森先生在這裡剛起步時還是個沒經驗的大學畢業生。",
+                  "ex_blank": "Mr. Davidson started here as an ____ university graduate.",
+                  "ipa": "ˌɪnɛkˈspɪriənst"
+                },
+                {
+                  "en": "join",
+                  "pos": "v.",
+                  "zh": "加入；連結",
+                  "ex_en": "Ever since Mr. Derrick joined the staff, the marketing team has been praised for its excellent work.",
+                  "ex_zh": "自從德瑞克先生加入工作團隊後，行銷團隊因為表現優異而受到讚揚。",
+                  "ex_blank": "Ever since Mr. Derrick ____ the staff, the marketing team has been praised for its excellent work.",
+                  "ipa": "ʤɔɪn"
+                },
+                {
+                  "en": "leadership",
+                  "pos": "n.",
+                  "zh": "領導（地位）；領導力",
+                  "ex_en": "Under Ms. Wibowo's leadership, Mustika Museum has developed several award-winning services.",
+                  "ex_zh": "在威波女士領導下，慕斯提卡博物館發展出一些獲得獎項肯定的服務。",
+                  "ex_blank": "Under Ms. Wibowo's ____, Mustika Museum has developed several award-winning services.",
+                  "grammar": "衍生字：lead v. 領導；leader n. 領導者。",
+                  "ipa": "ˈlidərˌʃɪp"
+                },
+                {
+                  "en": "leave",
+                  "pos": "n./v.",
+                  "zh": "休假；離開",
+                  "ex_en": "You are eligible for paid sick leave, paid vacation, and participation in the company retirement plan.",
+                  "ex_zh": "你可享有給薪病假、給薪年假，還能參與公司的退休方案。",
+                  "ex_blank": "You are eligible for paid sick ____, paid vacation, and participation in the company retirement plan.",
+                  "grammar": "字彙放大鏡：相似詞：vacation, time off。常見假別的說法：annual leave 年假；sick leave 病假；personal leave 事假；maternity leave 產假。",
+                  "ipa": "liv"
+                },
+                {
+                  "en": "limited",
+                  "pos": "adj.",
+                  "zh": "有限的",
+                  "ex_en": "Winthrop will succeed in sales even though he has limited experience in this area of the business.",
+                  "ex_zh": "即使在此商業領域的經驗有限，溫索普的業務工作仍會大有斬獲。",
+                  "ex_blank": "Winthrop will succeed in sales even though he has ____ experience in this area of the business.",
+                  "ipa": "ˈlɪmɪtɪd"
+                },
+                {
+                  "en": "managerial",
+                  "pos": "adj.",
+                  "zh": "管理的",
+                  "ex_en": "I know that this will be your first managerial role, but I am sure you are capable of it.",
+                  "ex_zh": "我知道這是你首度擔任管理職，但我有把握你能勝任。",
+                  "ex_blank": "I know that this will be your first ____ role, but I am sure you are capable of it.",
+                  "grammar": "衍生字：manager n. 經理。",
+                  "ipa": "ˌmænɪˈʤɪriəl"
+                },
+                {
+                  "en": "particularly",
+                  "pos": "adv.",
+                  "zh": "特別地",
+                  "ex_en": "I am particularly impressed with your professional accomplishments up to this point.",
+                  "ex_zh": "到目前為止，我對你的專業成就就印象特別深刻。",
+                  "ex_blank": "I am ____ impressed with your professional accomplishments up to this point.",
+                  "grammar": "字彙放大鏡：相似詞：in particular 特別；尤其。衍生字：particular adj. 特別的。",
+                  "ipa": "ˌpɑrˈtɪkjələrli"
+                },
+                {
+                  "en": "performance",
+                  "pos": "n.",
+                  "zh": "表現",
+                  "ex_en": "In Mr. Brothet's performance review, the department supervisor wrote that he worked extremely diligently.",
+                  "ex_zh": "在博瑟先生的表現評估中，部門主管描述他工作極為勤奮。",
+                  "ex_blank": "In Mr. Brothet's ____ review, the department supervisor wrote that he worked extremely diligently.",
+                  "grammar": "衍生字：perform v. 執行；表演。",
+                  "ipa": "pərˈfɔrməns"
+                },
+                {
+                  "en": "praise",
+                  "pos": "v./n.",
+                  "zh": "讚美；表揚",
+                  "ex_en": "Kyung Bin Yi has been praised for her role in securing several lucrative contracts for Dwyer Industries.",
+                  "ex_zh": "李京芘因為幫戴爾工業簽下幾個豐厚的合約而被讚揚。",
+                  "ex_blank": "Kyung Bin Yi has been ____ for her role in securing several lucrative contracts for Dwyer Industries.",
+                  "ipa": "preɪz"
+                },
+                {
+                  "en": "predecessor",
+                  "pos": "n.",
+                  "zh": "前輩；先前的事物",
+                  "ex_en": "Mr. Lee takes his job more seriously than his predecessor did.",
+                  "ex_zh": "李先生比他的前輩更看重這份工作。",
+                  "ex_blank": "Mr. Lee takes his job more seriously than his ____ did.",
+                  "ipa": "ˈprɛdəˌsɛsər"
+                },
+                {
+                  "en": "promote",
+                  "pos": "v.",
+                  "zh": "晉升；升遷",
+                  "ex_en": "Ms. Jacobs will be promoted to Marketing Director.",
+                  "ex_zh": "雅各絲女士將被拔擢為行銷總監。",
+                  "ex_blank": "Ms. Jacobs will be ____ to Marketing Director.",
+                  "grammar": "衍生字：promotion n. 升遷。",
+                  "ipa": "prəˈmoʊt"
+                },
+                {
+                  "en": "recognition",
+                  "pos": "n.",
+                  "zh": "認可；承認",
+                  "ex_en": "An award will be given to Elaine Tang in recognition of her exceptional service to our company.",
+                  "ex_zh": "頒獎給譚艾蓮是為了表彰她對公司的傑出服務。",
+                  "ex_blank": "An award will be given to Elaine Tang in ____ of her exceptional service to our company.",
+                  "grammar": "衍生字：recognize v. 認出；認可。字彙放大鏡：in recognition of 為表彰…。",
+                  "ipa": "ˌrɛkɪgˈnɪʃən"
+                },
+                {
+                  "en": "resign",
+                  "pos": "v.",
+                  "zh": "辭職",
+                  "ex_en": "Why did one of the engineers resign from the McMaster project?",
+                  "ex_zh": "為什麼有一位工程師退出麥克大師計畫？",
+                  "ex_blank": "Why did one of the engineers ____ from the McMaster project?",
+                  "grammar": "衍生字：resignation n. 辭呈；辭職。",
+                  "ipa": "rɪˈzaɪn"
+                },
+                {
+                  "en": "resourceful",
+                  "pos": "adj.",
+                  "zh": "靈活的；足智多謀的",
+                  "ex_en": "Frank is highly resourceful, excellent with patrons, and is dedicated to providing quality service.",
+                  "ex_zh": "法蘭克應變能力強、對顧客很有一套，又致力於提供高品質的服務。",
+                  "ex_blank": "Frank is highly ____, excellent with patrons, and is dedicated to providing quality service.",
+                  "grammar": "衍生字：resource n. 資源。",
+                  "ipa": "riˈsɔrsfəl"
+                },
+                {
+                  "en": "retire",
+                  "pos": "v.",
+                  "zh": "退休",
+                  "ex_en": "As you know, we're here to celebrate with Mr. Kim, who is retiring after 37 years with New Star Corporation.",
+                  "ex_zh": "如同各位所知，我們齊聚一堂是為了慶祝金先生在新星公司服務三十七年後榮退。",
+                  "ex_blank": "As you know, we're here to celebrate with Mr. Kim, who is ____ after 37 years with New Star Corporation.",
+                  "grammar": "衍生字：retirement n. 退休。",
+                  "ipa": "ˌriˈtaɪər"
+                },
+                {
+                  "en": "skill",
+                  "pos": "n.",
+                  "zh": "技能；技巧",
+                  "ex_en": "Because of my diverse experience, I have developed strong skills in financial consulting.",
+                  "ex_zh": "由於我豐富多元的經驗，所以培養出財務諮詢方面的長才。",
+                  "ex_blank": "Because of my diverse experience, I have developed strong ____ in financial consulting.",
+                  "ipa": "skɪl"
+                },
+                {
+                  "en": "succeed",
+                  "pos": "v.",
+                  "zh": "繼任；成功",
+                  "ex_en": "Mr. Bloom will be succeeded by Ben Gordon, currently Vice President of Marketing.",
+                  "ex_zh": "布魯先生的職位將由現任行銷副總裁．高登接任。",
+                  "ex_blank": "Mr. Bloom will be ____ by Ben Gordon, currently Vice President of Marketing.",
+                  "grammar": "衍生字：succession n. 繼任；繼承；successor n. 繼任者。",
+                  "ipa": "səkˈsid"
+                },
+                {
+                  "en": "tenure",
+                  "pos": "n.",
+                  "zh": "任期",
+                  "ex_en": "Dr. Brown was the CEO of Popovich Materials, where she reduced expenses by almost a third in her four-year tenure.",
+                  "ex_zh": "布朗博士是波波維契材料公司的執行長，在四年任內她幾乎削減了三分之一的支出。",
+                  "ex_blank": "Dr. Brown was the CEO of Popovich Materials, where she reduced expenses by almost a third in her four-year ____.",
+                  "ipa": "ˈtɛnjər"
+                },
+                {
+                  "en": "title",
+                  "pos": "n.",
+                  "zh": "職稱；頭銜",
+                  "ex_en": "At my performance review, it was agreed that my title would be changed to Senior Project Manager.",
+                  "ex_zh": "在績效評估中，我的職稱經核可更改為資深專案經理。",
+                  "ex_blank": "At my performance review, it was agreed that my ____ would be changed to Senior Project Manager.",
+                  "ipa": "ˈtaɪtəl"
+                },
+                {
+                  "en": "transfer",
+                  "pos": "v./n.",
+                  "zh": "調職；遷移",
+                  "ex_en": "Although she has been transferred to Mexico City, Ms. Baxter and her former colleagues remain in contact.",
+                  "ex_zh": "雖然調職到墨西哥市，貝斯特女士仍跟以前同事保持聯繫。",
+                  "ex_blank": "Although she has been ____ to Mexico City, Ms. Baxter and her former colleagues remain in contact.",
+                  "ipa": "ˈtrænsfər"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "擔負責任",
+                  "en": "____ responsibility",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "assume"
+                },
+                {
+                  "zh": "明起生效",
+                  "en": "____ from tomorrow",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "effective"
+                },
+                {
+                  "zh": "在他的領導下",
+                  "en": "under his ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leadership"
+                },
+                {
+                  "zh": "為表彰…",
+                  "en": "in ____ of",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "recognition"
+                },
+                {
+                  "zh": "年假",
+                  "en": "annual ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leave"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. White was ____ from Boston to the Chicago office.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "transferred"
+                },
+                {
+                  "zh": null,
+                  "en": "Work hard, and you can ____ from salesperson to sales manager.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "advance"
+                },
+                {
+                  "zh": null,
+                  "en": "Roger had to ____ from our company because of health problems.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "resign"
+                },
+                {
+                  "zh": null,
+                  "en": "Arnold Crothers will ____ Rolf Hansen as CEO effective August 1.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "succeed"
+                },
+                {
+                  "zh": null,
+                  "en": "Only qualified employees will be ____ to use this equipment.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "authorized"
+                },
+                {
+                  "zh": null,
+                  "en": "He is a ____ experienced web designer.",
+                  "options": [
+                    "particularly",
+                    "diligently",
+                    "independently"
+                  ],
+                  "answer": "particularly"
+                },
+                {
+                  "zh": null,
+                  "en": "The results of your ____ depend on your work performance.",
+                  "options": [
+                    "appraisal",
+                    "completion",
+                    "tenure"
+                  ],
+                  "answer": "appraisal"
+                },
+                {
+                  "zh": null,
+                  "en": "Most employees at fast food restaurants have ____ responsibility.",
+                  "options": [
+                    "limited",
+                    "resourceful",
+                    "eligible"
+                  ],
+                  "answer": "limited"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
