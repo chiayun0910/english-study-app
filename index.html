@@ -2352,6 +2352,15 @@ function UnitScreen({
 }) {
   const stampMap = progress.stamps[unit.id] || {};
   const dailyMap = (progress.dailyStamps || {})[unit.id] || {};
+  // 「字彙隨堂考」是課本原有的隨堂測驗題（選擇題），只有少數單元（例如多益核心
+  // 單字）有這份資料才會顯示，不放進 ACTIVITIES 主陣列，才不會影響其他課本
+  // 單元的「本課進度 x/y」計算，但完成紀錄一樣走 markStamp/onWordResult，
+  // 錯題一樣會進複習清單
+  const activityList = unit.quiz && unit.quiz.length ? [...ACTIVITIES, {
+    key: "bookquiz",
+    label: "字彙隨堂考",
+    zh: "課本隨堂測驗（選擇題）"
+  }] : ACTIVITIES;
   return /*#__PURE__*/React.createElement("div", {
     style: {
       "--unit-color": unit.color
@@ -2374,7 +2383,7 @@ function UnitScreen({
     }
   }, unit.zh, " · 選一個方式開始練習"), /*#__PURE__*/React.createElement("div", {
     className: "activity-grid"
-  }, ACTIVITIES.map(a => {
+  }, activityList.map(a => {
     const entry = stampMap[a.key];
     const best = entry && typeof entry === "object" ? entry.bestScore : null;
     const completedCount = entry && typeof entry === "object" ? entry.completedCount : null;
@@ -2439,7 +2448,7 @@ function ActivityScreen({
     onClick: onBack
   }, /*#__PURE__*/React.createElement(ArrowLeft, {
     size: 16
-  }), " 回 ", unit.title), activityKey === "flashcards" && /*#__PURE__*/React.createElement(Flashcards, commonProps), activityKey === "quiz" && /*#__PURE__*/React.createElement(Quiz, commonProps), activityKey === "matching" && /*#__PURE__*/React.createElement(Matching, commonProps), activityKey === "fillblank" && /*#__PURE__*/React.createElement(FillBlank, commonProps), activityKey === "typing" && /*#__PURE__*/React.createElement(Typing, commonProps), activityKey === "mastery" && /*#__PURE__*/React.createElement(UnitMastery, commonProps));
+  }), " 回 ", unit.title), activityKey === "flashcards" && /*#__PURE__*/React.createElement(Flashcards, commonProps), activityKey === "quiz" && /*#__PURE__*/React.createElement(Quiz, commonProps), activityKey === "matching" && /*#__PURE__*/React.createElement(Matching, commonProps), activityKey === "fillblank" && /*#__PURE__*/React.createElement(FillBlank, commonProps), activityKey === "typing" && /*#__PURE__*/React.createElement(Typing, commonProps), activityKey === "mastery" && /*#__PURE__*/React.createElement(UnitMastery, commonProps), activityKey === "bookquiz" && /*#__PURE__*/React.createElement(BookQuiz, commonProps));
 }
 
 /* ------------------------------------------------------------------ */
@@ -3151,6 +3160,104 @@ function Quiz({
   })), selected && /*#__PURE__*/React.createElement("div", {
     className: `typing-feedback ${selected === word.en ? "correct" : "wrong"}`
   }, selected === word.en ? "答對了！" : `答錯了，正確答案是：${word.zh}`), selected && /*#__PURE__*/React.createElement(NextButton, {
+    onClick: goNext,
+    label: isLast ? "查看結果" : "下一題"
+  }));
+}
+
+/* ------------------------------------------------------------------ */
+/* 2b. BookQuiz：課本原有的「字彙隨堂考」，題目/選項都是課本原文照登，    */
+/* 不是自動產生的題目。只有 unit.quiz 有資料的單元（目前是多益核心單字） */
+/* 才會顯示這個練習方式。                                               */
+/* ------------------------------------------------------------------ */
+function BookQuiz({
+  unit,
+  onFinish,
+  onWordResult
+}) {
+  const questions = unit.quiz || [];
+  const [order] = useState(() => shuffle(questions));
+  const [idx, setIdx] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const [score, setScore] = useState(0);
+  const [done, setDone] = useState(false);
+  useEffect(() => {
+    setSelected(null);
+  }, [idx]);
+  if (!order.length) return null;
+  if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
+    label: `答對 ${score} / ${order.length} 題`,
+    onRestart: () => {
+      setIdx(0);
+      setScore(0);
+      setDone(false);
+    }
+  });
+  const q = order[idx];
+  const isLast = idx + 1 >= order.length;
+  const choose = opt => {
+    if (selected) return;
+    setSelected(opt);
+    const correct = opt === q.answer;
+    if (correct) setScore(s => s + 1);
+    // 隨堂考題目答案不一定剛好等於某張單字卡的 en 欄位（例如片語型答案），
+    // 找得到對應單字卡才記錄結果，找不到就單純計分、不影響複習清單
+    // 隨堂考的答案有時是單字的變化型（trained/finalized/circumstances…），
+    // 不會剛好等於單字卡的原形，額外用「誰是誰的字首」寬鬆比對一次，
+    // 盡量還是能對應回單字卡、答錯才會進複習清單
+    const w = unit.words.find(w2 => {
+      const base = w2.en.split(" / ")[0].trim().toLowerCase();
+      const ans = q.answer.toLowerCase();
+      if (base === ans) return true;
+      // 字首比對只在兩邊都有一定長度時才做，避免誤配到不相關的短字
+      return ans.length >= 4 && base.length >= 4 && (base.startsWith(ans) || ans.startsWith(base));
+    });
+    if (w && onWordResult) onWordResult(unit, w, correct);
+  };
+  const goNext = () => {
+    if (isLast) {
+      onFinish({
+        correct: score,
+        total: order.length
+      });
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+    }
+  };
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 13,
+      color: "#6B6A5E",
+      textAlign: "center",
+      marginBottom: 8
+    }
+  }, "第 ", idx + 1, " / ", order.length, " 題"), q.zh && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 15,
+      fontWeight: 700,
+      color: "var(--unit-color)",
+      textAlign: "center",
+      marginBottom: 6
+    }
+  }, "💡 ", q.zh), /*#__PURE__*/React.createElement("div", {
+    className: "sentence-box"
+  }, q.en), /*#__PURE__*/React.createElement("div", {
+    className: "word-bank"
+  }, q.options.map(opt => {
+    let cls = "";
+    if (selected) {
+      if (opt === q.answer) cls = "correct";else if (opt === selected) cls = "wrong";
+    }
+    return /*#__PURE__*/React.createElement("button", {
+      key: opt,
+      className: `bank-chip ${cls}`,
+      disabled: !!selected,
+      onClick: () => choose(opt)
+    }, opt);
+  })), selected && /*#__PURE__*/React.createElement("div", {
+    className: `typing-feedback ${selected === q.answer ? "correct" : "wrong"}`
+  }, selected === q.answer ? "答對了！" : `答錯了，正確答案是：${q.answer}`), selected && /*#__PURE__*/React.createElement(NextButton, {
     onClick: goNext,
     label: isLast ? "查看結果" : "下一題"
   }));
