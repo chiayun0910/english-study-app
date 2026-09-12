@@ -472,6 +472,38 @@ function findWord(unitId, en, progress) {
 function normalizeAnswer(str) {
   return str.trim().toLowerCase().replace(/\s+/g, " ");
 }
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+// 把句子裡「實際出現的那個字」挖空（不是原形），例如原句用 received，
+// 就挖空 received，不會挖到原形 receive 而在句子裡留下多餘的字尾
+function blankOutWord(sentence, surfaceForm) {
+  const re = new RegExp(`\\b${escapeRegex(surfaceForm)}\\b`, "i");
+  return sentence.replace(re, "____");
+}
+// 手動新增自訂生字時，例句常常是字典自己附的（例如查 receive，例句卻用
+// received），不確定句子裡實際出現的是原形還是哪種變化形，所以依序嘗試
+// 常見的規則變化，比對到最長的型態優先（避免只挖到 receive、留下句子裡
+// 的 "d" 字尾），這裡是 scripts/auto_blank.js 同樣邏輯的簡化版
+function guessBlank(sentence, headword) {
+  const base = (headword || "").trim();
+  if (!base || !sentence) return sentence;
+  const variants = new Set([base, base + "s", base + "es", base + "d", base + "ed", base + "ing"]);
+  if (/e$/i.test(base)) {
+    variants.add(base.slice(0, -1) + "ing");
+    variants.add(base.slice(0, -1) + "ed");
+  }
+  if (/[^aeiou]y$/i.test(base)) {
+    variants.add(base.slice(0, -1) + "ied");
+    variants.add(base.slice(0, -1) + "ies");
+  }
+  const sorted = Array.from(variants).sort((a, b) => b.length - a.length);
+  for (const v of sorted) {
+    const re = new RegExp(`\\b${escapeRegex(v)}\\b`, "i");
+    if (re.test(sentence)) return sentence.replace(re, "____");
+  }
+  return sentence;
+}
 function isCorrectSpelling(word, input) {
   const norm = normalizeAnswer(input);
   return wordForms(word).some(f => normalizeAnswer(f) === norm);
@@ -2035,6 +2067,7 @@ function CustomWordsScreen({
       zh,
       ex_en,
       ex_zh,
+      ex_blank: guessBlank(ex_en, en),
       ipa: form.ipa.trim()
     });
     setForm({
@@ -2653,6 +2686,11 @@ function AddWordPopup({
   const [zh, setZh] = useState("");
   const [pos, setPos] = useState("");
   const [ipa, setIpa] = useState("");
+  // lemma：這個字在句子裡的原形（例如點到 received，原形是 receive）。
+  // 有查到而且跟使用者點的字不一樣時，練習用的單字改用原形，並附上
+  // inflectionNote 說明句子裡實際用的是哪個變化形
+  const [lemma, setLemma] = useState("");
+  const [inflectionNote, setInflectionNote] = useState("");
   const [saved, setSaved] = useState(false);
   const [translating, setTranslating] = useState(!alreadyAdded);
   const [translateError, setTranslateError] = useState(false);
@@ -2661,6 +2699,8 @@ function AddWordPopup({
     let cancelled = false;
     setTranslating(true);
     setTranslateError(false);
+    setLemma("");
+    setInflectionNote("");
     translateWordFn({
       text: word,
       sentence: sentenceEn
@@ -2669,6 +2709,10 @@ function AddWordPopup({
       const data = res.data || {};
       setZh((data.translation || "").trim());
       if (data.pos) setPos(data.pos);
+      if (data.lemma) {
+        setLemma(data.lemma);
+        setInflectionNote(data.inflectionNote || "");
+      }
     }).catch(err => {
       console.error("translateWord call error", err);
       if (!cancelled) setTranslateError(true);
@@ -2693,13 +2737,18 @@ function AddWordPopup({
   const handleSave = e => {
     e.preventDefault();
     if (!zh.trim()) return;
+    // 練習用的單字優先用原形（lemma），例句還是保留原句實際出現的變化形，
+    // 挖空也是挖「句子裡真的出現的那個字」，不會因為改用原形而挖錯位置
+    const finalEn = lemma ? lemma : word;
     onSave({
-      en: word,
+      en: finalEn,
       pos: pos.trim(),
       zh: zh.trim(),
       ex_en: sentenceEn,
       ex_zh: sentenceZh,
-      ipa: ipa.trim()
+      ex_blank: blankOutWord(sentenceEn, word),
+      ipa: ipa.trim(),
+      ...(inflectionNote ? { grammar: inflectionNote } : {})
     });
     setSaved(true);
   };
@@ -2769,11 +2818,14 @@ function AddWordPopup({
     placeholder: "詞性（選填，例如 n.）",
     value: pos,
     onChange: e => setPos(e.target.value)
-  }), /*#__PURE__*/React.createElement("button", {
+  }), !translating && inflectionNote && /*#__PURE__*/React.createElement("p", {
+    className: "word-popup-translate-error",
+    style: { color: "#6B6A5E" }
+  }, "💡 ", inflectionNote), /*#__PURE__*/React.createElement("button", {
     type: "submit",
     className: "primary-btn",
     disabled: translating
-  }, "＋ 加入自訂生字"))));
+  }, lemma ? `＋ 加入自訂生字（${lemma}）` : "＋ 加入自訂生字"))));
 }
 
 /* ------------------------------------------------------------------ */

@@ -278,6 +278,8 @@ exports.translateWord = onCall(
     }
     let translation = "";
     let pos = "";
+    let lemma = "";
+    let inflectionNote = "";
     try {
       const [t] = await translateClient.translate(text.trim(), "zh-TW");
       translation = t;
@@ -297,13 +299,41 @@ exports.translateWord = onCall(
         if (match && match.partOfSpeech && match.partOfSpeech.tag) {
           pos = POS_MAP[match.partOfSpeech.tag] || "";
         }
+        // lemma 是這個字在字典裡查得到的原形（例如 received → receive，
+        // cats → cat）。使用者點例句裡的字新增生字時，句子裡出現的常常是
+        // 變化形而非原形，練習時改用原形比較合理，所以把原形跟變化說明
+        // 一起回傳，前端決定要不要採用
+        const rawLemma = match && match.lemma;
+        if (rawLemma && rawLemma.toLowerCase() !== target) {
+          lemma = rawLemma;
+          inflectionNote = describeInflection(text.trim(), lemma, match.partOfSpeech || {});
+        }
       } catch (err) {
         console.error("translateWord analyzeSyntax error", err);
       }
     }
-    return { translation, pos };
+    return { translation, pos, lemma, inflectionNote };
   }
 );
+
+// 描述「句子裡的變化形」跟「原形」的關係，用來在自訂生字加上說明註解，
+// 例如：received 是 receive 的過去式；cats 是 cat 的複數形。
+// 涵蓋不到的情況就給一個通用但誠實的說法，不假裝知道確切的文法變化。
+function describeInflection(surfaceForm, lemma, partOfSpeech) {
+  const tag = partOfSpeech.tag;
+  const tense = partOfSpeech.tense;
+  const number = partOfSpeech.number;
+  const person = partOfSpeech.person;
+  if (tag === "VERB") {
+    if (tense === "PAST") return `本例句用「${surfaceForm}」，是「${lemma}」的過去式（或過去分詞），練習時以「${lemma}」為主。`;
+    if (person === "THIRD" && number === "SINGULAR") return `本例句用「${surfaceForm}」，是「${lemma}」的第三人稱單數形，練習時以「${lemma}」為主。`;
+    if (/ing$/i.test(surfaceForm)) return `本例句用「${surfaceForm}」，是「${lemma}」的現在分詞（V-ing），練習時以「${lemma}」為主。`;
+  }
+  if (tag === "NOUN" && number === "PLURAL") return `本例句用「${surfaceForm}」，是「${lemma}」的複數形，練習時以「${lemma}」為主。`;
+  if (tag === "ADJ" && /ing$/i.test(surfaceForm)) return `本例句用「${surfaceForm}」，是「${lemma}」的現在分詞（當形容詞用），練習時以「${lemma}」為主。`;
+  if (tag === "ADJ" && /(ed|en)$/i.test(surfaceForm)) return `本例句用「${surfaceForm}」，是「${lemma}」的過去分詞（當形容詞用），練習時以「${lemma}」為主。`;
+  return `本例句用「${surfaceForm}」，是「${lemma}」的變化形，練習時以「${lemma}」為主。`;
+}
 
 // Merriam-Webster 官方字典 API（個人非商業用途免費，每天 1000 次）。
 // 比 dictionaryapi.dev 這類無金鑰的免費服務穩定很多，缺點是回傳格式比較
