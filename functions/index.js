@@ -182,13 +182,21 @@ exports.checkPronunciation = onCall(
           encoding: "LINEAR16",
           sampleRateHertz: 16000,
           languageCode: "en-US",
-          maxAlternatives: 3,
+          maxAlternatives: 5,
           model: "latest_short",
           speechContexts: hintPhrases.length ? [{ phrases: hintPhrases, boost: hintBoost }] : undefined
         }
       });
 
       const results = response.results || [];
+      // 除錯用：暫時把每個候選結果（含信心分數）記到 Cloud Logging，
+      // 方便排查特定句子誤判的原因，之後穩定了會拿掉。
+      console.log(
+        "checkPronunciation raw results",
+        JSON.stringify(
+          results.map(r => (r.alternatives || []).map(a => ({ t: a.transcript, conf: a.confidence })))
+        )
+      );
       const transcripts = results
         .flatMap(r => r.alternatives || [])
         .map(a => a.transcript || "");

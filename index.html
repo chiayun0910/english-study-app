@@ -2463,8 +2463,14 @@ function PronunciationRecorder({
     }
     let stream;
     try {
+      // 明確開啟回音消除/降噪/自動增益，讓不同手機瀏覽器的收音品質更一致
+      // （不指定的話有些瀏覽器預設值不同，念到句子中段音量變小時更容易被誤判）
       stream = await navigator.mediaDevices.getUserMedia({
-        audio: true
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true
+        }
       });
     } catch (err) {
       setState("error");
