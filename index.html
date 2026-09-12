@@ -1031,6 +1031,33 @@ function EnglishStudyApp({
     }
     saveProgress(next);
   };
+  // 只更新單一自訂生字的音標欄位，不動其他已經填好的內容（中文意思/例句都是
+  // 使用者自己確認過的，只有音標是背景補查回來的）
+  const updateCustomWordIpa = (id, ipa) => {
+    const base = ensureDailyReset(progress);
+    saveProgress({
+      ...base,
+      customWords: (base.customWords || []).map(w => w.id === id ? { ...w, ipa } : w)
+    });
+  };
+  // 舊版「點例句生字加入」功能還沒加音標查詢時新增的自訂生字，會沒有音標可顯示。
+  // 在背景幫這些字補查一次音標（一次只查一個、查完才查下一個，避免短時間內
+  // 對字典 API 發出太多請求），查到就存回雲端，之後每次看到這個字都會有音標了
+  const ipaBackfillRef = useRef(new Set());
+  useEffect(() => {
+    const missing = (progress.customWords || []).filter(w => !w.ipa && !ipaBackfillRef.current.has(w.id));
+    if (!missing.length) return;
+    const w = missing[0];
+    ipaBackfillRef.current.add(w.id);
+    lookupWordFn({
+      text: w.en
+    }).then(res => {
+      const data = res.data || {};
+      if (data.found && data.ipa) updateCustomWordIpa(w.id, data.ipa);
+    }).catch(err => {
+      console.error("補查自訂生字音標失敗", err);
+    });
+  }, [progress.customWords]);
   // 右上角星星：改成呈現「今天」答錯的單字狀況，每天午夜重置，點下去可以看到是哪幾個字
   const todayMistakeList = Object.entries(progress.dailyMistakes || {}).map(([key, m]) => ({
     key,
@@ -2615,6 +2642,7 @@ function AddWordPopup({
 }) {
   const [zh, setZh] = useState("");
   const [pos, setPos] = useState("");
+  const [ipa, setIpa] = useState("");
   const [saved, setSaved] = useState(false);
   const [translating, setTranslating] = useState(!alreadyAdded);
   const [translateError, setTranslateError] = useState(false);
@@ -2637,6 +2665,17 @@ function AddWordPopup({
     }).finally(() => {
       if (!cancelled) setTranslating(false);
     });
+    // 音標另外查字典 API 取得（翻譯 API 不會給音標），跟翻譯平行進行，
+    // 查不到就算了，不影響中文意思/詞性的填入
+    lookupWordFn({
+      text: word
+    }).then(res => {
+      if (cancelled) return;
+      const data = res.data || {};
+      if (data.found && data.ipa) setIpa(data.ipa);
+    }).catch(err => {
+      console.error("lookupWord call error (AddWordPopup)", err);
+    });
     return () => {
       cancelled = true;
     };
@@ -2649,7 +2688,8 @@ function AddWordPopup({
       pos: pos.trim(),
       zh: zh.trim(),
       ex_en: sentenceEn,
-      ex_zh: sentenceZh
+      ex_zh: sentenceZh,
+      ipa: ipa.trim()
     });
     setSaved(true);
   };
