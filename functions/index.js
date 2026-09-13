@@ -592,6 +592,7 @@ exports.getFamilyProgress = onCall(
       throw new HttpsError("not-found", "找不到這個帳號");
     }
     const snap = await admin.firestore().collection("progress").doc(targetUser.uid).get();
-    return { summary: buildFamilyProgressSummary(snap.exists ? snap.data() : {}) };
+    const summary = buildFamilyProgressSummary(snap.exists ? snap.data() : {});
+    return { summary };
   }
 );

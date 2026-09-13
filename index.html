@@ -2741,13 +2741,28 @@ async function startPcmCapture() {
   };
 }
 
-// 粗略檢查有沒有聲音（避免把一段靜音丟給 Whisper，它有時會憑空「幻想」出字）
+// 粗略檢查有沒有聲音（避免把一段靜音丟給 Whisper，它有時會憑空「幻想」出字）。
+// 這裡刻意用「滑動視窗峰值」而不是整段錄音的平均音量：單字模式最長錄5秒，
+// 但念一個單字通常1秒內就講完了，剩下都是安靜的，如果用整段平均音量，
+// 就算講話那一小段音量正常，也會被大量的靜音稀釋、平均值被拉到門檻以下，
+// 導致明明有講話卻被誤判成「沒聽清楚」（實測發現這是造成誤判的主因）。
+// 改成看「整段錄音裡最大聲的那一小段」有沒有超過門檻，才不會受錄音長度影響。
 function hasAudibleSpeech(samples) {
   if (!samples.length) return false;
-  let sum = 0;
-  for (let i = 0; i < samples.length; i++) sum += samples[i] * samples[i];
-  const rms = Math.sqrt(sum / samples.length);
-  return rms > 0.004;
+  const windowSize = 320; // 16kHz 取樣率下約 20 毫秒一個視窗
+  let maxRms = 0;
+  for (let start = 0; start < samples.length; start += windowSize) {
+    const end = Math.min(start + windowSize, samples.length);
+    let sum = 0;
+    for (let i = start; i < end; i++) sum += samples[i] * samples[i];
+    const rms = Math.sqrt(sum / (end - start));
+    if (rms > maxRms) maxRms = rms;
+  }
+  // 門檻刻意設低一點：這裡只是要濾掉「完全沒聲音」的極端狀況（例如麥克風
+  // 權限問題、真的沒講話），真正「有沒有念對」交給後面的內容比對（Whisper
+  // 辨識結果去跟目標單字/例句比對）判斷更準，這層只是避免把純靜音丟給
+  // Whisper（它有時會對著靜音「幻想」出文字）
+  return maxRms > 0.006;
 }
 function transcriptWordsClient(s) {
   return (s || "").toLowerCase().split(/[^a-z']+/).filter(Boolean);
