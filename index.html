@@ -313,6 +313,8 @@ const db = firebase.firestore();
 const functionsClient = firebase.app().functions("asia-east1");
 const translateWordFn = functionsClient.httpsCallable("translateWord");
 const lookupWordFn = functionsClient.httpsCallable("lookupWord");
+const listViewableFamilyMembersFn = functionsClient.httpsCallable("listViewableFamilyMembers");
+const getFamilyProgressFn = functionsClient.httpsCallable("getFamilyProgress");
 
 // 使用者只需輸入單純的帳號名稱（不含 @），這裡轉換成 Firebase Auth
 // 要求的 email 格式，讓「使用者名稱登入」跟「Firebase 只認 email」兩邊都能滿足
@@ -1407,6 +1409,7 @@ function EnglishStudyApp({
           display: flex; align-items: center; justify-content: center;
         }
         .custom-words-card { background: #6B4FA0; margin-top: 8px; }
+        .family-view-card { background: #3E7A5E; margin-top: 8px; }
 
         /* 自訂生字：新增表單、清單 */
         .custom-word-toggle-btn {
@@ -1779,6 +1782,9 @@ function EnglishStudyApp({
     }),
     onOpenCustomWords: () => setScreen({
       view: "customWords"
+    }),
+    onOpenFamilyView: () => setScreen({
+      view: "familyView"
     })
   }) : screen.view === "customWords" ? /*#__PURE__*/React.createElement(CustomWordsScreen, {
     progress: progress,
@@ -1863,6 +1869,10 @@ function EnglishStudyApp({
       view: "home"
     }),
     onWordResult: recordWordResult
+  }) : screen.view === "familyView" ? /*#__PURE__*/React.createElement(FamilyViewScreen, {
+    onBack: () => setScreen({
+      view: "home"
+    })
   }) : /*#__PURE__*/React.createElement(ActivityScreen, {
     unit: screen.unitId === CUSTOM_UNIT_ID ? buildCustomUnit(progress) : UNITS.find(u => u.id === screen.unitId),
     activityKey: screen.activityKey,
@@ -1896,12 +1906,27 @@ function EditionPicker({
   progress,
   onOpenEdition,
   onOpenReview,
-  onOpenCustomWords
+  onOpenCustomWords,
+  onOpenFamilyView
 }) {
   const [, setTick] = useState(0);
   useEffect(() => {
     const timer = setInterval(() => setTick(t => t + 1), 30000);
     return () => clearInterval(timer);
+  }, []);
+  // 「家長檢視」卡片只有白名單裡的帳號會查到非空清單，才顯示這張卡片；
+  // 其他帳號登入完全看不到這個入口，不用另外在畫面上判斷帳號名稱
+  const [viewableFamily, setViewableFamily] = useState([]);
+  useEffect(() => {
+    let cancelled = false;
+    listViewableFamilyMembersFn().then(res => {
+      if (!cancelled) setViewableFamily((res.data && res.data.viewable) || []);
+    }).catch(err => {
+      console.error("listViewableFamilyMembers error", err);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
   const mistakeList = Object.values(progress.mistakes || {});
   const now = Date.now();
@@ -1929,6 +1954,15 @@ function EditionPicker({
   }, "📝 自訂生字"), /*#__PURE__*/React.createElement("div", {
     className: "review-sub"
   }, (progress.customWords || []).length > 0 ? `共 ${(progress.customWords || []).length} 個自己新增的生字` : "新增自己想背的生字，也能用 5 種方式複習")), /*#__PURE__*/React.createElement(ChevronRight, {
+    color: "rgba(255,255,255,0.6)"
+  })), viewableFamily.length > 0 && /*#__PURE__*/React.createElement("div", {
+    className: "review-card family-view-card",
+    onClick: onOpenFamilyView
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "review-title"
+  }, "👀 家長檢視"), /*#__PURE__*/React.createElement("div", {
+    className: "review-sub"
+  }, `查看 ${viewableFamily.length} 位家人的學習狀況`)), /*#__PURE__*/React.createElement(ChevronRight, {
     color: "rgba(255,255,255,0.6)"
   })), editions.map(edition => {
     const stampMap = progress.stamps || {};
@@ -1965,6 +1999,136 @@ function EditionPicker({
       color: "#B9B6A6"
     }));
   }));
+}
+
+/* ------------------------------------------------------------------ */
+/* 家長檢視：只有白名單裡的帳號登入才看得到這個功能（EditionPicker 已經  */
+/* 先確認過清單非空才會顯示入口）。先選要看哪位家人，再顯示他的學習      */
+/* 進度摘要（不是完整原始資料，只有整理過的統計數字）。                  */
+/* ------------------------------------------------------------------ */
+function formatRelativeTime(ts) {
+  if (!ts) return "還沒有紀錄";
+  const diffMs = Date.now() - ts;
+  const diffMin = Math.floor(diffMs / 60000);
+  if (diffMin < 1) return "剛剛";
+  if (diffMin < 60) return `${diffMin} 分鐘前`;
+  const diffHr = Math.floor(diffMin / 60);
+  if (diffHr < 24) return `${diffHr} 小時前`;
+  const diffDay = Math.floor(diffHr / 24);
+  return `${diffDay} 天前`;
+}
+function FamilyViewScreen({ onBack }) {
+  const [members, setMembers] = useState(null); // null = 載入中
+  const [selected, setSelected] = useState(null); // 選中的 username
+  const [summary, setSummary] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  useEffect(() => {
+    listViewableFamilyMembersFn().then(res => {
+      setMembers((res.data && res.data.viewable) || []);
+    }).catch(err => {
+      console.error("listViewableFamilyMembers error", err);
+      setMembers([]);
+      setError("讀取家人清單失敗，請重新整理頁面再試一次");
+    });
+  }, []);
+  const openMember = username => {
+    setSelected(username);
+    setSummary(null);
+    setError("");
+    setLoading(true);
+    getFamilyProgressFn({ username }).then(res => {
+      setSummary((res.data && res.data.summary) || null);
+    }).catch(err => {
+      console.error("getFamilyProgress error", err);
+      setError("讀取這位家人的進度失敗，請再試一次");
+    }).finally(() => {
+      setLoading(false);
+    });
+  };
+  const activityLabel = activityKey => {
+    const a = ACTIVITIES.find(x => x.key === activityKey);
+    return a ? a.label : activityKey;
+  };
+  const unitLabel = unitId => {
+    const u = UNITS.find(x => x.id === unitId);
+    return u ? u.title : unitId;
+  };
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "back-row",
+    onClick: () => selected ? setSelected(null) : onBack()
+  }, /*#__PURE__*/React.createElement(ArrowLeft, { size: 16 }), " ", selected ? "回家人清單" : "回首頁"), /*#__PURE__*/React.createElement("h2", {
+    style: { fontSize: 20, marginBottom: 12 }
+  }, "👀 家長檢視"), members === null ? /*#__PURE__*/React.createElement("div", {
+    className: "empty-note"
+  }, "載入中…") : !selected ? /*#__PURE__*/React.createElement("div", {
+    className: "unit-list"
+  }, members.length === 0 ? /*#__PURE__*/React.createElement("div", {
+    className: "empty-note"
+  }, "目前沒有可以查看的家人帳號") : members.map(username => /*#__PURE__*/React.createElement("div", {
+    key: username,
+    className: "unit-card",
+    onClick: () => openMember(username)
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "unit-card-title"
+  }, username), /*#__PURE__*/React.createElement(ChevronRight, { color: "#B9B6A6" })))) : loading ? /*#__PURE__*/React.createElement("div", {
+    className: "empty-note"
+  }, "讀取中…") : error ? /*#__PURE__*/React.createElement("div", {
+    className: "empty-note"
+  }, error) : summary ? /*#__PURE__*/React.createElement("div", {
+    className: "unit-list"
+  },
+  /*#__PURE__*/React.createElement("h3", { style: { fontSize: 16, margin: "4px 0" } }, selected, " 的學習狀況"),
+  /*#__PURE__*/React.createElement("div", {
+    className: "review-card",
+    style: { cursor: "default" }
+  }, /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("div", { className: "review-title" }, "最近一次練習"),
+    /*#__PURE__*/React.createElement("div", { className: "review-sub" }, formatRelativeTime(summary.lastActiveAt))
+  )),
+  /*#__PURE__*/React.createElement("div", {
+    className: "review-card",
+    style: { cursor: "default", background: "#3E7A5E" }
+  }, /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("div", { className: "review-title" }, "今天"),
+    /*#__PURE__*/React.createElement("div", { className: "review-sub" },
+      `完成 ${summary.todayActivitiesDone} 項練習・新學會 ${summary.todayWordsLearned} 個字・答錯 ${summary.todayMistakeCount} 個字`)
+  )),
+  /*#__PURE__*/React.createElement("div", {
+    className: "review-card",
+    style: { cursor: "default", background: "#4A6FA5" }
+  }, /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("div", { className: "review-title" }, "累計"),
+    /*#__PURE__*/React.createElement("div", { className: "review-sub" },
+      `累計完成 ${summary.totalActivitiesDone} 項練習・學會 ${summary.totalWordsLearnedOnce} 個字・自訂生字 ${summary.customWordCount} 個`)
+  )),
+  summary.dueMistakeCount > 0 && /*#__PURE__*/React.createElement("div", {
+    className: "review-card",
+    style: { cursor: "default" }
+  }, /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("div", { className: "review-title" }, "待複習"),
+    /*#__PURE__*/React.createElement("div", { className: "review-sub" },
+      `${summary.dueMistakeCount} 個字到期該複習了（複習清單共 ${summary.totalMistakeCount} 個字）`)
+  ), /*#__PURE__*/React.createElement("span", { className: "due-badge" }, summary.dueMistakeCount)),
+  summary.todayActivityList.length > 0 && /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "今天做過的練習"),
+    /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+      summary.todayActivityList.map((a, i) => /*#__PURE__*/React.createElement("div", {
+        key: i,
+        className: "mistake-row"
+      }, /*#__PURE__*/React.createElement("span", null, unitLabel(a.unitId), " · ", activityLabel(a.activityKey)),
+         a.score && /*#__PURE__*/React.createElement("span", { className: "mistake-count" }, `${a.score.correct}/${a.score.total}`))))
+  ),
+  summary.todayMistakeList.length > 0 && /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "今天答錯的字"),
+    /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+      summary.todayMistakeList.map((m, i) => /*#__PURE__*/React.createElement("div", {
+        key: i,
+        className: "mistake-row"
+      }, /*#__PURE__*/React.createElement("span", null, m.en, m.pos ? ` (${m.pos})` : ""),
+         /*#__PURE__*/React.createElement("span", null, m.zh))))
+  )
+  ) : null);
 }
 
 /* ------------------------------------------------------------------ */

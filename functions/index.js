@@ -7,6 +7,7 @@
 /* Speech-to-Text 辨識文字 → 跟目標單字比對，回傳是否唸對。             */
 /* ------------------------------------------------------------------ */
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const admin = require("firebase-admin");
 const speech = require("@google-cloud/speech");
 const { Translate } = require("@google-cloud/translate").v2;
 const language = require("@google-cloud/language");
@@ -18,6 +19,7 @@ const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
 
+admin.initializeApp();
 const speechClient = new speech.SpeechClient();
 const translateClient = new Translate();
 const languageClient = new language.LanguageServiceClient();
@@ -479,5 +481,117 @@ exports.lookupWord = onCall(
       ex_zh: exampleZh,
       ipa
     };
+  }
+);
+
+/* ------------------------------------------------------------------ */
+/* 家長檢視：只有白名單裡的帳號能查看其他家人的學習進度摘要。用固定的     */
+/* 白名單明確限制「誰能看誰」，不是開放任何登入者互看；資料透過 Admin    */
+/* SDK 讀取（不受一般使用者只能讀自己文件的 Firestore 安全規則限制），   */
+/* 但只回傳整理過的摘要數字，不會把對方完整的原始進度資料整包丟出去。    */
+/* ------------------------------------------------------------------ */
+const FAMILY_VIEW_MAP = {
+  patricia910: ["vivi611", "polly1215", "alicia1003", "sam312", "michael1215"]
+};
+
+function usernameFromAuth(request) {
+  const email = (request.auth && request.auth.token && request.auth.token.email) || "";
+  return email.split("@")[0].toLowerCase();
+}
+
+exports.listViewableFamilyMembers = onCall(
+  {
+    region: "asia-east1",
+    memory: "128MiB",
+    timeoutSeconds: 10
+  },
+  async request => {
+    if (!request.auth) {
+      throw new HttpsError("unauthenticated", "請先登入");
+    }
+    const viewer = usernameFromAuth(request);
+    return { viewable: FAMILY_VIEW_MAP[viewer] || [] };
+  }
+);
+
+// 把某人 progress 文件的原始資料整理成給「家長檢視」畫面看的摘要數字，
+// 欄位名稱都對應 index.html 裡 markStamp/recordWordResult/markWordLearned
+// 實際寫入 Firestore 的資料結構
+function buildFamilyProgressSummary(data) {
+  const stamps = data.stamps || {};
+  const dailyStamps = data.dailyStamps || {};
+  const learnedWords = data.learnedWords || {};
+  const dailyLearnedWords = data.dailyLearnedWords || {};
+  const mistakes = data.mistakes || {};
+  const dailyMistakes = data.dailyMistakes || {};
+
+  let todayActivitiesDone = 0;
+  let lastActiveAt = 0;
+  const todayActivityList = [];
+  Object.entries(dailyStamps).forEach(([unitId, acts]) => {
+    Object.entries(acts || {}).forEach(([activityKey, entry]) => {
+      todayActivitiesDone++;
+      const at = entry.lastAt || 0;
+      if (at > lastActiveAt) lastActiveAt = at;
+      todayActivityList.push({ unitId, activityKey, score: entry.lastScore || null, at });
+    });
+  });
+  todayActivityList.sort((a, b) => b.at - a.at);
+
+  let totalActivitiesDone = 0;
+  Object.values(stamps).forEach(acts => {
+    totalActivitiesDone += Object.keys(acts || {}).length;
+  });
+
+  const now = Date.now();
+  const dueMistakeCount = Object.values(mistakes).filter(m => m.nextReview <= now).length;
+  const todayMistakeList = Object.values(dailyMistakes)
+    .sort((a, b) => (b.at || 0) - (a.at || 0))
+    .slice(0, 15)
+    .map(m => ({ en: m.en, zh: m.zh, pos: m.pos }));
+
+  return {
+    lastActiveAt: lastActiveAt || null,
+    todayActivitiesDone,
+    todayActivityList: todayActivityList.slice(0, 10),
+    todayWordsLearned: Object.keys(dailyLearnedWords).length,
+    todayMistakeCount: Object.keys(dailyMistakes).length,
+    todayMistakeList,
+    totalActivitiesDone,
+    totalWordsLearnedOnce: Object.keys(learnedWords).length,
+    totalMistakeCount: Object.keys(mistakes).length,
+    dueMistakeCount,
+    customWordCount: (data.customWords || []).length
+  };
+}
+
+exports.getFamilyProgress = onCall(
+  {
+    region: "asia-east1",
+    memory: "256MiB",
+    timeoutSeconds: 15
+  },
+  async request => {
+    if (!request.auth) {
+      throw new HttpsError("unauthenticated", "請先登入");
+    }
+    const { username } = request.data || {};
+    if (typeof username !== "string" || !username.trim()) {
+      throw new HttpsError("invalid-argument", "缺少要查詢的帳號");
+    }
+    const target = username.trim().toLowerCase();
+    const viewer = usernameFromAuth(request);
+    const allowed = FAMILY_VIEW_MAP[viewer] || [];
+    if (!allowed.includes(target)) {
+      throw new HttpsError("permission-denied", "沒有權限查看這個帳號");
+    }
+    let targetUser;
+    try {
+      targetUser = await admin.auth().getUserByEmail(`${target}@word-island.app`);
+    } catch (err) {
+      throw new HttpsError("not-found", "找不到這個帳號");
+    }
+    const snap = await admin.firestore().collection("progress").doc(targetUser.uid).get();
+    return { summary: buildFamilyProgressSummary(snap.exists ? snap.data() : {}) };
   }
 );
