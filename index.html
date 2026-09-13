@@ -2485,9 +2485,58 @@ function ActivityScreen({
 }
 
 /* ------------------------------------------------------------------ */
-/* 跟讀錄音元件：錄下使用者念的聲音，送到 Cloud Function 做語音辨識，   */
-/* 比對是否跟目標單字/例句相符。iPhone Safari 也支援錄音，靠後端       */
-/* ffmpeg 統一轉檔，所以不受「iOS 不支援瀏覽器語音辨識」這個限制影響。  */
+/* 跟讀比對邏輯（瀏覽器端版本）：Chrome／Edge／Android 內建的語音辨識   */
+/* （Web Speech API）完全免費、不用透過我們自己的 Google Cloud 帳號計費，*/
+/* 所以支援這個 API 的瀏覽器直接在前端辨識＋比對，不呼叫付費的         */
+/* checkPronunciation雲端函式；iPhone（Safari／iOS 上所有瀏覽器都用     */
+/* WebKit）不支援這個 API，才會退回原本「錄音上傳到 Cloud Function、    */
+/* 用 Google Speech-to-Text 辨識」的付費路徑。                          */
+/* 這裡的比對規則刻意跟 functions/index.js 的 checkPronunciation 保持   */
+/* 一致（word 模式：連續片語比對；sentence 模式：70% 字詞相符＋句尾字   */
+/* 必須出現），日後如果調整其中一邊的規則，記得另一邊也要跟著改。       */
+const SpeechRecognitionCtor = typeof window !== "undefined" ? window.SpeechRecognition || window.webkitSpeechRecognition : null;
+function transcriptWordsClient(s) {
+  return (s || "").toLowerCase().split(/[^a-z']+/).filter(Boolean);
+}
+function containsPhraseClient(gotWords, targetWords) {
+  if (!targetWords.length || gotWords.length < targetWords.length) return false;
+  for (let i = 0; i + targetWords.length <= gotWords.length; i++) {
+    let ok = true;
+    for (let j = 0; j < targetWords.length; j++) {
+      if (gotWords[i + j] !== targetWords[j]) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok) return true;
+  }
+  return false;
+}
+const CLIENT_SENTENCE_MATCH_THRESHOLD = 0.7;
+function sentenceFullyReadClient(target, transcript) {
+  const targetWords = transcriptWordsClient(target);
+  if (!targetWords.length) return false;
+  const gotWords = transcriptWordsClient(transcript);
+  const gotSet = new Set(gotWords);
+  const similarity = targetWords.filter(w => gotSet.has(w)).length / targetWords.length;
+  const lastWord = targetWords[targetWords.length - 1];
+  return similarity >= CLIENT_SENTENCE_MATCH_THRESHOLD && gotSet.has(lastWord);
+}
+function wordModeMatchClient(transcript, targetList) {
+  const gotWords = transcriptWordsClient(transcript);
+  if (!gotWords.length) return false;
+  return (targetList || []).some(target => {
+    const tw = transcriptWordsClient(target);
+    return tw.length && gotWords.length <= tw.length + 2 && containsPhraseClient(gotWords, tw);
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* 跟讀錄音元件：優先用瀏覽器內建、免費的語音辨識（Web Speech API）；   */
+/* 該瀏覽器不支援時（目前已知只有 iPhone 上的所有瀏覽器），才退回        */
+/* 「錄音上傳到 Cloud Function、用 Google Speech-to-Text 辨識」的付費   */
+/* 路徑，靠後端 ffmpeg 統一轉檔，所以不受「iOS 不支援瀏覽器語音辨識」   */
+/* 這個限制影響。                                                      */
 /* mode: "word" 驗證單一個字（可多型態），"sentence" 驗證整句例句       */
 /* （比對比較寬鬆，只要大部分單字有念到就算過）。                       */
 /* compact：例句旁邊用的小按鈕樣式，跟卡片正面那顆大按鈕分開設計。       */
@@ -2506,6 +2555,17 @@ function PronunciationRecorder({
   const streamRef = useRef(null);
   const recorderRef = useRef(null);
   const timerRef = useRef(null);
+  const recognitionRef = useRef(null);
+  useEffect(() => () => {
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.abort();
+      } catch (e) {
+        /* ignore */
+      }
+      recognitionRef.current = null;
+    }
+  }, []);
   useEffect(() => () => {
     if (timerRef.current) clearTimeout(timerRef.current);
     if (streamRef.current) {
@@ -2518,8 +2578,84 @@ function PronunciationRecorder({
   // 的使用者話還沒講完就被自動截斷、錄不到後半句
   const maxDurationMs = mode === "sentence" ? Math.min(25000, 5000 + wordCount * 900) : 5000;
   const stopRecording = () => {
+    if (recognitionRef.current) {
+      recognitionRef.current.stop();
+      return;
+    }
     if (recorderRef.current && recorderRef.current.state === "recording") {
       recorderRef.current.stop();
+    }
+  };
+  // 免費路徑：瀏覽器內建語音辨識，辨識完全在使用者裝置上跟瀏覽器廠商的
+  // 伺服器之間進行，不會用到我們自己的 Google Cloud 帳號、也就不會產生
+  // Speech-to-Text 的費用。比對規則跟付費路徑共用同一套（見上方 Client 版函式）。
+  const startClientRecognition = e => {
+    e.stopPropagation();
+    setMessage("");
+    let recognition;
+    try {
+      recognition = new SpeechRecognitionCtor();
+    } catch (err) {
+      // 建立失敗就退回付費路徑，至少功能還能用
+      startRecording(e);
+      return;
+    }
+    recognition.lang = "en-US";
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 3;
+    let settled = false;
+    recognition.onresult = ev => {
+      settled = true;
+      const alts = [];
+      for (let i = 0; i < ev.results.length; i++) {
+        for (let j = 0; j < ev.results[i].length; j++) {
+          alts.push(ev.results[i][j].transcript || "");
+        }
+      }
+      const isMatch = mode === "sentence"
+        ? alts.some(t => sentenceFullyReadClient(targetSentence, t))
+        : alts.some(t => wordModeMatchClient(t, targetWords));
+      if (isMatch) {
+        setState("passed");
+        setMessage("");
+        onPassed();
+      } else {
+        setState("retry");
+        setMessage(alts[0] ? `辨識結果：「${alts[0]}」，再試一次` : "沒聽清楚，再試一次");
+      }
+    };
+    recognition.onerror = ev => {
+      settled = true;
+      if (ev.error === "no-speech") {
+        setState("retry");
+        setMessage("沒聽清楚，再試一次");
+      } else if (ev.error === "not-allowed" || ev.error === "service-not-allowed") {
+        setState("error");
+        setMessage("無法取得麥克風權限，請確認瀏覽器/系統設定有允許使用麥克風");
+      } else if (ev.error === "aborted") {
+        setState("idle");
+      } else {
+        setState("error");
+        setMessage("辨識失敗，請確認網路連線後再試一次");
+      }
+    };
+    recognition.onend = () => {
+      recognitionRef.current = null;
+      // 使用者手動點停止、但完全沒偵測到聲音時，既不會觸發 onresult 也
+      // 不一定會觸發 onerror，這裡補一個保底訊息，避免畫面卡在「辨識中」
+      if (!settled) {
+        setState("retry");
+        setMessage("沒聽清楚，再試一次");
+      }
+    };
+    try {
+      recognition.start();
+      recognitionRef.current = recognition;
+      setState("recording");
+    } catch (err) {
+      setState("error");
+      setMessage("語音辨識啟動失敗，請再試一次");
     }
   };
   const startRecording = async e => {
@@ -2610,6 +2746,8 @@ function PronunciationRecorder({
     if (state === "recording") {
       e.stopPropagation();
       stopRecording();
+    } else if (SpeechRecognitionCtor) {
+      startClientRecognition(e);
     } else {
       startRecording(e);
     }
