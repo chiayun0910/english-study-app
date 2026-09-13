@@ -2710,10 +2710,29 @@ async function startPcmCapture() {
   const source = ctx.createMediaStreamSource(stream);
   // ScriptProcessor 雖然被標為過時，但 iOS Safari／Android Chrome 都還支援，最保險
   const processor = ctx.createScriptProcessor(4096, 1, 1);
+  // 錄音管線剛啟動的前幾百毫秒常常有雜訊或短暫空白（尤其 iOS 第一次建立
+  // AudioContext 時），如果使用者一按下按鈕就馬上開始講話，開頭的字容易被
+  // 這段雜訊蓋掉、被 Whisper 誤認成完全不相關的文字（實測發現同一句話重講
+  // 好幾次，開頭都被聽成同一句莫名其妙的話，正是這個原因）。直接跳過開頭
+  // 0.35 秒不收，寧可晚一點點才開始真正錄音，也不要讓開頭被雜訊污染。
+  const warmupSamples = Math.round(ctx.sampleRate * 0.35);
   const chunks = [];
   let total = 0;
+  let skipped = 0;
   processor.onaudioprocess = ev => {
     const data = ev.inputBuffer.getChannelData(0);
+    if (skipped < warmupSamples) {
+      const remain = warmupSamples - skipped;
+      if (data.length <= remain) {
+        skipped += data.length;
+        return;
+      }
+      const trimmed = data.subarray(remain);
+      skipped = warmupSamples;
+      chunks.push(new Float32Array(trimmed));
+      total += trimmed.length;
+      return;
+    }
     chunks.push(new Float32Array(data));
     total += data.length;
   };
@@ -2764,8 +2783,24 @@ function hasAudibleSpeech(samples) {
   // Whisper（它有時會對著靜音「幻想」出文字）
   return maxRms > 0.006;
 }
+// 語音辨識常常把「two」這種拼出來的數字念法，輸出成阿拉伯數字「2」
+// （尤其是瀏覽器內建的免費辨識），例句原文卻是拼出來的英文字，兩邊格式
+// 對不起來就永遠比對不到，即使整句都念對了也一樣。這裡把常見的 0-100
+// 數字統一換算成拼字形式，兩邊都用同一套規則轉換，才能正確比對。
+const NUMBER_WORD_MAP = {
+  "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five",
+  "6": "six", "7": "seven", "8": "eight", "9": "nine", "10": "ten",
+  "11": "eleven", "12": "twelve", "13": "thirteen", "14": "fourteen", "15": "fifteen",
+  "16": "sixteen", "17": "seventeen", "18": "eighteen", "19": "nineteen", "20": "twenty",
+  "30": "thirty", "40": "forty", "50": "fifty", "60": "sixty", "70": "seventy",
+  "80": "eighty", "90": "ninety", "100": "hundred"
+};
 function transcriptWordsClient(s) {
-  return (s || "").toLowerCase().split(/[^a-z']+/).filter(Boolean);
+  return (s || "")
+    .toLowerCase()
+    .split(/[^a-z0-9']+/)
+    .filter(Boolean)
+    .map(w => NUMBER_WORD_MAP[w] || w);
 }
 function containsPhraseClient(gotWords, targetWords) {
   if (!targetWords.length || gotWords.length < targetWords.length) return false;
