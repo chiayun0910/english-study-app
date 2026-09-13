@@ -307,25 +307,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
-// Cloud Function（跟讀語音辨識）部署在 asia-east1，呼叫時要指定同一個地區
+// Cloud Function（查字典／翻譯）部署在 asia-east1，呼叫時要指定同一個地區
+// 注意：跟讀語音辨識已經不再走 Cloud Function（checkPronunciation），
+// 改成全部在瀏覽器／裝置上辨識，不會產生 Speech-to-Text 費用。
 const functionsClient = firebase.app().functions("asia-east1");
-const checkPronunciationFn = functionsClient.httpsCallable("checkPronunciation");
 const translateWordFn = functionsClient.httpsCallable("translateWord");
 const lookupWordFn = functionsClient.httpsCallable("lookupWord");
-
-// 把錄音的 Blob 轉成純文字 base64，才能塞進 Cloud Function 的 JSON 參數裡
-function blobToBase64(blob) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      const result = reader.result || "";
-      const base64 = String(result).split(",")[1] || "";
-      resolve(base64);
-    };
-    reader.onerror = reject;
-    reader.readAsDataURL(blob);
-  });
-}
 
 // 使用者只需輸入單純的帳號名稱（不含 @），這裡轉換成 Firebase Auth
 // 要求的 email 格式，讓「使用者名稱登入」跟「Firebase 只認 email」兩邊都能滿足
@@ -2485,16 +2472,119 @@ function ActivityScreen({
 }
 
 /* ------------------------------------------------------------------ */
-/* 跟讀比對邏輯（瀏覽器端版本）：Chrome／Edge／Android 內建的語音辨識   */
-/* （Web Speech API）完全免費、不用透過我們自己的 Google Cloud 帳號計費，*/
-/* 所以支援這個 API 的瀏覽器直接在前端辨識＋比對，不呼叫付費的         */
-/* checkPronunciation雲端函式；iPhone（Safari／iOS 上所有瀏覽器都用     */
-/* WebKit）不支援這個 API，才會退回原本「錄音上傳到 Cloud Function、    */
-/* 用 Google Speech-to-Text 辨識」的付費路徑。                          */
-/* 這裡的比對規則刻意跟 functions/index.js 的 checkPronunciation 保持   */
-/* 一致（word 模式：連續片語比對；sentence 模式：70% 字詞相符＋句尾字   */
-/* 必須出現），日後如果調整其中一邊的規則，記得另一邊也要跟著改。       */
+/* 跟讀比對邏輯（全部在瀏覽器端，兩條路徑都免費）：                     */
+/* 路徑 A：Chrome／Edge／Android 內建語音辨識（Web Speech API），由瀏覽器  */
+/*         廠商提供，不經過我們的任何伺服器。                            */
+/* 路徑 B：瀏覽器沒有 Web Speech API 時（iPhone／iPad 加到主畫面的 App    */
+/*         模式就是這種情況），改用 Transformers.js 在裝置上直接跑        */
+/*         OpenAI Whisper（tiny.en）模型辨識。模型第一次使用會下載一次     */
+/*         （約 40MB）並快取在裝置裡，之後離線也能用，完全沒有雲端費用。  */
+/* 比對規則：word 模式做連續片語比對；sentence 模式 70% 字詞相符＋句尾字  */
+/* 必須出現。                                                            */
 const SpeechRecognitionCtor = typeof window !== "undefined" ? window.SpeechRecognition || window.webkitSpeechRecognition : null;
+
+/* ---- 路徑 B：裝置端 Whisper（Transformers.js） ---- */
+const LOCAL_ASR_LIB_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0";
+const LOCAL_ASR_MODEL_ID = "onnx-community/whisper-tiny.en";
+const LOCAL_ASR_SAMPLE_RATE = 16000;
+let localAsrPipelinePromise = null;
+let localAsrReady = false;
+
+// 只載入一次；onProgress(百分比) 用來顯示第一次下載模型的進度
+function getLocalAsrPipeline(onProgress) {
+  if (!localAsrPipelinePromise) {
+    localAsrPipelinePromise = (async () => {
+      const lib = await import(LOCAL_ASR_LIB_URL);
+      // 模型統一從 Hugging Face 下載並快取；wasm 版預設用 q8 量化，手機也跑得動
+      lib.env.allowLocalModels = false;
+      const fileProgress = {};
+      const asr = await lib.pipeline("automatic-speech-recognition", LOCAL_ASR_MODEL_ID, {
+        progress_callback: p => {
+          if (p && p.status === "progress" && p.file && p.total) {
+            fileProgress[p.file] = [p.loaded || 0, p.total];
+            let loaded = 0, total = 0;
+            Object.values(fileProgress).forEach(([l, t]) => { loaded += l; total += t; });
+            if (onProgress && total) onProgress(Math.min(99, Math.round(loaded / total * 100)));
+          }
+        }
+      });
+      localAsrReady = true;
+      return asr;
+    })().catch(err => {
+      localAsrPipelinePromise = null; // 失敗允許下次再重試（例如網路一時斷線）
+      throw err;
+    });
+  }
+  return localAsrPipelinePromise;
+}
+
+// 把任意取樣率的 Float32 音訊線性內插成 16kHz（Whisper 要求的輸入格式）
+function resampleTo16k(samples, fromRate) {
+  if (fromRate === LOCAL_ASR_SAMPLE_RATE) return samples;
+  const ratio = fromRate / LOCAL_ASR_SAMPLE_RATE;
+  const outLen = Math.floor(samples.length / ratio);
+  const out = new Float32Array(outLen);
+  for (let i = 0; i < outLen; i++) {
+    const pos = i * ratio;
+    const i0 = Math.floor(pos);
+    const i1 = Math.min(i0 + 1, samples.length - 1);
+    const frac = pos - i0;
+    out[i] = samples[i0] * (1 - frac) + samples[i1] * frac;
+  }
+  return out;
+}
+
+// 用 Web Audio 直接抓原始 PCM（不用 MediaRecorder），避免 iOS 錄成 mp4/aac、
+// Android 錄成 webm 之後還要各自解碼的麻煩；回傳 { stop() → Promise<Float32Array 16kHz> }
+async function startPcmCapture() {
+  const stream = await navigator.mediaDevices.getUserMedia({
+    audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+  });
+  const AudioCtx = window.AudioContext || window.webkitAudioContext;
+  const ctx = new AudioCtx();
+  if (ctx.state === "suspended") { try { await ctx.resume(); } catch (e) { /* ignore */ } }
+  const source = ctx.createMediaStreamSource(stream);
+  // ScriptProcessor 雖然被標為過時，但 iOS Safari／Android Chrome 都還支援，最保險
+  const processor = ctx.createScriptProcessor(4096, 1, 1);
+  const chunks = [];
+  let total = 0;
+  processor.onaudioprocess = ev => {
+    const data = ev.inputBuffer.getChannelData(0);
+    chunks.push(new Float32Array(data));
+    total += data.length;
+  };
+  source.connect(processor);
+  // 某些瀏覽器不接到 destination 就不會觸發 onaudioprocess；音量用 gain 0 靜音
+  const mute = ctx.createGain();
+  mute.gain.value = 0;
+  processor.connect(mute);
+  mute.connect(ctx.destination);
+  let stopped = false;
+  return {
+    stream,
+    stop: async () => {
+      if (stopped) return new Float32Array(0);
+      stopped = true;
+      try { processor.disconnect(); source.disconnect(); mute.disconnect(); } catch (e) { /* ignore */ }
+      stream.getTracks().forEach(t => t.stop());
+      const rate = ctx.sampleRate;
+      try { await ctx.close(); } catch (e) { /* ignore */ }
+      const merged = new Float32Array(total);
+      let off = 0;
+      chunks.forEach(c => { merged.set(c, off); off += c.length; });
+      return resampleTo16k(merged, rate);
+    }
+  };
+}
+
+// 粗略檢查有沒有聲音（避免把一段靜音丟給 Whisper，它有時會憑空「幻想」出字）
+function hasAudibleSpeech(samples) {
+  if (!samples.length) return false;
+  let sum = 0;
+  for (let i = 0; i < samples.length; i++) sum += samples[i] * samples[i];
+  const rms = Math.sqrt(sum / samples.length);
+  return rms > 0.004;
+}
 function transcriptWordsClient(s) {
   return (s || "").toLowerCase().split(/[^a-z']+/).filter(Boolean);
 }
@@ -2533,10 +2623,8 @@ function wordModeMatchClient(transcript, targetList) {
 
 /* ------------------------------------------------------------------ */
 /* 跟讀錄音元件：優先用瀏覽器內建、免費的語音辨識（Web Speech API）；   */
-/* 該瀏覽器不支援時（目前已知只有 iPhone 上的所有瀏覽器），才退回        */
-/* 「錄音上傳到 Cloud Function、用 Google Speech-to-Text 辨識」的付費   */
-/* 路徑，靠後端 ffmpeg 統一轉檔，所以不受「iOS 不支援瀏覽器語音辨識」   */
-/* 這個限制影響。                                                      */
+/* 該瀏覽器不支援時（iPhone／iPad 的 App 模式），改用裝置端 Whisper      */
+/* 辨識，一樣免費、離線也能用，只是第一次要下載模型、辨識多花幾秒。      */
 /* mode: "word" 驗證單一個字（可多型態），"sentence" 驗證整句例句       */
 /* （比對比較寬鬆，只要大部分單字有念到就算過）。                       */
 /* compact：例句旁邊用的小按鈕樣式，跟卡片正面那顆大按鈕分開設計。       */
@@ -2661,86 +2749,66 @@ function PronunciationRecorder({
   const startRecording = async e => {
     e.stopPropagation();
     setMessage("");
-    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || typeof MediaRecorder === "undefined") {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !(window.AudioContext || window.webkitAudioContext)) {
       setState("error");
       setMessage("這個瀏覽器不支援錄音功能");
       return;
     }
-    let stream;
+    // 先在背景載入模型（第一次會下載），同時開始錄音，讓使用者不用乾等
+    const asrPromise = getLocalAsrPipeline(pct => {
+      if (!localAsrReady) setMessage(`首次使用需下載辨識模型（約 40MB）… ${pct}%`);
+    });
+    asrPromise.catch(() => { /* 錯誤在辨識階段統一處理 */ });
+    if (!localAsrReady) setMessage("首次使用需下載辨識模型（約 40MB），請稍候…");
+    let capture;
     try {
-      // 明確開啟回音消除/降噪/自動增益，讓不同手機瀏覽器的收音品質更一致
-      // （不指定的話有些瀏覽器預設值不同，念到句子中段音量變小時更容易被誤判）
-      stream = await navigator.mediaDevices.getUserMedia({
-        audio: {
-          echoCancellation: true,
-          noiseSuppression: true,
-          autoGainControl: true
-        }
-      });
+      capture = await startPcmCapture();
     } catch (err) {
       setState("error");
       setMessage("無法取得麥克風權限，請確認瀏覽器/系統設定有允許使用麥克風");
       return;
     }
-    streamRef.current = stream;
-    const chunks = [];
-    let recorder;
-    try {
-      recorder = new MediaRecorder(stream);
-    } catch (err) {
-      stream.getTracks().forEach(t => t.stop());
-      setState("error");
-      setMessage("這個瀏覽器不支援錄音功能");
-      return;
-    }
-    recorderRef.current = recorder;
-    recorder.ondataavailable = ev => {
-      if (ev.data && ev.data.size > 0) chunks.push(ev.data);
-    };
-    recorder.onstop = async () => {
+    streamRef.current = capture.stream;
+    let finished = false;
+    const finish = async () => {
+      if (finished) return;
+      finished = true;
       if (timerRef.current) clearTimeout(timerRef.current);
-      stream.getTracks().forEach(t => t.stop());
-      streamRef.current = null;
       recorderRef.current = null;
-      if (!chunks.length) {
-        setState("error");
-        setMessage("沒有錄到聲音，請再試一次");
+      streamRef.current = null;
+      const samples = await capture.stop();
+      if (!hasAudibleSpeech(samples)) {
+        setState("retry");
+        setMessage("沒聽清楚，再試一次");
         return;
       }
       setState("checking");
       try {
-        const blob = new Blob(chunks, {
-          type: recorder.mimeType || "audio/webm"
-        });
-        const audioBase64 = await blobToBase64(blob);
-        const payload = mode === "sentence" ? {
-          audioBase64,
-          expectedSentence: targetSentence
-        } : {
-          audioBase64,
-          expectedWords: targetWords
-        };
-        const res = await checkPronunciationFn(payload);
-        const data = res.data || {};
-        if (data.match) {
+        const asr = await asrPromise;
+        setMessage("");
+        const out = await asr(samples, { language: "en", task: "transcribe" });
+        const transcript = (out && out.text ? out.text : "").trim();
+        const isMatch = mode === "sentence"
+          ? sentenceFullyReadClient(targetSentence, transcript)
+          : wordModeMatchClient(transcript, targetWords);
+        if (isMatch) {
           setState("passed");
           setMessage("");
           onPassed();
         } else {
           setState("retry");
-          setMessage(data.transcripts && data.transcripts[0] ? `辨識結果：「${data.transcripts[0]}」，再試一次` : "沒聽清楚，再試一次");
+          setMessage(transcript ? `辨識結果：「${transcript}」，再試一次` : "沒聽清楚，再試一次");
         }
       } catch (err) {
-        console.error("checkPronunciation call error", err);
+        console.error("local ASR error", err);
         setState("error");
-        setMessage("辨識失敗，請確認網路連線後再試一次");
+        setMessage(localAsrReady ? "辨識失敗，請再試一次" : "辨識模型下載失敗，請確認網路連線後再試一次");
       }
     };
-    recorder.start();
+    // 沿用原本「錄音中可隨時點一下結束」的介面：stopRecording 會呼叫 recorderRef.current.stop()
+    recorderRef.current = { state: "recording", stop: finish };
     setState("recording");
-    timerRef.current = setTimeout(() => {
-      if (recorder.state === "recording") recorder.stop();
-    }, maxDurationMs);
+    timerRef.current = setTimeout(finish, maxDurationMs);
   };
   const handleClick = e => {
     if (state === "recording") {
