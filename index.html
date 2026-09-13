@@ -2898,7 +2898,7 @@ function PronunciationRecorder({
     try {
       recognition = new SpeechRecognitionCtor();
     } catch (err) {
-      // 建立失敗就退回付費路徑，至少功能還能用
+      // 建立失敗就退回裝置端 Whisper 路徑，至少功能還能用（一樣免費）
       startRecording(e);
       return;
     }
@@ -2906,6 +2906,25 @@ function PronunciationRecorder({
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
+    // 單字模式試著加上 SpeechGrammarList 提示（列出目標單字/型態），部分瀏覽器
+    // 對這個功能的支援不穩定、常常被忽略，但完全免費、加了也沒有壞處，
+    // 對支援的瀏覽器來說多少能幫助辨識引擎在「聽起來很像但不是」的短單字
+    // 上，往正確答案偏一點（例如 contain 曾被誤判成 1010 這種完全無關的
+    // 內容，這種情況提示詞可能有幫助，但不保證每次都有效）
+    const GrammarListCtor = window.SpeechGrammarList || window.webkitSpeechGrammarList;
+    if (mode === "word" && GrammarListCtor && targetWords && targetWords.length) {
+      try {
+        const words = targetWords.flatMap(t => transcriptWordsClient(t)).filter(Boolean);
+        if (words.length) {
+          const grammar = `#JSGF V1.0; grammar words; public <word> = ${words.join(" | ")} ;`;
+          const list = new GrammarListCtor();
+          list.addFromString(grammar, 1);
+          recognition.grammars = list;
+        }
+      } catch (err) {
+        // 建立失敗就當作沒有這個提示，不影響正常辨識
+      }
+    }
     let settled = false;
     recognition.onresult = ev => {
       settled = true;
