@@ -553,7 +553,9 @@ function buildFamilyProgressSummary(data) {
   return {
     lastActiveAt: lastActiveAt || null,
     todayActivitiesDone,
-    todayActivityList: todayActivityList.slice(0, 10),
+    // 之前只回傳最近 10 筆，練習量比較大的日子（例如一天做了 20 項）會把
+    // 比較早的紀錄截斷、看不到，改成整天都回傳，讓家長能看到完整一天的紀錄
+    todayActivityList,
     todayWordsLearned: Object.keys(dailyLearnedWords).length,
     todayMistakeCount: Object.keys(dailyMistakes).length,
     todayMistakeList,
