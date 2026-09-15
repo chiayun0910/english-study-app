@@ -2054,6 +2054,28 @@ function FamilyViewScreen({ onBack }) {
     const u = UNITS.find(x => x.id === unitId);
     return u ? u.title : unitId;
   };
+  // 「今天字卡跟讀練習」：後端只回傳今天完成跟讀的單字 key（unitId::en），
+  // 這裡依單元分組、對照 UNITS 拿到每個單元的總字數，算出
+  // 「Part 1 已練習 n 個字(n句)／共 X 字(X句)」——字卡「已學習」的條件
+  // 本來就包含單字＋例句都跟讀通過，所以字數跟句數是同一組數字。
+  const todayLearnedByUnit = [];
+  if (summary && summary.todayLearnedWordKeys) {
+    const counts = {};
+    summary.todayLearnedWordKeys.forEach(key => {
+      const unitId = key.slice(0, key.lastIndexOf("::"));
+      counts[unitId] = (counts[unitId] || 0) + 1;
+    });
+    Object.entries(counts).forEach(([unitId, count]) => {
+      const u = UNITS.find(x => x.id === unitId);
+      todayLearnedByUnit.push({
+        unitId,
+        label: u ? u.title : unitId,
+        count,
+        total: u ? u.words.length : null
+      });
+    });
+    todayLearnedByUnit.sort((a, b) => a.label.localeCompare(b.label));
+  }
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "back-row",
     onClick: () => selected ? setSelected(null) : onBack()
@@ -2110,6 +2132,16 @@ function FamilyViewScreen({ onBack }) {
     /*#__PURE__*/React.createElement("div", { className: "review-sub" },
       `${summary.dueMistakeCount} 個字到期該複習了（複習清單共 ${summary.totalMistakeCount} 個字）`)
   ), /*#__PURE__*/React.createElement("span", { className: "due-badge" }, summary.dueMistakeCount)),
+  todayLearnedByUnit.length > 0 && /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "🎤 今天字卡跟讀練習"),
+    /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+      todayLearnedByUnit.map(u => /*#__PURE__*/React.createElement("div", {
+        key: u.unitId,
+        className: "mistake-row"
+      }, /*#__PURE__*/React.createElement("span", null, u.label),
+         /*#__PURE__*/React.createElement("span", { className: "mistake-count" },
+           u.total ? `已練習 ${u.count} 個字(${u.count}句)／共 ${u.total} 字(${u.total}句)` : `已練習 ${u.count} 個字(${u.count}句)`))))
+  ),
   summary.todayActivityList.length > 0 && /*#__PURE__*/React.createElement("div", null,
     /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "今天做過的練習"),
     /*#__PURE__*/React.createElement("div", { className: "mistake-list" },

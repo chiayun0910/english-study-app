@@ -19866,8 +19866,8 @@
           "zh": "辦公室情境單字 (1)",
           "units": [
             {
-              "id": "toeic-day1-u1",
-              "title": "Unit 01",
+              "id": "toeic-day1-p1",
+              "title": "Part 1",
               "zh": "辦公室情境單字 (1)",
               "color": "#D6516F",
               "words": [
@@ -19967,7 +19967,167 @@
                   "ex_blank": "____ job openings at Elite Insurance have been posted on the major job-search sites.",
                   "grammar": "衍生字：currently adv. 目前地。",
                   "ipa": "ˈkɑrənt"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "現有職缺",
+                  "en": "____ job openings",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "current"
                 },
+                {
+                  "zh": "為…做準備",
+                  "en": "in ____ for",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "preparation"
+                },
+                {
+                  "zh": "行程撞期",
+                  "en": "a scheduling ____",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "conflict"
+                },
+                {
+                  "zh": "必要的訓練課程",
+                  "en": "____ training session",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "mandatory"
+                },
+                {
+                  "zh": "負面評論",
+                  "en": "____ review",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "unfavorable"
+                },
+                {
+                  "zh": null,
+                  "en": "This project will require your complete ____.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "attention"
+                },
+                {
+                  "zh": null,
+                  "en": "Our services are tailored to meet each customer's ____.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "circumstances"
+                },
+                {
+                  "zh": null,
+                  "en": "The factory's production ____ are automated for greater efficiency.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "sequences"
+                },
+                {
+                  "zh": null,
+                  "en": "We have designed a creative advertising campaign for the ____ of our new product.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "launch"
+                },
+                {
+                  "zh": null,
+                  "en": "Our laboratory received a ____ from the government to continue our research.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "grant"
+                },
+                {
+                  "zh": null,
+                  "en": "The new policy will ____ our competitiveness.",
+                  "options": [
+                    "enhance",
+                    "target",
+                    "experiment"
+                  ],
+                  "answer": "enhance"
+                },
+                {
+                  "zh": null,
+                  "en": "My manager will ____ my request for a new computer.",
+                  "options": [
+                    "deny",
+                    "reduce",
+                    "facilitate"
+                  ],
+                  "answer": "deny"
+                },
+                {
+                  "zh": null,
+                  "en": "We want to ____ this new product to the market as soon as possible.",
+                  "options": [
+                    "search",
+                    "result",
+                    "release"
+                  ],
+                  "answer": "release"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day1-p2",
+              "title": "Part 2",
+              "zh": "辦公室情境單字 (1)",
+              "color": "#D6516F",
+              "words": [
                 {
                   "en": "deny",
                   "pos": "v.",
@@ -20061,7 +20221,167 @@
                   "ex_zh": "所有生產線的員工應於下午四點向指定會議室報到，進行必要的訓練課程。",
                   "ex_blank": "All assembly-line workers should report to the designated meeting room for the ____ training session at 4 p.m.",
                   "ipa": "ˈmændəˌtɔri"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "現有職缺",
+                  "en": "____ job openings",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "current"
                 },
+                {
+                  "zh": "為…做準備",
+                  "en": "in ____ for",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "preparation"
+                },
+                {
+                  "zh": "行程撞期",
+                  "en": "a scheduling ____",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "conflict"
+                },
+                {
+                  "zh": "必要的訓練課程",
+                  "en": "____ training session",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "mandatory"
+                },
+                {
+                  "zh": "負面評論",
+                  "en": "____ review",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "unfavorable"
+                },
+                {
+                  "zh": null,
+                  "en": "This project will require your complete ____.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "attention"
+                },
+                {
+                  "zh": null,
+                  "en": "Our services are tailored to meet each customer's ____.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "circumstances"
+                },
+                {
+                  "zh": null,
+                  "en": "The factory's production ____ are automated for greater efficiency.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "sequences"
+                },
+                {
+                  "zh": null,
+                  "en": "We have designed a creative advertising campaign for the ____ of our new product.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "launch"
+                },
+                {
+                  "zh": null,
+                  "en": "Our laboratory received a ____ from the government to continue our research.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "grant"
+                },
+                {
+                  "zh": null,
+                  "en": "The new policy will ____ our competitiveness.",
+                  "options": [
+                    "enhance",
+                    "target",
+                    "experiment"
+                  ],
+                  "answer": "enhance"
+                },
+                {
+                  "zh": null,
+                  "en": "My manager will ____ my request for a new computer.",
+                  "options": [
+                    "deny",
+                    "reduce",
+                    "facilitate"
+                  ],
+                  "answer": "deny"
+                },
+                {
+                  "zh": null,
+                  "en": "We want to ____ this new product to the market as soon as possible.",
+                  "options": [
+                    "search",
+                    "result",
+                    "release"
+                  ],
+                  "answer": "release"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day1-p3",
+              "title": "Part 3",
+              "zh": "辦公室情境單字 (1)",
+              "color": "#D6516F",
+              "words": [
                 {
                   "en": "nearly",
                   "pos": "adv.",
@@ -20159,7 +20479,167 @@
                   "ex_blank": "All the articles in this magazine are the property of their ____ authors.",
                   "grammar": "衍生字：respectively adv. 個別地。",
                   "ipa": "rɪˈspɛktɪv"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "現有職缺",
+                  "en": "____ job openings",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "current"
                 },
+                {
+                  "zh": "為…做準備",
+                  "en": "in ____ for",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "preparation"
+                },
+                {
+                  "zh": "行程撞期",
+                  "en": "a scheduling ____",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "conflict"
+                },
+                {
+                  "zh": "必要的訓練課程",
+                  "en": "____ training session",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "mandatory"
+                },
+                {
+                  "zh": "負面評論",
+                  "en": "____ review",
+                  "options": [
+                    "conflict",
+                    "preparation",
+                    "mandatory",
+                    "current",
+                    "unfavorable"
+                  ],
+                  "answer": "unfavorable"
+                },
+                {
+                  "zh": null,
+                  "en": "This project will require your complete ____.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "attention"
+                },
+                {
+                  "zh": null,
+                  "en": "Our services are tailored to meet each customer's ____.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "circumstances"
+                },
+                {
+                  "zh": null,
+                  "en": "The factory's production ____ are automated for greater efficiency.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "sequences"
+                },
+                {
+                  "zh": null,
+                  "en": "We have designed a creative advertising campaign for the ____ of our new product.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "launch"
+                },
+                {
+                  "zh": null,
+                  "en": "Our laboratory received a ____ from the government to continue our research.",
+                  "options": [
+                    "circumstances",
+                    "launch",
+                    "attention",
+                    "grant",
+                    "sequences"
+                  ],
+                  "answer": "grant"
+                },
+                {
+                  "zh": null,
+                  "en": "The new policy will ____ our competitiveness.",
+                  "options": [
+                    "enhance",
+                    "target",
+                    "experiment"
+                  ],
+                  "answer": "enhance"
+                },
+                {
+                  "zh": null,
+                  "en": "My manager will ____ my request for a new computer.",
+                  "options": [
+                    "deny",
+                    "reduce",
+                    "facilitate"
+                  ],
+                  "answer": "deny"
+                },
+                {
+                  "zh": null,
+                  "en": "We want to ____ this new product to the market as soon as possible.",
+                  "options": [
+                    "search",
+                    "result",
+                    "release"
+                  ],
+                  "answer": "release"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day1-p4",
+              "title": "Part 4",
+              "zh": "辦公室情境單字 (1)",
+              "color": "#D6516F",
+              "words": [
                 {
                   "en": "result",
                   "pos": "v.",
@@ -20418,8 +20898,8 @@
           "zh": "辦公室情境單字 (2)",
           "units": [
             {
-              "id": "toeic-day2-u1",
-              "title": "Unit 01",
+              "id": "toeic-day2-p1",
+              "title": "Part 1",
               "zh": "辦公室情境單字 (2)",
               "color": "#4A6FA5",
               "words": [
@@ -20519,7 +20999,167 @@
                   "ex_zh": "因為大會議室正在粉刷，這場會議將在四樓會議室舉行。",
                   "ex_blank": "Because the ____ is being painted, the meeting will be held in the conference room on the fourth floor.",
                   "ipa": "ˈbɔrˌdrum"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "進行調查",
+                  "en": "____ a survey",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "conduct"
                 },
+                {
+                  "zh": "行銷部門",
+                  "en": "marketing ____",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "department"
+                },
+                {
+                  "zh": "傳達理念",
+                  "en": "give a ____",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "rationale"
+                },
+                {
+                  "zh": "行政助理",
+                  "en": "an ____ assistant",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "administrative"
+                },
+                {
+                  "zh": "遠大的目標",
+                  "en": "an ____ goal",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "ambitious"
+                },
+                {
+                  "zh": null,
+                  "en": "You need to enter your employee password to ____ your online account.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "activate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Wang ____ to finish the report by the end of the week.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "expects"
+                },
+                {
+                  "zh": null,
+                  "en": "Our firm will ____ a new policy banning smoking in the workplace.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "institute"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ask Jim to ____ some paper into the fax machine.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "load"
+                },
+                {
+                  "zh": null,
+                  "en": "We need to ____ some of the customers we lost to our competitors.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "regain"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. Lee will receive an award for being a(n) ____ employee.",
+                  "options": [
+                    "outstanding",
+                    "associated",
+                    "personnel"
+                  ],
+                  "answer": "outstanding"
+                },
+                {
+                  "zh": null,
+                  "en": "This is a(n) ____ meeting schedule, and it will most likely change.",
+                  "options": [
+                    "understaffed",
+                    "tentative",
+                    "apparent"
+                  ],
+                  "answer": "tentative"
+                },
+                {
+                  "zh": null,
+                  "en": "Formal ____ is recommended for tomorrow's dinner reception.",
+                  "options": [
+                    "device",
+                    "workplace",
+                    "attire"
+                  ],
+                  "answer": "attire"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day2-p2",
+              "title": "Part 2",
+              "zh": "辦公室情境單字 (2)",
+              "color": "#4A6FA5",
+              "words": [
                 {
                   "en": "briefly",
                   "pos": "adv.",
@@ -20617,7 +21257,167 @@
                   "ex_blank": "The man is ____ up a sheet.",
                   "grammar": "衍生字：foldable adj. 可折疊的。",
                   "ipa": "foʊld"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "進行調查",
+                  "en": "____ a survey",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "conduct"
                 },
+                {
+                  "zh": "行銷部門",
+                  "en": "marketing ____",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "department"
+                },
+                {
+                  "zh": "傳達理念",
+                  "en": "give a ____",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "rationale"
+                },
+                {
+                  "zh": "行政助理",
+                  "en": "an ____ assistant",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "administrative"
+                },
+                {
+                  "zh": "遠大的目標",
+                  "en": "an ____ goal",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "ambitious"
+                },
+                {
+                  "zh": null,
+                  "en": "You need to enter your employee password to ____ your online account.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "activate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Wang ____ to finish the report by the end of the week.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "expects"
+                },
+                {
+                  "zh": null,
+                  "en": "Our firm will ____ a new policy banning smoking in the workplace.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "institute"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ask Jim to ____ some paper into the fax machine.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "load"
+                },
+                {
+                  "zh": null,
+                  "en": "We need to ____ some of the customers we lost to our competitors.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "regain"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. Lee will receive an award for being a(n) ____ employee.",
+                  "options": [
+                    "outstanding",
+                    "associated",
+                    "personnel"
+                  ],
+                  "answer": "outstanding"
+                },
+                {
+                  "zh": null,
+                  "en": "This is a(n) ____ meeting schedule, and it will most likely change.",
+                  "options": [
+                    "understaffed",
+                    "tentative",
+                    "apparent"
+                  ],
+                  "answer": "tentative"
+                },
+                {
+                  "zh": null,
+                  "en": "Formal ____ is recommended for tomorrow's dinner reception.",
+                  "options": [
+                    "device",
+                    "workplace",
+                    "attire"
+                  ],
+                  "answer": "attire"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day2-p3",
+              "title": "Part 3",
+              "zh": "辦公室情境單字 (2)",
+              "color": "#4A6FA5",
+              "words": [
                 {
                   "en": "institute",
                   "pos": "v.",
@@ -20711,7 +21511,167 @@
                   "ex_zh": "公司試圖重新贏回之前的市場地位。",
                   "ex_blank": "The company is trying to ____ its former position in the market.",
                   "ipa": "rɪˈgeɪn"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "進行調查",
+                  "en": "____ a survey",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "conduct"
                 },
+                {
+                  "zh": "行銷部門",
+                  "en": "marketing ____",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "department"
+                },
+                {
+                  "zh": "傳達理念",
+                  "en": "give a ____",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "rationale"
+                },
+                {
+                  "zh": "行政助理",
+                  "en": "an ____ assistant",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "administrative"
+                },
+                {
+                  "zh": "遠大的目標",
+                  "en": "an ____ goal",
+                  "options": [
+                    "conduct",
+                    "department",
+                    "ambitious",
+                    "rationale",
+                    "administrative"
+                  ],
+                  "answer": "ambitious"
+                },
+                {
+                  "zh": null,
+                  "en": "You need to enter your employee password to ____ your online account.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "activate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Wang ____ to finish the report by the end of the week.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "expects"
+                },
+                {
+                  "zh": null,
+                  "en": "Our firm will ____ a new policy banning smoking in the workplace.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "institute"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ask Jim to ____ some paper into the fax machine.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "load"
+                },
+                {
+                  "zh": null,
+                  "en": "We need to ____ some of the customers we lost to our competitors.",
+                  "options": [
+                    "institute",
+                    "activate",
+                    "regain",
+                    "load",
+                    "expects"
+                  ],
+                  "answer": "regain"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. Lee will receive an award for being a(n) ____ employee.",
+                  "options": [
+                    "outstanding",
+                    "associated",
+                    "personnel"
+                  ],
+                  "answer": "outstanding"
+                },
+                {
+                  "zh": null,
+                  "en": "This is a(n) ____ meeting schedule, and it will most likely change.",
+                  "options": [
+                    "understaffed",
+                    "tentative",
+                    "apparent"
+                  ],
+                  "answer": "tentative"
+                },
+                {
+                  "zh": null,
+                  "en": "Formal ____ is recommended for tomorrow's dinner reception.",
+                  "options": [
+                    "device",
+                    "workplace",
+                    "attire"
+                  ],
+                  "answer": "attire"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day2-p4",
+              "title": "Part 4",
+              "zh": "辦公室情境單字 (2)",
+              "color": "#4A6FA5",
+              "words": [
                 {
                   "en": "regarding",
                   "pos": "prep.",
@@ -20968,8 +21928,8 @@
           "zh": "文書作業",
           "units": [
             {
-              "id": "toeic-day3-u1",
-              "title": "Unit 01",
+              "id": "toeic-day3-p1",
+              "title": "Part 1",
               "zh": "文書作業",
               "color": "#3E9B7C",
               "words": [
@@ -21067,7 +22027,167 @@
                   "ex_zh": "這只是初稿，我還會再校訂。",
                   "ex_blank": "It's only the first ____ and I'm going to make revisions.",
                   "ipa": "dræft"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "電子郵件附件",
+                  "en": "e-mail ____",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "attachment"
                 },
+                {
+                  "zh": "進行中",
+                  "en": "in ____",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "progress"
+                },
+                {
+                  "zh": "豐富的經驗",
+                  "en": "____ experience",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "diverse"
+                },
+                {
+                  "zh": "獲得許可後",
+                  "en": "____ to approval",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "subsequent"
+                },
+                {
+                  "zh": "提交報告",
+                  "en": "____ the report",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "submit"
+                },
+                {
+                  "zh": null,
+                  "en": "They agreed to ____ the deadline for completion of the project.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "extend"
+                },
+                {
+                  "zh": null,
+                  "en": "My skills and experience will ____ to your firm's success.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "contribute"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will ____ new safety policies.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "implement"
+                },
+                {
+                  "zh": null,
+                  "en": "We ____ everyone to participate in the company's charity campaign.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "encourage"
+                },
+                {
+                  "zh": null,
+                  "en": "They have ____ their flight schedule for the business trip.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "finalized"
+                },
+                {
+                  "zh": null,
+                  "en": "There was a serious ____ in the accounting department last month.",
+                  "options": [
+                    "contribution",
+                    "duplication",
+                    "mistake"
+                  ],
+                  "answer": "mistake"
+                },
+                {
+                  "zh": null,
+                  "en": "Thank you for your consideration of ____.",
+                  "options": [
+                    "renewal",
+                    "proposal",
+                    "mastermind"
+                  ],
+                  "answer": "proposal"
+                },
+                {
+                  "zh": null,
+                  "en": "By choosing our ____ shipping service, you can receive your order within 48 hours.",
+                  "options": [
+                    "imperative",
+                    "rush",
+                    "tight"
+                  ],
+                  "answer": "rush"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day3-p2",
+              "title": "Part 2",
+              "zh": "文書作業",
+              "color": "#3E9B7C",
+              "words": [
                 {
                   "en": "duplication",
                   "pos": "n.",
@@ -21165,7 +22285,167 @@
                   "ex_zh": "你已經看過公司的新信箋，對吧？",
                   "ex_blank": "You've seen the new company ____, haven't you?",
                   "ipa": "ˈlɛtərˌhɛd"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "電子郵件附件",
+                  "en": "e-mail ____",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "attachment"
                 },
+                {
+                  "zh": "進行中",
+                  "en": "in ____",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "progress"
+                },
+                {
+                  "zh": "豐富的經驗",
+                  "en": "____ experience",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "diverse"
+                },
+                {
+                  "zh": "獲得許可後",
+                  "en": "____ to approval",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "subsequent"
+                },
+                {
+                  "zh": "提交報告",
+                  "en": "____ the report",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "submit"
+                },
+                {
+                  "zh": null,
+                  "en": "They agreed to ____ the deadline for completion of the project.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "extend"
+                },
+                {
+                  "zh": null,
+                  "en": "My skills and experience will ____ to your firm's success.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "contribute"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will ____ new safety policies.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "implement"
+                },
+                {
+                  "zh": null,
+                  "en": "We ____ everyone to participate in the company's charity campaign.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "encourage"
+                },
+                {
+                  "zh": null,
+                  "en": "They have ____ their flight schedule for the business trip.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "finalized"
+                },
+                {
+                  "zh": null,
+                  "en": "There was a serious ____ in the accounting department last month.",
+                  "options": [
+                    "contribution",
+                    "duplication",
+                    "mistake"
+                  ],
+                  "answer": "mistake"
+                },
+                {
+                  "zh": null,
+                  "en": "Thank you for your consideration of ____.",
+                  "options": [
+                    "renewal",
+                    "proposal",
+                    "mastermind"
+                  ],
+                  "answer": "proposal"
+                },
+                {
+                  "zh": null,
+                  "en": "By choosing our ____ shipping service, you can receive your order within 48 hours.",
+                  "options": [
+                    "imperative",
+                    "rush",
+                    "tight"
+                  ],
+                  "answer": "rush"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day3-p3",
+              "title": "Part 3",
+              "zh": "文書作業",
+              "color": "#3E9B7C",
+              "words": [
                 {
                   "en": "mastermind",
                   "pos": "n.",
@@ -21262,7 +22542,167 @@
                   "ex_blank": "I'm sorry I didn't ____ to your e-mail earlier.",
                   "grammar": "衍生字：response n. 回應；respondent n. 應答者。",
                   "ipa": "rɪˈspɑnd"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "電子郵件附件",
+                  "en": "e-mail ____",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "attachment"
                 },
+                {
+                  "zh": "進行中",
+                  "en": "in ____",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "progress"
+                },
+                {
+                  "zh": "豐富的經驗",
+                  "en": "____ experience",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "diverse"
+                },
+                {
+                  "zh": "獲得許可後",
+                  "en": "____ to approval",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "subsequent"
+                },
+                {
+                  "zh": "提交報告",
+                  "en": "____ the report",
+                  "options": [
+                    "diverse",
+                    "subsequent",
+                    "attachment",
+                    "submit",
+                    "progress"
+                  ],
+                  "answer": "submit"
+                },
+                {
+                  "zh": null,
+                  "en": "They agreed to ____ the deadline for completion of the project.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "extend"
+                },
+                {
+                  "zh": null,
+                  "en": "My skills and experience will ____ to your firm's success.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "contribute"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will ____ new safety policies.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "implement"
+                },
+                {
+                  "zh": null,
+                  "en": "We ____ everyone to participate in the company's charity campaign.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "encourage"
+                },
+                {
+                  "zh": null,
+                  "en": "They have ____ their flight schedule for the business trip.",
+                  "options": [
+                    "contribute",
+                    "implement",
+                    "extend",
+                    "encourage",
+                    "finalized"
+                  ],
+                  "answer": "finalized"
+                },
+                {
+                  "zh": null,
+                  "en": "There was a serious ____ in the accounting department last month.",
+                  "options": [
+                    "contribution",
+                    "duplication",
+                    "mistake"
+                  ],
+                  "answer": "mistake"
+                },
+                {
+                  "zh": null,
+                  "en": "Thank you for your consideration of ____.",
+                  "options": [
+                    "renewal",
+                    "proposal",
+                    "mastermind"
+                  ],
+                  "answer": "proposal"
+                },
+                {
+                  "zh": null,
+                  "en": "By choosing our ____ shipping service, you can receive your order within 48 hours.",
+                  "options": [
+                    "imperative",
+                    "rush",
+                    "tight"
+                  ],
+                  "answer": "rush"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day3-p4",
+              "title": "Part 4",
+              "zh": "文書作業",
+              "color": "#3E9B7C",
+              "words": [
                 {
                   "en": "revise",
                   "pos": "v.",
@@ -21519,8 +22959,8 @@
           "zh": "商務會議",
           "units": [
             {
-              "id": "toeic-day4-u1",
-              "title": "Unit 01",
+              "id": "toeic-day4-p1",
+              "title": "Part 1",
               "zh": "商務會議",
               "color": "#8B5FBF",
               "words": [
@@ -21619,7 +23059,167 @@
                   "ex_blank": "It is usually most effective to ____ a meeting agenda to the attendees in advance.",
                   "grammar": "衍生字：circulation n. 發行；流通。",
                   "ipa": "ˈsərkjəˌleɪt"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "安排",
+                  "en": "make ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "arrangements"
                 },
+                {
+                  "zh": "臨時通知",
+                  "en": "at ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "short notice"
+                },
+                {
+                  "zh": "休息",
+                  "en": "take a ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "break"
+                },
+                {
+                  "zh": "留意",
+                  "en": "be ____ to",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "attentive"
+                },
+                {
+                  "zh": "評論",
+                  "en": "____ on",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "comment"
+                },
+                {
+                  "zh": null,
+                  "en": "They should ____ the problem as quickly as possible.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "address"
+                },
+                {
+                  "zh": null,
+                  "en": "Let's ____ the meeting until next week.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "postpone"
+                },
+                {
+                  "zh": null,
+                  "en": "A new director was hired to ____ the marketing department.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "lead"
+                },
+                {
+                  "zh": null,
+                  "en": "Properly ____ new employees will make them more productive.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "trained"
+                },
+                {
+                  "zh": null,
+                  "en": "We need to ____ the terms of the service contract with our client.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "negotiate"
+                },
+                {
+                  "zh": null,
+                  "en": "The meeting participants finally reached a(n) ____ on the issue.",
+                  "options": [
+                    "consensus",
+                    "instructor",
+                    "matter"
+                  ],
+                  "answer": "consensus"
+                },
+                {
+                  "zh": null,
+                  "en": "To deliver an effective presentation, you need to understand your ____.",
+                  "options": [
+                    "comment",
+                    "audience",
+                    "recess"
+                  ],
+                  "answer": "audience"
+                },
+                {
+                  "zh": null,
+                  "en": "Be sure to ____ during the workshop.",
+                  "options": [
+                    "take notes",
+                    "pass out",
+                    "come up with"
+                  ],
+                  "answer": "take notes"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day4-p2",
+              "title": "Part 2",
+              "zh": "商務會議",
+              "color": "#8B5FBF",
+              "words": [
                 {
                   "en": "come up with",
                   "pos": "phr.",
@@ -21714,7 +23314,167 @@
                   "ex_zh": "孟買商研會的學員須付一小筆費用來支應材料用品的支出。",
                   "ex_blank": "Participants in the Mumbai Business Seminars must pay a small fee to cover the cost of ____ and supplies.",
                   "ipa": "məˈtɪriəl"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "安排",
+                  "en": "make ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "arrangements"
                 },
+                {
+                  "zh": "臨時通知",
+                  "en": "at ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "short notice"
+                },
+                {
+                  "zh": "休息",
+                  "en": "take a ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "break"
+                },
+                {
+                  "zh": "留意",
+                  "en": "be ____ to",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "attentive"
+                },
+                {
+                  "zh": "評論",
+                  "en": "____ on",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "comment"
+                },
+                {
+                  "zh": null,
+                  "en": "They should ____ the problem as quickly as possible.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "address"
+                },
+                {
+                  "zh": null,
+                  "en": "Let's ____ the meeting until next week.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "postpone"
+                },
+                {
+                  "zh": null,
+                  "en": "A new director was hired to ____ the marketing department.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "lead"
+                },
+                {
+                  "zh": null,
+                  "en": "Properly ____ new employees will make them more productive.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "trained"
+                },
+                {
+                  "zh": null,
+                  "en": "We need to ____ the terms of the service contract with our client.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "negotiate"
+                },
+                {
+                  "zh": null,
+                  "en": "The meeting participants finally reached a(n) ____ on the issue.",
+                  "options": [
+                    "consensus",
+                    "instructor",
+                    "matter"
+                  ],
+                  "answer": "consensus"
+                },
+                {
+                  "zh": null,
+                  "en": "To deliver an effective presentation, you need to understand your ____.",
+                  "options": [
+                    "comment",
+                    "audience",
+                    "recess"
+                  ],
+                  "answer": "audience"
+                },
+                {
+                  "zh": null,
+                  "en": "Be sure to ____ during the workshop.",
+                  "options": [
+                    "take notes",
+                    "pass out",
+                    "come up with"
+                  ],
+                  "answer": "take notes"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day4-p3",
+              "title": "Part 3",
+              "zh": "商務會議",
+              "color": "#8B5FBF",
+              "words": [
                 {
                   "en": "matter",
                   "pos": "n.",
@@ -21809,7 +23569,167 @@
                   "ex_zh": "我們終於在會議休息時間有機會介紹彼此認識。",
                   "ex_blank": "We finally had a chance to introduce each other while the meeting was in ____.",
                   "ipa": "ˈrisɛs"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "安排",
+                  "en": "make ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "arrangements"
                 },
+                {
+                  "zh": "臨時通知",
+                  "en": "at ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "short notice"
+                },
+                {
+                  "zh": "休息",
+                  "en": "take a ____",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "break"
+                },
+                {
+                  "zh": "留意",
+                  "en": "be ____ to",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "attentive"
+                },
+                {
+                  "zh": "評論",
+                  "en": "____ on",
+                  "options": [
+                    "comment",
+                    "break",
+                    "arrangements",
+                    "attentive",
+                    "short notice"
+                  ],
+                  "answer": "comment"
+                },
+                {
+                  "zh": null,
+                  "en": "They should ____ the problem as quickly as possible.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "address"
+                },
+                {
+                  "zh": null,
+                  "en": "Let's ____ the meeting until next week.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "postpone"
+                },
+                {
+                  "zh": null,
+                  "en": "A new director was hired to ____ the marketing department.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "lead"
+                },
+                {
+                  "zh": null,
+                  "en": "Properly ____ new employees will make them more productive.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "trained"
+                },
+                {
+                  "zh": null,
+                  "en": "We need to ____ the terms of the service contract with our client.",
+                  "options": [
+                    "postpone",
+                    "address",
+                    "lead",
+                    "trained",
+                    "negotiate"
+                  ],
+                  "answer": "negotiate"
+                },
+                {
+                  "zh": null,
+                  "en": "The meeting participants finally reached a(n) ____ on the issue.",
+                  "options": [
+                    "consensus",
+                    "instructor",
+                    "matter"
+                  ],
+                  "answer": "consensus"
+                },
+                {
+                  "zh": null,
+                  "en": "To deliver an effective presentation, you need to understand your ____.",
+                  "options": [
+                    "comment",
+                    "audience",
+                    "recess"
+                  ],
+                  "answer": "audience"
+                },
+                {
+                  "zh": null,
+                  "en": "Be sure to ____ during the workshop.",
+                  "options": [
+                    "take notes",
+                    "pass out",
+                    "come up with"
+                  ],
+                  "answer": "take notes"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day4-p4",
+              "title": "Part 4",
+              "zh": "商務會議",
+              "color": "#8B5FBF",
+              "words": [
                 {
                   "en": "reschedule",
                   "pos": "v.",
@@ -22065,8 +23985,8 @@
           "zh": "業務協調",
           "units": [
             {
-              "id": "toeic-day5-u1",
-              "title": "Unit 01",
+              "id": "toeic-day5-p1",
+              "title": "Part 1",
               "zh": "業務協調",
               "color": "#C77B3E",
               "words": [
@@ -22165,7 +24085,167 @@
                   "ex_zh": "你今天要跟地區主管開會嗎？",
                   "ex_blank": "Are you meeting with the ____ supervisor today?",
                   "ipa": "ˈdɪstrɪkt"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "暫時採用",
+                  "en": "accepted ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "provisionally"
                 },
+                {
+                  "zh": "相關細節",
+                  "en": "____ details",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "pertinent"
+                },
+                {
+                  "zh": "電話目錄",
+                  "en": "telephone ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "directory"
+                },
+                {
+                  "zh": "贏得尊敬",
+                  "en": "earn the ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "respect"
+                },
+                {
+                  "zh": "重要的工作",
+                  "en": "____ tasks",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "essential"
+                },
+                {
+                  "zh": null,
+                  "en": "Be sure to ____ yourself with every feature of our product.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "acquaint"
+                },
+                {
+                  "zh": null,
+                  "en": "We must ____ this financial problem as soon as possible.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "resolve"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ____ me if any problems come up during my vacation.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "notify"
+                },
+                {
+                  "zh": null,
+                  "en": "We'll finish this project faster if we ____ the workload.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "divide"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ____ of recyclable materials in the appropriate bins.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "dispose"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Kim gets along well with the ____ of the employees.",
+                  "options": [
+                    "extension",
+                    "rest",
+                    "method"
+                  ],
+                  "answer": "rest"
+                },
+                {
+                  "zh": null,
+                  "en": "I have a(n) ____ busy schedule all day today.",
+                  "options": [
+                    "accordingly",
+                    "pretty",
+                    "periodically"
+                  ],
+                  "answer": "pretty"
+                },
+                {
+                  "zh": null,
+                  "en": "The best way to ____ a team is to be a good example.",
+                  "options": [
+                    "manage",
+                    "explain",
+                    "suppose"
+                  ],
+                  "answer": "manage"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day5-p2",
+              "title": "Part 2",
+              "zh": "業務協調",
+              "color": "#C77B3E",
+              "words": [
                 {
                   "en": "divide",
                   "pos": "v.",
@@ -22261,7 +24341,167 @@
                   "ex_blank": "Mr. Weinstein ____ the Black Diamond Web site.",
                   "grammar": "字彙放大鏡：相似詞：run, supervise, direct。衍生字：management n. 管理；經營。",
                   "ipa": "ˈmænɪʤ"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "暫時採用",
+                  "en": "accepted ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "provisionally"
                 },
+                {
+                  "zh": "相關細節",
+                  "en": "____ details",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "pertinent"
+                },
+                {
+                  "zh": "電話目錄",
+                  "en": "telephone ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "directory"
+                },
+                {
+                  "zh": "贏得尊敬",
+                  "en": "earn the ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "respect"
+                },
+                {
+                  "zh": "重要的工作",
+                  "en": "____ tasks",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "essential"
+                },
+                {
+                  "zh": null,
+                  "en": "Be sure to ____ yourself with every feature of our product.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "acquaint"
+                },
+                {
+                  "zh": null,
+                  "en": "We must ____ this financial problem as soon as possible.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "resolve"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ____ me if any problems come up during my vacation.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "notify"
+                },
+                {
+                  "zh": null,
+                  "en": "We'll finish this project faster if we ____ the workload.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "divide"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ____ of recyclable materials in the appropriate bins.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "dispose"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Kim gets along well with the ____ of the employees.",
+                  "options": [
+                    "extension",
+                    "rest",
+                    "method"
+                  ],
+                  "answer": "rest"
+                },
+                {
+                  "zh": null,
+                  "en": "I have a(n) ____ busy schedule all day today.",
+                  "options": [
+                    "accordingly",
+                    "pretty",
+                    "periodically"
+                  ],
+                  "answer": "pretty"
+                },
+                {
+                  "zh": null,
+                  "en": "The best way to ____ a team is to be a good example.",
+                  "options": [
+                    "manage",
+                    "explain",
+                    "suppose"
+                  ],
+                  "answer": "manage"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day5-p3",
+              "title": "Part 3",
+              "zh": "業務協調",
+              "color": "#C77B3E",
+              "words": [
                 {
                   "en": "manual",
                   "pos": "n.",
@@ -22358,7 +24598,167 @@
                   "ex_blank": "He is a ____ of Lakewood Fitness Center.",
                   "grammar": "衍生字：represent v. 代表；表示。字彙放大鏡：a sales representative 業務代表；a customer service representative 客服代表。",
                   "ipa": "ˌrɛprɪˈzɛnətɪv"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "暫時採用",
+                  "en": "accepted ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "provisionally"
                 },
+                {
+                  "zh": "相關細節",
+                  "en": "____ details",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "pertinent"
+                },
+                {
+                  "zh": "電話目錄",
+                  "en": "telephone ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "directory"
+                },
+                {
+                  "zh": "贏得尊敬",
+                  "en": "earn the ____",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "respect"
+                },
+                {
+                  "zh": "重要的工作",
+                  "en": "____ tasks",
+                  "options": [
+                    "provisionally",
+                    "essential",
+                    "pertinent",
+                    "respect",
+                    "directory"
+                  ],
+                  "answer": "essential"
+                },
+                {
+                  "zh": null,
+                  "en": "Be sure to ____ yourself with every feature of our product.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "acquaint"
+                },
+                {
+                  "zh": null,
+                  "en": "We must ____ this financial problem as soon as possible.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "resolve"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ____ me if any problems come up during my vacation.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "notify"
+                },
+                {
+                  "zh": null,
+                  "en": "We'll finish this project faster if we ____ the workload.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "divide"
+                },
+                {
+                  "zh": null,
+                  "en": "Please ____ of recyclable materials in the appropriate bins.",
+                  "options": [
+                    "notify",
+                    "acquaint",
+                    "resolve",
+                    "dispose",
+                    "divide"
+                  ],
+                  "answer": "dispose"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Kim gets along well with the ____ of the employees.",
+                  "options": [
+                    "extension",
+                    "rest",
+                    "method"
+                  ],
+                  "answer": "rest"
+                },
+                {
+                  "zh": null,
+                  "en": "I have a(n) ____ busy schedule all day today.",
+                  "options": [
+                    "accordingly",
+                    "pretty",
+                    "periodically"
+                  ],
+                  "answer": "pretty"
+                },
+                {
+                  "zh": null,
+                  "en": "The best way to ____ a team is to be a good example.",
+                  "options": [
+                    "manage",
+                    "explain",
+                    "suppose"
+                  ],
+                  "answer": "manage"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day5-p4",
+              "title": "Part 4",
+              "zh": "業務協調",
+              "color": "#C77B3E",
+              "words": [
                 {
                   "en": "resolve",
                   "pos": "v.",
@@ -22615,8 +25015,8 @@
           "zh": "人才招募",
           "units": [
             {
-              "id": "toeic-day6-u1",
-              "title": "Unit 01",
+              "id": "toeic-day6-p1",
+              "title": "Part 1",
               "zh": "人才招募",
               "color": "#2E8B8B",
               "words": [
@@ -22717,7 +25117,15 @@
                   "ex_blank": "I believe that my background and experience make me an attractive candidate for your ____.",
                   "grammar": "字彙放大鏡：take...into consideration 將…列入考慮；under consideration 考慮中。衍生字：consider v. 考慮。",
                   "ipa": "kənˌsɪdərˈeɪʃən"
-                },
+                }
+              ]
+            },
+            {
+              "id": "toeic-day6-p2",
+              "title": "Part 2",
+              "zh": "人才招募",
+              "color": "#2E8B8B",
+              "words": [
                 {
                   "en": "consistently",
                   "pos": "adv.",
@@ -22814,7 +25222,15 @@
                   "ex_zh": "在見下一個人選之前，讓我們先討論前一位面試者吧。",
                   "ex_blank": "Let's discuss the last person we ____ before we see the next candidate.",
                   "ipa": "ˈɪntərvˌju"
-                },
+                }
+              ]
+            },
+            {
+              "id": "toeic-day6-p3",
+              "title": "Part 3",
+              "zh": "人才招募",
+              "color": "#2E8B8B",
+              "words": [
                 {
                   "en": "invite",
                   "pos": "v.",
@@ -22910,7 +25326,15 @@
                   "ex_blank": "I believe I am very ____ for this position.",
                   "grammar": "衍生字：qualification n. 資格。",
                   "ipa": "kˈwɑləˌfaɪ"
-                },
+                }
+              ]
+            },
+            {
+              "id": "toeic-day6-p4",
+              "title": "Part 4",
+              "zh": "人才招募",
+              "color": "#2E8B8B",
+              "words": [
                 {
                   "en": "recommendation",
                   "pos": "n.",
@@ -23018,8 +25442,8 @@
           "zh": "人事與組織",
           "units": [
             {
-              "id": "toeic-day7-u1",
-              "title": "Unit 01",
+              "id": "toeic-day7-p1",
+              "title": "Part 1",
               "zh": "人事與組織",
               "color": "#B0562E",
               "words": [
@@ -23119,7 +25543,167 @@
                   "ex_blank": "In the opinion of his superiors, Terrence was a ____ team player.",
                   "grammar": "字彙放大鏡：相似詞：reliable。",
                   "ipa": "dɪˈpɛndəbəl"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "擔負責任",
+                  "en": "____ responsibility",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "assume"
                 },
+                {
+                  "zh": "明起生效",
+                  "en": "____ from tomorrow",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "effective"
+                },
+                {
+                  "zh": "在他的領導下",
+                  "en": "under his ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leadership"
+                },
+                {
+                  "zh": "為表彰…",
+                  "en": "in ____ of",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "recognition"
+                },
+                {
+                  "zh": "年假",
+                  "en": "annual ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leave"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. White was ____ from Boston to the Chicago office.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "transferred"
+                },
+                {
+                  "zh": null,
+                  "en": "Work hard, and you can ____ from salesperson to sales manager.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "advance"
+                },
+                {
+                  "zh": null,
+                  "en": "Roger had to ____ from our company because of health problems.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "resign"
+                },
+                {
+                  "zh": null,
+                  "en": "Arnold Crothers will ____ Rolf Hansen as CEO effective August 1.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "succeed"
+                },
+                {
+                  "zh": null,
+                  "en": "Only qualified employees will be ____ to use this equipment.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "authorized"
+                },
+                {
+                  "zh": null,
+                  "en": "He is a ____ experienced web designer.",
+                  "options": [
+                    "particularly",
+                    "diligently",
+                    "independently"
+                  ],
+                  "answer": "particularly"
+                },
+                {
+                  "zh": null,
+                  "en": "The results of your ____ depend on your work performance.",
+                  "options": [
+                    "appraisal",
+                    "completion",
+                    "tenure"
+                  ],
+                  "answer": "appraisal"
+                },
+                {
+                  "zh": null,
+                  "en": "Most employees at fast food restaurants have ____ responsibility.",
+                  "options": [
+                    "limited",
+                    "resourceful",
+                    "eligible"
+                  ],
+                  "answer": "limited"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day7-p2",
+              "title": "Part 2",
+              "zh": "人事與組織",
+              "color": "#B0562E",
+              "words": [
                 {
                   "en": "diligent",
                   "pos": "adj.",
@@ -23212,7 +25796,167 @@
                   "ex_blank": "Mr. Kline is an experienced researcher who is able to handle high-level research projects ____.",
                   "grammar": "衍生字：independent adj. 獨立的；independence n. 獨立。",
                   "ipa": "ˌɪndɪˈpɛndəntli"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "擔負責任",
+                  "en": "____ responsibility",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "assume"
                 },
+                {
+                  "zh": "明起生效",
+                  "en": "____ from tomorrow",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "effective"
+                },
+                {
+                  "zh": "在他的領導下",
+                  "en": "under his ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leadership"
+                },
+                {
+                  "zh": "為表彰…",
+                  "en": "in ____ of",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "recognition"
+                },
+                {
+                  "zh": "年假",
+                  "en": "annual ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leave"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. White was ____ from Boston to the Chicago office.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "transferred"
+                },
+                {
+                  "zh": null,
+                  "en": "Work hard, and you can ____ from salesperson to sales manager.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "advance"
+                },
+                {
+                  "zh": null,
+                  "en": "Roger had to ____ from our company because of health problems.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "resign"
+                },
+                {
+                  "zh": null,
+                  "en": "Arnold Crothers will ____ Rolf Hansen as CEO effective August 1.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "succeed"
+                },
+                {
+                  "zh": null,
+                  "en": "Only qualified employees will be ____ to use this equipment.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "authorized"
+                },
+                {
+                  "zh": null,
+                  "en": "He is a ____ experienced web designer.",
+                  "options": [
+                    "particularly",
+                    "diligently",
+                    "independently"
+                  ],
+                  "answer": "particularly"
+                },
+                {
+                  "zh": null,
+                  "en": "The results of your ____ depend on your work performance.",
+                  "options": [
+                    "appraisal",
+                    "completion",
+                    "tenure"
+                  ],
+                  "answer": "appraisal"
+                },
+                {
+                  "zh": null,
+                  "en": "Most employees at fast food restaurants have ____ responsibility.",
+                  "options": [
+                    "limited",
+                    "resourceful",
+                    "eligible"
+                  ],
+                  "answer": "limited"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day7-p3",
+              "title": "Part 3",
+              "zh": "人事與組織",
+              "color": "#B0562E",
+              "words": [
                 {
                   "en": "inexperienced",
                   "pos": "adj.",
@@ -23307,7 +26051,167 @@
                   "ex_zh": "李先生比他的前輩更看重這份工作。",
                   "ex_blank": "Mr. Lee takes his job more seriously than his ____ did.",
                   "ipa": "ˈprɛdəˌsɛsər"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "擔負責任",
+                  "en": "____ responsibility",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "assume"
                 },
+                {
+                  "zh": "明起生效",
+                  "en": "____ from tomorrow",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "effective"
+                },
+                {
+                  "zh": "在他的領導下",
+                  "en": "under his ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leadership"
+                },
+                {
+                  "zh": "為表彰…",
+                  "en": "in ____ of",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "recognition"
+                },
+                {
+                  "zh": "年假",
+                  "en": "annual ____",
+                  "options": [
+                    "recognition",
+                    "leadership",
+                    "assume",
+                    "effective",
+                    "leave"
+                  ],
+                  "answer": "leave"
+                },
+                {
+                  "zh": null,
+                  "en": "Ms. White was ____ from Boston to the Chicago office.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "transferred"
+                },
+                {
+                  "zh": null,
+                  "en": "Work hard, and you can ____ from salesperson to sales manager.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "advance"
+                },
+                {
+                  "zh": null,
+                  "en": "Roger had to ____ from our company because of health problems.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "resign"
+                },
+                {
+                  "zh": null,
+                  "en": "Arnold Crothers will ____ Rolf Hansen as CEO effective August 1.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "succeed"
+                },
+                {
+                  "zh": null,
+                  "en": "Only qualified employees will be ____ to use this equipment.",
+                  "options": [
+                    "advance",
+                    "transferred",
+                    "succeed",
+                    "resign",
+                    "authorized"
+                  ],
+                  "answer": "authorized"
+                },
+                {
+                  "zh": null,
+                  "en": "He is a ____ experienced web designer.",
+                  "options": [
+                    "particularly",
+                    "diligently",
+                    "independently"
+                  ],
+                  "answer": "particularly"
+                },
+                {
+                  "zh": null,
+                  "en": "The results of your ____ depend on your work performance.",
+                  "options": [
+                    "appraisal",
+                    "completion",
+                    "tenure"
+                  ],
+                  "answer": "appraisal"
+                },
+                {
+                  "zh": null,
+                  "en": "Most employees at fast food restaurants have ____ responsibility.",
+                  "options": [
+                    "limited",
+                    "resourceful",
+                    "eligible"
+                  ],
+                  "answer": "limited"
+                }
+              ]
+            },
+            {
+              "id": "toeic-day7-p4",
+              "title": "Part 4",
+              "zh": "人事與組織",
+              "color": "#B0562E",
+              "words": [
                 {
                   "en": "promote",
                   "pos": "v.",

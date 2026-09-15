@@ -517,30 +517,57 @@ exports.listViewableFamilyMembers = onCall(
 // 把某人 progress 文件的原始資料整理成給「家長檢視」畫面看的摘要數字，
 // 欄位名稱都對應 index.html 裡 markStamp/recordWordResult/markWordLearned
 // 實際寫入 Firestore 的資料結構
+// 用 Asia/Taipei 時區算「今天」的日期字串（YYYY-MM-DD），不管 Cloud
+// Function 執行主機本身在哪個時區（Google Cloud 預設是 UTC）。這裡的
+// 格式要跟 index.html 裡 todayStr()（用使用者裝置本機時間算今天）完全
+// 一致，兩邊才能正確比對是不是同一天。
+function taiwanTodayStr() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(new Date());
+}
+
 function buildFamilyProgressSummary(data) {
   const stamps = data.stamps || {};
-  const dailyStamps = data.dailyStamps || {};
   const learnedWords = data.learnedWords || {};
-  const dailyLearnedWords = data.dailyLearnedWords || {};
   const mistakes = data.mistakes || {};
-  const dailyMistakes = data.dailyMistakes || {};
+
+  // 「今天」的每日暫存資料（dailyStamps/dailyMistakes/dailyLearnedWords）
+  // 只有在使用者的裝置重新打開 App 時才會被清空重置（ensureDailyReset）。
+  // 如果他昨晚練習完就沒再打開過 App，家長現在查看時，這些欄位裡還留著
+  // 「昨天」的資料，但沒有一起存「這份資料是哪一天的」——只有一個
+  // dailyResetDate 欄位記錄「最後一次重置是哪一天」。用這個欄位跟台灣
+  // 時區的今天比對，如果對不上，代表這些 daily 欄位其實是舊資料，
+  // 今天實際上還沒有任何練習紀錄，不能直接拿來當「今天」的數字顯示。
+  const isTodayFresh = data.dailyResetDate === taiwanTodayStr();
+  const dailyStamps = isTodayFresh ? (data.dailyStamps || {}) : {};
+  const dailyLearnedWords = isTodayFresh ? (data.dailyLearnedWords || {}) : {};
+  const dailyMistakes = isTodayFresh ? (data.dailyMistakes || {}) : {};
 
   let todayActivitiesDone = 0;
-  let lastActiveAt = 0;
   const todayActivityList = [];
   Object.entries(dailyStamps).forEach(([unitId, acts]) => {
     Object.entries(acts || {}).forEach(([activityKey, entry]) => {
       todayActivitiesDone++;
-      const at = entry.lastAt || 0;
-      if (at > lastActiveAt) lastActiveAt = at;
-      todayActivityList.push({ unitId, activityKey, score: entry.lastScore || null, at });
+      todayActivityList.push({ unitId, activityKey, score: entry.lastScore || null, at: entry.lastAt || 0 });
     });
   });
   todayActivityList.sort((a, b) => b.at - a.at);
 
+  // 「最近一次練習」要看永久紀錄（stamps），不能只看 dailyStamps——
+  // dailyStamps 每天都會被清空，如果只看它，一旦跨過午夜、使用者還沒
+  // 重新打開過 App，這裡就會變成「還沒有紀錄」，即使他昨晚才練習過。
+  let lastActiveAt = 0;
   let totalActivitiesDone = 0;
   Object.values(stamps).forEach(acts => {
-    totalActivitiesDone += Object.keys(acts || {}).length;
+    Object.values(acts || {}).forEach(entry => {
+      totalActivitiesDone++;
+      const at = entry.lastAt || 0;
+      if (at > lastActiveAt) lastActiveAt = at;
+    });
   });
 
   const now = Date.now();
@@ -557,6 +584,11 @@ function buildFamilyProgressSummary(data) {
     // 比較早的紀錄截斷、看不到，改成整天都回傳，讓家長能看到完整一天的紀錄
     todayActivityList,
     todayWordsLearned: Object.keys(dailyLearnedWords).length,
+    // 原始的「今天字卡跟讀完成」單字清單（key 格式是 unitId::en），
+    // 前端已經有每個單元的完整單字表，交給前端依單元分組、算出
+    // 「Part 1 已練習 n 個字／共 X 字」這種畫面，後端不用另外存一份
+    // 課本內容資料
+    todayLearnedWordKeys: Object.keys(dailyLearnedWords),
     todayMistakeCount: Object.keys(dailyMistakes).length,
     todayMistakeList,
     totalActivitiesDone,
