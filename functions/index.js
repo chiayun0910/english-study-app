@@ -491,7 +491,7 @@ exports.lookupWord = onCall(
 /* 但只回傳整理過的摘要數字，不會把對方完整的原始進度資料整包丟出去。    */
 /* ------------------------------------------------------------------ */
 const FAMILY_VIEW_MAP = {
-  patricia910: ["vivi611", "polly1215", "alicia1003", "sam312", "michael1215"]
+  patricia910: ["patricia910", "vivi611", "polly1215", "alicia1003", "sam312", "michael1215"]
 };
 
 function usernameFromAuth(request) {
