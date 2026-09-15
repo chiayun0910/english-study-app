@@ -2894,6 +2894,11 @@ function PronunciationRecorder({
   const recorderRef = useRef(null);
   const timerRef = useRef(null);
   const recognitionRef = useRef(null);
+  // 標記「這次結束是不是我們自己主動叫它停的」（使用者按結束、或錄音時間
+  // 到）。瀏覽器的語音辨識有時候即使設定 continuous，遇到句子中間稍長的
+  // 停頓還是會自己把辨識工作階段結束掉，不是我們主動停止、使用者也還沒
+  // 念完，這種「非預期結束」要自動重新啟動繼續收音，而不是直接當作念完了。
+  const intentionalStopRef = useRef(false);
   useEffect(() => () => {
     if (recognitionRef.current) {
       try {
@@ -2917,6 +2922,7 @@ function PronunciationRecorder({
   const maxDurationMs = mode === "sentence" ? Math.min(25000, 5000 + wordCount * 900) : 5000;
   const stopRecording = () => {
     if (recognitionRef.current) {
+      intentionalStopRef.current = true;
       recognitionRef.current.stop();
       return;
     }
@@ -2973,6 +2979,10 @@ function PronunciationRecorder({
     }
     let settled = false;
     let latestAlts = [];
+    let accumulatedText = ""; // 前面幾輪（自動重啟過）累積下來的文字
+    let restartCount = 0;
+    const MAX_AUTO_RESTARTS = 6; // 保底上限，避免極端狀況下無限重啟
+    intentionalStopRef.current = false;
     // 判定結果、更新畫面，只會真正執行一次（settled 擋住重複觸發，例如
     // onerror 先處理過，後面接著來的 onend 就不會再判一次）
     const finalize = () => {
@@ -3004,30 +3014,74 @@ function PronunciationRecorder({
       }
       // continuous 模式下，句子中間停頓會被拆成好幾段結果，把每段的最佳
       // 結果接起來也當一個候選，避免只是停頓一下就比對不到完整句子
+      let joinedThisSession = "";
       if (ev.results.length > 1) {
         const joined = [];
         for (let i = 0; i < ev.results.length; i++) {
           joined.push((ev.results[i][0] && ev.results[i][0].transcript) || "");
         }
-        alts.push(joined.filter(Boolean).join(" "));
+        joinedThisSession = joined.filter(Boolean).join(" ");
+        alts.push(joinedThisSession);
+      } else {
+        joinedThisSession = alts[0] || "";
       }
-      latestAlts = alts;
+      // 有前面幾輪自動重啟累積的文字時，也把「累積文字＋這一段」接起來
+      // 當作候選之一，這樣就算辨識引擎自己把整句拆成好幾個 session，
+      // 只要每段各自聽對，接起來還是能比對到完整句子
+      const combined = accumulatedText ? `${accumulatedText} ${joinedThisSession}`.trim() : "";
+      latestAlts = combined ? [combined, ...alts] : alts;
       // 單字模式（non-continuous）抓到結果就是真的講完了，直接判定；
       // 句子模式（continuous）先累積結果，等使用者按「結束」或錄音逾時，
       // 由 onend 統一判定，中途的停頓不會提早結束、也不會提早判定失敗
       if (mode === "word") finalize();
     };
+    // 句子模式下，如果不是我們自己叫它停的（使用者按結束／錄音逾時），
+    // 代表瀏覽器自己把辨識工作階段提早結束了（即使設定了 continuous，
+    // 部分瀏覽器遇到句子中間稍長的停頓還是會這樣，有時是乾淨地觸發
+    // onend，有時是先丟一個 no-speech 的 onerror），這種情況自動重新
+    // 啟動繼續收音，把目前收到的內容記下來接續，使用者不用自己重按，
+    // 也不會因為「這一輪重啟後暫時沒聽到新的聲音」就把之前已經聽對的
+    // 內容整個丟掉、誤判成沒聽清楚。
+    // 同一次「結束」瀏覽器常常會 onerror 跟 onend 都各觸發一次，這個旗標
+    // 確保只處理一次，避免重啟後、緊接著又收到另一個事件把剛重啟的新一輪
+    // 也立刻結束掉
+    let sessionEnding = false;
+    const restartOrFinalize = () => {
+      if (sessionEnding) return false;
+      sessionEnding = true;
+      if (mode === "sentence" && !intentionalStopRef.current && !settled && restartCount < MAX_AUTO_RESTARTS) {
+        const best = latestAlts[0] || "";
+        if (best) accumulatedText = best;
+        restartCount++;
+        try {
+          recognition.start();
+          sessionEnding = false; // 重啟成功，下一次結束時要能再被處理一次
+          return true;
+        } catch (err) {
+          // 重啟失敗（例如瀏覽器不允許這麼快重新呼叫 start）就照原本流程收尾
+        }
+      }
+      recognitionRef.current = null;
+      // 用目前為止累積到的結果做最終判定；如果完全沒收到任何結果，
+      // finalize() 也會處理成「沒聽清楚，再試一次」，不會卡在「辨識中」畫面
+      finalize();
+      return false;
+    };
     recognition.onerror = ev => {
       if (settled) return;
+      if (ev.error === "no-speech") {
+        // 交給跟 onend 共用的邏輯處理：句子模式且還有機會重試的話，自動
+        // 重啟繼續收音；不然就用目前累積到的內容做最終判定，而不是
+        // 不管三七二十一直接判定「沒聽清楚」、把之前聽對的內容也丟掉
+        restartOrFinalize();
+        return;
+      }
       settled = true;
       if (timerRef.current) {
         clearTimeout(timerRef.current);
         timerRef.current = null;
       }
-      if (ev.error === "no-speech") {
-        setState("retry");
-        setMessage("沒聽清楚，再試一次");
-      } else if (ev.error === "not-allowed" || ev.error === "service-not-allowed") {
+      if (ev.error === "not-allowed" || ev.error === "service-not-allowed") {
         setState("error");
         setMessage("無法取得麥克風權限，請確認瀏覽器/系統設定有允許使用麥克風");
       } else if (ev.error === "aborted") {
@@ -3038,11 +3092,7 @@ function PronunciationRecorder({
       }
     };
     recognition.onend = () => {
-      recognitionRef.current = null;
-      // 使用者手動點停止、或逾時自動停止時，用目前為止累積到的結果做
-      // 最終判定；如果完全沒收到任何結果，finalize() 也會處理成
-      // 「沒聽清楚，再試一次」，不會卡在「辨識中」畫面
-      finalize();
+      restartOrFinalize();
     };
     try {
       recognition.start();
@@ -3050,6 +3100,7 @@ function PronunciationRecorder({
       setState("recording");
       if (mode === "sentence") {
         timerRef.current = setTimeout(() => {
+          intentionalStopRef.current = true;
           if (recognitionRef.current) recognitionRef.current.stop();
         }, maxDurationMs);
       }
