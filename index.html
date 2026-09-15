@@ -2792,29 +2792,6 @@ async function startPcmCapture() {
   };
 }
 
-// 粗略檢查有沒有聲音（避免把一段靜音丟給 Whisper，它有時會憑空「幻想」出字）。
-// 這裡刻意用「滑動視窗峰值」而不是整段錄音的平均音量：單字模式最長錄5秒，
-// 但念一個單字通常1秒內就講完了，剩下都是安靜的，如果用整段平均音量，
-// 就算講話那一小段音量正常，也會被大量的靜音稀釋、平均值被拉到門檻以下，
-// 導致明明有講話卻被誤判成「沒聽清楚」（實測發現這是造成誤判的主因）。
-// 改成看「整段錄音裡最大聲的那一小段」有沒有超過門檻，才不會受錄音長度影響。
-function hasAudibleSpeech(samples) {
-  if (!samples.length) return false;
-  const windowSize = 320; // 16kHz 取樣率下約 20 毫秒一個視窗
-  let maxRms = 0;
-  for (let start = 0; start < samples.length; start += windowSize) {
-    const end = Math.min(start + windowSize, samples.length);
-    let sum = 0;
-    for (let i = start; i < end; i++) sum += samples[i] * samples[i];
-    const rms = Math.sqrt(sum / (end - start));
-    if (rms > maxRms) maxRms = rms;
-  }
-  // 門檻刻意設低一點：這裡只是要濾掉「完全沒聲音」的極端狀況（例如麥克風
-  // 權限問題、真的沒講話），真正「有沒有念對」交給後面的內容比對（Whisper
-  // 辨識結果去跟目標單字/例句比對）判斷更準，這層只是避免把純靜音丟給
-  // Whisper（它有時會對著靜音「幻想」出文字）
-  return maxRms > 0.006;
-}
 // 語音辨識常常把「two」這種拼出來的數字念法，輸出成阿拉伯數字「2」
 // （尤其是瀏覽器內建的免費辨識），例句原文卻是拼出來的英文字，兩邊格式
 // 對不起來就永遠比對不到，即使整句都念對了也一樣。這裡把常見的 0-100
@@ -2834,6 +2811,19 @@ function transcriptWordsClient(s) {
     .filter(Boolean)
     .map(w => NUMBER_WORD_MAP[w] || w);
 }
+// 句子模式的提示詞：只挑句子裡「有實質意義的單字」（跳過 the/a/in 這類
+// 虛詞），跟 functions/index.js 的 sentenceHintWords 邏輯一致
+const SENTENCE_HINT_STOPWORDS_CLIENT = new Set([
+  "a", "an", "the", "to", "in", "on", "at", "of", "for", "and", "or", "but",
+  "is", "are", "was", "were", "be", "been", "being", "it", "its", "this",
+  "that", "these", "those", "i", "you", "he", "she", "we", "they", "my",
+  "your", "his", "her", "our", "their", "get", "gets", "got", "with", "as"
+]);
+function sentenceHintWordsClient(sentence) {
+  return Array.from(new Set(
+    transcriptWordsClient(sentence).filter(w => w.length >= 4 && !SENTENCE_HINT_STOPWORDS_CLIENT.has(w))
+  ));
+}
 function containsPhraseClient(gotWords, targetWords) {
   if (!targetWords.length || gotWords.length < targetWords.length) return false;
   for (let i = 0; i + targetWords.length <= gotWords.length; i++) {
@@ -2849,14 +2839,28 @@ function containsPhraseClient(gotWords, targetWords) {
   return false;
 }
 const CLIENT_SENTENCE_MATCH_THRESHOLD = 0.7;
+// log in、sign up、check out 這類「片語動詞」，語音辨識常常會黏成一個字
+// （login、signup、checkout），但例句原文是分開的兩個字，逐字比對永遠
+// 對不上，即使整句都念對了也一樣。這裡額外檢查「這個字＋前一個字」或
+// 「這個字＋後一個字」黏起來，是不是剛好等於辨識結果裡的某個字。
+function targetWordMatched(targetWords, i, gotSet) {
+  const w = targetWords[i];
+  if (gotSet.has(w)) return true;
+  const next = targetWords[i + 1];
+  const prev = targetWords[i - 1];
+  if (next && gotSet.has(w + next)) return true;
+  if (prev && gotSet.has(prev + w)) return true;
+  return false;
+}
 function sentenceFullyReadClient(target, transcript) {
   const targetWords = transcriptWordsClient(target);
   if (!targetWords.length) return false;
   const gotWords = transcriptWordsClient(transcript);
   const gotSet = new Set(gotWords);
-  const similarity = targetWords.filter(w => gotSet.has(w)).length / targetWords.length;
-  const lastWord = targetWords[targetWords.length - 1];
-  return similarity >= CLIENT_SENTENCE_MATCH_THRESHOLD && gotSet.has(lastWord);
+  const matched = targetWords.filter((w, i) => targetWordMatched(targetWords, i, gotSet)).length;
+  const similarity = matched / targetWords.length;
+  const lastIdx = targetWords.length - 1;
+  return similarity >= CLIENT_SENTENCE_MATCH_THRESHOLD && targetWordMatched(targetWords, lastIdx, gotSet);
 }
 function wordModeMatchClient(transcript, targetList) {
   const gotWords = transcriptWordsClient(transcript);
@@ -2943,15 +2947,20 @@ function PronunciationRecorder({
     recognition.continuous = mode === "sentence";
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
-    // 單字模式試著加上 SpeechGrammarList 提示（列出目標單字/型態），部分瀏覽器
-    // 對這個功能的支援不穩定、常常被忽略，但完全免費、加了也沒有壞處，
-    // 對支援的瀏覽器來說多少能幫助辨識引擎在「聽起來很像但不是」的短單字
-    // 上，往正確答案偏一點（例如 contain 曾被誤判成 1010 這種完全無關的
-    // 內容，這種情況提示詞可能有幫助，但不保證每次都有效）
+    // 試著加上 SpeechGrammarList 提示（列出目標單字，或句子裡的實質單字），
+    // 部分瀏覽器對這個功能的支援不穩定、常常被忽略，但完全免費、加了也
+    // 沒有壞處，對支援的瀏覽器來說多少能幫助辨識引擎在「聽起來很像但不是」
+    // 的單字上往正確答案偏一點（例如 contain 曾被誤判成 1010、autumn 曾
+    // 被誤判成 Alton 這類完全無關的內容，這種情況提示詞可能有幫助，
+    // 但不保證每次都有效）。句子模式只挑實質單字（跳過 the/a/in 這類
+    // 虛詞），不是把整句話當提示詞，避免（萬一該瀏覽器真的有支援）漏念
+    // 或亂念反而被強行拉成跟提示詞一樣。
     const GrammarListCtor = window.SpeechGrammarList || window.webkitSpeechGrammarList;
-    if (mode === "word" && GrammarListCtor && targetWords && targetWords.length) {
+    if (GrammarListCtor) {
       try {
-        const words = targetWords.flatMap(t => transcriptWordsClient(t)).filter(Boolean);
+        const words = mode === "word"
+          ? (targetWords || []).flatMap(t => transcriptWordsClient(t)).filter(Boolean)
+          : sentenceHintWordsClient(targetSentence);
         if (words.length) {
           const grammar = `#JSGF V1.0; grammar words; public <word> = ${words.join(" | ")} ;`;
           const list = new GrammarListCtor();
@@ -3080,7 +3089,12 @@ function PronunciationRecorder({
       recorderRef.current = null;
       streamRef.current = null;
       const samples = await capture.stop();
-      if (!hasAudibleSpeech(samples)) {
+      // 不再用音量門檻預先擋掉「音量太小」的錄音——實測發現即使改成滑動
+      // 視窗峰值，仍會把「講完話、停頓一下才點結束」這種正常操作誤判成
+      // 沒聲音（可能是這個收音管線在部分裝置上量到的音量本來就偏低）。
+      // 改成一律交給 Whisper 辨識，再用比對結果判斷；如果真的是純靜音，
+      // Whisper 會回傳空字串，一樣會顯示「沒聽清楚」，不會誤判成「聽對」。
+      if (!samples.length) {
         setState("retry");
         setMessage("沒聽清楚，再試一次");
         return;
