@@ -2935,7 +2935,12 @@ function PronunciationRecorder({
       return;
     }
     recognition.lang = "en-US";
-    recognition.continuous = false;
+    // 句子模式改用 continuous，念到逗號、句子中間自然停頓一下不會讓辨識
+    // 提早結束（non-continuous 模式下，瀏覽器偵測到一停頓就會直接視為
+    // 使用者講完話，把辨識工作階段整個結束掉，即使使用者根本還沒講完、
+    // 也沒有點「結束」按鈕）。單字模式維持原本的 non-continuous，講完
+    // 一個字通常就是真的講完了，不需要這個處理。
+    recognition.continuous = mode === "sentence";
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
     // 單字模式試著加上 SpeechGrammarList 提示（列出目標單字/型態），部分瀏覽器
@@ -2958,14 +2963,17 @@ function PronunciationRecorder({
       }
     }
     let settled = false;
-    recognition.onresult = ev => {
+    let latestAlts = [];
+    // 判定結果、更新畫面，只會真正執行一次（settled 擋住重複觸發，例如
+    // onerror 先處理過，後面接著來的 onend 就不會再判一次）
+    const finalize = () => {
+      if (settled) return;
       settled = true;
-      const alts = [];
-      for (let i = 0; i < ev.results.length; i++) {
-        for (let j = 0; j < ev.results[i].length; j++) {
-          alts.push(ev.results[i][j].transcript || "");
-        }
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
       }
+      const alts = latestAlts;
       const isMatch = mode === "sentence"
         ? alts.some(t => sentenceFullyReadClient(targetSentence, t))
         : alts.some(t => wordModeMatchClient(t, targetWords));
@@ -2978,8 +2986,35 @@ function PronunciationRecorder({
         setMessage(alts[0] ? `辨識結果：「${alts[0]}」，再試一次` : "沒聽清楚，再試一次");
       }
     };
+    recognition.onresult = ev => {
+      const alts = [];
+      for (let i = 0; i < ev.results.length; i++) {
+        for (let j = 0; j < ev.results[i].length; j++) {
+          alts.push(ev.results[i][j].transcript || "");
+        }
+      }
+      // continuous 模式下，句子中間停頓會被拆成好幾段結果，把每段的最佳
+      // 結果接起來也當一個候選，避免只是停頓一下就比對不到完整句子
+      if (ev.results.length > 1) {
+        const joined = [];
+        for (let i = 0; i < ev.results.length; i++) {
+          joined.push((ev.results[i][0] && ev.results[i][0].transcript) || "");
+        }
+        alts.push(joined.filter(Boolean).join(" "));
+      }
+      latestAlts = alts;
+      // 單字模式（non-continuous）抓到結果就是真的講完了，直接判定；
+      // 句子模式（continuous）先累積結果，等使用者按「結束」或錄音逾時，
+      // 由 onend 統一判定，中途的停頓不會提早結束、也不會提早判定失敗
+      if (mode === "word") finalize();
+    };
     recognition.onerror = ev => {
+      if (settled) return;
       settled = true;
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
       if (ev.error === "no-speech") {
         setState("retry");
         setMessage("沒聽清楚，再試一次");
@@ -2995,17 +3030,20 @@ function PronunciationRecorder({
     };
     recognition.onend = () => {
       recognitionRef.current = null;
-      // 使用者手動點停止、但完全沒偵測到聲音時，既不會觸發 onresult 也
-      // 不一定會觸發 onerror，這裡補一個保底訊息，避免畫面卡在「辨識中」
-      if (!settled) {
-        setState("retry");
-        setMessage("沒聽清楚，再試一次");
-      }
+      // 使用者手動點停止、或逾時自動停止時，用目前為止累積到的結果做
+      // 最終判定；如果完全沒收到任何結果，finalize() 也會處理成
+      // 「沒聽清楚，再試一次」，不會卡在「辨識中」畫面
+      finalize();
     };
     try {
       recognition.start();
       recognitionRef.current = recognition;
       setState("recording");
+      if (mode === "sentence") {
+        timerRef.current = setTimeout(() => {
+          if (recognitionRef.current) recognitionRef.current.stop();
+        }, maxDurationMs);
+      }
     } catch (err) {
       setState("error");
       setMessage("語音辨識啟動失敗，請再試一次");
