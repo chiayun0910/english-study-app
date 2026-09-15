@@ -3525,6 +3525,7 @@ function Flashcards({
     onRestart: () => {
       setIdx(0);
       setFlipped(false);
+      setShowMore(false);
       setDone(false);
     }
   });
@@ -3638,6 +3639,7 @@ function Flashcards({
     onClick: () => {
       setIdx(i => Math.max(0, i - 1));
       setFlipped(false);
+      setShowMore(false);
     }
   }, "上一個"), /*#__PURE__*/React.createElement("button", {
     className: "nav-btn",
@@ -3648,6 +3650,7 @@ function Flashcards({
       } else {
         setIdx(i => i + 1);
         setFlipped(false);
+        setShowMore(false);
       }
     }
   }, idx + 1 >= unit.words.length ? "完成" : "下一個")), /*#__PURE__*/React.createElement(RateControl, null), wordPopup && /*#__PURE__*/React.createElement(AddWordPopup, {
