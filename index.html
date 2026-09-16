@@ -1661,6 +1661,11 @@ function EnglishStudyApp({
         .next-action { display: flex; justify-content: center; margin-top: 16px; }
         .next-action .primary-btn { margin-top: 0; padding: 12px 32px; }
 
+        /* 今天的成績（例如「今天 8/10」）：每天午夜重置，跟下面永久保留的
+           最佳成績分開顯示，放在最佳成績上面，比較新鮮的資訊優先看到 */
+        .activity-card .today-score {
+          margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--green);
+        }
         /* 單元測驗成績徽章（顯示在活動卡片上，例如「最佳 8/10」）：累計紀錄，不會每日重置 */
         .activity-card .best-score {
           margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--unit-color, var(--ink));
@@ -2603,7 +2608,11 @@ function UnitScreen({
     const entry = stampMap[a.key];
     const best = entry && typeof entry === "object" ? entry.bestScore : null;
     const completedCount = entry && typeof entry === "object" ? entry.completedCount : null;
-    const doneToday = !!dailyMap[a.key];
+    const dailyEntry = dailyMap[a.key];
+    const doneToday = !!dailyEntry;
+    // 今天的成績跟歷史最佳成績是兩回事：最佳成績可能是很久以前創下的，
+    // 使用者更想知道的常常是「今天這一次考得怎麼樣」，兩個都顯示
+    const todayScore = dailyEntry && typeof dailyEntry === "object" ? dailyEntry.lastScore : null;
     return /*#__PURE__*/React.createElement("div", {
       key: a.key,
       className: "activity-card",
@@ -2621,7 +2630,9 @@ function UnitScreen({
       size: 12
     }), "今日已完成")), /*#__PURE__*/React.createElement("div", {
       className: "desc"
-    }, a.zh), best && /*#__PURE__*/React.createElement("div", {
+    }, a.zh), todayScore && /*#__PURE__*/React.createElement("div", {
+      className: "today-score"
+    }, "今天 ", todayScore.correct, "/", todayScore.total), best && /*#__PURE__*/React.createElement("div", {
       className: "best-score"
     }, "最佳 ", best.correct, "/", best.total), !!completedCount && /*#__PURE__*/React.createElement("div", {
       className: "practice-count"
