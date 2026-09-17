@@ -1071,7 +1071,8 @@ function EnglishStudyApp({
     const w = missing[0];
     ipaBackfillRef.current.add(w.id);
     lookupWordFn({
-      text: w.en
+      text: w.en,
+      ipaOnly: true // 只補音標，不要順便翻譯（省 Cloud Translation 用量）
     }).then(res => {
       const data = res.data || {};
       if (data.found && data.ipa) updateCustomWordIpa(w.id, data.ipa);
@@ -3351,7 +3352,8 @@ function AddWordPopup({
     // 音標另外查字典 API 取得（翻譯 API 不會給音標），跟翻譯平行進行，
     // 查不到就算了，不影響中文意思/詞性的填入
     lookupWordFn({
-      text: word
+      text: word,
+      ipaOnly: true // 中文意思/詞性已由 translateWord 處理，這裡只要音標，不要重複翻譯
     }).then(res => {
       if (cancelled) return;
       const data = res.data || {};

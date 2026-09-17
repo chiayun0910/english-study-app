@@ -233,6 +233,14 @@ exports.lookupWord = onCall(
       return { found: false };
     }
 
+    // ipaOnly：只要音標，不做任何翻譯（點例句生字彈窗、背景補查音標都只
+    // 用得到音標）。原本這兩個地方也走完整流程，每次白白多做 5 次
+    // Cloud Translation 呼叫（中文意思、例句翻譯、3 條字義），是翻譯
+    // 用量偏高的主因之一
+    if (request.data && request.data.ipaOnly === true) {
+      return { found: true, ipa };
+    }
+
     const pos = mapMwPos(entry.fl);
     const rawExample = findMwExample(entry.def);
     const exampleEn = cleanMwText(rawExample);
