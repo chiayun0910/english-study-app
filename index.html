@@ -2854,13 +2854,43 @@ const CLIENT_SENTENCE_MATCH_THRESHOLD = 0.7;
 // （login、signup、checkout），但例句原文是分開的兩個字，逐字比對永遠
 // 對不上，即使整句都念對了也一樣。這裡額外檢查「這個字＋前一個字」或
 // 「這個字＋後一個字」黏起來，是不是剛好等於辨識結果裡的某個字。
-function targetWordMatched(targetWords, i, gotSet) {
+// 兩個字的「像不像」：用編輯距離（Levenshtein）算相似度 0~1。
+// 語音辨識常把發音接近的字聽成另一個拼法（weather→whether、
+// starts→start、cool→cold），句子模式比對時容許這種「拼字很接近」
+// 的字也算對，減少明明念對卻因為辨識引擎小誤差而被判失敗的情況。
+function wordSimilarity(a, b) {
+  if (a === b) return 1;
+  const m = a.length;
+  const n = b.length;
+  if (!m || !n) return 0;
+  let prev = new Array(n + 1);
+  let cur = new Array(n + 1);
+  for (let j = 0; j <= n; j++) prev[j] = j;
+  for (let i = 1; i <= m; i++) {
+    cur[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+    }
+    [prev, cur] = [cur, prev];
+  }
+  return 1 - prev[n] / Math.max(m, n);
+}
+const FUZZY_WORD_SIMILARITY = 0.75;
+function targetWordMatched(targetWords, i, gotSet, gotWords) {
   const w = targetWords[i];
   if (gotSet.has(w)) return true;
   const next = targetWords[i + 1];
   const prev = targetWords[i - 1];
   if (next && gotSet.has(w + next)) return true;
   if (prev && gotSet.has(prev + w)) return true;
+  // 模糊比對只對 4 個字母以上的字做：短字（is/it/in）差一個字母就是
+  // 完全不同的字，容錯反而會亂配
+  if (w.length >= 4 && gotWords) {
+    for (const g of gotWords) {
+      if (g.length >= 4 && wordSimilarity(w, g) >= FUZZY_WORD_SIMILARITY) return true;
+    }
+  }
   return false;
 }
 function sentenceFullyReadClient(target, transcript) {
@@ -2868,10 +2898,16 @@ function sentenceFullyReadClient(target, transcript) {
   if (!targetWords.length) return false;
   const gotWords = transcriptWordsClient(transcript);
   const gotSet = new Set(gotWords);
-  const matched = targetWords.filter((w, i) => targetWordMatched(targetWords, i, gotSet)).length;
+  const matched = targetWords.filter((w, i) => targetWordMatched(targetWords, i, gotSet, gotWords)).length;
   const similarity = matched / targetWords.length;
+  // 「有念到句尾」的檢查：原本要求最後一個字一定要出現，但句尾的字剛好是
+  // 難字時（例如 ...cool in autumn 的 autumn 被聽成 Alton）整句就永遠過不了，
+  // 即使前面全部都對。改成最後兩個字任一個有出現就算念到句尾，一樣能
+  // 擋掉「念到一半就停」，但不會因為單一個句尾難字被聽錯就整句判失敗。
   const lastIdx = targetWords.length - 1;
-  return similarity >= CLIENT_SENTENCE_MATCH_THRESHOLD && targetWordMatched(targetWords, lastIdx, gotSet);
+  const reachedEnd = targetWordMatched(targetWords, lastIdx, gotSet, gotWords) ||
+    (lastIdx > 0 && targetWordMatched(targetWords, lastIdx - 1, gotSet, gotWords));
+  return similarity >= CLIENT_SENTENCE_MATCH_THRESHOLD && reachedEnd;
 }
 function wordModeMatchClient(transcript, targetList) {
   const gotWords = transcriptWordsClient(transcript);
@@ -2963,7 +2999,10 @@ function PronunciationRecorder({
     // 一個字通常就是真的講完了，不需要這個處理。
     recognition.continuous = mode === "sentence";
     recognition.interimResults = false;
-    recognition.maxAlternatives = 3;
+    // 多要幾個候選結果：Google 的辨識引擎常常「第一名」聽錯（autumn→Alton）
+    // 但正確答案就在第 2~5 名，我們是拿所有候選去比對，只要其中一個對
+    // 就算通過，所以候選越多、被難字冤枉的機率越低，而且完全不花錢
+    recognition.maxAlternatives = 8;
     // 試著加上 SpeechGrammarList 提示（列出目標單字，或句子裡的實質單字），
     // 部分瀏覽器對這個功能的支援不穩定、常常被忽略，但完全免費、加了也
     // 沒有壞處，對支援的瀏覽器來說多少能幫助辨識引擎在「聽起來很像但不是」
