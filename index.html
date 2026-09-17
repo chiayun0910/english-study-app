@@ -2963,10 +2963,10 @@ function PronunciationRecorder({
     }
   }, []);
   const wordCount = mode === "sentence" ? (targetSentence || "").split(/\s+/).filter(Boolean).length : 1;
-  // 單字固定錄 2.5 秒；例句依字數拉長錄音時間（每字約 0.45 秒），上限 10 秒
-  // 既然錄音中可以隨時手動點一下結束，上限就抓寬鬆一點，避免不熟悉、念得比較慢
-  // 的使用者話還沒講完就被自動截斷、錄不到後半句
-  const maxDurationMs = mode === "sentence" ? Math.min(25000, 5000 + wordCount * 900) : 5000;
+  // 錄音時間上限抓寬鬆：這只是「保底」用的，正常情況使用者念完會自己點
+  // 結束。不熟的句子念得慢、中間會停下來想，家人實測原本的上限（每字 0.9
+  // 秒）還是會有人念到一半就被截斷，改成每字 1.5 秒、最長 45 秒，單字 8 秒
+  const maxDurationMs = mode === "sentence" ? Math.min(45000, 8000 + wordCount * 1500) : 8000;
   const stopRecording = () => {
     if (recognitionRef.current) {
       intentionalStopRef.current = true;
@@ -3031,7 +3031,10 @@ function PronunciationRecorder({
     let latestAlts = [];
     let accumulatedText = ""; // 前面幾輪（自動重啟過）累積下來的文字
     let restartCount = 0;
-    const MAX_AUTO_RESTARTS = 6; // 保底上限，避免極端狀況下無限重啟
+    // 保底上限，避免極端狀況下無限重啟。念得慢的人一句話可能停頓好幾次，
+    // 每次停頓瀏覽器都可能自己結束一輪、由我們重啟接續，所以上限要夠大；
+    // 真正的總時間上限由 maxDurationMs 那個計時器控制
+    const MAX_AUTO_RESTARTS = 15;
     intentionalStopRef.current = false;
     // 判定結果、更新畫面，只會真正執行一次（settled 擋住重複觸發，例如
     // onerror 先處理過，後面接著來的 onend 就不會再判一次）
