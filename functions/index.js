@@ -11,12 +11,70 @@
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
+const crypto = require("crypto");
 const { Translate } = require("@google-cloud/translate").v2;
 const language = require("@google-cloud/language");
 
 admin.initializeApp();
+const db = admin.firestore();
 const translateClient = new Translate();
 const languageClient = new language.LanguageServiceClient();
+
+/* ------------------------------------------------------------------ */
+/* 查過的字存起來重複使用                                               */
+/*                                                                      */
+/* 翻譯、文法分析、字典查詢的結果都存進 Firestore，同一個字（或同一句） */
+/* 第二次再查時直接讀快取，不再打 Google Translation / Natural Language  */
+/* / Merriam-Webster。全家六個帳號查的字大量重複（同一本課本、同一批   */
+/* 例句），加上背景補查音標會把每個自訂生字都查一遍，快取能把付費 API   */
+/* 的用量壓到接近零。Firestore 讀寫在免費額度內（每天 5 萬次讀取）。   */
+/*                                                                      */
+/* 文件 ID 用內容的 SHA-1，避免文字裡的斜線、空白、過長造成無效 ID；   */
+/* 只快取「成功」的結果，API 失敗時不寫入，下次還會重試。              */
+/* ------------------------------------------------------------------ */
+const CACHE_COLLECTIONS = {
+  translate: "cacheTranslate",
+  syntax: "cacheSyntax",
+  dictionary: "cacheDictionary"
+};
+
+function cacheKey(...parts) {
+  return crypto.createHash("sha1").update(parts.join("\u0000"), "utf8").digest("hex");
+}
+
+// 先讀快取，沒有才呼叫 compute()，成功後寫回快取（寫入失敗不影響回傳）。
+// compute() 回傳 undefined 代表「這次結果不值得存」，例如空字串翻譯。
+async function withCache(collection, key, label, compute) {
+  const ref = db.collection(collection).doc(key);
+  try {
+    const snap = await ref.get();
+    if (snap.exists && snap.data() && snap.data().value !== undefined) {
+      return snap.data().value;
+    }
+  } catch (err) {
+    console.error(`cache read error (${collection})`, err);
+  }
+  const value = await compute();
+  if (value === undefined) return value;
+  ref.set({
+    label,
+    value,
+    createdAt: admin.firestore.FieldValue.serverTimestamp()
+  }).catch(err => console.error(`cache write error (${collection})`, err));
+  return value;
+}
+
+// 英文 → 繁體中文，查過的句子/單字直接用存起來的結果
+async function translateCached(text) {
+  const src = String(text || "").trim();
+  if (!src) return "";
+  const key = cacheKey("zh-TW", src.toLowerCase());
+  const hit = await withCache(CACHE_COLLECTIONS.translate, key, src.slice(0, 200), async () => {
+    const [t] = await translateClient.translate(src, "zh-TW");
+    return typeof t === "string" && t.trim() ? t : undefined;
+  });
+  return hit || "";
+}
 
 // Google 文法分析回傳的詞性代碼，轉換成這個 App 資料裡慣用的縮寫
 const POS_MAP = {
@@ -55,33 +113,42 @@ exports.translateWord = onCall(
     let lemma = "";
     let inflectionNote = "";
     try {
-      const [t] = await translateClient.translate(text.trim(), "zh-TW");
-      translation = t;
+      translation = await translateCached(text);
+      if (!translation) throw new Error("empty translation");
     } catch (err) {
       console.error("translateWord translate error", err);
       throw new HttpsError("internal", "翻譯失敗，請自己輸入中文意思");
     }
-    // 詞性分析是加分項目，這步失敗不影響翻譯結果，靜靜失敗即可
+    // 詞性分析是加分項目，這步失敗不影響翻譯結果，靜靜失敗即可。
+    // 同一個字在同一句裡的分析結果固定，快取起來下次不用再問 Google
     if (typeof sentence === "string" && sentence.trim()) {
       try {
-        const [result] = await languageClient.analyzeSyntax({
-          document: { content: sentence, type: "PLAIN_TEXT" },
-          encodingType: "UTF8"
-        });
         const target = text.trim().toLowerCase();
-        const match = (result.tokens || []).find(tok => ((tok.text && tok.text.content) || "").toLowerCase() === target);
-        if (match && match.partOfSpeech && match.partOfSpeech.tag) {
-          pos = POS_MAP[match.partOfSpeech.tag] || "";
-        }
-        // lemma 是這個字在字典裡查得到的原形（例如 received → receive，
-        // cats → cat）。使用者點例句裡的字新增生字時，句子裡出現的常常是
-        // 變化形而非原形，練習時改用原形比較合理，所以把原形跟變化說明
-        // 一起回傳，前端決定要不要採用
-        const rawLemma = match && match.lemma;
-        if (rawLemma && rawLemma.toLowerCase() !== target) {
-          lemma = rawLemma;
-          inflectionNote = describeInflection(text.trim(), lemma, match.partOfSpeech || {});
-        }
+        const key = cacheKey("syntax", target, sentence.trim().toLowerCase());
+        const analysed = await withCache(CACHE_COLLECTIONS.syntax, key, `${target} | ${sentence.trim().slice(0, 150)}`, async () => {
+          const [result] = await languageClient.analyzeSyntax({
+            document: { content: sentence, type: "PLAIN_TEXT" },
+            encodingType: "UTF8"
+          });
+          const match = (result.tokens || []).find(tok => ((tok.text && tok.text.content) || "").toLowerCase() === target);
+          const out = { pos: "", lemma: "", inflectionNote: "" };
+          if (match && match.partOfSpeech && match.partOfSpeech.tag) {
+            out.pos = POS_MAP[match.partOfSpeech.tag] || "";
+          }
+          // lemma 是這個字在字典裡查得到的原形（例如 received → receive，
+          // cats → cat）。使用者點例句裡的字新增生字時，句子裡出現的常常是
+          // 變化形而非原形，練習時改用原形比較合理，所以把原形跟變化說明
+          // 一起回傳，前端決定要不要採用
+          const rawLemma = match && match.lemma;
+          if (rawLemma && rawLemma.toLowerCase() !== target) {
+            out.lemma = rawLemma;
+            out.inflectionNote = describeInflection(text.trim(), out.lemma, match.partOfSpeech || {});
+          }
+          return out;
+        });
+        pos = analysed.pos || "";
+        lemma = analysed.lemma || "";
+        inflectionNote = analysed.inflectionNote || "";
       } catch (err) {
         console.error("translateWord analyzeSyntax error", err);
       }
@@ -197,17 +264,19 @@ exports.lookupWord = onCall(
     // 查詢字，MW 常常同時回傳好幾個條目（例如 received 本身當形容詞的用法、
     // 還有 receive 這個動詞原形），第一個條目不一定有附音標，但後面的條目
     // 可能有，所以查音標時要把每個條目都看過一輪
+    // 連線或 API 出錯時回傳 null（跟「查無此字」的空陣列分開），這種情況
+    // 的結果不能存進快取，否則字典暫時故障會被永久記成「查無此字」
     async function fetchMwEntries(refPath, key) {
       try {
         const res = await fetch(`https://www.dictionaryapi.com/api/v3/references/${refPath}/json/${encodeURIComponent(query)}?key=${key}`);
-        if (!res.ok) return [];
+        if (!res.ok) return null;
         const data = await res.json();
         // 字典查不到確切的字時，MW 回傳的是「拼字建議」字串陣列，不是真正的字義物件；
         // 只有陣列項目是物件（有 meta 欄位）才代表真的查到了
         return Array.isArray(data) ? data.filter(d => d && typeof d === "object" && d.meta) : [];
       } catch (err) {
         console.error(`lookupWord Merriam-Webster fetch error (${refPath})`, err);
-        return [];
+        return null;
       }
     }
     // 音標可能放在 hwi.prs（一般發音），也可能放在 hwi.altprs（例如 received
@@ -217,21 +286,43 @@ exports.lookupWord = onCall(
       return prs && prs.ipa ? prs.ipa : "";
     }
 
-    const learnersEntries = await fetchMwEntries("learners", MW_LEARNERS_KEY.value());
-    let entry = learnersEntries[0] || null;
-    let ipa = "";
-    for (const e of learnersEntries) {
-      ipa = entryIpa(e);
-      if (ipa) break;
-    }
-    if (!entry) {
-      const collegiateEntries = await fetchMwEntries("collegiate", MW_COLLEGIATE_KEY.value());
-      entry = collegiateEntries[0] || null;
-    }
+    // 字典查到的英文資料（音標、詞性、例句、字義）跟這個字綁死，直接整包
+    // 快取；中文翻譯另外用 translateCached 快取，兩層都命中時整次查詢
+    // 完全不用打外部 API
+    const dictKey = cacheKey("mw", query.toLowerCase());
+    const dict = await withCache(CACHE_COLLECTIONS.dictionary, dictKey, query, async () => {
+      const learnersEntries = await fetchMwEntries("learners", MW_LEARNERS_KEY.value());
+      let entry = (learnersEntries && learnersEntries[0]) || null;
+      let ipa = "";
+      for (const e of learnersEntries || []) {
+        ipa = entryIpa(e);
+        if (ipa) break;
+      }
+      let collegiateEntries = null;
+      if (!entry) {
+        collegiateEntries = await fetchMwEntries("collegiate", MW_COLLEGIATE_KEY.value());
+        entry = (collegiateEntries && collegiateEntries[0]) || null;
+      }
+      if (!entry) {
+        // 兩本字典都連不上 → 不快取，這次照舊回「查無此字」，下次再重試
+        if (learnersEntries === null && collegiateEntries === null) return undefined;
+        return { found: false };
+      }
+      return {
+        found: true,
+        ipa,
+        pos: mapMwPos(entry.fl) || "",
+        exampleEn: cleanMwText(findMwExample(entry.def)) || "",
+        // 一字多義的字，字典通常會列好幾條主要字義（同詞性），各自翻成中文
+        // 給使用者參考，比「只翻單一個字」更容易挑到跟例句對得上的說法
+        shortdefs: Array.isArray(entry.shortdef) ? entry.shortdef.slice(0, 3).map(cleanMwText).filter(Boolean) : []
+      };
+    });
 
-    if (!entry) {
+    if (!dict || !dict.found) {
       return { found: false };
     }
+    const ipa = dict.ipa || "";
 
     // ipaOnly：只要音標，不做任何翻譯（點例句生字彈窗、背景補查音標都只
     // 用得到音標）。原本這兩個地方也走完整流程，每次白白多做 5 次
@@ -241,27 +332,21 @@ exports.lookupWord = onCall(
       return { found: true, ipa };
     }
 
-    const pos = mapMwPos(entry.fl);
-    const rawExample = findMwExample(entry.def);
-    const exampleEn = cleanMwText(rawExample);
-    // 一字多義的字，字典通常會列好幾條主要字義（同詞性），各自翻成中文
-    // 給使用者參考，比「只翻單一個字」更容易挑到跟例句對得上的說法
-    const shortdefs = Array.isArray(entry.shortdef) ? entry.shortdef.slice(0, 3).map(cleanMwText).filter(Boolean) : [];
+    const pos = dict.pos || "";
+    const exampleEn = dict.exampleEn || "";
+    const shortdefs = Array.isArray(dict.shortdefs) ? dict.shortdefs : [];
 
-    // 每一段翻譯互不相關，平行呼叫比較快
+    // 每一段翻譯互不相關，平行呼叫比較快；查過的都會直接命中快取
+    const safeTranslate = (text, what) => translateCached(text).catch(err => {
+      console.error(`lookupWord translate ${what} error`, err);
+      return "";
+    });
     const [zh, exampleZh, senses] = await Promise.all([
-      translateClient.translate(query, "zh-TW").then(([t]) => t).catch(err => {
-        console.error("lookupWord translate word error", err);
-        return "";
-      }),
-      exampleEn ? translateClient.translate(exampleEn, "zh-TW").then(([t]) => t).catch(err => {
-        console.error("lookupWord translate example error", err);
-        return "";
-      }) : Promise.resolve(""),
-      shortdefs.length ? Promise.all(shortdefs.map(d => translateClient.translate(d, "zh-TW").then(([t]) => t).catch(err => {
-        console.error("lookupWord translate shortdef error", err);
-        return "";
-      }))).then(list => list.filter(Boolean)) : Promise.resolve([])
+      safeTranslate(query, "word"),
+      exampleEn ? safeTranslate(exampleEn, "example") : Promise.resolve(""),
+      shortdefs.length
+        ? Promise.all(shortdefs.map(d => safeTranslate(d, "shortdef"))).then(list => list.filter(Boolean))
+        : Promise.resolve([])
     ]);
 
     return {
