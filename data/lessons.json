@@ -25118,6 +25118,158 @@
                   "grammar": "字彙放大鏡：take...into consideration 將…列入考慮；under consideration 考慮中。衍生字：consider v. 考慮。",
                   "ipa": "kənˌsɪdərˈeɪʃən"
                 }
+              ],
+              "quiz": [
+                {
+                  "zh": "遞補職缺",
+                  "en": "____ the position",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "fill"
+                },
+                {
+                  "zh": "供您考慮",
+                  "en": "for your ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "consideration"
+                },
+                {
+                  "zh": "受邀到…",
+                  "en": "be ____ to",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "invited"
+                },
+                {
+                  "zh": "為…負責",
+                  "en": "be ____ for",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "responsible"
+                },
+                {
+                  "zh": "失業",
+                  "en": "be out of ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "employment"
+                },
+                {
+                  "zh": null,
+                  "en": "We will review your résumé to determine if you ____ for the position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "qualify"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will not ____ her contract.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "renew"
+                },
+                {
+                  "zh": null,
+                  "en": "Your skills and experience ____ the needs of our firm.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "fit"
+                },
+                {
+                  "zh": null,
+                  "en": "I ____ a part-time position to a full-time position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "prefer"
+                },
+                {
+                  "zh": null,
+                  "en": "We are ____ a candidate who has overseas work experience.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "seeking"
+                },
+                {
+                  "zh": null,
+                  "en": "My ____ will be visiting China next month to meet with our suppliers.",
+                  "options": [
+                    "reference",
+                    "familiarity",
+                    "associate"
+                  ],
+                  "answer": "associate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Lee's ability is ____ in all his reports.",
+                  "options": [
+                    "ideal",
+                    "confidential",
+                    "evident"
+                  ],
+                  "answer": "evident"
+                },
+                {
+                  "zh": null,
+                  "en": "Your ____ consists of a base salary plus bonuses and benefits.",
+                  "options": [
+                    "ethic",
+                    "compensation",
+                    "proficiency"
+                  ],
+                  "answer": "compensation"
+                }
               ]
             },
             {
@@ -25223,6 +25375,158 @@
                   "ex_blank": "Let's discuss the last person we ____ before we see the next candidate.",
                   "ipa": "ˈɪntərvˌju"
                 }
+              ],
+              "quiz": [
+                {
+                  "zh": "遞補職缺",
+                  "en": "____ the position",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "fill"
+                },
+                {
+                  "zh": "供您考慮",
+                  "en": "for your ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "consideration"
+                },
+                {
+                  "zh": "受邀到…",
+                  "en": "be ____ to",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "invited"
+                },
+                {
+                  "zh": "為…負責",
+                  "en": "be ____ for",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "responsible"
+                },
+                {
+                  "zh": "失業",
+                  "en": "be out of ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "employment"
+                },
+                {
+                  "zh": null,
+                  "en": "We will review your résumé to determine if you ____ for the position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "qualify"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will not ____ her contract.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "renew"
+                },
+                {
+                  "zh": null,
+                  "en": "Your skills and experience ____ the needs of our firm.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "fit"
+                },
+                {
+                  "zh": null,
+                  "en": "I ____ a part-time position to a full-time position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "prefer"
+                },
+                {
+                  "zh": null,
+                  "en": "We are ____ a candidate who has overseas work experience.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "seeking"
+                },
+                {
+                  "zh": null,
+                  "en": "My ____ will be visiting China next month to meet with our suppliers.",
+                  "options": [
+                    "reference",
+                    "familiarity",
+                    "associate"
+                  ],
+                  "answer": "associate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Lee's ability is ____ in all his reports.",
+                  "options": [
+                    "ideal",
+                    "confidential",
+                    "evident"
+                  ],
+                  "answer": "evident"
+                },
+                {
+                  "zh": null,
+                  "en": "Your ____ consists of a base salary plus bonuses and benefits.",
+                  "options": [
+                    "ethic",
+                    "compensation",
+                    "proficiency"
+                  ],
+                  "answer": "compensation"
+                }
               ]
             },
             {
@@ -25326,6 +25630,158 @@
                   "ex_blank": "I believe I am very ____ for this position.",
                   "grammar": "衍生字：qualification n. 資格。",
                   "ipa": "kˈwɑləˌfaɪ"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "遞補職缺",
+                  "en": "____ the position",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "fill"
+                },
+                {
+                  "zh": "供您考慮",
+                  "en": "for your ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "consideration"
+                },
+                {
+                  "zh": "受邀到…",
+                  "en": "be ____ to",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "invited"
+                },
+                {
+                  "zh": "為…負責",
+                  "en": "be ____ for",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "responsible"
+                },
+                {
+                  "zh": "失業",
+                  "en": "be out of ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "employment"
+                },
+                {
+                  "zh": null,
+                  "en": "We will review your résumé to determine if you ____ for the position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "qualify"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will not ____ her contract.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "renew"
+                },
+                {
+                  "zh": null,
+                  "en": "Your skills and experience ____ the needs of our firm.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "fit"
+                },
+                {
+                  "zh": null,
+                  "en": "I ____ a part-time position to a full-time position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "prefer"
+                },
+                {
+                  "zh": null,
+                  "en": "We are ____ a candidate who has overseas work experience.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "seeking"
+                },
+                {
+                  "zh": null,
+                  "en": "My ____ will be visiting China next month to meet with our suppliers.",
+                  "options": [
+                    "reference",
+                    "familiarity",
+                    "associate"
+                  ],
+                  "answer": "associate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Lee's ability is ____ in all his reports.",
+                  "options": [
+                    "ideal",
+                    "confidential",
+                    "evident"
+                  ],
+                  "answer": "evident"
+                },
+                {
+                  "zh": null,
+                  "en": "Your ____ consists of a base salary plus bonuses and benefits.",
+                  "options": [
+                    "ethic",
+                    "compensation",
+                    "proficiency"
+                  ],
+                  "answer": "compensation"
                 }
               ]
             },
@@ -25431,6 +25887,158 @@
                   "ex_zh": "旅遊與餐飲業雇用了此城市四分之一以上的勞動人口。",
                   "ex_blank": "The tourism and food service industries employ over 25 percent of the ____ of this city.",
                   "ipa": "ˈwərkˌfɔrs"
+                }
+              ],
+              "quiz": [
+                {
+                  "zh": "遞補職缺",
+                  "en": "____ the position",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "fill"
+                },
+                {
+                  "zh": "供您考慮",
+                  "en": "for your ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "consideration"
+                },
+                {
+                  "zh": "受邀到…",
+                  "en": "be ____ to",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "invited"
+                },
+                {
+                  "zh": "為…負責",
+                  "en": "be ____ for",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "responsible"
+                },
+                {
+                  "zh": "失業",
+                  "en": "be out of ____",
+                  "options": [
+                    "employment",
+                    "consideration",
+                    "responsible",
+                    "invited",
+                    "fill"
+                  ],
+                  "answer": "employment"
+                },
+                {
+                  "zh": null,
+                  "en": "We will review your résumé to determine if you ____ for the position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "qualify"
+                },
+                {
+                  "zh": null,
+                  "en": "The company will not ____ her contract.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "renew"
+                },
+                {
+                  "zh": null,
+                  "en": "Your skills and experience ____ the needs of our firm.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "fit"
+                },
+                {
+                  "zh": null,
+                  "en": "I ____ a part-time position to a full-time position.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "prefer"
+                },
+                {
+                  "zh": null,
+                  "en": "We are ____ a candidate who has overseas work experience.",
+                  "options": [
+                    "fit",
+                    "prefer",
+                    "seeking",
+                    "qualify",
+                    "renew"
+                  ],
+                  "answer": "seeking"
+                },
+                {
+                  "zh": null,
+                  "en": "My ____ will be visiting China next month to meet with our suppliers.",
+                  "options": [
+                    "reference",
+                    "familiarity",
+                    "associate"
+                  ],
+                  "answer": "associate"
+                },
+                {
+                  "zh": null,
+                  "en": "Mr. Lee's ability is ____ in all his reports.",
+                  "options": [
+                    "ideal",
+                    "confidential",
+                    "evident"
+                  ],
+                  "answer": "evident"
+                },
+                {
+                  "zh": null,
+                  "en": "Your ____ consists of a base salary plus bonuses and benefits.",
+                  "options": [
+                    "ethic",
+                    "compensation",
+                    "proficiency"
+                  ],
+                  "answer": "compensation"
                 }
               ]
             }
