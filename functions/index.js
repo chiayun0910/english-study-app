@@ -9,6 +9,7 @@
 /* 裝置端 Whisper），不再經過這裡，也不會產生 Speech-to-Text 費用。     */
 /* ------------------------------------------------------------------ */
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
 const { Translate } = require("@google-cloud/translate").v2;
 const language = require("@google-cloud/language");
@@ -114,8 +115,11 @@ function describeInflection(surfaceForm, lemma, partOfSpeech) {
 // 兩本字典都查：Learner's Dictionary 是給英語學習者用的，例句比較生活化、
 // 也直接附標準 IPA 音標，優先查這本；查不到才退回查 Collegiate Dictionary
 // （比較學術正式，但涵蓋的字更多、更冷門的字也查得到）。
-const MW_LEARNERS_KEY = "6219f3ab-1539-4fe7-88b8-886e084c4298";
-const MERRIAM_WEBSTER_KEY = "bd628020-37b6-4667-b4ae-c3ba57244aa6";
+// 兩把 API 金鑰放在 Firebase Secret Manager（用 firebase functions:secrets:set
+// 設定），不寫在程式碼裡——這個 repo 是公開的，寫在這裡等於把鑰匙貼在門上。
+// 函式啟動時由平台注入，只有在 onCall 選項的 secrets 裡列出的函式拿得到。
+const MW_LEARNERS_KEY = defineSecret("MW_LEARNERS_KEY");
+const MW_COLLEGIATE_KEY = defineSecret("MW_COLLEGIATE_KEY");
 
 // 把 Merriam-Webster 文字裡的排版標記（例如 {it}斜體{/it}、{wi}headword{/wi}）
 // 清掉，只留下純文字給使用者看
@@ -176,7 +180,8 @@ exports.lookupWord = onCall(
   {
     region: "asia-east1",
     memory: "256MiB",
-    timeoutSeconds: 30
+    timeoutSeconds: 30,
+    secrets: [MW_LEARNERS_KEY, MW_COLLEGIATE_KEY]
   },
   async request => {
     if (!request.auth) {
@@ -212,7 +217,7 @@ exports.lookupWord = onCall(
       return prs && prs.ipa ? prs.ipa : "";
     }
 
-    const learnersEntries = await fetchMwEntries("learners", MW_LEARNERS_KEY);
+    const learnersEntries = await fetchMwEntries("learners", MW_LEARNERS_KEY.value());
     let entry = learnersEntries[0] || null;
     let ipa = "";
     for (const e of learnersEntries) {
@@ -220,7 +225,7 @@ exports.lookupWord = onCall(
       if (ipa) break;
     }
     if (!entry) {
-      const collegiateEntries = await fetchMwEntries("collegiate", MERRIAM_WEBSTER_KEY);
+      const collegiateEntries = await fetchMwEntries("collegiate", MW_COLLEGIATE_KEY.value());
       entry = collegiateEntries[0] || null;
     }
 

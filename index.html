@@ -2685,14 +2685,16 @@ function ActivityScreen({
 /* 路徑 B：瀏覽器沒有 Web Speech API 時（iPhone／iPad 加到主畫面的 App    */
 /*         模式就是這種情況），改用 Transformers.js 在裝置上直接跑        */
 /*         OpenAI Whisper（tiny.en）模型辨識。模型第一次使用會下載一次     */
-/*         （約 40MB）並快取在裝置裡，之後離線也能用，完全沒有雲端費用。  */
+/*         （約 75MB）並快取在裝置裡，之後離線也能用，完全沒有雲端費用。  */
 /* 比對規則：word 模式做連續片語比對；sentence 模式 70% 字詞相符＋句尾字  */
 /* 必須出現。                                                            */
 const SpeechRecognitionCtor = typeof window !== "undefined" ? window.SpeechRecognition || window.webkitSpeechRecognition : null;
 
 /* ---- 路徑 B：裝置端 Whisper（Transformers.js） ---- */
 const LOCAL_ASR_LIB_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0";
-const LOCAL_ASR_MODEL_ID = "onnx-community/whisper-tiny.en";
+// base 比 tiny 準確度明顯較好（尤其單字、專有名詞），代價是第一次下載較大
+// （約 75MB vs 40MB）、辨識時間約慢一倍；模型下載與執行都不花錢
+const LOCAL_ASR_MODEL_ID = "onnx-community/whisper-base.en";
 const LOCAL_ASR_SAMPLE_RATE = 16000;
 let localAsrPipelinePromise = null;
 let localAsrReady = false;
@@ -3172,10 +3174,10 @@ function PronunciationRecorder({
     }
     // 先在背景載入模型（第一次會下載），同時開始錄音，讓使用者不用乾等
     const asrPromise = getLocalAsrPipeline(pct => {
-      if (!localAsrReady) setMessage(`首次使用需下載辨識模型（約 40MB）… ${pct}%`);
+      if (!localAsrReady) setMessage(`首次使用需下載辨識模型（約 75MB）… ${pct}%`);
     });
     asrPromise.catch(() => { /* 錯誤在辨識階段統一處理 */ });
-    if (!localAsrReady) setMessage("首次使用需下載辨識模型（約 40MB），請稍候…");
+    if (!localAsrReady) setMessage("首次使用需下載辨識模型（約 75MB），請稍候…");
     let capture;
     try {
       capture = await startPcmCapture();
