@@ -316,6 +316,16 @@ const lookupWordFn = functionsClient.httpsCallable("lookupWord");
 const listViewableFamilyMembersFn = functionsClient.httpsCallable("listViewableFamilyMembers");
 const getFamilyProgressFn = functionsClient.httpsCallable("getFamilyProgress");
 
+// 家長檢視用到的兩個雲端函式偶爾會因為冷啟動或網路不穩而失敗一次，
+// 這裡自動重試幾次（間隔逐次拉長）再放棄，減少「家長檢視常常看不到
+// 內容」——其實資料都在，只是那一次剛好沒讀到、又沒有自動重試。
+function callFamilyFn(fn, arg, attempts = 3, delayMs = 1200) {
+  return fn(arg).catch(err => {
+    if (attempts <= 1) throw err;
+    return new Promise(resolve => setTimeout(resolve, delayMs)).then(() => callFamilyFn(fn, arg, attempts - 1, delayMs * 2));
+  });
+}
+
 // 使用者只需輸入單純的帳號名稱（不含 @），這裡轉換成 Firebase Auth
 // 要求的 email 格式，讓「使用者名稱登入」跟「Firebase 只認 email」兩邊都能滿足
 const AUTH_EMAIL_DOMAIN = "word-island.app";
@@ -1925,7 +1935,7 @@ function EditionPicker({
   const [viewableFamily, setViewableFamily] = useState([]);
   useEffect(() => {
     let cancelled = false;
-    listViewableFamilyMembersFn().then(res => {
+    callFamilyFn(listViewableFamilyMembersFn).then(res => {
       if (!cancelled) setViewableFamily((res.data && res.data.viewable) || []);
     }).catch(err => {
       console.error("listViewableFamilyMembers error", err);
@@ -2025,25 +2035,34 @@ function formatRelativeTime(ts) {
 }
 function FamilyViewScreen({ onBack }) {
   const [members, setMembers] = useState(null); // null = 載入中
+  // 讀取家人清單失敗（網路問題、雲端函式冷啟動逾時…）跟「清單本來就是空的」
+  // 要分開處理，不然畫面會誤導成「沒有家人帳號」，讓人以為設定跑掉了，
+  // 其實只是剛好那次沒讀到，重試通常就會成功
+  const [membersError, setMembersError] = useState("");
   const [selected, setSelected] = useState(null); // 選中的 username
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  useEffect(() => {
-    listViewableFamilyMembersFn().then(res => {
+  const loadMembers = () => {
+    setMembers(null);
+    setMembersError("");
+    callFamilyFn(listViewableFamilyMembersFn).then(res => {
       setMembers((res.data && res.data.viewable) || []);
     }).catch(err => {
       console.error("listViewableFamilyMembers error", err);
       setMembers([]);
-      setError("讀取家人清單失敗，請重新整理頁面再試一次");
+      setMembersError("讀取家人清單失敗，請按下方按鈕重試");
     });
+  };
+  useEffect(() => {
+    loadMembers();
   }, []);
   const openMember = username => {
     setSelected(username);
     setSummary(null);
     setError("");
     setLoading(true);
-    getFamilyProgressFn({ username }).then(res => {
+    callFamilyFn(getFamilyProgressFn, { username }).then(res => {
       setSummary((res.data && res.data.summary) || null);
     }).catch(err => {
       console.error("getFamilyProgress error", err);
@@ -2056,14 +2075,18 @@ function FamilyViewScreen({ onBack }) {
     const a = ACTIVITIES.find(x => x.key === activityKey);
     return a ? a.label : activityKey;
   };
+  // 不同天／不同課的單元常常同樣叫「Part 1」，單看 Part 名稱分不出是哪一課，
+  // 所以要帶上所屬課程的標題（例如「DAY 3 · Part 1」）
   const unitLabel = unitId => {
     const u = UNITS.find(x => x.id === unitId);
-    return u ? u.title : unitId;
+    if (!u) return unitId;
+    const lesson = LESSONS.find(l => l.id === u.lessonId);
+    return lesson ? `${lesson.title} · ${u.title}` : u.title;
   };
   // 「今天字卡跟讀練習」：後端只回傳今天完成跟讀的單字 key（unitId::en），
   // 這裡依單元分組、對照 UNITS 拿到每個單元的總字數，算出
-  // 「Part 1 已練習 n 個字(n句)／共 X 字(X句)」——字卡「已學習」的條件
-  // 本來就包含單字＋例句都跟讀通過，所以字數跟句數是同一組數字。
+  // 「DAY 3 · Part 1 已練習 n 個字(n句)／共 X 字(X句)」——字卡「已學習」的
+  // 條件本來就包含單字＋例句都跟讀通過，所以字數跟句數是同一組數字。
   const todayLearnedByUnit = [];
   if (summary && summary.todayLearnedWordKeys) {
     const counts = {};
@@ -2075,7 +2098,7 @@ function FamilyViewScreen({ onBack }) {
       const u = UNITS.find(x => x.id === unitId);
       todayLearnedByUnit.push({
         unitId,
-        label: u ? u.title : unitId,
+        label: unitLabel(unitId),
         count,
         total: u ? u.words.length : null
       });
@@ -2091,9 +2114,13 @@ function FamilyViewScreen({ onBack }) {
     className: "empty-note"
   }, "載入中…") : !selected ? /*#__PURE__*/React.createElement("div", {
     className: "unit-list"
-  }, members.length === 0 ? /*#__PURE__*/React.createElement("div", {
+  }, members.length === 0 ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
-  }, "目前沒有可以查看的家人帳號") : members.map(username => /*#__PURE__*/React.createElement("div", {
+  }, membersError || "目前沒有可以查看的家人帳號"), membersError && /*#__PURE__*/React.createElement("button", {
+    className: "primary-btn",
+    style: { marginTop: 12 },
+    onClick: loadMembers
+  }, "重新讀取")) : members.map(username => /*#__PURE__*/React.createElement("div", {
     key: username,
     className: "unit-card",
     onClick: () => openMember(username)
