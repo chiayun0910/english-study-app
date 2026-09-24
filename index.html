@@ -2075,13 +2075,18 @@ function FamilyViewScreen({ onBack }) {
     const a = ACTIVITIES.find(x => x.key === activityKey);
     return a ? a.label : activityKey;
   };
-  // 不同天／不同課的單元常常同樣叫「Part 1」，單看 Part 名稱分不出是哪一課，
-  // 所以要帶上所屬課程的標題（例如「DAY 3 · Part 1」）
+  // 每一課都拆成「Part 1～4／5」小節，光看 Part 名稱完全分不出是哪一課
+  // （不管是多益不同 DAY，還是康軒／翰林不同課，甚至不同課本，小節名稱
+  // 都長一樣）。所以要帶上「課程標題＋主題」，例如「第1課（天氣與自然）
+  // · Part 1」，同一課本裡的每一課主題都不同，才分得出來。
   const unitLabel = unitId => {
     const u = UNITS.find(x => x.id === unitId);
     if (!u) return unitId;
     const lesson = LESSONS.find(l => l.id === u.lessonId);
-    return lesson ? `${lesson.title} · ${u.title}` : u.title;
+    if (!lesson) return u.title;
+    const topic = (lesson.zh || "").split(" ")[0];
+    const lessonLabel = topic ? `${lesson.title}（${topic}）` : lesson.title;
+    return `${lessonLabel} · ${u.title}`;
   };
   // 「今天字卡跟讀練習」：後端只回傳今天完成跟讀的單字 key（unitId::en），
   // 這裡依單元分組、對照 UNITS 拿到每個單元的總字數，算出
