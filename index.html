@@ -2043,6 +2043,11 @@ function FamilyViewScreen({ onBack }) {
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  // 匯出目前所有家人的紀錄成一段文字，方便整理成作業／研究資料時直接複製貼上，
+  // 不用一個一個帳號手動截圖
+  const [exportText, setExportText] = useState("");
+  const [exportStatus, setExportStatus] = useState(""); // "" | "loading" | "error"
+  const [copyStatus, setCopyStatus] = useState("");
   const loadMembers = () => {
     setMembers(null);
     setMembersError("");
@@ -2092,24 +2097,92 @@ function FamilyViewScreen({ onBack }) {
   // 這裡依單元分組、對照 UNITS 拿到每個單元的總字數，算出
   // 「DAY 3 · Part 1 已練習 n 個字(n句)／共 X 字(X句)」——字卡「已學習」的
   // 條件本來就包含單字＋例句都跟讀通過，所以字數跟句數是同一組數字。
-  const todayLearnedByUnit = [];
-  if (summary && summary.todayLearnedWordKeys) {
+  // 拆成獨立函式，畫面顯示跟匯出文字都用同一份邏輯，不用維護兩次。
+  const computeTodayLearnedByUnit = s => {
+    const list = [];
+    if (!s || !s.todayLearnedWordKeys) return list;
     const counts = {};
-    summary.todayLearnedWordKeys.forEach(key => {
+    s.todayLearnedWordKeys.forEach(key => {
       const unitId = key.slice(0, key.lastIndexOf("::"));
       counts[unitId] = (counts[unitId] || 0) + 1;
     });
     Object.entries(counts).forEach(([unitId, count]) => {
       const u = UNITS.find(x => x.id === unitId);
-      todayLearnedByUnit.push({
+      list.push({
         unitId,
         label: unitLabel(unitId),
         count,
         total: u ? u.words.length : null
       });
     });
-    todayLearnedByUnit.sort((a, b) => a.label.localeCompare(b.label));
-  }
+    list.sort((a, b) => a.label.localeCompare(b.label));
+    return list;
+  };
+  const todayLearnedByUnit = computeTodayLearnedByUnit(summary);
+  // 把一位家人的摘要整理成一段純文字，供「匯出成文字紀錄」使用——格式跟畫面上
+  // 顯示的內容一致，但排成方便複製貼到作業／研究筆記裡的樣子
+  const buildMemberText = (username, s) => {
+    const lines = [`▍${username}`];
+    lines.push(`最近一次練習：${formatRelativeTime(s.lastActiveAt)}`);
+    lines.push(`今天：完成 ${s.todayActivitiesDone} 項練習・新學會 ${s.todayWordsLearned} 個字・答錯 ${s.todayMistakeCount} 個字`);
+    lines.push(`累計：完成 ${s.totalActivitiesDone} 項練習・學會 ${s.totalWordsLearnedOnce} 個字・自訂生字 ${s.customWordCount} 個`);
+    lines.push(`待複習：${s.dueMistakeCount} 個字到期（複習清單共 ${s.totalMistakeCount} 個字）`);
+    lines.push("");
+    lines.push("今天字卡跟讀練習：");
+    const learned = computeTodayLearnedByUnit(s);
+    if (learned.length === 0) {
+      lines.push("　（今天還沒有跟讀練習紀錄）");
+    } else {
+      learned.forEach(u => {
+        lines.push(`　- ${u.label}：已練習 ${u.count} 個字(${u.count}句)${u.total ? `／共 ${u.total} 字(${u.total}句)` : ""}`);
+      });
+    }
+    lines.push("");
+    lines.push("今天做過的練習：");
+    if (!s.todayActivityList || s.todayActivityList.length === 0) {
+      lines.push("　（今天還沒有練習紀錄）");
+    } else {
+      s.todayActivityList.forEach(a => {
+        const scoreText = a.score ? `：${a.score.correct}/${a.score.total}` : "";
+        lines.push(`　- ${unitLabel(a.unitId)} · ${activityLabel(a.activityKey)}${scoreText}`);
+      });
+    }
+    lines.push("");
+    lines.push("今天答錯的字：");
+    if (!s.todayMistakeList || s.todayMistakeList.length === 0) {
+      lines.push("　（今天沒有答錯的字）");
+    } else {
+      s.todayMistakeList.forEach(m => {
+        lines.push(`　- ${m.en}${m.pos ? ` (${m.pos})` : ""} ${m.zh}`);
+      });
+    }
+    return lines.join("\n");
+  };
+  const exportAllMembers = () => {
+    if (!members || members.length === 0) return;
+    setExportStatus("loading");
+    setExportText("");
+    setCopyStatus("");
+    Promise.all(members.map(username =>
+      callFamilyFn(getFamilyProgressFn, { username })
+        .then(res => buildMemberText(username, (res.data && res.data.summary) || {}))
+        .catch(err => {
+          console.error("getFamilyProgress (export) error", username, err);
+          return `▍${username}\n（讀取失敗，這位家人的紀錄沒有匯出成功）`;
+        })
+    )).then(parts => {
+      const header = `字卡島 Word Island 家人學習紀錄匯出\n匯出時間：${new Date().toLocaleString("zh-TW")}`;
+      setExportText([header, ...parts].join("\n\n" + "-".repeat(20) + "\n\n"));
+      setExportStatus("");
+    });
+  };
+  const copyExportText = () => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(exportText).then(() => setCopyStatus("已複製！")).catch(() => setCopyStatus("複製失敗，請手動選取文字後複製"));
+    } else {
+      setCopyStatus("請手動選取文字後複製");
+    }
+  };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "back-row",
     onClick: () => selected ? setSelected(null) : onBack()
@@ -2117,7 +2190,7 @@ function FamilyViewScreen({ onBack }) {
     style: { fontSize: 20, marginBottom: 12 }
   }, "👀 家長檢視"), members === null ? /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
-  }, "載入中…") : !selected ? /*#__PURE__*/React.createElement("div", {
+  }, "載入中…") : !selected ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     className: "unit-list"
   }, members.length === 0 ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
@@ -2131,7 +2204,32 @@ function FamilyViewScreen({ onBack }) {
     onClick: () => openMember(username)
   }, /*#__PURE__*/React.createElement("div", {
     className: "unit-card-title"
-  }, username), /*#__PURE__*/React.createElement(ChevronRight, { color: "#B9B6A6" })))) : loading ? /*#__PURE__*/React.createElement("div", {
+  }, username), /*#__PURE__*/React.createElement(ChevronRight, { color: "#B9B6A6" })))),
+  /* 匯出成文字紀錄：整理成作業／研究資料時，不用一個一個帳號手動截圖，
+     一次把全部家人今天／累計的數字都轉成可複製的文字 */
+  members.length > 0 && /*#__PURE__*/React.createElement("div", { style: { marginTop: 20 } },
+    /*#__PURE__*/React.createElement("button", {
+      className: "primary-btn",
+      onClick: exportAllMembers,
+      disabled: exportStatus === "loading"
+    }, exportStatus === "loading" ? "整理中…" : "📋 整理成文字紀錄（可複製，供作業／研究用）"),
+    exportText && /*#__PURE__*/React.createElement("div", { style: { marginTop: 10 } },
+      /*#__PURE__*/React.createElement("textarea", {
+        readOnly: true,
+        value: exportText,
+        onClick: e => e.target.select(),
+        style: {
+          width: "100%", boxSizing: "border-box", minHeight: 260, fontSize: 13,
+          fontFamily: "'Noto Sans TC', sans-serif", padding: 10, borderRadius: 10,
+          border: "1px solid var(--line)", background: "var(--paper)", color: "var(--ink)"
+        }
+      }),
+      /*#__PURE__*/React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 10, marginTop: 6 } },
+        /*#__PURE__*/React.createElement("button", { className: "primary-btn", style: { marginTop: 0 }, onClick: copyExportText }, "複製全部"),
+        copyStatus && /*#__PURE__*/React.createElement("span", { style: { fontSize: 13, color: "#6B6A5E" } }, copyStatus)
+      )
+    )
+  )) : loading ? /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
   }, "讀取中…") : error ? /*#__PURE__*/React.createElement("div", {
     className: "empty-note"
