@@ -4643,10 +4643,13 @@ function dailyTranslateQuestion(unitId, word) {
 function inflectedFormCandidates(base) {
   const b = base.toLowerCase();
   const candidates = new Set([b]);
-  const sForm = /[sxz]$|ch$|sh$/.test(b) ? b + "es" : b + "s";
+  // 子音＋y 結尾要變成 ies／ied（例如 cry→cries／cried），不能直接加 s／ed
+  const endsConsonantY = /[^aeiou]y$/.test(b);
+  const sForm = endsConsonantY ? b.slice(0, -1) + "ies"
+    : /[sxz]$|ch$|sh$/.test(b) ? b + "es" : b + "s";
   candidates.add(sForm);
   candidates.add(/[^aeiou]e$/.test(b) ? b.slice(0, -1) + "ing" : b + "ing");
-  candidates.add(b.endsWith("e") ? b + "d" : b + "ed");
+  candidates.add(endsConsonantY ? b.slice(0, -1) + "ied" : b.endsWith("e") ? b + "d" : b + "ed");
   candidates.add(b + "ly");
   candidates.add(b + "'s");
   candidates.add(sForm + "'");
