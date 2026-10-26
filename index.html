@@ -4610,16 +4610,16 @@ function Typing({
 /* 這個練習方式（見 UnitScreen 的 activityList）。                       */
 /* 批改方式：這是在練「拼字＋句型」，不是語音跟讀，所以跟語音跟讀用的   */
 /* sentenceFullyReadClient（只看這些字有沒有念到、不管詞序文法、也不管  */
-/* 拼字對不對，是為了容忍語音辨識誤差設計的）完全不同邏輯，改成接近     */
-/* 「照抄參考答案」的嚴格比對：                                         */
+/* 拼字對不對，是為了容忍語音辨識誤差設計的）完全不同邏輯，改成「照抄    */
+/* 參考答案」的逐字比對：                                               */
 /*  1. 單字本身（或常見字尾變化，例如 parent→parents）一定要出現，       */
 /*     拼字必須完全正確，不給拼字容錯。                                  */
-/*  2. 整句跟參考答案逐字比對（把句子當成單字序列做編輯距離），內容詞    */
-/*     （非虛詞）只要有一個拼錯、換成別的字、或順序被搬動，就整句算     */
-/*     錯，不給任何折扣；只有「a/the/is/with」這類無關緊要的虛詞可以     */
-/*     容忍增減。這樣才抓得到「拼字打錯卻因為句子其他地方重疊很多而被   */
-/*     判對」「單字都對、但文法或詞序整個是錯的」這兩種先前出現過的      */
-/*     誤判。不管對錯都會顯示參考答案，方便照著訂正。                    */
+/*  2. 整句跟參考答案逐字（含虛詞）完全一致才算對，不管是內容詞拼錯／    */
+/*     換字，還是漏掉／多打 a、the、to 這類虛詞，一律算錯——曾經放寬      */
+/*     虛詞可以增減（想說 the 這種字無傷大雅），結果「go to the movies」  */
+/*     漏掉這個慣用語本來就要有的 the 也被判對，可見虛詞不見得真的      */
+/*     「無關緊要」，乾脆不分虛詞實詞，统一要求完全一致比較不會出錯。     */
+/*     不管對錯都會顯示參考答案，方便照著訂正到完全一致再送出。          */
 /* ------------------------------------------------------------------ */
 function stringHash(s) {
   let h = 0;
@@ -4652,32 +4652,6 @@ function inflectedFormCandidates(base) {
   candidates.add(sForm + "'");
   return candidates;
 }
-// 單字序列的編輯距離，但虛詞（a/the/to/with…）增減的代價很低，內容詞
-// （實際有意義的單字）增刪或替換一律是滿額代價、不打折——這就是「拼字
-// 或用字必須正確」的核心規則：跟 UnitMastery／speech 用的
-// wordSimilarity 拼字容錯是不同場景，那裡是為了容忍語音辨識誤差，
-// 這裡是在批改打字輸入，要求遠比語音嚴格。
-function wordSeqEditCost(targetWords, gotWords) {
-  const m = targetWords.length, n = gotWords.length;
-  if (!m) return n ? Infinity : 0;
-  const skipCost = w => SENTENCE_HINT_STOPWORDS_CLIENT.has(w) ? 0.12 : 1;
-  let prev = new Array(n + 1), cur = new Array(n + 1);
-  prev[0] = 0;
-  for (let j = 1; j <= n; j++) prev[j] = prev[j - 1] + skipCost(gotWords[j - 1]);
-  for (let i = 1; i <= m; i++) {
-    const a = targetWords[i - 1];
-    const delCost = skipCost(a);
-    cur[0] = prev[0] + delCost;
-    for (let j = 1; j <= n; j++) {
-      const b = gotWords[j - 1];
-      const subCost = a === b ? 0 : 1;
-      cur[j] = Math.min(prev[j] + delCost, cur[j - 1] + skipCost(b), prev[j - 1] + subCost);
-    }
-    [prev, cur] = [cur, prev];
-  }
-  return prev[n];
-}
-const TRANSLATE_MAX_EDIT_COST = 0.4;
 function checkTranslateAnswer(input, word, answerEn) {
   const typed = (input || "").trim();
   if (!typed) return false;
@@ -4695,8 +4669,9 @@ function checkTranslateAnswer(input, word, answerEn) {
     return false;
   });
   if (!hasTargetWord) return false;
+  // 跟參考答案逐字（含虛詞）完全一致才算對，見上方說明
   const targetWords = transcriptWordsClient(answerEn);
-  return wordSeqEditCost(targetWords, gotWords) <= TRANSLATE_MAX_EDIT_COST;
+  return targetWords.length === gotWords.length && targetWords.every((w, i) => w === gotWords[i]);
 }
 function TranslateCard({ word, question, onResult }) {
   const [input, setInput] = useState("");
