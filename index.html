@@ -4779,6 +4779,38 @@ function containsFlexiblePhraseClient(gotWords, targetWords) {
   }
   return false;
 }
+// 單一個字（或片語）是否出現在輸入裡：單字看字尾變化、片語看是否連續出現
+function singleFormMatches(formStr, gotWords, gotSet) {
+  const formWords = transcriptWordsClient(formStr.toLowerCase());
+  if (formWords.length !== 1) return containsFlexiblePhraseClient(gotWords, formWords);
+  const base = formWords[0];
+  if (gotSet.has(base)) return true;
+  for (const cand of inflectedFormCandidates(base)) {
+    if (gotSet.has(cand)) return true;
+  }
+  // 不規則動詞如果資料裡用 "grow / grew" 只給了兩個形態，但完成式需要
+  // 用到第三個形態（grown）時，這裡額外查一下常見不規則動詞表
+  if (IRREGULAR_VERB_FORMS[base]) {
+    for (const cand of IRREGULAR_VERB_FORMS[base]) {
+      if (gotSet.has(cand)) return true;
+    }
+  }
+  return false;
+}
+// 含刪節號的單字（例如 "as... as..."、"turn (...) into..."、
+// "tell / told...from..."）代表中間要填別的字，兩段文字在真實句子裡
+// 本來就不會緊挨在一起（例如 "as fast as a machine gun"、"turn trash
+// into art"），不能要求連續出現。拆成幾段，每一段各自獨立檢查「有沒有
+// 出現過」就好，不要求段落之間相鄰或段落內部跟其他段緊貼。
+function headwordFormMatches(formStr, gotWords, gotSet) {
+  // 用「切完後還有真正的英文字」來判斷要不要保留這一段，不能只看字串
+  // 是否為空——像 "What about...?" 結尾的刪節號後面只剩標點符號「?」，
+  // 切出來的字串不是空字串，但裡面沒有任何實際的字，這種片段要濾掉，
+  // 不然會變成「永遠不可能出現的空字」而誤判成錯誤
+  const segments = formStr.split(/\.\.\.+/).map(s => s.trim()).filter(s => transcriptWordsClient(s).length > 0);
+  if (segments.length <= 1) return singleFormMatches(formStr, gotWords, gotSet);
+  return segments.every(seg => singleFormMatches(seg, gotWords, gotSet));
+}
 function checkTranslateAnswer(input, word, answerEn) {
   const typed = (input || "").trim();
   if (!typed) return false;
@@ -4786,23 +4818,7 @@ function checkTranslateAnswer(input, word, answerEn) {
   const gotSet = new Set(gotWords);
   // 單字本身（或它的某個型態、或常見字尾變化）一定要出現過，而且拼字要
   // 完全正確，不然即使整句翻得再通順，也沒有真的練習到這個單字
-  const hasTargetWord = translateHeadwordForms(word).some(f => {
-    const formWords = transcriptWordsClient(f.toLowerCase());
-    if (formWords.length !== 1) return containsFlexiblePhraseClient(gotWords, formWords);
-    const base = formWords[0];
-    if (gotSet.has(base)) return true;
-    for (const cand of inflectedFormCandidates(base)) {
-      if (gotSet.has(cand)) return true;
-    }
-    // 不規則動詞如果資料裡用 "grow / grew" 只給了兩個形態，但完成式需要
-    // 用到第三個形態（grown）時，這裡額外查一下常見不規則動詞表
-    if (IRREGULAR_VERB_FORMS[base]) {
-      for (const cand of IRREGULAR_VERB_FORMS[base]) {
-        if (gotSet.has(cand)) return true;
-      }
-    }
-    return false;
-  });
+  const hasTargetWord = translateHeadwordForms(word).some(f => headwordFormMatches(f, gotWords, gotSet));
   if (!hasTargetWord) return false;
   // 跟參考答案逐字（含虛詞）完全一致才算對，見上方說明
   const targetWords = transcriptWordsClient(answerEn);
