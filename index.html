@@ -4608,15 +4608,18 @@ function Typing({
 /* 算出固定的一題，同一天不管重新整理幾次都是同一題，隔天自動換下一題，  */
 /* 不用額外存資料庫；只有整個單元的字都已經有題庫，才會在單元畫面顯示   */
 /* 這個練習方式（見 UnitScreen 的 activityList）。                       */
-/* 批改方式：先要求輸入裡有出現這個單字本身（練習重點就是用這個字造句），*/
-/* 再用「詞序敏感」的句子相似度比對（wordSeqSimilarity）。這跟語音跟讀用  */
-/* 的 sentenceFullyReadClient 不一樣：跟讀只在乎「有沒有念到這些字」，    */
-/* 順序、文法不重要；但打字翻譯是在練句型，單字對了、順序或文法整個是   */
-/* 錯的（例如寫成「He with his wife go to the movies.」）不該被判對，    */
-/* 所以改成把整句句子當成「單字的序列」做編輯距離，單字被搬動位置、      */
-/* 漏字、動詞變化錯誤都會讓相似度明顯下降，而非只看「這些字有沒有出現   */
-/* 過」。拼字極相近的字（例如打錯一兩個字母）仍給一點容錯，不要求    */
-/* 連標點符號都一字不差；不管對錯都會顯示參考答案，方便自己對照學習。    */
+/* 批改方式：這是在練「拼字＋句型」，不是語音跟讀，所以跟語音跟讀用的   */
+/* sentenceFullyReadClient（只看這些字有沒有念到、不管詞序文法、也不管  */
+/* 拼字對不對，是為了容忍語音辨識誤差設計的）完全不同邏輯，改成接近     */
+/* 「照抄參考答案」的嚴格比對：                                         */
+/*  1. 單字本身（或常見字尾變化，例如 parent→parents）一定要出現，       */
+/*     拼字必須完全正確，不給拼字容錯。                                  */
+/*  2. 整句跟參考答案逐字比對（把句子當成單字序列做編輯距離），內容詞    */
+/*     （非虛詞）只要有一個拼錯、換成別的字、或順序被搬動，就整句算     */
+/*     錯，不給任何折扣；只有「a/the/is/with」這類無關緊要的虛詞可以     */
+/*     容忍增減。這樣才抓得到「拼字打錯卻因為句子其他地方重疊很多而被   */
+/*     判對」「單字都對、但文法或詞序整個是錯的」這兩種先前出現過的      */
+/*     誤判。不管對錯都會顯示參考答案，方便照著訂正。                    */
 /* ------------------------------------------------------------------ */
 function stringHash(s) {
   let h = 0;
@@ -4631,34 +4634,12 @@ function dailyTranslateQuestion(unitId, word) {
   const idx = stringHash(`${todayStr()}::${unitId}::${word.en}`) % bank.length;
   return bank[idx];
 }
-// 單字層級的編輯距離（跟 wordSimilarity 的字母層級編輯距離不同層次）：
-// 整句句子當成一串「單字序列」，缺字、多字、順序調換都會增加距離，
-// 相似拼法的單字之間給一點點容錯（subCost 0.3）但不是完全免費
-function wordSeqSimilarity(targetWords, gotWords) {
-  const m = targetWords.length, n = gotWords.length;
-  if (!m || !n) return 0;
-  let prev = new Array(n + 1), cur = new Array(n + 1);
-  for (let j = 0; j <= n; j++) prev[j] = j;
-  for (let i = 1; i <= m; i++) {
-    cur[0] = i;
-    const a = targetWords[i - 1];
-    for (let j = 1; j <= n; j++) {
-      const b = gotWords[j - 1];
-      let subCost;
-      if (a === b) subCost = 0;
-      else if (a.length >= 4 && b.length >= 4 && wordSimilarity(a, b) >= FUZZY_WORD_SIMILARITY) subCost = 0.3;
-      else subCost = 1;
-      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + subCost);
-    }
-    [prev, cur] = [cur, prev];
-  }
-  return 1 - prev[n] / Math.max(m, n);
-}
 // 由單字原形推生出常見的英文字尾變化（複數／第三人稱單數、動名詞、過去式、
 // 副詞、所有格），不是嚴謹的詞形還原，只求「夠接近常見變化」。中翻英的
 // 參考答案常常自然會用到變化形（例如 parent 寫成 parents、current 寫成
 // currently），打字輸入時如果要求一定要打出字典原形，等於邏輯上永遠不會
-// 有人答對，所以這個單字檢查要能接受這些變化形。
+// 有人答對，所以這個單字檢查要能接受這些變化形（但拼字仍必須完全正確，
+// 不接受字母拼錯的版本）。
 function inflectedFormCandidates(base) {
   const b = base.toLowerCase();
   const candidates = new Set([b]);
@@ -4671,14 +4652,39 @@ function inflectedFormCandidates(base) {
   candidates.add(sForm + "'");
   return candidates;
 }
-const TRANSLATE_MATCH_THRESHOLD = 0.85;
+// 單字序列的編輯距離，但虛詞（a/the/to/with…）增減的代價很低，內容詞
+// （實際有意義的單字）增刪或替換一律是滿額代價、不打折——這就是「拼字
+// 或用字必須正確」的核心規則：跟 UnitMastery／speech 用的
+// wordSimilarity 拼字容錯是不同場景，那裡是為了容忍語音辨識誤差，
+// 這裡是在批改打字輸入，要求遠比語音嚴格。
+function wordSeqEditCost(targetWords, gotWords) {
+  const m = targetWords.length, n = gotWords.length;
+  if (!m) return n ? Infinity : 0;
+  const skipCost = w => SENTENCE_HINT_STOPWORDS_CLIENT.has(w) ? 0.12 : 1;
+  let prev = new Array(n + 1), cur = new Array(n + 1);
+  prev[0] = 0;
+  for (let j = 1; j <= n; j++) prev[j] = prev[j - 1] + skipCost(gotWords[j - 1]);
+  for (let i = 1; i <= m; i++) {
+    const a = targetWords[i - 1];
+    const delCost = skipCost(a);
+    cur[0] = prev[0] + delCost;
+    for (let j = 1; j <= n; j++) {
+      const b = gotWords[j - 1];
+      const subCost = a === b ? 0 : 1;
+      cur[j] = Math.min(prev[j] + delCost, cur[j - 1] + skipCost(b), prev[j - 1] + subCost);
+    }
+    [prev, cur] = [cur, prev];
+  }
+  return prev[n];
+}
+const TRANSLATE_MAX_EDIT_COST = 0.4;
 function checkTranslateAnswer(input, word, answerEn) {
   const typed = (input || "").trim();
   if (!typed) return false;
   const gotWords = transcriptWordsClient(typed);
   const gotSet = new Set(gotWords);
-  // 單字本身（或它的某個型態、或常見字尾變化）一定要出現過，不然即使
-  // 整句翻得再通順，也沒有練習到這個單字
+  // 單字本身（或它的某個型態、或常見字尾變化）一定要出現過，而且拼字要
+  // 完全正確，不然即使整句翻得再通順，也沒有真的練習到這個單字
   const hasTargetWord = wordForms(word).some(f => {
     const formWords = transcriptWordsClient(f.toLowerCase());
     if (formWords.length !== 1) return containsPhraseClient(gotWords, formWords);
@@ -4686,13 +4692,11 @@ function checkTranslateAnswer(input, word, answerEn) {
     for (const cand of inflectedFormCandidates(formWords[0])) {
       if (gotSet.has(cand)) return true;
     }
-    // 最後保險：拼法極相近也算（例如拼字小錯），門檻比一般的拼字容錯更
-    // 嚴格一點，避免把完全不同的字誤判成這個單字的變化形
-    return gotWords.some(g => g.length >= 4 && wordSimilarity(formWords[0], g) >= 0.8);
+    return false;
   });
   if (!hasTargetWord) return false;
   const targetWords = transcriptWordsClient(answerEn);
-  return wordSeqSimilarity(targetWords, gotWords) >= TRANSLATE_MATCH_THRESHOLD;
+  return wordSeqEditCost(targetWords, gotWords) <= TRANSLATE_MAX_EDIT_COST;
 }
 function TranslateCard({ word, question, onResult }) {
   const [input, setInput] = useState("");
