@@ -4654,17 +4654,41 @@ function wordSeqSimilarity(targetWords, gotWords) {
   }
   return 1 - prev[n] / Math.max(m, n);
 }
+// 由單字原形推生出常見的英文字尾變化（複數／第三人稱單數、動名詞、過去式、
+// 副詞、所有格），不是嚴謹的詞形還原，只求「夠接近常見變化」。中翻英的
+// 參考答案常常自然會用到變化形（例如 parent 寫成 parents、current 寫成
+// currently），打字輸入時如果要求一定要打出字典原形，等於邏輯上永遠不會
+// 有人答對，所以這個單字檢查要能接受這些變化形。
+function inflectedFormCandidates(base) {
+  const b = base.toLowerCase();
+  const candidates = new Set([b]);
+  const sForm = /[sxz]$|ch$|sh$/.test(b) ? b + "es" : b + "s";
+  candidates.add(sForm);
+  candidates.add(/[^aeiou]e$/.test(b) ? b.slice(0, -1) + "ing" : b + "ing");
+  candidates.add(b.endsWith("e") ? b + "d" : b + "ed");
+  candidates.add(b + "ly");
+  candidates.add(b + "'s");
+  candidates.add(sForm + "'");
+  return candidates;
+}
 const TRANSLATE_MATCH_THRESHOLD = 0.85;
 function checkTranslateAnswer(input, word, answerEn) {
   const typed = (input || "").trim();
   if (!typed) return false;
   const gotWords = transcriptWordsClient(typed);
   const gotSet = new Set(gotWords);
-  // 單字本身（或它的某個型態，例如 "autumn / fall" 其中之一）一定要出現過，
-  // 不然即使整句翻得再通順，也沒有練習到這個單字
+  // 單字本身（或它的某個型態、或常見字尾變化）一定要出現過，不然即使
+  // 整句翻得再通順，也沒有練習到這個單字
   const hasTargetWord = wordForms(word).some(f => {
     const formWords = transcriptWordsClient(f.toLowerCase());
-    return formWords.length === 1 ? gotSet.has(formWords[0]) : containsPhraseClient(gotWords, formWords);
+    if (formWords.length !== 1) return containsPhraseClient(gotWords, formWords);
+    if (gotSet.has(formWords[0])) return true;
+    for (const cand of inflectedFormCandidates(formWords[0])) {
+      if (gotSet.has(cand)) return true;
+    }
+    // 最後保險：拼法極相近也算（例如拼字小錯），門檻比一般的拼字容錯更
+    // 嚴格一點，避免把完全不同的字誤判成這個單字的變化形
+    return gotWords.some(g => g.length >= 4 && wordSimilarity(formWords[0], g) >= 0.8);
   });
   if (!hasTargetWord) return false;
   const targetWords = transcriptWordsClient(answerEn);
