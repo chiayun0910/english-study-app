@@ -4655,6 +4655,97 @@ function inflectedFormCandidates(base) {
   candidates.add(sForm + "'");
   return candidates;
 }
+// 有些單字資料用「xxx (yyy)」表示兩種都可以的寫法（例如 "someone (somebody)"、
+// "hamburger (burger)"），跟 "A / B" 是同樣的用意，但因為括號出現在字串結尾、
+// 不是整串都用 " / " 分隔，wordForms() 不會把它拆開，會被誤判成「要連續出現
+// someone 後面緊接著 somebody」這種不可能發生的片語。這裡額外處理這種結尾
+// 括號寫法，只用在中翻英批改這裡，不影響 wordForms() 原本給發音功能用的行為。
+function translateHeadwordForms(word) {
+  const forms = [];
+  wordForms(word).forEach(f => {
+    const m = f.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
+    if (m) {
+      forms.push(m[1].trim());
+      forms.push(m[2].trim());
+    } else {
+      forms.push(f);
+    }
+  });
+  return forms.filter(Boolean);
+}
+// 片語型單字（例如 "be out to"、"make one's way to"、"go through"）裡常常
+// 有動詞要隨主詞或時態變化（is/are/was/were、made/making/makes、
+// went/going/goes…），不會有人真的寫出字典原形。containsPhraseClient 是
+// 逐字完全比對，會把這種片語判成「永遠不可能出現」。這裡另外做一個容許
+// 片語裡每個字做對應變化的版本，只用在中翻英；其餘用到 containsPhraseClient
+// 的地方（例如跟讀比對）不受影響。
+const BE_FORMS = new Set(["be", "am", "is", "are", "was", "were", "been", "being"]);
+const POSSESSIVE_FILLERS = new Set(["my", "your", "his", "her", "our", "their", "its", "one's"]);
+// 片語開頭常見的不規則動詞（go through、make one's way to、get carried
+// away…），規律變化規則套不上，另外列出常見變化形
+const IRREGULAR_VERB_FORMS = {
+  get: ["gets", "getting", "got", "gotten"], go: ["goes", "going", "went", "gone"],
+  make: ["makes", "making", "made"], do: ["does", "doing", "did", "done"],
+  have: ["has", "having", "had"], take: ["takes", "taking", "took", "taken"],
+  give: ["gives", "giving", "gave", "given"], come: ["comes", "coming", "came"],
+  see: ["sees", "seeing", "saw", "seen"], say: ["says", "saying", "said"],
+  find: ["finds", "finding", "found"], think: ["thinks", "thinking", "thought"],
+  know: ["knows", "knowing", "knew", "known"], show: ["shows", "showing", "showed", "shown"],
+  break: ["breaks", "breaking", "broke", "broken"], catch: ["catches", "catching", "caught"],
+  bring: ["brings", "bringing", "brought"], buy: ["buys", "buying", "bought"],
+  keep: ["keeps", "keeping", "kept"], hold: ["holds", "holding", "held"],
+  leave: ["leaves", "leaving", "left"], feel: ["feels", "feeling", "felt"],
+  tell: ["tells", "telling", "told"], sell: ["sells", "selling", "sold"],
+  send: ["sends", "sending", "sent"], build: ["builds", "building", "built"],
+  spend: ["spends", "spending", "spent"], stand: ["stands", "standing", "stood"],
+  understand: ["understands", "understanding", "understood"], wear: ["wears", "wearing", "wore", "worn"],
+  speak: ["speaks", "speaking", "spoke", "spoken"], write: ["writes", "writing", "wrote", "written"],
+  draw: ["draws", "drawing", "drew", "drawn"], fall: ["falls", "falling", "fell", "fallen"],
+  grow: ["grows", "growing", "grew", "grown"], throw: ["throws", "throwing", "threw", "thrown"],
+  blow: ["blows", "blowing", "blew", "blown"], fly: ["flies", "flying", "flew", "flown"],
+  drive: ["drives", "driving", "drove", "driven"], ride: ["rides", "riding", "rode", "ridden"],
+  rise: ["rises", "rising", "rose", "risen"], eat: ["eats", "eating", "ate", "eaten"],
+  drink: ["drinks", "drinking", "drank", "drunk"], begin: ["begins", "beginning", "began", "begun"],
+  sing: ["sings", "singing", "sang", "sung"], ring: ["rings", "ringing", "rang", "rung"],
+  run: ["runs", "running", "ran"], swim: ["swims", "swimming", "swam", "swum"],
+  sit: ["sits", "sitting", "sat"], meet: ["meets", "meeting", "met"],
+  pay: ["pays", "paying", "paid"], read: ["reads", "reading", "read"],
+  hear: ["hears", "hearing", "heard"], win: ["wins", "winning", "won"],
+  lose: ["loses", "losing", "lost"], sleep: ["sleeps", "sleeping", "slept"],
+  teach: ["teaches", "teaching", "taught"], lead: ["leads", "leading", "led"],
+  put: ["puts", "putting", "put"], set: ["sets", "setting", "set"],
+  cut: ["cuts", "cutting", "cut"], hit: ["hits", "hitting", "hit"],
+  let: ["lets", "letting", "let"], cost: ["costs", "costing", "cost"],
+  hurt: ["hurts", "hurting", "hurt"], shut: ["shuts", "shutting", "shut"],
+  spread: ["spreads", "spreading", "spread"], choose: ["chooses", "choosing", "chose", "chosen"],
+  forget: ["forgets", "forgetting", "forgot", "forgotten"], wake: ["wakes", "waking", "woke", "woken"],
+  steal: ["steals", "stealing", "stole", "stolen"], swear: ["swears", "swearing", "swore", "sworn"],
+  tear: ["tears", "tearing", "tore", "torn"], become: ["becomes", "becoming", "became"],
+  hang: ["hangs", "hanging", "hung"], dig: ["digs", "digging", "dug"],
+  sweep: ["sweeps", "sweeping", "swept"], feed: ["feeds", "feeding", "fed"],
+  shake: ["shakes", "shaking", "shook", "shaken"]
+};
+function phraseTokenMatches(target, got) {
+  if (target === got) return true;
+  if (target === "be") return BE_FORMS.has(got);
+  if (target === "one's") return POSSESSIVE_FILLERS.has(got);
+  if (IRREGULAR_VERB_FORMS[target] && IRREGULAR_VERB_FORMS[target].includes(got)) return true;
+  for (const cand of inflectedFormCandidates(target)) {
+    if (got === cand) return true;
+  }
+  return false;
+}
+function containsFlexiblePhraseClient(gotWords, targetWords) {
+  if (!targetWords.length || gotWords.length < targetWords.length) return false;
+  for (let i = 0; i + targetWords.length <= gotWords.length; i++) {
+    let ok = true;
+    for (let j = 0; j < targetWords.length; j++) {
+      if (!phraseTokenMatches(targetWords[j], gotWords[i + j])) { ok = false; break; }
+    }
+    if (ok) return true;
+  }
+  return false;
+}
 function checkTranslateAnswer(input, word, answerEn) {
   const typed = (input || "").trim();
   if (!typed) return false;
@@ -4662,9 +4753,9 @@ function checkTranslateAnswer(input, word, answerEn) {
   const gotSet = new Set(gotWords);
   // 單字本身（或它的某個型態、或常見字尾變化）一定要出現過，而且拼字要
   // 完全正確，不然即使整句翻得再通順，也沒有真的練習到這個單字
-  const hasTargetWord = wordForms(word).some(f => {
+  const hasTargetWord = translateHeadwordForms(word).some(f => {
     const formWords = transcriptWordsClient(f.toLowerCase());
-    if (formWords.length !== 1) return containsPhraseClient(gotWords, formWords);
+    if (formWords.length !== 1) return containsFlexiblePhraseClient(gotWords, formWords);
     if (gotSet.has(formWords[0])) return true;
     for (const cand of inflectedFormCandidates(formWords[0])) {
       if (gotSet.has(cand)) return true;
