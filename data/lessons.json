@@ -7933,7 +7933,49 @@
                   "ex3_zh": "她的家人去年搬到了一座新城市。",
                   "ex2_blank": "We took a ____ photo before dinner.",
                   "ex3_blank": "Her ____ moved to a new city last year.",
-                  "ipa": "ˈfæməli"
+                  "ipa": "ˈfæməli",
+                  "translateBank": [
+                    {
+                      "zh": "我的家人每個星期天都會去健行。",
+                      "en": "My family goes hiking every Sunday."
+                    },
+                    {
+                      "zh": "她的家庭很大，有六個人。",
+                      "en": "Her family is big, with six people."
+                    },
+                    {
+                      "zh": "我們全家人一起吃晚餐。",
+                      "en": "Our family eats dinner together."
+                    },
+                    {
+                      "zh": "他的家人住在台北。",
+                      "en": "His family lives in Taipei."
+                    },
+                    {
+                      "zh": "我喜歡跟家人一起看電影。",
+                      "en": "I like watching movies with my family."
+                    },
+                    {
+                      "zh": "這張照片裡有我全部的家人。",
+                      "en": "This photo has all of my family in it."
+                    },
+                    {
+                      "zh": "她的家人星期六會來拜訪我們。",
+                      "en": "Her family will visit us on Saturday."
+                    },
+                    {
+                      "zh": "我的家人都很喜歡貓。",
+                      "en": "My family all love cats."
+                    },
+                    {
+                      "zh": "他跟家人一起去海邊玩。",
+                      "en": "He went to the beach with his family."
+                    },
+                    {
+                      "zh": "這個週末我要陪家人在家。",
+                      "en": "I will stay home with my family this weekend."
+                    }
+                  ]
                 },
                 {
                   "en": "husband",
@@ -7948,7 +7990,49 @@
                   "ex3_zh": "我阿姨和她的丈夫喜歡一起健行。",
                   "ex2_blank": "Her ____ works at a hospital.",
                   "ex3_blank": "My aunt and her ____ love hiking together.",
-                  "ipa": "ˈhəzbənd"
+                  "ipa": "ˈhəzbənd",
+                  "translateBank": [
+                    {
+                      "zh": "她的先生是一位老師。",
+                      "en": "Her husband is a teacher."
+                    },
+                    {
+                      "zh": "我媽媽的先生每天開車上班。",
+                      "en": "My mom's husband drives to work every day."
+                    },
+                    {
+                      "zh": "她先生很會做飯。",
+                      "en": "Her husband is good at cooking."
+                    },
+                    {
+                      "zh": "她跟先生一起去旅行。",
+                      "en": "She traveled with her husband."
+                    },
+                    {
+                      "zh": "這是她先生的生日禮物。",
+                      "en": "This is a birthday gift for her husband."
+                    },
+                    {
+                      "zh": "她先生今天很早回家。",
+                      "en": "Her husband came home early today."
+                    },
+                    {
+                      "zh": "她先生喜歡打籃球。",
+                      "en": "Her husband likes playing basketball."
+                    },
+                    {
+                      "zh": "她先生在公司工作了十年。",
+                      "en": "Her husband has worked at the company for ten years."
+                    },
+                    {
+                      "zh": "她跟先生住在一間小房子裡。",
+                      "en": "She lives with her husband in a small house."
+                    },
+                    {
+                      "zh": "她先生每天早上都會慢跑。",
+                      "en": "Her husband jogs every morning."
+                    }
+                  ]
                 },
                 {
                   "en": "wife",
@@ -7963,7 +8047,49 @@
                   "ex3_zh": "他們結婚已經十年了。",
                   "ex2_blank": "His ____ teaches English at our school.",
                   "ex3_blank": "They have been husband and ____ for ten years.",
-                  "ipa": "waɪf"
+                  "ipa": "waɪf",
+                  "translateBank": [
+                    {
+                      "zh": "他的太太是一位醫生。",
+                      "en": "His wife is a doctor."
+                    },
+                    {
+                      "zh": "我爸爸的太太很會彈鋼琴。",
+                      "en": "My dad's wife plays the piano very well."
+                    },
+                    {
+                      "zh": "他跟太太一起去看電影。",
+                      "en": "He went to the movies with his wife."
+                    },
+                    {
+                      "zh": "他的太太喜歡種花。",
+                      "en": "His wife likes growing flowers."
+                    },
+                    {
+                      "zh": "這是他太太煮的晚餐。",
+                      "en": "This is the dinner his wife cooked."
+                    },
+                    {
+                      "zh": "他太太今天在家工作。",
+                      "en": "His wife is working from home today."
+                    },
+                    {
+                      "zh": "他太太喜歡讀書。",
+                      "en": "His wife likes reading books."
+                    },
+                    {
+                      "zh": "他太太在學校教英文。",
+                      "en": "His wife teaches English at school."
+                    },
+                    {
+                      "zh": "他跟太太養了一隻狗。",
+                      "en": "He and his wife have a dog."
+                    },
+                    {
+                      "zh": "他太太每個週末都會去爬山。",
+                      "en": "His wife goes hiking every weekend."
+                    }
+                  ]
                 },
                 {
                   "en": "uncle",
@@ -7978,7 +8104,49 @@
                   "ex3_zh": "我們這個週末要去拜訪我叔叔。",
                   "ex2_blank": "My ____ taught me how to swim.",
                   "ex3_blank": "We are going to visit my ____ this weekend.",
-                  "ipa": "ˈəŋkəl"
+                  "ipa": "ˈəŋkəl",
+                  "translateBank": [
+                    {
+                      "zh": "我叔叔住在台中。",
+                      "en": "My uncle lives in Taichung."
+                    },
+                    {
+                      "zh": "我的叔叔是一位警察。",
+                      "en": "My uncle is a police officer."
+                    },
+                    {
+                      "zh": "我叔叔星期天會來我家。",
+                      "en": "My uncle will come to my house on Sunday."
+                    },
+                    {
+                      "zh": "我叔叔送我一台腳踏車。",
+                      "en": "My uncle gave me a bicycle."
+                    },
+                    {
+                      "zh": "我叔叔喜歡打棒球。",
+                      "en": "My uncle likes playing baseball."
+                    },
+                    {
+                      "zh": "我叔叔開了一間小店。",
+                      "en": "My uncle runs a small shop."
+                    },
+                    {
+                      "zh": "我叔叔每天都去公園散步。",
+                      "en": "My uncle walks in the park every day."
+                    },
+                    {
+                      "zh": "我叔叔會說三種語言。",
+                      "en": "My uncle can speak three languages."
+                    },
+                    {
+                      "zh": "我叔叔昨天來拜訪我們。",
+                      "en": "My uncle visited us yesterday."
+                    },
+                    {
+                      "zh": "我叔叔很會修理東西。",
+                      "en": "My uncle is good at fixing things."
+                    }
+                  ]
                 },
                 {
                   "en": "aunt",
@@ -7993,7 +8161,49 @@
                   "ex3_zh": "我阿姨就住在對街。",
                   "ex2_blank": "My ____ bakes the best cookies.",
                   "ex3_blank": "My ____ lives just across the street.",
-                  "ipa": "ɔnt"
+                  "ipa": "ɔnt",
+                  "translateBank": [
+                    {
+                      "zh": "我阿姨住在高雄。",
+                      "en": "My aunt lives in Kaohsiung."
+                    },
+                    {
+                      "zh": "我的阿姨是一位護士。",
+                      "en": "My aunt is a nurse."
+                    },
+                    {
+                      "zh": "我阿姨下個月要來台北。",
+                      "en": "My aunt will come to Taipei next month."
+                    },
+                    {
+                      "zh": "我阿姨煮的菜很好吃。",
+                      "en": "My aunt's cooking is delicious."
+                    },
+                    {
+                      "zh": "我阿姨喜歡畫畫。",
+                      "en": "My aunt likes painting."
+                    },
+                    {
+                      "zh": "我阿姨開了一間花店。",
+                      "en": "My aunt runs a flower shop."
+                    },
+                    {
+                      "zh": "我阿姨每天早上都喝咖啡。",
+                      "en": "My aunt drinks coffee every morning."
+                    },
+                    {
+                      "zh": "我阿姨送我一本書當生日禮物。",
+                      "en": "My aunt gave me a book as a birthday gift."
+                    },
+                    {
+                      "zh": "我阿姨昨天打電話給我。",
+                      "en": "My aunt called me yesterday."
+                    },
+                    {
+                      "zh": "我阿姨很會種菜。",
+                      "en": "My aunt is good at growing vegetables."
+                    }
+                  ]
                 },
                 {
                   "en": "cousin",
@@ -8008,7 +8218,49 @@
                   "ex3_zh": "我表哥(姊)今年夏天要來我們家住。",
                   "ex2_blank": "I played video games with my ____ all afternoon.",
                   "ex3_blank": "My ____ is coming to stay with us this summer.",
-                  "ipa": "ˈkəzən"
+                  "ipa": "ˈkəzən",
+                  "translateBank": [
+                    {
+                      "zh": "我的表哥在美國念書。",
+                      "en": "My cousin studies in the United States."
+                    },
+                    {
+                      "zh": "我堂妹跟我一樣大。",
+                      "en": "My cousin is the same age as me."
+                    },
+                    {
+                      "zh": "我表姊星期六要來我家玩。",
+                      "en": "My cousin will come to my house on Saturday."
+                    },
+                    {
+                      "zh": "我的表弟很會打電動。",
+                      "en": "My cousin is good at playing video games."
+                    },
+                    {
+                      "zh": "我跟表哥常常一起打籃球。",
+                      "en": "My cousin and I often play basketball together."
+                    },
+                    {
+                      "zh": "我堂哥送我一個生日禮物。",
+                      "en": "My cousin gave me a birthday gift."
+                    },
+                    {
+                      "zh": "我表妹喜歡唱歌。",
+                      "en": "My cousin likes singing."
+                    },
+                    {
+                      "zh": "我的表弟住在台南。",
+                      "en": "My cousin lives in Tainan."
+                    },
+                    {
+                      "zh": "我跟堂姊一起去看電影。",
+                      "en": "I went to the movies with my cousin."
+                    },
+                    {
+                      "zh": "我表哥是一位工程師。",
+                      "en": "My cousin is an engineer."
+                    }
+                  ]
                 },
                 {
                   "en": "son",
@@ -8023,7 +8275,49 @@
                   "ex3_zh": "這位老先生的兒子在另一座城市工作。",
                   "ex2_blank": "Their ____ just started junior high school.",
                   "ex3_blank": "The old man's ____ works in another city.",
-                  "ipa": "sən"
+                  "ipa": "sən",
+                  "translateBank": [
+                    {
+                      "zh": "他們的兒子在念國中。",
+                      "en": "Their son is in junior high school."
+                    },
+                    {
+                      "zh": "我朋友的兒子很喜歡足球。",
+                      "en": "My friend's son loves soccer."
+                    },
+                    {
+                      "zh": "她的兒子今年十歲。",
+                      "en": "Her son is ten years old this year."
+                    },
+                    {
+                      "zh": "他兒子每天都去游泳。",
+                      "en": "His son goes swimming every day."
+                    },
+                    {
+                      "zh": "她的兒子很會畫畫。",
+                      "en": "Her son is good at drawing."
+                    },
+                    {
+                      "zh": "他們的兒子明年要上大學。",
+                      "en": "Their son will go to college next year."
+                    },
+                    {
+                      "zh": "她兒子喜歡彈吉他。",
+                      "en": "Her son likes playing the guitar."
+                    },
+                    {
+                      "zh": "他的兒子昨天生病了。",
+                      "en": "His son was sick yesterday."
+                    },
+                    {
+                      "zh": "她兒子每天幫忙做家事。",
+                      "en": "Her son helps with housework every day."
+                    },
+                    {
+                      "zh": "他們的兒子跑得很快。",
+                      "en": "Their son runs very fast."
+                    }
+                  ]
                 },
                 {
                   "en": "daughter",
@@ -8038,7 +8332,49 @@
                   "ex3_zh": "我鄰居的女兒跟我同年紀。",
                   "ex2_blank": "Their ____ wants to be a doctor.",
                   "ex3_blank": "My neighbor's ____ is the same age as me.",
-                  "ipa": "ˈdɔtər"
+                  "ipa": "ˈdɔtər",
+                  "translateBank": [
+                    {
+                      "zh": "他們的女兒在念小學。",
+                      "en": "Their daughter is in elementary school."
+                    },
+                    {
+                      "zh": "我朋友的女兒很喜歡跳舞。",
+                      "en": "My friend's daughter loves dancing."
+                    },
+                    {
+                      "zh": "她的女兒今年八歲。",
+                      "en": "Her daughter is eight years old this year."
+                    },
+                    {
+                      "zh": "他女兒每天都練習鋼琴。",
+                      "en": "His daughter practices the piano every day."
+                    },
+                    {
+                      "zh": "她的女兒很會說故事。",
+                      "en": "Her daughter is good at telling stories."
+                    },
+                    {
+                      "zh": "他們的女兒明年要上國中。",
+                      "en": "Their daughter will go to junior high school next year."
+                    },
+                    {
+                      "zh": "她女兒喜歡畫圖。",
+                      "en": "Her daughter likes drawing."
+                    },
+                    {
+                      "zh": "他的女兒昨天去上游泳課。",
+                      "en": "His daughter went to swimming class yesterday."
+                    },
+                    {
+                      "zh": "她女兒每天幫忙照顧弟弟。",
+                      "en": "Her daughter helps take care of her little brother every day."
+                    },
+                    {
+                      "zh": "他們的女兒很喜歡看書。",
+                      "en": "Their daughter loves reading books."
+                    }
+                  ]
                 },
                 {
                   "en": "parent",
@@ -8053,7 +8389,49 @@
                   "ex3_zh": "身為家長，她總是為孩子擔心。",
                   "ex2_blank": "One ____ should sign this form.",
                   "ex3_blank": "As a ____, she always worries about her kids.",
-                  "ipa": "ˈpɛrənt"
+                  "ipa": "ˈpɛrənt",
+                  "translateBank": [
+                    {
+                      "zh": "我的父母每天都很早起床。",
+                      "en": "My parents wake up early every day."
+                    },
+                    {
+                      "zh": "他的父母住在鄉下。",
+                      "en": "His parents live in the countryside."
+                    },
+                    {
+                      "zh": "她父母都是老師。",
+                      "en": "Her parents are both teachers."
+                    },
+                    {
+                      "zh": "我父母星期天會帶我去爬山。",
+                      "en": "My parents will take me hiking on Sunday."
+                    },
+                    {
+                      "zh": "他的父母很支持他的夢想。",
+                      "en": "His parents support his dream."
+                    },
+                    {
+                      "zh": "她的父母每年都會出國旅行。",
+                      "en": "Her parents travel abroad every year."
+                    },
+                    {
+                      "zh": "我父母常常提醒我要早睡。",
+                      "en": "My parents often remind me to sleep early."
+                    },
+                    {
+                      "zh": "他父母昨天來學校接他。",
+                      "en": "His parents picked him up from school yesterday."
+                    },
+                    {
+                      "zh": "她父母喜歡在家種花。",
+                      "en": "Her parents like growing flowers at home."
+                    },
+                    {
+                      "zh": "我的父母對我非常好。",
+                      "en": "My parents are very kind to me."
+                    }
+                  ]
                 },
                 {
                   "en": "child",
@@ -8069,7 +8447,49 @@
                   "ex3_zh": "我小時候很喜歡爬樹。",
                   "ex2_blank": "Every ____ deserves a good education.",
                   "ex3_blank": "As a ____, I loved climbing trees.",
-                  "ipa": "ʧaɪld"
+                  "ipa": "ʧaɪld",
+                  "translateBank": [
+                    {
+                      "zh": "這個小孩很喜歡畫畫。",
+                      "en": "This child loves drawing."
+                    },
+                    {
+                      "zh": "那個小孩正在公園裡玩。",
+                      "en": "That child is playing in the park."
+                    },
+                    {
+                      "zh": "每個小孩都需要父母的關心。",
+                      "en": "Every child needs their parents' care."
+                    },
+                    {
+                      "zh": "這個小孩今年五歲。",
+                      "en": "This child is five years old this year."
+                    },
+                    {
+                      "zh": "老師很照顧班上的每個小孩。",
+                      "en": "The teacher takes good care of every child in the class."
+                    },
+                    {
+                      "zh": "這個小孩很會唱歌。",
+                      "en": "This child is good at singing."
+                    },
+                    {
+                      "zh": "那個小孩正在學騎腳踏車。",
+                      "en": "That child is learning to ride a bicycle."
+                    },
+                    {
+                      "zh": "這個小孩很喜歡看故事書。",
+                      "en": "This child loves reading storybooks."
+                    },
+                    {
+                      "zh": "每個小孩都應該得到良好的教育。",
+                      "en": "Every child deserves a good education."
+                    },
+                    {
+                      "zh": "這個小孩昨天在學校交到新朋友。",
+                      "en": "This child made a new friend at school yesterday."
+                    }
+                  ]
                 }
               ]
             },
