@@ -4651,6 +4651,9 @@ function inflectedFormCandidates(base) {
   candidates.add(/[^aeiou]e$/.test(b) ? b.slice(0, -1) + "ing" : b + "ing");
   candidates.add(endsConsonantY ? b.slice(0, -1) + "ied" : b.endsWith("e") ? b + "d" : b + "ed");
   candidates.add(b + "ly");
+  // -ble 結尾的字變副詞要去 e 加 y，不是直接加 ly（例如 reliable→reliably，
+  // 不是 reliablely；dependable→dependably；eligible→eligibly）
+  if (/le$/.test(b)) candidates.add(b.slice(0, -1) + "y");
   candidates.add(b + "'s");
   candidates.add(sForm + "'");
   return candidates;

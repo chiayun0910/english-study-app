@@ -27338,7 +27338,49 @@
                   "ex_zh": "相信法蘭克會是你圖書館工作團隊的得力新成員。",
                   "ex_blank": "I believe Frank would be an excellent ____ to your library staff.",
                   "grammar": "衍生字：add v. 添加；additional adj. 額外的。",
-                  "ipa": "əˈdɪʃən"
+                  "ipa": "əˈdɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "王經理相信這位新工程師會是團隊很棒的新成員。",
+                      "en": "Mr. Wang believes the new engineer will be a great addition to the team."
+                    },
+                    {
+                      "zh": "人資部門正在考慮招募兩名新成員加入客服團隊。",
+                      "en": "HR is considering two additions to the customer service team."
+                    },
+                    {
+                      "zh": "這位實習生證明自己是會計部門的得力新成員。",
+                      "en": "The intern proved to be a valuable addition to the accounting department."
+                    },
+                    {
+                      "zh": "我們都認為新來的設計師是行銷團隊的一大助力。",
+                      "en": "We all agree that the new designer is a great addition to the marketing team."
+                    },
+                    {
+                      "zh": "這位顧問的加入讓整個專案團隊更加完整。",
+                      "en": "The consultant was a welcome addition to the project team."
+                    },
+                    {
+                      "zh": "新的業務代表證明了自己是銷售部門寶貴的一員。",
+                      "en": "The new sales representative proved to be a valuable addition to the department."
+                    },
+                    {
+                      "zh": "執行長表示這次合併是公司資產的一大擴充。",
+                      "en": "The CEO said the merger was a major addition to the company's assets."
+                    },
+                    {
+                      "zh": "這位資深分析師的加入強化了整個研究小組。",
+                      "en": "The senior analyst was a strong addition to the research group."
+                    },
+                    {
+                      "zh": "公司正打算在財務部門增加一名新成員。",
+                      "en": "The company plans to make an addition to the finance department."
+                    },
+                    {
+                      "zh": "每個人都同意新主管是管理團隊的一大助益。",
+                      "en": "Everyone agrees that the new supervisor is a great addition to the management team."
+                    }
+                  ]
                 },
                 {
                   "en": "applicant",
@@ -27348,7 +27390,49 @@
                   "ex_zh": "應徵者應該對當今科技潮流有所認識。",
                   "ex_blank": "____ should possess knowledge of current trends in technology.",
                   "grammar": "衍生字：apply v. 申請；application n. 申請。",
-                  "ipa": "ˈæplɪkənt"
+                  "ipa": "ˈæplɪkənt",
+                  "translateBank": [
+                    {
+                      "zh": "所有應徵者都必須在星期五前繳交履歷。",
+                      "en": "All applicants must submit their résumés by Friday."
+                    },
+                    {
+                      "zh": "這位應徵者在面試中表現得非常自信。",
+                      "en": "The applicant seemed very confident during the interview."
+                    },
+                    {
+                      "zh": "人資部門已經收到超過兩百份求職申請。",
+                      "en": "HR has received applications from more than two hundred applicants."
+                    },
+                    {
+                      "zh": "合格的應徵者應該具備至少三年的行銷經驗。",
+                      "en": "Qualified applicants should have at least three years of marketing experience."
+                    },
+                    {
+                      "zh": "我們會優先聯絡具備雙語能力的應徵者。",
+                      "en": "We will contact bilingual applicants first."
+                    },
+                    {
+                      "zh": "這位應徵者的背景跟職缺要求完全吻合。",
+                      "en": "This applicant's background matches the job requirements perfectly."
+                    },
+                    {
+                      "zh": "請問這個職缺目前有多少位應徵者？",
+                      "en": "How many applicants are there for this position?"
+                    },
+                    {
+                      "zh": "招募經理把應徵者名單縮減到五人。",
+                      "en": "The recruiting manager narrowed the list of applicants down to five."
+                    },
+                    {
+                      "zh": "每位應徵者都會收到一封確認信。",
+                      "en": "Every applicant will receive a confirmation e-mail."
+                    },
+                    {
+                      "zh": "這位應徵者在最後一輪面試中表現突出。",
+                      "en": "The applicant stood out in the final round of interviews."
+                    }
+                  ]
                 },
                 {
                   "en": "assistant",
@@ -27358,7 +27442,49 @@
                   "ex_zh": "我們需要刊登廣告徵求另一名助理。",
                   "ex_blank": "We need to advertise for another ____.",
                   "grammar": "衍生字：assist v. 協助；assistance n. 協助。",
-                  "ipa": "əˈsɪstənt"
+                  "ipa": "əˈsɪstənt",
+                  "translateBank": [
+                    {
+                      "zh": "他剛被升職為部門經理的助理。",
+                      "en": "He was just promoted to assistant to the department manager."
+                    },
+                    {
+                      "zh": "我們的行政助理正在安排下週的會議行程。",
+                      "en": "Our administrative assistant is arranging next week's meeting schedule."
+                    },
+                    {
+                      "zh": "這個職缺需要一位細心又可靠的助理。",
+                      "en": "This position requires a careful and reliable assistant."
+                    },
+                    {
+                      "zh": "公司打算再招募一名助理來分擔業務。",
+                      "en": "The company plans to hire another assistant to share the workload."
+                    },
+                    {
+                      "zh": "新來的助理很快就熟悉了辦公室的流程。",
+                      "en": "The new assistant quickly learned the office procedures."
+                    },
+                    {
+                      "zh": "這位助理負責處理所有的出差安排。",
+                      "en": "The assistant is responsible for handling all travel arrangements."
+                    },
+                    {
+                      "zh": "請把這份報告交給我的助理整理。",
+                      "en": "Please give this report to my assistant to organize."
+                    },
+                    {
+                      "zh": "她在這家公司當了五年的執行助理。",
+                      "en": "She has worked as an executive assistant at this company for five years."
+                    },
+                    {
+                      "zh": "行銷部門目前正在找一位兼職助理。",
+                      "en": "The marketing department is currently looking for a part-time assistant."
+                    },
+                    {
+                      "zh": "那位助理因為表現優異而獲得加薪。",
+                      "en": "The assistant received a raise for her outstanding performance."
+                    }
+                  ]
                 },
                 {
                   "en": "associate",
@@ -27367,7 +27493,49 @@
                   "ex_en": "As an associate in the legal department, it will be Mr. Ishibashi's responsibility to review all corporate contracts.",
                   "ex_zh": "身為法務部門同仁，檢閱公司所有合約是石橋先生的責任。",
                   "ex_blank": "As an ____ in the legal department, it will be Mr. Ishibashi's responsibility to review all corporate contracts.",
-                  "ipa": "əˈsoʊʃiˌeɪt"
+                  "ipa": "əˈsoʊʃiˌeɪt",
+                  "translateBank": [
+                    {
+                      "zh": "我的同事下週會去上海拜訪幾位重要客戶。",
+                      "en": "My associate will travel to Shanghai next week to visit several key clients."
+                    },
+                    {
+                      "zh": "法務部門有位同事負責審核所有的合約。",
+                      "en": "An associate in the legal department reviews all the contracts."
+                    },
+                    {
+                      "zh": "這位合夥人投資了這間顧問公司三成的股份。",
+                      "en": "The associate invested in thirty percent of the consulting firm's shares."
+                    },
+                    {
+                      "zh": "我想介紹幾位業務部門的同事給你認識。",
+                      "en": "Let me introduce you to a few associates from the sales department."
+                    },
+                    {
+                      "zh": "那位資深同事教了我很多關於客戶管理的技巧。",
+                      "en": "That senior associate taught me a lot about client management."
+                    },
+                    {
+                      "zh": "我們公司有三位合夥人共同經營這間事務所。",
+                      "en": "Our firm has three associates who run the practice together."
+                    },
+                    {
+                      "zh": "這位同事將代表公司出席這場國際研討會。",
+                      "en": "This associate will represent the company at the international conference."
+                    },
+                    {
+                      "zh": "財務部的同事已經把這季的報表準備好了。",
+                      "en": "The associate in finance has prepared this quarter's report."
+                    },
+                    {
+                      "zh": "這位年輕的合夥人對市場趨勢有獨到的見解。",
+                      "en": "The young associate has unique insights into market trends."
+                    },
+                    {
+                      "zh": "我和幾位同事一起完成了這份提案。",
+                      "en": "I completed this proposal together with a few associates."
+                    }
+                  ]
                 },
                 {
                   "en": "bachelor's degree",
@@ -27377,7 +27545,49 @@
                   "ex_zh": "布朗博士擁有波特大學的化學學士及分析化學的博士學位。",
                   "ex_blank": "Dr. Brown has a ____ in chemistry and a Ph.D. in analytical chemistry from Porter University.",
                   "grammar": "字彙放大鏡：master's degree 碩士學位；Ph.D. degree 博士學位 (= doctorate)（Ph.D. 為 Doctor of Philosophy 的縮寫）。",
-                  "ipa": "ˈbæʧələrz dɪˈgri"
+                  "ipa": "ˈbæʧələrz dɪˈgri",
+                  "translateBank": [
+                    {
+                      "zh": "她擁有行銷學的學士學位。",
+                      "en": "She holds a bachelor's degree in marketing."
+                    },
+                    {
+                      "zh": "這個職缺要求應徵者至少具備學士學位。",
+                      "en": "This position requires applicants to have at least a bachelor's degree."
+                    },
+                    {
+                      "zh": "他在會計系拿到學士學位後就進入這家公司。",
+                      "en": "He joined this company right after earning his bachelor's degree in accounting."
+                    },
+                    {
+                      "zh": "擁有學士學位的求職者會被優先考慮。",
+                      "en": "Candidates with a bachelor's degree will be given priority."
+                    },
+                    {
+                      "zh": "李小姐的學士學位是在這所大學取得的。",
+                      "en": "Ms. Lee's bachelor's degree was earned at this university."
+                    },
+                    {
+                      "zh": "完成學士學位之後，他決定先累積工作經驗。",
+                      "en": "After completing his bachelor's degree, he decided to gain work experience first."
+                    },
+                    {
+                      "zh": "這份職缺並不要求碩士學位，學士學位就足夠了。",
+                      "en": "This position does not require a master's degree; a bachelor's degree is enough."
+                    },
+                    {
+                      "zh": "陳先生擁有工程學的學士學位，之後又取得碩士學位。",
+                      "en": "Mr. Chen has a bachelor's degree in engineering and later earned a master's degree."
+                    },
+                    {
+                      "zh": "人資部門正在確認她的學士學位證書。",
+                      "en": "HR is verifying her bachelor's degree certificate."
+                    },
+                    {
+                      "zh": "即使沒有學士學位，他仍憑著經驗獲得這份工作。",
+                      "en": "Even without a bachelor's degree, he got the job based on his experience."
+                    }
+                  ]
                 },
                 {
                   "en": "candidate",
@@ -27386,7 +27596,49 @@
                   "ex_en": "Of all the candidates applying for the job, Mr. Wang appears to be the most promising.",
                   "ex_zh": "在申請這份工作的應徵者中，王先生看來最有機會出線。",
                   "ex_blank": "Of all the ____ applying for the job, Mr. Wang appears to be the most promising.",
-                  "ipa": "ˈkænədɪt"
+                  "ipa": "ˈkænədɪt",
+                  "translateBank": [
+                    {
+                      "zh": "這次招募有三位候選人進入最後一輪面試。",
+                      "en": "Three candidates made it to the final round of interviews."
+                    },
+                    {
+                      "zh": "這位候選人的經歷跟職缺非常匹配。",
+                      "en": "This candidate's experience matches the position perfectly."
+                    },
+                    {
+                      "zh": "人資經理正在比較這兩位候選人的優缺點。",
+                      "en": "The HR manager is comparing the strengths and weaknesses of the two candidates."
+                    },
+                    {
+                      "zh": "我們正在尋找一位具備國際經驗的候選人。",
+                      "en": "We are looking for a candidate with international experience."
+                    },
+                    {
+                      "zh": "這位候選人在面試中展現出很強的領導能力。",
+                      "en": "The candidate showed strong leadership skills during the interview."
+                    },
+                    {
+                      "zh": "董事會已經選定了下一任執行長的候選人。",
+                      "en": "The board has selected a candidate for the next CEO position."
+                    },
+                    {
+                      "zh": "有多少位候選人申請這個行銷經理的職位？",
+                      "en": "How many candidates applied for the marketing manager position?"
+                    },
+                    {
+                      "zh": "這位候選人的推薦信給人留下深刻印象。",
+                      "en": "This candidate's letters of recommendation made a strong impression."
+                    },
+                    {
+                      "zh": "我們決定給這位候選人第二次面試的機會。",
+                      "en": "We decided to give this candidate a second interview."
+                    },
+                    {
+                      "zh": "面試委員會一致認為她是最合適的候選人。",
+                      "en": "The interview panel agreed that she was the most suitable candidate."
+                    }
+                  ]
                 },
                 {
                   "en": "clerical",
@@ -27396,7 +27648,49 @@
                   "ex_zh": "期望這名助理從簡單行政事務到複雜的交辦事項都能夠執行。",
                   "ex_blank": "The assistant will be expected to carry out a range of tasks from simple ____ duties to complex assignments.",
                   "grammar": "衍生字：clerk n. 職員；店員。",
-                  "ipa": "ˈklɛrɪkəl"
+                  "ipa": "ˈklɛrɪkəl",
+                  "translateBank": [
+                    {
+                      "zh": "這份工作主要包含一些基本的文書工作。",
+                      "en": "This job mainly involves basic clerical work."
+                    },
+                    {
+                      "zh": "她每天要處理大量的行政文書事務。",
+                      "en": "She handles a large amount of clerical work every day."
+                    },
+                    {
+                      "zh": "這個職缺需要處理文件歸檔等事務性工作。",
+                      "en": "This position requires handling clerical tasks such as filing documents."
+                    },
+                    {
+                      "zh": "公司正在招募一位兼職的文書助理。",
+                      "en": "The company is hiring a part-time clerical assistant."
+                    },
+                    {
+                      "zh": "除了文書工作之外，他還要負責接電話。",
+                      "en": "Besides clerical duties, he is also responsible for answering phones."
+                    },
+                    {
+                      "zh": "這份報告裡出現了一個文書上的小錯誤。",
+                      "en": "There was a small clerical error in this report."
+                    },
+                    {
+                      "zh": "新進員工需要先學會基本的文書作業流程。",
+                      "en": "New employees need to learn basic clerical procedures first."
+                    },
+                    {
+                      "zh": "這個部門有兩位員工專門負責文書工作。",
+                      "en": "Two employees in this department handle clerical work exclusively."
+                    },
+                    {
+                      "zh": "他的文書處理能力讓主管印象深刻。",
+                      "en": "His clerical skills impressed his supervisor."
+                    },
+                    {
+                      "zh": "這次的疏失其實只是一個文書上的失誤。",
+                      "en": "This mistake was actually just a clerical error."
+                    }
+                  ]
                 },
                 {
                   "en": "compensation",
@@ -27406,7 +27700,49 @@
                   "ex_zh": "員工手冊涵蓋了薪資、獎金以及加班等項目。",
                   "ex_blank": "The company handbook covers the topics of ____, bonuses, and overtime.",
                   "grammar": "衍生字：compensate v. 賠償；補償。",
-                  "ipa": "ˌkɑmpənˈseɪʃən"
+                  "ipa": "ˌkɑmpənˈseɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "這份職缺的報酬包含底薪加上獎金。",
+                      "en": "The compensation for this position includes a base salary plus bonuses."
+                    },
+                    {
+                      "zh": "公司正在重新檢討員工的薪資報酬制度。",
+                      "en": "The company is reviewing its employee compensation system."
+                    },
+                    {
+                      "zh": "她因為加班而獲得額外的報酬。",
+                      "en": "She received extra compensation for working overtime."
+                    },
+                    {
+                      "zh": "人資部門公布了明年的薪酬調整計畫。",
+                      "en": "HR announced next year's compensation adjustment plan."
+                    },
+                    {
+                      "zh": "這個職位的薪酬會依照經驗來調整。",
+                      "en": "The compensation for this position will be adjusted based on experience."
+                    },
+                    {
+                      "zh": "員工手冊裡詳細說明了薪資與獎金等報酬項目。",
+                      "en": "The employee handbook explains compensation items such as salary and bonuses in detail."
+                    },
+                    {
+                      "zh": "公司提供有競爭力的薪酬來吸引優秀人才。",
+                      "en": "The company offers competitive compensation to attract top talent."
+                    },
+                    {
+                      "zh": "這次職位調動並沒有附帶額外的補償。",
+                      "en": "This transfer did not come with any additional compensation."
+                    },
+                    {
+                      "zh": "他們正在討論受傷員工的補償方案。",
+                      "en": "They are discussing a compensation plan for the injured employee."
+                    },
+                    {
+                      "zh": "這份合約清楚列出所有的薪酬條件。",
+                      "en": "This contract clearly lists all the compensation terms."
+                    }
+                  ]
                 },
                 {
                   "en": "confidential",
@@ -27416,7 +27752,49 @@
                   "ex_zh": "求職者應避免全面洩漏先前工作期間所悉的機密資訊。",
                   "ex_blank": "Job seekers should avoid discussing ____ information that was acquired while working for former employers.",
                   "grammar": "字彙放大鏡：相似詞：classified, secret, private。",
-                  "ipa": "ˌkɑnfəˈdɛnʃəl"
+                  "ipa": "ˌkɑnfəˈdɛnʃəl",
+                  "translateBank": [
+                    {
+                      "zh": "這份文件包含公司的機密資訊。",
+                      "en": "This document contains confidential company information."
+                    },
+                    {
+                      "zh": "所有員工都必須對客戶資料保密。",
+                      "en": "All employees must keep client information confidential."
+                    },
+                    {
+                      "zh": "求職者不應該洩漏前雇主的機密資訊。",
+                      "en": "Job seekers should not disclose confidential information from former employers."
+                    },
+                    {
+                      "zh": "這份合約的內容屬於機密，不能對外公開。",
+                      "en": "The content of this contract is confidential and cannot be disclosed."
+                    },
+                    {
+                      "zh": "人資部門會以保密方式處理所有的申訴。",
+                      "en": "HR will handle all complaints confidentially."
+                    },
+                    {
+                      "zh": "這場會議討論的是公司機密的併購計畫。",
+                      "en": "This meeting discusses the company's confidential merger plan."
+                    },
+                    {
+                      "zh": "請把這份機密報告鎖在惃子裡。",
+                      "en": "Please keep this confidential report locked in the cabinet."
+                    },
+                    {
+                      "zh": "員工簽署了保密協議以保護機密資料。",
+                      "en": "Employees signed an agreement to protect confidential data."
+                    },
+                    {
+                      "zh": "薪資資訊在這家公司屬於機密事項。",
+                      "en": "Salary information is considered confidential at this company."
+                    },
+                    {
+                      "zh": "這位律師必須機密地處理這個案子。",
+                      "en": "The lawyer must handle this case confidentially."
+                    }
+                  ]
                 },
                 {
                   "en": "consideration",
@@ -27426,7 +27804,49 @@
                   "ex_zh": "相信以我的背景與經驗，會是個值得您考慮的好人選。",
                   "ex_blank": "I believe that my background and experience make me an attractive candidate for your ____.",
                   "grammar": "字彙放大鏡：take...into consideration 將…列入考慮；under consideration 考慮中。衍生字：consider v. 考慮。",
-                  "ipa": "kənˌsɪdərˈeɪʃən"
+                  "ipa": "kənˌsɪdərˈeɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "謝謝您把我的申請列入考慮。",
+                      "en": "Thank you for your consideration of my application."
+                    },
+                    {
+                      "zh": "薪資只是求職者考慮這個職位的其中一個因素。",
+                      "en": "Salary is just one consideration for job seekers weighing this position."
+                    },
+                    {
+                      "zh": "這個提案目前還在考慮中。",
+                      "en": "This proposal is still under consideration."
+                    },
+                    {
+                      "zh": "請將我的經驗和技能列入考慮。",
+                      "en": "Please take my experience and skills into consideration."
+                    },
+                    {
+                      "zh": "委員會將會考慮每一位候選人的背景。",
+                      "en": "The committee will give consideration to every candidate's background."
+                    },
+                    {
+                      "zh": "我們對於您的求職信表示由衷的感謝與考慮。",
+                      "en": "We appreciate your application and will give it careful consideration."
+                    },
+                    {
+                      "zh": "這個決定需要考慮到員工的意見。",
+                      "en": "This decision requires consideration of the employees' opinions."
+                    },
+                    {
+                      "zh": "謝謝您花時間考慮這個職位機會。",
+                      "en": "Thank you for your consideration of this job opportunity."
+                    },
+                    {
+                      "zh": "成本是選擇供應商時的重要考量。",
+                      "en": "Cost is an important consideration when choosing a supplier."
+                    },
+                    {
+                      "zh": "人資部門正在考慮調整休假政策。",
+                      "en": "HR is giving consideration to adjusting the leave policy."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -27596,7 +28016,49 @@
                   "ex_zh": "溫索普策略顧問公司正在尋找一個有熱忱又能長期配合截稿的人。",
                   "ex_blank": "Winthrop Strategies is seeking to employ a motivated individual who ____ meets deadlines.",
                   "grammar": "衍生字：consistent adj. 一致的；consistency n. 一致性。",
-                  "ipa": "kənˈsɪstəntli"
+                  "ipa": "kənˈsɪstəntli",
+                  "translateBank": [
+                    {
+                      "zh": "她持續多年都準時完成所有專案。",
+                      "en": "She has consistently completed all her projects on time for years."
+                    },
+                    {
+                      "zh": "這位員工的表現一直都很穩定優異。",
+                      "en": "This employee consistently performs at a high level."
+                    },
+                    {
+                      "zh": "我們的客服團隊始終都能快速回覆顧客。",
+                      "en": "Our customer service team consistently responds to clients quickly."
+                    },
+                    {
+                      "zh": "他在每次績效考核中都持續拿到高分。",
+                      "en": "He consistently scores high in every performance review."
+                    },
+                    {
+                      "zh": "這家公司一直都能達成銷售目標。",
+                      "en": "This company has consistently met its sales targets."
+                    },
+                    {
+                      "zh": "主管稱讚她總是能如期完成報告。",
+                      "en": "His supervisor praised her for consistently submitting reports on time."
+                    },
+                    {
+                      "zh": "這個部門的生產力一直維持在高水準。",
+                      "en": "This department's productivity has remained consistently high."
+                    },
+                    {
+                      "zh": "新的政策讓員工持續遵守公司規定。",
+                      "en": "The new policy helps employees consistently follow company rules."
+                    },
+                    {
+                      "zh": "她在各項任務中都展現一致的專業態度。",
+                      "en": "She consistently demonstrates a professional attitude across all tasks."
+                    },
+                    {
+                      "zh": "這位主管持續支持團隊的每一個決定。",
+                      "en": "This manager consistently supports every decision the team makes."
+                    }
+                  ]
                 },
                 {
                   "en": "electronically",
@@ -27606,7 +28068,49 @@
                   "ex_zh": "另外可將申請郵件寄至raja@sajob.com.pk，由電子系統建檔。",
                   "ex_blank": "Applications can also be filed ____ by sending an e-mail to raja@sajob.com.pk.",
                   "grammar": "衍生字：electronic adj. 電子的。",
-                  "ipa": "ˌɪˌlɛkˈtrɑnɪkəˌli"
+                  "ipa": "ˌɪˌlɛkˈtrɑnɪkəˌli",
+                  "translateBank": [
+                    {
+                      "zh": "所有的求職申請都可以用電子方式提交。",
+                      "en": "All job applications can be submitted electronically."
+                    },
+                    {
+                      "zh": "公司現在要求員工用電子方式記錄出勤。",
+                      "en": "The company now requires employees to record attendance electronically."
+                    },
+                    {
+                      "zh": "這份合約已經用電子方式簽署完成。",
+                      "en": "This contract has already been signed electronically."
+                    },
+                    {
+                      "zh": "顧客可以用電子方式支付所有的帳單。",
+                      "en": "Customers can pay all their bills electronically."
+                    },
+                    {
+                      "zh": "履歷可以直接用電子方式寄給人資部門。",
+                      "en": "Résumés can be sent directly to HR electronically."
+                    },
+                    {
+                      "zh": "這些文件已經用電子方式歸檔保存。",
+                      "en": "These documents have been filed electronically."
+                    },
+                    {
+                      "zh": "薪資單現在都是用電子方式發送的。",
+                      "en": "Pay slips are now distributed electronically."
+                    },
+                    {
+                      "zh": "會議記錄會在開會後用電子方式傳送給大家。",
+                      "en": "Meeting minutes will be sent electronically to everyone after the meeting."
+                    },
+                    {
+                      "zh": "這套系統讓資料能夠用電子方式即時更新。",
+                      "en": "This system allows data to be updated electronically in real time."
+                    },
+                    {
+                      "zh": "客戶的意見回饋都是透過電子方式收集的。",
+                      "en": "Customer feedback is collected electronically."
+                    }
+                  ]
                 },
                 {
                   "en": "employment",
@@ -27616,7 +28120,49 @@
                   "ex_zh": "你將於十月三十日起擔任英特利科公司的行政助理一職。",
                   "ex_blank": "You will start your ____ with Intelicom as an administrative assistant on October 30.",
                   "grammar": "衍生字：employ v. 雇用；employer n. 雇主；employee n. 員工。",
-                  "ipa": "ɪmˈplɔɪmənt"
+                  "ipa": "ɪmˈplɔɪmənt",
+                  "translateBank": [
+                    {
+                      "zh": "她將從十月起在這家公司任職。",
+                      "en": "She will start her employment with this company in October."
+                    },
+                    {
+                      "zh": "這個職位提供全職的工作機會。",
+                      "en": "This position offers full-time employment."
+                    },
+                    {
+                      "zh": "他因為公司縮編而失業了三個月。",
+                      "en": "He was out of employment for three months due to company downsizing."
+                    },
+                    {
+                      "zh": "這張合約詳細說明了雇用的條件。",
+                      "en": "This contract outlines the terms of employment in detail."
+                    },
+                    {
+                      "zh": "人資部門正在審核她的任職申請。",
+                      "en": "HR is reviewing her application for employment."
+                    },
+                    {
+                      "zh": "這座城市的就業市場最近成長迅速。",
+                      "en": "Employment in this city has grown rapidly recently."
+                    },
+                    {
+                      "zh": "公司為新員工準備了一份任職須知。",
+                      "en": "The company prepared an employment guide for new staff."
+                    },
+                    {
+                      "zh": "他的任職期間總共長達十年。",
+                      "en": "His employment with the company lasted ten years in total."
+                    },
+                    {
+                      "zh": "這份工作機會需要簽署一份正式的雇用合約。",
+                      "en": "This job requires signing a formal employment contract."
+                    },
+                    {
+                      "zh": "許多畢業生正在積極尋找第一份工作。",
+                      "en": "Many graduates are actively seeking their first employment."
+                    }
+                  ]
                 },
                 {
                   "en": "ethic",
@@ -27626,7 +28172,49 @@
                   "ex_zh": "她對你的專業能力評價很高，職業道德也備受推崇。",
                   "ex_blank": "She speaks very highly of your expertise and finds your work ____ to be outstanding.",
                   "grammar": "字彙放大鏡：work ethic(s) 職業道德；the code of ethics 道德準則；工作守則。",
-                  "ipa": "ˈɛθɪk"
+                  "ipa": "ˈɛθɪk",
+                  "translateBank": [
+                    {
+                      "zh": "老闆很欣賞他認真負責的職業道德。",
+                      "en": "The boss admires his strong work ethic."
+                    },
+                    {
+                      "zh": "這家公司非常重視員工的職業道德準則。",
+                      "en": "This company places great importance on employees' code of ethics."
+                    },
+                    {
+                      "zh": "她對工作的敬業態度讓所有人印象深刻。",
+                      "en": "Her work ethic impressed everyone in the office."
+                    },
+                    {
+                      "zh": "公司要求所有員工遵守商業道德規範。",
+                      "en": "The company requires all employees to follow its business ethics."
+                    },
+                    {
+                      "zh": "這位新員工展現出令人讚賞的工作態度。",
+                      "en": "This new employee displays an admirable work ethic."
+                    },
+                    {
+                      "zh": "面試官特別詢問了她對職業道德的看法。",
+                      "en": "The interviewer specifically asked about her views on work ethic."
+                    },
+                    {
+                      "zh": "團隊的職業道德讓客戶對我們更加信任。",
+                      "en": "The team's work ethic has earned greater trust from our clients."
+                    },
+                    {
+                      "zh": "這間公司把誠信視為核心的道德準則。",
+                      "en": "This company treats integrity as a core ethic."
+                    },
+                    {
+                      "zh": "主管希望每位員工都能保持良好的職業道德。",
+                      "en": "The supervisor hopes every employee will maintain a good work ethic."
+                    },
+                    {
+                      "zh": "強烈的職業道德是升遷的重要條件之一。",
+                      "en": "A strong work ethic is one of the key factors for promotion."
+                    }
+                  ]
                 },
                 {
                   "en": "evident",
@@ -27636,7 +28224,49 @@
                   "ex_zh": "影片中明顯可看出您的客戶有涉案。",
                   "ex_blank": "This video makes it ____ that your client committed the crime.",
                   "grammar": "衍生字：evidence n. 證據。",
-                  "ipa": "ˈɛvədənt"
+                  "ipa": "ˈɛvədənt",
+                  "translateBank": [
+                    {
+                      "zh": "從銷售數字可以明顯看出業績成長。",
+                      "en": "It is evident from the sales figures that revenue has grown."
+                    },
+                    {
+                      "zh": "他對這個專案的熱情顯而易見。",
+                      "en": "His enthusiasm for this project is evident."
+                    },
+                    {
+                      "zh": "這份報告清楚顯示出團隊的努力成果。",
+                      "en": "This report makes it evident how hard the team has worked."
+                    },
+                    {
+                      "zh": "她的領導能力在這次危機中展現得很明顯。",
+                      "en": "Her leadership ability became evident during this crisis."
+                    },
+                    {
+                      "zh": "面試中很明顯能看出他準備充分。",
+                      "en": "It was evident during the interview that he was well prepared."
+                    },
+                    {
+                      "zh": "客戶的不滿從這些投訴信中顯而易見。",
+                      "en": "Customer dissatisfaction is evident from these complaint letters."
+                    },
+                    {
+                      "zh": "這次會議明顯缺乏充分的事前準備。",
+                      "en": "It was evident that this meeting lacked proper preparation."
+                    },
+                    {
+                      "zh": "公司成長的趨勢在這份年報中十分明顯。",
+                      "en": "The company's growth trend is evident in this annual report."
+                    },
+                    {
+                      "zh": "團隊合作的重要性在這次專案中變得非常明顯。",
+                      "en": "The importance of teamwork became evident during this project."
+                    },
+                    {
+                      "zh": "明顯地，這項政策需要進一步修正。",
+                      "en": "Evidently, this policy needs further revision."
+                    }
+                  ]
                 },
                 {
                   "en": "familiarity",
@@ -27646,7 +28276,49 @@
                   "ex_zh": "熟悉出版工作會很有幫助。",
                   "ex_blank": "____ with publishing will be very helpful.",
                   "grammar": "衍生字：familiar adj. 熟悉的。",
-                  "ipa": "fəˌmɪˈljɛrəti"
+                  "ipa": "fəˌmɪˈljɛrəti",
+                  "translateBank": [
+                    {
+                      "zh": "熟悉會計軟體對這份工作很有幫助。",
+                      "en": "Familiarity with accounting software will be very helpful."
+                    },
+                    {
+                      "zh": "她對出版業的熟悉程度讓面試官印象深刻。",
+                      "en": "Her familiarity with the publishing industry impressed the interviewer."
+                    },
+                    {
+                      "zh": "這個職位需要熟悉國際貿易相關法規。",
+                      "en": "This position requires familiarity with international trade regulations."
+                    },
+                    {
+                      "zh": "他對客戶管理系統的熟悉讓工作更有效率。",
+                      "en": "His familiarity with the client management system made his work more efficient."
+                    },
+                    {
+                      "zh": "熟悉多種辦公軟體是這份工作的基本要求。",
+                      "en": "Familiarity with various office programs is a basic requirement for this job."
+                    },
+                    {
+                      "zh": "面試官詢問她對這個產業的熟悉程度。",
+                      "en": "The interviewer asked about her familiarity with the industry."
+                    },
+                    {
+                      "zh": "對公司流程的熟悉幫助新員工更快上手。",
+                      "en": "Familiarity with company procedures helps new employees get up to speed faster."
+                    },
+                    {
+                      "zh": "這份工作要求熟悉財務報表的分析。",
+                      "en": "This job requires familiarity with financial statement analysis."
+                    },
+                    {
+                      "zh": "他對這個市場的熟悉程度遠超過其他同事。",
+                      "en": "His familiarity with this market far exceeds that of his colleagues."
+                    },
+                    {
+                      "zh": "熟悉多國語言對這個職位會是一大優勢。",
+                      "en": "Familiarity with multiple languages will be a big advantage for this position."
+                    }
+                  ]
                 },
                 {
                   "en": "fill",
@@ -27655,7 +28327,49 @@
                   "ex_en": "When did they fill the assistant manager position?",
                   "ex_zh": "副理的職缺是何時遞補的？",
                   "ex_blank": "When did they ____ the assistant manager position?",
-                  "ipa": "fɪl"
+                  "ipa": "fɪl",
+                  "translateBank": [
+                    {
+                      "zh": "這個職缺公司打算在月底前遞補。",
+                      "en": "The company plans to fill this position by the end of the month."
+                    },
+                    {
+                      "zh": "人資部門已經遞補了那個空缺的職位。",
+                      "en": "HR has already filled the vacant position."
+                    },
+                    {
+                      "zh": "他們正在填補會計部門的人力缺口。",
+                      "en": "They are filling a staffing gap in the accounting department."
+                    },
+                    {
+                      "zh": "這個副理的職缺是什麼時候遞補的？",
+                      "en": "When was the assistant manager position filled?"
+                    },
+                    {
+                      "zh": "公司決定從內部晉升來遞補這個職位。",
+                      "en": "The company decided to fill this position through internal promotion."
+                    },
+                    {
+                      "zh": "我們還有三個空缺的職位需要遞補。",
+                      "en": "We still have three vacant positions to fill."
+                    },
+                    {
+                      "zh": "人資經理正忙著遞補業務部門的空缺。",
+                      "en": "The HR manager is busy filling vacancies in the sales department."
+                    },
+                    {
+                      "zh": "這個職位很難找到合適的人來遞補。",
+                      "en": "It has been difficult to fill this position with a suitable candidate."
+                    },
+                    {
+                      "zh": "董事會終於遞補了財務長這個空缺的職位。",
+                      "en": "The board finally filled the vacant CFO position."
+                    },
+                    {
+                      "zh": "公司計畫招募新人來遞補離職員工的職缺。",
+                      "en": "The company plans to hire new staff to fill the positions of departing employees."
+                    }
+                  ]
                 },
                 {
                   "en": "fit",
@@ -27664,7 +28378,49 @@
                   "ex_en": "I believe my skills and abilities fit the description of the person you are seeking.",
                   "ex_zh": "相信我的技術與能力符合您的徵才內容。",
                   "ex_blank": "I believe my skills and abilities ____ the description of the person you are seeking.",
-                  "ipa": "fɪt"
+                  "ipa": "fɪt",
+                  "translateBank": [
+                    {
+                      "zh": "我相信我的技能符合這份工作的要求。",
+                      "en": "I believe my skills fit the requirements of this job."
+                    },
+                    {
+                      "zh": "她的經驗完全符合這個職位的條件。",
+                      "en": "Her experience fits the qualifications for this position perfectly."
+                    },
+                    {
+                      "zh": "這位應徵者的背景符合我們的需求嗎？",
+                      "en": "Does this applicant's background fit our needs?"
+                    },
+                    {
+                      "zh": "你的工作風格符合我們團隊的文化嗎？",
+                      "en": "Does your working style fit our team culture?"
+                    },
+                    {
+                      "zh": "這個職缺需要一個符合公司價值觀的人。",
+                      "en": "This position requires someone who fits the company's values."
+                    },
+                    {
+                      "zh": "他的專業能力完全符合這個職位的描述。",
+                      "en": "His professional skills fit the job description perfectly."
+                    },
+                    {
+                      "zh": "這份提案的預算符合公司目前的財務狀況。",
+                      "en": "This proposal's budget fits the company's current financial situation."
+                    },
+                    {
+                      "zh": "我覺得這個新職位非常符合我的職涯規劃。",
+                      "en": "I feel this new position fits my career plan very well."
+                    },
+                    {
+                      "zh": "你的溝通能力符合客戶服務的要求。",
+                      "en": "Your communication skills fit the requirements of customer service."
+                    },
+                    {
+                      "zh": "這套培訓計畫符合新員工的實際需求。",
+                      "en": "This training program fits the actual needs of new employees."
+                    }
+                  ]
                 },
                 {
                   "en": "ideal",
@@ -27674,7 +28430,49 @@
                   "ex_zh": "從我們的討論來判斷，我深深覺得這間公司是個理想的工作地點。",
                   "ex_blank": "Judging by our discussion, I feel strongly that this company would be an ____ place for me to work.",
                   "grammar": "字彙放大鏡：be ideal for 對…很理想。",
-                  "ipa": "aɪˈdil"
+                  "ipa": "aɪˈdil",
+                  "translateBank": [
+                    {
+                      "zh": "這間辦公室是遠距工作的理想場所。",
+                      "en": "This office is an ideal place for remote work."
+                    },
+                    {
+                      "zh": "她擁有這個職位理想的所有條件。",
+                      "en": "She has all the ideal qualifications for this position."
+                    },
+                    {
+                      "zh": "這次的會議時間對所有人來說都很理想。",
+                      "en": "This meeting time is ideal for everyone."
+                    },
+                    {
+                      "zh": "我認為她是接任這個職位的理想人選。",
+                      "en": "I think she is the ideal candidate for this position."
+                    },
+                    {
+                      "zh": "對新創公司而言，這個地點非常理想。",
+                      "en": "This location is ideal for a startup company."
+                    },
+                    {
+                      "zh": "理想上，這份報告應該在週五前完成。",
+                      "en": "Ideally, this report should be finished by Friday."
+                    },
+                    {
+                      "zh": "這個產業對有創意的人來說是理想的職場。",
+                      "en": "This industry is an ideal workplace for creative people."
+                    },
+                    {
+                      "zh": "這次的升遷對他來說是個理想的機會。",
+                      "en": "This promotion is an ideal opportunity for him."
+                    },
+                    {
+                      "zh": "理想的狀況下，我們希望能在下週完成招募。",
+                      "en": "Ideally, we would like to finish recruiting by next week."
+                    },
+                    {
+                      "zh": "這個薪資範圍對一位新鮮人來說相當理想。",
+                      "en": "This salary range is ideal for a recent graduate."
+                    }
+                  ]
                 },
                 {
                   "en": "interview",
@@ -27683,7 +28481,49 @@
                   "ex_en": "Let's discuss the last person we interviewed before we see the next candidate.",
                   "ex_zh": "在見下一個人選之前，讓我們先討論前一位面試者吧。",
                   "ex_blank": "Let's discuss the last person we ____ before we see the next candidate.",
-                  "ipa": "ˈɪntərvˌju"
+                  "ipa": "ˈɪntərvˌju",
+                  "translateBank": [
+                    {
+                      "zh": "我們明天會面試三位候選人。",
+                      "en": "We will interview three candidates tomorrow."
+                    },
+                    {
+                      "zh": "她上星期已經面試過那位應徵者了。",
+                      "en": "She already interviewed that applicant last week."
+                    },
+                    {
+                      "zh": "這場面試讓他對這個職位更有信心。",
+                      "en": "This interview made him more confident about the position."
+                    },
+                    {
+                      "zh": "人資部門正在安排下一輪的面試。",
+                      "en": "HR is scheduling the next round of interviews."
+                    },
+                    {
+                      "zh": "面試過程中問了很多關於團隊合作的問題。",
+                      "en": "The interview covered many questions about teamwork."
+                    },
+                    {
+                      "zh": "你準備好要面試明天的那位應徵者了嗎？",
+                      "en": "Are you ready to interview tomorrow's applicant?"
+                    },
+                    {
+                      "zh": "這位經理面試了超過二十位求職者。",
+                      "en": "This manager has interviewed more than twenty job seekers."
+                    },
+                    {
+                      "zh": "面試結束後，她覺得自己表現得很好。",
+                      "en": "After the interview, she felt she had done well."
+                    },
+                    {
+                      "zh": "我們決定先電話面試再安排現場面試。",
+                      "en": "We decided to interview candidates by phone before scheduling an in-person interview."
+                    },
+                    {
+                      "zh": "這家公司的面試過程通常分成三個階段。",
+                      "en": "This company's interview process usually has three stages."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -27853,7 +28693,49 @@
                   "ex_zh": "在審閱所有履歷後，會邀請入選者前來面談。",
                   "ex_blank": "After all résumés have been reviewed, selected candidates will be ____ for interviews.",
                   "grammar": "衍生字：invitation n. 邀請函。",
-                  "ipa": "ˌɪnˈvaɪt"
+                  "ipa": "ˌɪnˈvaɪt",
+                  "translateBank": [
+                    {
+                      "zh": "我們會邀請入選的候選人來參加面試。",
+                      "en": "We will invite selected candidates for an interview."
+                    },
+                    {
+                      "zh": "公司邀請了所有部門主管參加這場會議。",
+                      "en": "The company invited all department heads to this meeting."
+                    },
+                    {
+                      "zh": "她受邀擔任這次年度研討會的講者。",
+                      "en": "She was invited to speak at this year's annual conference."
+                    },
+                    {
+                      "zh": "人資部門正在邀請員工填寫滿意度調查。",
+                      "en": "HR is inviting employees to fill out a satisfaction survey."
+                    },
+                    {
+                      "zh": "我們想邀請你加入我們的專案團隊。",
+                      "en": "We would like to invite you to join our project team."
+                    },
+                    {
+                      "zh": "主管邀請新進員工在會議上自我介紹。",
+                      "en": "The manager invited new employees to introduce themselves at the meeting."
+                    },
+                    {
+                      "zh": "所有合格的應徵者都會受邀參加下一輪面試。",
+                      "en": "All qualified applicants will be invited to the next round of interviews."
+                    },
+                    {
+                      "zh": "公司邀請客戶參加這場產品發表會。",
+                      "en": "The company invited clients to this product launch event."
+                    },
+                    {
+                      "zh": "她很榮幸受邀加入董事會。",
+                      "en": "She was honored to be invited to join the board."
+                    },
+                    {
+                      "zh": "我們邀請每位員工提出改善流程的意見。",
+                      "en": "We invite every employee to share ideas for improving the process."
+                    }
+                  ]
                 },
                 {
                   "en": "opportunity",
@@ -27862,7 +28744,49 @@
                   "ex_en": "I would welcome the opportunity to discuss how my skills could benefit your organization.",
                   "ex_zh": "我很歡迎有機會討論我的技能如何對貴組織有所助益。",
                   "ex_blank": "I would welcome the ____ to discuss how my skills could benefit your organization.",
-                  "ipa": "ˌɑpərˈtunəti"
+                  "ipa": "ˌɑpərˈtunəti",
+                  "translateBank": [
+                    {
+                      "zh": "這次升遷對她來說是個難得的機會。",
+                      "en": "This promotion is a rare opportunity for her."
+                    },
+                    {
+                      "zh": "我希望能有機會跟您談談我的相關經驗。",
+                      "en": "I hope to have the opportunity to talk with you about my relevant experience."
+                    },
+                    {
+                      "zh": "這家公司提供很多學習新技能的機會。",
+                      "en": "This company offers many opportunities to learn new skills."
+                    },
+                    {
+                      "zh": "這個職位將帶來前往海外出差的機會。",
+                      "en": "This position comes with opportunities to travel abroad."
+                    },
+                    {
+                      "zh": "他把這次挑戰看成一個成長的機會。",
+                      "en": "He sees this challenge as an opportunity for growth."
+                    },
+                    {
+                      "zh": "我們希望能提供員工更多升遷的機會。",
+                      "en": "We hope to provide employees with more opportunities for promotion."
+                    },
+                    {
+                      "zh": "這個產業目前有很多就業機會。",
+                      "en": "There are currently many job opportunities in this industry."
+                    },
+                    {
+                      "zh": "加入這個團隊會給你很多學習的機會。",
+                      "en": "Joining this team will give you many opportunities to learn."
+                    },
+                    {
+                      "zh": "她抓住每一個展現能力的機會。",
+                      "en": "She seizes every opportunity to demonstrate her abilities."
+                    },
+                    {
+                      "zh": "公司鼓勵員工把握每個跨部門合作的機會。",
+                      "en": "The company encourages employees to take every opportunity for cross-department collaboration."
+                    }
+                  ]
                 },
                 {
                   "en": "permanent",
@@ -27871,7 +28795,49 @@
                   "ex_en": "While most job seekers are looking for a permanent job, a temporary position may serve as a bridge to full-time employment.",
                   "ex_zh": "雖然多數求職者尋找的是一份長期工作，但約聘職缺有可能是通往全職工作的橋樑。",
                   "ex_blank": "While most job seekers are looking for a ____ job, a temporary position may serve as a bridge to full-time employment.",
-                  "ipa": "ˈpərmɑˌnɛnt"
+                  "ipa": "ˈpərmɑˌnɛnt",
+                  "translateBank": [
+                    {
+                      "zh": "這個職缺一開始是約聘，之後可能轉為正職。",
+                      "en": "This position starts as temporary but may become permanent later."
+                    },
+                    {
+                      "zh": "她在試用期結束後獲得了正式的職位。",
+                      "en": "She was given a permanent position after finishing her probation."
+                    },
+                    {
+                      "zh": "多數求職者都希望找到一份穩定的正職工作。",
+                      "en": "Most job seekers hope to find a permanent job."
+                    },
+                    {
+                      "zh": "公司決定將這個約聘職位轉成正職。",
+                      "en": "The company decided to make this temporary position permanent."
+                    },
+                    {
+                      "zh": "他已經永久搬到台北的分公司工作了。",
+                      "en": "He has permanently relocated to work at the Taipei branch."
+                    },
+                    {
+                      "zh": "這份合約到期後不會自動轉為正職。",
+                      "en": "This contract will not automatically become permanent after it expires."
+                    },
+                    {
+                      "zh": "成為正職員工後，她享有更多福利。",
+                      "en": "After becoming a permanent employee, she enjoyed more benefits."
+                    },
+                    {
+                      "zh": "這間公司目前只提供兼職而非正職的職缺。",
+                      "en": "This company currently offers only part-time, not permanent, positions."
+                    },
+                    {
+                      "zh": "這項政策的改變將會永久影響員工的休假制度。",
+                      "en": "This policy change will permanently affect the employees' leave system."
+                    },
+                    {
+                      "zh": "經理向她保證這個職位是長期穩定的。",
+                      "en": "The manager assured her that this was a permanent position."
+                    }
+                  ]
                 },
                 {
                   "en": "position",
@@ -27880,7 +28846,49 @@
                   "ex_en": "Although we have decided not to offer you a position at this time, we will keep your résumé on file.",
                   "ex_zh": "雖然我們決議目前無法錄用您，但您的履歷會被歸檔留存。",
                   "ex_blank": "Although we have decided not to offer you a ____ at this time, we will keep your résumé on file.",
-                  "ipa": "pəˈzɪʃən"
+                  "ipa": "pəˈzɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "這個行銷部門的職位已經有三位應徵者申請。",
+                      "en": "Three applicants have already applied for this position in the marketing department."
+                    },
+                    {
+                      "zh": "她花了半年才找到合適的職位。",
+                      "en": "It took her six months to find a suitable position."
+                    },
+                    {
+                      "zh": "這個職位需要有至少兩年的管理經驗。",
+                      "en": "This position requires at least two years of management experience."
+                    },
+                    {
+                      "zh": "他升職到了一個更高階的管理職位。",
+                      "en": "He was promoted to a higher management position."
+                    },
+                    {
+                      "zh": "這個職缺的薪資範圍會依經驗調整。",
+                      "en": "The salary range for this position will be adjusted based on experience."
+                    },
+                    {
+                      "zh": "公司打算在下個月前遞補這個空缺的職位。",
+                      "en": "The company plans to fill this vacant position next month."
+                    },
+                    {
+                      "zh": "她在面試中詳細描述了這個職位的職責。",
+                      "en": "She described the duties of this position in detail during the interview."
+                    },
+                    {
+                      "zh": "這個職位要求流利的英文溝通能力。",
+                      "en": "This position requires fluent English communication skills."
+                    },
+                    {
+                      "zh": "董事會決定取消這個職位的招募計畫。",
+                      "en": "The board decided to cancel the recruitment plan for this position."
+                    },
+                    {
+                      "zh": "這份職位說明清楚列出所有的工作要求。",
+                      "en": "This position description clearly lists all the job requirements."
+                    }
+                  ]
                 },
                 {
                   "en": "post",
@@ -27889,7 +28897,49 @@
                   "ex_en": "I am interested in applying for the managing consultant position you have posted on your Web site.",
                   "ex_zh": "我有興趣應徵您在網站上所公佈的管理顧問職位。",
                   "ex_blank": "I am interested in applying for the managing consultant position you have ____ on your Web site.",
-                  "ipa": "poʊst"
+                  "ipa": "poʊst",
+                  "translateBank": [
+                    {
+                      "zh": "人資部門已經在網站上公佈了這個職缺。",
+                      "en": "HR has already posted this job opening on the website."
+                    },
+                    {
+                      "zh": "公司會把所有的職缺都張貼在布告欄上。",
+                      "en": "The company posts all job openings on the bulletin board."
+                    },
+                    {
+                      "zh": "我有興趣應徵您在網站上公佈的那個職位。",
+                      "en": "I am interested in the position you posted on your website."
+                    },
+                    {
+                      "zh": "這份招募公告已經張貼超過兩週了。",
+                      "en": "This recruitment notice has been posted for more than two weeks."
+                    },
+                    {
+                      "zh": "主管把新的辦公室規定張貼在公告區。",
+                      "en": "The supervisor posted the new office rules on the notice board."
+                    },
+                    {
+                      "zh": "公司每週都會在內部網站上張貼最新消息。",
+                      "en": "The company posts the latest news on the intranet every week."
+                    },
+                    {
+                      "zh": "這個職缺公佈之後，收到了超過一百份履歷。",
+                      "en": "After this job was posted, more than a hundred résumés were received."
+                    },
+                    {
+                      "zh": "她負責把會議的通知張貼在各部門。",
+                      "en": "She is responsible for posting meeting notices to each department."
+                    },
+                    {
+                      "zh": "人資經理正在張貼新一輪的招募廣告。",
+                      "en": "The HR manager is posting a new round of recruitment ads."
+                    },
+                    {
+                      "zh": "公司決定暫停張貼任何新的職缺公告。",
+                      "en": "The company decided to stop posting any new job notices for now."
+                    }
+                  ]
                 },
                 {
                   "en": "prefer",
@@ -27899,7 +28949,49 @@
                   "ex_zh": "會優先考慮就讀商業新聞學的學生。",
                   "ex_blank": "Students in business journalism are ____.",
                   "grammar": "字彙放大鏡：prefer A to B 喜歡A勝過B；prefer V-ing to V-ing 喜歡做…勝過做…。衍生字：preference n. 偏好。",
-                  "ipa": "prɪˈfər"
+                  "ipa": "prɪˈfər",
+                  "translateBank": [
+                    {
+                      "zh": "我們比較偏好有國外工作經驗的應徵者。",
+                      "en": "We prefer applicants with overseas work experience."
+                    },
+                    {
+                      "zh": "多數員工偏好彈性的上班時間。",
+                      "en": "Most employees prefer flexible working hours."
+                    },
+                    {
+                      "zh": "她偏好用電子郵件而不是電話來溝通。",
+                      "en": "She prefers to communicate by e-mail rather than by phone."
+                    },
+                    {
+                      "zh": "招募委員會通常比較偏好主修商業新聞學的學生。",
+                      "en": "The hiring committee generally prefers students majoring in business journalism."
+                    },
+                    {
+                      "zh": "公司比較偏好具備雙語能力的候選人。",
+                      "en": "The company prefers candidates with bilingual skills."
+                    },
+                    {
+                      "zh": "他比較喜歡全職工作而非兼職工作。",
+                      "en": "He prefers a full-time position to a part-time one."
+                    },
+                    {
+                      "zh": "這位主管偏好用團隊合作的方式解決問題。",
+                      "en": "This manager prefers to solve problems through teamwork."
+                    },
+                    {
+                      "zh": "大部分求職者偏好離家近的工作地點。",
+                      "en": "Most job seekers prefer a workplace close to home."
+                    },
+                    {
+                      "zh": "客戶比較偏好透過視訊會議討論合約細節。",
+                      "en": "The client prefers to discuss contract details via video conference."
+                    },
+                    {
+                      "zh": "她偏好先完成報告再參加會議。",
+                      "en": "She prefers to finish the report before attending the meeting."
+                    }
+                  ]
                 },
                 {
                   "en": "previously",
@@ -27909,7 +29001,49 @@
                   "ex_zh": "他在履歷中提到先前受雇於主機軟體方案公司共兩年時間。",
                   "ex_blank": "In his résumé, he states that he was ____ employed at Mainframe Resolutions for a total of two years.",
                   "grammar": "衍生字：previous adj. 先前的。",
-                  "ipa": "ˈpriviəsli"
+                  "ipa": "ˈpriviəsli",
+                  "translateBank": [
+                    {
+                      "zh": "他之前曾在一家科技公司擔任工程師。",
+                      "en": "He was previously employed as an engineer at a technology company."
+                    },
+                    {
+                      "zh": "這位候選人之前在銀行業工作了五年。",
+                      "en": "This candidate previously worked in the banking industry for five years."
+                    },
+                    {
+                      "zh": "這個職位之前是由另一位同事負責的。",
+                      "en": "This position was previously held by another colleague."
+                    },
+                    {
+                      "zh": "她先前提過自己對行銷很有興趣。",
+                      "en": "She had previously mentioned her interest in marketing."
+                    },
+                    {
+                      "zh": "這套系統之前曾經出現過一些技術問題。",
+                      "en": "This system previously had some technical issues."
+                    },
+                    {
+                      "zh": "他之前從未接觸過這類型的專案。",
+                      "en": "He had previously never worked on this type of project."
+                    },
+                    {
+                      "zh": "這間公司先前的招募流程比現在更繁瑣。",
+                      "en": "This company's previously used recruitment process was more complicated than now."
+                    },
+                    {
+                      "zh": "她先前的工作經驗對這個職位很有幫助。",
+                      "en": "Her previously gained work experience is very helpful for this position."
+                    },
+                    {
+                      "zh": "我們先前已經討論過這份合約的條款。",
+                      "en": "We previously discussed the terms of this contract."
+                    },
+                    {
+                      "zh": "這位主管先前任職於一家跨國企業。",
+                      "en": "This manager was previously employed at a multinational corporation."
+                    }
+                  ]
                 },
                 {
                   "en": "proficiency",
@@ -27919,7 +29053,49 @@
                   "ex_zh": "此職位要求優秀的溝通技巧，以及能夠熟練操作一般辦公室軟體。",
                   "ex_blank": "The position requires excellent communication skills as well as ____ in the use of general office software.",
                   "grammar": "衍生字：proficient adj. 熟練的；精通的。",
-                  "ipa": "prəˈfɪʃənsi"
+                  "ipa": "prəˈfɪʃənsi",
+                  "translateBank": [
+                    {
+                      "zh": "這個職位需要熟練操作辦公軟體。",
+                      "en": "This position requires proficiency in office software."
+                    },
+                    {
+                      "zh": "她的英文熟練度讓面試官印象深刻。",
+                      "en": "Her proficiency in English impressed the interviewer."
+                    },
+                    {
+                      "zh": "這份工作要求優秀的溝通能力以及財務分析的熟練度。",
+                      "en": "This job requires excellent communication skills as well as proficiency in financial analysis."
+                    },
+                    {
+                      "zh": "公司提供訓練課程來提升員工的技術熟練度。",
+                      "en": "The company offers training courses to improve employees' technical proficiency."
+                    },
+                    {
+                      "zh": "他在多個程式語言上都展現出很高的熟練度。",
+                      "en": "He demonstrated a high level of proficiency in several programming languages."
+                    },
+                    {
+                      "zh": "這個職缺要求應徵者具備日語的熟練度。",
+                      "en": "This position requires applicants to have proficiency in Japanese."
+                    },
+                    {
+                      "zh": "她的簡報熟練度在這次評估中獲得高分。",
+                      "en": "Her proficiency in presentations earned a high score in this evaluation."
+                    },
+                    {
+                      "zh": "這項測驗是用來評估求職者的電腦熟練度。",
+                      "en": "This test is used to assess applicants' computer proficiency."
+                    },
+                    {
+                      "zh": "團隊成員在數據分析上的熟練度各有不同。",
+                      "en": "Team members' proficiency in data analysis varies."
+                    },
+                    {
+                      "zh": "持續的培訓幫助員工提升專業熟練度。",
+                      "en": "Ongoing training helps employees improve their professional proficiency."
+                    }
+                  ]
                 },
                 {
                   "en": "prospective",
@@ -27929,7 +29105,49 @@
                   "ex_zh": "我們很樂意在威斯博羅的就業博覽會中與有意願的求職者面對面接觸。",
                   "ex_blank": "We will be happy to meet with ____ applicants at the Westborough Job Fair.",
                   "grammar": "字彙放大鏡：相似詞：potential, future。",
-                  "ipa": "prəˈspɛktɪv"
+                  "ipa": "prəˈspɛktɪv",
+                  "translateBank": [
+                    {
+                      "zh": "我們很樂意與有意願的求職者在博覽會上見面。",
+                      "en": "We will be happy to meet with prospective applicants at the fair."
+                    },
+                    {
+                      "zh": "這份手冊是給可能加入公司的新員工看的。",
+                      "en": "This handbook is for prospective employees joining the company."
+                    },
+                    {
+                      "zh": "人資部門準備了一份給潛在客戶的介紹資料。",
+                      "en": "HR prepared an introduction packet for prospective clients."
+                    },
+                    {
+                      "zh": "公司邀請了幾位潛在的合夥人參加這場會議。",
+                      "en": "The company invited several prospective partners to this meeting."
+                    },
+                    {
+                      "zh": "這場說明會是特別為潛在應徵者舉辦的。",
+                      "en": "This briefing session was held specifically for prospective applicants."
+                    },
+                    {
+                      "zh": "我們正在聯絡幾位可能的供應商報價。",
+                      "en": "We are contacting several prospective suppliers for quotes."
+                    },
+                    {
+                      "zh": "主管和潛在的客戶約好下週開會。",
+                      "en": "The manager scheduled a meeting with a prospective client for next week."
+                    },
+                    {
+                      "zh": "這封信是寄給潛在投資人的介紹信。",
+                      "en": "This letter is an introduction sent to prospective investors."
+                    },
+                    {
+                      "zh": "公司安排了一場活動來接待潛在的員工。",
+                      "en": "The company organized an event to welcome prospective employees."
+                    },
+                    {
+                      "zh": "她向潛在的買家詳細介紹了這項產品。",
+                      "en": "She gave prospective buyers a detailed introduction to the product."
+                    }
+                  ]
                 },
                 {
                   "en": "qualify",
@@ -27939,7 +29157,49 @@
                   "ex_zh": "我相信我足以勝任這個職位。",
                   "ex_blank": "I believe I am very ____ for this position.",
                   "grammar": "衍生字：qualification n. 資格。",
-                  "ipa": "kˈwɑləˌfaɪ"
+                  "ipa": "kˈwɑləˌfaɪ",
+                  "translateBank": [
+                    {
+                      "zh": "我們會審核你的履歷以確認你是否符合這個職位的資格。",
+                      "en": "We will review your résumé to determine if you qualify for the position."
+                    },
+                    {
+                      "zh": "這位應徵者的學歷讓她符合這個職位的資格。",
+                      "en": "This applicant's education qualifies her for the position."
+                    },
+                    {
+                      "zh": "他具備足夠的經驗，符合升遷的資格。",
+                      "en": "He has enough experience to qualify for the promotion."
+                    },
+                    {
+                      "zh": "只有合格的員工才能操作這台機器。",
+                      "en": "Only qualified employees can operate this machine."
+                    },
+                    {
+                      "zh": "她的證照讓她有資格申請這個專業職位。",
+                      "en": "Her certification qualifies her to apply for this specialized position."
+                    },
+                    {
+                      "zh": "這些應徵者都符合最低的學歷要求。",
+                      "en": "These applicants all qualify under the minimum education requirement."
+                    },
+                    {
+                      "zh": "三年的工作經驗讓他符合這個管理職位的資格。",
+                      "en": "Three years of experience qualifies him for this management position."
+                    },
+                    {
+                      "zh": "你的技能是否符合這份工作的要求？",
+                      "en": "Do your skills qualify you for this job?"
+                    },
+                    {
+                      "zh": "完成這個訓練課程後，她就有資格晉升。",
+                      "en": "After completing this training course, she will qualify for promotion."
+                    },
+                    {
+                      "zh": "公司正在確認哪些員工符合加薪的資格。",
+                      "en": "The company is confirming which employees qualify for a raise."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -28109,7 +29369,49 @@
                   "ex_zh": "如果你未來的工作需要推薦函，跟不吝與我聯絡。",
                   "ex_blank": "Please feel free to call upon me for a ____ if you require one for future employment.",
                   "grammar": "衍生字：recommend v. 推薦。",
-                  "ipa": "ˌrɛkəmənˈdeɪʃən"
+                  "ipa": "ˌrɛkəmənˈdeɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "她請前主管幫她寫一封推薦信。",
+                      "en": "She asked her former supervisor to write her a letter of recommendation."
+                    },
+                    {
+                      "zh": "這位教授為她的研究所申請提供了推薦信。",
+                      "en": "This professor provided a recommendation for her graduate school application."
+                    },
+                    {
+                      "zh": "人資部門根據主管的推薦決定升遷名單。",
+                      "en": "HR decided the promotion list based on supervisors' recommendations."
+                    },
+                    {
+                      "zh": "如果你未來求職需要推薦信，隨時可以聯絡我。",
+                      "en": "Feel free to contact me if you need a recommendation for future employment."
+                    },
+                    {
+                      "zh": "面試官要求提供至少兩份推薦信。",
+                      "en": "The interviewer asked for at least two recommendations."
+                    },
+                    {
+                      "zh": "這份報告包含了幾項改善流程的建議。",
+                      "en": "This report includes several recommendations for improving the process."
+                    },
+                    {
+                      "zh": "她的推薦信強調了她在團隊合作上的優勢。",
+                      "en": "Her recommendation emphasized her strengths in teamwork."
+                    },
+                    {
+                      "zh": "委員會根據專家的建議核准了這項預算。",
+                      "en": "The committee approved this budget based on the expert's recommendation."
+                    },
+                    {
+                      "zh": "這位客戶的推薦為公司帶來了不少新業務。",
+                      "en": "This client's recommendation brought the company a lot of new business."
+                    },
+                    {
+                      "zh": "主管很樂意為表現優異的員工寫推薦信。",
+                      "en": "Supervisors are happy to write recommendations for outstanding employees."
+                    }
+                  ]
                 },
                 {
                   "en": "recruit",
@@ -28118,7 +29420,49 @@
                   "ex_en": "Do you know who's in charge of training the new recruits?",
                   "ex_zh": "你知道是誰負責訓練新進員工嗎？",
                   "ex_blank": "Do you know who's in charge of training the new ____?",
-                  "ipa": "rɪˈkrut"
+                  "ipa": "rɪˈkrut",
+                  "translateBank": [
+                    {
+                      "zh": "公司指派了一位資深員工來帶領新進人員。",
+                      "en": "The company assigned a senior staff member to mentor the new recruits."
+                    },
+                    {
+                      "zh": "這家公司計畫招募十名新的業務人員。",
+                      "en": "This company plans to recruit ten new sales staff."
+                    },
+                    {
+                      "zh": "人資部門正在積極招募有經驗的工程師。",
+                      "en": "HR is actively recruiting experienced engineers."
+                    },
+                    {
+                      "zh": "這些新進員工上週剛完成新人訓練。",
+                      "en": "These new recruits just finished orientation last week."
+                    },
+                    {
+                      "zh": "公司透過校園博覽會招募了許多優秀新人。",
+                      "en": "The company recruited many talented newcomers through the campus fair."
+                    },
+                    {
+                      "zh": "這位經理負責招募並培訓整個銷售團隊。",
+                      "en": "This manager is in charge of recruiting and training the whole sales team."
+                    },
+                    {
+                      "zh": "今年公司總共招募了超過五十名新員工。",
+                      "en": "The company recruited over fifty new employees this year."
+                    },
+                    {
+                      "zh": "新進人員需要先完成三個月的訓練期。",
+                      "en": "New recruits need to complete a three-month training period first."
+                    },
+                    {
+                      "zh": "我們正在招募具備雙語能力的客服人員。",
+                      "en": "We are recruiting bilingual customer service staff."
+                    },
+                    {
+                      "zh": "這幾位新進人員很快就融入了團隊。",
+                      "en": "These recruits quickly fit in with the team."
+                    }
+                  ]
                 },
                 {
                   "en": "reference",
@@ -28128,7 +29472,49 @@
                   "ex_zh": "我很樂意提供介紹信及設計作品集。",
                   "ex_blank": "I will be happy to supply ____ and to submit a portfolio of my designs.",
                   "grammar": "衍生字：refer v. 提到；引用 (to)。",
-                  "ipa": "ˈrɛfərəns"
+                  "ipa": "ˈrɛfərəns",
+                  "translateBank": [
+                    {
+                      "zh": "我很樂意提供介紹信以及我的作品集。",
+                      "en": "I will be happy to supply references and submit my portfolio."
+                    },
+                    {
+                      "zh": "面試官要求她提供三位前雇主的介紹人。",
+                      "en": "The interviewer asked her to provide three references from former employers."
+                    },
+                    {
+                      "zh": "這份履歷附上了兩位前主管的介紹信。",
+                      "en": "This résumé includes two references from former supervisors."
+                    },
+                    {
+                      "zh": "人資部門正在聯絡她提供的介紹人。",
+                      "en": "HR is contacting the references she provided."
+                    },
+                    {
+                      "zh": "請提供至少兩位能證明你工作能力的介紹人。",
+                      "en": "Please provide at least two references who can vouch for your abilities."
+                    },
+                    {
+                      "zh": "他的前主管同意擔任他的求職介紹人。",
+                      "en": "His former supervisor agreed to serve as a reference for his job search."
+                    },
+                    {
+                      "zh": "這些介紹信都對她的工作表現給予高度評價。",
+                      "en": "These references all praised her work performance highly."
+                    },
+                    {
+                      "zh": "公司在錄用前會先確認所有的介紹人資料。",
+                      "en": "The company verifies all reference information before hiring."
+                    },
+                    {
+                      "zh": "她附上三份推薦信件作為工作經歷的佐證。",
+                      "en": "She attached three references as proof of her work experience."
+                    },
+                    {
+                      "zh": "面試結束後，他立刻聯絡了自己的介紹人。",
+                      "en": "Right after the interview, he contacted his references immediately."
+                    }
+                  ]
                 },
                 {
                   "en": "related",
@@ -28138,7 +29524,49 @@
                   "ex_zh": "新聞系或相關領域的大學文憑以及至少兩年報紙編輯經驗是必要條件。",
                   "ex_blank": "A university degree in journalism or a ____ field and at least two years of newspaper editing experience are required.",
                   "grammar": "衍生字：relate v. 與…有關。",
-                  "ipa": "rɪˈleɪtɪd"
+                  "ipa": "rɪˈleɪtɪd",
+                  "translateBank": [
+                    {
+                      "zh": "這個職位需要新聞系或相關領域的學歷。",
+                      "en": "This position requires a degree in journalism or a related field."
+                    },
+                    {
+                      "zh": "她的工作經驗都跟行銷相關。",
+                      "en": "Her work experience is all related to marketing."
+                    },
+                    {
+                      "zh": "這份報告討論的是跟預算相關的議題。",
+                      "en": "This report discusses issues related to the budget."
+                    },
+                    {
+                      "zh": "公司提供與健康保險相關的員工福利。",
+                      "en": "The company offers employee benefits related to health insurance."
+                    },
+                    {
+                      "zh": "這次會議的主題跟新產品上市相關。",
+                      "en": "This meeting's topic is related to the new product launch."
+                    },
+                    {
+                      "zh": "她在工程或相關科系都有豐富的經驗。",
+                      "en": "She has extensive experience in engineering or a related field."
+                    },
+                    {
+                      "zh": "這些費用都跟出差相關。",
+                      "en": "These expenses are all related to business travel."
+                    },
+                    {
+                      "zh": "這個職缺要求財務或相關領域的背景。",
+                      "en": "This position requires a background in finance or a related field."
+                    },
+                    {
+                      "zh": "這起客訴跟上個月的產品出貨相關。",
+                      "en": "This complaint is related to last month's product shipment."
+                    },
+                    {
+                      "zh": "她的升遷跟她在專案上的表現直接相關。",
+                      "en": "Her promotion is directly related to her performance on the project."
+                    }
+                  ]
                 },
                 {
                   "en": "renew",
@@ -28148,7 +29576,49 @@
                   "ex_zh": "您與我們簽約的期限至少為兩年，並且保有優先續約之權。",
                   "ex_blank": "The minimum term of your contract with us will be for a period of two years, with the option to ____.",
                   "grammar": "衍生字：renewal n. 續約；更新。",
-                  "ipa": "rɪˈnu"
+                  "ipa": "rɪˈnu",
+                  "translateBank": [
+                    {
+                      "zh": "您與我們簽訂的合約期滿後可以選擇續約。",
+                      "en": "You can choose to renew your contract with us after it expires."
+                    },
+                    {
+                      "zh": "公司決定不再與這位顧問續約。",
+                      "en": "The company decided not to renew its contract with this consultant."
+                    },
+                    {
+                      "zh": "她的工作簽證下個月就要續簽了。",
+                      "en": "Her work visa needs to be renewed next month."
+                    },
+                    {
+                      "zh": "雙方正在協商是否要續約。",
+                      "en": "Both sides are negotiating whether to renew the contract."
+                    },
+                    {
+                      "zh": "這份合約已經連續續約了三次。",
+                      "en": "This contract has been renewed three times in a row."
+                    },
+                    {
+                      "zh": "人資部門正在準備續簽員工的聘用合約。",
+                      "en": "HR is preparing to renew employees' employment contracts."
+                    },
+                    {
+                      "zh": "如果表現令人滿意，公司通常會續約。",
+                      "en": "The company usually renews the contract if performance is satisfactory."
+                    },
+                    {
+                      "zh": "這家供應商的合約將在年底前續簽。",
+                      "en": "This supplier's contract will be renewed before the end of the year."
+                    },
+                    {
+                      "zh": "他們決定提前續約以確保合作關係穩定。",
+                      "en": "They decided to renew the contract early to ensure a stable partnership."
+                    },
+                    {
+                      "zh": "公司不打算續約這位表現不佳的員工。",
+                      "en": "The company does not plan to renew the contract of this underperforming employee."
+                    }
+                  ]
                 },
                 {
                   "en": "required",
@@ -28158,7 +29628,49 @@
                   "ex_zh": "之前有博物館的工作經驗會優先考慮，但非必要條件。",
                   "ex_blank": "Prior experience working in a museum is preferred but not ____.",
                   "grammar": "衍生字：require v. 需要；requirement n. 必要條件。",
-                  "ipa": "rikˈwaɪərd"
+                  "ipa": "rikˈwaɪərd",
+                  "translateBank": [
+                    {
+                      "zh": "之前有博物館工作經驗會優先考慮，但並非必要條件。",
+                      "en": "Prior museum experience is preferred but not required."
+                    },
+                    {
+                      "zh": "這個職位要求的技能包括流利的英文。",
+                      "en": "The skills required for this position include fluent English."
+                    },
+                    {
+                      "zh": "所有新進員工都必須參加必修的訓練課程。",
+                      "en": "All new employees must attend the required training course."
+                    },
+                    {
+                      "zh": "這份報告需要主管的簽名才算完成。",
+                      "en": "This report needs the supervisor's required signature to be complete."
+                    },
+                    {
+                      "zh": "申請這個職位所需的文件已經寄出了。",
+                      "en": "The documents required to apply for this position have already been sent."
+                    },
+                    {
+                      "zh": "這個專案所需的預算比原本預期的高。",
+                      "en": "The budget required for this project is higher than originally expected."
+                    },
+                    {
+                      "zh": "具備兩年相關經驗是這個職缺的必要條件。",
+                      "en": "Two years of relevant experience is required for this position."
+                    },
+                    {
+                      "zh": "這份工作必須具備的證照清單已經公布了。",
+                      "en": "The list of certifications required for this job has been announced."
+                    },
+                    {
+                      "zh": "加班前必須事先取得主管的同意。",
+                      "en": "Supervisor approval is required before working overtime."
+                    },
+                    {
+                      "zh": "面試時應徵者必須攜帶的文件有哪些？",
+                      "en": "What documents are required for applicants to bring to the interview?"
+                    }
+                  ]
                 },
                 {
                   "en": "responsibility",
@@ -28168,7 +29680,49 @@
                   "ex_zh": "你的職責包括維護並升級公司的電腦網路系統。",
                   "ex_blank": "Your ____ will include maintenance and upgrades to the company's computer network.",
                   "grammar": "字彙放大鏡：相似詞：duty, job, task。",
-                  "ipa": "riˌspɑnsəˈbɪləti"
+                  "ipa": "riˌspɑnsəˈbɪləti",
+                  "translateBank": [
+                    {
+                      "zh": "你的職責包括維護公司的電腦系統。",
+                      "en": "Your responsibilities include maintaining the company's computer system."
+                    },
+                    {
+                      "zh": "她對這次專案的失敗負有部分責任。",
+                      "en": "She bears some responsibility for this project's failure."
+                    },
+                    {
+                      "zh": "這個職位的主要職責是管理客戶關係。",
+                      "en": "The main responsibility of this position is managing client relationships."
+                    },
+                    {
+                      "zh": "主管把更多職責交給了這位資深員工。",
+                      "en": "The manager assigned more responsibilities to this senior employee."
+                    },
+                    {
+                      "zh": "接下這個職位後，他承擔了更大的責任。",
+                      "en": "After taking this position, he took on greater responsibility."
+                    },
+                    {
+                      "zh": "快餐店的員工大多只負有有限的職責。",
+                      "en": "Most employees at fast food restaurants have limited responsibility."
+                    },
+                    {
+                      "zh": "這份工作需要高度的責任感。",
+                      "en": "This job requires a strong sense of responsibility."
+                    },
+                    {
+                      "zh": "升遷後，她的職責範圍擴大了不少。",
+                      "en": "After her promotion, her responsibilities expanded considerably."
+                    },
+                    {
+                      "zh": "團隊成員各自分擔不同的職責。",
+                      "en": "Team members share different responsibilities."
+                    },
+                    {
+                      "zh": "這起失誤的責任應該由誰來承擔？",
+                      "en": "Who should bear the responsibility for this mistake?"
+                    }
+                  ]
                 },
                 {
                   "en": "seek",
@@ -28178,7 +29732,49 @@
                   "ex_zh": "天納出版社正在尋找有經驗且具有良好溝通技巧的文案編輯。",
                   "ex_blank": "Tanner Publications is currently ____ a copy editor with previous experience and excellent communication skills.",
                   "grammar": "字彙放大鏡：相似詞：look for, search for。",
-                  "ipa": "sik"
+                  "ipa": "sik",
+                  "translateBank": [
+                    {
+                      "zh": "這家出版社正在尋找有經驗的文案編輯。",
+                      "en": "This publishing company is seeking an experienced copy editor."
+                    },
+                    {
+                      "zh": "我們正在尋找具備海外工作經驗的候選人。",
+                      "en": "We are seeking a candidate with overseas work experience."
+                    },
+                    {
+                      "zh": "她正在尋找一個能發揮創意的工作。",
+                      "en": "She is seeking a job where she can be creative."
+                    },
+                    {
+                      "zh": "公司正在尋求能提升效率的解決方案。",
+                      "en": "The company seeks solutions that can improve efficiency."
+                    },
+                    {
+                      "zh": "許多畢業生都在尋找第一份正職工作。",
+                      "en": "Many graduates are seeking their first full-time job."
+                    },
+                    {
+                      "zh": "這個部門正在尋找一名新的專案經理。",
+                      "en": "This department is seeking a new project manager."
+                    },
+                    {
+                      "zh": "他正在尋求主管對這份報告的意見。",
+                      "en": "He is seeking his supervisor's feedback on this report."
+                    },
+                    {
+                      "zh": "公司一直在尋求更具競爭力的薪資方案。",
+                      "en": "The company has been seeking a more competitive compensation plan."
+                    },
+                    {
+                      "zh": "她在尋找一個離家比較近的工作機會。",
+                      "en": "She is seeking a job opportunity closer to home."
+                    },
+                    {
+                      "zh": "我們正在積極尋找新的辦公室地點。",
+                      "en": "We are actively seeking a new office location."
+                    }
+                  ]
                 },
                 {
                   "en": "suited",
@@ -28187,7 +29783,49 @@
                   "ex_en": "Ms. Brown is best suited for the posting because she speaks fluent Mandarin and has lived in Beijing.",
                   "ex_zh": "布朗女士能說流利的中文且曾住過北京，最適任這個職位。",
                   "ex_blank": "Ms. Brown is best ____ for the posting because she speaks fluent Mandarin and has lived in Beijing.",
-                  "ipa": "ˈsutɪd"
+                  "ipa": "ˈsutɪd",
+                  "translateBank": [
+                    {
+                      "zh": "布朗女士會說流利的中文，最適合這個職位。",
+                      "en": "Ms. Brown is best suited for this position because she speaks fluent Mandarin."
+                    },
+                    {
+                      "zh": "這位候選人的個性非常適合客服工作。",
+                      "en": "This candidate's personality is well suited to customer service work."
+                    },
+                    {
+                      "zh": "她的分析能力讓她非常適合這個研究職位。",
+                      "en": "Her analytical skills make her well suited for this research position."
+                    },
+                    {
+                      "zh": "這套軟體非常適合小型企業使用。",
+                      "en": "This software is well suited for small businesses."
+                    },
+                    {
+                      "zh": "他的領導風格很適合帶領這個團隊。",
+                      "en": "His leadership style is well suited to leading this team."
+                    },
+                    {
+                      "zh": "這個時段很適合安排跨國視訊會議。",
+                      "en": "This time slot is well suited for an international video conference."
+                    },
+                    {
+                      "zh": "她過去的經驗讓她很適合接手這個專案。",
+                      "en": "Her past experience makes her well suited to take over this project."
+                    },
+                    {
+                      "zh": "這個辦公空間很適合舉辦小型會議。",
+                      "en": "This office space is well suited for small meetings."
+                    },
+                    {
+                      "zh": "這位應徵者的背景非常適合這個行銷職位。",
+                      "en": "This applicant's background is well suited to this marketing position."
+                    },
+                    {
+                      "zh": "穿著正式服裝很適合這場重要的客戶會議。",
+                      "en": "Formal attire is well suited to this important client meeting."
+                    }
+                  ]
                 },
                 {
                   "en": "workforce",
@@ -28196,7 +29834,49 @@
                   "ex_en": "The tourism and food service industries employ over 25 percent of the workforce of this city.",
                   "ex_zh": "旅遊與餐飲業雇用了此城市四分之一以上的勞動人口。",
                   "ex_blank": "The tourism and food service industries employ over 25 percent of the ____ of this city.",
-                  "ipa": "ˈwərkˌfɔrs"
+                  "ipa": "ˈwərkˌfɔrs",
+                  "translateBank": [
+                    {
+                      "zh": "這座城市的製造業雇用了大量的勞動人口。",
+                      "en": "The manufacturing industry employs a large portion of this city's workforce."
+                    },
+                    {
+                      "zh": "公司的勞動人口在過去五年成長了一倍。",
+                      "en": "The company's workforce has doubled over the past five years."
+                    },
+                    {
+                      "zh": "這次裁員將影響整個公司十分之一的員工。",
+                      "en": "This layoff will affect one-tenth of the company's workforce."
+                    },
+                    {
+                      "zh": "公司正努力打造更多元化的員工團隊。",
+                      "en": "The company is working to build a more diverse workforce."
+                    },
+                    {
+                      "zh": "遠距工作讓公司的員工分布更加分散。",
+                      "en": "Remote work has made the company's workforce more spread out."
+                    },
+                    {
+                      "zh": "這個產業面臨勞動人口老化的挑戰。",
+                      "en": "This industry faces the challenge of an aging workforce."
+                    },
+                    {
+                      "zh": "公司投資培訓來提升整體員工的技能水準。",
+                      "en": "The company invests in training to raise the skill level of its workforce."
+                    },
+                    {
+                      "zh": "疫情之後，許多企業重新調整了員工結構。",
+                      "en": "After the pandemic, many companies restructured their workforce."
+                    },
+                    {
+                      "zh": "這家工廠的員工人數在旺季會大幅增加。",
+                      "en": "This factory's workforce grows significantly during peak season."
+                    },
+                    {
+                      "zh": "公司持續招募新血來擴大員工陣容。",
+                      "en": "The company continues to recruit new talent to expand its workforce."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -28372,7 +30052,49 @@
                   "ex_en": "We offer paid training, great benefits, and opportunities to advance.",
                   "ex_zh": "我們提供在職進修、優渥福利，以及升遷機會。",
                   "ex_blank": "We offer paid training, great benefits, and opportunities to ____.",
-                  "ipa": "ədˈvæns"
+                  "ipa": "ədˈvæns",
+                  "translateBank": [
+                    {
+                      "zh": "努力工作讓他有機會從業務員升到業務經理。",
+                      "en": "Hard work gave him the chance to advance from salesperson to sales manager."
+                    },
+                    {
+                      "zh": "她在公司裡晉升得非常快。",
+                      "en": "She has advanced very quickly within the company."
+                    },
+                    {
+                      "zh": "這項新技術讓整個生產流程大幅進步。",
+                      "en": "This new technology has significantly advanced the production process."
+                    },
+                    {
+                      "zh": "努力工作，你就能從業務員升到業務經理。",
+                      "en": "Work hard, and you can advance from salesperson to sales manager."
+                    },
+                    {
+                      "zh": "公司提供明確的升遷管道讓員工能夠晉升。",
+                      "en": "The company provides clear paths for employees to advance."
+                    },
+                    {
+                      "zh": "這筆預付款會在專案開始前先撥給供應商。",
+                      "en": "An advance payment will be given to the supplier before the project begins."
+                    },
+                    {
+                      "zh": "他在這五年內晉升了三次。",
+                      "en": "He has advanced three times in the past five years."
+                    },
+                    {
+                      "zh": "這次會議的目的是討論專案的進展。",
+                      "en": "The purpose of this meeting is to discuss the project's advance."
+                    },
+                    {
+                      "zh": "公司鼓勵員工透過進修來晉升職位。",
+                      "en": "The company encourages employees to advance by pursuing further education."
+                    },
+                    {
+                      "zh": "她的晉升速度讓同事們都感到驚訝。",
+                      "en": "The speed of her advance surprised her colleagues."
+                    }
+                  ]
                 },
                 {
                   "en": "appoint",
@@ -28382,7 +30104,49 @@
                   "ex_zh": "誰被指派擔任聘僱委員會的主席？",
                   "ex_blank": "Who has been ____ to chair the hiring committee?",
                   "grammar": "字彙放大鏡：accept an appointment 接受任命；decline an appointment 拒絕委派；take up an appointment 就職 (= take office)。衍生字：appointment n. 任命；約會。",
-                  "ipa": "əˈpɔɪnt"
+                  "ipa": "əˈpɔɪnt",
+                  "translateBank": [
+                    {
+                      "zh": "誰被指派擔任這次招募委員會的主席？",
+                      "en": "Who has been appointed to chair this hiring committee?"
+                    },
+                    {
+                      "zh": "董事會指派了一位新的財務長。",
+                      "en": "The board appointed a new chief financial officer."
+                    },
+                    {
+                      "zh": "公司打算指派一位經理來負責這個專案。",
+                      "en": "The company plans to appoint a manager to oversee this project."
+                    },
+                    {
+                      "zh": "她被指派負責公司整個行銷部門。",
+                      "en": "She was appointed to lead the entire marketing department."
+                    },
+                    {
+                      "zh": "董事會將在下週會議上指派新的執行長。",
+                      "en": "The board will appoint a new CEO at next week's meeting."
+                    },
+                    {
+                      "zh": "公司指派一位資深顧問來協助這次合併。",
+                      "en": "The company appointed a senior consultant to assist with this merger."
+                    },
+                    {
+                      "zh": "誰會被指派來接手這個客戶的帳戶？",
+                      "en": "Who will be appointed to take over this client's account?"
+                    },
+                    {
+                      "zh": "她很榮幸被指派為這個委員會的成員。",
+                      "en": "She was honored to be appointed a member of this committee."
+                    },
+                    {
+                      "zh": "公司決定指派兩名員工負責新辦公室的籌備。",
+                      "en": "The company decided to appoint two employees to prepare the new office."
+                    },
+                    {
+                      "zh": "董事長親自指派了這位新上任的總經理。",
+                      "en": "The chairman personally appointed this newly appointed general manager."
+                    }
+                  ]
                 },
                 {
                   "en": "appraisal",
@@ -28392,7 +30156,49 @@
                   "ex_zh": "我來信是想請問您對威利斯先生個人能力與資格的評價。",
                   "ex_blank": "I am writing to request your ____ of Mr. Willis's skills and qualifications.",
                   "grammar": "字彙放大鏡：相似詞：assessment, evaluation, review。衍生字：appraise v. 評價。",
-                  "ipa": "əˈpreɪzəl"
+                  "ipa": "əˈpreɪzəl",
+                  "translateBank": [
+                    {
+                      "zh": "我寫信是想請您對他的能力與資歷做個評估。",
+                      "en": "I am writing to request your appraisal of his skills and qualifications."
+                    },
+                    {
+                      "zh": "你的考核結果取決於你的工作表現。",
+                      "en": "The results of your appraisal depend on your work performance."
+                    },
+                    {
+                      "zh": "這次的績效評估將影響她的年度加薪。",
+                      "en": "This performance appraisal will affect her annual raise."
+                    },
+                    {
+                      "zh": "主管每年都會針對每位員工進行一次評估。",
+                      "en": "The supervisor conducts an appraisal for every employee once a year."
+                    },
+                    {
+                      "zh": "這份評估報告指出了他需要改進的地方。",
+                      "en": "This appraisal report pointed out areas where he needs to improve."
+                    },
+                    {
+                      "zh": "人資部門正在修訂員工考核的流程。",
+                      "en": "HR is revising the employee appraisal process."
+                    },
+                    {
+                      "zh": "她在最近一次的績效評估中獲得很高的評價。",
+                      "en": "She received a very positive appraisal in her most recent performance review."
+                    },
+                    {
+                      "zh": "這次的考核結果將決定是否給予升遷。",
+                      "en": "The result of this appraisal will determine whether he gets promoted."
+                    },
+                    {
+                      "zh": "主管要求每位員工都要完成自我評估表。",
+                      "en": "The supervisor asked every employee to complete a self-appraisal form."
+                    },
+                    {
+                      "zh": "公司每半年進行一次全面的績效考核。",
+                      "en": "The company conducts a comprehensive performance appraisal every six months."
+                    }
+                  ]
                 },
                 {
                   "en": "assignment",
@@ -28402,7 +30208,49 @@
                   "ex_zh": "約翰總能準時完成指派工作。",
                   "ex_blank": "John always finishes his ____ on time.",
                   "grammar": "衍生字：assign v. 指派；分配。",
-                  "ipa": "əˈsaɪnmənt"
+                  "ipa": "əˈsaɪnmənt",
+                  "translateBank": [
+                    {
+                      "zh": "她總是提早完成主管分配給她的工作。",
+                      "en": "She always completes the assignments her supervisor gives her ahead of schedule."
+                    },
+                    {
+                      "zh": "這份報告是這週最重要的工作任務。",
+                      "en": "This report is the most important assignment this week."
+                    },
+                    {
+                      "zh": "主管把一個新的專案任務分配給了他。",
+                      "en": "The supervisor gave him a new project assignment."
+                    },
+                    {
+                      "zh": "她被分配到一個有挑戰性的海外任務。",
+                      "en": "She was given a challenging overseas assignment."
+                    },
+                    {
+                      "zh": "這個任務需要兩個部門一起合作完成。",
+                      "en": "This assignment requires cooperation between two departments."
+                    },
+                    {
+                      "zh": "團隊在截止日前完成了所有分配的任務。",
+                      "en": "The team finished all the assignments before the deadline."
+                    },
+                    {
+                      "zh": "主管正在把這個月的工作任務分配給每位員工。",
+                      "en": "The supervisor is distributing this month's assignments to each employee."
+                    },
+                    {
+                      "zh": "這份任務需要她出差到海外分公司三個月。",
+                      "en": "This assignment requires her to travel to the overseas branch for three months."
+                    },
+                    {
+                      "zh": "他要求延長這項任務的截止日期。",
+                      "en": "He requested an extension for this assignment's deadline."
+                    },
+                    {
+                      "zh": "每位新進員工都會收到第一週的訓練任務。",
+                      "en": "Every new employee receives a training assignment for the first week."
+                    }
+                  ]
                 },
                 {
                   "en": "assume",
@@ -28412,7 +30260,49 @@
                   "ex_zh": "如你們聽說的，我將承擔起領導天化學公司的領導責任，禮拜一早上生效。",
                   "ex_blank": "As you have probably heard, I will be ____ responsibility for leading Randolph Chemical, effective Monday morning.",
                   "grammar": "字彙放大鏡：相似詞：take on, accept, undertake。",
-                  "ipa": "əˈsum"
+                  "ipa": "əˈsum",
+                  "translateBank": [
+                    {
+                      "zh": "如你們可能已經聽說，我將於週一上午開始擔任這個領導職責。",
+                      "en": "As you may have heard, I will be assuming this leadership role effective Monday morning."
+                    },
+                    {
+                      "zh": "她將在下個月接任部門主管的職位。",
+                      "en": "She will assume the position of department head next month."
+                    },
+                    {
+                      "zh": "他接下了這個專案全部的責任。",
+                      "en": "He assumed full responsibility for this project."
+                    },
+                    {
+                      "zh": "新任執行長將在下週一正式上任。",
+                      "en": "The new CEO will assume his duties starting next Monday."
+                    },
+                    {
+                      "zh": "我們不應該假設客戶一定會接受這個提案。",
+                      "en": "We should not assume that the client will accept this proposal."
+                    },
+                    {
+                      "zh": "她接任這個職位後立刻著手改革流程。",
+                      "en": "After assuming this position, she immediately began reforming the process."
+                    },
+                    {
+                      "zh": "團隊成員各自承擔起不同的任務。",
+                      "en": "Team members each assumed different tasks."
+                    },
+                    {
+                      "zh": "他即將承擔起管理整個亞洲市場的責任。",
+                      "en": "He is about to assume responsibility for managing the entire Asian market."
+                    },
+                    {
+                      "zh": "請不要假設這次的預算會被核准。",
+                      "en": "Please do not assume this budget will be approved."
+                    },
+                    {
+                      "zh": "她在公司重組期間接任了財務部門的領導職位。",
+                      "en": "She assumed leadership of the finance department during the company's restructuring."
+                    }
+                  ]
                 },
                 {
                   "en": "authorize",
@@ -28422,7 +30312,49 @@
                   "ex_zh": "委員會已授權你再招募五名受過適當訓練的人手。",
                   "ex_blank": "The committee has ____ you to recruit five more people who have the appropriate training.",
                   "grammar": "衍生字：authority n. 官方。字彙放大鏡：authorize (人) to V. 授權某人去做…。",
-                  "ipa": "ˈɔθərˌaɪz"
+                  "ipa": "ˈɔθərˌaɪz",
+                  "translateBank": [
+                    {
+                      "zh": "主管已經授權她簽署這份供應商合約。",
+                      "en": "The supervisor has authorized her to sign this supplier contract."
+                    },
+                    {
+                      "zh": "只有合格的員工才被授權使用這台設備。",
+                      "en": "Only qualified employees will be authorized to use this equipment."
+                    },
+                    {
+                      "zh": "董事會授權財務長核准這筆預算。",
+                      "en": "The board authorized the CFO to approve this budget."
+                    },
+                    {
+                      "zh": "公司正在授權新的採購流程。",
+                      "en": "The company is authorizing a new procurement process."
+                    },
+                    {
+                      "zh": "主管授權助理代為處理日常的行政事務。",
+                      "en": "The manager authorized her assistant to handle daily administrative tasks."
+                    },
+                    {
+                      "zh": "這份文件需要執行長授權才能生效。",
+                      "en": "This document needs to be authorized by the CEO to take effect."
+                    },
+                    {
+                      "zh": "人資部門授權他調整團隊成員的排班。",
+                      "en": "HR authorized him to adjust the team's shift schedule."
+                    },
+                    {
+                      "zh": "這筆額外的支出必須經過財務部授權。",
+                      "en": "This additional expense must be authorized by the finance department."
+                    },
+                    {
+                      "zh": "董事會授權公司收購這間小型新創公司。",
+                      "en": "The board authorized the company to acquire this small startup."
+                    },
+                    {
+                      "zh": "主管授權她代表公司出席這場國際會議。",
+                      "en": "The supervisor authorized her to represent the company at this international conference."
+                    }
+                  ]
                 },
                 {
                   "en": "caliber",
@@ -28431,7 +30363,49 @@
                   "ex_en": "We are delighted to have found someone of Michelle's caliber to lead our organization.",
                   "ex_zh": "我們很榮幸找到像蜜雪兒這樣有才幹的人來領導這個組織。",
                   "ex_blank": "We are delighted to have found someone of Michelle's ____ to lead our organization.",
-                  "ipa": "ˈkæləbər"
+                  "ipa": "ˈkæləbər",
+                  "translateBank": [
+                    {
+                      "zh": "我們很高興找到像蜜雪兒這樣有才幹的人來領導這個部門。",
+                      "en": "We are delighted to have found someone of Michelle's caliber to lead this department."
+                    },
+                    {
+                      "zh": "這間公司向來以招募高水準的人才聞名。",
+                      "en": "This company is known for recruiting people of high caliber."
+                    },
+                    {
+                      "zh": "這位候選人的能力完全達到我們期望的水準。",
+                      "en": "This candidate's caliber fully meets our expectations."
+                    },
+                    {
+                      "zh": "主管希望能找到跟前任一樣優秀的人才。",
+                      "en": "The supervisor hopes to find someone of the same caliber as his predecessor."
+                    },
+                    {
+                      "zh": "這個職位需要一位具備頂尖才幹的領導者。",
+                      "en": "This position requires a leader of the highest caliber."
+                    },
+                    {
+                      "zh": "公司以提供高品質的服務和人才水準聞名。",
+                      "en": "The company is known for its high-caliber service and talent."
+                    },
+                    {
+                      "zh": "這幾位候選人的能力水準都相當接近。",
+                      "en": "The caliber of these candidates is quite similar."
+                    },
+                    {
+                      "zh": "這間顧問公司只招募最頂尖水準的分析師。",
+                      "en": "This consulting firm only recruits analysts of the highest caliber."
+                    },
+                    {
+                      "zh": "她的專業水準讓整個團隊的表現提升不少。",
+                      "en": "Her caliber has significantly improved the whole team's performance."
+                    },
+                    {
+                      "zh": "這個獎項是用來表彰公司內最具才幹的員工。",
+                      "en": "This award recognizes the employees of the highest caliber in the company."
+                    }
+                  ]
                 },
                 {
                   "en": "commensurate",
@@ -28440,7 +30414,49 @@
                   "ex_en": "The salary offer will be commensurate with the candidate's experience and education.",
                   "ex_zh": "薪資條件會符合應徵者的經驗與教育程度。",
                   "ex_blank": "The salary offer will be ____ with the candidate's experience and education.",
-                  "ipa": "kəˈmɛnsərɪt"
+                  "ipa": "kəˈmɛnsərɪt",
+                  "translateBank": [
+                    {
+                      "zh": "薪資條件會依應徵者的經驗與教育程度而定。",
+                      "en": "The salary offer will be commensurate with the candidate's experience and education."
+                    },
+                    {
+                      "zh": "她的加薪幅度跟她的表現是相符的。",
+                      "en": "Her raise is commensurate with her performance."
+                    },
+                    {
+                      "zh": "這個職位的薪水應該跟工作量相符。",
+                      "en": "The salary for this position should be commensurate with the workload."
+                    },
+                    {
+                      "zh": "公司保證獎金會跟團隊的業績表現相符。",
+                      "en": "The company guarantees that bonuses will be commensurate with team performance."
+                    },
+                    {
+                      "zh": "這份報酬應該要跟他承擔的責任相符。",
+                      "en": "This compensation should be commensurate with the responsibilities he takes on."
+                    },
+                    {
+                      "zh": "主管認為這次的獎勵跟他的貢獻並不相符。",
+                      "en": "The manager felt this reward was not commensurate with his contribution."
+                    },
+                    {
+                      "zh": "這個職位的頭銜應該跟他的經驗水準相符。",
+                      "en": "The title of this position should be commensurate with his level of experience."
+                    },
+                    {
+                      "zh": "公司承諾會提供跟市場水準相符的薪資。",
+                      "en": "The company promises to offer a salary commensurate with the market rate."
+                    },
+                    {
+                      "zh": "這筆預算應該要跟專案的規模相符。",
+                      "en": "This budget should be commensurate with the scale of the project."
+                    },
+                    {
+                      "zh": "她認為自己的職位應該要跟她的資歷相符。",
+                      "en": "She believes her position should be commensurate with her qualifications."
+                    }
+                  ]
                 },
                 {
                   "en": "completion",
@@ -28450,7 +30466,49 @@
                   "ex_zh": "在順利完成訓練課程後，約翰擔任了四年的系統工程師。",
                   "ex_blank": "After successful ____ of the training course, John worked as a systems programmer for four years.",
                   "grammar": "衍生字：complete v. 完成。",
-                  "ipa": "kəmˈpliʃən"
+                  "ipa": "kəmˈpliʃən",
+                  "translateBank": [
+                    {
+                      "zh": "完成這項認證課程後，她獲得了一次升遷的機會。",
+                      "en": "After completion of this certification course, she was given a chance for promotion."
+                    },
+                    {
+                      "zh": "這個專案預計在年底前完成。",
+                      "en": "Completion of this project is expected before the end of the year."
+                    },
+                    {
+                      "zh": "公司會在工程完成後支付最後一筆款項。",
+                      "en": "The company will pay the final installment upon completion of the construction."
+                    },
+                    {
+                      "zh": "她因為完成這項困難的任務而受到表揚。",
+                      "en": "She was praised for her completion of this difficult task."
+                    },
+                    {
+                      "zh": "這份報告的完成需要三個部門的共同合作。",
+                      "en": "Completion of this report requires cooperation among three departments."
+                    },
+                    {
+                      "zh": "訓練課程的完成證書是升遷的必要條件之一。",
+                      "en": "A certificate of completion for the training course is one of the requirements for promotion."
+                    },
+                    {
+                      "zh": "主管正在確認專案是否能在期限內完成。",
+                      "en": "The supervisor is checking whether the project's completion can meet the deadline."
+                    },
+                    {
+                      "zh": "這項審查預計在下週完成。",
+                      "en": "Completion of this review is expected next week."
+                    },
+                    {
+                      "zh": "工程延期讓整個案子的完成日往後推了一個月。",
+                      "en": "The delay has pushed the completion of the whole project back by a month."
+                    },
+                    {
+                      "zh": "她在完成這個任務後立刻展開了下一個專案。",
+                      "en": "Right after the completion of this task, she started on the next project."
+                    }
+                  ]
                 },
                 {
                   "en": "dependable",
@@ -28460,7 +30518,49 @@
                   "ex_zh": "從主管的觀點來看，泰倫斯是個可靠的團隊成員。",
                   "ex_blank": "In the opinion of his superiors, Terrence was a ____ team player.",
                   "grammar": "字彙放大鏡：相似詞：reliable。",
-                  "ipa": "dɪˈpɛndəbəl"
+                  "ipa": "dɪˈpɛndəbəl",
+                  "translateBank": [
+                    {
+                      "zh": "主管都認為他是一個值得信賴的團隊成員。",
+                      "en": "In his supervisor's opinion, he was a dependable team player."
+                    },
+                    {
+                      "zh": "這位助理一直都很可靠，工作從不出錯。",
+                      "en": "This assistant has always been dependable and rarely makes mistakes."
+                    },
+                    {
+                      "zh": "公司在招募新人時非常重視可靠度這個特質。",
+                      "en": "The company places great importance on being dependable when hiring new staff."
+                    },
+                    {
+                      "zh": "她是整個部門裡最可靠的員工之一。",
+                      "en": "She is one of the most dependable employees in the department."
+                    },
+                    {
+                      "zh": "一個可靠的供應商對公司的營運非常重要。",
+                      "en": "A dependable supplier is very important to the company's operations."
+                    },
+                    {
+                      "zh": "主管稱讚他無論任務多困難都很可靠。",
+                      "en": "His supervisor praised him for being dependable no matter how difficult the task."
+                    },
+                    {
+                      "zh": "這套系統以穩定可靠著稱。",
+                      "en": "This system is known for being dependable."
+                    },
+                    {
+                      "zh": "客戶都認為這家公司的服務非常可靠。",
+                      "en": "Clients consider this company's service to be very dependable."
+                    },
+                    {
+                      "zh": "她在團隊中扮演著可靠的後盾角色。",
+                      "en": "She plays a dependable supporting role within the team."
+                    },
+                    {
+                      "zh": "公司希望招募到性格可靠又負責的員工。",
+                      "en": "The company hopes to recruit employees who are dependable and responsible."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -28630,7 +30730,49 @@
                   "ex_zh": "琴恩是個勤奮的員工。",
                   "ex_blank": "Jean is a ____ worker.",
                   "grammar": "字彙放大鏡：相似詞：hardworking。",
-                  "ipa": "ˈdɪlɪʤənt"
+                  "ipa": "ˈdɪlɪʤənt",
+                  "translateBank": [
+                    {
+                      "zh": "主管稱讚她是團隊裡最勤奮的成員之一。",
+                      "en": "The supervisor praised her as one of the most diligent members of the team."
+                    },
+                    {
+                      "zh": "他勤奮工作的態度讓大家都印象深刻。",
+                      "en": "His diligent work attitude impressed everyone."
+                    },
+                    {
+                      "zh": "這位新員工非常勤奮，經常提早到公司。",
+                      "en": "This new employee is very diligent and often arrives early."
+                    },
+                    {
+                      "zh": "她勤奮地完成了所有分配的任務。",
+                      "en": "She diligently completed all her assigned tasks."
+                    },
+                    {
+                      "zh": "公司獎勵那些工作勤奮的員工。",
+                      "en": "The company rewards employees who are diligent."
+                    },
+                    {
+                      "zh": "主管希望每個人都能像他一樣勤奮負責。",
+                      "en": "The supervisor hopes everyone can be as diligent and responsible as he is."
+                    },
+                    {
+                      "zh": "他勤奮準備這場簡報，熬夜了好幾天。",
+                      "en": "He diligently prepared for this presentation, staying up late for several nights."
+                    },
+                    {
+                      "zh": "這個部門一向以勤奮的工作文化聞名。",
+                      "en": "This department is known for its diligent work culture."
+                    },
+                    {
+                      "zh": "她勤奮地核對每一份報告裡的數字。",
+                      "en": "She diligently checked the numbers in every report."
+                    },
+                    {
+                      "zh": "公司希望招募到勤奮又細心的分析師。",
+                      "en": "The company wants to hire a diligent and careful analyst."
+                    }
+                  ]
                 },
                 {
                   "en": "duty",
@@ -28639,7 +30781,49 @@
                   "ex_en": "One of Mr. Oh's primary duties is the management of the corporate food service.",
                   "ex_zh": "吳先生主要的職責之一，就是管理公司的餐飲服務。",
                   "ex_blank": "One of Mr. Oh's primary ____ is the management of the corporate food service.",
-                  "ipa": "ˈduti"
+                  "ipa": "ˈduti",
+                  "translateBank": [
+                    {
+                      "zh": "吳先生主要的職責之一就是管理公司的餐飲服務。",
+                      "en": "One of Mr. Oh's main duties is managing the company's food service."
+                    },
+                    {
+                      "zh": "這個職位的職責包括安排客戶會議。",
+                      "en": "The duties of this position include arranging client meetings."
+                    },
+                    {
+                      "zh": "她把自己的職責完成得非常徹底。",
+                      "en": "She carried out her duties very thoroughly."
+                    },
+                    {
+                      "zh": "新進員工需要熟悉自己每天的職責。",
+                      "en": "New employees need to become familiar with their daily duties."
+                    },
+                    {
+                      "zh": "主管把更多職責交給了這位資深助理。",
+                      "en": "The supervisor assigned more duties to this senior assistant."
+                    },
+                    {
+                      "zh": "這份工作有哪些主要的職責內容？",
+                      "en": "What are the main duties of this job?"
+                    },
+                    {
+                      "zh": "她在值班期間負責處理所有的客戶投訴。",
+                      "en": "During her duty shift, she handles all customer complaints."
+                    },
+                    {
+                      "zh": "這個職位的職責範圍比之前更廣。",
+                      "en": "The scope of duties for this position is wider than before."
+                    },
+                    {
+                      "zh": "員工手冊清楚列出了每個職位的職責。",
+                      "en": "The employee handbook clearly lists the duties of each position."
+                    },
+                    {
+                      "zh": "接任這個職位後，他承擔了更多管理上的職責。",
+                      "en": "After taking this position, he took on more managerial duties."
+                    }
+                  ]
                 },
                 {
                   "en": "effective",
@@ -28648,7 +30832,49 @@
                   "ex_en": "John Bloom, our President and CEO, has announced his retirement, effective October 1.",
                   "ex_zh": "我們的總裁兼執行長約翰．布魯宣布退休，十月一日起生效。",
                   "ex_blank": "John Bloom, our President and CEO, has announced his retirement, ____ October 1.",
-                  "ipa": "ˈifɛktɪv"
+                  "ipa": "ˈifɛktɪv",
+                  "translateBank": [
+                    {
+                      "zh": "我們的總裁兼執行長宣布退休，十月一日起生效。",
+                      "en": "Our president and CEO has announced his retirement, effective October 1."
+                    },
+                    {
+                      "zh": "這項新政策從明天開始生效。",
+                      "en": "This new policy will be effective from tomorrow."
+                    },
+                    {
+                      "zh": "她是一位非常有效率的團隊領導者。",
+                      "en": "She is a very effective team leader."
+                    },
+                    {
+                      "zh": "這套訓練方法在提升生產力上非常有效。",
+                      "en": "This training method is very effective in improving productivity."
+                    },
+                    {
+                      "zh": "她有效地處理了這次的客戶投訴。",
+                      "en": "She handled this customer complaint effectively."
+                    },
+                    {
+                      "zh": "這項調薪政策將從下個月起生效。",
+                      "en": "This salary adjustment policy will be effective starting next month."
+                    },
+                    {
+                      "zh": "主管找到了有效的方法來降低成本。",
+                      "en": "The manager found an effective way to cut costs."
+                    },
+                    {
+                      "zh": "這份合約的新條款今天起正式生效。",
+                      "en": "The new terms of this contract are effective as of today."
+                    },
+                    {
+                      "zh": "有效的溝通對團隊合作非常重要。",
+                      "en": "Effective communication is very important for teamwork."
+                    },
+                    {
+                      "zh": "這項規定將在董事會通過後立即生效。",
+                      "en": "This rule will become effective immediately after board approval."
+                    }
+                  ]
                 },
                 {
                   "en": "eligible",
@@ -28658,7 +30884,49 @@
                   "ex_zh": "身為員工，你將依工作表現與年資增長而享有調薪。",
                   "ex_blank": "As an employee, you will be ____ for salary increases based upon your performance and length of service.",
                   "grammar": "字彙放大鏡：be eligible for 有…的資格；適用於…；相似詞：be qualified for。",
-                  "ipa": "ˈɛlɪʤəbəl"
+                  "ipa": "ˈɛlɪʤəbəl",
+                  "translateBank": [
+                    {
+                      "zh": "身為員工，你將依表現與年資享有調薪資格。",
+                      "en": "As an employee, you will be eligible for salary increases based on your performance and length of service."
+                    },
+                    {
+                      "zh": "她工作滿一年後就有資格申請育嬰假。",
+                      "en": "She will be eligible for parental leave after one year of employment."
+                    },
+                    {
+                      "zh": "只有正職員工才有資格享有這項福利。",
+                      "en": "Only permanent employees are eligible for this benefit."
+                    },
+                    {
+                      "zh": "完成試用期後，他就有資格獲得加薪。",
+                      "en": "After completing probation, he will be eligible for a raise."
+                    },
+                    {
+                      "zh": "這個職位要求應徵者必須有資格在台灣合法工作。",
+                      "en": "This position requires applicants to be eligible to work legally in Taiwan."
+                    },
+                    {
+                      "zh": "她因為表現優異而有資格獲得升遷。",
+                      "en": "She is eligible for promotion due to her outstanding performance."
+                    },
+                    {
+                      "zh": "並非所有員工都有資格申請這項補助。",
+                      "en": "Not all employees are eligible for this subsidy."
+                    },
+                    {
+                      "zh": "具備五年經驗的員工才有資格申請這個職位。",
+                      "en": "Only employees with five years of experience are eligible to apply for this position."
+                    },
+                    {
+                      "zh": "這張優惠券只適用於符合資格的客戶。",
+                      "en": "This coupon is only for eligible customers."
+                    },
+                    {
+                      "zh": "她確認自己是否有資格參加這次的培訓計畫。",
+                      "en": "She checked whether she was eligible for this training program."
+                    }
+                  ]
                 },
                 {
                   "en": "expertise",
@@ -28667,7 +30935,49 @@
                   "ex_en": "She has expertise in arranging business meetings and presentations.",
                   "ex_zh": "她擅長安排商務會議與簡報。",
                   "ex_blank": "She has ____ in arranging business meetings and presentations.",
-                  "ipa": "ˌɛkspərˈtiz"
+                  "ipa": "ˌɛkspərˈtiz",
+                  "translateBank": [
+                    {
+                      "zh": "她擅長安排商務會議與簡報。",
+                      "en": "She has expertise in arranging business meetings and presentations."
+                    },
+                    {
+                      "zh": "公司聘請了一位顧問來提供財務方面的專業知識。",
+                      "en": "The company hired a consultant to provide expertise in finance."
+                    },
+                    {
+                      "zh": "他在數據分析方面的專業能力讓團隊受益良多。",
+                      "en": "His expertise in data analysis has greatly benefited the team."
+                    },
+                    {
+                      "zh": "這個職位需要在國際貿易方面具備專業知識。",
+                      "en": "This position requires expertise in international trade."
+                    },
+                    {
+                      "zh": "她的專業知識讓這次談判順利達成協議。",
+                      "en": "Her expertise helped this negotiation reach an agreement smoothly."
+                    },
+                    {
+                      "zh": "公司希望招募在人工智慧方面有專業的工程師。",
+                      "en": "The company wants to hire engineers with expertise in artificial intelligence."
+                    },
+                    {
+                      "zh": "他憑藉在法律方面的專業知識贏得客戶的信任。",
+                      "en": "He earned the client's trust through his expertise in law."
+                    },
+                    {
+                      "zh": "這個部門缺乏在數位行銷方面的專業人才。",
+                      "en": "This department lacks expertise in digital marketing."
+                    },
+                    {
+                      "zh": "她在產品設計方面的專業知識備受讚賞。",
+                      "en": "Her expertise in product design is highly praised."
+                    },
+                    {
+                      "zh": "這項專案需要在供應鏈管理上的專業知識。",
+                      "en": "This project requires expertise in supply chain management."
+                    }
+                  ]
                 },
                 {
                   "en": "extensive",
@@ -28676,7 +30986,49 @@
                   "ex_en": "Ms. Juti has extensive business experience.",
                   "ex_zh": "朱蒂女士有廣泛的商務經驗。",
                   "ex_blank": "Ms. Juti has ____ business experience.",
-                  "ipa": "ɪkˈstɛnsɪv"
+                  "ipa": "ɪkˈstɛnsɪv",
+                  "translateBank": [
+                    {
+                      "zh": "朱蒂女士有廣泛的商務經驗。",
+                      "en": "Ms. Juti has extensive business experience."
+                    },
+                    {
+                      "zh": "這份報告做了非常廣泛的市場調查。",
+                      "en": "This report involved extensive market research."
+                    },
+                    {
+                      "zh": "他在亞洲市場有廣泛的人脈。",
+                      "en": "He has extensive contacts in the Asian market."
+                    },
+                    {
+                      "zh": "公司投入了大量資源進行廣泛的員工訓練。",
+                      "en": "The company invested extensive resources in employee training."
+                    },
+                    {
+                      "zh": "她對這個產業有相當廣泛的了解。",
+                      "en": "She has an extensive understanding of this industry."
+                    },
+                    {
+                      "zh": "這個職位需要在客戶服務方面有豐富的經驗。",
+                      "en": "This position requires extensive experience in customer service."
+                    },
+                    {
+                      "zh": "團隊為這次的提案做了廣泛的研究。",
+                      "en": "The team conducted extensive research for this proposal."
+                    },
+                    {
+                      "zh": "公司在海外有廣泛的業務網絡。",
+                      "en": "The company has an extensive business network overseas."
+                    },
+                    {
+                      "zh": "這位顧問在企業併購方面有廣泛的實務經驗。",
+                      "en": "This consultant has extensive practical experience in corporate mergers."
+                    },
+                    {
+                      "zh": "我們廣泛地討論了這次重組的所有選項。",
+                      "en": "We extensively discussed all the options for this restructuring."
+                    }
+                  ]
                 },
                 {
                   "en": "field",
@@ -28685,7 +31037,49 @@
                   "ex_en": "He is highly regarded in his field.",
                   "ex_zh": "他在專業領域備受尊崇。",
                   "ex_blank": "He is highly regarded in his ____.",
-                  "ipa": "fild"
+                  "ipa": "fild",
+                  "translateBank": [
+                    {
+                      "zh": "他在自己的專業領域裡備受尊崇。",
+                      "en": "He is highly regarded in his field."
+                    },
+                    {
+                      "zh": "這個職位要求在財務領域有相關經驗。",
+                      "en": "This position requires relevant experience in the field of finance."
+                    },
+                    {
+                      "zh": "她決定轉換到完全不同的職業領域。",
+                      "en": "She decided to switch to a completely different field."
+                    },
+                    {
+                      "zh": "這家公司在科技領域是業界的領導者。",
+                      "en": "This company is a leader in the field of technology."
+                    },
+                    {
+                      "zh": "他花了十年在行銷這個領域累積經驗。",
+                      "en": "He spent ten years gaining experience in the field of marketing."
+                    },
+                    {
+                      "zh": "這位候選人在法律領域擁有豐富的資歷。",
+                      "en": "This candidate has extensive credentials in the legal field."
+                    },
+                    {
+                      "zh": "公司希望招募在人工智慧領域有專長的人才。",
+                      "en": "The company wants to recruit talent skilled in the field of artificial intelligence."
+                    },
+                    {
+                      "zh": "她在醫療產業領域工作了將近二十年。",
+                      "en": "She has worked in the medical field for nearly twenty years."
+                    },
+                    {
+                      "zh": "這個職缺要求應徵者在相關領域有學位。",
+                      "en": "This position requires applicants to have a degree in a related field."
+                    },
+                    {
+                      "zh": "他決定離開這個領域，轉而創業。",
+                      "en": "He decided to leave this field and start his own business."
+                    }
+                  ]
                 },
                 {
                   "en": "fire",
@@ -28694,7 +31088,49 @@
                   "ex_en": "He was fired from his previous position.",
                   "ex_zh": "他被解雇因而離開之前的職位。",
                   "ex_blank": "He was ____ from his previous position.",
-                  "ipa": "faɪər"
+                  "ipa": "faɪər",
+                  "translateBank": [
+                    {
+                      "zh": "他因為表現不佳而被之前的公司解雇。",
+                      "en": "He was fired from his previous company for poor performance."
+                    },
+                    {
+                      "zh": "主管決定解雇那位經常遲到的員工。",
+                      "en": "The manager decided to fire the employee who was often late."
+                    },
+                    {
+                      "zh": "這次裁員將會解雇大約二十名員工。",
+                      "en": "This round of layoffs will fire about twenty employees."
+                    },
+                    {
+                      "zh": "她因為洩漏機密資訊而被公司開除。",
+                      "en": "She was fired for leaking confidential information."
+                    },
+                    {
+                      "zh": "董事會授權執行長解雇表現不佳的經理。",
+                      "en": "The board authorized the CEO to fire the underperforming manager."
+                    },
+                    {
+                      "zh": "公司通常不會輕易解雇員工。",
+                      "en": "The company does not fire employees lightly."
+                    },
+                    {
+                      "zh": "他被解雇後花了三個月才找到新工作。",
+                      "en": "After being fired, it took him three months to find a new job."
+                    },
+                    {
+                      "zh": "主管警告他如果再犯錯就會被解雇。",
+                      "en": "The supervisor warned him that he would be fired if he made another mistake."
+                    },
+                    {
+                      "zh": "公司解雇了那位違反保密協議的員工。",
+                      "en": "The company fired the employee who violated the confidentiality agreement."
+                    },
+                    {
+                      "zh": "她擔心這次的重組會讓她被解雇。",
+                      "en": "She worried that this restructuring would get her fired."
+                    }
+                  ]
                 },
                 {
                   "en": "hire",
@@ -28703,7 +31139,49 @@
                   "ex_en": "Jorge was hired as an assistant manager five months ago, and he is now in line for a promotion.",
                   "ex_zh": "荷黑五個月前受聘為副理，而他現在正等著升職。",
                   "ex_blank": "Jorge was ____ as an assistant manager five months ago, and he is now in line for a promotion.",
-                  "ipa": "haɪər"
+                  "ipa": "haɪər",
+                  "translateBank": [
+                    {
+                      "zh": "她三年前受聘加入這家公司，現在已經是部門主管。",
+                      "en": "She was hired by this company three years ago and is now a department head."
+                    },
+                    {
+                      "zh": "公司決定雇用兩名新的業務代表。",
+                      "en": "The company decided to hire two new sales representatives."
+                    },
+                    {
+                      "zh": "人資部門正在雇用新的客服人員。",
+                      "en": "HR is hiring new customer service staff."
+                    },
+                    {
+                      "zh": "他因為擁有豐富經驗而被這家顧問公司聘用。",
+                      "en": "He was hired by this consulting firm because of his extensive experience."
+                    },
+                    {
+                      "zh": "這個職缺要在月底前完成雇用。",
+                      "en": "This position needs to be filled with a hire by the end of the month."
+                    },
+                    {
+                      "zh": "主管正在考慮雇用一名兼職助理。",
+                      "en": "The supervisor is considering hiring a part-time assistant."
+                    },
+                    {
+                      "zh": "公司雇用了一位資深顧問來改善流程。",
+                      "en": "The company hired a senior consultant to improve the process."
+                    },
+                    {
+                      "zh": "她被雇用來負責管理整個東南亞市場。",
+                      "en": "She was hired to manage the entire Southeast Asia market."
+                    },
+                    {
+                      "zh": "這個部門最近雇用了三位新的分析師。",
+                      "en": "This department recently hired three new analysts."
+                    },
+                    {
+                      "zh": "公司傾向雇用有相關領域經驗的求職者。",
+                      "en": "The company tends to hire job seekers with experience in the related field."
+                    }
+                  ]
                 },
                 {
                   "en": "independently",
@@ -28713,7 +31191,49 @@
                   "ex_zh": "克萊先生是經驗豐富的研究員，能獨立執行高級研究案。",
                   "ex_blank": "Mr. Kline is an experienced researcher who is able to handle high-level research projects ____.",
                   "grammar": "衍生字：independent adj. 獨立的；independence n. 獨立。",
-                  "ipa": "ˌɪndɪˈpɛndəntli"
+                  "ipa": "ˌɪndɪˈpɛndəntli",
+                  "translateBank": [
+                    {
+                      "zh": "她能夠獨立完成這份複雜的財務報告。",
+                      "en": "She is able to complete this complex financial report independently."
+                    },
+                    {
+                      "zh": "這位新員工已經能夠獨立處理客戶需求。",
+                      "en": "This new employee can already handle client requests independently."
+                    },
+                    {
+                      "zh": "主管希望團隊成員能更獨立地完成任務。",
+                      "en": "The supervisor hopes team members can complete tasks more independently."
+                    },
+                    {
+                      "zh": "她獨立負責整個行銷活動的規劃。",
+                      "en": "She independently managed the planning of the entire marketing campaign."
+                    },
+                    {
+                      "zh": "這個部門的每位員工都能獨立做出決策。",
+                      "en": "Every employee in this department can make decisions independently."
+                    },
+                    {
+                      "zh": "他獨立完成了這次的市場分析報告。",
+                      "en": "He independently completed this market analysis report."
+                    },
+                    {
+                      "zh": "這位工程師習慣獨立解決技術上的問題。",
+                      "en": "This engineer is used to solving technical problems independently."
+                    },
+                    {
+                      "zh": "她被賦予能夠獨立運作的專案小組。",
+                      "en": "She was given a project team that could operate independently."
+                    },
+                    {
+                      "zh": "新進人員需要先學會獨立處理日常事務。",
+                      "en": "New employees need to learn to handle daily tasks independently first."
+                    },
+                    {
+                      "zh": "這位顧問獨立評估了整個供應鏈的風險。",
+                      "en": "This consultant independently assessed the risks across the entire supply chain."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -28882,7 +31402,49 @@
                   "ex_en": "Mr. Davidson started here as an inexperienced university graduate.",
                   "ex_zh": "戴維森先生在這裡剛起步時還是個沒經驗的大學畢業生。",
                   "ex_blank": "Mr. Davidson started here as an ____ university graduate.",
-                  "ipa": "ˌɪnɛkˈspɪriənst"
+                  "ipa": "ˌɪnɛkˈspɪriənst",
+                  "translateBank": [
+                    {
+                      "zh": "她剛進公司時只是個經驗不足的新鮮人。",
+                      "en": "She joined the company as an inexperienced newcomer."
+                    },
+                    {
+                      "zh": "這個職位不適合經驗不足的求職者。",
+                      "en": "This position is not suitable for inexperienced job seekers."
+                    },
+                    {
+                      "zh": "主管花了很多時間指導這位經驗不足的員工。",
+                      "en": "The supervisor spent a lot of time coaching this inexperienced employee."
+                    },
+                    {
+                      "zh": "公司不會輕易把重要專案交給經驗不足的人。",
+                      "en": "The company would not easily assign important projects to inexperienced staff."
+                    },
+                    {
+                      "zh": "即使是經驗不足的新人，她仍展現出很強的學習能力。",
+                      "en": "Even as an inexperienced newcomer, she showed strong learning ability."
+                    },
+                    {
+                      "zh": "這位經驗不足的經理在危機處理上顯得慌亂。",
+                      "en": "This inexperienced manager seemed flustered when handling the crisis."
+                    },
+                    {
+                      "zh": "主管認為不應該因為經驗不足就否定他的潛力。",
+                      "en": "The manager believed his potential should not be dismissed just because he was inexperienced."
+                    },
+                    {
+                      "zh": "這份工作需要耐心指導經驗不足的新人。",
+                      "en": "This job requires patience to guide inexperienced newcomers."
+                    },
+                    {
+                      "zh": "儘管經驗不足，他依然很快適應了這個職位。",
+                      "en": "Despite being inexperienced, he quickly adapted to this position."
+                    },
+                    {
+                      "zh": "公司特別為經驗不足的員工安排了培訓課程。",
+                      "en": "The company arranged special training courses for inexperienced employees."
+                    }
+                  ]
                 },
                 {
                   "en": "join",
@@ -28891,7 +31453,49 @@
                   "ex_en": "Ever since Mr. Derrick joined the staff, the marketing team has been praised for its excellent work.",
                   "ex_zh": "自從德瑞克先生加入工作團隊後，行銷團隊因為表現優異而受到讚揚。",
                   "ex_blank": "Ever since Mr. Derrick ____ the staff, the marketing team has been praised for its excellent work.",
-                  "ipa": "ʤɔɪn"
+                  "ipa": "ʤɔɪn",
+                  "translateBank": [
+                    {
+                      "zh": "自從德瑞克先生加入團隊後，行銷部門的表現受到讚揚。",
+                      "en": "Ever since Mr. Derrick joined the team, the marketing department has been praised."
+                    },
+                    {
+                      "zh": "她上個月正式加入這家顧問公司。",
+                      "en": "She officially joined this consulting firm last month."
+                    },
+                    {
+                      "zh": "我們邀請你加入我們的專案團隊。",
+                      "en": "We would like you to join our project team."
+                    },
+                    {
+                      "zh": "公司歡迎新成員加入這個部門。",
+                      "en": "The company welcomes new members joining this department."
+                    },
+                    {
+                      "zh": "他在加入公司之前曾在銀行業工作。",
+                      "en": "Before joining the company, he worked in the banking industry."
+                    },
+                    {
+                      "zh": "越來越多畢業生選擇加入這個產業。",
+                      "en": "More and more graduates are choosing to join this industry."
+                    },
+                    {
+                      "zh": "她加入董事會後帶來了許多新的想法。",
+                      "en": "After joining the board, she brought many new ideas."
+                    },
+                    {
+                      "zh": "這位資深顧問將在下個月加入我們的團隊。",
+                      "en": "This senior consultant will join our team next month."
+                    },
+                    {
+                      "zh": "他加入公司僅一年就獲得升遷。",
+                      "en": "He was promoted just one year after joining the company."
+                    },
+                    {
+                      "zh": "許多員工因為公司文化而選擇加入這間企業。",
+                      "en": "Many employees choose to join this company because of its culture."
+                    }
+                  ]
                 },
                 {
                   "en": "leadership",
@@ -28901,7 +31505,49 @@
                   "ex_zh": "在威波女士領導下，慕斯提卡博物館發展出一些獲得獎項肯定的服務。",
                   "ex_blank": "Under Ms. Wibowo's ____, Mustika Museum has developed several award-winning services.",
                   "grammar": "衍生字：lead v. 領導；leader n. 領導者。",
-                  "ipa": "ˈlidərˌʃɪp"
+                  "ipa": "ˈlidərˌʃɪp",
+                  "translateBank": [
+                    {
+                      "zh": "在她的領導下，整個部門的業績顯著提升。",
+                      "en": "Under her leadership, the department's performance improved significantly."
+                    },
+                    {
+                      "zh": "這個職位需要很強的領導能力。",
+                      "en": "This position requires strong leadership skills."
+                    },
+                    {
+                      "zh": "公司正在培養下一代的領導人才。",
+                      "en": "The company is developing the next generation of leadership."
+                    },
+                    {
+                      "zh": "他的領導風格深受團隊成員的喜愛。",
+                      "en": "His leadership style is well liked by his team members."
+                    },
+                    {
+                      "zh": "這次改革展現了執行長的果斷領導力。",
+                      "en": "This reform showcased the CEO's decisive leadership."
+                    },
+                    {
+                      "zh": "她接任主管職位後展現出卓越的領導力。",
+                      "en": "She demonstrated excellent leadership after taking on the supervisory role."
+                    },
+                    {
+                      "zh": "董事會很欣賞他在這次危機中展現的領導力。",
+                      "en": "The board appreciated his leadership during this crisis."
+                    },
+                    {
+                      "zh": "這個訓練課程專門培養員工的領導能力。",
+                      "en": "This training course is designed to develop employees' leadership skills."
+                    },
+                    {
+                      "zh": "在新任總裁的領導下，公司的士氣大幅提升。",
+                      "en": "Under the new president's leadership, company morale has greatly improved."
+                    },
+                    {
+                      "zh": "她被公認是這個產業裡最優秀的領導人才之一。",
+                      "en": "She is widely recognized as one of the best leadership talents in this industry."
+                    }
+                  ]
                 },
                 {
                   "en": "leave",
@@ -28911,7 +31557,49 @@
                   "ex_zh": "你可享有給薪病假、給薪年假，還能參與公司的退休方案。",
                   "ex_blank": "You are eligible for paid sick ____, paid vacation, and participation in the company retirement plan.",
                   "grammar": "字彙放大鏡：相似詞：vacation, time off。常見假別的說法：annual leave 年假；sick leave 病假；personal leave 事假；maternity leave 產假。",
-                  "ipa": "liv"
+                  "ipa": "liv",
+                  "translateBank": [
+                    {
+                      "zh": "她申請了兩週的年假去歐洲旅行。",
+                      "en": "She applied for two weeks of annual leave to travel to Europe."
+                    },
+                    {
+                      "zh": "他因為生病而請了三天病假。",
+                      "en": "He took three days of sick leave because he was ill."
+                    },
+                    {
+                      "zh": "公司這個月開始實施新的育嬰假政策。",
+                      "en": "The company started a new parental leave policy this month."
+                    },
+                    {
+                      "zh": "她打算在休假期間離開辦公室到國外度假。",
+                      "en": "She plans to leave the office and travel abroad during her leave."
+                    },
+                    {
+                      "zh": "員工必須提前申請事假才能獲得核准。",
+                      "en": "Employees must apply for personal leave in advance to get approval."
+                    },
+                    {
+                      "zh": "主管核准了他的年假申請。",
+                      "en": "The supervisor approved his request for annual leave."
+                    },
+                    {
+                      "zh": "她休完產假後，將重新回到原本的職位。",
+                      "en": "After her maternity leave ends, she will return to her original position."
+                    },
+                    {
+                      "zh": "這家公司的休假制度比業界平均還要優渥。",
+                      "en": "This company's leave policy is more generous than the industry average."
+                    },
+                    {
+                      "zh": "他決定把剩下的假期留到年底再休假。",
+                      "en": "He decided to save his remaining leave for the end of the year."
+                    },
+                    {
+                      "zh": "員工在請假前必須先通知部門主管。",
+                      "en": "Employees must notify their department supervisor before taking leave."
+                    }
+                  ]
                 },
                 {
                   "en": "limited",
@@ -28920,7 +31608,49 @@
                   "ex_en": "Winthrop will succeed in sales even though he has limited experience in this area of the business.",
                   "ex_zh": "即使在此商業領域的經驗有限，溫索普的業務工作仍會大有斬獲。",
                   "ex_blank": "Winthrop will succeed in sales even though he has ____ experience in this area of the business.",
-                  "ipa": "ˈlɪmɪtɪd"
+                  "ipa": "ˈlɪmɪtɪd",
+                  "translateBank": [
+                    {
+                      "zh": "快餐店的員工大多只負有有限的職責。",
+                      "en": "Most employees at fast food restaurants have limited responsibility."
+                    },
+                    {
+                      "zh": "這個職位的升遷機會相當有限。",
+                      "en": "The promotion opportunities for this position are quite limited."
+                    },
+                    {
+                      "zh": "由於預算有限，公司今年不打算招募新人。",
+                      "en": "Due to limited budget, the company does not plan to hire new staff this year."
+                    },
+                    {
+                      "zh": "她在這個領域的經驗有限，但學習速度很快。",
+                      "en": "She has limited experience in this field, but she learns quickly."
+                    },
+                    {
+                      "zh": "這份合約只提供有限的福利保障。",
+                      "en": "This contract offers only limited benefits coverage."
+                    },
+                    {
+                      "zh": "由於時間有限，會議只能討論三個主要議題。",
+                      "en": "Due to limited time, the meeting could only cover three main topics."
+                    },
+                    {
+                      "zh": "這個部門目前只有有限的人力可以支援。",
+                      "en": "This department currently has only limited staff available for support."
+                    },
+                    {
+                      "zh": "她對這個市場的了解仍然有限。",
+                      "en": "Her understanding of this market is still limited."
+                    },
+                    {
+                      "zh": "公司提供的加班補償其實相當有限。",
+                      "en": "The overtime compensation the company offers is actually quite limited."
+                    },
+                    {
+                      "zh": "這個職位只提供有限的升遷空間。",
+                      "en": "This position offers only limited room for advancement."
+                    }
+                  ]
                 },
                 {
                   "en": "managerial",
@@ -28930,7 +31660,49 @@
                   "ex_zh": "我知道這是你首度擔任管理職，但我有把握你能勝任。",
                   "ex_blank": "I know that this will be your first ____ role, but I am sure you are capable of it.",
                   "grammar": "衍生字：manager n. 經理。",
-                  "ipa": "ˌmænɪˈʤɪriəl"
+                  "ipa": "ˌmænɪˈʤɪriəl",
+                  "translateBank": [
+                    {
+                      "zh": "我知道這會是你第一次擔任管理職，但我相信你能勝任。",
+                      "en": "I know this will be your first managerial role, but I am sure you can handle it."
+                    },
+                    {
+                      "zh": "這個職位要求至少三年的管理經驗。",
+                      "en": "This position requires at least three years of managerial experience."
+                    },
+                    {
+                      "zh": "她被賦予更多管理方面的職責。",
+                      "en": "She was given more managerial responsibilities."
+                    },
+                    {
+                      "zh": "公司提供訓練課程來培養員工的管理能力。",
+                      "en": "The company offers training courses to develop employees' managerial skills."
+                    },
+                    {
+                      "zh": "他升遷後開始承擔管理職位的工作。",
+                      "en": "After his promotion, he began taking on managerial duties."
+                    },
+                    {
+                      "zh": "這個部門缺乏具備管理經驗的人才。",
+                      "en": "This department lacks talent with managerial experience."
+                    },
+                    {
+                      "zh": "她在擔任管理職之前先累積了五年的業務經驗。",
+                      "en": "She gained five years of sales experience before taking on a managerial role."
+                    },
+                    {
+                      "zh": "這個職位的管理範圍涵蓋整個東南亞地區。",
+                      "en": "The managerial scope of this position covers the entire Southeast Asia region."
+                    },
+                    {
+                      "zh": "主管認為他已經具備管理能力，可以晉升了。",
+                      "en": "The supervisor believes he already has the managerial ability to be promoted."
+                    },
+                    {
+                      "zh": "公司正在評估誰適合接任這個管理職位。",
+                      "en": "The company is evaluating who is suitable for this managerial position."
+                    }
+                  ]
                 },
                 {
                   "en": "particularly",
@@ -28940,7 +31712,49 @@
                   "ex_zh": "到目前為止，我對你的專業成就就印象特別深刻。",
                   "ex_blank": "I am ____ impressed with your professional accomplishments up to this point.",
                   "grammar": "字彙放大鏡：相似詞：in particular 特別；尤其。衍生字：particular adj. 特別的。",
-                  "ipa": "ˌpɑrˈtɪkjələrli"
+                  "ipa": "ˌpɑrˈtɪkjələrli",
+                  "translateBank": [
+                    {
+                      "zh": "主管對她在這次專案中的表現特別滿意。",
+                      "en": "The supervisor is particularly satisfied with her performance in this project."
+                    },
+                    {
+                      "zh": "這個職位特別適合有國際經驗的人。",
+                      "en": "This position is particularly suitable for someone with international experience."
+                    },
+                    {
+                      "zh": "他在客戶溝通上特別有一套。",
+                      "en": "He is particularly good at communicating with clients."
+                    },
+                    {
+                      "zh": "這份報告特別強調了成本控制的重要性。",
+                      "en": "This report particularly emphasizes the importance of cost control."
+                    },
+                    {
+                      "zh": "她對這次的升遷感到特別興奮。",
+                      "en": "She is particularly excited about this promotion."
+                    },
+                    {
+                      "zh": "公司特別重視員工的團隊合作能力。",
+                      "en": "The company particularly values employees' teamwork skills."
+                    },
+                    {
+                      "zh": "這個職位的工作量在旺季會特別大。",
+                      "en": "The workload for this position is particularly heavy during peak season."
+                    },
+                    {
+                      "zh": "主管特別稱讚他解決問題的能力。",
+                      "en": "The supervisor particularly praised his problem-solving skills."
+                    },
+                    {
+                      "zh": "這次的客戶會議特別需要充分的準備。",
+                      "en": "This client meeting particularly requires thorough preparation."
+                    },
+                    {
+                      "zh": "他是一位經驗特別豐富的網頁設計師。",
+                      "en": "He is a particularly experienced web designer."
+                    }
+                  ]
                 },
                 {
                   "en": "performance",
@@ -28950,7 +31764,49 @@
                   "ex_zh": "在博瑟先生的表現評估中，部門主管描述他工作極為勤奮。",
                   "ex_blank": "In Mr. Brothet's ____ review, the department supervisor wrote that he worked extremely diligently.",
                   "grammar": "衍生字：perform v. 執行；表演。",
-                  "ipa": "pərˈfɔrməns"
+                  "ipa": "pərˈfɔrməns",
+                  "translateBank": [
+                    {
+                      "zh": "她在這次年度考核中獲得了非常高的表現評分。",
+                      "en": "She received a very high score in this year's performance review."
+                    },
+                    {
+                      "zh": "他的表現讓主管決定給他升遷。",
+                      "en": "His performance led his supervisor to give him a promotion."
+                    },
+                    {
+                      "zh": "公司根據員工表現來決定年終獎金。",
+                      "en": "The company decides year-end bonuses based on employee performance."
+                    },
+                    {
+                      "zh": "這個部門這一季的業績表現非常出色。",
+                      "en": "This department's performance this quarter has been outstanding."
+                    },
+                    {
+                      "zh": "主管在這次考核中指出他需要改進的表現。",
+                      "en": "The supervisor pointed out areas of his performance that need improvement."
+                    },
+                    {
+                      "zh": "她的工作表現一直都獲得很高的評價。",
+                      "en": "Her performance has consistently received high praise."
+                    },
+                    {
+                      "zh": "這份報告詳細分析了團隊整體的表現。",
+                      "en": "This report analyzes the team's overall performance in detail."
+                    },
+                    {
+                      "zh": "公司每半年會針對員工表現進行一次評估。",
+                      "en": "The company conducts a performance evaluation every six months."
+                    },
+                    {
+                      "zh": "他在上次簡報中的表現令客戶印象深刻。",
+                      "en": "His performance in the last presentation impressed the client."
+                    },
+                    {
+                      "zh": "加薪的幅度取決於你這一年的工作表現。",
+                      "en": "The amount of your raise depends on your performance this year."
+                    }
+                  ]
                 },
                 {
                   "en": "praise",
@@ -28959,7 +31815,49 @@
                   "ex_en": "Kyung Bin Yi has been praised for her role in securing several lucrative contracts for Dwyer Industries.",
                   "ex_zh": "李京芘因為幫戴爾工業簽下幾個豐厚的合約而被讚揚。",
                   "ex_blank": "Kyung Bin Yi has been ____ for her role in securing several lucrative contracts for Dwyer Industries.",
-                  "ipa": "preɪz"
+                  "ipa": "preɪz",
+                  "translateBank": [
+                    {
+                      "zh": "主管在會議上公開讚揚她解決問題的能力。",
+                      "en": "The supervisor publicly praised her problem-solving skills at the meeting."
+                    },
+                    {
+                      "zh": "她因為在這次專案中的表現而獲得讚揚。",
+                      "en": "She received praise for her performance in this project."
+                    },
+                    {
+                      "zh": "主管讚揚整個團隊按時完成了這個艱難的任務。",
+                      "en": "The supervisor praised the whole team for finishing this difficult task on time."
+                    },
+                    {
+                      "zh": "客戶對他的服務態度給予高度讚揚。",
+                      "en": "The client gave high praise for his service attitude."
+                    },
+                    {
+                      "zh": "她的報告在會議上獲得大家的讚賞。",
+                      "en": "Her report received praise from everyone at the meeting."
+                    },
+                    {
+                      "zh": "執行長在全體會議上讚揚了銷售團隊的表現。",
+                      "en": "The CEO praised the sales team's performance at the company-wide meeting."
+                    },
+                    {
+                      "zh": "他因為處理客戶投訴得當而受到上司的讚揚。",
+                      "en": "He was praised by his boss for handling the customer complaint well."
+                    },
+                    {
+                      "zh": "這篇報導特別讚揚了公司的創新精神。",
+                      "en": "This article particularly praised the company's spirit of innovation."
+                    },
+                    {
+                      "zh": "她的領導方式受到整個團隊的讚賞。",
+                      "en": "Her leadership style is praised by the whole team."
+                    },
+                    {
+                      "zh": "主管公開讚揚了這次活動的成功。",
+                      "en": "The supervisor publicly praised the success of this event."
+                    }
+                  ]
                 },
                 {
                   "en": "predecessor",
@@ -28968,7 +31866,49 @@
                   "ex_en": "Mr. Lee takes his job more seriously than his predecessor did.",
                   "ex_zh": "李先生比他的前輩更看重這份工作。",
                   "ex_blank": "Mr. Lee takes his job more seriously than his ____ did.",
-                  "ipa": "ˈprɛdəˌsɛsər"
+                  "ipa": "ˈprɛdəˌsɛsər",
+                  "translateBank": [
+                    {
+                      "zh": "新主管沿用了前任留下的大部分政策。",
+                      "en": "The new manager kept most of the policies left by her predecessor."
+                    },
+                    {
+                      "zh": "他的前任在這個職位上任職了十年。",
+                      "en": "His predecessor held this position for ten years."
+                    },
+                    {
+                      "zh": "新任執行長計畫延續前任的部分策略。",
+                      "en": "The new CEO plans to continue some of his predecessor's strategies."
+                    },
+                    {
+                      "zh": "她跟前任比較起來，管理風格截然不同。",
+                      "en": "Compared to her predecessor, her management style is completely different."
+                    },
+                    {
+                      "zh": "這位新經理必須先了解前任留下的所有專案。",
+                      "en": "This new manager needs to first understand all the projects left by his predecessor."
+                    },
+                    {
+                      "zh": "員工都很懷念前任主管的親和力。",
+                      "en": "Employees often miss the approachability of their predecessor."
+                    },
+                    {
+                      "zh": "新上任的總監改掉了前任的幾個舊規定。",
+                      "en": "The newly appointed director changed several of her predecessor's old rules."
+                    },
+                    {
+                      "zh": "他接下這個職位後發現前任留下不少未完成的工作。",
+                      "en": "After taking this position, he found that his predecessor had left a lot of unfinished work."
+                    },
+                    {
+                      "zh": "新主席打算擴大前任已經推動的計畫。",
+                      "en": "The new chairman intends to expand the program his predecessor had started."
+                    },
+                    {
+                      "zh": "她的表現很快就讓人忘記了她的前任。",
+                      "en": "Her performance quickly made people forget about her predecessor."
+                    }
+                  ]
                 }
               ],
               "quiz": [
@@ -29138,7 +32078,49 @@
                   "ex_zh": "雅各絲女士將被拔擢為行銷總監。",
                   "ex_blank": "Ms. Jacobs will be ____ to Marketing Director.",
                   "grammar": "衍生字：promotion n. 升遷。",
-                  "ipa": "prəˈmoʊt"
+                  "ipa": "prəˈmoʊt",
+                  "translateBank": [
+                    {
+                      "zh": "公司決定將她晉升為整個部門的主管。",
+                      "en": "The company decided to promote her to head of the entire department."
+                    },
+                    {
+                      "zh": "他工作表現優異，很快就獲得晉升。",
+                      "en": "He performed so well that he was quickly promoted."
+                    },
+                    {
+                      "zh": "董事會正在考慮晉升這位資深經理。",
+                      "en": "The board is considering promoting this senior manager."
+                    },
+                    {
+                      "zh": "她期待這次的考核能讓她獲得升遷。",
+                      "en": "She hopes this performance review will help her get promoted."
+                    },
+                    {
+                      "zh": "公司每年都會晉升表現優異的員工。",
+                      "en": "The company promotes outstanding employees every year."
+                    },
+                    {
+                      "zh": "他花了五年時間才晉升到經理的職位。",
+                      "en": "It took him five years to get promoted to a managerial position."
+                    },
+                    {
+                      "zh": "主管推薦她晉升到更高的職位。",
+                      "en": "The supervisor recommended promoting her to a higher position."
+                    },
+                    {
+                      "zh": "這次重組將會晉升三位部門主管。",
+                      "en": "This restructuring will promote three department heads."
+                    },
+                    {
+                      "zh": "公司希望透過內部晉升來填補這個職缺。",
+                      "en": "The company hopes to fill this position by promoting internally."
+                    },
+                    {
+                      "zh": "她被晉升之後承擔了更多的管理責任。",
+                      "en": "After being promoted, she took on more managerial responsibilities."
+                    }
+                  ]
                 },
                 {
                   "en": "recognition",
@@ -29148,7 +32130,49 @@
                   "ex_zh": "頒獎給譚艾蓮是為了表彰她對公司的傑出服務。",
                   "ex_blank": "An award will be given to Elaine Tang in ____ of her exceptional service to our company.",
                   "grammar": "衍生字：recognize v. 認出；認可。字彙放大鏡：in recognition of 為表彰…。",
-                  "ipa": "ˌrɛkɪgˈnɪʃən"
+                  "ipa": "ˌrɛkɪgˈnɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "公司為表彰他多年的貢獻頒發了一個特別獎項。",
+                      "en": "The company presented a special award in recognition of his years of contribution."
+                    },
+                    {
+                      "zh": "她的努力終於獲得主管的認可。",
+                      "en": "Her hard work finally earned recognition from her supervisor."
+                    },
+                    {
+                      "zh": "這個獎項是公司給予優秀員工的一種肯定。",
+                      "en": "This award is a form of recognition the company gives to outstanding employees."
+                    },
+                    {
+                      "zh": "團隊的努力應該獲得應有的認可。",
+                      "en": "The team's efforts deserve proper recognition."
+                    },
+                    {
+                      "zh": "他因為出色的表現而獲得公開表揚。",
+                      "en": "He received public recognition for his excellent performance."
+                    },
+                    {
+                      "zh": "公司頒發這個榮譽是為了表彰她的領導能力。",
+                      "en": "The company gave this honor in recognition of her leadership."
+                    },
+                    {
+                      "zh": "她期待自己的貢獻能獲得主管的重視。",
+                      "en": "She hopes her contributions will receive recognition from her supervisor."
+                    },
+                    {
+                      "zh": "這次慶祝活動是為了表彰整個團隊的努力。",
+                      "en": "This celebration is in recognition of the whole team's hard work."
+                    },
+                    {
+                      "zh": "他終於得到了應有的認可與升遷。",
+                      "en": "He finally received the recognition and promotion he deserved."
+                    },
+                    {
+                      "zh": "公司希望透過這個獎勵制度給員工更多認可。",
+                      "en": "The company hopes this reward system will give employees more recognition."
+                    }
+                  ]
                 },
                 {
                   "en": "resign",
@@ -29158,7 +32182,49 @@
                   "ex_zh": "為什麼有一位工程師退出麥克大師計畫？",
                   "ex_blank": "Why did one of the engineers ____ from the McMaster project?",
                   "grammar": "衍生字：resignation n. 辭呈；辭職。",
-                  "ipa": "rɪˈzaɪn"
+                  "ipa": "rɪˈzaɪn",
+                  "translateBank": [
+                    {
+                      "zh": "羅傑因為健康問題不得不辭去這間公司的職務。",
+                      "en": "Roger had to resign from this company because of health problems."
+                    },
+                    {
+                      "zh": "她決定辭去目前的職位去追求新的機會。",
+                      "en": "She decided to resign from her current position to pursue a new opportunity."
+                    },
+                    {
+                      "zh": "這位經理在公司服務十年後遞出辭呈。",
+                      "en": "This manager resigned after ten years with the company."
+                    },
+                    {
+                      "zh": "他因為對新政策不滿而選擇辭職。",
+                      "en": "He chose to resign because he was unhappy with the new policy."
+                    },
+                    {
+                      "zh": "執行長突然決定辭職，讓全公司都感到驚訝。",
+                      "en": "The CEO's sudden decision to resign surprised the whole company."
+                    },
+                    {
+                      "zh": "她在遞交辭呈前，先跟主管談過這個決定。",
+                      "en": "Before deciding to resign, she talked to her supervisor about it."
+                    },
+                    {
+                      "zh": "許多員工因為工作壓力過大而選擇辭職。",
+                      "en": "Many employees choose to resign due to excessive work pressure."
+                    },
+                    {
+                      "zh": "他正在考慮是否要辭去目前這份工作。",
+                      "en": "He is considering whether to resign from his current job."
+                    },
+                    {
+                      "zh": "她遞出辭呈後，公司立刻開始尋找接替人選。",
+                      "en": "After she resigned, the company immediately began looking for a replacement."
+                    },
+                    {
+                      "zh": "主管試圖說服他不要辭職。",
+                      "en": "The supervisor tried to persuade him not to resign."
+                    }
+                  ]
                 },
                 {
                   "en": "resourceful",
@@ -29168,7 +32234,49 @@
                   "ex_zh": "法蘭克應變能力強、對顧客很有一套，又致力於提供高品質的服務。",
                   "ex_blank": "Frank is highly ____, excellent with patrons, and is dedicated to providing quality service.",
                   "grammar": "衍生字：resource n. 資源。",
-                  "ipa": "riˈsɔrsfəl"
+                  "ipa": "riˈsɔrsfəl",
+                  "translateBank": [
+                    {
+                      "zh": "她在面對突發狀況時總是表現得非常靈活應變。",
+                      "en": "She is always very resourceful when facing unexpected situations."
+                    },
+                    {
+                      "zh": "主管稱讚他是團隊裡最足智多謀的成員。",
+                      "en": "The supervisor praised him as the most resourceful member of the team."
+                    },
+                    {
+                      "zh": "這位員工非常靈活，總能找到解決問題的方法。",
+                      "en": "This employee is very resourceful and always finds a way to solve problems."
+                    },
+                    {
+                      "zh": "公司希望招募到靈活應變又負責的新人。",
+                      "en": "The company hopes to hire resourceful and responsible newcomers."
+                    },
+                    {
+                      "zh": "她靈活地處理了這次預算不足的問題。",
+                      "en": "She resourcefully handled this budget shortage issue."
+                    },
+                    {
+                      "zh": "這位助理非常靈活，總能提前想到解決方案。",
+                      "en": "This assistant is very resourceful and always anticipates solutions."
+                    },
+                    {
+                      "zh": "主管認為足智多謀是這個職位最重要的特質。",
+                      "en": "The supervisor believes being resourceful is the most important quality for this position."
+                    },
+                    {
+                      "zh": "她在客戶投訴時展現出非常靈活的處理方式。",
+                      "en": "She was very resourceful in handling the customer's complaint."
+                    },
+                    {
+                      "zh": "公司獎勵那些在危機中展現靈活應變能力的員工。",
+                      "en": "The company rewards employees who are resourceful during a crisis."
+                    },
+                    {
+                      "zh": "這位新進員工靈活地解決了系統上的問題。",
+                      "en": "This new employee resourcefully solved the issue with the system."
+                    }
+                  ]
                 },
                 {
                   "en": "retire",
@@ -29178,7 +32286,49 @@
                   "ex_zh": "如同各位所知，我們齊聚一堂是為了慶祝金先生在新星公司服務三十七年後榮退。",
                   "ex_blank": "As you know, we're here to celebrate with Mr. Kim, who is ____ after 37 years with New Star Corporation.",
                   "grammar": "衍生字：retirement n. 退休。",
-                  "ipa": "ˌriˈtaɪər"
+                  "ipa": "ˌriˈtaɪər",
+                  "translateBank": [
+                    {
+                      "zh": "她打算在這家公司服務三十年後退休。",
+                      "en": "She plans to retire after thirty years with this company."
+                    },
+                    {
+                      "zh": "公司為即將退休的員工舉辦了歡送會。",
+                      "en": "The company held a farewell party for the employee about to retire."
+                    },
+                    {
+                      "zh": "他決定提早退休，開始自己的小生意。",
+                      "en": "He decided to retire early and start his own small business."
+                    },
+                    {
+                      "zh": "她退休後仍擔任公司的顧問。",
+                      "en": "After retiring, she still serves as a consultant for the company."
+                    },
+                    {
+                      "zh": "這位資深經理將在年底退休。",
+                      "en": "This senior manager will retire at the end of the year."
+                    },
+                    {
+                      "zh": "公司為退休員工準備了一份完整的福利方案。",
+                      "en": "The company prepared a comprehensive benefits plan for retiring employees."
+                    },
+                    {
+                      "zh": "他服務滿四十年之後選擇退休。",
+                      "en": "He chose to retire after forty years of service."
+                    },
+                    {
+                      "zh": "她退休前花了很多時間培訓接班人。",
+                      "en": "Before retiring, she spent a lot of time training her successor."
+                    },
+                    {
+                      "zh": "主管詢問他是否考慮提前退休。",
+                      "en": "The supervisor asked him whether he was considering retiring early."
+                    },
+                    {
+                      "zh": "公司在他退休時頒發了一個特別獎項。",
+                      "en": "The company presented a special award when he retired."
+                    }
+                  ]
                 },
                 {
                   "en": "skill",
@@ -29187,7 +32337,49 @@
                   "ex_en": "Because of my diverse experience, I have developed strong skills in financial consulting.",
                   "ex_zh": "由於我豐富多元的經驗，所以培養出財務諮詢方面的長才。",
                   "ex_blank": "Because of my diverse experience, I have developed strong ____ in financial consulting.",
-                  "ipa": "skɪl"
+                  "ipa": "skɪl",
+                  "translateBank": [
+                    {
+                      "zh": "由於她豐富多元的經驗，培養出財務諮詢方面的長才。",
+                      "en": "Because of her diverse experience, she has developed strong skills in financial consulting."
+                    },
+                    {
+                      "zh": "這個職位需要優秀的溝通技巧。",
+                      "en": "This position requires excellent communication skills."
+                    },
+                    {
+                      "zh": "她的領導技巧讓整個團隊的士氣大幅提升。",
+                      "en": "Her leadership skills have greatly boosted the team's morale."
+                    },
+                    {
+                      "zh": "公司提供訓練課程來提升員工的技術能力。",
+                      "en": "The company offers training courses to improve employees' technical skills."
+                    },
+                    {
+                      "zh": "他的談判技巧讓這次合約談得非常順利。",
+                      "en": "His negotiation skills made this contract negotiation go very smoothly."
+                    },
+                    {
+                      "zh": "這份工作需要具備分析數據的能力。",
+                      "en": "This job requires the skill to analyze data."
+                    },
+                    {
+                      "zh": "她在面試中展現了出色的解決問題能力。",
+                      "en": "She demonstrated excellent problem-solving skills during the interview."
+                    },
+                    {
+                      "zh": "這位應徵者的技能完全符合這個職位的需求。",
+                      "en": "This applicant's skills perfectly match the requirements for this position."
+                    },
+                    {
+                      "zh": "公司希望招募具備雙語技能的員工。",
+                      "en": "The company wants to hire employees with bilingual skills."
+                    },
+                    {
+                      "zh": "持續學習新技能有助於他在公司裡升遷。",
+                      "en": "Continuously learning new skills has helped him advance within the company."
+                    }
+                  ]
                 },
                 {
                   "en": "succeed",
@@ -29197,7 +32389,49 @@
                   "ex_zh": "布魯先生的職位將由現任行銷副總裁．高登接任。",
                   "ex_blank": "Mr. Bloom will be ____ by Ben Gordon, currently Vice President of Marketing.",
                   "grammar": "衍生字：succession n. 繼任；繼承；successor n. 繼任者。",
-                  "ipa": "səkˈsid"
+                  "ipa": "səkˈsid",
+                  "translateBank": [
+                    {
+                      "zh": "阿諾將在八月一日起接任羅夫．漢森的執行長職位。",
+                      "en": "Arnold will succeed Rolf Hansen as CEO effective August 1."
+                    },
+                    {
+                      "zh": "她憑著努力與堅持在這個產業裡成功了。",
+                      "en": "She succeeded in this industry through hard work and persistence."
+                    },
+                    {
+                      "zh": "這個新職位將由一位資深經理接任。",
+                      "en": "A senior manager will succeed in this new position."
+                    },
+                    {
+                      "zh": "公司相信他一定能在這次挑戰中成功。",
+                      "en": "The company believes he will surely succeed in this challenge."
+                    },
+                    {
+                      "zh": "她接任了前任主管留下的所有職責。",
+                      "en": "She succeeded her predecessor in all his responsibilities."
+                    },
+                    {
+                      "zh": "這項策略成功地提升了整個部門的業績。",
+                      "en": "This strategy succeeded in boosting the department's performance."
+                    },
+                    {
+                      "zh": "團隊這次的提案最終成功獲得客戶的認可。",
+                      "en": "The team's proposal eventually succeeded in gaining the client's approval."
+                    },
+                    {
+                      "zh": "誰會接任這位即將退休的總監？",
+                      "en": "Who will succeed this director who is about to retire?"
+                    },
+                    {
+                      "zh": "她相信只要努力，就能在這個職位上成功。",
+                      "en": "She believes that with hard work, she can succeed in this position."
+                    },
+                    {
+                      "zh": "這次改革成功地改善了員工的工作效率。",
+                      "en": "This reform succeeded in improving employees' work efficiency."
+                    }
+                  ]
                 },
                 {
                   "en": "tenure",
@@ -29206,7 +32440,49 @@
                   "ex_en": "Dr. Brown was the CEO of Popovich Materials, where she reduced expenses by almost a third in her four-year tenure.",
                   "ex_zh": "布朗博士是波波維契材料公司的執行長，在四年任內她幾乎削減了三分之一的支出。",
                   "ex_blank": "Dr. Brown was the CEO of Popovich Materials, where she reduced expenses by almost a third in her four-year ____.",
-                  "ipa": "ˈtɛnjər"
+                  "ipa": "ˈtɛnjər",
+                  "translateBank": [
+                    {
+                      "zh": "在他十年的任期內，公司的業績成長了一倍。",
+                      "en": "During his ten-year tenure, the company's revenue doubled."
+                    },
+                    {
+                      "zh": "她在這家公司的任期內推動了許多重要的改革。",
+                      "en": "During her tenure at this company, she drove many important reforms."
+                    },
+                    {
+                      "zh": "這位總裁的任期即將在今年結束。",
+                      "en": "This president's tenure is about to end this year."
+                    },
+                    {
+                      "zh": "他在任期內獲得了員工的高度信任。",
+                      "en": "He earned the strong trust of employees during his tenure."
+                    },
+                    {
+                      "zh": "她的任期結束後，由新任主管接棒。",
+                      "en": "After her tenure ended, a new manager took over."
+                    },
+                    {
+                      "zh": "這份報告總結了他五年任期內的成就。",
+                      "en": "This report summarizes his achievements during his five-year tenure."
+                    },
+                    {
+                      "zh": "董事長的任期將延長至明年。",
+                      "en": "The chairman's tenure will be extended until next year."
+                    },
+                    {
+                      "zh": "她在任期內大幅改善了公司的財務狀況。",
+                      "en": "She significantly improved the company's finances during her tenure."
+                    },
+                    {
+                      "zh": "這位經理的任期即將因為退休而結束。",
+                      "en": "This manager's tenure is about to end due to his retirement."
+                    },
+                    {
+                      "zh": "公司在他任期結束時舉辦了一場感謝會。",
+                      "en": "The company held an appreciation event at the end of his tenure."
+                    }
+                  ]
                 },
                 {
                   "en": "title",
@@ -29215,7 +32491,49 @@
                   "ex_en": "At my performance review, it was agreed that my title would be changed to Senior Project Manager.",
                   "ex_zh": "在績效評估中，我的職稱經核可更改為資深專案經理。",
                   "ex_blank": "At my performance review, it was agreed that my ____ would be changed to Senior Project Manager.",
-                  "ipa": "ˈtaɪtəl"
+                  "ipa": "ˈtaɪtəl",
+                  "translateBank": [
+                    {
+                      "zh": "她升遷後獲得了新的職稱。",
+                      "en": "She received a new title after her promotion."
+                    },
+                    {
+                      "zh": "這個職位的職稱比之前的更高階。",
+                      "en": "The title of this position is higher-ranking than her previous one."
+                    },
+                    {
+                      "zh": "公司決定把這個職位的職稱改為行銷總監。",
+                      "en": "The company decided to change this position's title to Marketing Director."
+                    },
+                    {
+                      "zh": "他的新職稱反映了他擴大的職責範圍。",
+                      "en": "His new title reflects his expanded range of responsibilities."
+                    },
+                    {
+                      "zh": "名片上應該印上她目前的正式職稱。",
+                      "en": "Her current official title should be printed on her business card."
+                    },
+                    {
+                      "zh": "這份合約清楚寫明了她的職稱與薪資。",
+                      "en": "This contract clearly states her title and salary."
+                    },
+                    {
+                      "zh": "主管建議調整這個職位的職稱以符合實際職責。",
+                      "en": "The supervisor suggested adjusting this position's title to match its actual duties."
+                    },
+                    {
+                      "zh": "她升遷後的職稱是副總經理。",
+                      "en": "Her title after the promotion is Deputy General Manager."
+                    },
+                    {
+                      "zh": "公司重組後，許多員工的職稱都有所調整。",
+                      "en": "After the restructuring, many employees' titles were adjusted."
+                    },
+                    {
+                      "zh": "這個職稱聽起來比實際的工作內容更資深。",
+                      "en": "This title sounds more senior than the actual job responsibilities."
+                    }
+                  ]
                 },
                 {
                   "en": "transfer",
@@ -29224,7 +32542,49 @@
                   "ex_en": "Although she has been transferred to Mexico City, Ms. Baxter and her former colleagues remain in contact.",
                   "ex_zh": "雖然調職到墨西哥市，貝斯特女士仍跟以前同事保持聯繫。",
                   "ex_blank": "Although she has been ____ to Mexico City, Ms. Baxter and her former colleagues remain in contact.",
-                  "ipa": "ˈtrænsfər"
+                  "ipa": "ˈtrænsfər",
+                  "translateBank": [
+                    {
+                      "zh": "雖然即將調職到墨西哥市，貝斯特女士仍打算跟以前同事保持聯繫。",
+                      "en": "Although she will transfer to Mexico City, Ms. Baxter plans to stay in touch with her former colleagues."
+                    },
+                    {
+                      "zh": "懷特女士將從波士頓調職到芝加哥辦公室。",
+                      "en": "Ms. White will transfer from Boston to the Chicago office."
+                    },
+                    {
+                      "zh": "公司下個月會把幾位員工調到新加坡分公司。",
+                      "en": "The company will transfer several employees to the Singapore branch next month."
+                    },
+                    {
+                      "zh": "她申請調職到另一個部門。",
+                      "en": "She applied to transfer to a different department."
+                    },
+                    {
+                      "zh": "這次人事調整將會有三位經理調到海外分公司。",
+                      "en": "This personnel change will transfer three managers to overseas branches."
+                    },
+                    {
+                      "zh": "主管詢問他是否願意調到客服部門。",
+                      "en": "The supervisor asked whether he would transfer to the customer service department."
+                    },
+                    {
+                      "zh": "公司這個月總共安排了五筆人員調動。",
+                      "en": "The company arranged a total of five employee transfers this month."
+                    },
+                    {
+                      "zh": "她決定申請調到離家比較近的分店。",
+                      "en": "She decided to apply to transfer to a branch closer to home."
+                    },
+                    {
+                      "zh": "這筆資金調撥需要財務長的批准。",
+                      "en": "This fund transfer requires the CFO's approval."
+                    },
+                    {
+                      "zh": "他希望能調職到行銷部門發展。",
+                      "en": "He hopes to transfer to the marketing department to develop his career."
+                    }
+                  ]
                 }
               ],
               "quiz": [
