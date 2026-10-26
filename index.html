@@ -2973,6 +2973,11 @@ const NUMBER_WORD_MAP = {
 };
 function transcriptWordsClient(s) {
   return (s || "")
+    // 手機鍵盤的自動校正常把直引號 ' 換成彎引號（例如 didn't → didn't），
+    // 兩個字看起來一模一樣，但如果這裡只認直引號，彎引號會被當成分隔符，
+    // "didn't" 就會被拆成 "didn"／"t" 兩個字，跟參考答案的字數對不起來，
+    // 造成明明打得一字不差卻被判錯。先統一轉成直引號再繼續處理。
+    .replace(/[‘’ʼ＇]/g, "'")
     .toLowerCase()
     .split(/[^a-z0-9']+/)
     .filter(Boolean)
