@@ -4609,9 +4609,14 @@ function Typing({
 /* 不用額外存資料庫；只有整個單元的字都已經有題庫，才會在單元畫面顯示   */
 /* 這個練習方式（見 UnitScreen 的 activityList）。                       */
 /* 批改方式：先要求輸入裡有出現這個單字本身（練習重點就是用這個字造句），*/
-/* 再用跟語音跟讀同一套「大部分字有對上」的寬鬆比對（sentenceFullyReadClient），*/
-/* 不要求一字不差，用詞稍有不同也能過；不管對錯都會顯示參考答案，方便   */
-/* 自己對照學習，這點跟全自動嚴格批改的測驗不一樣，比較適合自學情境。    */
+/* 再用「詞序敏感」的句子相似度比對（wordSeqSimilarity）。這跟語音跟讀用  */
+/* 的 sentenceFullyReadClient 不一樣：跟讀只在乎「有沒有念到這些字」，    */
+/* 順序、文法不重要；但打字翻譯是在練句型，單字對了、順序或文法整個是   */
+/* 錯的（例如寫成「He with his wife go to the movies.」）不該被判對，    */
+/* 所以改成把整句句子當成「單字的序列」做編輯距離，單字被搬動位置、      */
+/* 漏字、動詞變化錯誤都會讓相似度明顯下降，而非只看「這些字有沒有出現   */
+/* 過」。拼字極相近的字（例如打錯一兩個字母）仍給一點容錯，不要求    */
+/* 連標點符號都一字不差；不管對錯都會顯示參考答案，方便自己對照學習。    */
 /* ------------------------------------------------------------------ */
 function stringHash(s) {
   let h = 0;
@@ -4626,6 +4631,30 @@ function dailyTranslateQuestion(unitId, word) {
   const idx = stringHash(`${todayStr()}::${unitId}::${word.en}`) % bank.length;
   return bank[idx];
 }
+// 單字層級的編輯距離（跟 wordSimilarity 的字母層級編輯距離不同層次）：
+// 整句句子當成一串「單字序列」，缺字、多字、順序調換都會增加距離，
+// 相似拼法的單字之間給一點點容錯（subCost 0.3）但不是完全免費
+function wordSeqSimilarity(targetWords, gotWords) {
+  const m = targetWords.length, n = gotWords.length;
+  if (!m || !n) return 0;
+  let prev = new Array(n + 1), cur = new Array(n + 1);
+  for (let j = 0; j <= n; j++) prev[j] = j;
+  for (let i = 1; i <= m; i++) {
+    cur[0] = i;
+    const a = targetWords[i - 1];
+    for (let j = 1; j <= n; j++) {
+      const b = gotWords[j - 1];
+      let subCost;
+      if (a === b) subCost = 0;
+      else if (a.length >= 4 && b.length >= 4 && wordSimilarity(a, b) >= FUZZY_WORD_SIMILARITY) subCost = 0.3;
+      else subCost = 1;
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + subCost);
+    }
+    [prev, cur] = [cur, prev];
+  }
+  return 1 - prev[n] / Math.max(m, n);
+}
+const TRANSLATE_MATCH_THRESHOLD = 0.85;
 function checkTranslateAnswer(input, word, answerEn) {
   const typed = (input || "").trim();
   if (!typed) return false;
@@ -4638,7 +4667,8 @@ function checkTranslateAnswer(input, word, answerEn) {
     return formWords.length === 1 ? gotSet.has(formWords[0]) : containsPhraseClient(gotWords, formWords);
   });
   if (!hasTargetWord) return false;
-  return sentenceFullyReadClient(answerEn, typed);
+  const targetWords = transcriptWordsClient(answerEn);
+  return wordSeqSimilarity(targetWords, gotWords) >= TRANSLATE_MATCH_THRESHOLD;
 }
 function TranslateCard({ word, question, onResult }) {
   const [input, setInput] = useState("");
