@@ -19879,7 +19879,49 @@
                   "ex_zh": "分析完貴公司的營運需求後，我們會試著找出改善的方法。",
                   "ex_blank": "After ____ your business's operating needs, we will try to find ways to improve your results.",
                   "grammar": "字彙放大鏡：make an analysis of 分析（某事物）。衍生字：analysis n. 分析；analyst n. 分析者。",
-                  "ipa": "ˈænəˌlaɪz"
+                  "ipa": "ˈænəˌlaɪz",
+                  "translateBank": [
+                    {
+                      "zh": "我們需要分析這份報告的數據。",
+                      "en": "We need to analyze the data in this report."
+                    },
+                    {
+                      "zh": "專家正在分析目前的市場趨勢。",
+                      "en": "The experts are analyzing the current market trends."
+                    },
+                    {
+                      "zh": "經理要求我們分析顧客的意見回饋。",
+                      "en": "The manager asked us to analyze the customer feedback."
+                    },
+                    {
+                      "zh": "她花了一整天分析銷售數字。",
+                      "en": "She spent the whole day analyzing the sales figures."
+                    },
+                    {
+                      "zh": "這個軟體可以自動分析財務資料。",
+                      "en": "This software can automatically analyze financial data."
+                    },
+                    {
+                      "zh": "我們將分析每個部門的表現。",
+                      "en": "We will analyze the performance of each department."
+                    },
+                    {
+                      "zh": "請在會議前分析這些結果。",
+                      "en": "Please analyze these results before the meeting."
+                    },
+                    {
+                      "zh": "團隊正在分析問卷調查的結果。",
+                      "en": "The team is analyzing the results of the survey."
+                    },
+                    {
+                      "zh": "他負責分析公司的營運成本。",
+                      "en": "He is responsible for analyzing the company's operating costs."
+                    },
+                    {
+                      "zh": "我們應該先分析問題，再提出解決方案。",
+                      "en": "We should analyze the problem before proposing a solution."
+                    }
+                  ]
                 },
                 {
                   "en": "anniversary",
@@ -19888,7 +19930,49 @@
                   "ex_en": "This Monday marks the tenth anniversary of the founding of KJ Airline.",
                   "ex_zh": "本週一正是KJ航空創立屆滿十週年。",
                   "ex_blank": "This Monday marks the tenth ____ of the founding of KJ Airline.",
-                  "ipa": "ˌænəˈvərsəri"
+                  "ipa": "ˌænəˈvərsəri",
+                  "translateBank": [
+                    {
+                      "zh": "公司下個月要慶祝十週年紀念。",
+                      "en": "The company will celebrate its tenth anniversary next month."
+                    },
+                    {
+                      "zh": "這是我們公司成立的第五個週年紀念日。",
+                      "en": "This is the fifth anniversary of our company's founding."
+                    },
+                    {
+                      "zh": "我們計畫為這個特別的週年紀念日舉辦派對。",
+                      "en": "We are planning a party for this special anniversary."
+                    },
+                    {
+                      "zh": "下週一是這家店開幕的週年紀念日。",
+                      "en": "Next Monday is the anniversary of the store's opening."
+                    },
+                    {
+                      "zh": "公司為了週年慶推出了特別的折扣。",
+                      "en": "The company offered a special discount for the anniversary."
+                    },
+                    {
+                      "zh": "這個活動是為了紀念公司創立二十週年。",
+                      "en": "This event is held to mark the company's twentieth anniversary."
+                    },
+                    {
+                      "zh": "他們邀請所有員工參加週年慶典。",
+                      "en": "They invited all employees to attend the anniversary celebration."
+                    },
+                    {
+                      "zh": "今年是這間工廠運作的第三十個週年。",
+                      "en": "This year marks the thirtieth anniversary of the factory's operation."
+                    },
+                    {
+                      "zh": "公司準備了禮物來慶祝這個週年紀念日。",
+                      "en": "The company prepared gifts to celebrate the anniversary."
+                    },
+                    {
+                      "zh": "這場週年慶活動吸引了許多顧客。",
+                      "en": "The anniversary event attracted many customers."
+                    }
+                  ]
                 },
                 {
                   "en": "approximately",
@@ -19897,7 +19981,49 @@
                   "ex_en": "This will take approximately 15 minutes.",
                   "ex_zh": "這大約會花上十五分鐘的時間。",
                   "ex_blank": "This will take ____ 15 minutes.",
-                  "ipa": "əˈprɑksəmətli"
+                  "ipa": "əˈprɑksəmətli",
+                  "translateBank": [
+                    {
+                      "zh": "這趟旅程大約需要兩個小時。",
+                      "en": "The trip will take approximately two hours."
+                    },
+                    {
+                      "zh": "會議大約在下午三點開始。",
+                      "en": "The meeting will start at approximately three in the afternoon."
+                    },
+                    {
+                      "zh": "這個專案大約需要一個月才能完成。",
+                      "en": "This project will take approximately one month to complete."
+                    },
+                    {
+                      "zh": "公司大約有五百名員工。",
+                      "en": "The company has approximately five hundred employees."
+                    },
+                    {
+                      "zh": "這份報告大約有二十頁。",
+                      "en": "This report is approximately twenty pages long."
+                    },
+                    {
+                      "zh": "他們大約花了一千美元購買設備。",
+                      "en": "They spent approximately one thousand dollars on equipment."
+                    },
+                    {
+                      "zh": "從機場到飯店大約要四十分鐘車程。",
+                      "en": "It takes approximately forty minutes to drive from the airport to the hotel."
+                    },
+                    {
+                      "zh": "這批貨物大約下週會送達。",
+                      "en": "The shipment will arrive approximately next week."
+                    },
+                    {
+                      "zh": "這場演講大約持續一個小時。",
+                      "en": "The speech lasted approximately one hour."
+                    },
+                    {
+                      "zh": "這個城市的人口大約有兩百萬。",
+                      "en": "The city has a population of approximately two million."
+                    }
+                  ]
                 },
                 {
                   "en": "attention",
@@ -19907,7 +20033,49 @@
                   "ex_zh": "我想花點時間請各位仔細看一下今早註冊時拿到的資料袋。",
                   "ex_blank": "I'd like to take a moment to draw your ____ to the packet of materials you received at registration this morning.",
                   "grammar": "字彙放大鏡：pay attention to 留意……；draw one's attention to 引起某人注意……；attention to detail 注意細節。衍生字：attentive adj. 注意的；留心的。",
-                  "ipa": "əˈtɛnʃən"
+                  "ipa": "əˈtɛnʃən",
+                  "translateBank": [
+                    {
+                      "zh": "請大家注意這份新的規定。",
+                      "en": "Please pay attention to this new regulation."
+                    },
+                    {
+                      "zh": "經理想引起大家對這個問題的注意。",
+                      "en": "The manager wants to draw everyone's attention to this issue."
+                    },
+                    {
+                      "zh": "這個廣告成功吸引了顧客的注意力。",
+                      "en": "The advertisement successfully caught the customers' attention."
+                    },
+                    {
+                      "zh": "老師提醒學生要注意細節。",
+                      "en": "The teacher reminded students to pay attention to detail."
+                    },
+                    {
+                      "zh": "這份文件需要你特別注意。",
+                      "en": "This document requires your special attention."
+                    },
+                    {
+                      "zh": "他在會議中失去了注意力。",
+                      "en": "He lost his attention during the meeting."
+                    },
+                    {
+                      "zh": "請把注意力放在這張投影片上。",
+                      "en": "Please focus your attention on this slide."
+                    },
+                    {
+                      "zh": "這個議題引起了媒體的高度關注。",
+                      "en": "This issue has attracted a lot of attention from the media."
+                    },
+                    {
+                      "zh": "主管要求我們注意安全規範。",
+                      "en": "The supervisor asked us to pay attention to the safety rules."
+                    },
+                    {
+                      "zh": "她的簡報吸引了全場的注意。",
+                      "en": "Her presentation drew the attention of the whole audience."
+                    }
+                  ]
                 },
                 {
                   "en": "circumstance",
@@ -19917,7 +20085,49 @@
                   "ex_zh": "目前的情勢迫使我在未來兩個月內遷往孟買。",
                   "ex_blank": "Current ____ require that I relocate to Mumbai within the next two months.",
                   "grammar": "字彙放大鏡：under certain circumstances 在某些情況下；under no circumstances 無論任何情況。",
-                  "ipa": "ˈsərkəmˌstæns"
+                  "ipa": "ˈsərkəmˌstæns",
+                  "translateBank": [
+                    {
+                      "zh": "在目前的情勢下，我們必須改變計畫。",
+                      "en": "Under the current circumstances, we must change our plan."
+                    },
+                    {
+                      "zh": "無論任何情況，都不可以洩漏這份資料。",
+                      "en": "Under no circumstances should this information be disclosed."
+                    },
+                    {
+                      "zh": "這種特殊情況需要經理親自處理。",
+                      "en": "This special circumstance requires the manager to handle it personally."
+                    },
+                    {
+                      "zh": "由於情勢改變，會議延後了。",
+                      "en": "The meeting was postponed due to a change in circumstances."
+                    },
+                    {
+                      "zh": "在這種情況下，我們別無選擇。",
+                      "en": "Under these circumstances, we have no other choice."
+                    },
+                    {
+                      "zh": "他因為個人情況申請請假。",
+                      "en": "He applied for leave due to personal circumstances."
+                    },
+                    {
+                      "zh": "公司會依照不同情況調整政策。",
+                      "en": "The company will adjust its policy depending on the circumstances."
+                    },
+                    {
+                      "zh": "這個決定是根據當時的情勢做出的。",
+                      "en": "This decision was made based on the circumstances at that time."
+                    },
+                    {
+                      "zh": "在某些情況下，退費是可以申請的。",
+                      "en": "Under certain circumstances, a refund can be requested."
+                    },
+                    {
+                      "zh": "她在艱難的情勢中仍然完成了任務。",
+                      "en": "She completed the task despite the difficult circumstances."
+                    }
+                  ]
                 },
                 {
                   "en": "competitor",
@@ -19927,7 +20137,49 @@
                   "ex_zh": "許多經濟學家都提到，音響時代的規模仍不足以成為電子產品市場的重要競爭者。",
                   "ex_blank": "Many economists say Audiotimes is still too small to be a serious ____ in the electronics market.",
                   "grammar": "衍生字：compete v. 競爭；competition n. 競賽。",
-                  "ipa": "kəmˈpɛtɪtər"
+                  "ipa": "kəmˈpɛtɪtər",
+                  "translateBank": [
+                    {
+                      "zh": "這家公司是我們最大的競爭對手。",
+                      "en": "This company is our biggest competitor."
+                    },
+                    {
+                      "zh": "我們的競爭者推出了一款新產品。",
+                      "en": "Our competitor launched a new product."
+                    },
+                    {
+                      "zh": "市場上出現了一個強勁的競爭者。",
+                      "en": "A strong competitor has emerged in the market."
+                    },
+                    {
+                      "zh": "這間公司的規模還不足以成為主要競爭者。",
+                      "en": "This company is still too small to be a major competitor."
+                    },
+                    {
+                      "zh": "我們需要密切觀察競爭者的動態。",
+                      "en": "We need to closely monitor our competitors."
+                    },
+                    {
+                      "zh": "這個產業裡有許多競爭者。",
+                      "en": "There are many competitors in this industry."
+                    },
+                    {
+                      "zh": "我們的價格比競爭者更有優勢。",
+                      "en": "Our prices are more competitive than our competitor's."
+                    },
+                    {
+                      "zh": "這家新創公司正在挑戰大型競爭者。",
+                      "en": "This start-up is challenging larger competitors."
+                    },
+                    {
+                      "zh": "我們的競爭者最近調降了價格。",
+                      "en": "Our competitor recently lowered its prices."
+                    },
+                    {
+                      "zh": "分析競爭者的策略對我們很重要。",
+                      "en": "Analyzing our competitors' strategies is important to us."
+                    }
+                  ]
                 },
                 {
                   "en": "complete",
@@ -19937,7 +20189,49 @@
                   "ex_zh": "完成這項工作得花上兩小時左右。",
                   "ex_blank": "This work should take about two hours to ____.",
                   "grammar": "衍生字：completion n. 完成；實現。",
-                  "ipa": "kəmˈplit"
+                  "ipa": "kəmˈplit",
+                  "translateBank": [
+                    {
+                      "zh": "這項工作大約要花兩個小時才能完成。",
+                      "en": "This work should take about two hours to complete."
+                    },
+                    {
+                      "zh": "請在星期五之前完成這份報告。",
+                      "en": "Please complete this report by Friday."
+                    },
+                    {
+                      "zh": "他們已經完成了整個專案。",
+                      "en": "They have completed the whole project."
+                    },
+                    {
+                      "zh": "我們需要更多時間才能完成這個任務。",
+                      "en": "We need more time to complete this task."
+                    },
+                    {
+                      "zh": "請完成這張表格並交回。",
+                      "en": "Please complete this form and return it."
+                    },
+                    {
+                      "zh": "她很快就完成了她的簡報。",
+                      "en": "She completed her presentation quickly."
+                    },
+                    {
+                      "zh": "這棟大樓預計明年完工。",
+                      "en": "This building is expected to be completed next year."
+                    },
+                    {
+                      "zh": "團隊按時完成了這個計畫。",
+                      "en": "The team completed the project on time."
+                    },
+                    {
+                      "zh": "請記得完成線上的問卷調查。",
+                      "en": "Please remember to complete the online survey."
+                    },
+                    {
+                      "zh": "我們必須先完成訓練才能上班。",
+                      "en": "We must complete the training before starting work."
+                    }
+                  ]
                 },
                 {
                   "en": "conflict",
@@ -19947,7 +20241,49 @@
                   "ex_zh": "由於行程撞期，馬丁先生決定將籌畫會議延後。",
                   "ex_blank": "Mr. Martin has decided to postpone the planning meeting because of a scheduling ____.",
                   "grammar": "字彙放大鏡：a conflict in one's schedule 行程撞期（= a scheduling conflict）；a conflict of interest 利益衝突。",
-                  "ipa": "ˈkɑnflɪkt"
+                  "ipa": "ˈkɑnflɪkt",
+                  "translateBank": [
+                    {
+                      "zh": "因為行程撞期，會議被延後了。",
+                      "en": "The meeting was postponed because of a scheduling conflict."
+                    },
+                    {
+                      "zh": "兩位同事之間發生了一些衝突。",
+                      "en": "There was some conflict between the two colleagues."
+                    },
+                    {
+                      "zh": "這兩個計畫的時間有衝突。",
+                      "en": "There is a conflict between the schedules of these two plans."
+                    },
+                    {
+                      "zh": "主管介入處理了團隊裡的衝突。",
+                      "en": "The supervisor stepped in to resolve the conflict within the team."
+                    },
+                    {
+                      "zh": "這可能會造成利益衝突。",
+                      "en": "This could create a conflict of interest."
+                    },
+                    {
+                      "zh": "我們需要找到方法解決這個衝突。",
+                      "en": "We need to find a way to resolve this conflict."
+                    },
+                    {
+                      "zh": "這份合約的條款有衝突。",
+                      "en": "There is a conflict in the terms of this contract."
+                    },
+                    {
+                      "zh": "他因為行程衝突取消了會議。",
+                      "en": "He canceled the meeting due to a scheduling conflict."
+                    },
+                    {
+                      "zh": "兩個部門之間存在一些意見衝突。",
+                      "en": "There is some conflict of opinion between the two departments."
+                    },
+                    {
+                      "zh": "我們應該避免不必要的衝突。",
+                      "en": "We should avoid unnecessary conflict."
+                    }
+                  ]
                 },
                 {
                   "en": "contain",
@@ -19956,7 +20292,49 @@
                   "ex_en": "The folder in front of you contains a map of the building.",
                   "ex_zh": "您面前的資料夾中包含一份建築物的平面圖。",
                   "ex_blank": "The folder in front of you ____ a map of the building.",
-                  "ipa": "kənˈteɪn"
+                  "ipa": "kənˈteɪn",
+                  "translateBank": [
+                    {
+                      "zh": "這個資料夾裡包含一份建築物的平面圖。",
+                      "en": "The folder contains a map of the building."
+                    },
+                    {
+                      "zh": "這個包裹裡包含了所有需要的文件。",
+                      "en": "This package contains all the necessary documents."
+                    },
+                    {
+                      "zh": "這份報告包含了最新的銷售數據。",
+                      "en": "This report contains the latest sales data."
+                    },
+                    {
+                      "zh": "這封電子郵件包含了會議的詳細資訊。",
+                      "en": "This email contains the details of the meeting."
+                    },
+                    {
+                      "zh": "這個箱子包含了十件樣品。",
+                      "en": "This box contains ten samples."
+                    },
+                    {
+                      "zh": "這份合約包含好幾項重要條款。",
+                      "en": "This contract contains several important clauses."
+                    },
+                    {
+                      "zh": "這本手冊包含所有的操作說明。",
+                      "en": "This manual contains all the operating instructions."
+                    },
+                    {
+                      "zh": "這個檔案包含了員工的個人資料。",
+                      "en": "This file contains employees' personal information."
+                    },
+                    {
+                      "zh": "這封信包含了一些重要的提醒事項。",
+                      "en": "This letter contains some important reminders."
+                    },
+                    {
+                      "zh": "這份清單包含了所有與會者的名字。",
+                      "en": "This list contains the names of all the attendees."
+                    }
+                  ]
                 },
                 {
                   "en": "current",
@@ -19966,7 +20344,49 @@
                   "ex_zh": "精英保險公司目前的職缺都已公布在各大求職網站上。",
                   "ex_blank": "____ job openings at Elite Insurance have been posted on the major job-search sites.",
                   "grammar": "衍生字：currently adv. 目前地。",
-                  "ipa": "ˈkɑrənt"
+                  "ipa": "ˈkɑrənt",
+                  "translateBank": [
+                    {
+                      "zh": "目前的職缺已經公布在求職網站上了。",
+                      "en": "Current job openings have been posted on the job-search site."
+                    },
+                    {
+                      "zh": "這是公司目前的政策。",
+                      "en": "This is the company's current policy."
+                    },
+                    {
+                      "zh": "請提供你目前的聯絡資訊。",
+                      "en": "Please provide your current contact information."
+                    },
+                    {
+                      "zh": "目前的市場情況對我們有利。",
+                      "en": "The current market situation is favorable to us."
+                    },
+                    {
+                      "zh": "根據目前的進度，我們會準時完成。",
+                      "en": "Based on the current progress, we will finish on time."
+                    },
+                    {
+                      "zh": "她的現職是行銷經理。",
+                      "en": "Her current position is marketing manager."
+                    },
+                    {
+                      "zh": "這是我們目前使用的系統。",
+                      "en": "This is the system we currently use."
+                    },
+                    {
+                      "zh": "請檢查你目前的帳戶餘額。",
+                      "en": "Please check your current account balance."
+                    },
+                    {
+                      "zh": "目前的計畫可能會有所調整。",
+                      "en": "The current plan may be adjusted."
+                    },
+                    {
+                      "zh": "我們正在檢討目前的流程。",
+                      "en": "We are reviewing our current process."
+                    }
+                  ]
                 }
               ],
               "quiz": [

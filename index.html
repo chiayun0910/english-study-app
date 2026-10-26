@@ -1530,6 +1530,16 @@ function EnglishStudyApp({
         .typing-feedback.wrong { color: var(--red); }
         .typing-answer { font-weight: 700; color: var(--ink); }
 
+        /* 中翻英：多行、靠左對齊，跟拼字練習那種單行置中的小方框不一樣 */
+        .translate-textarea {
+          max-width: 100%; text-align: left; font-size: 16px; line-height: 1.5;
+          resize: vertical; font-family: 'Noto Sans TC', sans-serif;
+        }
+        .translate-textarea:disabled { opacity: 0.85; }
+        .translate-answer {
+          text-align: center; margin-top: 8px; font-size: 14px; color: #6B6A5E;
+        }
+
         /* 詞性標籤（填空題用，標示這個空格該填哪個詞性） */
         .blank-pos-tag {
           display: inline-flex; align-items: center; justify-content: center;
@@ -2708,11 +2718,24 @@ function UnitScreen({
   // 單字）有這份資料才會顯示，不放進 ACTIVITIES 主陣列，才不會影響其他課本
   // 單元的「本課進度 x/y」計算，但完成紀錄一樣走 markStamp/onWordResult，
   // 錯題一樣會進複習清單
-  const activityList = unit.quiz && unit.quiz.length ? [...ACTIVITIES, {
-    key: "bookquiz",
-    label: "字彙隨堂考",
-    zh: "課本隨堂測驗（選擇題）"
-  }] : ACTIVITIES;
+  let activityList = ACTIVITIES;
+  // 「中翻英」也是一樣的道理：要整個單元每個字都準備好 10 組中英對照句
+  // （word.translateBank）才會顯示，避免還沒準備題庫的單元出現打不出題目的
+  // 練習項目
+  if (unit.words.length > 0 && unit.words.every(w => Array.isArray(w.translateBank) && w.translateBank.length > 0)) {
+    activityList = [...activityList, {
+      key: "translate",
+      label: "中翻英",
+      zh: "看中文句子，打出完整英文句子"
+    }];
+  }
+  if (unit.quiz && unit.quiz.length) {
+    activityList = [...activityList, {
+      key: "bookquiz",
+      label: "字彙隨堂考",
+      zh: "課本隨堂測驗（選擇題）"
+    }];
+  }
   return /*#__PURE__*/React.createElement("div", {
     style: {
       "--unit-color": unit.color
@@ -2806,7 +2829,7 @@ function ActivityScreen({
     onClick: onBack
   }, /*#__PURE__*/React.createElement(ArrowLeft, {
     size: 16
-  }), " 回 ", unit.title), activityKey === "flashcards" && /*#__PURE__*/React.createElement(Flashcards, commonProps), activityKey === "quiz" && /*#__PURE__*/React.createElement(Quiz, commonProps), activityKey === "matching" && /*#__PURE__*/React.createElement(Matching, commonProps), activityKey === "fillblank" && /*#__PURE__*/React.createElement(FillBlank, commonProps), activityKey === "typing" && /*#__PURE__*/React.createElement(Typing, commonProps), activityKey === "mastery" && /*#__PURE__*/React.createElement(UnitMastery, commonProps), activityKey === "bookquiz" && /*#__PURE__*/React.createElement(BookQuiz, commonProps));
+  }), " 回 ", unit.title), activityKey === "flashcards" && /*#__PURE__*/React.createElement(Flashcards, commonProps), activityKey === "quiz" && /*#__PURE__*/React.createElement(Quiz, commonProps), activityKey === "matching" && /*#__PURE__*/React.createElement(Matching, commonProps), activityKey === "fillblank" && /*#__PURE__*/React.createElement(FillBlank, commonProps), activityKey === "typing" && /*#__PURE__*/React.createElement(Typing, commonProps), activityKey === "translate" && /*#__PURE__*/React.createElement(TranslateQuiz, commonProps), activityKey === "mastery" && /*#__PURE__*/React.createElement(UnitMastery, commonProps), activityKey === "bookquiz" && /*#__PURE__*/React.createElement(BookQuiz, commonProps));
 }
 
 /* ------------------------------------------------------------------ */
@@ -4577,6 +4600,134 @@ function Typing({
     onClick: goNext,
     label: isLast ? "查看結果" : "下一題"
   }));
+}
+
+/* ------------------------------------------------------------------ */
+/* 5a2. 中翻英：看中文句子，打出完整的英文句子。每個單字的題庫（存在    */
+/* word.translateBank）裡有 10 組中英對照句，每天用「日期＋單元＋單字」 */
+/* 算出固定的一題，同一天不管重新整理幾次都是同一題，隔天自動換下一題，  */
+/* 不用額外存資料庫；只有整個單元的字都已經有題庫，才會在單元畫面顯示   */
+/* 這個練習方式（見 UnitScreen 的 activityList）。                       */
+/* 批改方式：先要求輸入裡有出現這個單字本身（練習重點就是用這個字造句），*/
+/* 再用跟語音跟讀同一套「大部分字有對上」的寬鬆比對（sentenceFullyReadClient），*/
+/* 不要求一字不差，用詞稍有不同也能過；不管對錯都會顯示參考答案，方便   */
+/* 自己對照學習，這點跟全自動嚴格批改的測驗不一樣，比較適合自學情境。    */
+/* ------------------------------------------------------------------ */
+function stringHash(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (h * 31 + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+function dailyTranslateQuestion(unitId, word) {
+  const bank = word.translateBank;
+  if (!Array.isArray(bank) || bank.length === 0) return null;
+  const idx = stringHash(`${todayStr()}::${unitId}::${word.en}`) % bank.length;
+  return bank[idx];
+}
+function checkTranslateAnswer(input, word, answerEn) {
+  const typed = (input || "").trim();
+  if (!typed) return false;
+  const gotWords = transcriptWordsClient(typed);
+  const gotSet = new Set(gotWords);
+  // 單字本身（或它的某個型態，例如 "autumn / fall" 其中之一）一定要出現過，
+  // 不然即使整句翻得再通順，也沒有練習到這個單字
+  const hasTargetWord = wordForms(word).some(f => {
+    const formWords = transcriptWordsClient(f.toLowerCase());
+    return formWords.length === 1 ? gotSet.has(formWords[0]) : containsPhraseClient(gotWords, formWords);
+  });
+  if (!hasTargetWord) return false;
+  return sentenceFullyReadClient(answerEn, typed);
+}
+function TranslateCard({ word, question, onResult }) {
+  const [input, setInput] = useState("");
+  const [checked, setChecked] = useState(null); // null | true | false
+  const taRef = useRef(null);
+  useEffect(() => {
+    if (taRef.current) taRef.current.focus();
+  }, []);
+  const submit = () => {
+    if (checked !== null || !input.trim()) return;
+    const correct = checkTranslateAnswer(input, word, question.en);
+    setChecked(correct);
+    onResult(correct);
+  };
+  return /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("div", { className: "sentence-box" },
+      /*#__PURE__*/React.createElement("div", { style: { fontSize: 18, fontWeight: 700 } }, question.zh),
+      /*#__PURE__*/React.createElement("div", { style: { fontSize: 12, color: "#6B6A5E", marginTop: 6 } },
+        "請把這句話翻成英文，記得用到「", word.en, "」這個字")
+    ),
+    /*#__PURE__*/React.createElement("textarea", {
+      ref: taRef,
+      className: `typing-input translate-textarea ${checked === true ? "correct" : checked === false ? "wrong" : ""}`,
+      rows: 3,
+      value: input,
+      disabled: checked !== null,
+      placeholder: "在這裡輸入英文句子…",
+      onChange: e => setInput(e.target.value),
+      onKeyDown: e => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          submit();
+        }
+      }
+    }),
+    checked === null && /*#__PURE__*/React.createElement("div", { className: "typing-actions" },
+      /*#__PURE__*/React.createElement("button", {
+        type: "button", className: "primary-btn", onClick: submit, disabled: !input.trim()
+      }, "確認答案")
+    ),
+    checked !== null && /*#__PURE__*/React.createElement("div", { className: `typing-feedback ${checked ? "correct" : "wrong"}` },
+      checked ? "答對了！" : "還可以再更接近一點"
+    ),
+    checked !== null && /*#__PURE__*/React.createElement("div", { className: "translate-answer" }, "參考答案：", question.en)
+  );
+}
+function TranslateQuiz({ unit, onFinish, onWordResult }) {
+  const [order] = useState(() => shuffle(unit.words));
+  const [questions] = useState(() => order.map(w => dailyTranslateQuestion(unit.id, w)));
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [done, setDone] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  useEffect(() => {
+    setAnswered(false);
+  }, [idx]);
+  if (done) return /*#__PURE__*/React.createElement(ResultBanner, {
+    label: `答對 ${score} / ${order.length} 題`,
+    onRestart: () => {
+      setIdx(0);
+      setScore(0);
+      setDone(false);
+    }
+  });
+  if (idx >= order.length) return null;
+  const word = order[idx];
+  const question = questions[idx];
+  if (!question) return null; // 理論上不會發生，UnitScreen 已確保整個單元都有題庫才顯示這個活動
+  const isLast = idx + 1 >= order.length;
+  const handleResult = correct => {
+    setAnswered(true);
+    if (correct) setScore(s => s + 1);
+    onWordResult(unit, word, correct);
+  };
+  const goNext = () => {
+    if (isLast) {
+      onFinish({ correct: score, total: order.length });
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+    }
+  };
+  return /*#__PURE__*/React.createElement("div", null,
+    /*#__PURE__*/React.createElement("p", { style: { fontSize: 13, color: "#6B6A5E", textAlign: "center", marginBottom: 12 } },
+      "把中文句子翻成英文（", idx + 1, "/", order.length, "）"),
+    /*#__PURE__*/React.createElement(TranslateCard, { key: idx, word: word, question: question, onResult: handleResult }),
+    answered && word.grammar && /*#__PURE__*/React.createElement("div", { className: "grammar-note" }, "📘 ", word.grammar),
+    answered && /*#__PURE__*/React.createElement(NextButton, { onClick: goNext, label: isLast ? "查看結果" : "下一題" })
+  );
 }
 
 /* ------------------------------------------------------------------ */
