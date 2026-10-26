@@ -4648,12 +4648,42 @@ function inflectedFormCandidates(base) {
   const sForm = endsConsonantY ? b.slice(0, -1) + "ies"
     : /[sxz]$|ch$|sh$/.test(b) ? b + "es" : b + "s";
   candidates.add(sForm);
-  candidates.add(/[^aeiou]e$/.test(b) ? b.slice(0, -1) + "ing" : b + "ing");
-  candidates.add(endsConsonantY ? b.slice(0, -1) + "ied" : b.endsWith("e") ? b + "d" : b + "ed");
+  // 短的「子音-母音-子音」結尾的字（結尾子音不是 w/x/y），-ed/-ing/比較級
+  // 要重複最後一個子音（trip→tripped/tripping、big→bigger/biggest），
+  // 只處理 5 個字母以內的短字，避免誤判多音節字（permit/submit 這類由
+  // 題庫作者自行避開不用 -ed/-ing/比較級）。符合這條規則時用重複子音的
+  // 拼法取代一般拼法，而不是兩種都收，避免把錯誤拼法也判定為答對。
+  // 門檻訂在 4 個字母以內：5 個字母的字常常是兩音節（cover、enter、water、
+  // visit 這些字重音在第一音節，結尾子音不應該重複），只有更短的單音節字
+  // （trip、clap、big…）才適用這條重複子音的規則
+  const needsDoubling = b.length <= 4 && /^[a-z]*[^aeiou][aeiou][^aeiouwxy]$/.test(b);
+  const doubled = needsDoubling ? b + b[b.length - 1] : null;
+  if (needsDoubling) {
+    candidates.add(doubled + "ing");
+    candidates.add(doubled + "ed");
+  } else {
+    candidates.add(/[^aeiou]e$/.test(b) ? b.slice(0, -1) + "ing" : b + "ing");
+    candidates.add(endsConsonantY ? b.slice(0, -1) + "ied" : b.endsWith("e") ? b + "d" : b + "ed");
+  }
   candidates.add(b + "ly");
   // -ble 結尾的字變副詞要去 e 加 y，不是直接加 ly（例如 reliable→reliably，
   // 不是 reliablely；dependable→dependably；eligible→eligibly）
   if (/le$/.test(b)) candidates.add(b.slice(0, -1) + "y");
+  // 比較級／最高級（形容詞、副詞常見，例如 deep→deeper/deepest、
+  // easy→easier/easiest、big→bigger/biggest、large→larger/largest）
+  if (b.endsWith("e")) {
+    candidates.add(b + "r");
+    candidates.add(b + "st");
+  } else if (endsConsonantY) {
+    candidates.add(b.slice(0, -1) + "ier");
+    candidates.add(b.slice(0, -1) + "iest");
+  } else if (needsDoubling) {
+    candidates.add(doubled + "er");
+    candidates.add(doubled + "est");
+  } else {
+    candidates.add(b + "er");
+    candidates.add(b + "est");
+  }
   candidates.add(b + "'s");
   candidates.add(sForm + "'");
   return candidates;
@@ -4759,9 +4789,17 @@ function checkTranslateAnswer(input, word, answerEn) {
   const hasTargetWord = translateHeadwordForms(word).some(f => {
     const formWords = transcriptWordsClient(f.toLowerCase());
     if (formWords.length !== 1) return containsFlexiblePhraseClient(gotWords, formWords);
-    if (gotSet.has(formWords[0])) return true;
-    for (const cand of inflectedFormCandidates(formWords[0])) {
+    const base = formWords[0];
+    if (gotSet.has(base)) return true;
+    for (const cand of inflectedFormCandidates(base)) {
       if (gotSet.has(cand)) return true;
+    }
+    // 不規則動詞如果資料裡用 "grow / grew" 只給了兩個形態，但完成式需要
+    // 用到第三個形態（grown）時，這裡額外查一下常見不規則動詞表
+    if (IRREGULAR_VERB_FORMS[base]) {
+      for (const cand of IRREGULAR_VERB_FORMS[base]) {
+        if (gotSet.has(cand)) return true;
+      }
     }
     return false;
   });
