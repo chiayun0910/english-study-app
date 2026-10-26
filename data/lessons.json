@@ -19759,7 +19759,49 @@
                   "ex3_en": "The view from the mountain top was absolutely terrific.",
                   "ex3_zh": "從山頂看到的景色簡直棒極了。",
                   "ex3_blank": "The view from the mountain top was absolutely ____.",
-                  "ipa": "tərˈɪfɪk"
+                  "ipa": "tərˈɪfɪk",
+                  "translateBank": [
+                    {
+                      "zh": "曼谷的街頭小吃好吃極了。",
+                      "en": "The street food in Bangkok was terrific."
+                    },
+                    {
+                      "zh": "我們從飯店陽台看到的景色太棒了。",
+                      "en": "We had a terrific view from our hotel balcony."
+                    },
+                    {
+                      "zh": "我們的導遊給了我們很棒的當地餐廳推薦。",
+                      "en": "Our tour guide gave us terrific recommendations for local restaurants."
+                    },
+                    {
+                      "zh": "這座島上整週的天氣都好得不得了。",
+                      "en": "The weather on the island was terrific all week."
+                    },
+                    {
+                      "zh": "我覺得這家青年旅館的頂樓酒吧是看日落的絕佳地點。",
+                      "en": "I think the hostel's rooftop bar is terrific for watching sunsets."
+                    },
+                    {
+                      "zh": "她講述歐洲背包旅行的故事棒極了。",
+                      "en": "Her story about backpacking through Europe was terrific."
+                    },
+                    {
+                      "zh": "珊瑚礁附近那個潛水點棒極了。",
+                      "en": "The diving spot near the reef was terrific."
+                    },
+                    {
+                      "zh": "我們青年旅館附近那個夜市賣的麵好吃極了。",
+                      "en": "That night market near our hostel sells terrific noodles."
+                    },
+                    {
+                      "zh": "這家膠囊旅館的員工人超好，也很棒。",
+                      "en": "The staff at the capsule hotel were terrific and very helpful."
+                    },
+                    {
+                      "zh": "他們自己煮的咖哩結果好吃得不得了。",
+                      "en": "Their homemade curry turned out to be terrific."
+                    }
+                  ]
                 },
                 {
                   "en": "the globe",
@@ -19775,7 +19817,49 @@
                   "ex3_en": "The band's music has fans all over the globe.",
                   "ex3_zh": "這個樂團的音樂在世界各地都有粉絲。",
                   "ex3_blank": "The band's music has fans all over ____.",
-                  "ipa": "ðə gloʊb"
+                  "ipa": "ðə gloʊb",
+                  "translateBank": [
+                    {
+                      "zh": "背包客常常夢想著環遊全世界。",
+                      "en": "Backpackers often dream of traveling around the globe."
+                    },
+                    {
+                      "zh": "這張地圖標出了全世界的主要機場。",
+                      "en": "This map shows major airports located all over the globe."
+                    },
+                    {
+                      "zh": "我們的旅行團裡有來自世界各地的旅客。",
+                      "en": "Our tour group includes travelers from every corner of the globe."
+                    },
+                    {
+                      "zh": "她希望有一天能走遍世界上每一個大陸。",
+                      "en": "She hopes to visit every continent on the globe someday."
+                    },
+                    {
+                      "zh": "廉價航空讓飛往世界各地變得更容易。",
+                      "en": "Budget airlines have made it easier to fly across the globe."
+                    },
+                    {
+                      "zh": "旅遊部落客分享給想探索全世界的人的小撇步。",
+                      "en": "Travel bloggers share tips for people exploring the globe."
+                    },
+                    {
+                      "zh": "這家青年旅館歡迎來自世界各地的旅客。",
+                      "en": "This hostel welcomes guests from all parts of the globe."
+                    },
+                    {
+                      "zh": "他收集來自世界各地城市的明信片。",
+                      "en": "He collects postcards from cities around the globe."
+                    },
+                    {
+                      "zh": "我們的教授研究全世界的旅遊趨勢。",
+                      "en": "Our professor studies tourism trends across the globe."
+                    },
+                    {
+                      "zh": "這部紀錄片記錄了三個朋友環遊世界背包旅行的過程。",
+                      "en": "The documentary follows three friends backpacking around the globe."
+                    }
+                  ]
                 },
                 {
                   "en": "in depth",
@@ -19790,7 +19874,49 @@
                   "ex3_en": "The tour guide explained the temple's history in depth.",
                   "ex3_zh": "導遊詳細地解說了這座寺廟的歷史。",
                   "ex3_blank": "The tour guide explained the temple's history ____.",
-                  "ipa": "ɪn dɛpθ"
+                  "ipa": "ɪn dɛpθ",
+                  "translateBank": [
+                    {
+                      "zh": "這本旅遊指南詳細地介紹了簽證規定。",
+                      "en": "The travel guide covers visa rules in depth."
+                    },
+                    {
+                      "zh": "我們的導遊深入解說了這座寺廟的歷史。",
+                      "en": "Our guide explained the temple's history in depth."
+                    },
+                    {
+                      "zh": "訂票前我想先深入研究一下廉價航空。",
+                      "en": "I want to research budget airlines in depth before booking."
+                    },
+                    {
+                      "zh": "這部紀錄片深入探討了背包旅行文化。",
+                      "en": "The documentary explores backpacking culture in depth."
+                    },
+                    {
+                      "zh": "出發前我們深入討論了整個行程。",
+                      "en": "We discussed our itinerary in depth before the trip."
+                    },
+                    {
+                      "zh": "這篇文章詳細比較了青年旅館和膠囊旅館。",
+                      "en": "The article compares hostels and capsule hotels in depth."
+                    },
+                    {
+                      "zh": "開始打工換宿前，她深入研究了當地的風俗習慣。",
+                      "en": "She studied the local customs in depth before her workaway."
+                    },
+                    {
+                      "zh": "這篇部落格文章詳細評論了每一家青年旅館。",
+                      "en": "The blog post reviews each hostel in depth."
+                    },
+                    {
+                      "zh": "他們深入分析了長期旅行的花費。",
+                      "en": "They analyzed the cost of long-term travel in depth."
+                    },
+                    {
+                      "zh": "這場講座詳細介紹了旅行安全。",
+                      "en": "The workshop covered travel safety in depth."
+                    }
+                  ]
                 },
                 {
                   "en": "be out to",
@@ -19806,7 +19932,49 @@
                   "ex3_zh": "有些公司試圖用比較便宜的行程吸引年輕旅客。",
                   "ex3_blank": "Some companies ____ attract younger travelers with cheaper tours.",
                   "grammar": "be out to + 原形動詞，表示「一心想要、試圖去做某事」，be 要隨主詞變化（am/is/are/was/were）。",
-                  "ipa": "bi aʊt tɪ"
+                  "ipa": "bi aʊt tɪ",
+                  "translateBank": [
+                    {
+                      "zh": "這些背包客一心想走訪這座城市的每一座寺廟。",
+                      "en": "The backpackers are out to visit every temple in the city."
+                    },
+                    {
+                      "zh": "那兩位旅遊部落客試圖打破一項世界紀錄。",
+                      "en": "Those two travel bloggers are out to break a world record."
+                    },
+                    {
+                      "zh": "這家廉價航空力圖用低票價吸引年輕旅客。",
+                      "en": "The budget airline is out to attract younger travelers with low fares."
+                    },
+                    {
+                      "zh": "我在青年旅館的室友一心想找到城裡最好吃的街頭小吃。",
+                      "en": "My roommate at the hostel was out to find the best street food in town."
+                    },
+                    {
+                      "zh": "我們的導遊試圖帶我們去看遊客很少發現的私房景點。",
+                      "en": "Our tour guide is out to show us hidden spots tourists rarely see."
+                    },
+                    {
+                      "zh": "這對情侶試圖收集他們去過的每個國家的明信片。",
+                      "en": "The couple is out to collect postcards from every country they visit."
+                    },
+                    {
+                      "zh": "有些背包客試圖整趟旅程都靠沙發衝浪省錢。",
+                      "en": "Some backpackers are out to save money by couchsurfing the whole trip."
+                    },
+                    {
+                      "zh": "當地導遊試圖證明這段長途跋涉沒有那麼困難。",
+                      "en": "The local guide was out to prove that the trek wasn't too difficult."
+                    },
+                    {
+                      "zh": "那些志工試圖幫旅客找到便宜的住宿。",
+                      "en": "Those volunteers are out to help tourists find cheap accommodation."
+                    },
+                    {
+                      "zh": "這群年輕旅客一心想探索地圖上的每一個島。",
+                      "en": "The young travelers were out to explore every island on the map."
+                    }
+                  ]
                 },
                 {
                   "en": "trek",
@@ -19822,7 +19990,49 @@
                   "ex3_zh": "艾迪在穿越沙漠長途跋涉時遇到響尾蛇。",
                   "ex3_blank": "Eddie encountered a rattlesnake when he was ____ through the desert.",
                   "grammar": "trek 是規則動詞，但字尾要重複子音字母再加 -ed/-ing：trek → trekked → trekking。",
-                  "ipa": "trɛk"
+                  "ipa": "trɛk",
+                  "translateBank": [
+                    {
+                      "zh": "每年冬天都有數千名登山客長途跋涉穿越這個山谷。",
+                      "en": "Every winter, thousands of hikers trek through this valley."
+                    },
+                    {
+                      "zh": "她明年想徒步橫越喜馬拉雅山。",
+                      "en": "She wants to trek across the Himalayas next year."
+                    },
+                    {
+                      "zh": "很少有遊客會長途跋涉深入這片叢林。",
+                      "en": "Few tourists trek this far into the jungle."
+                    },
+                    {
+                      "zh": "我哥哥每年夏天都會去不同的山長途健行。",
+                      "en": "My brother treks to a different mountain every summer."
+                    },
+                    {
+                      "zh": "我們計畫沿著海岸步道跋涉五天。",
+                      "en": "We plan to trek along the coastal trail for five days."
+                    },
+                    {
+                      "zh": "大多數背包客會在日出前長途跋涉抵達山頂。",
+                      "en": "Most backpackers trek to the summit before sunrise."
+                    },
+                    {
+                      "zh": "他每次到新的國家都喜歡自己一個人長途跋涉。",
+                      "en": "He treks alone whenever he visits a new country."
+                    },
+                    {
+                      "zh": "他們決定長途跋涉前往村莊，而不是搭巴士。",
+                      "en": "They decided to trek instead of taking the bus to the village."
+                    },
+                    {
+                      "zh": "這家公司提供協助，讓遊客能安全地長途跋涉穿越雨林。",
+                      "en": "This company offers to help tourists trek through the rainforest safely."
+                    },
+                    {
+                      "zh": "有經驗的旅人不需要嚮導也能長途跋涉。",
+                      "en": "Experienced travelers trek without needing a guide."
+                    }
+                  ]
                 },
                 {
                   "en": "relaxing",
@@ -19838,7 +20048,49 @@
                   "ex3_zh": "相比之下，生活在鄉下頗輕鬆的。",
                   "ex3_blank": "By contrast, living in the country is quite ____.",
                   "grammar": "relaxing 形容「讓人感到放鬆的事物」；relaxed 是形容「人本身處於放鬆的狀態」，兩者容易搞混，要注意分辨。",
-                  "ipa": "rɪˈlæksɪŋ"
+                  "ipa": "rɪˈlæksɪŋ",
+                  "translateBank": [
+                    {
+                      "zh": "長途健行之後，這家溫泉度假村讓人感到非常放鬆。",
+                      "en": "The hot spring resort was incredibly relaxing after a long hike."
+                    },
+                    {
+                      "zh": "我們在泳池邊度過了一個悠閒放鬆的午後。",
+                      "en": "We spent a relaxing afternoon reading by the pool."
+                    },
+                    {
+                      "zh": "這座海邊小鎮提供了逃離都市生活的輕鬆去處。",
+                      "en": "The beach town offers a relaxing escape from city life."
+                    },
+                    {
+                      "zh": "我們青年旅館的花園是個寫明信片的安靜放鬆角落。",
+                      "en": "Our hostel's garden is a quiet, relaxing place to write postcards."
+                    },
+                    {
+                      "zh": "一趟輕鬆的河上船遊為我們的旅程畫下完美的結尾。",
+                      "en": "A relaxing boat ride along the river ended our trip perfectly."
+                    },
+                    {
+                      "zh": "我覺得穿越鄉間的長途火車之旅相當令人放鬆。",
+                      "en": "I find long train rides through the countryside quite relaxing."
+                    },
+                    {
+                      "zh": "這家度假村的水療療程讓人徹底放鬆。",
+                      "en": "The spa treatment at the resort was deeply relaxing."
+                    },
+                    {
+                      "zh": "從頂樓酒吧看夕陽讓人感覺超級放鬆。",
+                      "en": "Watching the sunset from the rooftop bar felt so relaxing."
+                    },
+                    {
+                      "zh": "他們選擇悠閒的島嶼假期，而不是忙碌的城市觀光。",
+                      "en": "They chose a relaxing island getaway instead of a busy city tour."
+                    },
+                    {
+                      "zh": "這場瑜珈靜修活動保證讓我們遠離手機，度過輕鬆的一週。",
+                      "en": "The yoga retreat promised a relaxing week away from our phones."
+                    }
+                  ]
                 },
                 {
                   "en": "make one's way to",
@@ -19854,7 +20106,49 @@
                   "ex3_zh": "在嚴重的塞車中，她花了好幾個小時才到達機場。",
                   "ex3_blank": "It took her hours to ____ the airport in heavy traffic.",
                   "grammar": "one's 要換成跟主詞一致的所有格（my/your/his/her/our/their），例如 made our way to、make her way to。",
-                  "ipa": "meɪk wənz weɪ tɪ"
+                  "ipa": "meɪk wənz weɪ tɪ",
+                  "translateBank": [
+                    {
+                      "zh": "我們在日出前一路趕到了渡輪碼頭。",
+                      "en": "We made our way to the ferry terminal before sunrise."
+                    },
+                    {
+                      "zh": "他穿過狹窄的巷子，一路前往青年旅館。",
+                      "en": "He made his way to the hostel through narrow alleys."
+                    },
+                    {
+                      "zh": "她降落後，一路前往簽證櫃檯。",
+                      "en": "She made her way to the visa booth after landing."
+                    },
+                    {
+                      "zh": "他們步行一路前往夜市。",
+                      "en": "They made their way to the night market on foot."
+                    },
+                    {
+                      "zh": "我及時趕到了報到櫃檯。",
+                      "en": "I made my way to the check-in counter just in time."
+                    },
+                    {
+                      "zh": "你應該在登機截止前趕到12號登機門。",
+                      "en": "You should make your way to gate 12 before boarding closes."
+                    },
+                    {
+                      "zh": "這群登山客在中午前一路抵達了山頂。",
+                      "en": "The hikers made their way to the summit by noon."
+                    },
+                    {
+                      "zh": "公車故障後，我們只好步行前往那個村莊。",
+                      "en": "After the bus broke down, we made our way to the village on foot."
+                    },
+                    {
+                      "zh": "她計畫去完泰國之後，再前往越南。",
+                      "en": "She plans to make her way to Vietnam after Thailand."
+                    },
+                    {
+                      "zh": "雨停之後他就會前往火車站。",
+                      "en": "He'll make his way to the train station once the rain stops."
+                    }
+                  ]
                 },
                 {
                   "en": "even though",
@@ -19870,7 +20164,49 @@
                   "ex3_zh": "儘管當時正在下雨，還是有數百名遊客造訪了這座寺廟。",
                   "ex3_blank": "____ it was raining, hundreds of tourists still visited the temple.",
                   "grammar": "even though 後面要接完整子句（主詞+動詞），語氣比 though 強；不要跟表示假設的 even if 搞混。",
-                  "ipa": "ˈivɪn ðoʊ"
+                  "ipa": "ˈivɪn ðoʊ",
+                  "translateBank": [
+                    {
+                      "zh": "儘管班機延誤了，我們還是趕上了轉機。",
+                      "en": "Even though the flight was delayed, we still made our connection."
+                    },
+                    {
+                      "zh": "儘管票價較貴，她還是選擇了直飛班機。",
+                      "en": "Even though it was expensive, she chose the direct flight."
+                    },
+                    {
+                      "zh": "儘管他已經很累了，還是一直健行到天黑。",
+                      "en": "Even though he was tired, he kept hiking until dark."
+                    },
+                    {
+                      "zh": "儘管這家青年旅館已經滿房，他們還是幫我們找到了床位。",
+                      "en": "Even though the hostel was fully booked, they found us a bed."
+                    },
+                    {
+                      "zh": "儘管天氣不好，渡輪還是準時出發了。",
+                      "en": "Even though the weather was bad, the ferry still left on time."
+                    },
+                    {
+                      "zh": "儘管他們不會說當地語言，還是設法點了餐。",
+                      "en": "Even though they couldn't speak the language, they managed to order food."
+                    },
+                    {
+                      "zh": "儘管這段跋涉很辛苦，沿途的風景讓一切都值得了。",
+                      "en": "Even though the trek was tough, the view made it worth it."
+                    },
+                    {
+                      "zh": "儘管我們錯過了那班公車，還是在中午前到達了。",
+                      "en": "Even though we missed the bus, we still arrived before noon."
+                    },
+                    {
+                      "zh": "儘管簽證申請花了好幾週，她最後還是通過了。",
+                      "en": "Even though the visa process took weeks, she finally got approved."
+                    },
+                    {
+                      "zh": "儘管房間很小，這家膠囊旅館卻意外地舒適。",
+                      "en": "Even though the room was small, the capsule hotel was surprisingly comfortable."
+                    }
+                  ]
                 },
                 {
                   "en": "hostel",
@@ -19879,7 +20215,49 @@
                   "ex_en": "Backpackers often choose to stay in a hostel to save money.",
                   "ex_zh": "背包客通常會選擇住青年旅館以省錢。",
                   "ex_blank": "Backpackers often choose to stay in a ____ to save money.",
-                  "ipa": "ˈhɑstəl"
+                  "ipa": "ˈhɑstəl",
+                  "translateBank": [
+                    {
+                      "zh": "我們在火車站附近訂了一家便宜青年旅館的床位。",
+                      "en": "We booked a bed at a cheap hostel near the train station."
+                    },
+                    {
+                      "zh": "這家青年旅館有個共用廚房，旅客可以一起下廚。",
+                      "en": "The hostel had a shared kitchen where travelers cooked together."
+                    },
+                    {
+                      "zh": "大部分的青年旅館都提供免費早餐和無線網路。",
+                      "en": "Most hostels offer free breakfast and Wi-Fi."
+                    },
+                    {
+                      "zh": "她在青年旅館的公共休息室認識了另外三個背包客。",
+                      "en": "She met three other backpackers at the hostel common room."
+                    },
+                    {
+                      "zh": "這家青年旅館一晚只要八美元。",
+                      "en": "This hostel only costs eight dollars a night."
+                    },
+                    {
+                      "zh": "青年旅館的員工給了我們一張舊城區地圖。",
+                      "en": "The hostel staff gave us a map of the old town."
+                    },
+                    {
+                      "zh": "這座城市裡很多青年旅館都在步行可到海邊的距離內。",
+                      "en": "Many hostels in this city are within walking distance of the beach."
+                    },
+                    {
+                      "zh": "我們把行李放在青年旅館後就出門探險了。",
+                      "en": "We left our bags at the hostel and went exploring."
+                    },
+                    {
+                      "zh": "這家青年旅館的頂樓可以看到港口的美景。",
+                      "en": "The rooftop of the hostel had a great view of the harbor."
+                    },
+                    {
+                      "zh": "一個人旅行時，我比較喜歡住青年旅館而不是飯店。",
+                      "en": "I prefer staying at a hostel instead of a hotel when traveling alone."
+                    }
+                  ]
                 },
                 {
                   "en": "capsule hotel",
@@ -19888,7 +20266,49 @@
                   "ex_en": "A capsule hotel gives you just enough space to sleep in a small pod.",
                   "ex_zh": "膠囊旅館只提供一個小艙位，剛好夠你睡覺的空間。",
                   "ex_blank": "A ____ gives you just enough space to sleep in a small pod.",
-                  "ipa": "ˈkæpsəl hoʊˈtɛl"
+                  "ipa": "ˈkæpsəl hoʊˈtɛl",
+                  "translateBank": [
+                    {
+                      "zh": "我們在東京第一次嘗試睡膠囊旅館。",
+                      "en": "We tried sleeping in a capsule hotel for the first time in Tokyo."
+                    },
+                    {
+                      "zh": "膠囊旅館對單獨旅行的人來說是便宜的選擇。",
+                      "en": "A capsule hotel is a cheap option for solo travelers."
+                    },
+                    {
+                      "zh": "車站附近那家膠囊旅館的艙位很小但很乾淨。",
+                      "en": "The capsule hotel near the station had tiny but clean pods."
+                    },
+                    {
+                      "zh": "有些膠囊旅館會提供置物櫃放行李。",
+                      "en": "Some capsule hotels offer lockers for your luggage."
+                    },
+                    {
+                      "zh": "他說那家膠囊旅館意外地讓人覺得舒適。",
+                      "en": "He said the capsule hotel felt surprisingly comfortable."
+                    },
+                    {
+                      "zh": "這家膠囊旅館一晚只收二十美元。",
+                      "en": "This capsule hotel charges only twenty dollars a night."
+                    },
+                    {
+                      "zh": "我很好奇住膠囊旅館會是什麼感覺。",
+                      "en": "I was curious what staying in a capsule hotel would feel like."
+                    },
+                    {
+                      "zh": "這家膠囊旅館的大廳看起來更像一座太空船。",
+                      "en": "The capsule hotel's lobby looked more like a spaceship."
+                    },
+                    {
+                      "zh": "商務旅客常常選擇膠囊旅館做短暫的過夜住宿。",
+                      "en": "Business travelers often choose a capsule hotel for a quick overnight stay."
+                    },
+                    {
+                      "zh": "我們的旅遊指南推薦了一家離機場很近的膠囊旅館。",
+                      "en": "Our guidebook recommended a capsule hotel close to the airport."
+                    }
+                  ]
                 },
                 {
                   "en": "workaway",
@@ -19897,7 +20317,49 @@
                   "ex_en": "She did a workaway on a farm in exchange for free meals and a bed.",
                   "ex_zh": "她在一個農場打工換宿，換取免費三餐和住宿。",
                   "ex_blank": "She did a ____ on a farm in exchange for free meals and a bed.",
-                  "ipa": "ˈwɜrkəˌweɪ"
+                  "ipa": "ˈwɜrkəˌweɪ",
+                  "translateBank": [
+                    {
+                      "zh": "她在紐西蘭一座有機農場找到了打工換宿的機會。",
+                      "en": "She found a workaway on an organic farm in New Zealand."
+                    },
+                    {
+                      "zh": "打工換宿讓他能旅行好幾個月卻不用花太多錢。",
+                      "en": "Doing a workaway let him travel for months without spending much money."
+                    },
+                    {
+                      "zh": "他第一次打工換宿是在一家民宿幫忙打掃房間。",
+                      "en": "His first workaway was helping clean rooms at a guesthouse."
+                    },
+                    {
+                      "zh": "我們在網路上搜尋海邊附近的打工換宿機會。",
+                      "en": "We searched online for a workaway near the coast."
+                    },
+                    {
+                      "zh": "打工換宿通常是用幾個小時的工作交換免費三餐和床位。",
+                      "en": "A workaway usually trades a few hours of work for free food and a bed."
+                    },
+                    {
+                      "zh": "他們選擇在青年旅館打工換宿，而不是住飯店。",
+                      "en": "They chose a workaway at a hostel instead of staying in hotels."
+                    },
+                    {
+                      "zh": "她在酒莊打工換宿，學到了很多關於葡萄酒的知識。",
+                      "en": "Her workaway at the vineyard taught her a lot about wine."
+                    },
+                    {
+                      "zh": "出發前，找到合適的打工換宿機會花了一些功夫研究。",
+                      "en": "Finding the right workaway took some research before the trip."
+                    },
+                    {
+                      "zh": "他推薦預算有限的旅客參加打工換宿計畫。",
+                      "en": "He recommended a workaway program for budget travelers."
+                    },
+                    {
+                      "zh": "她打工換宿期間幫忙建了一座小花園。",
+                      "en": "During her workaway, she helped build a small garden."
+                    }
+                  ]
                 },
                 {
                   "en": "couchsurfing",
@@ -19906,7 +20368,49 @@
                   "ex_en": "Couchsurfing let him stay with locals for free during his trip.",
                   "ex_zh": "沙發衝浪讓他在旅途中能免費借宿在當地人家裡。",
                   "ex_blank": "____ let him stay with locals for free during his trip.",
-                  "ipa": "ˈkaʊtʃˌsɜrfɪŋ"
+                  "ipa": "ˈkaʊtʃˌsɜrfɪŋ",
+                  "translateBank": [
+                    {
+                      "zh": "沙發衝浪讓她認識了當地人，而不是只住在飯店裡。",
+                      "en": "Couchsurfing helped her meet locals instead of staying in hotels."
+                    },
+                    {
+                      "zh": "他第一次嘗試沙發衝浪是在柏林。",
+                      "en": "He tried couchsurfing for the first time in Berlin."
+                    },
+                    {
+                      "zh": "沙發衝浪在這趟旅程中幫他們省了不少錢。",
+                      "en": "Couchsurfing saved them a lot of money during the trip."
+                    },
+                    {
+                      "zh": "透過沙發衝浪，我們在首爾住進了一個當地家庭。",
+                      "en": "Through couchsurfing, we stayed with a family in Seoul."
+                    },
+                    {
+                      "zh": "有些旅人比較喜歡沙發衝浪，因為感覺更貼近當地生活。",
+                      "en": "Some travelers prefer couchsurfing because it feels more personal."
+                    },
+                    {
+                      "zh": "沙發衝浪讓我們能像當地人一樣體驗這座城市。",
+                      "en": "Couchsurfing let us experience the city like locals do."
+                    },
+                    {
+                      "zh": "她寫了一篇部落格文章，分享她在義大利沙發衝浪的經驗。",
+                      "en": "She wrote a blog post about her couchsurfing experience in Italy."
+                    },
+                    {
+                      "zh": "沙發衝浪需要主人和房客之間的信任。",
+                      "en": "Couchsurfing requires trust between hosts and guests."
+                    },
+                    {
+                      "zh": "他的沙發衝浪房東帶他逛了附近的社區。",
+                      "en": "His couchsurfing host showed him around the neighborhood."
+                    },
+                    {
+                      "zh": "沙發衝浪不是每個人都適合，但對我們來說效果很好。",
+                      "en": "Couchsurfing isn't for everyone, but it worked well for us."
+                    }
+                  ]
                 },
                 {
                   "en": "house-sitting",
@@ -19915,7 +20419,49 @@
                   "ex_en": "They agreed to do house-sitting for their neighbors over the summer.",
                   "ex_zh": "他們答應在暑假期間幫鄰居看房子。",
                   "ex_blank": "They agreed to do ____ for their neighbors over the summer.",
-                  "ipa": "ˈhaʊsˌsɪtɪŋ"
+                  "ipa": "ˈhaʊsˌsɪtɪŋ",
+                  "translateBank": [
+                    {
+                      "zh": "他們提供免費替人看房子的服務，來換取一個落腳處。",
+                      "en": "They offered free house-sitting in exchange for a place to stay."
+                    },
+                    {
+                      "zh": "替人看房子讓她能在西班牙住上整整一個月。",
+                      "en": "House-sitting let her live in Spain for a whole month."
+                    },
+                    {
+                      "zh": "他那次看房子的工作包括照顧兩隻貓。",
+                      "en": "His house-sitting job included taking care of two cats."
+                    },
+                    {
+                      "zh": "我們透過一個旅遊網站找到替人看房子的機會。",
+                      "en": "We found a house-sitting opportunity through a travel website."
+                    },
+                    {
+                      "zh": "替人看房子是退休人士省錢旅行的熱門方式。",
+                      "en": "House-sitting is a popular way for retirees to travel cheaply."
+                    },
+                    {
+                      "zh": "我們在幫忙看房子的期間，每天都要幫忙澆花園。",
+                      "en": "During our house-sitting stay, we watered the garden every day."
+                    },
+                    {
+                      "zh": "出發前，她註冊了一個幫人看房子的網站。",
+                      "en": "She signed up for a house-sitting website before her trip."
+                    },
+                    {
+                      "zh": "替人看房子讓他在倫敦有了免費的住處。",
+                      "en": "House-sitting gave him a free place to stay in London."
+                    },
+                    {
+                      "zh": "他們看房子的任務很簡單：餵狗和檢查信箱。",
+                      "en": "Their house-sitting duties were simple: feed the dog and check the mail."
+                    },
+                    {
+                      "zh": "我們正在考慮用替人看房子的方式省下住宿費。",
+                      "en": "We're considering house-sitting as a way to save money on accommodation."
+                    }
+                  ]
                 }
               ]
             },
@@ -19938,7 +20484,49 @@
                   "ex3_en": "You need a valid passport to travel abroad.",
                   "ex3_zh": "出國旅遊需要一本有效的護照。",
                   "ex3_blank": "You need a valid ____ to travel abroad.",
-                  "ipa": "ˈpæˌspɔrt"
+                  "ipa": "ˈpæˌspɔrt",
+                  "translateBank": [
+                    {
+                      "zh": "別忘了去機場時帶護照。",
+                      "en": "Don't forget to bring your passport to the airport."
+                    },
+                    {
+                      "zh": "她把護照放在一個防水小包裡。",
+                      "en": "She keeps her passport in a waterproof pouch."
+                    },
+                    {
+                      "zh": "他的護照在這趟旅程中被蓋了兩次章。",
+                      "en": "His passport was stamped twice during the trip."
+                    },
+                    {
+                      "zh": "入境時必須出示有效的護照。",
+                      "en": "You must show a valid passport at immigration."
+                    },
+                    {
+                      "zh": "訂機票前我先更新了護照。",
+                      "en": "I renewed my passport before booking the flight."
+                    },
+                    {
+                      "zh": "海關人員在櫃檯仔細檢查了她的護照。",
+                      "en": "The officer checked her passport carefully at the counter."
+                    },
+                    {
+                      "zh": "我們影印了護照，以防護照不見。",
+                      "en": "We photocopied our passports in case we lost them."
+                    },
+                    {
+                      "zh": "他的護照照片是三年前拍的。",
+                      "en": "His passport photo was taken three years ago."
+                    },
+                    {
+                      "zh": "請確認你的護照在旅程期間不會過期。",
+                      "en": "Make sure your passport doesn't expire during the trip."
+                    },
+                    {
+                      "zh": "航空公司不讓他在沒有護照的情況下登機。",
+                      "en": "The airline wouldn't let him board without his passport."
+                    }
+                  ]
                 },
                 {
                   "en": "it's about time to",
@@ -19954,7 +20542,49 @@
                   "ex3_zh": "該是更新我的護照的時候了。",
                   "ex3_blank": "____ renew my passport.",
                   "grammar": "後面接原形動詞，強調「早該做某事、現在終於要做」的語氣。",
-                  "ipa": "ɪts əˈbaʊt taɪm tɪ"
+                  "ipa": "ɪts əˈbaʊt taɪm tɪ",
+                  "translateBank": [
+                    {
+                      "zh": "該是打包行李準備出發的時候了。",
+                      "en": "It's about time to pack for our trip."
+                    },
+                    {
+                      "zh": "該是訂去日本的機票的時候了。",
+                      "en": "It's about time to book our flights to Japan."
+                    },
+                    {
+                      "zh": "該是申請簽證的時候了。",
+                      "en": "It's about time to apply for a visa."
+                    },
+                    {
+                      "zh": "該是辦理登機報到的時候了。",
+                      "en": "It's about time to check in for our flight."
+                    },
+                    {
+                      "zh": "該是跟這座美麗島嶼說再見的時候了。",
+                      "en": "It's about time to say goodbye to this beautiful island."
+                    },
+                    {
+                      "zh": "該是幫下個月找更便宜住宿的時候了。",
+                      "en": "It's about time to find cheaper accommodation for next month."
+                    },
+                    {
+                      "zh": "該是計劃我們下一趟背包旅行的時候了。",
+                      "en": "It's about time to plan our next backpacking trip."
+                    },
+                    {
+                      "zh": "該是在護照過期前去更新的時候了。",
+                      "en": "It's about time to renew my passport before it expires."
+                    },
+                    {
+                      "zh": "該是出發去機場的時候了。",
+                      "en": "It's about time to leave for the airport."
+                    },
+                    {
+                      "zh": "該是為這趟旅行換點錢的時候了。",
+                      "en": "It's about time to exchange some money for the trip."
+                    }
+                  ]
                 },
                 {
                   "en": "tropical",
@@ -19969,7 +20599,49 @@
                   "ex3_en": "Tropical fruits like mangoes and pineapples grow well in Taiwan.",
                   "ex3_zh": "像芒果和鳳梨這類熱帶水果在台灣長得很好。",
                   "ex3_blank": "____ fruits like mangoes and pineapples grow well in Taiwan.",
-                  "ipa": "ˈtrɑpɪkəl"
+                  "ipa": "ˈtrɑpɪkəl",
+                  "translateBank": [
+                    {
+                      "zh": "我們要飛去一座熱帶島嶼度蜜月。",
+                      "en": "We're flying to a tropical island for our honeymoon."
+                    },
+                    {
+                      "zh": "熱帶的高溫讓我們整天都在喝水。",
+                      "en": "The tropical heat made us drink water all day."
+                    },
+                    {
+                      "zh": "這片熱帶雨林是許多稀有鳥類的家。",
+                      "en": "This tropical rainforest is home to rare birds."
+                    },
+                    {
+                      "zh": "她很喜歡當地市場賣的熱帶水果。",
+                      "en": "She loves the tropical fruits sold at the local market."
+                    },
+                    {
+                      "zh": "這家度假村坐落在一片寧靜的熱帶海灘上。",
+                      "en": "The resort sits on a quiet tropical beach."
+                    },
+                    {
+                      "zh": "這個地區夏天常常有熱帶風暴。",
+                      "en": "Tropical storms are common in this region during summer."
+                    },
+                    {
+                      "zh": "他穿了一件很有熱帶假期氣氛的襯衫。",
+                      "en": "He wore a tropical shirt that matched the vacation mood."
+                    },
+                    {
+                      "zh": "我們的導遊提醒我們熱帶陽光有多強烈。",
+                      "en": "Our guide warned us about the tropical sun's strength."
+                    },
+                    {
+                      "zh": "這裡的熱帶氣候一年四季幾乎沒什麼變化。",
+                      "en": "The tropical climate here barely changes throughout the year."
+                    },
+                    {
+                      "zh": "我們訂了一趟熱帶小旅行，想逃離寒冷的冬天。",
+                      "en": "We booked a tropical getaway to escape the cold winter."
+                    }
+                  ]
                 },
                 {
                   "en": "get carried away / be carried away",
@@ -19985,7 +20657,49 @@
                   "ex3_zh": "他一時失控，買了三個用不到的行李箱。",
                   "ex3_blank": "He ____ and bought three suitcases he didn't need.",
                   "grammar": "carried away 前面固定接 get 或 be 動詞，表示情緒／行為一時失控。",
-                  "ipa": "gɪt ˈkɛrid əˈweɪ / bi ˈkɛrid əˈweɪ"
+                  "ipa": "gɪt ˈkɛrid əˈweɪ / bi ˈkɛrid əˈweɪ",
+                  "translateBank": [
+                    {
+                      "zh": "我們在夜市買東西總是會失心瘋。",
+                      "en": "We always get carried away shopping at night markets."
+                    },
+                    {
+                      "zh": "別因為買紀念品而興奮過頭，買些不需要的東西。",
+                      "en": "Don't get carried away buying souvenirs you don't need."
+                    },
+                    {
+                      "zh": "她在旅行團裡拍照時常常忘情到失控。",
+                      "en": "She tends to get carried away taking photos during the tour."
+                    },
+                    {
+                      "zh": "我當時被這個節日的氣氛搞得興奮過頭。",
+                      "en": "I was carried away by the excitement of the festival."
+                    },
+                    {
+                      "zh": "他每次聊到自己的旅行就會興奮得失去控制。",
+                      "en": "He gets carried away whenever he talks about his travels."
+                    },
+                    {
+                      "zh": "他們計畫了一趟負擔不起的旅行，顯然是一時衝動失控了。",
+                      "en": "They were carried away planning a trip they couldn't afford."
+                    },
+                    {
+                      "zh": "飯店促銷期間盡量別買得太失控。",
+                      "en": "Try not to get carried away during the hotel sale."
+                    },
+                    {
+                      "zh": "我們當時太忘情了，忘記去看時間。",
+                      "en": "We were carried away and forgot to check the time."
+                    },
+                    {
+                      "zh": "她每次線上訂機票都會忘情得失去控制。",
+                      "en": "She always gets carried away when booking flights online."
+                    },
+                    {
+                      "zh": "整個旅行團都被這場街頭表演看得入迷忘我。",
+                      "en": "The whole tour group was carried away by the street performance."
+                    }
+                  ]
                 },
                 {
                   "en": "valid",
@@ -20000,7 +20714,49 @@
                   "ex3_en": "That's not a valid reason to skip the meeting.",
                   "ex3_zh": "那不是缺席會議的正當理由。",
                   "ex3_blank": "That's not a ____ reason to skip the meeting.",
-                  "ipa": "ˈvælɪd"
+                  "ipa": "ˈvælɪd",
+                  "translateBank": [
+                    {
+                      "zh": "你的護照至少還要有六個月的有效期。",
+                      "en": "Your passport must be valid for at least six months."
+                    },
+                    {
+                      "zh": "這張公車票只在一天內有效。",
+                      "en": "This bus ticket is valid for one day only."
+                    },
+                    {
+                      "zh": "他沒辦法登機，因為他的證件已經失效了。",
+                      "en": "He couldn't board because his ID wasn't valid."
+                    },
+                    {
+                      "zh": "這張優惠券本週末後就不再有效了。",
+                      "en": "The coupon is no longer valid after this weekend."
+                    },
+                    {
+                      "zh": "她改機票有個合理的理由。",
+                      "en": "She had a valid reason for changing her flight."
+                    },
+                    {
+                      "zh": "請確認你的旅遊保險還在有效期內。",
+                      "en": "Make sure your travel insurance is still valid."
+                    },
+                    {
+                      "zh": "這個簽證戳章的效期到明年春天。",
+                      "en": "The visa stamp is valid until next spring."
+                    },
+                    {
+                      "zh": "這張學生優惠卡還有效嗎？",
+                      "en": "Is this student discount card still valid?"
+                    },
+                    {
+                      "zh": "在這裡租車需要有效的駕照。",
+                      "en": "A valid driver's license is required to rent a car here."
+                    },
+                    {
+                      "zh": "航空公司接受了他那個合理的解釋。",
+                      "en": "The airline accepted his explanation as a valid excuse."
+                    }
+                  ]
                 },
                 {
                   "en": "expire",
@@ -20015,7 +20771,49 @@
                   "ex3_en": "The coupon expires at midnight tonight.",
                   "ex3_zh": "這張優惠券今晚午夜就會失效。",
                   "ex3_blank": "The coupon ____ at midnight tonight.",
-                  "ipa": "ɪkˈspaɪr"
+                  "ipa": "ɪkˈspaɪr",
+                  "translateBank": [
+                    {
+                      "zh": "我的護照明年就會過期。",
+                      "en": "My passport will expire next year."
+                    },
+                    {
+                      "zh": "這張優惠券在月底就會過期。",
+                      "en": "This coupon expires at the end of the month."
+                    },
+                    {
+                      "zh": "她的簽證在她還在國外的時候就過期了。",
+                      "en": "Her visa expired while she was still abroad."
+                    },
+                    {
+                      "zh": "這份旅遊保險三十天後就會失效。",
+                      "en": "The travel insurance expires after thirty days."
+                    },
+                    {
+                      "zh": "請確認你的信用卡在這趟旅程前不會過期。",
+                      "en": "Make sure your credit card doesn't expire before the trip."
+                    },
+                    {
+                      "zh": "他的駕照快要過期了。",
+                      "en": "His driver's license is expiring soon."
+                    },
+                    {
+                      "zh": "這個優惠方案這週五就會到期。",
+                      "en": "The discount offer expires this Friday."
+                    },
+                    {
+                      "zh": "我們的訂房確認如果今天不付款就會失效。",
+                      "en": "Our hotel booking confirmation expires if we don't pay today."
+                    },
+                    {
+                      "zh": "我沒注意到我的國際 SIM 卡已經過期了。",
+                      "en": "I didn't realize my international SIM card had expired."
+                    },
+                    {
+                      "zh": "免簽證停留期限是九十天後就會到期。",
+                      "en": "The visa-free stay expires after ninety days."
+                    }
+                  ]
                 },
                 {
                   "en": "renew",
@@ -20031,7 +20829,49 @@
                   "ex3_zh": "我們決定再續約一年的健身房會員。",
                   "ex3_blank": "We decided to ____ our gym membership for another year.",
                   "grammar": "renew 的動詞三態變化：renew, renewed, renewed。",
-                  "ipa": "rɪˈnu"
+                  "ipa": "rɪˈnu",
+                  "translateBank": [
+                    {
+                      "zh": "出發前我需要更新護照。",
+                      "en": "I need to renew my passport before the trip."
+                    },
+                    {
+                      "zh": "她在當地辦事處更新了簽證。",
+                      "en": "She renewed her visa at the local office."
+                    },
+                    {
+                      "zh": "我們把旅遊保險又續約了一年。",
+                      "en": "We renewed our travel insurance for another year."
+                    },
+                    {
+                      "zh": "他每年都會更新他的國際駕照。",
+                      "en": "He renews his international driving permit every year."
+                    },
+                    {
+                      "zh": "現在可以線上更新護照了。",
+                      "en": "You can renew your passport online now."
+                    },
+                    {
+                      "zh": "他們更新了青年旅館的會員資格，好拿到更多折扣。",
+                      "en": "They renewed their hostel membership for more discounts."
+                    },
+                    {
+                      "zh": "大使館一週內就幫她更新了學生簽證。",
+                      "en": "The embassy renewed her student visa within a week."
+                    },
+                    {
+                      "zh": "我明天要去領事館更新護照。",
+                      "en": "I'm renewing my passport at the consulate tomorrow."
+                    },
+                    {
+                      "zh": "我們決定在出國前先續辦健身房會員。",
+                      "en": "We decided to renew our gym pass before leaving the country."
+                    },
+                    {
+                      "zh": "她忘了在搭機前更新她的旅遊卡。",
+                      "en": "She forgot to renew her travel card before the flight."
+                    }
+                  ]
                 },
                 {
                   "en": "renewal",
@@ -20046,7 +20886,49 @@
                   "ex3_en": "She received a renewal notice for her car insurance.",
                   "ex3_zh": "她收到一張汽車保險的續保通知。",
                   "ex3_blank": "She received a ____ notice for her car insurance.",
-                  "ipa": "rɪˈnuəl"
+                  "ipa": "rɪˈnuəl",
+                  "translateBank": [
+                    {
+                      "zh": "護照更新花了大約兩週的時間。",
+                      "en": "The passport renewal took about two weeks."
+                    },
+                    {
+                      "zh": "她線上提交了簽證更新的申請。",
+                      "en": "She submitted her visa renewal application online."
+                    },
+                    {
+                      "zh": "這張卡的更新費用是十美元。",
+                      "en": "The renewal fee for this card is ten dollars."
+                    },
+                    {
+                      "zh": "他的駕照更新因為疫情而延遲了。",
+                      "en": "His license renewal was delayed by the pandemic."
+                    },
+                    {
+                      "zh": "我們收到了旅遊保險的續保通知。",
+                      "en": "We received a renewal notice for our travel insurance."
+                    },
+                    {
+                      "zh": "大使館的更新流程又快又簡單。",
+                      "en": "The renewal process at the embassy was quick and easy."
+                    },
+                    {
+                      "zh": "我忘記了簽證更新的截止日期。",
+                      "en": "I forgot about the renewal deadline for my visa."
+                    },
+                    {
+                      "zh": "這家青年旅館對會員更新提供折扣。",
+                      "en": "The hostel offers discounts for membership renewal."
+                    },
+                    {
+                      "zh": "她的護照比預期更早更新完成寄回。",
+                      "en": "Her passport renewal arrived earlier than expected."
+                    },
+                    {
+                      "zh": "租約的續約讓我們能多住一個月。",
+                      "en": "The renewal of our lease allowed us to stay another month."
+                    }
+                  ]
                 },
                 {
                   "en": "go through",
@@ -20061,7 +20943,49 @@
                   "ex3_en": "It's never easy to go through a difficult time alone.",
                   "ex3_zh": "獨自度過艱難時期從來都不容易。",
                   "ex3_blank": "It's never easy to ____ a difficult time alone.",
-                  "ipa": "goʊ θru"
+                  "ipa": "goʊ θru",
+                  "translateBank": [
+                    {
+                      "zh": "我們登機前得通過安檢兩次。",
+                      "en": "We had to go through security twice before boarding."
+                    },
+                    {
+                      "zh": "申請簽證需要經過好幾個步驟。",
+                      "en": "You need to go through several steps to apply for a visa."
+                    },
+                    {
+                      "zh": "旅客在這座機場通常很快就能通過海關。",
+                      "en": "Travelers often go through customs quickly at this airport."
+                    },
+                    {
+                      "zh": "我不想再排一次那條很長的報到隊伍。",
+                      "en": "I don't want to go through that long check-in line again."
+                    },
+                    {
+                      "zh": "他們現在正在經歷簽證申請的流程。",
+                      "en": "They are going through the visa application process right now."
+                    },
+                    {
+                      "zh": "我們正在再檢查一次打包清單。",
+                      "en": "We're going through our packing list one more time."
+                    },
+                    {
+                      "zh": "背包客通常會先住過幾家青年旅館，才會找到喜歡的。",
+                      "en": "Backpackers usually go through a few hostels before finding a good one."
+                    },
+                    {
+                      "zh": "你通過機場的掃描機時有遇到什麼麻煩嗎？",
+                      "en": "Did you go through the airport scanner without any trouble?"
+                    },
+                    {
+                      "zh": "她錯過班機之後正經歷一段難過的時期。",
+                      "en": "She's going through a difficult time after missing her flight."
+                    },
+                    {
+                      "zh": "提交申請前請務必仔細看過每一份文件。",
+                      "en": "Make sure to go through every document before submitting your application."
+                    }
+                  ]
                 },
                 {
                   "en": "application",
@@ -20076,7 +21000,49 @@
                   "ex3_en": "Her passport application was approved within two weeks.",
                   "ex3_zh": "她的護照申請在兩週內就核准了。",
                   "ex3_blank": "Her passport ____ was approved within two weeks.",
-                  "ipa": "ˌæpləˈkeɪʃən"
+                  "ipa": "ˌæpləˈkeɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "我昨晚終於完成了簽證申請。",
+                      "en": "I finally finished my visa application last night."
+                    },
+                    {
+                      "zh": "她的護照申請花了兩週才處理完。",
+                      "en": "Her passport application took two weeks to process."
+                    },
+                    {
+                      "zh": "送出申請前請再三確認內容。",
+                      "en": "Please double-check your application before submitting it."
+                    },
+                    {
+                      "zh": "那份青年旅館的工作申請表要求填寫推薦人。",
+                      "en": "The hostel job application asked for references."
+                    },
+                    {
+                      "zh": "我們在服務櫃檯一起填好了申請表。",
+                      "en": "We filled out the application together at the booth."
+                    },
+                    {
+                      "zh": "他的申請因為文件不齊而被拒絕了。",
+                      "en": "His application was rejected due to missing documents."
+                    },
+                    {
+                      "zh": "線上申請系統在截止日當天當機了。",
+                      "en": "The online application system crashed during the deadline."
+                    },
+                    {
+                      "zh": "她印了三份簽證申請表。",
+                      "en": "She printed three copies of her visa application."
+                    },
+                    {
+                      "zh": "大使館在五個工作日內審查完我們的申請。",
+                      "en": "The embassy reviewed our application within five business days."
+                    },
+                    {
+                      "zh": "請確認你的聯絡資訊跟申請表上的一致。",
+                      "en": "Make sure your contact information matches your application."
+                    }
+                  ]
                 },
                 {
                   "en": "submit",
@@ -20092,7 +21058,49 @@
                   "ex3_zh": "他拒絕屈服於這些不公平的規定。",
                   "ex3_blank": "He refused to ____ to the unfair rules.",
                   "grammar": "動詞變化為：submit, submitted, submitted, submitting（字尾重複子音）。",
-                  "ipa": "səbˈmɪt"
+                  "ipa": "səbˈmɪt",
+                  "translateBank": [
+                    {
+                      "zh": "你必須親自去送出簽證申請。",
+                      "en": "You must submit your visa application in person."
+                    },
+                    {
+                      "zh": "她打算在星期五之前交出所有文件。",
+                      "en": "She plans to submit all the documents by Friday."
+                    },
+                    {
+                      "zh": "我們需要繳交護照的影本。",
+                      "en": "We need to submit copies of our passports."
+                    },
+                    {
+                      "zh": "他總是到最後一刻才送出他的文件。",
+                      "en": "He always submits his paperwork at the last minute."
+                    },
+                    {
+                      "zh": "請在服務櫃檯關閉前送出你的表格。",
+                      "en": "Please submit your form before the booth closes."
+                    },
+                    {
+                      "zh": "旅客要在這個櫃檯繳交指紋。",
+                      "en": "Travelers submit their fingerprints at this counter."
+                    },
+                    {
+                      "zh": "我今天會線上送出更新申請。",
+                      "en": "I will submit the renewal request online today."
+                    },
+                    {
+                      "zh": "你把正確的表格交給大使館了嗎？",
+                      "en": "Did you submit the correct forms to the embassy?"
+                    },
+                    {
+                      "zh": "櫃員要求我們連同申請表一起交出照片。",
+                      "en": "The clerk asked us to submit our photos along with the application."
+                    },
+                    {
+                      "zh": "每位申請人都必須繳交旅遊保險的證明。",
+                      "en": "Each applicant must submit proof of travel insurance."
+                    }
+                  ]
                 },
                 {
                   "en": "accommodation",
@@ -20107,7 +21115,49 @@
                   "ex3_en": "The tour price includes flights and accommodation.",
                   "ex3_zh": "這個團費包含機票和住宿。",
                   "ex3_blank": "The tour price includes flights and ____.",
-                  "ipa": "əˌkɑməˈdeɪʃən"
+                  "ipa": "əˌkɑməˈdeɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "我們最後兩晚的住宿還沒訂。",
+                      "en": "We still need to book accommodation for the last two nights."
+                    },
+                    {
+                      "zh": "在這座城市找便宜的住宿不容易。",
+                      "en": "Finding cheap accommodation in this city isn't easy."
+                    },
+                    {
+                      "zh": "我們的旅行社事先安排好了所有的住宿。",
+                      "en": "Our travel agent arranged all our accommodations in advance."
+                    },
+                    {
+                      "zh": "這個行程的團費不包含住宿。",
+                      "en": "The tour price doesn't include accommodation."
+                    },
+                    {
+                      "zh": "他們提供免費住宿，交換農場的工作。",
+                      "en": "They offer free accommodation in exchange for farm work."
+                    },
+                    {
+                      "zh": "我們比較了好幾個住宿選項才選定一家青年旅館。",
+                      "en": "We compared several accommodation options before choosing a hostel."
+                    },
+                    {
+                      "zh": "這個住宿有包含早餐嗎？",
+                      "en": "Is breakfast included with this accommodation?"
+                    },
+                    {
+                      "zh": "這個網站列出了火車站附近的平價住宿。",
+                      "en": "The website lists budget accommodations near the train station."
+                    },
+                    {
+                      "zh": "我們在那個節慶期間很難找到住宿。",
+                      "en": "We had trouble finding accommodation during the festival."
+                    },
+                    {
+                      "zh": "我們這趟旅程的住宿意外地舒適。",
+                      "en": "Our accommodation for the trip was surprisingly comfortable."
+                    }
+                  ]
                 },
                 {
                   "en": "in the meantime",
@@ -20122,7 +21172,49 @@
                   "ex3_en": "In the meantime, please keep a copy of your application form.",
                   "ex3_zh": "在此同時，請保留一份申請表的副本。",
                   "ex3_blank": "____, please keep a copy of your application form.",
-                  "ipa": "ɪn ðə ˈminˌtaɪm"
+                  "ipa": "ɪn ðə ˈminˌtaɪm",
+                  "translateBank": [
+                    {
+                      "zh": "我們的班機延誤了，趁這段時間我們去買了咖啡。",
+                      "en": "Our flight was delayed; in the meantime, we grabbed some coffee."
+                    },
+                    {
+                      "zh": "簽證要花一週才能辦好，這段時間我們可以先去逛逛這座城市。",
+                      "en": "The visa takes a week to process. In the meantime, we can explore the city."
+                    },
+                    {
+                      "zh": "他還在打包行李，這段時間我先去叫計程車。",
+                      "en": "He's still packing. In the meantime, I'll call for a taxi."
+                    },
+                    {
+                      "zh": "青年旅館的房間還沒準備好，這段時間我們先把行李放在櫃檯。",
+                      "en": "The hostel room isn't ready yet; in the meantime, we left our bags at the desk."
+                    },
+                    {
+                      "zh": "她正在幫我們辦理入住，這段時間我們先來看看地圖。",
+                      "en": "She's checking us in. In the meantime, let's look at the map."
+                    },
+                    {
+                      "zh": "我們的火車還要兩個小時才開，這段時間我們先去吃午餐。",
+                      "en": "Our train doesn't leave for two hours. In the meantime, let's get lunch."
+                    },
+                    {
+                      "zh": "大使館正在審核我們的文件，這段時間我們先訂了飯店。",
+                      "en": "The embassy is reviewing our documents. In the meantime, we booked a hotel."
+                    },
+                    {
+                      "zh": "他正在換錢，這段時間我先去找登機門。",
+                      "en": "He's exchanging money. In the meantime, I'll find the gate."
+                    },
+                    {
+                      "zh": "渡輪因為暴風雨延誤了，這段時間乘客都在休息區等候。",
+                      "en": "The ferry is delayed by the storm; in the meantime, passengers are waiting in the lounge."
+                    },
+                    {
+                      "zh": "我們在等更新辦好，這段時間先來規劃下一站吧。",
+                      "en": "We're waiting for the renewal to finish. In the meantime, let's plan our next stop."
+                    }
+                  ]
                 }
               ]
             },
@@ -20145,7 +21237,49 @@
                   "ex3_en": "Only citizens of this country can apply for this visa.",
                   "ex3_zh": "只有這個國家的公民能申請這種簽證。",
                   "ex3_blank": "Only ____ of this country can apply for this visa.",
-                  "ipa": "ˈsɪtɪzən"
+                  "ipa": "ˈsɪtɪzən",
+                  "translateBank": [
+                    {
+                      "zh": "只有這個國家的公民才需要特殊簽證。",
+                      "en": "Only citizens of this country need a special visa."
+                    },
+                    {
+                      "zh": "她在英國住了好幾年後，成為了英國公民。",
+                      "en": "She became a British citizen after living there for years."
+                    },
+                    {
+                      "zh": "每位公民都必須隨身攜帶有效的身分證件。",
+                      "en": "Every citizen must carry a valid ID card."
+                    },
+                    {
+                      "zh": "外國公民可以線上申請觀光簽證。",
+                      "en": "Foreign citizens can apply for a tourist visa online."
+                    },
+                    {
+                      "zh": "他很自豪自己擁有兩個國家的公民身分。",
+                      "en": "He's proud to be a citizen of two countries."
+                    },
+                    {
+                      "zh": "這個大使館只服務本國的公民。",
+                      "en": "The embassy only serves citizens of its own nation."
+                    },
+                    {
+                      "zh": "身為一位長者，她買火車票可以有折扣。",
+                      "en": "As a senior citizen, she gets a discount on train tickets."
+                    },
+                    {
+                      "zh": "來自這個地區的公民入境不需要簽證。",
+                      "en": "Citizens from this region don't need a visa to enter."
+                    },
+                    {
+                      "zh": "這項新法律會影響公民和外國旅客。",
+                      "en": "The new law affects both citizens and foreign travelers."
+                    },
+                    {
+                      "zh": "你必須是公民才能在這場選舉中投票。",
+                      "en": "You must be a citizen to vote in this election."
+                    }
+                  ]
                 },
                 {
                   "en": "booth",
@@ -20160,7 +21294,49 @@
                   "ex3_en": "There was a long line at the information booth.",
                   "ex3_zh": "詢問處前排了一條長長的隊伍。",
                   "ex3_blank": "There was a long line at the information ____.",
-                  "ipa": "buθ"
+                  "ipa": "buθ",
+                  "translateBank": [
+                    {
+                      "zh": "我們在簽證櫃檯排了快一個小時的隊。",
+                      "en": "We lined up at the visa booth for almost an hour."
+                    },
+                    {
+                      "zh": "服務台就在正門入口旁邊。",
+                      "en": "The information booth is right next to the main entrance."
+                    },
+                    {
+                      "zh": "她在登機門附近那個小櫃檯買了我們的票。",
+                      "en": "She bought our tickets at the small booth near the gate."
+                    },
+                    {
+                      "zh": "二樓有一個外幣兌換櫃檯。",
+                      "en": "There's a currency exchange booth on the second floor."
+                    },
+                    {
+                      "zh": "海關櫃檯仔細檢查了每個人的護照。",
+                      "en": "The customs booth checked everyone's passport carefully."
+                    },
+                    {
+                      "zh": "他向櫃檯的工作人員要了一張城市地圖。",
+                      "en": "He asked the staff at the booth for a city map."
+                    },
+                    {
+                      "zh": "售票亭每晚九點就關了。",
+                      "en": "The ticket booth closes at nine every night."
+                    },
+                    {
+                      "zh": "我們發現導遊正在服務台等我們。",
+                      "en": "We found our tour guide waiting at the information booth."
+                    },
+                    {
+                      "zh": "入境審查櫃檯前排了長長一列遊客。",
+                      "en": "The immigration booth had a long line of tourists."
+                    },
+                    {
+                      "zh": "出口附近有個小攤亭賣當地小吃。",
+                      "en": "A small booth near the exit sells local snacks."
+                    }
+                  ]
                 },
                 {
                   "en": "be good for",
@@ -20176,7 +21352,49 @@
                   "ex3_zh": "這張優惠券可以兌換一杯免費飲料。",
                   "ex3_blank": "The coupon ____ one free drink.",
                   "grammar": "be good for + 一段時間，表示效期；也能接「某種用途」，例如 good for one free drink。",
-                  "ipa": "bi gʊd fər"
+                  "ipa": "bi gʊd fər",
+                  "translateBank": [
+                    {
+                      "zh": "這個簽證在九十天內都有效。",
+                      "en": "This visa is good for ninety days."
+                    },
+                    {
+                      "zh": "這張公車票一整週都能用。",
+                      "en": "The bus pass is good for a whole week."
+                    },
+                    {
+                      "zh": "她的學生證在每一間博物館都能享有折扣。",
+                      "en": "Her student ID was good for discounts at every museum."
+                    },
+                    {
+                      "zh": "這張優惠券可以換一份免費餐點。",
+                      "en": "This coupon is good for one free meal."
+                    },
+                    {
+                      "zh": "這張票一整天都能無限次搭乘。",
+                      "en": "The ticket was good for unlimited rides all day."
+                    },
+                    {
+                      "zh": "我們的旅遊保險整趟旅程都有效。",
+                      "en": "Our travel insurance is good for the entire trip."
+                    },
+                    {
+                      "zh": "這張票可以用在火車和地鐵上。",
+                      "en": "This pass is good for both the train and the subway."
+                    },
+                    {
+                      "zh": "這張禮物卡可以在購物中心的任何一家店使用。",
+                      "en": "The gift card is good for any store in the mall."
+                    },
+                    {
+                      "zh": "他的簽證在一年內可以多次入境。",
+                      "en": "His visa was good for multiple entries within a year."
+                    },
+                    {
+                      "zh": "這張停車票二十四小時內都有效。",
+                      "en": "This parking ticket is good for twenty-four hours."
+                    }
+                  ]
                 },
                 {
                   "en": "process",
@@ -20191,7 +21409,49 @@
                   "ex3_en": "The application process was faster than I expected.",
                   "ex3_zh": "這個申請流程比我想像的還快。",
                   "ex3_blank": "The application ____ was faster than I expected.",
-                  "ipa": "ˈprɔˌsɛs"
+                  "ipa": "ˈprɔˌsɛs",
+                  "translateBank": [
+                    {
+                      "zh": "處理一份簽證申請大約要花一週的時間。",
+                      "en": "It takes about a week to process a visa application."
+                    },
+                    {
+                      "zh": "這間大使館每天要處理好幾百份申請。",
+                      "en": "The embassy processes hundreds of applications every day."
+                    },
+                    {
+                      "zh": "他們還在處理我們的更新申請。",
+                      "en": "They're still processing our renewal request."
+                    },
+                    {
+                      "zh": "航空公司很快就處理好了我們的退款。",
+                      "en": "The airline quickly processed our refund."
+                    },
+                    {
+                      "zh": "這台機器會自動處理護照掃描。",
+                      "en": "This machine processes passport scans automatically."
+                    },
+                    {
+                      "zh": "我們額外付費讓簽證能更快處理完成。",
+                      "en": "We paid extra to process our visa faster."
+                    },
+                    {
+                      "zh": "櫃員只花了十分鐘就處理好我的文件。",
+                      "en": "The clerk processed my documents in just ten minutes."
+                    },
+                    {
+                      "zh": "系統現在正在處理你的申請。",
+                      "en": "The system is processing your application right now."
+                    },
+                    {
+                      "zh": "每間大使館處理簽證的方式都不一樣。",
+                      "en": "Each embassy processes visas differently."
+                    },
+                    {
+                      "zh": "你能在截止日期前處理這份表格嗎？",
+                      "en": "Can you process this form before the deadline?"
+                    }
+                  ]
                 },
                 {
                   "en": "fill out a form / fill in a form",
@@ -20206,7 +21466,49 @@
                   "ex3_en": "It only takes a few minutes to fill out the visa application.",
                   "ex3_zh": "填寫簽證申請表只需要幾分鐘。",
                   "ex3_blank": "It only takes a few minutes to ____ the visa application.",
-                  "ipa": "fɪl aʊt ə fɔrm / fɪl ɪn ə fɔrm"
+                  "ipa": "fɪl aʊt ə fɔrm / fɪl ɪn ə fɔrm",
+                  "translateBank": [
+                    {
+                      "zh": "入境前你必須填寫一張表格。",
+                      "en": "You have to fill out a form before entering the country."
+                    },
+                    {
+                      "zh": "我們今天早上在簽證櫃檯填了一張表格。",
+                      "en": "We filled out a form at the visa booth this morning."
+                    },
+                    {
+                      "zh": "她詢問學生簽證要去哪裡填表。",
+                      "en": "She asked where to fill out a form for the student visa."
+                    },
+                    {
+                      "zh": "登機前，乘客必須填寫一張附有聯絡資訊的表格。",
+                      "en": "Before boarding, passengers must fill out a form with their contact information."
+                    },
+                    {
+                      "zh": "他忘記幫託運行李填一張表格。",
+                      "en": "He forgot to fill out a form for his checked baggage."
+                    },
+                    {
+                      "zh": "離開櫃檯前請先填好一張表格。",
+                      "en": "Please fill in a form before you leave the counter."
+                    },
+                    {
+                      "zh": "你排隊等候的時候能填一下表格嗎？",
+                      "en": "Can you fill in a form while you wait in line?"
+                    },
+                    {
+                      "zh": "他們必須填一張表格才能申請那張優惠卡。",
+                      "en": "They had to fill in a form to apply for the discount card."
+                    },
+                    {
+                      "zh": "我今天早上在大使館填了一張表格。",
+                      "en": "I filled in a form at the embassy this morning."
+                    },
+                    {
+                      "zh": "請務必在服務台關閉前填好表格。",
+                      "en": "Make sure to fill out a form before the booth closes."
+                    }
+                  ]
                 },
                 {
                   "en": "fee",
@@ -20221,7 +21523,49 @@
                   "ex3_en": "The visa fee for Canadian citizens is $610 Hong Kong dollars.",
                   "ex3_zh": "加拿大公民的簽證費用是港幣六百一十元。",
                   "ex3_blank": "The visa ____ for Canadian citizens is $610 Hong Kong dollars.",
-                  "ipa": "fi"
+                  "ipa": "fi",
+                  "translateBank": [
+                    {
+                      "zh": "這裡列印登機證要收一筆小額費用。",
+                      "en": "There's a small fee for printing your boarding pass here."
+                    },
+                    {
+                      "zh": "簽證費必須用現金支付。",
+                      "en": "The visa fee must be paid in cash."
+                    },
+                    {
+                      "zh": "我們為託運行李多付了一筆費用。",
+                      "en": "We paid an extra fee for checked luggage."
+                    },
+                    {
+                      "zh": "這家青年旅館每次住宿都會收清潔費。",
+                      "en": "This hostel charges a cleaning fee for every stay."
+                    },
+                    {
+                      "zh": "大使館去年提高了申請費用。",
+                      "en": "The embassy raised its application fee last year."
+                    },
+                    {
+                      "zh": "在國外用這台提款機要收費嗎？",
+                      "en": "Is there a fee for using this ATM abroad?"
+                    },
+                    {
+                      "zh": "這個行程包含博物館的一小筆門票費用。",
+                      "en": "The tour includes a small entrance fee for the museum."
+                    },
+                    {
+                      "zh": "因為那場暴風雨，他們免除了逾期費用。",
+                      "en": "They waived the late fee because of the storm."
+                    },
+                    {
+                      "zh": "每筆線上訂房都會加收服務費。",
+                      "en": "A service fee is added to every online booking."
+                    },
+                    {
+                      "zh": "急件簽證的費用是一般價格的兩倍。",
+                      "en": "The express visa fee is double the normal price."
+                    }
+                  ]
                 },
                 {
                   "en": "be able to",
@@ -20236,7 +21580,49 @@
                   "ex3_en": "You won't be able to travel without a valid passport.",
                   "ex3_zh": "沒有有效的護照你就沒辦法出國旅行。",
                   "ex3_blank": "You won't ____ travel without a valid passport.",
-                  "ipa": "bi ˈeɪbəl tɪ"
+                  "ipa": "bi ˈeɪbəl tɪ",
+                  "translateBank": [
+                    {
+                      "zh": "沒有登機證你就無法登機。",
+                      "en": "You won't be able to board without a boarding pass."
+                    },
+                    {
+                      "zh": "她訂到了比較早那班飛機的座位。",
+                      "en": "She was able to get a seat on the earlier flight."
+                    },
+                    {
+                      "zh": "我們在機場成功換到了錢。",
+                      "en": "We were able to exchange our money at the airport."
+                    },
+                    {
+                      "zh": "他下週就能去領簽證了。",
+                      "en": "He'll be able to pick up his visa next week."
+                    },
+                    {
+                      "zh": "你能說一點當地語言。",
+                      "en": "You are able to speak some of the local language."
+                    },
+                    {
+                      "zh": "他們在海邊附近找到了一間青年旅館。",
+                      "en": "They were able to find a hostel near the beach."
+                    },
+                    {
+                      "zh": "有了有效的護照，我就能旅行。",
+                      "en": "With a valid passport, I am able to travel."
+                    },
+                    {
+                      "zh": "這位導遊能回答我們所有的問題。",
+                      "en": "The tour guide was able to answer all our questions."
+                    },
+                    {
+                      "zh": "我們應該能在天黑前抵達飯店。",
+                      "en": "We should be able to reach the hotel before dark."
+                    },
+                    {
+                      "zh": "她終於能線上更新護照了。",
+                      "en": "She is able to renew her passport online now."
+                    }
+                  ]
                 },
                 {
                   "en": "express",
@@ -20251,7 +21637,49 @@
                   "ex3_en": "There's an express lane for passengers with only carry-on bags.",
                   "ex3_zh": "只有隨身行李的旅客有一條快速通關道。",
                   "ex3_blank": "There's an ____ lane for passengers with only carry-on bags.",
-                  "ipa": "ɪkˈsprɛs"
+                  "ipa": "ɪkˈsprɛs",
+                  "translateBank": [
+                    {
+                      "zh": "我們為了新背包加價選了快遞運送。",
+                      "en": "We paid extra for express shipping on our new backpack."
+                    },
+                    {
+                      "zh": "快速簽證服務讓我們省了整整一週的時間。",
+                      "en": "The express visa service saved us a whole week."
+                    },
+                    {
+                      "zh": "他搭了直達機場的快速列車。",
+                      "en": "He took the express train straight to the airport."
+                    },
+                    {
+                      "zh": "沒有託運行李的旅客有一條快速通道。",
+                      "en": "There's an express lane for travelers with no checked bags."
+                    },
+                    {
+                      "zh": "這家飯店為回住的客人提供快速入住服務。",
+                      "en": "The hotel offers express check-in for returning guests."
+                    },
+                    {
+                      "zh": "她選擇快遞把文件寄回家。",
+                      "en": "She chose express mail to send her documents home."
+                    },
+                    {
+                      "zh": "大使館的快速服務費用是一般的兩倍。",
+                      "en": "The embassy's express service costs twice the normal fee."
+                    },
+                    {
+                      "zh": "我們搭上了往市中心的快速巴士。",
+                      "en": "We caught the express bus to the city center."
+                    },
+                    {
+                      "zh": "這個櫃檯只受理快速護照更新。",
+                      "en": "This counter is only for express passport renewals."
+                    },
+                    {
+                      "zh": "搭快速渡輪只要一半的時間就能到達。",
+                      "en": "The express ferry gets you there in half the time."
+                    }
+                  ]
                 },
                 {
                   "en": "contact information",
@@ -20266,7 +21694,49 @@
                   "ex3_en": "Make sure your contact information is up to date on your application.",
                   "ex3_zh": "請確認你申請表上的聯絡資訊是最新的。",
                   "ex3_blank": "Make sure your ____ is up to date on your application.",
-                  "ipa": "ˈkɑnˌtækt ˌɪnˌfɔrˈmeɪʃən"
+                  "ipa": "ˈkɑnˌtækt ˌɪnˌfɔrˈmeɪʃən",
+                  "translateBank": [
+                    {
+                      "zh": "請在簽證表格上寫下你的聯絡資訊。",
+                      "en": "Please write your contact information on the visa form."
+                    },
+                    {
+                      "zh": "青年旅館辦理入住時要我們留下聯絡資訊。",
+                      "en": "The hostel asked for our contact information at check-in."
+                    },
+                    {
+                      "zh": "請確認你在訂房網站上的聯絡資訊是正確的。",
+                      "en": "Make sure your contact information is correct on the booking site."
+                    },
+                    {
+                      "zh": "她把她的聯絡資訊留給了旅行社。",
+                      "en": "She left her contact information with the tour company."
+                    },
+                    {
+                      "zh": "大使館在處理簽證前需要你的聯絡資訊。",
+                      "en": "The embassy needs your contact information before processing the visa."
+                    },
+                    {
+                      "zh": "我們在青年旅館跟其他旅客交換了聯絡資訊。",
+                      "en": "We exchanged contact information with other travelers at the hostel."
+                    },
+                    {
+                      "zh": "他的申請表上缺少聯絡資訊。",
+                      "en": "His contact information was missing from the application."
+                    },
+                    {
+                      "zh": "在你的包包裡留一份聯絡資訊的副本。",
+                      "en": "Keep a copy of your contact information in your bag."
+                    },
+                    {
+                      "zh": "這張表格需要填寫你家裡和緊急聯絡人的資訊。",
+                      "en": "The form requires both your home and emergency contact information."
+                    },
+                    {
+                      "zh": "他們搬到新城市之後更新了聯絡資訊。",
+                      "en": "They updated their contact information after moving to a new city."
+                    }
+                  ]
                 }
               ]
             }
