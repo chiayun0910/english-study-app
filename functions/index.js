@@ -379,7 +379,10 @@ function usernameFromAuth(request) {
 exports.listViewableFamilyMembers = onCall(
   {
     region: "asia-east1",
-    memory: "128MiB",
+    // 128MiB 不夠用（Node 22 執行環境本身啟動就要 130~153MiB），每次啟動
+    // 都因為超過記憶體上限直接失敗，family 檢視入口因此連續好幾天完全
+    // 看不到。這個函式邏輯極簡單，不需要省記憶體省到連啟動都撐不住。
+    memory: "256MiB",
     timeoutSeconds: 10
   },
   async request => {
@@ -407,36 +410,90 @@ function taiwanTodayStr() {
   }).format(new Date());
 }
 
+// 把某一天的 dailyStamps/dailyMistakes/dailyLearnedWords 原始資料整理成
+// 一天份的摘要（活動數、活動清單、學會字數、答錯字清單）
+function buildDaySummary(dailyStamps, dailyMistakes, dailyLearnedWords) {
+  let activitiesDone = 0;
+  const activityList = [];
+  Object.entries(dailyStamps || {}).forEach(([unitId, acts]) => {
+    Object.entries(acts || {}).forEach(([activityKey, entry]) => {
+      activitiesDone++;
+      activityList.push({ unitId, activityKey, score: entry.lastScore || null, at: entry.lastAt || 0 });
+    });
+  });
+  activityList.sort((a, b) => b.at - a.at);
+  const mistakeList = Object.values(dailyMistakes || {})
+    .sort((a, b) => (b.at || 0) - (a.at || 0))
+    .slice(0, 15)
+    .map(m => ({ en: m.en, zh: m.zh, pos: m.pos }));
+  const learnedWordKeys = Object.keys(dailyLearnedWords || {});
+  return {
+    activitiesDone,
+    // 之前只回傳最近 10 筆，練習量比較大的日子（例如一天做了 20 項）會把
+    // 比較早的紀錄截斷、看不到，改成整天都回傳，讓家長能看到完整一天的紀錄
+    activityList,
+    wordsLearned: learnedWordKeys.length,
+    // 原始的「字卡跟讀完成」單字清單（key 格式是 unitId::en），前端已經
+    // 有每個單元的完整單字表，交給前端依單元分組、算出
+    // 「Part 1 已練習 n 個字／共 X 字」這種畫面，後端不用另外存一份
+    // 課本內容資料
+    learnedWordKeys,
+    mistakeCount: Object.keys(dailyMistakes || {}).length,
+    mistakeList
+  };
+}
+
 function buildFamilyProgressSummary(data) {
   const stamps = data.stamps || {};
   const learnedWords = data.learnedWords || {};
   const mistakes = data.mistakes || {};
 
-  // 「今天」的每日暫存資料（dailyStamps/dailyMistakes/dailyLearnedWords）
-  // 只有在使用者的裝置重新打開 App 時才會被清空重置（ensureDailyReset）。
-  // 如果他昨晚練習完就沒再打開過 App，家長現在查看時，這些欄位裡還留著
-  // 「昨天」的資料，但沒有一起存「這份資料是哪一天的」——只有一個
-  // dailyResetDate 欄位記錄「最後一次重置是哪一天」。用這個欄位跟台灣
-  // 時區的今天比對，如果對不上，代表這些 daily 欄位其實是舊資料，
-  // 今天實際上還沒有任何練習紀錄，不能直接拿來當「今天」的數字顯示。
-  const isTodayFresh = data.dailyResetDate === taiwanTodayStr();
-  const dailyStamps = isTodayFresh ? (data.dailyStamps || {}) : {};
-  const dailyLearnedWords = isTodayFresh ? (data.dailyLearnedWords || {}) : {};
-  const dailyMistakes = isTodayFresh ? (data.dailyMistakes || {}) : {};
-
-  let todayActivitiesDone = 0;
-  const todayActivityList = [];
-  Object.entries(dailyStamps).forEach(([unitId, acts]) => {
-    Object.entries(acts || {}).forEach(([activityKey, entry]) => {
-      todayActivitiesDone++;
-      todayActivityList.push({ unitId, activityKey, score: entry.lastScore || null, at: entry.lastAt || 0 });
-    });
+  // 最近幾天的每日練習紀錄：以前只看「今天」，但「今天」的定義是跟使用者
+  // 裝置的 ensureDailyReset 綁在一起——裝置重新打開 App 才會把前一天的
+  // dailyStamps 清空歸零，如果孩子還沒打開過今天的 App，家長檢視原本會
+  // 整個變成空白，看不到昨天其實有練習過。現在把「最近活躍的那幾天」都
+  // 整理出來（最多 3 天，最新的在前面），不會因為跨過午夜就突然消失：
+  //  1. 如果今天已經有新的 dailyStamps（isTodayFresh），今天算一天。
+  //  2. 如果今天還沒重置過，但 dailyStamps 裡還留著資料，那其實是
+  //     dailyResetDate 那天還沒被搬進歷史紀錄，一樣算進去。
+  //  3. dailyHistory 是裝置端 ensureDailyReset 每次跨日時，把清空前的
+  //     daily 資料存檔進去的（只保留最近 3 天）。
+  const todayKey = taiwanTodayStr();
+  const isTodayFresh = data.dailyResetDate === todayKey;
+  const daysByDate = {};
+  Object.entries(data.dailyHistory || {}).forEach(([date, snap]) => {
+    daysByDate[date] = snap;
   });
-  todayActivityList.sort((a, b) => b.at - a.at);
+  if (isTodayFresh) {
+    daysByDate[todayKey] = {
+      dailyStamps: data.dailyStamps || {},
+      dailyMistakes: data.dailyMistakes || {},
+      dailyLearnedWords: data.dailyLearnedWords || {}
+    };
+  } else if (data.dailyResetDate && (
+    Object.keys(data.dailyStamps || {}).length ||
+    Object.keys(data.dailyMistakes || {}).length ||
+    Object.keys(data.dailyLearnedWords || {}).length
+  )) {
+    daysByDate[data.dailyResetDate] = {
+      dailyStamps: data.dailyStamps || {},
+      dailyMistakes: data.dailyMistakes || {},
+      dailyLearnedWords: data.dailyLearnedWords || {}
+    };
+  }
+  const recentDays = Object.keys(daysByDate)
+    .sort()
+    .reverse()
+    .slice(0, 3)
+    .map(date => ({
+      date,
+      isToday: date === todayKey,
+      ...buildDaySummary(daysByDate[date].dailyStamps, daysByDate[date].dailyMistakes, daysByDate[date].dailyLearnedWords)
+    }));
 
-  // 「最近一次練習」要看永久紀錄（stamps），不能只看 dailyStamps——
-  // dailyStamps 每天都會被清空，如果只看它，一旦跨過午夜、使用者還沒
-  // 重新打開過 App，這裡就會變成「還沒有紀錄」，即使他昨晚才練習過。
+  // 「最近一次練習」要看永久紀錄（stamps），不能只看 daily 欄位——daily
+  // 欄位會被清空，如果只看它，一旦跨過午夜、使用者還沒重新打開過 App，
+  // 這裡就會變成「還沒有紀錄」，即使他昨晚才練習過。
   let lastActiveAt = 0;
   let totalActivitiesDone = 0;
   Object.values(stamps).forEach(acts => {
@@ -449,25 +506,10 @@ function buildFamilyProgressSummary(data) {
 
   const now = Date.now();
   const dueMistakeCount = Object.values(mistakes).filter(m => m.nextReview <= now).length;
-  const todayMistakeList = Object.values(dailyMistakes)
-    .sort((a, b) => (b.at || 0) - (a.at || 0))
-    .slice(0, 15)
-    .map(m => ({ en: m.en, zh: m.zh, pos: m.pos }));
 
   return {
     lastActiveAt: lastActiveAt || null,
-    todayActivitiesDone,
-    // 之前只回傳最近 10 筆，練習量比較大的日子（例如一天做了 20 項）會把
-    // 比較早的紀錄截斷、看不到，改成整天都回傳，讓家長能看到完整一天的紀錄
-    todayActivityList,
-    todayWordsLearned: Object.keys(dailyLearnedWords).length,
-    // 原始的「今天字卡跟讀完成」單字清單（key 格式是 unitId::en），
-    // 前端已經有每個單元的完整單字表，交給前端依單元分組、算出
-    // 「Part 1 已練習 n 個字／共 X 字」這種畫面，後端不用另外存一份
-    // 課本內容資料
-    todayLearnedWordKeys: Object.keys(dailyLearnedWords),
-    todayMistakeCount: Object.keys(dailyMistakes).length,
-    todayMistakeList,
+    recentDays,
     totalActivitiesDone,
     totalWordsLearnedOnce: Object.keys(learnedWords).length,
     totalMistakeCount: Object.keys(mistakes).length,

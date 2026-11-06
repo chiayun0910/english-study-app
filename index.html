@@ -406,10 +406,30 @@ function todayStr() {
 }
 
 /* 每日重置：只清空「今日練習」用的 dailyStamps/dailyMistakes，累計成就(stamps)、
-   錯題複習(mistakes)、複習紀錄(reviewLog) 完全不受影響 */
+   錯題複習(mistakes)、複習紀錄(reviewLog) 完全不受影響。
+   清空前，先把要被清掉的那一天完整存進 dailyHistory（只留最近 3 天），
+   這樣家長檢視就算跨過午夜、孩子還沒開始今天的練習，也能看到「最近一次
+   學習」是哪天、練了些什麼，不會一到午夜就直接變成空白看不到前一天。 */
 function ensureDailyReset(prog) {
   const today = todayStr();
   if (prog.dailyResetDate === today) return prog;
+  const outgoingDate = prog.dailyResetDate;
+  const hadActivity = outgoingDate && (
+    Object.keys(prog.dailyStamps || {}).length > 0 ||
+    Object.keys(prog.dailyMistakes || {}).length > 0 ||
+    Object.keys(prog.dailyLearnedWords || {}).length > 0
+  );
+  const history = { ...(prog.dailyHistory || {}) };
+  if (hadActivity) {
+    history[outgoingDate] = {
+      dailyStamps: prog.dailyStamps || {},
+      dailyMistakes: prog.dailyMistakes || {},
+      dailyLearnedWords: prog.dailyLearnedWords || {}
+    };
+  }
+  // 只留最近 3 天，避免歷史資料無限累積
+  const trimmedHistory = {};
+  Object.keys(history).sort().slice(-3).forEach(d => { trimmedHistory[d] = history[d]; });
   return {
     ...prog,
     dailyStamps: {},
@@ -417,7 +437,8 @@ function ensureDailyReset(prog) {
     // 字卡「已學習」也是每天重置：dailyLearnedWords 清空後，字卡又能重新練習，
     // 但 learnedWords（累計完成次數）是永久紀錄，不會被這裡動到
     dailyLearnedWords: {},
-    dailyResetDate: today
+    dailyResetDate: today,
+    dailyHistory: trimmedHistory
   };
 }
 
@@ -2053,6 +2074,8 @@ function FamilyViewScreen({ onBack }) {
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  // 選中要看最近幾天裡的哪一天（0 = 最新的那天），每次換人查看都重設回最新
+  const [dayIdx, setDayIdx] = useState(0);
   // 匯出目前所有家人的紀錄成一段文字，方便整理成作業／研究資料時直接複製貼上，
   // 不用一個一個帳號手動截圖
   const [exportText, setExportText] = useState("");
@@ -2076,6 +2099,7 @@ function FamilyViewScreen({ onBack }) {
     setSelected(username);
     setSummary(null);
     setError("");
+    setDayIdx(0);
     setLoading(true);
     callFamilyFn(getFamilyProgressFn, { username }).then(res => {
       setSummary((res.data && res.data.summary) || null);
@@ -2103,16 +2127,15 @@ function FamilyViewScreen({ onBack }) {
     const lessonLabel = topic ? `${lesson.title}（${topic}）` : lesson.title;
     return `${lessonLabel} · ${u.title}`;
   };
-  // 「今天字卡跟讀練習」：後端只回傳今天完成跟讀的單字 key（unitId::en），
-  // 這裡依單元分組、對照 UNITS 拿到每個單元的總字數，算出
-  // 「DAY 3 · Part 1 已練習 n 個字(n句)／共 X 字(X句)」——字卡「已學習」的
-  // 條件本來就包含單字＋例句都跟讀通過，所以字數跟句數是同一組數字。
-  // 拆成獨立函式，畫面顯示跟匯出文字都用同一份邏輯，不用維護兩次。
-  const computeTodayLearnedByUnit = s => {
+  // 把某一天的 learnedWordKeys（unitId::en）依單元分組、對照 UNITS 拿到
+  // 每個單元的總字數，算出「DAY 3 · Part 1 已練習 n 個字(n句)／共 X
+  // 字(X句)」——字卡「已學習」的條件本來就包含單字＋例句都跟讀通過，
+  // 所以字數跟句數是同一組數字。畫面顯示跟匯出文字都用同一份邏輯。
+  const computeLearnedByUnit = learnedWordKeys => {
     const list = [];
-    if (!s || !s.todayLearnedWordKeys) return list;
+    if (!learnedWordKeys) return list;
     const counts = {};
-    s.todayLearnedWordKeys.forEach(key => {
+    learnedWordKeys.forEach(key => {
       const unitId = key.slice(0, key.lastIndexOf("::"));
       counts[unitId] = (counts[unitId] || 0) + 1;
     });
@@ -2128,44 +2151,57 @@ function FamilyViewScreen({ onBack }) {
     list.sort((a, b) => a.label.localeCompare(b.label));
     return list;
   };
-  const todayLearnedByUnit = computeTodayLearnedByUnit(summary);
+  // "2026-11-06" → "11/6"，today 的話額外標註
+  const formatDayLabel = day => {
+    const parts = day.date.split("-");
+    const md = `${Number(parts[1])}/${Number(parts[2])}`;
+    return day.isToday ? `${md}（今天）` : md;
+  };
+  const days = summary && Array.isArray(summary.recentDays) ? summary.recentDays : [];
+  const selectedDay = days[dayIdx] || null;
+  const selectedDayLearnedByUnit = selectedDay ? computeLearnedByUnit(selectedDay.learnedWordKeys) : [];
   // 把一位家人的摘要整理成一段純文字，供「匯出成文字紀錄」使用——格式跟畫面上
   // 顯示的內容一致，但排成方便複製貼到作業／研究筆記裡的樣子
   const buildMemberText = (username, s) => {
     const lines = [`▍${username}`];
     lines.push(`最近一次練習：${formatRelativeTime(s.lastActiveAt)}`);
-    lines.push(`今天：完成 ${s.todayActivitiesDone} 項練習・新學會 ${s.todayWordsLearned} 個字・答錯 ${s.todayMistakeCount} 個字`);
     lines.push(`累計：完成 ${s.totalActivitiesDone} 項練習・學會 ${s.totalWordsLearnedOnce} 個字・自訂生字 ${s.customWordCount} 個`);
     lines.push(`待複習：${s.dueMistakeCount} 個字到期（複習清單共 ${s.totalMistakeCount} 個字）`);
-    lines.push("");
-    lines.push("今天字卡跟讀練習：");
-    const learned = computeTodayLearnedByUnit(s);
-    if (learned.length === 0) {
-      lines.push("　（今天還沒有跟讀練習紀錄）");
-    } else {
-      learned.forEach(u => {
-        lines.push(`　- ${u.label}：已練習 ${u.count} 個字(${u.count}句)${u.total ? `／共 ${u.total} 字(${u.total}句)` : ""}`);
-      });
+    const recentDays = Array.isArray(s.recentDays) ? s.recentDays : [];
+    if (recentDays.length === 0) {
+      lines.push("");
+      lines.push("（還沒有練習紀錄）");
     }
-    lines.push("");
-    lines.push("今天做過的練習：");
-    if (!s.todayActivityList || s.todayActivityList.length === 0) {
-      lines.push("　（今天還沒有練習紀錄）");
-    } else {
-      s.todayActivityList.forEach(a => {
-        const scoreText = a.score ? `：${a.score.correct}/${a.score.total}` : "";
-        lines.push(`　- ${unitLabel(a.unitId)} · ${activityLabel(a.activityKey)}${scoreText}`);
-      });
-    }
-    lines.push("");
-    lines.push("今天答錯的字：");
-    if (!s.todayMistakeList || s.todayMistakeList.length === 0) {
-      lines.push("　（今天沒有答錯的字）");
-    } else {
-      s.todayMistakeList.forEach(m => {
-        lines.push(`　- ${m.en}${m.pos ? ` (${m.pos})` : ""} ${m.zh}`);
-      });
-    }
+    recentDays.forEach(day => {
+      lines.push("");
+      lines.push(`== ${formatDayLabel(day)}：完成 ${day.activitiesDone} 項練習・新學會 ${day.wordsLearned} 個字・答錯 ${day.mistakeCount} 個字 ==`);
+      lines.push("字卡跟讀練習：");
+      const learned = computeLearnedByUnit(day.learnedWordKeys);
+      if (learned.length === 0) {
+        lines.push("　（沒有跟讀練習紀錄）");
+      } else {
+        learned.forEach(u => {
+          lines.push(`　- ${u.label}：已練習 ${u.count} 個字(${u.count}句)${u.total ? `／共 ${u.total} 字(${u.total}句)` : ""}`);
+        });
+      }
+      lines.push("做過的練習：");
+      if (!day.activityList || day.activityList.length === 0) {
+        lines.push("　（沒有練習紀錄）");
+      } else {
+        day.activityList.forEach(a => {
+          const scoreText = a.score ? `：${a.score.correct}/${a.score.total}` : "";
+          lines.push(`　- ${unitLabel(a.unitId)} · ${activityLabel(a.activityKey)}${scoreText}`);
+        });
+      }
+      lines.push("答錯的字：");
+      if (!day.mistakeList || day.mistakeList.length === 0) {
+        lines.push("　（沒有答錯的字）");
+      } else {
+        day.mistakeList.forEach(m => {
+          lines.push(`　- ${m.en}${m.pos ? ` (${m.pos})` : ""} ${m.zh}`);
+        });
+      }
+    });
     return lines.join("\n");
   };
   const exportAllMembers = () => {
@@ -2256,14 +2292,6 @@ function FamilyViewScreen({ onBack }) {
   )),
   /*#__PURE__*/React.createElement("div", {
     className: "review-card",
-    style: { cursor: "default", background: "#3E7A5E" }
-  }, /*#__PURE__*/React.createElement("div", null,
-    /*#__PURE__*/React.createElement("div", { className: "review-title" }, "今天"),
-    /*#__PURE__*/React.createElement("div", { className: "review-sub" },
-      `完成 ${summary.todayActivitiesDone} 項練習・新學會 ${summary.todayWordsLearned} 個字・答錯 ${summary.todayMistakeCount} 個字`)
-  )),
-  /*#__PURE__*/React.createElement("div", {
-    className: "review-card",
     style: { cursor: "default", background: "#4A6FA5" }
   }, /*#__PURE__*/React.createElement("div", null,
     /*#__PURE__*/React.createElement("div", { className: "review-title" }, "累計"),
@@ -2278,33 +2306,61 @@ function FamilyViewScreen({ onBack }) {
     /*#__PURE__*/React.createElement("div", { className: "review-sub" },
       `${summary.dueMistakeCount} 個字到期該複習了（複習清單共 ${summary.totalMistakeCount} 個字）`)
   ), /*#__PURE__*/React.createElement("span", { className: "due-badge" }, summary.dueMistakeCount)),
-  todayLearnedByUnit.length > 0 && /*#__PURE__*/React.createElement("div", null,
-    /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "🎤 今天字卡跟讀練習"),
-    /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
-      todayLearnedByUnit.map(u => /*#__PURE__*/React.createElement("div", {
-        key: u.unitId,
-        className: "mistake-row"
-      }, /*#__PURE__*/React.createElement("span", null, u.label),
-         /*#__PURE__*/React.createElement("span", { className: "mistake-count" },
-           u.total ? `已練習 ${u.count} 個字(${u.count}句)／共 ${u.total} 字(${u.total}句)` : `已練習 ${u.count} 個字(${u.count}句)`))))
-  ),
-  summary.todayActivityList.length > 0 && /*#__PURE__*/React.createElement("div", null,
-    /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "今天做過的練習"),
-    /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
-      summary.todayActivityList.map((a, i) => /*#__PURE__*/React.createElement("div", {
-        key: i,
-        className: "mistake-row"
-      }, /*#__PURE__*/React.createElement("span", null, unitLabel(a.unitId), " · ", activityLabel(a.activityKey)),
-         a.score && /*#__PURE__*/React.createElement("span", { className: "mistake-count" }, `${a.score.correct}/${a.score.total}`))))
-  ),
-  summary.todayMistakeList.length > 0 && /*#__PURE__*/React.createElement("div", null,
-    /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "今天答錯的字"),
-    /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
-      summary.todayMistakeList.map((m, i) => /*#__PURE__*/React.createElement("div", {
-        key: i,
-        className: "mistake-row"
-      }, /*#__PURE__*/React.createElement("span", null, m.en, m.pos ? ` (${m.pos})` : ""),
-         /*#__PURE__*/React.createElement("span", null, m.zh))))
+  /* 最近幾天的練習紀錄：用分頁籤切換，不是只看「今天」——孩子如果還沒
+     打開今天的 App，預設會停在「最近一次真正有練習的那天」，不會因為
+     跨過午夜就整個變成空白看不到前一天的紀錄 */
+  days.length === 0 ? /*#__PURE__*/React.createElement("div", {
+    className: "empty-note", style: { marginTop: 12 }
+  }, "還沒有練習紀錄") : /*#__PURE__*/React.createElement("div", { style: { marginTop: 12 } },
+    days.length > 1 && /*#__PURE__*/React.createElement("div", {
+      style: { display: "flex", gap: 8, marginBottom: 10, flexWrap: "wrap" }
+    }, days.map((day, i) => /*#__PURE__*/React.createElement("button", {
+      key: day.date,
+      type: "button",
+      onClick: () => setDayIdx(i),
+      className: "day-tab-btn",
+      style: {
+        padding: "6px 14px", borderRadius: 999, border: "1.5px solid " + (i === dayIdx ? "var(--ink)" : "var(--line)"),
+        background: i === dayIdx ? "var(--ink)" : "var(--card)", color: i === dayIdx ? "#fff" : "var(--ink)",
+        fontWeight: 700, fontSize: 13, cursor: "pointer", fontFamily: "'Noto Sans TC', sans-serif"
+      }
+    }, formatDayLabel(day)))),
+    /*#__PURE__*/React.createElement("div", {
+      className: "review-card",
+      style: { cursor: "default", background: "#3E7A5E" }
+    }, /*#__PURE__*/React.createElement("div", null,
+      /*#__PURE__*/React.createElement("div", { className: "review-title" }, formatDayLabel(selectedDay)),
+      /*#__PURE__*/React.createElement("div", { className: "review-sub" },
+        `完成 ${selectedDay.activitiesDone} 項練習・新學會 ${selectedDay.wordsLearned} 個字・答錯 ${selectedDay.mistakeCount} 個字`)
+    )),
+    selectedDayLearnedByUnit.length > 0 && /*#__PURE__*/React.createElement("div", null,
+      /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "🎤 字卡跟讀練習"),
+      /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+        selectedDayLearnedByUnit.map(u => /*#__PURE__*/React.createElement("div", {
+          key: u.unitId,
+          className: "mistake-row"
+        }, /*#__PURE__*/React.createElement("span", null, u.label),
+           /*#__PURE__*/React.createElement("span", { className: "mistake-count" },
+             u.total ? `已練習 ${u.count} 個字(${u.count}句)／共 ${u.total} 字(${u.total}句)` : `已練習 ${u.count} 個字(${u.count}句)`))))
+    ),
+    selectedDay.activityList.length > 0 && /*#__PURE__*/React.createElement("div", null,
+      /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "做過的練習"),
+      /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+        selectedDay.activityList.map((a, i) => /*#__PURE__*/React.createElement("div", {
+          key: i,
+          className: "mistake-row"
+        }, /*#__PURE__*/React.createElement("span", null, unitLabel(a.unitId), " · ", activityLabel(a.activityKey)),
+           a.score && /*#__PURE__*/React.createElement("span", { className: "mistake-count" }, `${a.score.correct}/${a.score.total}`))))
+    ),
+    selectedDay.mistakeList.length > 0 && /*#__PURE__*/React.createElement("div", null,
+      /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "答錯的字"),
+      /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+        selectedDay.mistakeList.map((m, i) => /*#__PURE__*/React.createElement("div", {
+          key: i,
+          className: "mistake-row"
+        }, /*#__PURE__*/React.createElement("span", null, m.en, m.pos ? ` (${m.pos})` : ""),
+           /*#__PURE__*/React.createElement("span", null, m.zh))))
+    )
   )
   ) : null);
 }
