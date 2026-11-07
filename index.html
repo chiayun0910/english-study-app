@@ -4946,7 +4946,17 @@ function TranslateCard({ word, question, onResult, progress, onAddCustomWord }) 
       value: input,
       disabled: status === "correct",
       placeholder: "在這裡輸入英文句子…",
-      onChange: e => setInput(e.target.value),
+      onChange: e => {
+        // 有些手機鍵盤的剪貼簿建議列，點一下直接貼上文字，不會觸發標準的
+        // paste 事件，onPaste 攔不到；改用 inputType 判斷這次輸入是不是
+        // 貼上/拖放造成的，是的話直接不採用這次輸入（畫面會維持原本的
+        //文字，等於貼上的內容被擋下來、沒有真的進到輸入框裡）。
+        const inputType = e.nativeEvent && e.nativeEvent.inputType;
+        if (inputType === "insertFromPaste" || inputType === "insertFromPasteAsQuotation" || inputType === "insertFromDrop") {
+          return;
+        }
+        setInput(e.target.value);
+      },
       onPaste: blockPaste,
       onDrop: blockPaste,
       // 輸入框本身也要擋複製：不然選取自己打的（或訂正後顯示）的文字，
