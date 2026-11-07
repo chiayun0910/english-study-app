@@ -4905,9 +4905,20 @@ function TranslateCard({ word, question, onResult }) {
     setStatus(correct ? "correct" : "pending");
     onResult(correct, isFirstAttempt);
   };
+  // 防止複製中文題目去翻譯網站查完答案、再貼回來交差：題目文字不能選取
+  // 複製，輸入框不能貼上（鍵盤 Ctrl+V、右鍵貼上、手機長按貼上都會觸發
+  // 同一個 paste 事件，擋掉這個事件就能一次擋住三種方式；拖曳文字進來
+  // 另外用 onDrop 擋）。這只是提高一點門檻，擋不住抄在別處再手動重打。
+  const blockCopy = e => e.preventDefault();
+  const blockPaste = e => e.preventDefault();
   return /*#__PURE__*/React.createElement("div", null,
     /*#__PURE__*/React.createElement("div", { className: "sentence-box" },
-      /*#__PURE__*/React.createElement("div", { style: { fontSize: 18, fontWeight: 700 } }, question.zh),
+      /*#__PURE__*/React.createElement("div", {
+        style: { fontSize: 18, fontWeight: 700, userSelect: "none", WebkitUserSelect: "none" },
+        onCopy: blockCopy,
+        onCut: blockCopy,
+        onContextMenu: blockCopy
+      }, question.zh),
       /*#__PURE__*/React.createElement("div", { style: { fontSize: 12, color: "#6B6A5E", marginTop: 6 } },
         "請把這句話翻成英文，記得用到「", word.en, "」這個字")
     ),
@@ -4919,6 +4930,8 @@ function TranslateCard({ word, question, onResult }) {
       disabled: status === "correct",
       placeholder: "在這裡輸入英文句子…",
       onChange: e => setInput(e.target.value),
+      onPaste: blockPaste,
+      onDrop: blockPaste,
       onKeyDown: e => {
         if (e.key === "Enter" && !e.shiftKey) {
           e.preventDefault();
