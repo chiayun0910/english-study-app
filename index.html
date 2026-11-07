@@ -4885,10 +4885,27 @@ function checkTranslateAnswer(input, word, answerEn) {
   const targetWords = transcriptWordsClient(answerEn);
   return targetWords.length === gotWords.length && targetWords.every((w, i) => w === gotWords[i]);
 }
-function TranslateCard({ word, question, onResult }) {
+function TranslateCard({ word, question, onResult, progress, onAddCustomWord }) {
   const [input, setInput] = useState("");
   const [checked, setChecked] = useState(null); // null | true | false
   const taRef = useRef(null);
+  const answerRef = useRef(null);
+  // 參考答案允許「選取」（單字或片語都可以），但選到的文字不是拿去複製貼上，
+  // 而是拿來加進自訂生字——選取後跳出一個按鈕，按下去才會帶著選到的文字
+  // 開啟新增生字彈窗，跟例句裡點字加生字是同一套 AddWordPopup。
+  const [selectedPhrase, setSelectedPhrase] = useState("");
+  const [wordPopup, setWordPopup] = useState(null); // { word, sentenceEn, sentenceZh }
+  const captureSelection = () => {
+    const sel = window.getSelection ? window.getSelection() : null;
+    const text = sel ? sel.toString().trim() : "";
+    if (text && answerRef.current && sel.anchorNode && answerRef.current.contains(sel.anchorNode)) {
+      setSelectedPhrase(text);
+    } else if (!text) {
+      setSelectedPhrase("");
+    }
+  };
+  const wordPopupExisting = wordPopup && (progress && progress.customWords || [])
+    .find(w => w.en.toLowerCase() === wordPopup.word.toLowerCase());
   useEffect(() => {
     if (taRef.current) taRef.current.focus();
   }, []);
@@ -4951,16 +4968,33 @@ function TranslateCard({ word, question, onResult }) {
     attempts > 0 && /*#__PURE__*/React.createElement("div", { className: `typing-feedback ${status === "correct" ? "correct" : "wrong"}` },
       status === "correct" ? "答對了！" : "還不太一樣，照參考答案修改後再送出一次"
     ),
-    attempts > 0 && /*#__PURE__*/React.createElement("div", {
-      className: "translate-answer",
-      style: { userSelect: "none", WebkitUserSelect: "none" },
-      onCopy: blockCopy,
-      onCut: blockCopy,
-      onContextMenu: blockCopy
-    }, "參考答案：", question.en)
+    attempts > 0 && /*#__PURE__*/React.createElement("div", null,
+      /*#__PURE__*/React.createElement("div", {
+        ref: answerRef,
+        className: "translate-answer",
+        onCopy: blockCopy,
+        onCut: blockCopy,
+        onMouseUp: captureSelection,
+        onTouchEnd: captureSelection
+      }, "參考答案：", question.en),
+      selectedPhrase && /*#__PURE__*/React.createElement("button", {
+        type: "button",
+        className: "primary-btn",
+        style: { marginTop: 8, fontSize: 13, padding: "8px 16px" },
+        onClick: () => setWordPopup({ word: selectedPhrase, sentenceEn: question.en, sentenceZh: question.zh })
+      }, `➕ 把「${selectedPhrase}」加入生字本`)
+    ),
+    wordPopup && /*#__PURE__*/React.createElement(AddWordPopup, {
+      word: wordPopup.word,
+      sentenceEn: wordPopup.sentenceEn,
+      sentenceZh: wordPopup.sentenceZh,
+      existingWord: wordPopupExisting,
+      onClose: () => { setWordPopup(null); setSelectedPhrase(""); },
+      onSave: wordData => { onAddCustomWord && onAddCustomWord(wordData); }
+    })
   );
 }
-function TranslateQuiz({ unit, onFinish, onWordResult }) {
+function TranslateQuiz({ unit, onFinish, onWordResult, progress, onAddCustomWord }) {
   const [order] = useState(() => shuffle(unit.words));
   const [questions] = useState(() => order.map(w => dailyTranslateQuestion(unit.id, w)));
   const [idx, setIdx] = useState(0);
@@ -5005,7 +5039,10 @@ function TranslateQuiz({ unit, onFinish, onWordResult }) {
   return /*#__PURE__*/React.createElement("div", null,
     /*#__PURE__*/React.createElement("p", { style: { fontSize: 13, color: "#6B6A5E", textAlign: "center", marginBottom: 12 } },
       "把中文句子翻成英文（", idx + 1, "/", order.length, "）"),
-    /*#__PURE__*/React.createElement(TranslateCard, { key: idx, word: word, question: question, onResult: handleResult }),
+    /*#__PURE__*/React.createElement(TranslateCard, {
+      key: idx, word: word, question: question, onResult: handleResult,
+      progress: progress, onAddCustomWord: onAddCustomWord
+    }),
     answered && word.grammar && /*#__PURE__*/React.createElement("div", { className: "grammar-note" }, "📘 ", word.grammar),
     answered && /*#__PURE__*/React.createElement(NextButton, { onClick: goNext, label: isLast ? "查看結果" : "下一題" })
   );
