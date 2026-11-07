@@ -4932,6 +4932,10 @@ function TranslateCard({ word, question, onResult }) {
       onChange: e => setInput(e.target.value),
       onPaste: blockPaste,
       onDrop: blockPaste,
+      // 輸入框本身也要擋複製：不然選取自己打的（或訂正後顯示）的文字，
+      // 手機長按選取會跳出「複製」選單，一樣能繞過限制
+      onCopy: blockCopy,
+      onCut: blockCopy,
       onKeyDown: e => {
         if (e.key === "Enter" && !e.shiftKey) {
           e.preventDefault();
@@ -4947,7 +4951,13 @@ function TranslateCard({ word, question, onResult }) {
     attempts > 0 && /*#__PURE__*/React.createElement("div", { className: `typing-feedback ${status === "correct" ? "correct" : "wrong"}` },
       status === "correct" ? "答對了！" : "還不太一樣，照參考答案修改後再送出一次"
     ),
-    attempts > 0 && /*#__PURE__*/React.createElement("div", { className: "translate-answer" }, "參考答案：", question.en)
+    attempts > 0 && /*#__PURE__*/React.createElement("div", {
+      className: "translate-answer",
+      style: { userSelect: "none", WebkitUserSelect: "none" },
+      onCopy: blockCopy,
+      onCut: blockCopy,
+      onContextMenu: blockCopy
+    }, "參考答案：", question.en)
   );
 }
 function TranslateQuiz({ unit, onFinish, onWordResult }) {
