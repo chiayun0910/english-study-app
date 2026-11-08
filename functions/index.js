@@ -425,7 +425,16 @@ function buildDaySummary(dailyStamps, dailyMistakes, dailyLearnedWords) {
   const mistakeList = Object.values(dailyMistakes || {})
     .sort((a, b) => (b.at || 0) - (a.at || 0))
     .slice(0, 15)
-    .map(m => ({ en: m.en, zh: m.zh, pos: m.pos }));
+    .map(m => ({
+      en: m.en, zh: m.zh, pos: m.pos,
+      // 目前只有「中翻英」會帶 activityKey／questionZh／questionEn，讓家長
+      // 檢視看得出這是哪一種練習答錯的、當時那一題的中文句子跟參考答案是
+      // 什麼，不是只看到一個單字
+      ...(m.activityKey ? {
+        activityKey: m.activityKey, questionZh: m.questionZh || "", questionEn: m.questionEn || "",
+        typedAnswer: m.typedAnswer || ""
+      } : {})
+    }));
   const learnedWordKeys = Object.keys(dailyLearnedWords || {});
   return {
     activitiesDone,

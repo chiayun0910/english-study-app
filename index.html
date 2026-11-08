@@ -943,7 +943,11 @@ function EnglishStudyApp({
     };
     saveProgress(next);
   };
-  const recordWordResult = (unit, word, correct) => {
+  // extra（選填）：{ activityKey, zh, en }——目前只有「中翻英」會帶這個參數，
+  // 讓答錯紀錄除了單字本身，還能記住「是哪一種練習答錯的」跟「當時那一題
+  // 實際的中文句子／參考英文答案」，家長檢視才看得出是中翻英的錯題、
+  // 題目是什麼，不是只看到一個單字
+  const recordWordResult = (unit, word, correct, extra) => {
     const base = ensureDailyReset(progress);
     const key = `${unit.id}::${word.en}`;
     const now = Date.now();
@@ -987,7 +991,15 @@ function EnglishStudyApp({
         zh: word.zh,
         pos: word.pos,
         unitId: unit.id,
-        at: now
+        at: now,
+        ...(extra && extra.activityKey ? {
+          activityKey: extra.activityKey,
+          questionZh: extra.zh || "",
+          questionEn: extra.en || "",
+          // 孩子那次實際打的內容（只有答錯時才會傳進來，用來給家長對照
+          // 錯在哪裡，不是只告訴家長「這題答錯了」）
+          typedAnswer: extra.typedAnswer || ""
+        } : {})
       };
     } else if (mistakes[key]) {
       // 這個字之前答錯過，這次答對了：延後下次複習的時間，連續答對三次就從錯題本畢業
@@ -2160,6 +2172,12 @@ function FamilyViewScreen({ onBack }) {
   const days = summary && Array.isArray(summary.recentDays) ? summary.recentDays : [];
   const selectedDay = days[dayIdx] || null;
   const selectedDayLearnedByUnit = selectedDay ? computeLearnedByUnit(selectedDay.learnedWordKeys) : [];
+  // 「中翻英」答錯的紀錄跟其他練習的答錯紀錄分開顯示：中翻英記得住「當時
+  // 那一題的中文句子跟參考答案」，光看單字看不出是哪一句話翻錯，分開顯示
+  // 才看得出具體是哪一題
+  const selectedDayMistakes = (selectedDay && selectedDay.mistakeList) || [];
+  const translateMistakes = selectedDayMistakes.filter(m => m.activityKey === "translate");
+  const otherMistakes = selectedDayMistakes.filter(m => m.activityKey !== "translate");
   // 把一位家人的摘要整理成一段純文字，供「匯出成文字紀錄」使用——格式跟畫面上
   // 顯示的內容一致，但排成方便複製貼到作業／研究筆記裡的樣子
   const buildMemberText = (username, s) => {
@@ -2193,11 +2211,24 @@ function FamilyViewScreen({ onBack }) {
           lines.push(`　- ${unitLabel(a.unitId)} · ${activityLabel(a.activityKey)}${scoreText}`);
         });
       }
+      const dayMistakes = day.mistakeList || [];
+      const dayTranslateMistakes = dayMistakes.filter(m => m.activityKey === "translate");
+      const dayOtherMistakes = dayMistakes.filter(m => m.activityKey !== "translate");
+      lines.push("中翻英錯題：");
+      if (dayTranslateMistakes.length === 0) {
+        lines.push("　（沒有中翻英錯題）");
+      } else {
+        dayTranslateMistakes.forEach(m => {
+          lines.push(`　- 題目：${m.questionZh || m.zh}`);
+          if (m.typedAnswer) lines.push(`　  孩子打的：${m.typedAnswer}`);
+          lines.push(`　  正確答案：${m.questionEn || m.en}（目標單字：${m.en}${m.pos ? ` (${m.pos})` : ""}）`);
+        });
+      }
       lines.push("答錯的字：");
-      if (!day.mistakeList || day.mistakeList.length === 0) {
+      if (dayOtherMistakes.length === 0) {
         lines.push("　（沒有答錯的字）");
       } else {
-        day.mistakeList.forEach(m => {
+        dayOtherMistakes.forEach(m => {
           lines.push(`　- ${m.en}${m.pos ? ` (${m.pos})` : ""} ${m.zh}`);
         });
       }
@@ -2352,10 +2383,24 @@ function FamilyViewScreen({ onBack }) {
         }, /*#__PURE__*/React.createElement("span", null, unitLabel(a.unitId), " · ", activityLabel(a.activityKey)),
            a.score && /*#__PURE__*/React.createElement("span", { className: "mistake-count" }, `${a.score.correct}/${a.score.total}`))))
     ),
-    selectedDay.mistakeList.length > 0 && /*#__PURE__*/React.createElement("div", null,
+    translateMistakes.length > 0 && /*#__PURE__*/React.createElement("div", null,
+      /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "✏️ 中翻英錯題"),
+      /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
+        translateMistakes.map((m, i) => /*#__PURE__*/React.createElement("div", {
+          key: i,
+          className: "mistake-row translate-mistake-row"
+        }, /*#__PURE__*/React.createElement("div", { style: { fontWeight: 700 } }, m.questionZh || m.zh),
+           m.typedAnswer && /*#__PURE__*/React.createElement("div", { style: { fontSize: 13, color: "var(--red)", marginTop: 4 } },
+             "孩子打的：", m.typedAnswer),
+           /*#__PURE__*/React.createElement("div", { style: { fontSize: 13, color: "#6B6A5E", marginTop: 2 } },
+             "正確答案：", m.questionEn || m.en),
+           /*#__PURE__*/React.createElement("div", { style: { fontSize: 12, color: "#B9B6A6", marginTop: 2 } },
+             "目標單字：", m.en, m.pos ? ` (${m.pos})` : ""))))
+    ),
+    otherMistakes.length > 0 && /*#__PURE__*/React.createElement("div", null,
       /*#__PURE__*/React.createElement("h3", { style: { fontSize: 15, margin: "12px 0 6px" } }, "答錯的字"),
       /*#__PURE__*/React.createElement("div", { className: "mistake-list" },
-        selectedDay.mistakeList.map((m, i) => /*#__PURE__*/React.createElement("div", {
+        otherMistakes.map((m, i) => /*#__PURE__*/React.createElement("div", {
           key: i,
           className: "mistake-row"
         }, /*#__PURE__*/React.createElement("span", null, m.en, m.pos ? ` (${m.pos})` : ""),
@@ -4929,7 +4974,9 @@ function TranslateCard({ word, question, onResult, progress, onAddCustomWord }) 
     const isFirstAttempt = attempts === 0;
     setAttempts(a => a + 1);
     setStatus(correct ? "correct" : "pending");
-    onResult(correct, isFirstAttempt);
+    // 把這次送出的內容也一起往上傳，答錯時家長檢視才看得到孩子實際打了
+    // 什麼（不是只知道「這題答錯了」）
+    onResult(correct, isFirstAttempt, input.trim());
   };
   // 防止複製中文題目去翻譯網站查完答案、再貼回來交差：題目文字不能選取
   // 複製，輸入框不能貼上（鍵盤 Ctrl+V、右鍵貼上、手機長按貼上都會觸發
@@ -5042,9 +5089,9 @@ function TranslateQuiz({ unit, onFinish, onWordResult, progress, onAddCustomWord
   const question = questions[idx];
   if (!question) return null; // 理論上不會發生，UnitScreen 已確保整個單元都有題庫才顯示這個活動
   const isLast = idx + 1 >= order.length;
-  const handleResult = (correct, isFirstAttempt) => {
+  const handleResult = (correct, isFirstAttempt, typedAnswer) => {
     if (isFirstAttempt && !correct) missedRef.current.add(word.en);
-    onWordResult(unit, word, correct);
+    onWordResult(unit, word, correct, { activityKey: "translate", zh: question.zh, en: question.en, typedAnswer });
     if (correct) setAnswered(true); // 答對才能顯示「下一題」，答錯要留在這一題訂正
   };
   const goNext = () => {
