@@ -4709,6 +4709,10 @@ function inflectedFormCandidates(base) {
   const sForm = endsConsonantY ? b.slice(0, -1) + "ies"
     : /[sxz]$|ch$|sh$/.test(b) ? b + "es" : b + "s";
   candidates.add(sForm);
+  // ch 結尾的字，複數有兩種可能：church→churches（ch 讀 /tʃ/）但
+  // stomach→stomachs、monarch→monarchs（ch 讀 /k/，跟 k 結尾的字一樣
+  // 只加 s），單看拼字沒辦法判斷是哪一種讀音，兩種都收才不會誤判
+  if (/ch$/.test(b) && !endsConsonantY) candidates.add(b + "s");
   // 短的「子音-母音-子音」結尾的字（結尾子音不是 w/x/y），-ed/-ing/比較級
   // 要重複最後一個子音（trip→tripped/tripping、big→bigger/biggest），
   // 只處理 5 個字母以內的短字，避免誤判多音節字（permit/submit 這類由
@@ -4774,7 +4778,12 @@ function translateHeadwordForms(word) {
 // 片語裡每個字做對應變化的版本，只用在中翻英；其餘用到 containsPhraseClient
 // 的地方（例如跟讀比對）不受影響。
 const BE_FORMS = new Set(["be", "am", "is", "are", "was", "were", "been", "being"]);
-const POSSESSIVE_FILLERS = new Set(["my", "your", "his", "her", "our", "their", "its", "one's"]);
+const POSSESSIVE_FILLERS = new Set([
+  "my", "your", "his", "her", "our", "their", "its", "one's",
+  // "one's" 泛指「某人的」，造句時除了對應特定人稱代名詞，也常見直接換成
+  // 泛稱的人（people's/someone's），例如 "pull people's legs" 泛指捉弄人
+  "people's", "someone's", "somebody's", "everyone's", "everybody's", "anyone's"
+]);
 // 片語開頭常見的不規則動詞（go through、make one's way to、get carried
 // away…），規律變化規則套不上，另外列出常見變化形
 const IRREGULAR_VERB_FORMS = {
