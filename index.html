@@ -2122,9 +2122,13 @@ function FamilyViewScreen({ onBack }) {
       setLoading(false);
     });
   };
+  // "translate"（中翻英）、"bookquiz"（字彙隨堂考）不在 ACTIVITIES 主陣列裡
+  // （只在個別單元符合條件時才會出現這個練習項目），找不到時原本會直接
+  // 顯示英文代碼，這裡額外補上對照
+  const EXTRA_ACTIVITY_LABELS = { translate: "中翻英", bookquiz: "字彙隨堂考" };
   const activityLabel = activityKey => {
     const a = ACTIVITIES.find(x => x.key === activityKey);
-    return a ? a.label : activityKey;
+    return a ? a.label : (EXTRA_ACTIVITY_LABELS[activityKey] || activityKey);
   };
   // 每一課都拆成「Part 1～4／5」小節，光看 Part 名稱完全分不出是哪一課
   // （不管是多益不同 DAY，還是康軒／翰林不同課，甚至不同課本，小節名稱
